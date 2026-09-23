@@ -1,13 +1,15 @@
 ---
 title: LingBot-VLA 2.0项目概述
 tags: [模型, VLA, LingBot]
-updated: 2026-09-19
+updated: 2026-09-23
 status: 本地源码核对，未运行训练
 ---
 
 # LingBot-VLA 2.0项目概述
 
 LingBot-VLA 2.0 是 Robbyant（蚂蚁灵波）的视觉－语言－动作基础模型及训练、推理实现。它接收相机观测、语言任务和机器人状态，生成连续动作块。RoboTwin 则提供仿真、专家示范和成功率评测，两者承担不同工作。
+
+本机评测命令：[[LingBot-VLA2本地RoboTwin评测-最简指令]]（先启动模型服务，再启动仿真客户端）。
 
 ## 本次核查对象
 
