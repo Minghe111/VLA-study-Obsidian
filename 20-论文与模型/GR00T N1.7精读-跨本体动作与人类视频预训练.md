@@ -18,7 +18,7 @@ locator_mode: page-grounded
 code_commit: 51d4c89f72fda44cbf77285c6a8114b52676b8a1
 model_revision: 2fc962b973bccdd5d8ce4f67cc63b264d6886495
 ---
-
+ 
 # GR00T N1.7 精读：跨本体动作与人类视频预训练
 
 > Source coverage: Full paper（GR00T N1 v2，共 36 页）；N1.7 官方代码、文档和模型卡；EgoScale 方法与实验重点核查
