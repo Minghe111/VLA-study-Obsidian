@@ -3,8 +3,8 @@ title: Git与GitHub认证-软件资产
 aliases: [Git登录方式, GitHub登录方式, Git软件资产]
 tags: [软件资产, Git, GitHub, 环境, RoboTwin]
 created: 2026-09-23
-updated: 2026-10-03
-status: Linux与SSH166历史同步已验证，Windows私有代码已合并并推送
+updated: 2026-10-11
+status: 两私库历史上传已验证；Windows代码已同步，笔记按时间线合并；服务器状态按日期单独记录
 ---
 
 # Git 与 GitHub 认证：软件资产
@@ -221,3 +221,21 @@ python -X utf8 -B integrations/realman_rm65b_gen4/test_contract.py assets/embodi
 推送后通过 `git ls-remote origin refs/heads/main` 重新查询，两仓库远端 main 均与本地 HEAD 一致。主仓库 gitlink 仍指向 `3f3804c`；`hand_coupling.py` 保持本地未跟踪草稿，备份和 stash 均保留。
 
 Windows 未设置 `core.hooksPath`；本次用实际 Python 路径显式运行仓库现有检查脚本，再执行普通 push，没有改写检查脚本或持久配置。上传及远端核验记录：`E:/Workspace/VLA-benchmark/deployment/git_merge_20261003_175908/push-verification.json`。本次只同步 GitHub 代码，未更新服务器或重跑仿真。
+
+## 2026-10-10 两私库提交与复核（Linux本机）
+
+本节本机为 Linux `/home/admin123/liminghe/vla-benchmark`；Windows 的后续同步单独记录。
+
+本机已再次验证 Minghe111 账号的 HTTPS 密钥环认证，并通过 GitHub API 确认两个目标均为 Private。XPolicyLab `main` 上传 [`5680076`](https://github.com/Minghe111/XPolicyLab-RealMan/commit/5680076094c2c3fd5f4f3c9ada5d19d113fcb196)，RoboTwin `main` 上传 [`931ce21`](https://github.com/Minghe111/RoboTwin-RealMan/commit/931ce21f4f0e63feab661f349634d5a25bd92681)，主仓库引用同一子模块版本；两个工程本机工作区干净。
+
+此处只复核本机 GitHub 登录和上传，没有重新验证服务器 GitHub 认证或同步其工作区。9 月迁移表保留为历史快照。本次新增范围及组件证据见 [[2026-10-09-RealMan从161同步与组件验收]]；凭据不写入笔记或 Git，仓库外实验目录不包含在这次提交中。
+
+## 2026-10-11 Windows本机按时间线合并
+
+用户在前次核查后明确授权编辑commit并上传，以时间线合并。本节本机为Windows `E:/Workspace/VLA-benchmark`及`E:/Workspace/VLA-study-Obsidian`；10月9–10日的Linux本机实验仍保留原主机语境。
+
+- 笔记本地基线`01a8485`，本次刷新远程为`227fc49`（含10月9–10日记录）；先保存本地14项改动为`6e90f52`，再合并两侧历史。四处冲突涉及框架、Git资产、环境索引和指南；保留两侧正文，按记录日期衔接采集、训练与推理结果。
+- 实验入口为[[RM65-B接入RoboTwin仿真#项目进度时间线（2026-10-11合并）]]。10月8日“尚未推理”是历史快照，10月10日40000检查点已有8条样例；追加6条中2条抓起并保持，仍不代表完整SR。最新训练证据截至10月10日20:47，本次未重新核验服务器。
+- Windows RoboTwin已快进至`931ce21f4f0e63feab661f349634d5a25bd92681`，XPolicyLab至`5680076094c2c3fd5f4f3c9ada5d19d113fcb196`，子模块指针一致、工作区干净。原两个未跟踪适配脚本与远程blob相同，已先备份再由已上传版本接管，未丢弃独有代码。
+- 合并前14项笔记／视频及两个脚本已逐文件SHA256备份至`E:/Workspace/VLA-benchmark/deployment/git_timeline_merge_20261011_003301/`。该备份与仓库外数据、模型、Conda、实验缓存不纳入笔记提交；凭据不写入Git。
+- 按用户授权提交并推送笔记`main`，保留双方已有提交历史，不强制覆盖远程；上传结果以本次任务的远程分支读回为准。
