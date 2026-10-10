@@ -3,11 +3,17 @@ title: Git与GitHub认证-软件资产
 aliases: [Git登录方式, GitHub登录方式, Git软件资产]
 tags: [软件资产, Git, GitHub, 环境, RoboTwin]
 created: 2026-09-23
-updated: 2026-09-23
-status: 本机认证与两仓库上传已验证，两端代码已同步
+updated: 2026-10-10
+status: 本机认证与两私库上传已验证，服务器同步按日期单独记录
 ---
 
 # Git 与 GitHub 认证：软件资产
+
+## 最近复核与提交（2026-10-10）
+
+本机已再次验证 Minghe111 账号的 HTTPS 密钥环认证，并通过 GitHub API 确认两个目标均为 Private。XPolicyLab `main` 上传 [`5680076`](https://github.com/Minghe111/XPolicyLab-RealMan/commit/5680076094c2c3fd5f4f3c9ada5d19d113fcb196)，RoboTwin `main` 上传 [`931ce21`](https://github.com/Minghe111/RoboTwin-RealMan/commit/931ce21f4f0e63feab661f349634d5a25bd92681)，主仓库引用同一子模块版本；两个工程本机工作区干净。
+
+此处只复核本机 GitHub 登录和上传，没有重新验证服务器 GitHub 认证或同步其工作区。9 月迁移表保留为历史快照。本次新增范围及组件证据见 [[2026-10-09-RealMan从161同步与组件验收]]；凭据不写入笔记或 Git，仓库外实验目录不包含在这次提交中。
 
 关联：[[环境与部署索引]] · [[服务器172.17.27.166-robotwin]] · [[服务器-172.17.27.166]]。
 

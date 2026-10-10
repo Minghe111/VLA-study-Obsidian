@@ -1,7 +1,7 @@
 ---
 title: RoboTwin 2.0框架与默认任务
 tags: [框架, 仿真, RoboTwin]
-updated: 2026-09-24
+updated: 2026-10-10
 status: 当前源码核对
 ---
 
@@ -21,6 +21,67 @@ RoboTwin 是双臂操作仿真与评测平台，任务脚本、机器人模型�
 clean 不启用背景、桌面杂物、光照和桌高随机化，评测指令设为 seen。randomized 同样是 50 条采集设置，启用随机背景、杂物、桌高与光照，指令为 unseen。采集 episode_num 与评测每任务 100 episode 是两个参数，不能混同。
 
 专家示范由任务脚本和运动规划/控制生成，非 VLA 自己生成标签；场景、对象和语言构成任务变化。
+
+## 真机采集的复用边界（2026-10-10）
+
+官方 `collect_data.sh` / `scripts/collect_data.py` 是仿真示范采集入口：先在任务环境中探索成功种子和规划路径，再按种子重建场景、回放并导出。种子重置、物体位姿读取及任务成功检查依赖仿真。它不能通过切换 embodiment 或指定真机 IP 直接变成实体机器人采集器。[官方采集说明](https://robotwin-platform.github.io/doc/usage/collect-data.html) · [官方入口](https://github.com/RoboTwin-Platform/RoboTwin/blob/main/scripts/collect_data.py)
+
+官方真机实验与公开真机采集工具需区分：论文 `arXiv:2506.18088v2` §4.4 报告在 COBOT-Magic 双臂平台上使用 RDT 评测四项任务，对比10条真实示范、10条真实示范加1000条随机化仿真轨迹，以及仅1000条仿真轨迹。这是作者报告的真机迁移实验，不等于已经发布通用的真机自动示范采集器。2026-10-10 在线核对官方 main 的采集入口与文档，未发现可直接完成真实感知、抓取生成、实体控制、同步记录及场景重置的完整真机采集方案；此结论限定于已核对的公开主仓库与文档，不覆盖所有分支或其他平台工具，也不证明 RM65-B 真机可用。[论文 §4.4](https://arxiv.org/html/2506.18088v2#S4.SS4)
+
+可复用的是任务/技能组织、规划方法、episode 管理、数据结构、图像编码及 LeRobot 转换方法；真机需要另行接入机械臂/手 SDK 或 ROS 驱动、实际相机/状态反馈、同步采样与命令记录。物体位姿须来自真实感知或标定；成功判据须来自实际传感器或人工标注；场景重置与物理随机化须通过真实摆放/设施完成。复用规划器的前提是实际坐标、几何、控制接口和执行约束已经匹配；仿真路径通过不等于真机执行通过。此为基于代码依赖的工程分析，未实现真机自动采集。
+
+对当前 RealMan 数据接口，真机采集应分别保存测量状态、实际发送命令和各自时间戳；若沿用汽水瓶数据的24维契约，应固定 `[左臂6 rad, 左手6 SDK, 右臂6 rad, 右手6 SDK]` 的顺序，并说明手反馈的实际来源/单位。当前14维协同手任务接口与24维独立手接口需显式适配。通用 `create_xpolicylab_hdf5` 使用下一帧测量值构造 action 的行为，不能直接作为“真实发送命令”的记录器；真机数据导出需按选择的动作表示重新核对标签与时序。
+
+推荐先用遥操作或已验证控制脚本完成一条真实 episode：真实相机与机器人状态/命令→按时间对齐记录→成功标注→统一导出→原始记录读回核对，再逐步迁移自动规划任务。记录层可以与仿真共用训练接口，实体执行层需要独立验证。
+
+本地核查 HEAD `931ce21f4f0e63feab661f349634d5a25bd92681`；`integrations/realman_rm65b_gen4/hardware_contract.py` 明确为无硬件 I/O 的驱动字段转换，既有 RealMan 组件报告属于仿真/静态映射证据。本次没有连接、采集或操控实体机器人，也没有重新验证真机标定。关联 [[RM65-B灵巧手仿真数据采集-RoboTwin2自动生成路线]] · [[2026-10-09-RealMan从161同步与组件验收]]。
+
+## 2026-10-10 域随机化范围核查
+
+证据类型：官方在线配置/文档与本地源码静态检查；本地 HEAD 为 `931ce21f4f0e63feab661f349634d5a25bd92681`。本节补充不改变上文历史版本快照；未重新采集数据、训练或运行闭环评测。
+
+域随机化主要在仿真示范采集时生成不同场景，策略训练再消费这些轨迹；不能把它等同于训练端自动启用图像增强。官方当前 `demo_randomized.yml` 与本地同名配置的相关字段一致：
+
+| 项目 | 默认 randomized 设置与代码边界 |
+| --- | --- |
+| 背景纹理 | `random_background: true`，墙面与桌面分别采样纹理；代码按采集/评测模式使用 seen/unseen 纹理目录。 |
+| 桌面杂物 | `cluttered_table: true`，随机选择干扰物与摆放位置，受禁止区域与放置尝试次数约束。 |
+| 光照 | `random_light: true`，随机方向光与点光源的 RGB 颜色/强度；`crazy_random_light_rate: 0.02` 按 episode 抽取动态扰动模式，在渲染更新时重新扰动光色及环境光。 |
+| 桌高 | `random_table_height: 0.03`；本地 `_base_task.py` 实际为 `uniform(-0.03, 0) + table_height_bias`，即相对配置基准向下 0～3 cm，不是 ±3 cm。 |
+| 头部相机位置 | 支持 `random_head_camera_dis`，但默认值为 `0`，未开启；非零时采样三维方向和位移长度，不应扩大解读为默认扰动所有相机内外参。 |
+| 保留干净状态 | `clean_background_rate: 0.02` 在代码中分别用于墙面、桌面纹理回退，以及跳过杂物生成；不能把它解释成严格 2% 的完整 clean episode。 |
+
+任务物体的位姿与实例变化由任务脚本决定，并非上述配置独有：`pick_dual_bottles` 在 clean 下也会随机位置/姿态，但实例固定为瓶子 13、16；`pick_diverse_bottles` 则从 20 个实例中分别采样。不能说所有任务都会随机改变物体大小、形状或模型。
+
+语言描述的多样性属于语言泛化维度；`language_num: 100` 与 `eval_instruction: unseen` 不属于物理参数随机化，也不表示 100 条示范。默认 clean 配置的评测指令为 seen。比较策略时应分别记录场景条件与指令划分。
+
+默认配置未列出质量、摩擦、关节动力学、控制延迟或传感器噪声随机化，不应将这些算作默认已启用能力。官方文档中的 `random_embodiment` 标为实验性且未完整支持，当前默认 randomized 配置没有开启该项。
+
+### 采集随机化与训练增强的边界（2026-10-10）
+
+RoboTwin 的 `domain_randomization` 配置在环境初始化、场景构建及渲染阶段生效；已有 clean HDF5/LeRobot 数据不会因为修改该 YAML 而自动变成 randomized 数据。该配置也可作用于闭环评测环境，评测变化并不会增加训练示范。
+
+训练端可以对已有图像做在线增强：亮度、对比度、饱和度、色调、锐度等通常保留原动作标签；其覆盖的是视觉外观扰动。它们不能完整替代仿真的光源变化、阴影和反射。桌高、物体位姿/实例、实际杂物布局或动力学变化需要生成对应的观测与有效动作轨迹；普通图像增强无法补出这些示范。相机三维位移涉及视差与遮挡，也不能简单等同于二维图像平移/旋转。
+
+本地 `XPolicyLab/policy/SmolVLA/install.sh` 默认 `LEROBOT_REF=v0.4.4`；`train.sh` 未显式传入图像增强开关。官方 LeRobot v0.4.4 的 `ImageTransformsConfig.enable` 默认为 false，可在直接调用 `lerobot-train` 时传 `--dataset.image_transforms.enable=true`。该版本预设候选包含亮度、对比度、饱和度、色调、锐度和二维仿射，默认每次最多抽取三项；不能把此开关理解成开启 RoboTwin 的全部仿真随机化。此处核对安装脚本与官方固定版本源码，未确认当前 Conda 实际安装版本或运行训练。
+
+选择增强时需保持监督语义：按颜色识别/排序任务应限制颜色扰动；裁剪、遮挡和翻转需检查目标可见性、左右臂与语言方向语义。为了单独分析增强效果，可比较 clean、clean 加图像增强、randomized、randomized 加图像增强四组，固定示范预算和评测指令划分。此为实验建议，尚无本机效果证据。
+
+### 实际 RealMan 汽水瓶50条数据（2026-10-10 补充）
+
+用户追问的已采集汽水瓶数据对应 `realman_rgb50_full50`，不是此前仅规划的 SmolVLA `pick_dual_bottles/demo_clean` 公共数据。此次读回本地 `data50_v1/native_index.json`、`source_training_files/scene_info.json` 与传输凭据：50条全部没有墙面/桌面随机纹理，全部没有杂物，场景文件SHA256与传输凭据一致。原始数据manifest SHA256为 `2339d5749b650761011e3975cbeb8d42ceb31dbff4f1f2aba6d71cac9a3edf80`。
+
+索引中的任务覆盖为雪碧20、可口可乐20、芬达10；左臂25、右臂25；直立20、横放15、斜放15，50条使用同一任务指令。这些是对象/任务姿态覆盖，不能据此称为开启完整的背景、光照、桌高、相机域随机化。本地当前 RealMan 配置也关闭光照、桌高和相机扰动，但未读回这50条的原始采集配置：原始166服务器连接返回 `No route to host`，因此后三项的历史实际状态仍待原配置核对，不用当前配置替代历史证据。
+
+本次属于本地镜像元数据读回及哈希核对，未重新读取HDF图像、执行轨迹、验证物理成功或训练效果。记录见 [[2026-10-10-RealMan汽水瓶50条域随机化核查.json]]；对应训练历史快照见 [[2026-10-10-161-RealManπ0.5训练状态核查]]。
+
+来源（在线核查日期 2026-10-10）：
+- [官方配置说明](https://robotwin-platform.github.io/doc/usage/configurations.html)
+- [官方 demo_randomized.yml](https://github.com/RoboTwin-Platform/RoboTwin/blob/main/env_cfg/task_config/demo_randomized.yml)
+- [官方 Base_Task](https://github.com/RoboTwin-Platform/RoboTwin/blob/main/envs/_base_task.py)
+- [LeRobot v0.4.4 图像增强实现](https://github.com/huggingface/lerobot/blob/v0.4.4/src/lerobot/datasets/transforms.py)
+- [LeRobot v0.4.4 数据集配置](https://github.com/huggingface/lerobot/blob/v0.4.4/src/lerobot/configs/default.py)
+- 本地静态核查：`envs/_base_task.py`、`envs/camera/camera.py`、`envs/pick_dual_bottles.py`、`envs/pick_diverse_bottles.py`；对应上述本地 HEAD，未证明与官方 main 所有代码一致。
 
 ## 当前原生数据格式
 
