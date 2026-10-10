@@ -1,15 +1,20 @@
 ---
 title: RM65-B接入RoboTwin仿真
 date: 2026-09-23
-updated: 2026-10-03
+updated: 2026-10-08
 tags: [环境, RoboTwin, 机器人, 研究收获]
-status: 官方adjust_bottle持续完善中；无合格episode，先完成无推瓶路径与稳定物理抓握
+status: 当前抓瓶仿真链路及三RGB录制已验证；全新50示教验收发布；官方π0.5全量训练中；新模型SR与实机标定待完成
 sources:
   - https://robotwin-platform.github.io/doc/usage/new-embodiment.html
   - https://develop.realman-robotics.com/robot/download/model/
 ---
 
 # RM65-B接入RoboTwin仿真
+
+> [!info] 最新整体进度：录制完成，模型验证待完成
+> 2026-10-08归档：全新50条近臂三RGB示教已发布与独立验收，全50已接入161官方RoboTwin π0.5全量微调；旧20模型闭环未成功，新50模型SR尚未评测，实机标定未完成。
+> 早期模型／20条／RGB50采集中段落按原日期保留。最新阶段见[[#2026-10-08 数据集录制与实验阶段总览]]；不能把早期三代参考手或标量协同接口当当前四代六通道版本。
+
 
 ## 目标与接入约束
 
@@ -378,3 +383,281 @@ v11实际完成世界竖直抬升：完整持瓶网格审计和逐物理时间�
 v12正在验证：每段规划与惯性承力预检分别冻结该段开始时实际掌瓶关系，保存到planned_carry_path NPZ和report；全过程仍相对首次抓持检查2mm/2°滑移，全部实际36DOF和非豁免自碰撞接触逐物理步记录。原生重置回放、实际完整网格读回、正式HDF5及等速视频均待完成，当前仍0条合格官方episode/0新增官方任务HDF5。无实机IO，手参数和SDK映射仍未实机标定。
 
 证据：[base坐标端点预检](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/server_evidence/full_native_retreat_goal_preflight_v3_20261003.json)、[竖直候选递归桌面证书](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/server_evidence/world_z_lift_table_certificate_20261003.json)。实际v11服务器目录为`deploy/realman_gen4/adjust_bottle_20261002/coupled_side_entry_v11_B085_20261003_seed7/`；完整v12仍在worker4、Conda robotwin、GPU2运行。关联：[[服务器172.17.27.166-robotwin]] · [[RM65-B双臂机器人]]。
+### 2026-10-03 官方 Adjust Bottle 首条严格验收通过
+
+本轮持续目标已完成：在Conda `robotwin`、GPU2，以RM65-B双臂+四代Inspire手完成RoboTwin官方 `adjust_bottle` seed7（瓶模型13、左臂操作、右臂待命）的首次规划执行、1秒保持和全新场景原生保存轨迹回放。**正式合格官方数据从0增至1，仅保存episode_0000000；此前自定义reach与失败尝试不计入此数。** 采集worker4已退出，没有启动训练、后续批量任务或实机IO。
+
+实际运动：接近阶段没有手瓶接触，瓶功能点位置变化最大0.133mm；闭手最大1.126mm/1.919°，不写成零移动。回放手瓶相对位移最大0.467mm、旋转最大0.231°；末态直立误差约0.20°，250个保持样本持续真实三指对向法向力、离桌，满足未改的官方成功判据和额外稳定门禁。三段完整持瓶规划与每个离散时间样本的承力预检通过，独立以原质量/惯量/质心重算三段全部保存的力与力矩，差异均0，原物理场景不变。规划辅助附件未进入物理场景，无焊接/外力托举或运动中的qpos瞬移。
+
+回放22774个物理步全部36DOF/原生93-link网格与真实接触读回通过：0非豁免实际自碰撞、0实际几何碰撞事件、0离桌后再触桌；初始瓶子桌面支承另行保留。指令路径连续几何证书与实际离散物理步检查分别记录，不写成全局最优、多种子成功率或完整实际连续扫掠证明。手实际有限差分速度最大0.34889rad/s；engine qvel最大6.463仍单列，不能用它替代真实角速度。物理联动与手摩擦/材料/接触力参数仍是未实机标定仿真profile，SDK/TCP/真实相机标定尚缺。
+
+正式HDF5包含1540组状态—动作配对、1541原观测、91.096004秒、仅320×240头部RGB/合成深度/内外参；官方14D兼容格式保留，另存实际24D臂+主手SDK状态/命令及实际36D关节/物理时钟。14D原native arm state仍属命令通道，测量应读明确标记的附加实际字段。独立全量校验全部PKL、RGB JPEG逐项重编码、深度、CV/GL矩阵、HDF/NPZ/JSON物理字段、时钟/边界及24项来源hash通过。11个重复动作边界保留显式时间，缓存覆盖step0到22774、最大间隔15，无丢尾。HDF SHA256 `355797ed4a8dcd399d3ac409d76247dab120957d980235c99719ec01872db052`，本机副本同hash。
+
+视频：官方原head观察序列1541帧/30FPS为51.37秒，不能当等速。新head按真实缓存时钟导出2733帧/30FPS、91.10秒，source age最大0.06秒；旁观每10个实际物理步2278帧/25FPS、91.12秒，尾差小于一帧。全帧解码及时间映射通过，另存H264只作编码兼容，无重渲染/删帧/改运动时间。头部保留厂商安装关系、机械俯角−0.419rad、yaw0、extra optical pitch0；起点/终点瓶体部分出框，抓握手掌有遮挡，不能写成全过程无遮挡或完整物体入镜。旁观九帧与视频能看清完整抓取/抬升/转正保持。
+
+原adjust_bottle/Base_Task/native_robot及厂商两URDF/config六项保护SHA不变。原arm轴后退碰躯干的问题，以独立硬件hook委托官方已有world抬升选项解决；转正使用官方get_place_pose已有align分支，官方功能点目标与成功判据未改。validated_profile_v12记录单一瓶型/种子仿真参数，未替换所有任务默认配置。辅助AttachedBody的base/world错误已更正；QA曾将inactive接触壳层列表非空误计为自接触，已修正并单独说明，真实active计数0来自已通过的全36审计，不使用错误字段。
+
+本机交付：[说明与边界](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0/RESULTS.md)、[唯一HDF5](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0/data/episode_0000000.hdf5)、[旁观等速视频](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0/video/external_realtime_h264.mp4)、[头部等速视频](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0/video/head_realtime_h264.mp4)、[全量数据验收](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0/evidence/dataset_validation.json)。原服务器episode目录：`deploy/realman_gen4/adjust_bottle_20261002/coupled_side_entry_v12_B085_20261003_seed7/accepted_replay_20261003T080454184429Z/`，原大JSON/缓存/物理NPZ/轨迹及视频均保留。下一阶段等待用户指令，本条成功仅指仿真任务与数据导出闭环，不是实机迁移或训练评测成功。
+
+关联：[[服务器172.17.27.166-robotwin]] · [[RM65-B双臂机器人]] · [[RoboTwin 2.0框架与默认任务]]。
+
+## 2026-10-03 官方 Adjust Bottle 缩短时长与五指闭合验收
+
+用户要求按RoboTwin2.0节奏缩短单episode、消除抓到后长停顿，并让普通抓取五指共同启动。核查日期2026-10-03；服务器172.17.27.166、Conda robotwin、GPU2，RoboTwin commit `56286567103cf58bfa6191ed889908c5c3a0baa3`，四代RM65-B+Inspire Gen4厂家模型。六项官方/厂家保护SHA仍与上条验收相同。
+
+旧v12为91.096004秒，主要来自诊断配置的多段慢闭合、2秒额外预抬升保持和12/40/12秒搬运最小时长。新v29移除这些诊断等待，使用现有CuRobo与MPlib/TOPP时间参数化；五指同一quintic曲线，按primary/mimic厂家速度限位重定时，保留原50% gripper padding。实际阶段：接近2.040+1.244、闭手1.720、抬升1.164、转正3.548、调整.568、最终验收1.000秒，合计**11.284000536秒/2821物理步**。闭手step1251直接接抬升；三指稳定确认至抬升.564秒属于既有闭合/padding，不存在额外保持步。
+
+五指均真实运动：小指/无名指约28.84°/27.19°；中/食约30.56°/30.77°、拇指约3.13°。当前瓶型承力仍是拇指/食指/中指，小指和无名指未承力，不声称五指全接触。闭合功能点最大移位.670mm、旋转.477°，未放宽原2mm/2°保护；全程最大实际掌内漂移.346mm/.129°，官方成功且末端瓶口倾角.274°。
+
+新初态手部primary PD从K5/D.1调整为K20/D.2，effort10和followers0/0/0、tendon100/.02不改；24手关节实际参数前后核验一致。相同原生节奏的K5候选未完成转正，K20完成；拇指驱动误差约.077→.0196rad，冻结材料点几何proxy末分离约2µm，相比历史失败约.58mm明显改善。这是实际36FK/COM对照和几何proxy，不是持久接触ID证明、实机标定或跨任务成功率。降低原生加速度(.8/.5)和抓位+15mm对照未改善，未采用。LP26仅针对HiGHS未知数值状态增加等价求解回退；原完整约束/残差/力上限检查保留，未知状态仍拒绝。
+
+全新场景严格回放**已发布唯一新版episode_0000000**：204配对/205观测、2821物理步。实际36DOF/93链接逐步离散网格审计与禁止自碰撞冲量0、完整离桌接触证据、HDF/NPZ/JSON/PKL/RGB/深度/相机内外参/时间/source hashes独立读回均通过。真实桌面碰撞开启，额外深入1.496µm<原20µm预算，step1282达到1mm释放阈值，释放后活跃桌面冲量0。手关节真实位置差分峰值.99677rad/s通过，engine qvel峰值11.5639rad/s另存，不能把FD验收说成引擎瞬时速度也满足厂家限值。分配器法向上限是目标约束，不是实际瞬时力硬限制。
+
+旁观H264283帧/25fps=11.32秒；头部H264339帧/30fps=11.30秒来自原记录RGB按物理时钟零阶保持（最大观测龄.06秒），未改变播放速度。原生观测序列视频205帧/30fps仅6.833秒，不能拿它当实际任务时长。头部仍厂家机械俯角−.419rad/yaw0/vendor_zero_view/额外光学pitch0，腕相机关闭；头部部分瓶体出画，没有擅自改变实机视角。
+
+HDF SHA256 `27bf40ad25e2dcf9d173ef63348de178604195571db6349da6817c1fc21de569`；本机HDF/两视频与服务器SHA一致。服务器全量原trace/559MB网格审计/缓存位于 `deploy/realman_gen4/adjust_bottle_20261002/coupled_side_entry_v29_B085_20261003_seed7/accepted_replay_20261003T121935159324Z/`，独立验收在同目录。旧91秒版本保留在validated_episode0；新版为同首条的修正版，没有episode1、训练或实机IO。worker5已停止。当前单种子/瓶型profile未覆盖默认硬件配置；TCP/SDK/真实相机和力参数仍未标定。
+
+本机：[结果说明](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0_fast_five_finger/RESULTS.md)、[v29配置](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0_fast_five_finger/validated_profile_v29.json)、[旁观等速视频](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0_fast_five_finger/video/external_realtime_h264.mp4)、[头部等速视频](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0_fast_five_finger/video/head_realtime_h264.mp4)、[HDF](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0_fast_five_finger/data/episode_0000000.hdf5)、[独立数据验收](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0_fast_five_finger/evidence/dataset_validation_independent_v29_20261003.json)、[实际离桌读回](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/validated_episode0_fast_five_finger/evidence/actual_support_readback_independent_v29_20261003.json)。
+
+关联：[[服务器172.17.27.166-robotwin]] · [[RM65-B双臂机器人]] · [[RoboTwin 2.0框架与默认任务]]。
+
+## 2026-10-03 官方 Adjust Bottle 首批20条完整数据集
+
+用户授权按已通过的v29时长与五指标准，自动生成20条完整episode。核查服务器172.17.27.166，沿用Conda `robotwin`、RoboTwin commit `56286567103cf58bfa6191ed889908c5c3a0baa3`及RM65-B双臂/Inspire Gen4厂家整机模型；本批为官方左臂`qpose_tag=0/model_id=13`分支，官方采样、任务与成功判据未改，双臂和双手状态均保存。
+
+正式索引0–19、20个唯一官方seed全部完成。总计**4112组state/action、4132个原始观测（含20个终点）、56858物理步、227.432011秒**；单条动作时长最小/平均/最大**11.208/11.372/11.956秒**，全部闭手1.720秒。五指共同quintic曲线、无额外预抬升等待，均有SAPIEN实际运动；小指约28.84°、无名指27.19°、中/食约30°、拇指3.861–4.079°。承力仍是拇指/食指/中指，不称五指均接触瓶子。
+
+所有官方任务成功、完整actual36网格/禁用自碰撞接触、支撑释放、抓取稳定性、HDF/缓存/图像/深度/仿真矩阵、视频和时钟独立验收通过。闭手相对preclose的功能点最大位移1.011mm、瓶原点1.259mm、旋转.782°；搬运时瓶原点相对掌心最大漂移1.160mm/.562°，原2mm/2°守卫未放宽。离桌额外深入最大3.830µm，释放后无活跃桌面重接触。这里的掌内漂移并非持久指尖材料点滑移测量；actual36覆盖全部离散物理步，不等于连续扫掠证明。有限差分手速与engine qvel分别保存，不将前者通过写成后者瞬时速度通过。
+
+20条的初始位姿、首目标、首段/全部左臂数值轨迹，以及官方codec解码的首帧/完整RGB像素流均互异；比较排除了pickle/视频容器元数据，确认没有复制同一episode。14D原生接口保持；帧级实际24D与next_command24、逐物理步命令/反馈及full36/hand24弧度保留在HDF补充组。合法动作边界存在重复时间戳，使用显式sample_time_s/next_sample_time_s与物理时钟，不以原生30FPS观测序列替代真实时长。头部和旁观realtime H264仅转码，实际时钟未改。
+
+批次编排为v32、物理标准仍v29，冻结178个关键输入后执行：首组5条合格v32 replay经完整门禁继承，GPU2–7补齐15条，每条接近均重新调用原生规划器。v31仅修复FCL初始支持碰撞集合为空时的误拒，仍要求原实际支持证书和离桌守卫；v32规范frozenset代码常量签名并校验该显式规划绑定，没有跳过源码比对或物理守卫。实际模块hashseed0/5/9及反例测试通过。六项官方/厂家保护文件及全部178项冻结源最终SHA未变，所有采集worker退出。
+
+原v32尝试27条：5接受、17不支持分支、1candidate失败、4初始化异常；补齐批次129条：15接受、74不支持分支、18candidate失败、22初始化异常。失败含超过2mm漂移的候选及官方场景不稳定；这些未计入20条，不把筛选后的20成功示范报告为100%生成成功率或已训练策略评测。
+
+服务器正式数据：`/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/batch_runs_v32_parallel/realman_adjust_bottle_batch20_20261003/dataset`。
+本机：`E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_batch20_20261003/v32_parallel/dataset`，20个HDF合计2705427134字节。README、episode_summary.csv、completed_summary.json、diversity_summary.json及final_runtime_recheck.json在本机上一级目录。manifest SHA `866b6da0fd6559fac0a32ae8dfeafa9b7061eb0287896cd7eb4319ef807c1874`；complete SHA `d987c91dfa59ec7ecff918603ee7d40c69052b8c7e6ca1ad6d562b5ed09a4d30`。
+
+本机最终local_integrity_report通过20条全部训练HDF、语言、轨迹、80段视频、140份轻量报告及4份聚合元数据SHA核验；20份巨型actual36_geometry_audit仍在服务器，各source replay内原始trace、NPZ与.cache终点观测保留。不是把所有服务器诊断复制到本机。历史单条v29及v30/v31/v32目录均保留，不纳入新批次正式计数。
+
+头部继续机械俯角−.419rad、yaw0、vendor_zero_view、extra optical pitch0；腕相机未安装，训练仅cam_head320×240，旁观640×480不作为训练镜头，原有部分遮挡/出框不修改。SDK/TCP/握力/真实相机外参仍待实机标定，无实体机器人IO或训练。后续等待用户指令。
+
+关联：[[服务器172.17.27.166-robotwin]] · [[RM65-B双臂机器人]] · [[RoboTwin 2.0框架与默认任务]]。
+
+## 2026-10-03 三D435纯RGB视角与录制准备
+
+用户本轮授权调整左右腕相机视角，指定头部及左右腕均D435，三路只录RGB、没有深度，按RoboTwin格式准备采集。当前用户说明确定型号与输出需求；不据此宣称实机腕相机安装位姿、序列号或标定已核验。
+
+三路采用librealsense D435 USB3默认color profile：640×480、RGB8、30fps；USB2默认回退15fps不纳入本次仿真profile。真实曝光/白平衡/增益保持设备固件默认的要求写入配置，仿真没有模拟这些UVC参数；每台实际RGB K及畸变应读取对应device profile。模拟K仍来自RoboTwin Large_D435名义37°垂直FOV，不称真实D435出厂标定。来源：[默认stream源码](https://github.com/realsenseai/librealsense/blob/master/src/ds/d400/d400-factory.cpp#L636-L670)、[RGB8默认转换](https://github.com/realsenseai/librealsense/blob/master/src/ds/d400/d400-color.cpp#L169-L174)。
+
+在法兰背侧、抓握侧及后移抓握侧做实际FK渲染对照；选定左l_link6局部光心[0,-.08,-.045]m、右r_link6[0,-.08,-.041]m，两侧forward[0,-.18,.983666610188635]/left[1,0,0]。右+4mm对应厂家左右掌连接偏移。视角固定跟随腕FK，不逐帧跟踪目标、不镜像RGB。这是未测量安装预设，未新增支架/相机实体碰撞体；不是新硬件碰撞证明。头部最低机械俯角−.419rad/yaw0/vendor_zero_view/extra optical pitch0保持，光心[0,.016,.0125]m不变。新头世界矩阵与原缓存误差0、全部相机跟随最大矩阵误差4.18e−7、瓶姿态重建3.58e−7；左光心最低Z=.82155m（桌面.74m），只是光心几何检查。
+
+完成**1条完整格式预录制**：上一批20条中的episode0/seed7，重建每个原缓存的实际36关节与瓶体姿态后重新渲染三路RGB，循环不执行物理步。205组native状态动作/206个原始观测、源时长11.316s；这不是新增随机种子、再次物理抓取成功或策略评测。用现有原生pkl2hdf5 exporter保存vision/cam_head、cam_left_wrist、cam_right_wrist，各含colors/shape/intrinsic_matrix/extrinsics_matrix（GL cam2world）。RGB之外仍保留原14D兼容、真实仿真24D及逐步full36、语言、轨迹、实际时钟；无深度/分割/点云dataset。615个训练RGB帧全部官方CPUcodec解码、三相机矩阵与全部非视觉字段dtype/shape/值字节/属性独立读回通过，原状态动作时钟（含合法边界重复）未标成30Hz。3段实际时钟视频341帧/30fps=11.367s，零阶保持原观测，最大观察龄60ms；原生206帧/30fps观察序列不作实际时长视频。
+
+新增单任务实例attach_rgb_recording适配器部署为integrations/realman_rm65b_gen4/three_camera_rgb.py，profile在camera_profiles/three_d435_rgb_default.yml；通过显式绑定后使用官方get_obs/_take_picture/exporter，不替换默认头部配置。实际Conda组件烟测调用两次官方_take_picture、转换2个静态cache为1个组件transition通过，状态恢复后禁止scene.step、0新增动力学步；不计作任务episode或训练样本。旧v32验收/发布器强制头部深度，正式三RGB批次应使用新的RGB合同，不能借旧passed标记。
+
+服务器产物：/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/three_camera_rgb_20261003/rgb3_format_episode0。验证为rgb_only_validation.json、recording_report.json；组件IO证据api_smoke/native_recording_api_smoke.json。本机：E:/Workspace/VLA-benchmark/deployment/realman_three_camera_rgb_20261003，README/选定three_d435_rgb_v2.yml/数据/三视频/7组拼图/证据24文件SHA和字节长镜像通过；206份新原缓存与历史对照留服务器。HDF83069399字节，SHA6e9efdb0656fb2c8fe3137598ea0c219c88265e1eb16c650baa5e2cab662a32a；local_integrity_report通过，delivery manifest SHA683f07937692edb755d93df6b908a473a642d9bc58d3b2f7be7ae3b48faaeee9。
+
+RoboTwin HEAD仍56286567103cf58bfa6191ed889908c5c3a0baa3，原178冻结源及官方/厂家代码保持；只新增3个相机集成文件，原20条未覆盖。尚缺实机RGB K/畸变/支架外参、TCP/SDK/握力标定；无实体IO或训练。头部原有终点部分出框、非动作右腕视角目标离开画面保留。关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]] · [[RoboTwin 2.0框架与默认任务]]。
+
+## 2026-10-03 首批20条位置与目标外观多样性复核
+
+用户要求验证20条汽水瓶是否位置随机、是否有多种目标样式且不全为可口可乐。本轮在服务器逐条读取manifest、accepted_candidate_report.official_sample.sampled、replay_report.final_bottle，并与既有diversity_summary初始矩阵核对；仅新增审计报告，不改变数据、模型、任务或采集配置。
+
+结论：**位置/朝向随机化通过；目标瓶型多样性不通过**。20条model_id均为13、qpose_tag均为0/左臂。初始x范围[-.119896412,-.081806079]m、y[-.126071528,-.081576005]m，实际跨度3.809×4.450cm，覆盖官方左侧4×5cm采样区域；20个位置和yaw（−112.753°至−79.795°）均互异。范围指抓取前稳定后的瓶actor原点，不是全桌操作覆盖或功能点坐标。
+
+当前官方adjust_bottle在[13,16]两瓶型、左右qpose_tag两分支中采样，左x[-.12,-.08]、右[.08,.12]、共同y[-.13,-.08]m，rotate_lim=[0,0,.4]rad。既有batch_adjust_bottle_v32.py:51明确过滤qpose_tag非0或model_id非13，因此正式20条全部同一model13，model16和右臂分支没有覆盖。过去“20数值轨迹/图像互异”只证明非重复轨迹和像素流，不证明物体类别/纹理/品牌随机化；应称**单瓶型、左臂、位置姿态变化的数据子集**，不能称达到完整官方瓶型覆盖。
+
+官方pick_diverse_bottles另在0..19共20个瓶型中为左右各采样一瓶，是另一任务，不把它的范围误写成adjust_bottle默认配置。新增第二瓶型需要独立验证该几何/抓持/抬升/碰撞与物理门禁后再计入正式数据，本轮没有生成新episode或修改已验收20条。
+
+审计：服务器deploy/realman_gen4/bottle_diversity_audit_20261003/audit_report.json和episode_positions_models.csv；本机E:/Workspace/VLA-benchmark/deployment/realman_bottle_diversity_audit_20261003同名文件，SHA与服务器一致（JSON68b1033afd391a10f7cf66db7e73d95d3d6931b9b1c3e396df4ce5d675e769f2；CSVb95cf2d8678a49b22f126e63baa2c7581244e357321154e98d845804e2b0ea26）。原manifest仍866b6da0fd6559fac0a32ae8dfeafa9b7061eb0287896cd7eb4319ef807c1874，official task SHA4f76b35e718a4c5a364dae564d35d68268755818d9062e3ed4ff393d158d0548、HEAD56286567103cf58bfa6191ed889908c5c3a0baa3。实际资产外观已核查：从服务器GLB内嵌baseColor纹理确认model13为红标可口可乐、model16为绿瓶雪碧（可见品牌文字），不是由ID或语言名称推定。当前20条为可口可乐20条、雪碧0条。官方adjust_bottle.py:13-29与rand_create_actor.py:24-38给出上述随机模型、位置及角度采样；pick_diverse_bottles.py:13-37属于另一项双瓶任务。当时仅由model_data.extents乘scale记录了68.7/92.3mm界定框尺度；2026-10-04实际PhysX凸体读回纠正：该尺度不能当作真实瓶径，见后续核查。第二瓶型须独立验证实际几何和抓取，不能仅替换纹理。GLB SHA256分别为bcf7da24d20a2d2b4b79ca6b7bf9de175ea649d53461dc820d857437df116cb7和8eec8d9b896accd7287a9756361a8ce3d7f58d55549fc4f579053840131b31b9。独立纹理预览位于本机审计目录appearance/base13_basecolor_preview.png及base16_basecolor_preview.png，SHA分别6a8d2d0fa9f06f683a1051e525ead7c13fd435a18eb42b0ec4b8984b8b7911ca和6302de1fd726d5a48f0efed4a679e155a4ce237ece8dcb12ad3bd96ba9178abd；它们是模型纹理图集证据，不是任务场景渲染。原审计JSON/CSV及20条数据未改。
+
+关联：[[服务器172.17.27.166-robotwin]] · [[RoboTwin 2.0框架与默认任务]]。
+
+
+## 2026-10-04 最终20条双瓶型三RGB构建进展与几何修正
+
+本轮目标为完整20条同一官方adjust_bottle任务、至少两类目标、初始位置不同、头部及左右腕D435纯RGB以及全部原生状态/动作/语言/轨迹/实际时钟。新批次计划13/16各10条，沿用已验收的10条model13物理源并为model16重新严格物理验证；范围为左分支，双臂双手状态和三视角均保存。旧20条及官方/厂家文件保留，未改任务采样或成功条件。
+
+截至当前阶段检查点：**10条model13三RGB重渲染暂存验收通过；model16尚无严格合格条目；最终20条仍未完成，也未发布正式manifest/complete。** 暂存合计2062组native状态动作、2072个raw观测（含10个终点）；6186个训练RGB帧全解码及所有非vision字段精确比对通过，重建后新增物理步0。这是继承已验收物理轨迹的传感器版本，不能写成10次新物理抓取成功、策略训练或实机效果。三路640×480RGB8，原非均匀采样时钟、合法边界重复和终帧保留，原save_freq=15为物理步间隔，保留原动作时钟，不冒称30Hz动作。新管线只有20条且两型各10、逐条source/asset/官方sample核对及独立完整合同审计通过才写完成标记。
+
+原178项冻结输入已重新SHA核查全部相同。新增目录为服务器deploy/realman_gen4/final_batch20_20261004（requirements.json、model13_sources.json、brand_evidence.json、source_guard_before.json、original178_current_recheck.json、progress_checkpoint_10rgb13.json）及rgb20_final_20261004（渲染/发布器、录制暂存与model13_render_summary.json）。本机E:/Workspace/VLA-benchmark/deployment/realman_final_batch20_20261004已镜像阶段证据；rgb20_final_20261004/light_mirror保存10条轻量录制/验收/预览镜像，不把它说成已交付完整20条训练数据。
+
+**修正此前宽度推断：metadata extents乘scale不是实际瓶径。** 从SAPIEN当前实际7个PhysxConvexMesh的vertices×scale与localpose读回actor坐标：model13 extents=[.0684887543,.2478884459,.0674401820]m，model16=[.0706707090,.2553243935,.0704546869]m；实际碰撞体横向尺度约68.49/70.67mm，而非metadata的68.7/92.3mm。读回位于model16_support_20261004/physx_actorframe_model13_readback与physx_actorframe_model16_readback，含summary及actual_physx_vertices_actorframe.npz（16顶点证据SHA ab95538bc578ac39bdeb4d4ef7143f7540351f38d0ca8ac69b9b48a82f312987）。这是实际仿真碰撞体数据，不称实物瓶子量测。实际仿真mass两型均约.01kg，惯量/质心保留官方加载值，未以尺寸推断改动。
+
+model16/seed2000原几何的实际时序：1–679物理步瓶不动，step680拇指sensor_4出现零冲量几何manifold后开始滚动，step746功能点位移.639109mm/旋转1.024256°触发原approach门禁。active_contacts为空不等于没有几何接触。固定同初态4s对照位姿变化0，但仅wake_up后无机器人活跃冲量也发生明显滚动；原初态sleeping不能证明唤醒后稳定。瓶与手shape contact_offset各.01m，近触能先唤醒瓶。没有额外等待、set_pose/set_velocity、改质量/材质/offset来伪造成功。
+
+hand_y在pregrasp表达式完全抵消，不能靠调整它退让；hand_z才控制径向间距。新增z190使两段接近真实通过，但闭手时被动ring力.1442N超原.1N守卫而拒绝，仍未accepted。继续新独立五指target/径向几何实验，保持同步quintic、厂家速度约束、原no-push/LP/力/自碰撞/支撑释放/2mm2°抓持门禁；失败与诊断不计正式条目。相关时序证据在rgb20_contract_review_20261004/model16_seed2000_approach_timeline_audit.json，静止/唤醒对照在model16_support_20261004/passive_seed2000_v4与passive_awake_seed2000_v5。
+
+独立最终审计脚本已在当前单条三RGB及10条官方sample身份上验证：全36关节/物理时钟与原源逐帧绑定、独立URDF FK到GL/CV相机外参、全部非视觉字段、N+1终点、RGB解码、语言及轨迹检查。它尚未在最终20条上运行，组件/10条检查通过不替代20条验收。新增source_manifest采用每条不可变{version:1,sources:[entry]}，以实际HDF/model/seed/arm/replaypath核对，不能绑定动态追加总清单。无实体机器人IO或训练，实际腕相机外参与TCP/SDK/握力标定仍待实机。
+
+关联：[[服务器172.17.27.166-robotwin]] · [[RM65-B双臂机器人]] · [[RoboTwin 2.0框架与默认任务]]。
+2026-10-04 后续瓶肩试验：四个seed2000独立候选均已真实结束且严格接受0条。neck50/z184/thumb500第二段screw planner失败；neck60/z178/thumb500及neck70/z175/thumb500闭手转动分别约2.027°/2.047°超原门禁；neck60/z178/thumb650接近/闭手转动约0.116°，但拇指没有真实接触、paired=false，故不能撤离或计入成功。没有用小转动数值替代三指真实支撑。该批证据服务器final_batch20_20261004/model16_neck_checkpoint.json及本机同名文件SHA e145542cfca5b7c85de436ac5cef8fec55e44e8c39f8fc3c899cf4b641d48829已一致。另已启动三个不同官方左侧model16 seed组，结果待真实物理终态；这些启动不构成成功episode。
+
+控制源码核查：feedback 0.16rad/s仅约束已latched主关节目标，未接触手指仍按原共同quintic推进；不能将拇指无力错误归因反馈速度上限。纯CPU手部STL/URDF FK间隙分析正在为下一步硬件姿态/SDK选择提供建议，静态分析不算物理成功。新来源接口预检发现原178冻结集合仅含model13资产，必须为新model16运行显式冻结visual/collision/metadata/description并绑定当前实际SHA；已经运行的旧worker与原冻结文件保持原样，其接受结果若出现须补完整独立接口/资产证据后才能进入RGB管线。不可变来源条目须明确source_episode_index=0、official_sample_json及真实配置，最终审计逐字段核对，不能补一个动态总清单代替。
+
+## 2026-10-04 首条雪碧严格物理源与三RGB全条审计
+
+首条model16/雪碧官方左分支seed1062已完成原任务全程物理执行及全新场景严格回放，2822物理步、11.288000536秒，204组native状态动作和205个原观测。沿用v29原几何、手/瓶原contact_offset各10mm、原材料/质量/惯量及全部抓取/碰撞/支撑/力门禁；本条没有采用后续数值接触参数试验。预撤离206步配对承力通过，掌内漂移约0.194mm/0.0893°，拇指/食指/中指约2.338/1.186/1.173N，真实对向法向点积约−0.994。实际全任务成功后再经独立reset回放、物理QA、36关节网格、支撑及数据验收，不把静态几何或仅抓持通过当作整条成功。
+
+原v6采集器在已成功回放后的source_trajectory路径打包环节出现StopIteration；原报错记录和原完整物理源保留。新独立accepted_source_interfaces_v1/source_model16_0001062接口按真实replay_report.source_trajectory路径恢复不可变来源清单及真实配置，未重写旧日志或伪造物理通过。原物理HDF SHA122209996b5eb1a926f9d47794e3c170c13bc9c2114beedf3b62b18664c89928；不可变manifest SHAf994b24e305510753c17e415885206e26897041ee6b5375edfb8ae8da56af499。新v8仅修复该打包路径，不放宽物理门禁。
+
+三RGB传感器版本位于服务器rgb20_final_20261004/rendered/model16_0001062，204组训练对、205完整raw（终点保留）、612个训练RGB帧。三路实际时间视频均实际解码339帧/30fps=11.3秒；按原物理clock零阶保持选帧，动作仍保留原时钟。独立CPU完整合同审计passed=true、episode_count=1、formal_dataset_complete=false：32非视觉dataset/5group共6,155,108值字节与原源的dtype、attrs、bytes精确一致；全36关节及物理时钟误差0；独立GL FK最大7.93e−7、CV外参1.04e−6；头部相对原源误差0；当前363冻结输入开始与结束SHA一致。审计报告rgb20_contract_review_20261004/model16_0001062_single_current_20261004/single_episode_independent_audit.json，SHAe159bad1035058855bf91c649a3ab16ae8799f3f91c9b685d5cf2c49b9b73a6d；RGB HDF SHA65623fd238355462fd3eac0e379e955d3c0b04b8c2da40e8921c985532d0dc50。本机轻量镜像E:/Workspace/VLA-benchmark/deployment/realman_rgb20_final_20261004/model16_0001062_light_mirror及审计目录；尚非完整20条训练数据交付。
+
+当前合计11条录制暂存（可口可乐10、雪碧1）、2266 native配对/2277原观测/6798训练RGB；最终20条尚缺9条雪碧且未发布。40个raw yaw邻近seed的真实官方setup和1秒wake静止预筛全部结束，除对照1062外没有新增耐唤醒来源，不能把RNG筛选候选计为成功。已核查官方RNG抽样前后全部MT19937状态与两实际setup一致，未额外抽样、指定目标pose或改瓶模型。后续将在新独立硬件数值接触profile中核查手部contact_offset1mm（仅手，瓶/桌/臂保留10mm），并在全部原门禁下比较；此时该试验尚无新合格episode，不写成参数已经验证有效。
+
+真实渲染确认绿瓶雪碧及五指灵巧手。头部保留实机机械最低俯角和厂家安装关系，起始瓶体靠画面下沿、终点存在裁切；左腕近距离瓶体占比大，右腕终点接近下沿。RGB/时钟/FK审计通过不意味着每路全程完整容纳目标；未为隐藏视角局限擅改头限位、腕安装或K。三路纯RGB，无实体IO或训练，实机K/畸变/腕外参、TCP/SDK/握力仍待标定。
+
+关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]] · [[RoboTwin 2.0框架与默认任务]]。
+
+2026-10-04 手部数值近触profile首轮真实对照：新增独立helper把左右60个Inspire碰撞shape contact_offset设为1mm，其余47个shape含瓶/桌/臂仍10mm，全部rest0；实际shape的材料/groups、24关节drive、原碰撞/视觉网格与四瓶资产未改。该参数是未实机标定的仿真数值配置，不能称原10mm参数不变或实体抓力标定。静态读回contract SHA74b3ac503426639862014bb0ee4093a7d8f417a18faaf53e6d668249852a5eb3通过；它仅证明参数读回，不是任务成功。数值壳层生成接触的含义见官方PhysX [PxShape文档](https://nvidia-omniverse.github.io/PhysX/physx/5.2.1/_build/physx/latest/class_px_shape.html)。
+
+四个完整真实候选均严格接受0条、reset0：seed2000 z177/thumb500 close阶段1.442mm/2.016°拒绝；z177/thumb650已产生三指真实配对51步，但close控制248/250的static_mg承力LP两次不可行（最后实际thumb/index/middle约.230/.137/.144N），没有撤离或抬升；原z165几何仅改skin仍approach .639mm/1.024°拒绝；seed1024 z177/thumb650 close1.046mm/2.051°拒绝。异常文字写approach但前两/末条的实际phase是close，以trace为准。独立审计754项当前输入首尾SHA一致、每run364冻结及原178/四资产正确绑定；此前不存在strict四phase和正式source_config，不能声称这些已通过。总审计SHA c01c5cfe0e61d241e61e4aeffdbe768451fea65aa4144be8b35e9428fa665370，服务器rgb20_contract_review_20261004/hand_skin1mm_v9_four_terminal_20261004/independent_four_terminal_contract_audit.json；本机进度证据realman_final_batch20_20261004/progress_checkpoint_11rgb_and_skin_trials_v2.json SHA182a3cb5741529a6131b37791e473f74b561ce6446d26b68588ba96214dafb6f。
+
+实际三指接触和PhysX COM复算表明，不能把LP失败仅归因原最小1.15N要求；固定normal仅沿瓶轴移动也没有找到可行解。这些纯CPU诊断未修改运行门槛。新独立B075/B070及B075 pitch5°/15°对照正在验证降低主指接触高度与接触同步性；静态fresh mesh显示几何可达，不能预先称可承力或成功。正式录制暂存仍为10可口可乐+1雪碧，最终20条尚未发布。
+
+## 2026-10-04 雪碧抓持的整段轨迹与严格拒绝边界
+
+录制暂存仍为 **11/20（可口可乐10、雪碧1）**，没有新增正式accepted源或完成标记。当前初始位置图逐条绑定11个原始raw0，1µm量化下位置互异；官方sample JSON在这批数据记录的是setup稳定后的快照，不能冒称保存了全部settle前出生位姿。真实三RGB对照来自可口可乐seed7与雪碧seed1062各自终点hold帧；左腕可辨两型，头部和右腕的原有裁切保留，没有替换瓶纹理或拼成完整视野。图及诊断在本机deployment/realman_rgb20_final_20261004/evidence/previews/staging11_recorded_sources_20261004_v3，属于11条暂存证据，非最终20条。
+
+新增B075、z177、pitch10°的硬件抓点对照通过闭合及首段垂直抬升，但后续带旋转的carry在掌内actor原点漂移2.00138mm时被原2mm门禁拒绝。独立36关节实际FK复算表明漂移主要径向（约1.976mm），轴向约0.165mm；功能点/COM漂移约0.744/0.882mm。不能用COM数值替换原actor原点指标称成功，也不能把失效简单归为沿瓶轴滑落。独立证据body_y075_carry_actual_FK_slip_components_v1.json SHA46e12c45be56b92be78e4ad8fe42eadb7ef71dba9d736d78c66fe131319b0da4。
+
+真实掌坐标绕掌Z+5°折回原side-entry EE为局部Rx+5°（掌位姿关系E=P·H，H平移0.06m），不能直接将EE绕Z旋转。新增独立roll5/thumb610配置在seed2000完成candidate全任务，fresh strict回放亦完成2865步/11.46秒，掌内漂移最大1.257mm/0.454°；但最终全36关节网格检查在step1049检测到bottle与l_inspire_left_middle_2的non-touch重叠，故严格接受0、HDF exporter未调用。中指真实首次承力在1045（约0.483N），1046–1049短暂失触，1050恢复；这是锁存后接触丢失，不能误记为首次接触的一步延迟。时序证据palm_roll5_middle_first_force_timing_diagnosis_v1.json SHA663647fd61a0ceac8c7ef3678dc677070e897f3acf8e97f44afb3fa134738b02。后续仅微调middle SDK610→608/612并对照不同官方采样位置，全部五指共同quintic、速度和碰撞/承力/成功门禁保留；运行中不计episode。
+
+增加明确schema的几何/控制身份验证：几何schema1只允许显式x=0/.030/.040m，schema2额外绑定掌roll5°和SDK；控制schema1显式绑定primary PD20/.2或40/.4，不能由几何schema暗推控制值。PD40/.4试验只改变手部primary刚性，effort10、follower0、tendon创建值100/.02及原物理门禁保留；实际24关节读回通过是组件证据，整条因支撑离开时非承力index_force_sensor_2与瓶重叠拒绝。独立身份/原生崩溃审计SHA2d2182e3317ec6630b5976d836dc9a91fc46944e874aa4a6f999d6309d62fbc7。没有把无真实法向力的相邻传感器加入豁免名单。
+
+x30/x40首次worker在网格审计期间发生native Segmentation fault，原日志与stale running报告保留；真实子进程exitcode没有被采集，不能当成已观察到139。新线程环境OMP/OPENBLAS/MKL/NUMEXPR各1的独立重试均正常结束但物理严格接受0，分别出现index2或index_force_sensor_2非承力碰撞；这两次未复现native crash不证明根因修复。新physical_terminal_retry_summary.json SHAbe3e7e510c801dd0d07ce626478c9c93cd5bfc0ba08af7852b694ab4b889df01，365冻结输入当前一致。新profile/环境的actual readback和SHA将随真正accepted源进入三RGB管线，不混入首条1062的原10mm数值配置。官方/厂家网格与旧数据保持，无实机IO或训练。
+
+关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]] · [[RoboTwin 2.0框架与默认任务]]。
+## 2026-10-04 第二条雪碧严格成功与12条录制暂存
+
+middle SDK608与612的两项同seed2000对照均完成candidate全任务及fresh strict回放，原actual36全状态网格、exact真实法向承力touch、原支撑释放、速度/力/LP/no-push/2mm2°门禁通过，均导出207组native配对。它们官方setup初始pose完全相同，故只选择 **middle608** 的source_id=model16_0002000计入；612保留为物理对照而非第二个不同位置episode。608为2866步/11.464000545秒、carry actor原点漂移最大0.473228mm/0.515616°（与actual36全审计的统计范围区分）；612为2864步/11.456000544秒、carry0.697170mm/0.480635°。该比较支持608的平移裕度更大，不证明所有位置均可成功。
+
+第二条源仍为未实机标定的手contact_offset1mm、掌roll5°、B075/z177/pitch10°、SDK[900,900,608,610,610,0]与PD20/.2，原官方/厂家mesh、瓶mass/inertia/material不改。实际366冻结源和配置/entry/官方sample身份、两份四phase读回当前SHA核对通过。物理HDF SHA187c034bd9927074c5ac035c2acbf4b33033d540271c1070615b2e6742101bc0；immutablemanifest位于服务器model16_support_20261004/hand_skin1mm_body_y075_z177_palmroll5_thumb610_middle608_seed2000_native_v11/seed_0002000/candidate/accepted_replay。首触锁存的反证：SDK723.572694→722.787484对应URDF主关节q_target .397530→.398659rad，为更闭方向，而非张开回退；因此没有按错误假设改latch/feedback/filter。
+
+当前已选12个物理来源（10可口可乐、2雪碧），root独立当前HDF SHA、官方sampler身份和stable snapshot位置核对得到12个互异位置（1µm量化）。新来源检查点selected_sources_12_physical_v1.json SHA f26225ba811af2520a159b6a96f4ccc8e7d1d9dde974d73e5f7d8961292d81d0；独立身份证据selected_sources_12_physical_identity_v1.json SHA5e67e9128a2dcea6c81e9acfa41b442d05cd9d4476c44555f25770d43c08d0c1，本机deployment/realman_final_batch20_20261004两文件与服务器SHA一致。它只证明所选物理源身份/位置，不替代最终20条三RGB审计。
+
+新source三RGB重渲染暂存已完成：207训练对、208raw含终点、621训练RGB，HDF SHA7ed87c559c885762e83704958baa69ac771bd86687bd4bf19e1c9975f43a28dc，receipt SHAbdd591e9bdba3c4a9295c1d2b853429d00e2426b13786af6be1ccec45d12d637，恢复状态后无新增scene.step，366冻结源及nested contact/geometry读回前后守护通过。当前合计 **12条三RGB暂存，2473 native配对/2485原观测/7419训练RGB**；新条目的全条独立CPU合同审计尚待完成，最终20条仍缺8条雪碧，未生成正式20条完成标记。
+
+已按同608不可变profile、v14/thread1在5个GPU采集11个不同官方seed候选，以取得余下8条合格源；正常setup已有sample证据的8/9/13/1024/1033/1041/1051/1087和仅诊断预筛的1069/1018/1020分别标明依据。所有候选仍真实执行未改sampler/pose/model的正常setup，既有稳定预筛不是本次完整成功保证；只有新strict accepted才计入。原roll610 seed13在thread1仍native中断，exitcode未采集、旧stale报告保留，不能称线程设置解决崩溃。没有实机IO或训练，最终20条/10+10和实际RGB外参与TCP/SDK/握力标定仍未完成。
+
+关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]] · [[RoboTwin 2.0框架与默认任务]]。
+## 2026-10-04 最终20条双瓶型三RGB录制汇总
+
+正式选择已固定为 **10条可口可乐/model13与10条雪碧/model16**。20条来源均完成真实全任务与fresh strict物理验收，三相机重渲染暂存全部完成；此处记录录制汇总，尚不表示最终20条发布审计、完成标记或本机交付通过。官方 `adjust_bottle` 的左臂 qpose_tag=0 分支、官方采样与成功条件保留，双臂和双手数据保存；当前commit仍为 `56286567103cf58bfa6191ed889908c5c3a0baa3`，Conda `robotwin`。
+
+root逐条只读当前recording_report.json并核对exact source_entry/finished/new_physics_episode后，汇总得到 **4135组原生状态动作配对、4155个原始观测（含20个终点）、12405张训练RGB**。实际物理动作总时长229.008010877秒，单条范围11.220000533–11.956000568秒。原始非均匀采样/action时钟保留；30fps等速视频按原始物理时钟零阶保持，不能称动作以30Hz采样。RGB重渲染恢复既有状态，未增加scene.step或新的物理成功条数。
+
+雪碧固定种子为1062、2000、8、9、1024、1069、1041、1088、1059、1029；middle612 seed2000与chosen608同初始位置，排除重复；额外1047在official setup因UnStableError拒绝且自然结束，没有accepted/HDF。所有采集worker和GPU4渲染已结束。固定source清单为服务器 `model16_support_20261004/source_list/model16_selected10_sources_20261004_v1.json`，SHA `4c8f3a2c6a1f39f489f4696cad5a01b54a45b159047172b8f5b61e61e3015846`；10条Coke固定清单SHA `35c9912421123fb376a0519461218b5979eb4d47d66256cfade31187e1f4fb2c`。
+
+新的安全JSON/current身份报告SHA `030458cf60fe9d22d76ba51c5d15d6da887fefa1ead5d770dcd1808d44e1c262`，在上述source_list目录 `model16_selected10_identity_current_20261004_v1.json`。原178输入、两瓶型各visual/collision/metadata/description共8项资产、所选363/366源冻结及源HDF/轨迹/官方sample/actual36/3QA当前SHA核对通过。该报告的初态来自entry、official_sample、strict before、physics_trace首步四方安全JSON核对；raw0只绑定文件SHA，不能把这一报告描述为已直接反序列化检查raw0。10条Sprite真实settled初始XY最近间距3.062871mm；全20发布数据的XY唯一性由后续新whole20审计直接验证，Z不用于位置多样性。1条baseline1062与9条middle608；只有8条v14来源明确记录thread1环境，1062/2000 legacy没有该字段，不补写线程历史。
+
+前述2000新录制独立审计已实际通过：报告 `rgb20_contract_review_20261004/model16_0002000_single_current_20261004/single_episode_independent_audit_v3.json` SHA `df9cdb439032fb3f43bd1a88cc0ddf669bc7cc029975ce0f1983d54cc6a8bf25`；207pairs/208raw、32非视觉dataset字节/类型/属性、full36时钟/差分、相机独立URDF-FK与三视频全344帧PTS/ZOH均通过。后续source8完整独立审计也通过，206pairs/207raw，报告SHA `df7b4c0b593deed2152f68db35ddf87f8bbc5160cf886025cf8e5908175ac6e7`。它们仍不替代最终全部20条审计。
+
+三路为头部/左腕/右腕D435仿真RGB，640×480，沿用RoboTwin的D435相机profile；不保存深度/IR/分割/点云载荷，保存相机内外参和安装配置。头部保持实机最低机械俯角；腕部固定安装并随厂家关节FK运动，不逐帧追踪目标或镜像图像。RoboTwin仿真内参不是每台D435实测标定，TCP/SDK/接触数值及腕外参仍未实机标定，头部和右腕终点原有出画裁切保留。没有实机IO、训练或跨任务成功率结论。
+
+关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]] · [[RoboTwin 2.0框架与默认任务]]。
+## 2026-10-04 全20独立验收、正式发布与本机交付完成
+
+核查日期2026-10-04；本节记录最终完成状态，前述11/12/20条暂存段落保留为历史阶段。最终为 **10条可口可乐/model13 + 10条雪碧/model16**，均执行官方 `adjust_bottle` 左臂 `qpose_tag=0` 分支的完整仿真物理轨迹并通过原严格验收；双臂/双手状态均记录，不表述为20条双臂协同抓取。官方任务、厂家模型及原有数据保留，commit `56286567103cf58bfa6191ed889908c5c3a0baa3`，环境仍为服务器 Conda `robotwin`；没有实体机器人IO或训练。
+
+**全20新独立审计已实际通过。** 从源和发布cache的原始第0帧直接核对模型、物理步0/时间0、actor世界位姿及当前SHA，在1µm量化下得到20个互异的桌面XY，Z不参与唯一性判定。最小实际XY间距0.796796702mm；位置不同但分布集中，不代表均匀覆盖全部工作台。最终固定safe来源接口SHA `e24125f0ab1308f7e60fc7a0155c68898241ed50d8e8913879c9ba3696d236a4`，同初态middle612和额外1047排除。全部原始cache使用绑定当前SHA的受限数值读取器验证，不使用未知pickle全局的无约束加载。
+
+全量验收统计：4135组native状态动作、4155个含终点原观测、12405张训练RGB；物理总时长229.008010877秒，单条11.220000533–11.956000568秒。32个非视觉dataset的字节/dtype/attrs保持原源一致，全36关节/物理时钟与差分速度误差0，头部相对原源误差0；独立URDF-FK误差≤1.171e−6，CV相机外参误差≤1.317e−6。九条新profile的几何/控制、107个实际碰撞shape及四phase读回通过，源与输出当前SHA首尾一致。60个实际时间视频全部20637帧通过PTS、CFR30和原观测零阶保持像素绑定；保留原生非均匀action clock、14D兼容接口、24D实测/命令及full36轨迹，不能称动作30Hz。三路仅640×480 uint8 RGB，未录depth/IR/分割/点云。
+
+正式服务器目录：`/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb20_final_20261004/dataset`。全20独立审计 `independent_all20_audit.json` SHA `ad27bf51e634ee49794010ef773282b56433e9a0c328e10e715c303914231c3b`；candidate SHA `8c71977e063679c80e8647a04caf7e56831e36fa50541f4f7b766b914531b359`；正式 `manifest.json` SHA `97b33109a740ae2d9b99155dbf228e5d2a19761b323e60fc622c8998aec0e577`；`complete.json` SHA `b403485fd02d4c95a2d083be21ef3252b5a9812b8b07904a5c1efc6f9e241df8`。新增 `complete_rgb20_safe_v6.py` 仅修正v5将reader SHA字符串加引号后比较的错误，原v5/候选/审计不变；其余发布门槛保持。独立最小差异审查SHA `989f5f5069826b09d42f32d444b980c820ace2523ab58c3cdb9f2eff3f2ba985`，首次序列化adapter身份读回SHA `ac24bcd330fc8f79fadd838da5e53165fc31ed5ff5585a16f1cfc81faa3e6a78`，不在完成后改写候选或报告。
+
+**本机完整训练载荷镜像已通过逐文件校验**，目录 `E:/Workspace/VLA-benchmark/deployment/realman_rgb20_final_20261004/dataset`：816文件/2,577,332,727 bytes，包含20 HDF、20语言、20原轨迹、120视频（每条三native与三实际时间）、560预览、71证明及5元数据。inventory SHA `51f837a6d9dd82ea0d3158834ca9793eda290ae50dbd21814455b2a4e81b2550`，ZIP SHA `bc6ae1b86b0b4d4affdfec9c1620d002a98110ba6744a910267c02235453fdfa`；所有成员大小/SHA及服务器当前complete核对后才写本机正式marker。镜像报告为该目录 `_mirror_evidence/runs/20261004T0157296841185Z_d6b430eab3c4442ab6225ab1457faee0/local_integrity_report.json`，SHA `172acf6602ae805b11301a3cfa73c434f32afacae2bb65adb72f1701ec241496`，passed/local_all_selected_files_verified=true。**4155个raw cache/11,512,129,206 bytes完整保留服务器，未下载本机**；完整服务器数据4971文件/14,089,461,933 bytes，明确 `local_raw_cache_mirrored=false`。交付说明 `E:/Workspace/VLA-benchmark/deployment/realman_rgb20_final_20261004/README_complete_safe_v6.md`，原详细说明 `README_final20_delivery_v5_safe.md` 同目录。
+
+最终位置CSV、PNG/SVG/PDF、两瓶型三视角终点原图对照和自动/逐面板视觉QA位于本机 `E:/Workspace/VLA-benchmark/deployment/realman_model16_support_20261004/final20_completed_20261004_v2`。`initial_positions.csv` SHA `b8d5811b283b75b24595eca31164a10b6fec817a1e8b4a87ee42049b83362e6e`；figure report SHA `314078c206bed55b02ba07008b9d433890183f12db4b7052230079baad900f83`，manual visual QA SHA `d704e7c435e77fe8abf4a75bab10b4150fdc59221d50839d44cbdb7bfaf6252d`。20点无jitter；示例分别取最终manifest每瓶型首条的终点，6路原RGB像素、安装与曝光未修改，图是代表性展示而非全部20条图像证明。PNG与24项输出及6张原图的服务器/本机SHA一致，PDF碰撞及对齐QA通过；仅在已有Conda robotwin中补装PyMuPDF1.28.2用于PDF QA，未新建环境或改变其他包/模型/物理代码。
+
+适用边界：这是当前任务、左臂分支及两瓶型的仿真数据交付，不是实机执行、模型训练或跨任务泛化评测。头部保持实机最低机械俯角和厂家安装关系，双腕固定随FK移动；终点头视角瓶体部分出左界，右腕部分遮挡/出下界，不能称三路全程完整容纳目标。RoboTwin D435仿真profile不是各实体相机标定；TCP、SDK映射、握力/接触数值及腕外参仍待实机标定。后续应在确认实际腕安装后再改硬件安装配置并重新审计，不为隐藏视角问题更改头限位或目标位置。
+
+关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]] · [[RoboTwin 2.0框架与默认任务]]。
+
+## 2026-10-04 π0.5基座1000步训练与离线推理完成
+
+正式使用当前10Coke+10Sprite三RGB20条数据做官方released flow π0.5微调；OpenPI独立clean commit215abfb217dbac7d5f1273282331b9b1866c0479，完整pi05_base已恢复。16条训练/4条whole-episode验证，train-only norms、SDK/1000及arms delta→absolute、H16/32pad保留24维物理顺序。Conda均名robotwin：原Python3.10仿真环境保留，Python3.11训练使用隔离full prefix；详细环境见[[服务器172.17.27.166-robotwin]]。
+
+实际完成optimizer1000/final checkpoint999，用时1300.4769秒、正常退出0、采样参数非零更新、输入/官方代码SHA首尾不变。末日志step990的10步平均loss0.006376，不能等同finalstep单点或任务成功。final999全33文件/9,549,425,342 bytes发布SHA清单和推理加载一致，publication SHA1f29f604dc5243596d2909a798f6e20108d8ef39083580fd6ac2a4cae63258f7。
+
+798个留出观测均真实输入三RGB/state/prompt，738完整H16和60尾部first-only全覆盖；raw first左臂MAE0.011325rad、左SDK3.9167，比hold当前状态基线改善；完整H16左臂MAE0.033876rad。所有query存在至少微小SDK越界，241/798会被原1SDK预算拒绝，arms越界0。离线报告SHA4857ca5af7dbfd8125f61ee8c77a76579310cd74fc1b9555c1e68172cccc4e81，已逐SHA镜像本机。验证index10/Sprite1062为旧10mm baseline，需按profile单列，不称纯位置泛化。
+
+当前四条模型闭环未启动，不能称完整推理/抓取成功或0/4物理失败。两TRAIN新执行器回归仍被原动态LP拒绝；原strict默认必须通过。显式sim-only diagnostic入口保留全部实际停止门禁、strict success永远false，但自动审批两次拒绝启动，已等待用户明确批准诊断与SDK范围投影对照或选择先修严格回归。没有绕行、实机连接、修改原20条、厂家模型或官方任务。完整本次版本、误差、model/receipt身份及原失败边界见[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证]]。
+## 2026-10-04 全20条四卡20000步π0.5新协议
+
+用户明确取消上一轮16/4留出划分：现有20条全部训练，global batch8、FSDP4、GPU2/3/4/7、actual20000更新，从官方pi05_base重新初始化。新独立目录pi05_rgb20_all20_20k_b8_4gpu_20261004，旧实验与source20/官方代码不改。完整CPU转换/预训练恢复与四卡5步实际短跑通过；正式supervisor918271/worker918272已运行，最近核查日志optimizer451、50步均值loss0.01813069，不能当抓取成功率或完整训练完成。新场景直接推理将代替旧episode留出评估，并按真实抓住瓶子、瓶底离桌>=1cm且持稳1秒判定；旧LP只诊断，实际碰撞/防推倒/关节/mimic检查保留。新场景/自动后续链仍待接线和初始化核查，不称已模型闭环。来源、当前head-down固定URDF、归一化、四卡证据和实际状态见[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证]]；原1000步及此前拒绝记录保留为历史，用户新指令替代旧自设strict准入范围。
+### 2026-10-04 新场景预检与训练后直接推理链
+
+实际LEFT新seed30015、距训练XY至少12.66mm、三RGB/FK和实际36关节/碰撞/桌面门禁通过；官方setup4376步后只额外执行1个驱动目标不变的被动物理步，模型/策略命令0，不是抓取成功。V4新增修正正常30秒模型超时误计录像异常，5项CPU分类通过，物理/动作/相机参数均不变。最终V6协议与247项source SHA冻结。
+
+服务器172.17.27.166的全20/batch8/四卡2/3/4/7正式20000步训练继续运行，固定UTC13:50读回optimizer3251，尚未完成。后续链PID935071已真实启动且phase=01_wait_training，等待actual20000/final19999发布后自动运行10新场景5Coke/5Sprite，用真实抓持瓶底离桌>=1cm持续1秒判定，保存三RGB视频；目前没有新模型抓取成功率。原source20、官方代码、1000步与所有旧版本保留。具体receipt/manifest/本机镜像与可复查入口见[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证#2026-10-04 新场景基础设施通过，训练后直接推理链已启动]] · [[服务器172.17.27.166-robotwin]]。
+### 2026-10-05 π0.5四卡20000步已完成，新场景抓持0/10
+
+服务器实际终态确认全20train、batch8/FSDP4、GPU2/3/4/7的20000更新完成，checkpoint19999发布校验通过；北京时间2026-10-05 05:14结束、约8小时52分钟。自动链07:33结束，10个新环境新位置模型场景真实查询162次，可口可乐0/5、雪碧0/5，基础设施失败0。6条触发瓶子推移/倾斜检查、2条无名指/小指接触力检查、2条手部FD/mimic/关节限位组合检查，均实际物理后提前停止，未达到瓶底离桌1cm持续抓持1秒的标准。全部30段三RGB视频导出成功，但模型任务成功仍0/10。
+
+正常训练完成、低loss和workflow_completed=true不能写成成功抓取。本次只核查状态与归档，未改变原模型、门槛、源20数据或动作执行器。完整receipt/SHA及停止分类见[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证#2026-10-05 四卡20000步训练完成，新场景抓取验证0/10]]，本任务GPU与模型服务已正常释放，部署状态见[[服务器172.17.27.166-robotwin]]。
+### 2026-10-05 五指SR评测口径修正
+
+当前模型及源20条均是五指主要屈曲实际运动，但示教采用三指主要承载策略；旧V6还无条件禁止无名指/小指目标瓶力超过0.1N，不是官方RoboTwin统一SR标准。新实际首例seed40033因小指0.361405N触发该限制，停止后保留全部结果，不能报成完整新0/10。
+
+按用户普通五指抓持要求新增V7，只取消这条过时承载限制，其余实际关节/碰撞/防推移/携持检查和1cm持续1秒真实空中抓持标准保留。26项CPU检查通过不能代替模型效果。最终20000步检查点未重训未修改，新10场景5Coke/5Sprite、seed50000、GPU6模型/GPU5仿真已实际启动，尚无新SR；旧V6的0/10独立保留，不能与V7合并。版本、SHA、启动与停止实证见[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证#2026-10-05 五指SR口径修正与新场景重跑]]。
+
+## 2026-10-06 V9真实接触与加速采样新SR评测（进行中）
+
+V7保留6例0成功/112查询的未完成记录，不与V9合并。V9只修正原30手部链接的真实接触存在性，并提前拒绝不可变的错误瓶型/左右分支；物理与成功门槛保留。33项CPU和4376步三RGB/CPU及CUDA RNG相同只证明组件、setup一致，不是SR。原20000/19999模型已启动新10例评测，尚无最终SR。
+
+来源与版本：[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证#2026-10-06 V9真实接触与加速采样新SR评测（进行中）]] · [[服务器172.17.27.166-robotwin]]。
+
+### 2026-10-06 V9十个新场景SR终态：0/10
+
+原20000步π0.5在V9执行配置下完成10个新LEFT场景：可口可乐0/5、雪碧0/5，SR0%，基础设施失败0、159次模型查询。1条手指速度、4条关节下限、1条瓶子推移、4条瓶子姿态检查触发早停，均无实际对向抓持或1秒悬空保持。30段三RGB视频完整只是录制通过；模型与执行配置尚未通过该批抓瓶验证，停止分项不是已证明根因。旧协议不合并。
+
+来源与实际SHA：[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证#2026-10-06 V9十个新场景SR终态：0/10]] · [[服务器172.17.27.166-robotwin]]。
+
+
+### 2026-10-07 双臂近臂RGB50采集进行中
+
+新任务覆盖左右近臂、可乐/雪碧/芬达与直立/横躺/斜向横躺。原20实际瓶身中心更靠近右肩却采用左臂，因此保留旧版本，另采全新50合规条目。首条左手直立可乐已实际抓起、空中持稳及三RGB/24维时间对齐独立核验通过；正式50仍未齐备。具体来源与未决边界见[[2026-10-07-RM65B-RGB50双臂近臂抓瓶数据集]]，不能写成新模型推理成功。
+
+## 2026-10-08 数据集录制与实验阶段总览
+
+> [!info] 本次记录的是整套实验阶段
+> 仿真抓瓶链路与三RGB录制已可用；全新50条近臂专家示教已录制、独立验收和发布；全50已接入161官方RoboTwin π0.5全量微调。新50模型的闭环抓瓶效果尚未评测，实机迁移仍待标定。
+
+记录日期2026-10-08。以下整理既有实际结果：录制与发布终态来自10月7日固定凭据，训练阶段以10月8日12:18回读为准。本次没有重新采集、训练或推理，也没有连接实体机器人；历史阶段记录保留。
+
+| 阶段 | 状态 | 已完成内容与证据边界 |
+| --- | --- | --- |
+| RM65-B仿真接入 | 当前抓瓶链路已验证 | 双六轴臂、双四代灵巧手六通道、规划／关节接口及三RGB采集已支撑实际示教。沿用厂家模型和官方框架结构；不表示任意手势动态全身避碰或实机标定已完成 |
+| 头部与腕部视角 | 仿真录制已完成 | 头部按厂家机械限位／安装关系保留，头＋左右腕三路640×480纯RGB。实机腕相机安装、支架、内外参仍未核验，仿名D435参数不等于实机默认profile标定 |
+| 原20条数据 | 已录制、发布并保留 | 10可乐＋10雪碧，主要为左臂示教；按后来新增的瓶身碰撞中心近臂规则0/20合规，故保留历史版，重新采全新50；不能据此否定原物理成功 |
+| 旧20条π0.5实验 | 已完成训练与失败验证 | 全20、四卡20000步旧模型完成，属于含LoRA／视觉及投影更新的非全量基线。V9新10场景SR0/10；不能由低loss认定会抓瓶 |
+| 执行时间与动作语义对齐 | 已完成限定验证 | 专家原时钟与固定60ms回放代表例均成功；当前／下一动作、24维目标与真实执行时钟已核对。旧模型在新时钟的单条400动作持续推理仍失败；这不是新50模型的SR |
+| 新50条专家采集 | 已完成并独立发布 | adjust_bottle相关抓瓶示教，左25／右25，按实际瓶身中心到肩部距离选近臂；可乐20／雪碧20／芬达10；直立20／横躺15／斜向横躺15 |
+| 新50条质量与同步验收 | 已通过 | 选入发布集的50条源轨迹完整审计通过，数值边界例外0；每条末尾合格持稳至少1秒，瓶底离桌最小约93.925mm。复制后结构、SHA、RGB解码与时间／状态动作链核对通过；不代表全部候选采集成功率100% |
+| 161训练准备 | 已完成 | 50HDF＋50instruction＋manifest／scene_info共102训练文件逐SHA同步；新50独立index／norm及官方输入变换、完整权重恢复、batch64四卡五步实际验收通过。完整物理证明继续保留166 |
+| 新50条官方π0.5全量实验 | 正式运行中 | 全50训练，无验证划分；官方RoboTwin cotrain29999参数，51叶／3353433872全参数可训练，冻结与LoRA均0。global64／每卡16／GPU4–7，100000步、每20000步保存；本轮不是旧模型resume，尚未完成 |
+| 新50模型推理与SR | 尚未开展 | 尚无新50全量模型的独立新环境成功率或推理视频；专家50条成功不能替代模型能力评估 |
+| 实机部署 | 尚未完成 | TCP、手SDK编码／角度与力度、相机内外参、固件／触觉接口及控制时延需要现场核验，未连接或驱动实体机器人 |
+
+### 数据与能力边界
+
+- 正式50为独立新采集，未重标旧20，也未用模型推理代替专家示教。全50验收是发布集质量，不是所有生成尝试的产出率。
+- 三路RGB的观测／动作共11098对，物理周期4ms、每15物理步采样一次约60ms；HDF共33294张RGB均已解码。保留原生14维兼容入口及24维双臂／灵巧手位置接口，仿真测量另存；驱动目标不能当实际关节测量。
+- 每手保存6位置通道，但新50两手拇指旋转命令列11／23恒0，不表示六自由度都获得变化监督。力／触觉没有作为当前π0.5模型输入；物理接触／摩擦审计与实机传感器验证分开记录。
+- 位置是两侧局部成功邻域，包含三瓶型／三姿态，不能称全桌面均匀覆盖。头部／活动腕视角仍存在目标边缘裁切和手臂遮挡，不能称全过程完整可见。
+
+### 下一阶段
+
+- [ ] 取得新50全量训练的完整检查点，核查训练终态；当前不把运行中写成100000步已完成。
+- [ ] 使用新环境／新seed／未用于示教的初始位置做闭环推理，覆盖左右近臂与三瓶型／三姿态；按官方π0.5配置持续推理，不因瓶子推移提前结束或加入抓取修正规则。
+- [ ] 依据真实物理瓶底离桌至少1cm且持续1秒的用户抓持标准记录结果，另保留官方任务判定、失败程度及三RGB视频；模型SR与专家验收分别统计。
+- [ ] 如仍失败，区分动作预测、抓位／闭手、接触物理与执行时间问题；同数据LoRA／全量等可控消融尚未完成，不能把多项同时改动后的差异归因于单一因素。
+- [ ] 真机迁移前补齐相机、TCP、手映射、力度和固件／延迟标定，单独完成实机验收。
+
+### 证据入口
+
+[[2026-10-07-RM65B-RGB50双臂近臂抓瓶数据集#最终发布与复制后验收（2026-10-07）]]保存完整录制／发布／统计证明；[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证]]保存旧模型训练、V9失败SR和60ms单条验证；[[2026-10-07-π0.5-RM65B-RGB50官方RoboTwin全量微调]]保存新模型准备、官方权重及实际全量运行证据；[[RM65-B双臂机器人]]保存实机资料与待标定边界。
+
+本轮重新核对本机固定录制凭据SHA：manifest `2339d5749b650761011e3975cbeb8d42ceb31dbff4f1f2aba6d71cac9a3edf80`；源50审计 `5ff5401ca4f503bdf9da881ef6f9e5ae86d65fca4b37440bccb71242ff91cf06`；复制后独立总结 `2a7086b57fbc17837ece17cb906b430a9188832e14d799279d109402983e93fe`。核对固定文件不等于重跑仿真；源位置在本机deployment/realman_rgb50_20261007_v1，实际正式数据在166的`/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_final_20261007/dataset`。

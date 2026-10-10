@@ -1,7 +1,7 @@
 ---
 title: RoboTwin 2.0框架与默认任务
 tags: [框架, 仿真, RoboTwin]
-updated: 2026-09-24
+updated: 2026-10-07
 status: 当前源码核对
 ---
 
@@ -123,3 +123,18 @@ LingBot 的公开示例消费 LeRobot 数据，不直接读这个新 HDF5 schema
 - [scripts/eval_policy.sh](https://github.com/RoboTwin-Platform/RoboTwin/blob/6dde57155eafa3e4ebf6ad1f93a7cf7d5d41a755/scripts/eval_policy.sh)
 - [env_cfg/eval/all_tasks.yml](https://github.com/RoboTwin-Platform/RoboTwin/blob/6dde57155eafa3e4ebf6ad1f93a7cf7d5d41a755/env_cfg/eval/all_tasks.yml)
 - [experiment/robotwin/start_robotwin_infer_and_eval.sh](https://github.com/Robbyant/lingbot-vla-v2/blob/ecca77bb259b9592d5fc0eb2b4972d4a236ed2c8/experiment/robotwin/start_robotwin_infer_and_eval.sh)
+
+## 2026-10-07 官方夹爪数据与灵巧手关节的区别
+
+用户询问官方数据是否没有灵巧手关节姿态而只有抓/不抓。本轮静态核对Git保存的官方基线56286567103cf58bfa6191ed889908c5c3a0baa3及当前官方文档：常规夹爪每侧记录一个连续0..1归一化开合量，没有五指各个独立关节状态/目标；不能把它叫boolean抓取成功或简单抓/不抓标签。0通常表示闭合目标、1表示张开目标，允许中间值；闭合命令不保证已形成真实抓持。
+
+原生state/left_ee_joint_states、right_ee_joint_states每侧为(N,1)，action相同。每侧6轴的双臂例子是6+1+6+1=14维，其他臂轴数应按本体配置，不能把所有机器人都写死14维。可选left/right_ee_poses每侧7维是腕/末端空间位姿，不能当作手指姿态。基线Robot.get_left/right_arm_jointState读取臂关节drive target并追加保存的夹爪标量；这些字段不等于全部实际finger qpos。
+
+官方基线Robot.set_gripper先clip到0..1，再按本体gripper_scale映射到基准夹爪关节，其余关节通过mimic系数/偏置联动；planner.plan_grippers使用np.linspace(now_val,target_val,200)，开合过程可以有连续中间值。导出仍为相邻观测配对state=values[:-1]、action=values[1:]。本机HEAD2c8ba401aa51fb13296f9b6e1d6bb19487523cf6已经包含RealMan接入，不使用HEAD新增is_dexterous分支作为官方原生证据；c826f28父提交正是上述562865基线。本轮只读源码，没有更改Git配置或官方代码，没有运行新的采集或推理。
+
+与当前20条的区别：π0.5训练实际消费独立realman_dexterous/measured_state24与next_command24，顺序为左臂6＋左手6＋右臂6＋右手6；手部是SDK6控制/实测表示，逐物理步另保留full36和手部24关节实际qpos。正式HDF中官方14维兼容字段继续保留，不能将其中每手1维ee字段说成已自动变为6维或已经包含五指全部关节。当前24维训练监督属于RM65-B接入补充，不是直接从官方一个夹爪开合量获得的五指示教。来源：[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证]]及本机realman_dataset20_success_audit_20261007_v1全量HDF审计。
+
+核查源码（本机路径E:/Workspace/VLA-benchmark/RoboTwin，行号为562865基线版本）：envs/robot/robot.py第494–506/526–536/628–659行；envs/_base_task.py第485–495行；envs/utils/pkl2hdf5.py第59–63/103–116行；envs/robot/planner.py第425–434行。未修改的pkl2hdf5/planner在当前工作树相同行号可读。
+
+在线官方来源（核查日期2026-10-07）：[数据字段说明](https://robotwin-platform.github.io/doc/usage/configurations.html)明确夹爪float opening ratio为0..1；[控制API](https://robotwin-platform.github.io/doc/usage/API.html)定义close_gripper默认pos=0、open_gripper默认pos=1。关联：[[RM65-B灵巧手仿真数据采集-RoboTwin2自动生成路线]] · [[RM65-B接入RoboTwin仿真]]。
+
