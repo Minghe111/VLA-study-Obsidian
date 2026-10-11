@@ -66,6 +66,7 @@ sources:
 [External] 当前 openpi 的 `pi05_base` 被作者说明为经过 KI 训练的权重；公开任务微调的 flow loss 路径并非完整复现 KI，也不自动包含原论文的高层子任务在线循环。因此实验要记录“权重从哪里来”和“本次更新了哪些梯度”，不能只记录模型名。[固定openpi README](https://github.com/Physical-Intelligence/openpi/blob/215abfb217dbac7d5f1273282331b9b1866c0479/README.md)
 
 [External] **π0.5 的状态输入要单独验收。** 固定版本的 `pi05_libero` 配置关闭离散 state 输入，不能照抄后宣称 RM65 的24维状态仍进入模型。应检查实际 tokenizer 前缀与机器人转换器，验证 `discrete_state_input`、单位、归一化与左右通道顺序。详细固定代码证据见 π0.5 精读第07、13节。
+
 ### N1.7：代码默认配置与下载权重配置需要分别记录
 
 [External] 固定 README 记录扩展的132维状态/动作容量和40步预测 horizon，但下载权重的层数、选取骨干层和精度等字段，可能与代码类的默认参数不同。记录所选 checkpoint 配置及入口覆盖后的最终运行配置；自定义本体的16步示例不是所有 N1.7 模型的统一预测长度。详见 [[GR00T N1.7精读-跨本体动作与人类视频预训练]]。

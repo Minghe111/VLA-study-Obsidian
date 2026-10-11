@@ -1,0 +1,127 @@
+/* Research notes: enable/disable in Settings -> Appearance -> CSS snippets.
+ * Body size is controlled by Appearance (configured to 18 px).
+ * Indentation is visual only; Markdown text, code and formulas stay intact.
+ */
+body {
+  --line-height-normal: 1.8;
+  --file-line-width: 880px;
+  --p-spacing: 0.9em;
+  --heading-spacing: 1.7em;
+  --h1-size: 1.8em;
+  --h2-size: 1.4em;
+  --h3-size: 1.2em;
+  --h4-size: 1.1em;
+  --h5-size: 1em;
+  --h6-size: 1em;
+  --h1-line-height: 1.4;
+  --h2-line-height: 1.4;
+  --h3-line-height: 1.5;
+  --list-spacing: 0.18em;
+  --table-text-size: 16px;
+  --table-header-size: 16px;
+  --table-line-height: 1.65;
+  --table-cell-vertical-alignment: top;
+  --code-size: 15px;
+}
+
+/* Normal prose in Reading view gets a two-character first-line indent. */
+.markdown-preview-view p {
+  text-indent: 2em;
+}
+
+.markdown-preview-view :is(li, blockquote, .callout, td, th, .footnotes) p,
+.markdown-preview-view p:has(> :is(img, .image-embed, .math-block, .pdf-embed, audio, video)) {
+  text-indent: 0;
+}
+
+.markdown-preview-view :is(p, li, td, th) {
+  overflow-wrap: anywhere;
+}
+
+/* Clear heading hierarchy and whitespace, using the theme's own colours. */
+.markdown-preview-view h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+  text-wrap: pretty;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header {
+  padding-top: 0.65em;
+  padding-bottom: 0.2em;
+}
+
+/* Lists and callouts stay aligned instead of inheriting paragraph indentation. */
+.markdown-preview-view :is(ul, ol) {
+  padding-inline-start: 1.8em;
+}
+
+.markdown-preview-view li > p {
+  margin-block: 0.35em;
+}
+
+.markdown-preview-view blockquote {
+  margin-block: 1em;
+}
+
+.markdown-preview-view .callout {
+  margin-block: 1.1em;
+  padding: 0.8em 1em;
+}
+
+.markdown-preview-view .callout-content > :first-child {
+  margin-top: 0.35em;
+}
+
+.markdown-preview-view .callout-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* Wide tables and display formulas can scroll without stretching the note. */
+.markdown-preview-view .el-table,
+.markdown-source-view .table-wrapper,
+.markdown-rendered .math-block {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.markdown-rendered :is(th, td) {
+  padding: 0.6em 0.8em;
+}
+
+.markdown-rendered tbody tr:nth-child(even) {
+  background-color: var(--background-secondary);
+}
+
+.markdown-rendered .math-block {
+  padding-block: 0.45em;
+  overflow-y: hidden;
+  text-indent: 0;
+}
+
+/* Preserve source-code indentation and horizontal scrolling. */
+.markdown-rendered pre {
+  padding: 1em;
+  font-size: var(--code-size);
+  line-height: 1.6;
+  text-indent: 0;
+  overflow-x: auto;
+}
+
+.markdown-rendered pre code {
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.markdown-rendered :not(pre) > code {
+  overflow-wrap: anywhere;
+}
+
+/* Source/Live Preview use the same body rhythm, without indenting editor lines. */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  font-size: var(--code-size);
+  line-height: 1.6;
+}

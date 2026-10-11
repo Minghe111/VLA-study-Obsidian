@@ -175,6 +175,7 @@ model_revision: 2fc962b973bccdd5d8ce4f67cc63b264d6886495
 [Paper] 原 N1 的 pre-training 与 post-training 均冻结视觉语言主干的语言组件，更新视觉编码器、动作接口和 DiT；“端到端联合训练”因此不等于全部 VLM 参数都被更新。Table 6 给出 AdamW、LR1e-4、beta1=0.95/beta2=0.999、weight decay1e-5、cosine schedule、warmup5%；预训练200K steps/global batch16384，post-training20K–60K/global batch128或1024。神经视频增强在 post-training 中按真实/生成轨迹1:1采样。[Paper: PDF p. 8, Section 2.3; PDF p. 27, Table 6]
 
 [Paper] N1预训练本身约50,000 H100 GPU hours；神经视频生成另用约105,000 L40 GPU hours。780K仿真轨迹的“11小时”是特定自动生成系统的墙钟时间，不能省略资源背景后推算本项目3090的训练/采集时长。作者在单A6000测试仅adapter+DiT和解冻vision两种微调，仍是N1的资源记录，不是N1.7的24GB保证。[Paper: PDF p. 7–8 and 10, data generation and training infrastructure]
+
 ### 8.1 人类视频并不是天然动作标签
 
 [Paper] N1 的七个人类视频源使用 VQ-VAE 前后帧重建训练，再取量化前连续 latent；它们作为 LAPA 本体使用同类 flow-matching 目标。机器人数据可同时提供真实动作和潜动作；神经生成视频可使用潜动作和 IDM 标签。推理不需要未来真实图像，未来帧只用于训练标签构造。[Paper: PDF p. 5 and 8, Latent Actions and Pre-training]

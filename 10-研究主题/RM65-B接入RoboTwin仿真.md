@@ -223,6 +223,7 @@ Conda robotwin 内，30 个来源哈希检查、486 项身体字段检查、6 �
 这只能证明模型与图中物体身份。头部图仍使用 `sim_optical_pitch_24_deg`，光心由网格估计、光轴人为下俯24°，并非实机标定结果，也没有实际转动模型头关节；不应将其描述为已与用户实机对齐的头部视角。
 
 证据：[对象身份报告](file:///E:/Workspace/VLA-benchmark/deployment/realman_native_20261002/view_identity/view_identity_report.json)、[整机核查视图](file:///E:/Workspace/VLA-benchmark/deployment/realman_native_20261002/view_identity/whole_robot.png)、[左手特写](file:///E:/Workspace/VLA-benchmark/deployment/realman_native_20261002/view_identity/left_hand.png)、[移除锤子后的头部图](file:///E:/Workspace/VLA-benchmark/deployment/realman_native_20261002/view_identity/head_without_hammer.png)。服务器原始证据目录为 `deploy/realman_gen4/view_identity_20261002/`。后续工作仍等待用户安排。
+
 ## 2026-10-02 双臂桌面可达区域与头部视锥核查
 
 用户要求查看双臂桌面操作范围和头部视角范围。本次在服务器 Conda `robotwin` 中进行离线端点逆解及相机几何投影计算，未执行轨迹、专家任务、数据集采集或实机控制，未修改原模型、源码或配置。基线提交与上一节相同；URDF/配置哈希保持 `4bf28c...bd65bd` / `4776ce...77768`，完整值在报告中。
@@ -253,6 +254,7 @@ Conda robotwin 内，30 个来源哈希检查、486 项身体字段检查、6 �
 证据：[范围说明与方法](file:///E:/Workspace/VLA-benchmark/deployment/realman_workspace_20261002/RESULTS.md)、[操作范围叠加图](file:///E:/Workspace/VLA-benchmark/deployment/realman_workspace_20261002/workspace_overlay.png)、[桌面相机覆盖](file:///E:/Workspace/VLA-benchmark/deployment/realman_workspace_20261002/head_coverage.png)。逐点CSV、全部保留逆解NPZ、参数哈希及约束分解在同一目录；服务器证据目录 `deploy/realman_gen4/workspace_20261002/`。初始低效带碰撞优化扫描主动停止，不作为最终统计；最终采用 `scan_candidates.py` 的多解筛选结果。
 
 关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]]
+
 ### 2026-10-02 仿真场景图像导出
 
 按用户要求，从服务器SAPIEN实际场景导出整机、桌面近景、俯视和头部画面，模型与配置哈希保持不变。场景为 `beat_block_hammer` seed 0，仅初始化；保留锤子与红方块，未执行专家任务或轨迹。另将上一轮有效端点逆解静态赋给左右臂：名义TCP分别为[-0.175,-0.075,0.84]和[0.175,-0.075,0.84]m；这是静态候选姿态预览，不是双臂路径、避碰或抓取成功的证据。
@@ -260,6 +262,7 @@ Conda robotwin 内，30 个来源哈希检查、486 项身体字段检查、6 �
 头部高清图为同光心、同37°垂直视场的1280×960新渲染，另保留官方320×240观测输出；继续使用未实机标定的24°光轴预设。图中桌面姿态使双五指灵巧手在头部画面下缘入镜；没有修改原始相机配置。模型、头部画面和物体均由渲染器输出，没有AI图像生成或后期重绘。
 
 本机证据：[整机视图](file:///E:/Workspace/VLA-benchmark/deployment/realman_render_20261002/tabletop_external.png)、[头部视图](file:///E:/Workspace/VLA-benchmark/deployment/realman_render_20261002/tabletop_head_hd.png)、[俯视图](file:///E:/Workspace/VLA-benchmark/deployment/realman_render_20261002/tabletop_top.png)；同目录保存 `render_scene.py` 与 `render_report.json`。服务器目录：`deploy/realman_gen4/render_scene_20261002/`。
+
 ### 2026-10-02 左手预览朝向修正
 
 用户指出上一张头部画面左手像是反了。核查确认：旧预览左侧露出手背，右侧露出掌面。左右手原始URDF及安装文件与manifest一致，RM65左右安装变换仍为[0,0,0.028]/[0,0,0.032]m、rpy=[0,0,3.1416]；掌面与拇指结构表明厂商双手沿局部X镜像，两侧掌面均朝局部+Y。问题是离线预览对左右臂分别选择了低关节角代价的候选姿态，没有检查两掌的解剖镜像朝向，并非此次导入时将左右手模型调换。
@@ -269,6 +272,7 @@ Conda robotwin 内，30 个来源哈希检查、486 项身体字段检查、6 �
 原渲染与脚本保留，新增镜像检查版本 `deployment/realman_hand_orientation_20261002/render_scene_mirrored.py`。URDF、官方源码、安装变换、相机和接入配置均未改变；未执行运动轨迹或实机指令。上一轮范围扫描没有重跑，原数字仍限于当时的独立单臂采样姿态集，不能升级为掌面镜像匹配的双臂任务范围。
 
 证据：[修正后头部渲染](file:///E:/Workspace/VLA-benchmark/deployment/realman_hand_orientation_20261002/tabletop_head_hd.png)、[修正后近景](file:///E:/Workspace/VLA-benchmark/deployment/realman_hand_orientation_20261002/tabletop_close.png)、[朝向检查报告](file:///E:/Workspace/VLA-benchmark/deployment/realman_hand_orientation_20261002/render_report.json)。
+
 ### 2026-10-02 头部机械下俯限位视角预览
 
 按用户要求将仿真头部转到最低位置。核查发现现有 `robot_sapien.urdf` 将 `head_joint1/2` 固定，而厂商 `body_head.urdf.xacro` 与标准 `robot.urdf` 保留头部两自由度。此次在独立派生预览模型中恢复两关节，origin、axis、parent/child、effort/velocity和位置限位均逐项核对厂商来源；原URDF、config与manifest哈希不变。
@@ -280,6 +284,7 @@ Conda robotwin 内，30 个来源哈希检查、486 项身体字段检查、6 �
 范围：服务器Conda `robotwin`，官方场景仅初始化；仅静态关节姿态与视角检查，未测试头部电机轨迹跟踪、双臂任务、数据生成或实机。默认模型仍保持原配置，独立预览增加头部自由度不等于已完成通用头部动作接口。
 
 证据：[最低俯仰头部画面](file:///E:/Workspace/VLA-benchmark/deployment/realman_head_down_20261002/head_down_head_hd.png)、[头部下俯外观](file:///E:/Workspace/VLA-benchmark/deployment/realman_head_down_20261002/head_down_external_close.png)、[说明与复现](file:///E:/Workspace/VLA-benchmark/deployment/realman_head_down_20261002/RESULTS.md)、[验证报告](file:///E:/Workspace/VLA-benchmark/deployment/realman_head_down_20261002/render_report.json)。服务器目录 `deploy/realman_gen4/head_down_20261002/`，原预览未覆盖。关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]]。
+
 ### 2026-10-02 官方其他机器人头部机位对照渲染
 
 在服务器172.17.27.166、Conda `robotwin`、RoboTwin commit `56286567103cf58bfa6191ed889908c5c3a0baa3` 下，实际渲染已安装的ALOHA AgileX、Piper、ARX-X5、Franka Panda和UR5-WSG。五份官方 `config.yml` 的 `head_camera` 均为固定世界机位[-0.032,-0.45,1.35]m，forward=[0,0.6,-0.8]、left=[-1,0,0]，对应**向下53.130°**；由官方Camera类创建，不跟随可动头部。因此“头部相机”名称不能证明实机是头部安装，也不能与睿尔曼头部机械限位直接等同。
@@ -289,6 +294,7 @@ Conda robotwin 内，30 个来源哈希检查、486 项身体字段检查、6 �
 此次使用同一 `beat_block_hammer` 静态初始化场景，独立固定物体随机流以消除不同相机数量对随机采样的影响；五份锤子/红方块变换矩阵一致。保留官方初始关节配置；ALOHA为完整双臂整机，其他模型按官方左右臂加载方式以展示间距0.60m配对，此间距不是声称的官方默认值。静态显示将超出URDF限位的夹爪张开目标截至限位，并记录原始/显示值。未执行物理轨迹、专家任务或采集，未验证操作成功。官方URDF/config、Camera代码与相机配置哈希前后一致。
 
 每种平台均交付1280×960同机位高清头部图、320×240原生图、整机外观图和JSON验证报告。证据：[五种平台图像入口与复现说明](file:///E:/Workspace/VLA-benchmark/deployment/official_head_views_20261002/RESULTS.md)、[ALOHA头部视角](file:///E:/Workspace/VLA-benchmark/deployment/official_head_views_20261002/aloha-agilex/head_hd.png)。服务器目录 `deploy/official_head_views_20261002/`。关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]]。
+
 ### 2026-10-02 用户确定保持实机一致的视角策略
 
 用户明确选择“保持实机一致”。后续保留厂商头部机械限位和安装关系，不通过增加虚拟光轴倾角、扩大关节限位或套用官方其他机器人固定机位来声称实机视野改善；尚未获得实测内外参时，证据只能表述为与厂商模型一致，不能表述为已完成实机相机对齐。
@@ -298,6 +304,7 @@ Conda robotwin 内，30 个来源哈希检查、486 项身体字段检查、6 �
 默认URDF仍固定头部零位，因此默认水平参考视角不能覆盖近侧桌面；此前 `head_down_20261002` 的厂商头部机械下俯-0.419 rad独立预览继续保留，不能混称默认已具备头部运动接口。头部最低位置预览也仍使用未标定壳体光学参考。未修改硬件、执行运动或新增数据采集。
 
 配置前后备份、文档diff与验证证据：[变更差异](file:///E:/Workspace/VLA-benchmark/deployment/realman_physical_view_policy_20261002/changes.diff)、[验证报告](file:///E:/Workspace/VLA-benchmark/deployment/realman_physical_view_policy_20261002/verification.json)。服务器证据目录 `deploy/realman_gen4/physical_view_policy_20261002/`。关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]]。
+
 ### 2026-10-02 首条双臂到位任务数据生成
 
 用户本轮授权从硬件接入推进到一个简单任务的自动化数据生成，且仅生成第一个。已在 [[服务器172.17.27.166-robotwin]] 的 Conda `robotwin`、GPU 2 实际执行；服务器 RoboTwin HEAD 为 `56286567103cf58bfa6191ed889908c5c3a0baa3`。全程仅仿真，无实机指令、训练或后续批量采集。
@@ -318,6 +325,7 @@ Conda robotwin 内，30 个来源哈希检查、486 项身体字段检查、6 �
 证据：[结果说明与复现命令](file:///E:/Workspace/VLA-benchmark/deployment/realman_first_episode_20261002/RESULTS.md)、[数据读回检查](file:///E:/Workspace/VLA-benchmark/deployment/realman_first_episode_20261002/realman_reach_targets_native_seed0/dataset_validation.json)、[等速预览](file:///E:/Workspace/VLA-benchmark/deployment/realman_first_episode_20261002/realman_reach_targets_native_seed0/video/episode_0000000_realtime.mp4)、[唯一HDF5](file:///E:/Workspace/VLA-benchmark/deployment/realman_first_episode_20261002/realman_reach_targets_native_seed0/data/episode_0000000.hdf5)。服务端目录：`/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/first_episode_20261002/`。本机同名目录保存原始PKL、轨迹、报告与新增任务副本；采集脚本禁止覆盖已有尝试。
 
 结论限于这个自定义到位任务的自动规划、物理回放与采集导出闭环已跑通，不是抓取/按压完成、动态双臂/躯干避碰保证、多种子成功率或实机迁移成功。本次语言通过官方模板生成，未调用在线LLM自动发明任务。仅生成首条后停止。关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]]。
+
 ### 2026-10-02 用户纠正任务范围：改为官方 Adjust Bottle
 
 用户明确指出：上一条 `realman_reach_targets` 只是移动，且手臂从画面外突然进入，不能满足其需要。新的验收对象应为 **RoboTwin 2.0 官方物体操作任务**；此前自定义到位样本仅保留为采集链路测试证据，不能作为已完成用户要求的官方任务数据。
@@ -331,6 +339,7 @@ Conda robotwin 内，30 个来源哈希检查、486 项身体字段检查、6 �
 本机准备包：`E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/`，含官方任务本地源码快照、`run_adjust_bottle.py`、候选 `ready_home.json`、校验与等速预览脚本、Conda `robotwin` 启动入口及 `preparation_status.json`。这是**未部署、未运行、待语法和运行验证**的准备包，没有生成新的官方任务episode，也没有宣称灵巧手抓瓶适配完成。恢复连接后先核对服务器源码/模型版本，再执行并依据实际失败诊断修正硬件抓握适配，直到首条官方任务通过后停止；不得再次以自定义移动任务替代。
 
 关联：[[RoboTwin 2.0框架与默认任务]] · [[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]]。
+
 ### 2026-10-03 官方 Adjust Bottle 实测：未通过，保留失败视频
 
 学校VPN恢复后已通过SSH连接服务器，在Conda `robotwin`、GPU 2执行官方 `adjust_bottle`。官方任务源码SHA256为 `4f76b35e718a4c5a364dae564d35d68268755818d9062e3ed4ff393d158d0548`，RoboTwin HEAD为 `56286567103cf58bfa6191ed889908c5c3a0baa3`。**合格官方episode为0，没有新增HDF5；此前自定义到位样本不计为本次用户要求的任务成功。**
@@ -346,6 +355,7 @@ Conda robotwin 内，30 个来源哈希检查、486 项身体字段检查、6 �
 证据：[结果与复现说明](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/RESULTS.md)、[逐帧与哈希检查](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/server_evidence/diagnostic_validation.json)、[头部失败视频](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/server_evidence/official_adjust_bottle_diagnostic_v2_seed7/failed_diagnostic_head_realtime.mp4)、[旁观失败视频](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/server_evidence/official_adjust_bottle_diagnostic_v2_seed7/failed_diagnostic_external_realtime.mp4)。服务器目录 `deploy/realman_gen4/adjust_bottle_20261002/`。后续需先完成可承力的抓握几何与闭合时序验证，再继续同一官方任务的转正和首条有效数据生成。
 
 关联：[[RoboTwin 2.0框架与默认任务]] · [[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]]。
+
 ### 2026-10-03 持续完善：无推瓶轨迹与物理联动（进行中）
 
 用户明确要求继续到首条合格官方任务轨迹，接近和抓取不得推移/碰倒目标。已建立持续目标：保持官方 `adjust_bottle`、厂商整机/手部模型和头部限位，接近阶段无有效手—瓶冲量且瓶子最大位移≤1mm/转角≤1°；闭合保持位移≤2mm/转角≤2°；抬升转正后拇指与其他手指持续相对法向承力、离桌、手内漂移≤2mm/2°并保持1秒，随后原生重置回放、读回唯一数据及真实等速视频。阈值是本次仿真工程验收，不是实机标定精度，也不代表求得全局最优。
@@ -357,6 +367,7 @@ Conda robotwin 内，30 个来源哈希检查、486 项身体字段检查、6 �
 候选B/A侧向接近的早期物理测试在最后近接时被guard中止，瓶移仅约0.15mm以内；实际掌Z偏离约5mm、朝向偏离约1.15°解释了静态间隙仍提前触拇指。正在将最后接近换为框架已有MPlib screw直线并降低关节速度，闭合按全部指节厂家1rad/s速度上限重定时。恢复物理mimic后已能执行，但稳定保持时还有拇指速度抖动；高刚度1e4/1e5试验NaN，较低刚度受控对照保留失效边界，不能只以finite记为通过。SAPIEN3实际库默认材料为0.3/0.3/0.1，场景的Python default_physical_material赋值未保证传递给URDF；手部显式材料与传动阻尼正在独立对照，尚未写入默认正式配置。
 
 **当前仍为0条合格官方episode、未新增HDF5，目标继续进行中。** 没有实机IO、训练、物体附着、模型换型或关闭外部碰撞。脚本和证据：[完整网格helper](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/full_mesh_path_audit.py)、[93链接FK](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/server_evidence/full_mesh_fk_validation_20261003.json)、[候选v5路径审计](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/server_evidence/coupled_side_entry_v5_B10_20261003_seed7/mesh_path_1.json)。服务器工作目录仍 `deploy/realman_gen4/adjust_bottle_20261002/`、Conda `robotwin`、GPU2。关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]] · [[RoboTwin 2.0框架与默认任务]]。
+
 #### 同日继续核查：接近已通过，闭合与承重仍待验证
 
 v6 使用原生 MPlib screw 做最后近接、保留官方专家任务；完整网格证书的最后近接瓶间隙下界4.644mm、桌面18.638mm、自碰1.700mm。物理接近无有效手—瓶冲量，瓶子最大位移约0.133mm；随后中指比拇指先接触40ms，闭合把瓶子推至2.002mm触发保护。静态精确拇指阈值约917.9 model-SDK；失败记录中的935 SDK已含瓶子被推向拇指后的变化，不能当成正确的未推瓶预闭合目标。
@@ -401,6 +412,7 @@ v11实际完成世界竖直抬升：完整持瓶网格审计和逐物理时间�
 v12正在验证：每段规划与惯性承力预检分别冻结该段开始时实际掌瓶关系，保存到planned_carry_path NPZ和report；全过程仍相对首次抓持检查2mm/2°滑移，全部实际36DOF和非豁免自碰撞接触逐物理步记录。原生重置回放、实际完整网格读回、正式HDF5及等速视频均待完成，当前仍0条合格官方episode/0新增官方任务HDF5。无实机IO，手参数和SDK映射仍未实机标定。
 
 证据：[base坐标端点预检](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/server_evidence/full_native_retreat_goal_preflight_v3_20261003.json)、[竖直候选递归桌面证书](file:///E:/Workspace/VLA-benchmark/deployment/realman_adjust_bottle_20261002/server_evidence/world_z_lift_table_certificate_20261003.json)。实际v11服务器目录为`deploy/realman_gen4/adjust_bottle_20261002/coupled_side_entry_v11_B085_20261003_seed7/`；完整v12仍在worker4、Conda robotwin、GPU2运行。关联：[[服务器172.17.27.166-robotwin]] · [[RM65-B双臂机器人]]。
+
 ### 2026-10-03 官方 Adjust Bottle 首条严格验收通过
 
 本轮持续目标已完成：在Conda `robotwin`、GPU2，以RM65-B双臂+四代Inspire手完成RoboTwin官方 `adjust_bottle` seed7（瓶模型13、左臂操作、右臂待命）的首次规划执行、1秒保持和全新场景原生保存轨迹回放。**正式合格官方数据从0增至1，仅保存episode_0000000；此前自定义reach与失败尝试不计入此数。** 采集worker4已退出，没有启动训练、后续批量任务或实机IO。
@@ -547,6 +559,7 @@ hand_y在pregrasp表达式完全抵消，不能靠调整它退让；hand_z才控
 x30/x40首次worker在网格审计期间发生native Segmentation fault，原日志与stale running报告保留；真实子进程exitcode没有被采集，不能当成已观察到139。新线程环境OMP/OPENBLAS/MKL/NUMEXPR各1的独立重试均正常结束但物理严格接受0，分别出现index2或index_force_sensor_2非承力碰撞；这两次未复现native crash不证明根因修复。新physical_terminal_retry_summary.json SHAbe3e7e510c801dd0d07ce626478c9c93cd5bfc0ba08af7852b694ab4b889df01，365冻结输入当前一致。新profile/环境的actual readback和SHA将随真正accepted源进入三RGB管线，不混入首条1062的原10mm数值配置。官方/厂家网格与旧数据保持，无实机IO或训练。
 
 关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]] · [[RoboTwin 2.0框架与默认任务]]。
+
 ## 2026-10-04 第二条雪碧严格成功与12条录制暂存
 
 middle SDK608与612的两项同seed2000对照均完成candidate全任务及fresh strict回放，原actual36全状态网格、exact真实法向承力touch、原支撑释放、速度/力/LP/no-push/2mm2°门禁通过，均导出207组native配对。它们官方setup初始pose完全相同，故只选择 **middle608** 的source_id=model16_0002000计入；612保留为物理对照而非第二个不同位置episode。608为2866步/11.464000545秒、carry actor原点漂移最大0.473228mm/0.515616°（与actual36全审计的统计范围区分）；612为2864步/11.456000544秒、carry0.697170mm/0.480635°。该比较支持608的平移裕度更大，不证明所有位置均可成功。
@@ -560,6 +573,7 @@ middle SDK608与612的两项同seed2000对照均完成candidate全任务及fresh
 已按同608不可变profile、v14/thread1在5个GPU采集11个不同官方seed候选，以取得余下8条合格源；正常setup已有sample证据的8/9/13/1024/1033/1041/1051/1087和仅诊断预筛的1069/1018/1020分别标明依据。所有候选仍真实执行未改sampler/pose/model的正常setup，既有稳定预筛不是本次完整成功保证；只有新strict accepted才计入。原roll610 seed13在thread1仍native中断，exitcode未采集、旧stale报告保留，不能称线程设置解决崩溃。没有实机IO或训练，最终20条/10+10和实际RGB外参与TCP/SDK/握力标定仍未完成。
 
 关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]] · [[RoboTwin 2.0框架与默认任务]]。
+
 ## 2026-10-04 最终20条双瓶型三RGB录制汇总
 
 正式选择已固定为 **10条可口可乐/model13与10条雪碧/model16**。20条来源均完成真实全任务与fresh strict物理验收，三相机重渲染暂存全部完成；此处记录录制汇总，尚不表示最终20条发布审计、完成标记或本机交付通过。官方 `adjust_bottle` 的左臂 qpose_tag=0 分支、官方采样与成功条件保留，双臂和双手数据保存；当前commit仍为 `56286567103cf58bfa6191ed889908c5c3a0baa3`，Conda `robotwin`。
@@ -575,6 +589,7 @@ root逐条只读当前recording_report.json并核对exact source_entry/finished/
 三路为头部/左腕/右腕D435仿真RGB，640×480，沿用RoboTwin的D435相机profile；不保存深度/IR/分割/点云载荷，保存相机内外参和安装配置。头部保持实机最低机械俯角；腕部固定安装并随厂家关节FK运动，不逐帧追踪目标或镜像图像。RoboTwin仿真内参不是每台D435实测标定，TCP/SDK/接触数值及腕外参仍未实机标定，头部和右腕终点原有出画裁切保留。没有实机IO、训练或跨任务成功率结论。
 
 关联：[[RM65-B双臂机器人]] · [[服务器172.17.27.166-robotwin]] · [[RoboTwin 2.0框架与默认任务]]。
+
 ## 2026-10-04 全20独立验收、正式发布与本机交付完成
 
 核查日期2026-10-04；本节记录最终完成状态，前述11/12/20条暂存段落保留为历史阶段。最终为 **10条可口可乐/model13 + 10条雪碧/model16**，均执行官方 `adjust_bottle` 左臂 `qpose_tag=0` 分支的完整仿真物理轨迹并通过原严格验收；双臂/双手状态均记录，不表述为20条双臂协同抓取。官方任务、厂家模型及原有数据保留，commit `56286567103cf58bfa6191ed889908c5c3a0baa3`，环境仍为服务器 Conda `robotwin`；没有实体机器人IO或训练。
@@ -602,19 +617,23 @@ root逐条只读当前recording_report.json并核对exact source_entry/finished/
 798个留出观测均真实输入三RGB/state/prompt，738完整H16和60尾部first-only全覆盖；raw first左臂MAE0.011325rad、左SDK3.9167，比hold当前状态基线改善；完整H16左臂MAE0.033876rad。所有query存在至少微小SDK越界，241/798会被原1SDK预算拒绝，arms越界0。离线报告SHA4857ca5af7dbfd8125f61ee8c77a76579310cd74fc1b9555c1e68172cccc4e81，已逐SHA镜像本机。验证index10/Sprite1062为旧10mm baseline，需按profile单列，不称纯位置泛化。
 
 当前四条模型闭环未启动，不能称完整推理/抓取成功或0/4物理失败。两TRAIN新执行器回归仍被原动态LP拒绝；原strict默认必须通过。显式sim-only diagnostic入口保留全部实际停止门禁、strict success永远false，但自动审批两次拒绝启动，已等待用户明确批准诊断与SDK范围投影对照或选择先修严格回归。没有绕行、实机连接、修改原20条、厂家模型或官方任务。完整本次版本、误差、model/receipt身份及原失败边界见[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证]]。
+
 ## 2026-10-04 全20条四卡20000步π0.5新协议
 
 用户明确取消上一轮16/4留出划分：现有20条全部训练，global batch8、FSDP4、GPU2/3/4/7、actual20000更新，从官方pi05_base重新初始化。新独立目录pi05_rgb20_all20_20k_b8_4gpu_20261004，旧实验与source20/官方代码不改。完整CPU转换/预训练恢复与四卡5步实际短跑通过；正式supervisor918271/worker918272已运行，最近核查日志optimizer451、50步均值loss0.01813069，不能当抓取成功率或完整训练完成。新场景直接推理将代替旧episode留出评估，并按真实抓住瓶子、瓶底离桌>=1cm且持稳1秒判定；旧LP只诊断，实际碰撞/防推倒/关节/mimic检查保留。新场景/自动后续链仍待接线和初始化核查，不称已模型闭环。来源、当前head-down固定URDF、归一化、四卡证据和实际状态见[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证]]；原1000步及此前拒绝记录保留为历史，用户新指令替代旧自设strict准入范围。
+
 ### 2026-10-04 新场景预检与训练后直接推理链
 
 实际LEFT新seed30015、距训练XY至少12.66mm、三RGB/FK和实际36关节/碰撞/桌面门禁通过；官方setup4376步后只额外执行1个驱动目标不变的被动物理步，模型/策略命令0，不是抓取成功。V4新增修正正常30秒模型超时误计录像异常，5项CPU分类通过，物理/动作/相机参数均不变。最终V6协议与247项source SHA冻结。
 
 服务器172.17.27.166的全20/batch8/四卡2/3/4/7正式20000步训练继续运行，固定UTC13:50读回optimizer3251，尚未完成。后续链PID935071已真实启动且phase=01_wait_training，等待actual20000/final19999发布后自动运行10新场景5Coke/5Sprite，用真实抓持瓶底离桌>=1cm持续1秒判定，保存三RGB视频；目前没有新模型抓取成功率。原source20、官方代码、1000步与所有旧版本保留。具体receipt/manifest/本机镜像与可复查入口见[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证#2026-10-04 新场景基础设施通过，训练后直接推理链已启动]] · [[服务器172.17.27.166-robotwin]]。
+
 ### 2026-10-05 π0.5四卡20000步已完成，新场景抓持0/10
 
 服务器实际终态确认全20train、batch8/FSDP4、GPU2/3/4/7的20000更新完成，checkpoint19999发布校验通过；北京时间2026-10-05 05:14结束、约8小时52分钟。自动链07:33结束，10个新环境新位置模型场景真实查询162次，可口可乐0/5、雪碧0/5，基础设施失败0。6条触发瓶子推移/倾斜检查、2条无名指/小指接触力检查、2条手部FD/mimic/关节限位组合检查，均实际物理后提前停止，未达到瓶底离桌1cm持续抓持1秒的标准。全部30段三RGB视频导出成功，但模型任务成功仍0/10。
 
 正常训练完成、低loss和workflow_completed=true不能写成成功抓取。本次只核查状态与归档，未改变原模型、门槛、源20数据或动作执行器。完整receipt/SHA及停止分类见[[2026-10-04-π0.5-RM65B-RGB20微调与推理验证#2026-10-05 四卡20000步训练完成，新场景抓取验证0/10]]，本任务GPU与模型服务已正常释放，部署状态见[[服务器172.17.27.166-robotwin]]。
+
 ### 2026-10-05 五指SR评测口径修正
 
 当前模型及源20条均是五指主要屈曲实际运动，但示教采用三指主要承载策略；旧V6还无条件禁止无名指/小指目标瓶力超过0.1N，不是官方RoboTwin统一SR标准。新实际首例seed40033因小指0.361405N触发该限制，停止后保留全部结果，不能报成完整新0/10。
