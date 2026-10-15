@@ -1,0 +1,101 @@
+{
+  "check_date": "2026-10-14 Asia/Shanghai",
+  "runtime": "/home/admin123/liminghe/miniconda3/envs/robotwin/bin/python",
+  "runtime_version": "Python 3.10.21",
+  "cpu_only": true,
+  "new_physics_or_planner_evidence": false,
+  "original_arrays_unchanged": true,
+  "recovered_original_files_manifest": "recovery_receipt.json",
+  "runtime_path_adaptation": {
+    "file": "validate_old_reference.py",
+    "changed_only": "SOURCE constant from lost /tmp to durable numerical audit archive",
+    "current_sha256": "a6b636a178653089a499bb3c24300c78b7cf10fee6af48f20080c46aa52ffd1d"
+  },
+  "checks": [
+    {
+      "name": "test_gate_components.py",
+      "source_sha256": "6347da66404fc8faca738c9718b9fd66c7e829d7cabb4f6b07fe235aa004d40c",
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"synthetic_component_only\": true, \"actual_planner_or_physics_evidence_generated\": false, \"checks\": [\"nearest legal periodic branch recomputed\", \"non-nearest/omitted candidate rejected\", \"missing branch/upstream evidence blocked\", \"raw2pi target jump rejected\", \"stale low state rejected\", \"already-closed recording prefix rejected\", \"true contact timestamp kept separate from SDK proxy\"]}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "synthetic_component_only": true,
+        "actual_planner_or_physics_evidence_generated": false,
+        "checks": [
+          "nearest legal periodic branch recomputed",
+          "non-nearest/omitted candidate rejected",
+          "missing branch/upstream evidence blocked",
+          "raw2pi target jump rejected",
+          "stale low state rejected",
+          "already-closed recording prefix rejected",
+          "true contact timestamp kept separate from SDK proxy"
+        ]
+      }
+    },
+    {
+      "name": "test_source_binding.py",
+      "source_sha256": "158040132acb5607b45010dc5d5bcac05f9758f4eac2bb48ffce632ae099105d",
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"synthetic_component_only\": true, \"actual_planner_or_physics_evidence_generated\": false, \"temporary_fixtures_removed\": true, \"checks\": [\"synthetic fixture stays blocked despite internally consistent source binding\", \"wrong source SHA rejected\", \"wrong original raw IK family rejected\", \"candidate omitted from actual declaration rejected\", \"planner time absent from physical clock rejected\", \"selected branch differs from source rejected\", \"joint limits differ from source rejected\", \"collision receipt relabel rejected\", \"planner before q differs from actual numeric measurement rejected\", \"actually applied drive target differs from original TOPP path rejected\", \"duplicate accepted source events rejected\"]}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "synthetic_component_only": true,
+        "actual_planner_or_physics_evidence_generated": false,
+        "temporary_fixtures_removed": true,
+        "checks": [
+          "synthetic fixture stays blocked despite internally consistent source binding",
+          "wrong source SHA rejected",
+          "wrong original raw IK family rejected",
+          "candidate omitted from actual declaration rejected",
+          "planner time absent from physical clock rejected",
+          "selected branch differs from source rejected",
+          "joint limits differ from source rejected",
+          "collision receipt relabel rejected",
+          "planner before q differs from actual numeric measurement rejected",
+          "actually applied drive target differs from original TOPP path rejected",
+          "duplicate accepted source events rejected"
+        ]
+      }
+    },
+    {
+      "name": "validate_old_reference.py",
+      "source_sha256": "a6b636a178653089a499bb3c24300c78b7cf10fee6af48f20080c46aa52ffd1d",
+      "exit_code": 0,
+      "stdout": "{\"scope\": \"Actual CPU replay of independent numerical motion gate against saved original13 numeric cases, not re-simulation or new-data acceptance\", \"thresholds_confirmed\": true, \"config_sha256\": \"240d9aeb45d9c6d469941ef71abc9146238f874100470b0228c99d833ee017e7\", \"old_five_motion_rejected\": 5, \"old_five_count\": 5, \"short_upright_reference_motion_passed\": 6, \"short_upright_reference_count\": 6, \"other_abnormal_matched_rejected\": 2, \"matching_limits\": {\"exact_normal_CocaCola_left_upright_reference\": [2], \"Fanta_left_other_upright_normal_reference_in_original50\": [], \"Fanta_right_other_upright_reference\": [3], \"Fanta_right_reference3_is_abnormal_not_normal\": true, \"other_short_references_are_same_upright_pose_and_same_or_mirrored_arm_but_cross_brand\": [0, 13, 14, 25, 48]}, \"sdk_boundary_is_not_actual_first_contact\": true, \"new_five_scene_profile_is_demo_randomized_not_old_initial_scene_restoration\": true, \"original_datasets_models_and_remote_not_modified\": true, \"new_planner_evidence_and_physical_clutter_success_still_required\": true}\n",
+      "stderr": "",
+      "result": {
+        "scope": "Actual CPU replay of independent numerical motion gate against saved original13 numeric cases, not re-simulation or new-data acceptance",
+        "thresholds_confirmed": true,
+        "config_sha256": "240d9aeb45d9c6d469941ef71abc9146238f874100470b0228c99d833ee017e7",
+        "old_five_motion_rejected": 5,
+        "old_five_count": 5,
+        "short_upright_reference_motion_passed": 6,
+        "short_upright_reference_count": 6,
+        "other_abnormal_matched_rejected": 2,
+        "matching_limits": {
+          "exact_normal_CocaCola_left_upright_reference": [
+            2
+          ],
+          "Fanta_left_other_upright_normal_reference_in_original50": [],
+          "Fanta_right_other_upright_reference": [
+            3
+          ],
+          "Fanta_right_reference3_is_abnormal_not_normal": true,
+          "other_short_references_are_same_upright_pose_and_same_or_mirrored_arm_but_cross_brand": [
+            0,
+            13,
+            14,
+            25,
+            48
+          ]
+        },
+        "sdk_boundary_is_not_actual_first_contact": true,
+        "new_five_scene_profile_is_demo_randomized_not_old_initial_scene_restoration": true,
+        "original_datasets_models_and_remote_not_modified": true,
+        "new_planner_evidence_and_physical_clutter_success_still_required": true
+      }
+    }
+  ]
+}

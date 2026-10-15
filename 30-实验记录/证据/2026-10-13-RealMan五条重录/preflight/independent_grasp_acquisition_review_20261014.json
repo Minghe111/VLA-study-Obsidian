@@ -1,0 +1,148 @@
+{
+  "schema": "independent_acquisition_static_review_v1",
+  "review_time_utc": "2026-10-14T05:17:13.653731+00:00",
+  "reviewer": "/root/review_acquisition",
+  "helper_sha256": "4d837e95c0f8fcf7da2b837b2a49b8a35d8e83ff9244eb2d987fac1df63fd8d3",
+  "frozen_files_not_modified": true,
+  "scope": "independent read-only code review and CPU synthetic-contact counterexample rerun; no new physical episode acceptance or hardware validation",
+  "status": "no_fatal_implementation_issue_found_in_current_native_v9_integration",
+  "files_sha256": {
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/planning/grasp_acquisition_guard.py": "4d837e95c0f8fcf7da2b837b2a49b8a35d8e83ff9244eb2d987fac1df63fd8d3",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/planning/test_grasp_acquisition_guard.py": "e36a7f9a6337469ca2143c83d87f3cfd1db793349a9c4b67cb97a241038de15a",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261013_v2_conservative/source/rgb50_20261007_v1/expert_generation.py": "ab70935c945b4df83edf31b2cb914dff13b8c4c16c8a944fbf23025c1d639ccc",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261013_v2_conservative/source/rgb50_20261007_v1/expert_generation_v2.py": "0cbeb62f24d820b42517a7afd82a1bb501187363f62350579969cca2db77929d",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261013_v2_conservative/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py": "a8a7d652a6c0bc45c41cc60d86a6fbb8a6e3db8c42560df10e972115d34d0d05",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261013_v2_conservative/source/adjust_bottle_20261002/contact_capture_control_v26.py": "cf6de939d9cc0d165859b7c01ee95ed992fe2c11ed52e4a62a24e04eca2cf6a7",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261013_v2_conservative/source/adjust_bottle_20261002/continuous_servo.py": "18716a2e0aca64425f1a2a3936bfa4e1f7886b3df7fa31f3b37284e779746c19"
+  },
+  "original_slot_default_resolution": {
+    "17": {
+      "source_spec_sha256": "d45edf1bed55d90e4972662801be5aa6a137f323334e2077adafc694c73687fb",
+      "model_id": 4,
+      "explicit_close_sdk": [
+        650,
+        670,
+        610,
+        610,
+        850,
+        0
+      ],
+      "resolved_native_v2_close_sdk": [
+        650,
+        670,
+        610,
+        610,
+        850,
+        0
+      ]
+    },
+    "18": {
+      "source_spec_sha256": "70d964964f34244d1cecbf5f8937a7e5fdfbe100881cada36db9eeab3b3e5731",
+      "model_id": 4,
+      "explicit_close_sdk": [
+        650,
+        670,
+        610,
+        610,
+        850,
+        0
+      ],
+      "resolved_native_v2_close_sdk": [
+        650,
+        670,
+        610,
+        610,
+        850,
+        0
+      ]
+    },
+    "20": {
+      "source_spec_sha256": "42a3eac7f95c43c4791fca30c3a6de577c0eb0b90f45e8f2232bd0a4deeb8b67",
+      "model_id": 4,
+      "explicit_close_sdk": [
+        650,
+        670,
+        610,
+        610,
+        850,
+        0
+      ],
+      "resolved_native_v2_close_sdk": [
+        650,
+        670,
+        610,
+        610,
+        850,
+        0
+      ]
+    },
+    "29": {
+      "source_spec_sha256": "2b6852206b75bdce89557ae1e130c6d57b255877adbfcf673b14ab8b58dcacbc",
+      "model_id": 13,
+      "explicit_close_sdk": null,
+      "resolved_native_v2_close_sdk": [
+        650,
+        670,
+        610,
+        610,
+        887,
+        0
+      ]
+    },
+    "34": {
+      "source_spec_sha256": "9a4f5c486aac024d4127eb105d250738ad0fe035129f00313c6e700def423ee4",
+      "model_id": 13,
+      "explicit_close_sdk": null,
+      "resolved_native_v2_close_sdk": [
+        650,
+        670,
+        610,
+        610,
+        887,
+        0
+      ]
+    }
+  },
+  "cpu_counterexamples": {
+    "passed": true,
+    "tests": 14,
+    "real_contact_or_LP_evidence": false
+  },
+  "findings": [
+    {
+      "severity": "info",
+      "topic": "resolved_sample_spec",
+      "finding": "native expert_v9_settle_wake_v5 inheritance reaches expert_generation_v2.__init__, which writes DEFAULT_SETTING or SPRITE_SETTING plus explicit overrides into copied spec.grasp_setting before invoking wrapped base constructor; direct base construction without resolved spec is unsupported"
+    },
+    {
+      "severity": "info",
+      "topic": "source_registration",
+      "finding": "external registration JSON is created before original base constructor; session.sources receives installer hash immediately after base constructor and before first expert physical step; subsequent subclass constructors update rather than replace sources"
+    },
+    {
+      "severity": "info",
+      "topic": "outer_dispatch",
+      "finding": "instance plan_path/dense hooks capture dynamic most-derived methods at base-constructor time and execute acquisition before carry planner/CMA or holding; later reviewed subclass constructors do not replace these instance hooks"
+    },
+    {
+      "severity": "info",
+      "topic": "physical_guards",
+      "finding": "extra ticks call current session.step, preserving 4ms physics, SDK24 telemetry, 15-step RGB capture, original 2mm/2deg close displacement and reference drift, original hand velocity/mimic/limits and native self-contact/table guards; holding=False prevents extras entering terminal hold_rows only"
+    },
+    {
+      "severity": "info",
+      "topic": "truthful_contact",
+      "finding": "original controller evaluates real forces and LP first; acquisition never fabricates contact counters or had_pair; readiness requires own actual opposing pair streak plus original three-main-contact actual_pair_streak >= 50, current real pair, usable LP, zero original LP failure, and exact target/velocity handoff"
+    },
+    {
+      "severity": "info",
+      "topic": "command_changes",
+      "finding": "additive drive progression toward per-slot original nominal close targets and current actual paired measured recapture are recorded policy changes; original controller files remain byte-identical but control behavior is intentionally supplemented; no actor/qpos/material writes or hardware IO"
+    },
+    {
+      "severity": "limitation",
+      "topic": "physical_effectiveness",
+      "finding": "synthetic tests demonstrate fail-closed plumbing only; real grasp acquisition effectiveness and full physical episode acceptance remain unverified until actual V3 run"
+    }
+  ]
+}

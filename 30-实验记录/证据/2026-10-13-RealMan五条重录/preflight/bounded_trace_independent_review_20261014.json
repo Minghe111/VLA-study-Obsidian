@@ -1,0 +1,17 @@
+{
+  "scope": "20 small CPU storage, review, and exact original/derived loader tests; no simulator, no large cache load",
+  "passed": true,
+  "test_count": 20,
+  "source_sha256": {
+    "planning/bounded_trace_storage.py": "0623667982352309134865ace5a74e52bfd47b8a385f664106126e0fce1220c1",
+    "planning/test_bounded_trace_review.py": "b6655df399d3d010f9a7d4680e058d03f4f4d847df756153ad69b7acd4ca7182",
+    "planning/bounded_trace_overlay.py": "d4e5b7aa2193bc666bf3f6c7780d66e677d2a6f76431486cee3d832f48ac9798",
+    "preflight/run_guarded_stage.py": "b57074f51f88a095af6007ae9fa96e0447c8e8715925a399ed5e4e3722f21e24"
+  },
+  "edits": [
+    "bounded_trace_storage sparse override deep copy",
+    "bounded_trace_storage encoder chunk split; every write <=65536 bytes"
+  ],
+  "original_native_audit_semantics_edited": false,
+  "guard_edited_during_this_review": false
+}

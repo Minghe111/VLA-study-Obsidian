@@ -1,0 +1,220 @@
+{
+  "scope": "Independent CPU-only stateless installed official TOPP replay of exact retained full36-to-arm6 Cartesian knots using same-session recorded actual wrapper limits. Original failed TOPP output bytes were not retained, so this is replay evidence rather than historical output. Original failed trials unchanged.",
+  "created_utc": "2026-10-07T11:41:28.880493+00:00",
+  "scene_steps": 0,
+  "renders": 0,
+  "gpu_runs": 0,
+  "hardware_io": false,
+  "physical_source": {
+    "path": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/full_native_carry_planner_v31.py",
+    "sha256": "7a0d4cb0cedc40ee25daed1226a073705fc71bf1dc9a2a34064a11cd588b21d7",
+    "retimer": "official_topp_command_polyline",
+    "native_v_a_gate_line": 202,
+    "native_clock_ratio_after_gate_line": 203,
+    "support_departure_selection_line": 439,
+    "reject_report_line": 447
+  },
+  "installed_native_TOPP_source": {
+    "path": "/bigdata2/liminghe/envs/robotwin/lib/python3.10/site-packages/mplib/planner.py",
+    "sha256": "23c51d083ce1892e5fbd0e1473df432d1c33609e50bfac8bdf9e8bfcf6c2cf3c",
+    "function_line": 351,
+    "sampling": "np.linspace(0, duration, int(duration / step))"
+  },
+  "results": [
+    {
+      "trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v4_gpu4_fanta_left_diagonal_post_setup_wake8_attempt260/slot0000026_candidate_attempt260_v4_wake8_original_diagonal_profile",
+      "retained_expert_report_sha256": "f4d0321dd3b6d2aa00a014164f5e3f43272ee70433d5ff6da5c7c016c6a937b1",
+      "actual_same_session_limit_proof_sha256": "3d4aab0998df0962ef5a67a6f8bab101f984509dad045757ff172911cb69cbc8",
+      "original_reason": "Retiming rejected: Native velocity/acceleration limits exceeded",
+      "recorded_knots_count": 21,
+      "arm_joint_names": [
+        "l_joint1",
+        "l_joint2",
+        "l_joint3",
+        "l_joint4",
+        "l_joint5",
+        "l_joint6"
+      ],
+      "full36_to_arm6_indices": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "actual_physics_dt_s": 0.004000000189989805,
+      "official_limit_velocity_rad_s": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "official_limit_acceleration_rad_s2": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "native_cpu_replay_duration_s": 4.015773286215402,
+      "native_cpu_replay_rows": 1003,
+      "native_cpu_replay_grid_min_s": 0.004007757770673415,
+      "native_cpu_replay_grid_max_s": 0.004007757770674303,
+      "native_grid_to_physics_dt_ratio": 1.001939395079008,
+      "native_cpu_replay_peak_velocity_rad_s": [
+        0.15188189120669143,
+        0.08646571199680508,
+        0.13226590979094824,
+        1.0050647064901974,
+        0.13551917329315413,
+        0.9933680126796721
+      ],
+      "native_cpu_replay_peak_acceleration_rad_s2": [
+        0.43564099432725306,
+        0.25467498285381324,
+        0.39716405213255945,
+        0.9974857227169939,
+        0.39582788232011445,
+        1.0040766042813574
+      ],
+      "native_replay_failed_original_velocity_gate": true,
+      "native_replay_failed_original_acceleration_gate": true,
+      "peak_violations": [
+        {
+          "joint": "l_joint4",
+          "velocity_peak_rad_s": 1.0050647064901974,
+          "velocity_limit_rad_s": 1.0,
+          "acceleration_peak_rad_s2": 0.9974857227169939,
+          "acceleration_limit_rad_s2": 1.0,
+          "acceleration_excess_rad_s2": -0.0025142772830061277
+        },
+        {
+          "joint": "l_joint6",
+          "velocity_peak_rad_s": 0.9933680126796721,
+          "velocity_limit_rad_s": 1.0,
+          "acceleration_peak_rad_s2": 1.0040766042813574,
+          "acceleration_limit_rad_s2": 1.0,
+          "acceleration_excess_rad_s2": 0.0040766042813573655
+        }
+      ],
+      "physical_4ms_fd_velocity_peak_rad_s": [
+        0.1521895741634535,
+        0.08663210855460038,
+        0.1325320162220183,
+        1.0070159394261204,
+        0.1357784036430088,
+        0.9952966277696689
+      ],
+      "physical_4ms_velocity_target_acceleration_peak_rad_s2": [
+        0.43648512577474136,
+        0.25516750390546994,
+        0.39793157372981003,
+        0.9928571413635837,
+        0.39659464499725,
+        1.0060956429898305
+      ]
+    },
+    {
+      "trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v4_gpu4_fanta_left_diagonal_post_setup_wake8_attempt260/slot0000026_candidate_attempt261_v4_wake8_z_clearance",
+      "retained_expert_report_sha256": "f14fef08a6bd17efa84811d722ce9a96dac3e990cfd835b00f394de8965bbafd",
+      "actual_same_session_limit_proof_sha256": "b5e08d319b7b0147fc6e6b34f797b7e83ac7956878f0af2bb8e30ff7a395f750",
+      "original_reason": "Retiming rejected: Native velocity/acceleration limits exceeded",
+      "recorded_knots_count": 21,
+      "arm_joint_names": [
+        "l_joint1",
+        "l_joint2",
+        "l_joint3",
+        "l_joint4",
+        "l_joint5",
+        "l_joint6"
+      ],
+      "full36_to_arm6_indices": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "actual_physics_dt_s": 0.004000000189989805,
+      "official_limit_velocity_rad_s": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "official_limit_acceleration_rad_s2": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "native_cpu_replay_duration_s": 4.015646139786729,
+      "native_cpu_replay_rows": 1003,
+      "native_cpu_replay_grid_min_s": 0.004007630878030355,
+      "native_cpu_replay_grid_max_s": 0.004007630878031243,
+      "native_grid_to_physics_dt_ratio": 1.00190767191975,
+      "native_cpu_replay_peak_velocity_rad_s": [
+        0.15191611740599584,
+        0.08647461887222473,
+        0.13223958839831484,
+        1.0050635684847915,
+        0.1355441135953548,
+        0.9933610741121816
+      ],
+      "native_cpu_replay_peak_acceleration_rad_s2": [
+        0.4357348125963795,
+        0.25469774666375655,
+        0.39707939787828017,
+        0.9974943595754471,
+        0.3959100334731961,
+        1.0040826525404531
+      ],
+      "native_replay_failed_original_velocity_gate": true,
+      "native_replay_failed_original_acceleration_gate": true,
+      "peak_violations": [
+        {
+          "joint": "l_joint4",
+          "velocity_peak_rad_s": 1.0050635684847915,
+          "velocity_limit_rad_s": 1.0,
+          "acceleration_peak_rad_s2": 0.9974943595754471,
+          "acceleration_limit_rad_s2": 1.0,
+          "acceleration_excess_rad_s2": -0.002505640424552924
+        },
+        {
+          "joint": "l_joint6",
+          "velocity_peak_rad_s": 0.9933610741121816,
+          "velocity_limit_rad_s": 1.0,
+          "acceleration_peak_rad_s2": 1.0040826525404531,
+          "acceleration_limit_rad_s2": 1.0,
+          "acceleration_excess_rad_s2": 0.004082652540453147
+        }
+      ],
+      "physical_4ms_fd_velocity_peak_rad_s": [
+        0.15221761622584823,
+        0.0866382650855511,
+        0.13250140128677557,
+        1.0069828246172856,
+        0.1357998608696267,
+        0.9952579513458882
+      ],
+      "physical_4ms_velocity_target_acceleration_peak_rad_s2": [
+        0.43656530298149004,
+        0.25518223223071784,
+        0.39783416108128306,
+        0.9927660538063542,
+        0.39666439539339166,
+        1.0060730514409673
+      ]
+    }
+  ],
+  "historical_failures_relabelled": false
+}

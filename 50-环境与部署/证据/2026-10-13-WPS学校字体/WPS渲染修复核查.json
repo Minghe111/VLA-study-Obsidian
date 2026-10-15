@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-13",
+  "problem": "WPS renders bold FangSong_GB2312 as black blobs despite loading original fonts",
+  "before": {
+    "freetype_version": "2.13.2",
+    "freetype_path": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6.20.1",
+    "observed_wps_pid": 103964,
+    "screenshot": "WPS粗仿宋修复前.png"
+  },
+  "isolated_ab_test": {
+    "freetype_version": "2.11.1",
+    "freetype_source": "/snap/gnome-42-2204/263/usr/lib/x86_64-linux-gnu/libfreetype.so.6.18.1",
+    "unchanged_report": true,
+    "bold_titles_restored": true
+  },
+  "persistent_fix": {
+    "date": "2026-10-13",
+    "library_source": "/snap/gnome-42-2204/263/usr/lib/x86_64-linux-gnu/libfreetype.so.6.18.1",
+    "private_library": "/home/admin123/.local/share/wps-freetype-compat/lib/libfreetype.so.6",
+    "library_sha256": "ef8908dd08eb7072dd1da355277b069048a86512122592d56b5051796ba62ee2",
+    "system_library_unchanged": true,
+    "report_unchanged": true,
+    "launchers": [
+      {
+        "desktop_id": "wps-office-wps.desktop",
+        "path": "/home/admin123/.local/share/applications/wps-office-wps.desktop",
+        "previous_user_override": false,
+        "before_exec": "Exec=/usr/bin/wps %U",
+        "after_exec": "Exec=/usr/bin/env LD_PRELOAD=/home/admin123/.local/share/wps-freetype-compat/lib/libfreetype.so.6 /usr/bin/wps %U",
+        "backup": "/home/admin123/.local/share/wps-freetype-compat/backups/wps-office-wps.desktop.before-20261013",
+        "sha256": "184a732487d79aaa88af7949dca9558095ec70e2b4c83d9f50f58979274f7c6c"
+      },
+      {
+        "desktop_id": "wps-office-prometheus.desktop",
+        "path": "/home/admin123/.local/share/applications/wps-office-prometheus.desktop",
+        "previous_user_override": false,
+        "before_exec": "Exec=/usr/bin/wps %F",
+        "after_exec": "Exec=/usr/bin/env LD_PRELOAD=/home/admin123/.local/share/wps-freetype-compat/lib/libfreetype.so.6 /usr/bin/wps %F",
+        "backup": "/home/admin123/.local/share/wps-freetype-compat/backups/wps-office-prometheus.desktop.before-20261013",
+        "sha256": "eff7e41042b6289d77e6ad8c99d67187ffb051604d0afd1a338c29cc53d0f77a"
+      }
+    ],
+    "docx_default_desktop_id": "wps-office-prometheus.desktop"
+  },
+  "final_application_check": {
+    "date": "2026-10-13",
+    "launch_method": "gtk-launch wps-office-prometheus with unchanged original report",
+    "processes": [
+      {
+        "pid": 113382,
+        "exe": "/opt/kingsoft/wps-office/office6/wpsoffice",
+        "freetype": [
+          "/home/admin123/.local/share/wps-freetype-compat/lib/libfreetype.so.6"
+        ],
+        "school_fonts": []
+      },
+      {
+        "pid": 113407,
+        "exe": "/opt/kingsoft/wps-office/office6/wps",
+        "freetype": [
+          "/home/admin123/.local/share/wps-freetype-compat/lib/libfreetype.so.6"
+        ],
+        "school_fonts": [
+          "/home/admin123/.local/share/fonts/wps-school-fonts/timesi.ttf",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/FangSong_GB2312.ttf",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/STXinwei.ttf",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/timesbd.ttf",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/simhei.ttf",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/simsun.ttc",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/arial.ttf",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/times.ttf",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/WEBDINGS.TTF",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/WINGDNG2.ttf",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/wingding.ttf",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/symbol.ttf",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/WINGDNG3.ttf",
+          "/home/admin123/.local/share/fonts/wps-school-fonts/mtextra.ttf"
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "window": "0x5a0000f",
+        "properties": "WM_CLASS(STRING) = \"wpsoffice\", \"wpsoffice\"\n_NET_WM_NAME(UTF8_STRING) = \"东北大学开题报告初稿-多模态条件控制与场景适应.docx - WPS Office\"\n"
+      }
+    ],
+    "source_docx_sha256": "5027a0ab095cd0d9ba0c426923f1215c88afd98d15624627dd5695995a02a8a8",
+    "report_unchanged": true
+  },
+  "observed_pages": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "all_10_pages_verified_in_wps": false,
+  "restored_sections": [
+    "cover title and identity fields",
+    "fill-in instructions",
+    "three bold subsections in motivation",
+    "five bold subsections in literature review"
+  ],
+  "final_screenshot": "WPS粗仿宋修复后.png",
+  "sources": [
+    "https://bbs.wps.cn/topic/9157",
+    "https://bbs.wps.cn/topic/3137"
+  ],
+  "font_binaries_or_shared_libraries_in_vault": false,
+  "screenshot_sha256": {
+    "WPS粗仿宋修复前.png": "c8ca4cf92a30f8d0ee8eadf375b69d65fd6df57810f83234cafd19cbc670dfd5",
+    "WPS粗仿宋修复后.png": "980994334430809150b547164eedc50e99ea82d230eb2e28bbff5253d9737f20"
+  }
+}

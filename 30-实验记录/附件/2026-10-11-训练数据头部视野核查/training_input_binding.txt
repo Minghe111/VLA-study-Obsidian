@@ -1,0 +1,17 @@
+{"checked_utc": "2026-10-11T02:55:25.711241+00:00", "adapter_sha256": "4aaee44efff42054e66d7ec4e5ad4fc418d66d980b3c548d8c744a93c577947c", "config_sha256": "39699d3313c78e0842968a59c7c12ddefa0ba849b3126579f517952e4b148ee8", "trainer_pid_exists": true, "model_loaded": false, "remote_files_written": false}
+CONFIG_DATA_PATHS
+OFFICIAL_SOURCE_PATH = "cotrain_ckpt/Pi_05/RoboTwin-lerobot_v30-aloha_agilex-joint-0.tar.gz"
+DATA_ROOT = TASK_ROOT / "data50_v1"
+SOURCE_ROOT = TASK_ROOT / "source_training_files"
+NORM_PATH = DATA_ROOT / "assets/realman_rgb50_full50/norm_stats.json"
+    require(receipt.get("source_path") == OFFICIAL_SOURCE_PATH, "Official archive source differs")
+    for file, expected in ((ADAPTER_PATH, ADAPTER_SHA256), (DATA_ROOT / "native_index.json", INDEX_SHA256),
+        (NORM_PATH, NORM_SHA256), (DATA_ROOT / "conversion_validation.json", CONVERSION_SHA256),
+        (SOURCE_ROOT / "manifest.json", MANIFEST_SHA256)):
+    index = read_json(DATA_ROOT / "native_index.json")
+    os.environ["OPENPI_DATA_HOME"] = str(BASE_ROOT / "weights")
+        repo_id: str = REPO_ID
+            official_config.AssetsConfig(assets_dir=str(DATA_ROOT / "assets"), asset_id=ASSET_ID))
+        if data_config.repo_id in adapter.REPO_IDS:
+            return adapter.RealmanNativeDataset(DATA_ROOT, split="train", action_horizon=16, verify_hashes=True,
+                source_override=SOURCE_ROOT, xpolicylab_parent=PROJECT_ROOT / "RoboTwin")

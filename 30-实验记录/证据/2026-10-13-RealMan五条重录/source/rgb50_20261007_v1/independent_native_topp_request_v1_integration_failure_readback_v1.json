@@ -1,0 +1,27 @@
+{
+  "scope": "Read-only retained production integration failure. No new physics or relabeling; retime numeric CPU validation does not establish expert-interface integration.",
+  "created_utc": "2026-10-07T12:25:19.251981+00:00",
+  "trial_dir": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v1_gpu4_fanta_left_diagonal26_matched_native_topp99_attempt310/slot0000026_candidate_attempt310_v4_matched_native_topp99",
+  "expert_report_sha256": "73493a6c9cba79da897174747a2b18ae91bde57b0226fe6b3348a66e8a708e50",
+  "physics_trace_sha256": "2cbf611400ce31fcc286de797c6852ae62cb47b55a4d25aa4766d25934f5e146",
+  "accepted": false,
+  "physical_steps": 1242,
+  "error": "'SampleScene' object has no attribute 'source'",
+  "traceback": "Traceback (most recent call last):\n  File \"/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection\", line 5, in run\n    side; the LP feasible set, drive gains, friction and five-finger timing remain.\n  File \"/bigdata2/liminghe/VLA-benchmark/RoboTwin/envs/adjust_bottle.py\", line 45, in play_once\n    self.move(self.move_by_displacement(arm_tag=arm_tag, z=0.1, move_axis=\"arm\"))\n  File \"/bigdata2/liminghe/VLA-benchmark/RoboTwin/envs/_base_task.py\", line 1035, in move\n    control_seq[\"left_arm\"] = self.left_move_to_pose(\n  File \"/bigdata2/liminghe/VLA-benchmark/RoboTwin/envs/_base_task.py\", line 839, in left_move_to_pose\n    left_result = self.robot.left_plan_path(pose, constraint_pose=constraint_pose)\n  File \"/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation.py\", line 192, in <lambda>\n    setattr(task.robot, self.side + \"_plan_path\", MethodType(lambda robot, *a, **kw: self.plan_path(robot, *a, **kw), task.robot))\n  File \"/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v8.py\", line 42, in plan_path\n    return super().plan_path(robot,target_pose,constraint_pose=constraint_pose,**kwargs)\n  File \"/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v7.py\", line 85, in plan_path\n    result=super().plan_path(robot,target_pose,constraint_pose=constraint_pose,**kwargs)\n  File \"/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v5.py\", line 120, in plan_path\n    result=self._carry_candidate(robot,candidate['target_pose'],constraint_pose,number,**kwargs)\n  File \"/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v6.py\", line 59, in _carry_candidate\n    return super()._carry_candidate(robot,target_pose,constraint_pose,number,**kwargs)\n  File \"/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v5.py\", line 91, in _carry_candidate\n    result=super().plan_path(robot,target_pose,constraint_pose=constraint_pose,**kwargs)\n  File \"/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v3.py\", line 31, in plan_path\n    return super().plan_path(robot, target_pose,\n  File \"/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v2.py\", line 103, in plan_path\n    result=super().plan_path(robot,target_pose,constraint_pose=constraint_pose,**kwargs)\n  File \"/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation.py\", line 294, in plan_path\n    result = self.ncp.plan_carry_to_task_pose(self.task, target_pose, self.side, palm_to_bottle=reference,\n  File \"/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v6.py\", line 27, in plan_carry_to_task_pose\n    result=self.source.plan_carry_to_task_pose(*args,**kwargs)\nAttributeError: 'SampleScene' object has no attribute 'source'\n",
+  "native_request_count": 0,
+  "native_limit_request_hook_not_reached": true,
+  "diagnosis": "v1 thin treated session-owned expert_generation_v6._NativeCarryReadback object as a module; its bound wrapper code was reconstructed as an unbound module function, passing SampleScene as self before reaching nativeTOPP. Newv2 preserves delegate/owner/readback and replaces only its real module source.",
+  "frozen_original_readback_source": {
+    "path": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v6.py",
+    "sha256": "d1401783c2b6d90d791127e32e8cbc726f66b30ede212eec2868e0a3ef3135e9",
+    "failure_line": 27
+  },
+  "frozen_v1_sources_unchanged": {
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/native_topp_request_margin_v1.py": "ceae0ed22ffb0a98db6db20f39ca5ae584fac40c46dc2155c4a96b0bd785bd5d",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_v9_wake_native_topp_request_v1.py": "6d6b98bb97ab2d945253d6cb93dd3a387803c8addb5aa2e8ac7e70655107e8de",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/worker_wake_native_topp_request_v1.py": "b186891ee25d085f6e75077d62c4c96417b39b53ee2416bb6e719378dcd02392"
+  },
+  "source_failure_label_preserved": true,
+  "scene_steps": 0,
+  "GPU_runs": 0
+}

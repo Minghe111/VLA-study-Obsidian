@@ -1,0 +1,29 @@
+WARNING:absl:Tensorflow library not found, tensorflow.io.gfile operations will use native shim calls. GCS paths (i.e. 'gs://...') cannot be accessed.
+Strict RM65 SFT restore: 51 base leaves, 3353433872 parameters; new LoRA only
+/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/venv/lib/python3.11/site-packages/flax/core/lift.py:310: RuntimeWarning: kwargs are not supported in vmap, so "train" is(are) ignored
+  warnings.warn(msg.format(name, ', '.join(kwargs.keys())), RuntimeWarning)
+Loaded critic pretrained ResNet-10: path=/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/models/resnet10_params.pkl, leaves=36, params=4905792
+/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/venv/lib/python3.11/site-packages/flax/core/lift.py:310: RuntimeWarning: kwargs are not supported in vmap, so "train" is(are) ignored
+  warnings.warn(msg.format(name, ', '.join(kwargs.keys())), RuntimeWarning)
+/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/venv/lib/python3.11/site-packages/flax/core/lift.py:310: RuntimeWarning: kwargs are not supported in vmap, so "train" is(are) ignored
+  warnings.warn(msg.format(name, ', '.join(kwargs.keys())), RuntimeWarning)
+/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/venv/lib/python3.11/site-packages/flax/core/lift.py:310: RuntimeWarning: kwargs are not supported in vmap, so "train" is(are) ignored
+  warnings.warn(msg.format(name, ', '.join(kwargs.keys())), RuntimeWarning)
+2026-10-15 15:34:44.546803: W external/xla/xla/tsl/framework/bfc_allocator.cc:501] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1004.50MiB (rounded to 1053294592)requested by op 
+2026-10-15 15:34:44.547019: W external/xla/xla/tsl/framework/bfc_allocator.cc:512] ******************************************__********************************************************
+E1015 15:34:44.547072  363248 pjrt_stream_executor_client.cc:3077] Execution of replica 0 failed: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1053294592 bytes. [tf-allocator-allocation-error='']
+Traceback (most recent call last):
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/code/VLA-Precision/scripts/realman_acob_probe.py", line 663, in <module>
+    main()
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/code/VLA-Precision/scripts/realman_acob_probe.py", line 653, in main
+    result = run(args, output)
+             ^^^^^^^^^^^^^^^^^
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/code/VLA-Precision/scripts/realman_acob_probe.py", line 635, in run
+    agent, audit = update_probe(agent, paths, args, output)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/code/VLA-Precision/scripts/realman_acob_probe.py", line 507, in update_probe
+    agent, info = agent.update_ql(batch, networks_to_update=networks)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jaxlib.xla_extension.XlaRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1053294592 bytes.
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.

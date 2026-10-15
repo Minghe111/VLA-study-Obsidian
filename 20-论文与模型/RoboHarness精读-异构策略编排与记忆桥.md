@@ -4,7 +4,7 @@ aliases:
   - RoboHarness论文精读
   - Memory Bridge记忆桥
 date: 2026-09-22
-updated: 2026-09-22
+updated: 2026-10-13
 tags:
   - 论文精读
   - VLA
@@ -18,9 +18,13 @@ paper_version_date: 2026-07-28
 sources:
   - https://arxiv.org/abs/2607.18060v2
   - https://arxiv.org/pdf/2607.18060v2
+  - https://arxiv.org/html/2607.18060v3
 ---
 
 # RoboHarness 精读：异构策略编排与记忆桥
+
+> [!info] 版本增补（2026-10-11）
+> 原始精读与下文页码仍对应本地 v2 PDF。arXiv 已于 2026-09-29 更新至 [v3](https://arxiv.org/abs/2607.18060v3)：本次只核对版本记录及方法/评价设置，不将旧表格数字改写为 v3 成绩。v3 纳入 WAM 策略，公开基准增为五个；自进化描述为 Policy Adaptation、Harness Refinement、Metadata Update，参数更新使用离散候选上的定向增/减/保持，不是穷举网格搜索。验证后的更新可跨评价回合保留。依据为 [v3 §4.3–4.4、§5、附录 C.3](https://arxiv.org/html/2607.18060v3)。未下载替换本地 PDF，也未运行作者代码。后训练路线判断见 [[VLA技术路线综述-从动作生成到世界模型与具身系统#12. 后训练核心技术判断（2026-10-11增补）]]。
 
 > [!abstract] 核心结论
 > RoboHarness 研究如何把已经存在的 VLA、经过 RL 后训练的策略，以及任务与运动规划器组织起来，完成单个策略难以完成的长任务。关键工作包括：根据当前情境选择策略，以及在切换前把机器人带到下一策略有经验处理的状态。
@@ -460,3 +464,13 @@ Figure 3 的专项实验仅使用 **π0.5 + TAMP**，用于减少任务覆盖差
 - [ ] 判断语言约束是否带来普通记忆桥不能解决的失败，再决定是否扩展为独立研究问题。
 
 关联：[[LingBot-VLA 2.0项目概述]] · [[RoboTwin与LingBot-VLA默认流程对照]] · [[RM65-B双灵巧手：LingBot-VLA2选型与适配路线]] · [[RM65-B双臂机器人]]。
+
+## 14. 高层RL编排近邻与发表身份增补（2026-10-13）
+
+本次核查的是 [RoboHarness v3](https://arxiv.org/html/2607.18060v3)，不改写前文以本地v2为依据的表格。当前 [arXiv备注](https://arxiv.org/abs/2607.18060) 标注“ECCV 2026 Agent in the World Workshop Best Paper”；应区分Workshop与ECCV主会身份。
+
+用户提出冻结VLA技能、用RL学习长程子任务编排和扰动恢复。RoboHarness的能力路由、记忆桥和自进化是直接系统近邻，但v3未给出PPO／GRPO式高层调度器训练；底层存在RL策略，不代表高层也由RL训练。局部桥接评分与后续整程价值也不是同一目标。
+
+新核查的 [RoboAware v1](https://arxiv.org/html/2610.11480v1)（2026-10-08预印本）冻结coding agent与底层，只学习高层Q协调；其动作是模块化／端到端执行家族选择，不是任意子任务重排。[VINE](https://arxiv.org/html/2512.03913v1)与[SayCanPay](https://rishihazra.github.io/SayCanPay/)则构成价值＋搜索近邻。
+
+完整对照、条件成功率公式、SMDP定义和最小验证见 [[Harness-VLA与高层RL-非完美技能组合与扰动恢复]]。这次新增的是原始文献核查和研究候选，未训练／复现相关方法，未验证RealMan长程SR。

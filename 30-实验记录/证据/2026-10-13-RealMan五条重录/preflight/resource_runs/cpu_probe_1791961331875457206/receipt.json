@@ -1,0 +1,65 @@
+{
+  "schema": "realman_tiny_cgroup_probe_v1",
+  "scope": "CPU-only 32 MiB task probe",
+  "results": [
+    {
+      "negative": false,
+      "unit": "realman-rerecord-cpu-cap-probe-1791961331875540328.service",
+      "returncode": 0,
+      "wall_seconds": 0.0494960819996777,
+      "readback": {
+        "limits_verified": true,
+        "actual": {
+          "memory.high": "25165824",
+          "memory.max": "33554432",
+          "memory.swap.max": "0",
+          "cpu.max": "100000 100000",
+          "pids.max": "32"
+        },
+        "nice": 10,
+        "pid": 116767,
+        "negative": false
+      },
+      "unit_terminal": {
+        "Result": "success",
+        "ExecMainCode": "0",
+        "ExecMainStatus": "0",
+        "MemoryPeak": "[not set]",
+        "CPUUsageNSec": "[not set]"
+      },
+      "log": "",
+      "passed": true
+    },
+    {
+      "negative": true,
+      "unit": "realman-rerecord-cpu-cap-probe-1791961331930097648.service",
+      "returncode": 1,
+      "wall_seconds": 30.161935842000275,
+      "readback": {
+        "limits_verified": true,
+        "actual": {
+          "memory.high": "25165824",
+          "memory.max": "33554432",
+          "memory.swap.max": "0",
+          "cpu.max": "100000 100000",
+          "pids.max": "32"
+        },
+        "nice": 10,
+        "pid": 116779,
+        "negative": true
+      },
+      "unit_terminal": {
+        "Result": "timeout",
+        "ExecMainCode": "2",
+        "ExecMainStatus": "15",
+        "MemoryPeak": "29286400",
+        "CPUUsageNSec": "25574000"
+      },
+      "log": "",
+      "passed": false
+    }
+  ],
+  "passed": false,
+  "guard_sha256": "69f4849d364ce682580ad5f40e73b84f3e04df99a4192d89484de08be49a6387",
+  "probe_sha256": "a108fbfb4870bc80c1389b71fd746f6a8102847a37ed4019266dd0abf9914ace"
+}

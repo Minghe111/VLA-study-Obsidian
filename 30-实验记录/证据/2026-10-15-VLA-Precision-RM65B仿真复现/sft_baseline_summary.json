@@ -1,0 +1,96 @@
+{
+  "label": "rm65b_native_pi05_sft80000_independent_evaluation",
+  "contract": {
+    "physical_action_dimension": 24,
+    "model_action_dimension": 32,
+    "model_horizon": 16,
+    "execute_horizon": 1,
+    "ode_steps": 10,
+    "physics_dt_s": 0.004,
+    "normal_physics_ticks_per_target": 15,
+    "control_dt_s": 0.06,
+    "max_episode_targets": 400,
+    "task_time_budget_s": 24.0,
+    "image_keys": [
+      "base_0_rgb",
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "image_shape": [
+      480,
+      640,
+      3
+    ],
+    "image_dtype": "uint8_RGB",
+    "policy": "native OpenPI non-LoRA SFT",
+    "optimizer_created": false,
+    "critic_created": false,
+    "training_started": false
+  },
+  "instruction": "Pick up the bottle and adjust it to an upright position.",
+  "checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000",
+  "normalization_sha256": "34cbdd09c831e04549d6c4a4e2eb321fb975bdea13bb816ec8aa3a2332d1ccc5",
+  "success_mode": "upright_hold",
+  "task_thresholds": {
+    "hold_seconds": 1.0,
+    "min_lift_m": 0.01,
+    "max_upright_angle_deg": 15
+  },
+  "episodes": [
+    {
+      "seed": 2010,
+      "completed": true,
+      "success": false,
+      "control_steps": 400,
+      "return": 0.0,
+      "physics_steps": 6000,
+      "sim_time_s": 24.0,
+      "terminated": false,
+      "truncated": true,
+      "last_native_metrics": {
+        "success": false,
+        "native_success": false,
+        "failure_reason": null,
+        "bottom_gap_m": -5.196069241542034e-07,
+        "upright_angle_deg": 0.6504184635688735,
+        "opposed_contact": false,
+        "opposing_normals_dot": 1.0,
+        "thumb_contact_N": 0.0,
+        "finger_contact_N": 0.0,
+        "table_contact_N": 0.09793108703109352,
+        "hold_seconds": 0.0,
+        "success_mode": "upright_hold"
+      },
+      "last_failure_reason": null,
+      "collection_budget_ended_before_environment": false,
+      "native_success_is_diagnostic_only": true,
+      "reset_info": {
+        "seed": 2010,
+        "physics_step_count": 0,
+        "observation_valid": true,
+        "runtime_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/sft_baseline_v1/runtime/bridge-v26xja_5"
+      },
+      "video": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/sft_baseline_v1/episode_000/three_views.mp4",
+        "fps": 30.0,
+        "frames": 721,
+        "playback_seconds": 24.033333333333335,
+        "method": "zero-order hold from actual simulator physics clock; final frame appended",
+        "image_size": [
+          240,
+          960
+        ],
+        "policy_images_modified": false
+      }
+    }
+  ],
+  "evaluation_valid": true,
+  "task_learning_established": false,
+  "noise_schedule": "jax.random.normal(PRNGKey(seed+episode*100000+step), (1,16,32))[0]",
+  "native_reward_protocol": "backend sparse rewards unchanged; time-limit failure has reward 0",
+  "wall_clock_seconds": 125.4245301789997,
+  "simulator_log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/sft_baseline_v1/runtime/bridge-v26xja_5/simulator.log",
+  "simulator_worker_exitcode": 0,
+  "completed_episodes": 1,
+  "success_rate": 0.0
+}

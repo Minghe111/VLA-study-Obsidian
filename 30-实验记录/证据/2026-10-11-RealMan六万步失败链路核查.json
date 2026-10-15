@@ -1,0 +1,1201 @@
+{
+  "scope": "read_only_posthoc_actual_60000_eight_cases_20261011",
+  "method": "Compare measured selected-arm angles against actual piecewise-linear drive commands at each 4ms step before first selected-finger positive normal force; contact closure threshold is mean of four non-thumb finger measured SDK channels below 900, not precise motion onset.",
+  "limitations": [
+    "Not Cartesian grasp-pose error",
+    "Not independent expert replay",
+    "Selected-finger positive force is not every collision of every robot link",
+    "Actor-origin XY motion includes origin displacement under rotation, not exact center-of-mass translation",
+    "No camera, action, dataset, training, or dynamics changes",
+    "Eight cases are qualitative samples, not full benchmark SR"
+  ],
+  "urdf_path": "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets/embodiments/realman-rm65b-inspire-gen4/robot_sapien.urdf",
+  "urdf_sha256": "4bf28c444af1a28401a975e5de6e138c1ec043536aa786ea541c30c359bd65bd",
+  "analysis_script_sha256": "441e7c3e74cc1228d0a59a3d800e056c3f22693dc18f30ce0e7f6029e4856d8a",
+  "cases": [
+    {
+      "case": "ep01_left_sprite_upright",
+      "arm": "left",
+      "native_success": false,
+      "first_positive_selected_finger_contact": {
+        "sim_time_s": 1.0440000495873392,
+        "step": 261,
+        "four_finger_actual_sdk_mean": 999.9211656901186,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          -0.02316100139855877,
+          0.1266719280459839,
+          0.1747883703034739
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.21710178196876986,
+        "native_bottom_gap_m": 1.8831368575611407e-08,
+        "thumb_N": 0.29478615212400805,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 0.04232193707851919,
+        "bottle_world_pose": [
+          [
+            0.9659364223480225,
+            0.0007207393646240234,
+            0.25877857208251953,
+            -0.11998486518859863
+          ],
+          [
+            0.25877851247787476,
+            0.00016170740127563477,
+            -0.9659368395805359,
+            -0.09997909516096115
+          ],
+          [
+            -0.0007380843162536621,
+            0.9999999403953552,
+            -3.0279159545898438e-05,
+            0.7419916391372681
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "first_contact_channels": [
+        "thumb"
+      ],
+      "closure_threshold_event": {
+        "sim_time_s": 4.740000225137919,
+        "step": 1185,
+        "four_finger_actual_sdk_mean": 898.5961364285188,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          0.01470889662296486,
+          0.09689605746044777,
+          0.1794302305710384
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.20445147403239594,
+        "native_bottom_gap_m": -3.7922338824714075e-08,
+        "thumb_N": 0.0,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 12.855518494299961,
+        "bottle_world_pose": [
+          [
+            0.9453490972518921,
+            0.1992889791727066,
+            0.2580677270889282,
+            -0.10553782433271408
+          ],
+          [
+            0.24259580671787262,
+            0.09893012046813965,
+            -0.9650700092315674,
+            -0.09003990888595581
+          ],
+          [
+            -0.21785849332809448,
+            0.9749342203140259,
+            0.04517686367034912,
+            0.7466981410980225
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "closure_minus_contact_s": 3.69600017555058,
+      "first_actor_origin_xy_movement_by_mm": {
+        "1": {
+          "step": 265,
+          "sim_time_s": 1.0600000503472984
+        },
+        "5": {
+          "step": 812,
+          "sim_time_s": 3.248000154271722
+        },
+        "10": {
+          "step": 823,
+          "sim_time_s": 3.2920001563616097
+        },
+        "20": {
+          "step": 1377,
+          "sim_time_s": 5.508000261615962
+        }
+      },
+      "query_before_contact_s": 0.9600000455975533,
+      "query_after_contact_s": 1.9200000911951065,
+      "wait_until_next_query_after_contact_s": 0.8760000416077673,
+      "precontact_selected_arm_tracking": {
+        "physics_rows": 260,
+        "per_joint_rms_tracking_error_rad": [
+          0.0017167970821985695,
+          0.0014602442688581524,
+          0.0003682399091870981,
+          0.00024222690386643922,
+          0.00037166007115193575,
+          7.29924801524951e-05
+        ],
+        "maximum_absolute_joint_tracking_error_rad": 0.002032351493835405,
+        "maximum_absolute_joint_tracking_error_deg": 0.11644516308387684,
+        "maximum_absolute_joint_tracking_error_deg_first4s_or_precontact": 0.11644516308387684,
+        "maximum_endpoint_absolute_joint_tracking_error_rad": 0.002012968063354492,
+        "largest_60ms_target_increment_l2_rad": 0.06849504443301864,
+        "largest_60ms_target_increment_single_joint_rad": 0.06169889075681567,
+        "first_tracking_error_threshold_by_degrees": {}
+      },
+      "arm_target_outside_urdf_limits_scalar_count": 0,
+      "first_arm_target_outside_urdf_limits": null,
+      "source_sha256": {
+        "report.json": "fc7d27150949468ffef274b49e84e87bb66735536e9eb41a1aba023bd0016d0d",
+        "grasp_observations.json": "48cf29ce76a749ee90d7da6b6e9e31c3bd0912ac2469415b5917f886bbeef5bb",
+        "actual_physical_trace.jsonl.gz": "8bbab70aab2a35958dabfd12b9d0cc76c1e6a7eb4f3b1f3a2d38dd5b8c2d2d63"
+      }
+    },
+    {
+      "case": "ep02_left_coke_horizontal",
+      "arm": "left",
+      "native_success": false,
+      "first_positive_selected_finger_contact": {
+        "sim_time_s": 3.8480001827701926,
+        "step": 962,
+        "four_finger_actual_sdk_mean": 999.7115714424465,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          3.686679342768118e-05,
+          0.13711446360210847,
+          0.152745677385216
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.20525988270464074,
+        "native_bottom_gap_m": 2.886762449083591e-07,
+        "thumb_N": 8.788141287882786,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 89.91483214843825,
+        "bottle_world_pose": [
+          [
+            9.185075759887695e-05,
+            0.999998927116394,
+            0.0014860813971608877,
+            -0.2239120602607727
+          ],
+          [
+            -0.9999909400939941,
+            8.553266525268555e-05,
+            0.0042572421953082085,
+            -0.1048550233244896
+          ],
+          [
+            0.004257109947502613,
+            -0.0014864589320495725,
+            0.9999898076057434,
+            0.7737962007522583
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "first_contact_channels": [
+        "thumb"
+      ],
+      "closure_threshold_event": {
+        "sim_time_s": 5.716000271495432,
+        "step": 1429,
+        "four_finger_actual_sdk_mean": 898.6880142726385,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          -0.1447076930249998,
+          0.08207113161929039,
+          0.028355186440107684
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.1687601957333,
+        "native_bottom_gap_m": -4.8050444724223595e-06,
+        "thumb_N": 0.0,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 76.67869299482221,
+        "bottle_world_pose": [
+          [
+            0.018292546272277832,
+            -0.8229995965957642,
+            0.5677474737167358,
+            -0.12153677642345428
+          ],
+          [
+            -0.42963874340057373,
+            -0.5192131996154785,
+            -0.7388020157814026,
+            -0.1887030154466629
+          ],
+          [
+            0.902815580368042,
+            -0.23041164875030518,
+            -0.3630903959274292,
+            0.8137015104293823
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "closure_minus_contact_s": 1.868000088725239,
+      "first_actor_origin_xy_movement_by_mm": {
+        "1": {
+          "step": 966,
+          "sim_time_s": 3.864000183530152
+        },
+        "5": {
+          "step": 972,
+          "sim_time_s": 3.8880001846700907
+        },
+        "10": {
+          "step": 981,
+          "sim_time_s": 3.924000186379999
+        },
+        "20": {
+          "step": 996,
+          "sim_time_s": 3.984000189229846
+        }
+      },
+      "query_before_contact_s": 3.840000182390213,
+      "query_after_contact_s": 4.800000227987766,
+      "wait_until_next_query_after_contact_s": 0.9520000452175736,
+      "precontact_selected_arm_tracking": {
+        "physics_rows": 961,
+        "per_joint_rms_tracking_error_rad": [
+          0.0021326933934899804,
+          0.0013380609643681158,
+          0.0008699311707177893,
+          0.0006586493052315683,
+          0.0006753062701684486,
+          0.00021592451973868188
+        ],
+        "maximum_absolute_joint_tracking_error_rad": 0.002657651901245117,
+        "maximum_absolute_joint_tracking_error_deg": 0.15227223735626427,
+        "maximum_absolute_joint_tracking_error_deg_first4s_or_precontact": 0.15227223735626427,
+        "maximum_endpoint_absolute_joint_tracking_error_rad": 0.0026253461837768555,
+        "largest_60ms_target_increment_l2_rad": 0.0908250433856573,
+        "largest_60ms_target_increment_single_joint_rad": 0.061360329389572144,
+        "first_tracking_error_threshold_by_degrees": {}
+      },
+      "arm_target_outside_urdf_limits_scalar_count": 0,
+      "first_arm_target_outside_urdf_limits": null,
+      "source_sha256": {
+        "report.json": "3b14455936ebaefe9383ad6f289e3a96ecefa0aa189f983d19f082e3ede9711a",
+        "grasp_observations.json": "5904d2bbbbe2d7330a966c65213d7fcc6477512b3d8b16c5b0e56cd74103fc90",
+        "actual_physical_trace.jsonl.gz": "4f51892d529163c742e82d1c2c7ac048ac9d685fb48e8d10a170ab33aa035e88"
+      }
+    },
+    {
+      "case": "ep03_left_coke_near",
+      "arm": "left",
+      "native_success": false,
+      "first_positive_selected_finger_contact": {
+        "sim_time_s": 3.880000184290111,
+        "step": 970,
+        "four_finger_actual_sdk_mean": 999.3885480312429,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          0.03372458766814067,
+          0.14631494226286007,
+          0.13713550254143342
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.20335082050501216,
+        "native_bottom_gap_m": 6.991235700692933e-06,
+        "thumb_N": 98.00768568372371,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 89.88469113416913,
+        "bottle_world_pose": [
+          [
+            0.0018081068992614746,
+            0.999996542930603,
+            0.0019674599170684814,
+            -0.20389363169670105
+          ],
+          [
+            -0.9996793270111084,
+            0.0017578601837158203,
+            0.025267139077186584,
+            -0.11932508647441864
+          ],
+          [
+            0.0252635907381773,
+            -0.002012518234550953,
+            0.9996787905693054,
+            0.7738720774650574
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "first_contact_channels": [
+        "thumb"
+      ],
+      "closure_threshold_event": {
+        "sim_time_s": 5.660000268835574,
+        "step": 1415,
+        "four_finger_actual_sdk_mean": 898.2401530912246,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          0.034459123895286145,
+          0.11202437005668567,
+          -0.023110632058117767
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.11946125740320011,
+        "native_bottom_gap_m": 5.715352863377987e-05,
+        "thumb_N": 0.0,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 89.93779061864448,
+        "bottle_world_pose": [
+          [
+            0.3768882751464844,
+            0.7728444337844849,
+            -0.5105552673339844,
+            -0.1217084750533104
+          ],
+          [
+            0.4603705406188965,
+            -0.6345944404602051,
+            -0.6207645535469055,
+            -0.1882132887840271
+          ],
+          [
+            -0.8037500381469727,
+            -0.0010857582092285156,
+            -0.594965934753418,
+            0.7742379903793335
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "closure_minus_contact_s": 1.7800000845454633,
+      "first_actor_origin_xy_movement_by_mm": {
+        "1": {
+          "step": 971,
+          "sim_time_s": 3.884000184480101
+        },
+        "5": {
+          "step": 974,
+          "sim_time_s": 3.8960001850500703
+        },
+        "10": {
+          "step": 983,
+          "sim_time_s": 3.9320001867599785
+        },
+        "20": {
+          "step": 1022,
+          "sim_time_s": 4.088000194169581
+        }
+      },
+      "query_before_contact_s": 3.840000182390213,
+      "query_after_contact_s": 4.800000227987766,
+      "wait_until_next_query_after_contact_s": 0.9200000436976552,
+      "precontact_selected_arm_tracking": {
+        "physics_rows": 969,
+        "per_joint_rms_tracking_error_rad": [
+          0.0021432685939221916,
+          0.001418087621629123,
+          0.000889756143466047,
+          0.0006894466098114952,
+          0.0006590002656997603,
+          0.00023605095580248766
+        ],
+        "maximum_absolute_joint_tracking_error_rad": 0.002670621871948331,
+        "maximum_absolute_joint_tracking_error_deg": 0.15301536193796675,
+        "maximum_absolute_joint_tracking_error_deg_first4s_or_precontact": 0.15301536193796675,
+        "maximum_endpoint_absolute_joint_tracking_error_rad": 0.0026253461837768555,
+        "largest_60ms_target_increment_l2_rad": 0.09450100999568561,
+        "largest_60ms_target_increment_single_joint_rad": 0.06455445289611816,
+        "first_tracking_error_threshold_by_degrees": {}
+      },
+      "arm_target_outside_urdf_limits_scalar_count": 0,
+      "first_arm_target_outside_urdf_limits": null,
+      "source_sha256": {
+        "report.json": "24fd7821e45f11e6d0493a670a8f25291c1388efe9bbb8d6089df09aee8620de",
+        "grasp_observations.json": "7364c4f3942c3a7ddee4520e67b28fc6537f9deb5b4300442e5df4c32533c376",
+        "actual_physical_trace.jsonl.gz": "02a8ea48a084e4fe23c60acd68f8803d47620872a39f0a22b7971bb3ebf4f11f"
+      }
+    },
+    {
+      "case": "ep04_right_coke_center",
+      "arm": "right",
+      "native_success": true,
+      "first_positive_selected_finger_contact": {
+        "sim_time_s": 4.040000191889703,
+        "step": 1010,
+        "four_finger_actual_sdk_mean": 999.6436966358979,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          -0.0783089418097055,
+          0.117178506326993,
+          0.15317466627456122
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.2081479548319036,
+        "native_bottom_gap_m": 1.3386270243387344e-06,
+        "thumb_N": 0.5389454591629044,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 89.92662765433926,
+        "bottle_world_pose": [
+          [
+            3.808736801147461e-05,
+            0.9999992847442627,
+            0.0012803890276700258,
+            -0.023913279175758362
+          ],
+          [
+            -0.9999833106994629,
+            3.069639205932617e-05,
+            0.005798003636300564,
+            -0.10465563833713531
+          ],
+          [
+            0.005797959864139557,
+            -0.0012805887963622808,
+            0.9999823570251465,
+            0.7737578749656677
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "first_contact_channels": [
+        "thumb"
+      ],
+      "closure_threshold_event": {
+        "sim_time_s": 5.040000239387155,
+        "step": 1260,
+        "four_finger_actual_sdk_mean": 898.4716852843103,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          -0.07827088622226504,
+          0.0768155296006186,
+          0.15600533539135544
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.19069510189937122,
+        "native_bottom_gap_m": 1.8994704261920958e-05,
+        "thumb_N": 0.0,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 89.92749981893431,
+        "bottle_world_pose": [
+          [
+            0.002078711986541748,
+            0.999997079372406,
+            0.0012530188541859388,
+            -0.02386358380317688
+          ],
+          [
+            -0.9999801516532898,
+            0.002071201801300049,
+            0.005952106788754463,
+            -0.10292235761880875
+          ],
+          [
+            0.005949494428932667,
+            -0.0012653665617108345,
+            0.9999815225601196,
+            0.7737739086151123
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "closure_minus_contact_s": 1.0000000474974513,
+      "first_actor_origin_xy_movement_by_mm": {
+        "1": {
+          "step": 1018,
+          "sim_time_s": 4.072000193409622
+        },
+        "5": {
+          "step": 1430,
+          "sim_time_s": 5.7200002716854215
+        },
+        "10": {
+          "step": 1911,
+          "sim_time_s": 7.644000363070518
+        },
+        "20": {
+          "step": 2249,
+          "sim_time_s": 8.996000427287072
+        }
+      },
+      "query_before_contact_s": 3.840000182390213,
+      "query_after_contact_s": 4.800000227987766,
+      "wait_until_next_query_after_contact_s": 0.760000036098063,
+      "precontact_selected_arm_tracking": {
+        "physics_rows": 1009,
+        "per_joint_rms_tracking_error_rad": [
+          0.0020217747330370027,
+          0.0013671876349290043,
+          0.0008284749232095953,
+          0.0007940717025668426,
+          0.0006824400440484943,
+          0.00016212979433280462
+        ],
+        "maximum_absolute_joint_tracking_error_rad": 0.0025929689407349077,
+        "maximum_absolute_joint_tracking_error_deg": 0.1485661767126179,
+        "maximum_absolute_joint_tracking_error_deg_first4s_or_precontact": 0.1485661767126179,
+        "maximum_endpoint_absolute_joint_tracking_error_rad": 0.002577066421508789,
+        "largest_60ms_target_increment_l2_rad": 0.09353496519797368,
+        "largest_60ms_target_increment_single_joint_rad": 0.06447628140449524,
+        "first_tracking_error_threshold_by_degrees": {}
+      },
+      "arm_target_outside_urdf_limits_scalar_count": 0,
+      "first_arm_target_outside_urdf_limits": null,
+      "source_sha256": {
+        "report.json": "878f21f477dc2617b29d61ccb79cd1ded072daf9cf21b5a7a10dcebcde9e49de",
+        "grasp_observations.json": "acc5ca585a355006e2224d28d506aa22541ea928bf8b60e6926eafdd84df72f4",
+        "actual_physical_trace.jsonl.gz": "04c4d42226993f1d656efd7de15be2c8b1607d0566155d9347a8057da7cec0b6"
+      }
+    },
+    {
+      "case": "ep05_left_coke_far",
+      "arm": "left",
+      "native_success": false,
+      "first_positive_selected_finger_contact": {
+        "sim_time_s": 7.736000367440283,
+        "step": 1934,
+        "four_finger_actual_sdk_mean": 838.0238467857358,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          -0.05011302165062913,
+          0.06001447918684183,
+          0.1886816156628117
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.20423957682132343,
+        "native_bottom_gap_m": 1.7405186680807816e-07,
+        "thumb_N": 0.0,
+        "other_fingers_N": 0.37045937045930394,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 89.93069376126418,
+        "bottle_world_pose": [
+          [
+            -2.205371856689453e-05,
+            0.9999992847442627,
+            0.0012097303988412023,
+            -0.2638990879058838
+          ],
+          [
+            -0.9999903440475464,
+            -2.7418136596679688e-05,
+            0.0044054677709937096,
+            -0.08990763872861862
+          ],
+          [
+            0.004405497573316097,
+            -0.0012096217833459377,
+            0.9999895691871643,
+            0.773747444152832
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "first_contact_channels": [
+        "middle"
+      ],
+      "closure_threshold_event": {
+        "sim_time_s": 5.100000242237002,
+        "step": 1275,
+        "four_finger_actual_sdk_mean": 899.5829413749688,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          -0.041847862856054935,
+          0.06628199519176096,
+          0.18328419387907086
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.1993430265600496,
+        "native_bottom_gap_m": -8.826613953072382e-07,
+        "thumb_N": 0.0,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 89.93215439085031,
+        "bottle_world_pose": [
+          [
+            6.616115570068359e-06,
+            0.9999993443489075,
+            0.0011841118102893233,
+            -0.26392197608947754
+          ],
+          [
+            -0.9999919533729553,
+            1.9073486328125e-06,
+            0.00401508342474699,
+            -0.0898648276925087
+          ],
+          [
+            0.00401507830247283,
+            -0.0011841290397569537,
+            0.999991238117218,
+            0.773743748664856
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "closure_minus_contact_s": -2.6360001252032816,
+      "first_actor_origin_xy_movement_by_mm": {
+        "1": {
+          "step": 1937,
+          "sim_time_s": 7.748000368010253
+        },
+        "5": {
+          "step": 1964,
+          "sim_time_s": 7.8560003731399775
+        },
+        "10": {
+          "step": 2645,
+          "sim_time_s": 10.580000502523035
+        },
+        "20": {
+          "step": 2664,
+          "sim_time_s": 10.656000506132841
+        }
+      },
+      "query_before_contact_s": 7.680000364780426,
+      "query_after_contact_s": 8.64000041037798,
+      "wait_until_next_query_after_contact_s": 0.904000042937696,
+      "precontact_selected_arm_tracking": {
+        "physics_rows": 1933,
+        "per_joint_rms_tracking_error_rad": [
+          0.00740077072519452,
+          0.0023388913584176715,
+          0.0017653720370492771,
+          0.004553438779336447,
+          0.0032566101737164592,
+          0.008940661721592165
+        ],
+        "maximum_absolute_joint_tracking_error_rad": 0.031036853790283203,
+        "maximum_absolute_joint_tracking_error_deg": 1.7782807315478397,
+        "maximum_absolute_joint_tracking_error_deg_first4s_or_precontact": 0.15461499224157865,
+        "maximum_endpoint_absolute_joint_tracking_error_rad": 0.031036853790283203,
+        "largest_60ms_target_increment_l2_rad": 0.09322426553756258,
+        "largest_60ms_target_increment_single_joint_rad": 0.06393271684646606,
+        "first_tracking_error_threshold_by_degrees": {
+          "1": {
+            "sim_time_s": 5.388000255916268,
+            "step": 1347,
+            "action_index": 90,
+            "command_rad6": [
+              -0.9236387014389038,
+              -1.2656416177749634,
+              -1.234002375602722,
+              0.3231454432010651,
+              1.53622727394104,
+              2.753325939178467
+            ],
+            "measured_rad6": [
+              -0.9314041137695312,
+              -1.2635903358459473,
+              -1.2363871335983276,
+              0.3277939260005951,
+              1.5395528078079224,
+              2.735459804534912
+            ],
+            "error_rad6": [
+              -0.007765412330627441,
+              0.0020512819290161577,
+              -0.0023847579956055576,
+              0.004648482799530007,
+              0.00332553386688228,
+              -0.017866134643554688
+            ]
+          }
+        }
+      },
+      "arm_target_outside_urdf_limits_scalar_count": 0,
+      "first_arm_target_outside_urdf_limits": null,
+      "source_sha256": {
+        "report.json": "1b51b488dd527e21eb5d426a67eebfe17fb96833a793276208ca7403b44f2d51",
+        "grasp_observations.json": "6331f9f4712fc629a8fd1971f9797f0795468effaf8a44dc3790051a97f2de1c",
+        "actual_physical_trace.jsonl.gz": "93f5cd854a8bac2034a874508427560140ddcc6c59c41e9096c6c7869f6c3911"
+      }
+    },
+    {
+      "case": "ep06_right_coke_near",
+      "arm": "right",
+      "native_success": false,
+      "first_positive_selected_finger_contact": {
+        "sim_time_s": 4.084000193979591,
+        "step": 1021,
+        "four_finger_actual_sdk_mean": 999.6627955994063,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          -0.10524747212159095,
+          0.12293087866021396,
+          0.1403162768662081
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.2141907768083203,
+        "native_bottom_gap_m": 1.703553875742614e-08,
+        "thumb_N": 8.067910359511256,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 89.91570572124658,
+        "bottle_world_pose": [
+          [
+            7.635354995727539e-05,
+            0.9999990463256836,
+            0.0014707795344293118,
+            -0.04391375184059143
+          ],
+          [
+            -0.9999821186065674,
+            6.747245788574219e-05,
+            0.006007883697748184,
+            -0.11979372799396515
+          ],
+          [
+            0.006007777526974678,
+            -0.0014712123665958643,
+            0.9999808669090271,
+            0.7737893462181091
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "first_contact_channels": [
+        "thumb"
+      ],
+      "closure_threshold_event": {
+        "sim_time_s": 5.860000278335065,
+        "step": 1465,
+        "four_finger_actual_sdk_mean": 899.3531059103063,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          -0.052365421637368445,
+          0.09800578294304627,
+          -0.0696431133651529
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.131138987767675,
+        "native_bottom_gap_m": -6.0931358093818666e-05,
+        "thumb_N": 0.0,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 79.48128392407546,
+        "bottle_world_pose": [
+          [
+            -0.20768344402313232,
+            0.8592028617858887,
+            0.46758776903152466,
+            -0.023774541914463043
+          ],
+          [
+            -0.6519031524658203,
+            -0.47795796394348145,
+            0.5887094736099243,
+            -0.269087553024292
+          ],
+          [
+            0.7293080687522888,
+            -0.18255673348903656,
+            0.6593807339668274,
+            0.805162787437439
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "closure_minus_contact_s": 1.7760000843554735,
+      "first_actor_origin_xy_movement_by_mm": {
+        "1": {
+          "step": 1025,
+          "sim_time_s": 4.10000019473955
+        },
+        "5": {
+          "step": 1026,
+          "sim_time_s": 4.10400019492954
+        },
+        "10": {
+          "step": 1028,
+          "sim_time_s": 4.11200019530952
+        },
+        "20": {
+          "step": 1033,
+          "sim_time_s": 4.132000196259469
+        }
+      },
+      "query_before_contact_s": 3.840000182390213,
+      "query_after_contact_s": 4.800000227987766,
+      "wait_until_next_query_after_contact_s": 0.7160000340081751,
+      "precontact_selected_arm_tracking": {
+        "physics_rows": 1020,
+        "per_joint_rms_tracking_error_rad": [
+          0.0020985583100315854,
+          0.0013753742980634788,
+          0.0008277174447153329,
+          0.0008044549010932533,
+          0.0006710174714243278,
+          0.00031423695006602874
+        ],
+        "maximum_absolute_joint_tracking_error_rad": 0.0025815010070799893,
+        "maximum_absolute_joint_tracking_error_deg": 0.14790911251445504,
+        "maximum_absolute_joint_tracking_error_deg_first4s_or_precontact": 0.14790911251445504,
+        "maximum_endpoint_absolute_joint_tracking_error_rad": 0.0025725364685058594,
+        "largest_60ms_target_increment_l2_rad": 0.09238622191567683,
+        "largest_60ms_target_increment_single_joint_rad": 0.06414210796356201,
+        "first_tracking_error_threshold_by_degrees": {}
+      },
+      "arm_target_outside_urdf_limits_scalar_count": 203,
+      "first_arm_target_outside_urdf_limits": {
+        "action_index": 277,
+        "joint": "r_joint3",
+        "raw_target_rad": 2.3643596172332764,
+        "limits_rad": [
+          -2.36,
+          2.36
+        ]
+      },
+      "source_sha256": {
+        "report.json": "f732db25187edf30b48a9b533610297b8a52b7a599e3005e4779b87ea2b4a15b",
+        "grasp_observations.json": "294e60468d6944b6b368c04f5a5c00d8f07ed3946f5210979afbf590e4c2e338",
+        "actual_physical_trace.jsonl.gz": "1ce668782f99a75e20c7cbbb81bba618b647b187f9128400ee43de007ed5a305"
+      }
+    },
+    {
+      "case": "ep07_left_sprite_upright",
+      "arm": "left",
+      "native_success": false,
+      "first_positive_selected_finger_contact": {
+        "sim_time_s": 3.7920001801103354,
+        "step": 948,
+        "four_finger_actual_sdk_mean": 999.1900897040568,
+        "bottle_collision_bbox_center_in_selected_palm_m": [
+          0.016761969603822147,
+          0.15105859928766044,
+          0.13314820759620932
+        ],
+        "palm_origin_to_bottle_collision_bbox_center_m": 0.20205966749906495,
+        "native_bottom_gap_m": -2.966340983956428e-08,
+        "thumb_N": 0.19190171474620088,
+        "other_fingers_N": 0.0,
+        "opposed_contact": false,
+        "bottle_long_axis_deviation_from_vertical_deg": 0.04120889055704013,
+        "bottle_world_pose": [
+          [
+            0.9999997615814209,
+            0.0007180471438914537,
+            -2.9355374863371253e-05,
+            -0.1000007912516594
+          ],
+          [
+            -2.9325863579288125e-05,
+            -4.124641418457031e-05,
+            -1.0000001192092896,
+            -0.11999960243701935
+          ],
+          [
+            -0.000718048308044672,
+            0.9999998211860657,
+            -4.124641418457031e-05,
+            0.7419912219047546
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "first_contact_channels": [
+        "thumb"
+      ],
+      "closure_threshold_event": null,
+      "closure_minus_contact_s": null,
+      "first_actor_origin_xy_movement_by_mm": {
+        "1": {
+          "step": 950,
+          "sim_time_s": 3.800000180490315
+        },
+        "5": {
+          "step": 956,
+          "sim_time_s": 3.824000181630254
+        },
+        "10": {
+          "step": 964,
+          "sim_time_s": 3.8560001831501722
+        },
+        "20": {
+          "step": 984,
+          "sim_time_s": 3.9360001869499683
+        }
+      },
+      "query_before_contact_s": 2.8800001367926598,
+      "query_after_contact_s": 3.840000182390213,
+      "wait_until_next_query_after_contact_s": 0.04800000227987766,
+      "precontact_selected_arm_tracking": {
+        "physics_rows": 947,
+        "per_joint_rms_tracking_error_rad": [
+          0.0016679133114868847,
+          0.0015906542302331,
+          0.0008844350124940506,
+          0.0005052002998468131,
+          0.0006147703864313873,
+          8.346087816834494e-05
+        ],
+        "maximum_absolute_joint_tracking_error_rad": 0.002221822738647461,
+        "maximum_absolute_joint_tracking_error_deg": 0.12730106575069766,
+        "maximum_absolute_joint_tracking_error_deg_first4s_or_precontact": 0.12730106575069766,
+        "maximum_endpoint_absolute_joint_tracking_error_rad": 0.002221822738647461,
+        "largest_60ms_target_increment_l2_rad": 0.07033255326998752,
+        "largest_60ms_target_increment_single_joint_rad": 0.06231096386909485,
+        "first_tracking_error_threshold_by_degrees": {}
+      },
+      "arm_target_outside_urdf_limits_scalar_count": 194,
+      "first_arm_target_outside_urdf_limits": {
+        "action_index": 207,
+        "joint": "l_joint5",
+        "raw_target_rad": 2.2346932888031006,
+        "limits_rad": [
+          -2.23,
+          2.23
+        ]
+      },
+      "source_sha256": {
+        "report.json": "3e55ae452478303c593ef2fe770dbf727e4e3a15e9d78504f54b7eacee0ec36d",
+        "grasp_observations.json": "b5aa3931a73712d23bdc1306cf2ae7f24a39e26453fd36190fe887225edaa948",
+        "actual_physical_trace.jsonl.gz": "d67926dca25cc0b2233a00c84ee57d15c27f03e886e5656f6c181caf06cf9823"
+      }
+    },
+    {
+      "case": "ep08_right_sprite_upright",
+      "arm": "right",
+      "native_success": false,
+      "first_positive_selected_finger_contact": null,
+      "first_contact_channels": null,
+      "closure_threshold_event": null,
+      "closure_minus_contact_s": null,
+      "first_actor_origin_xy_movement_by_mm": {
+        "1": {
+          "step": 1987,
+          "sim_time_s": 7.948000377509743
+        }
+      },
+      "query_before_contact_s": null,
+      "query_after_contact_s": null,
+      "wait_until_next_query_after_contact_s": null,
+      "precontact_selected_arm_tracking": {
+        "physics_rows": 6000,
+        "per_joint_rms_tracking_error_rad": [
+          0.054145054121906344,
+          0.015167695657729975,
+          0.03931193307723193,
+          0.04260333615360891,
+          0.058307476568775114,
+          0.16518557695446356
+        ],
+        "maximum_absolute_joint_tracking_error_rad": 1.154370665550232,
+        "maximum_absolute_joint_tracking_error_deg": 66.14056712973618,
+        "maximum_absolute_joint_tracking_error_deg_first4s_or_precontact": 0.13048848736336602,
+        "maximum_endpoint_absolute_joint_tracking_error_rad": 1.154370665550232,
+        "largest_60ms_target_increment_l2_rad": 1.2561966746148945,
+        "largest_60ms_target_increment_single_joint_rad": 1.1965833902359009,
+        "first_tracking_error_threshold_by_degrees": {
+          "1": {
+            "sim_time_s": 8.664000411517918,
+            "step": 2166,
+            "action_index": 145,
+            "command_rad6": [
+              -2.194482421875,
+              -0.5446896195411682,
+              -1.6171011209487915,
+              0.3191253483295441,
+              0.03293161243200302,
+              -0.18203143477439881
+            ],
+            "measured_rad6": [
+              -2.1873908042907715,
+              -0.5402719974517822,
+              -1.6183961629867554,
+              0.2998599708080292,
+              0.03133787587285042,
+              -0.2039397954940796
+            ],
+            "error_rad6": [
+              0.0070916175842286044,
+              0.0044176220893860085,
+              -0.0012950420379638228,
+              -0.019265377521514915,
+              -0.0015937365591526045,
+              -0.021908360719680775
+            ]
+          },
+          "5": {
+            "sim_time_s": 8.792000417597592,
+            "step": 2198,
+            "action_index": 147,
+            "command_rad6": [
+              -2.2611562410990396,
+              -0.6043920199076335,
+              -1.6164909680684407,
+              0.3513757487138112,
+              0.08336891184250514,
+              -0.30041478673617045
+            ],
+            "measured_rad6": [
+              -2.1723995208740234,
+              -0.5828876495361328,
+              -1.6215332746505737,
+              0.36807480454444885,
+              0.07778112590312958,
+              -0.28861674666404724
+            ],
+            "error_rad6": [
+              0.08875672022501613,
+              0.02150437037150066,
+              -0.005042306582133005,
+              0.016699055830637632,
+              -0.005587785939375561,
+              0.011798040072123206
+            ]
+          },
+          "20": {
+            "sim_time_s": 9.380000445526093,
+            "step": 2345,
+            "action_index": 157,
+            "command_rad6": [
+              -2.4936366081237793,
+              -0.806502083937327,
+              -1.6157198349634807,
+              0.43918044368426007,
+              0.28034008542696637,
+              -0.7245223919550577
+            ],
+            "measured_rad6": [
+              -2.3159337043762207,
+              -0.7833967208862305,
+              -1.6287990808486938,
+              0.44563671946525574,
+              -0.0700598657131195,
+              -0.7702091336250305
+            ],
+            "error_rad6": [
+              0.1777029037475586,
+              0.02310536305109656,
+              -0.013079245885213142,
+              0.006456275780995668,
+              -0.3503999511400859,
+              -0.045686741669972775
+            ]
+          },
+          "60": {
+            "sim_time_s": 12.352000586688519,
+            "step": 3088,
+            "action_index": 206,
+            "command_rad6": [
+              -2.941190067927043,
+              -1.1352834622065227,
+              -1.4402904113133748,
+              0.9272900025049845,
+              -0.34809933304786683,
+              -0.7651984175046285
+            ],
+            "measured_rad6": [
+              -2.748319149017334,
+              -1.075378656387329,
+              -1.2018592357635498,
+              0.8202416300773621,
+              -0.3865419030189514,
+              -1.8135522603988647
+            ],
+            "error_rad6": [
+              0.19287091890970887,
+              0.05990480581919355,
+              0.23843117554982496,
+              -0.10704837242762244,
+              -0.038442569971084584,
+              -1.0483538428942363
+            ]
+          }
+        }
+      },
+      "arm_target_outside_urdf_limits_scalar_count": 141,
+      "first_arm_target_outside_urdf_limits": {
+        "action_index": 258,
+        "joint": "r_joint1",
+        "raw_target_rad": -3.1118311882019043,
+        "limits_rad": [
+          -3.11,
+          3.11
+        ]
+      },
+      "source_sha256": {
+        "report.json": "cf5f40c350b4694715ee53ebf87813e4286b461711398ddf58233616ff3b817b",
+        "grasp_observations.json": "d19ebf7780bfe8e237518fee6c1ffb81bf9a9191d1f794bedf1002202699c1a8",
+        "actual_physical_trace.jsonl.gz": "d5c95380881c5de9227dc23fdb80ca42e68171ccab9aa83cd32e1225dd1cc5d4"
+      }
+    }
+  ],
+  "source_files": {
+    "official_download_receipt": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/official_checkpoint_v1/verified_checkpoint_receipt.json",
+      "sha256": "8e9934b7bd2e5da85bcb2a477d729370fa0dd1d5e88727afe9a9ade96322e846"
+    },
+    "physical24_dataset_adapter": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/data_pipeline_v1/data_adapter_rgb50_v1.py",
+      "sha256": "4aaee44efff42054e66d7ec4e5ad4fc418d66d980b3c548d8c744a93c577947c"
+    },
+    "data50_index": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/data50_v1/native_index.json",
+      "sha256": "9b21feef1c660900196e35ae3615ec47570d02a34990c3e17df94208b43038df"
+    },
+    "model_identity": {
+      "path": "/tmp/realman-eval60k-20261011/local_eval/model_service/model_identity.json",
+      "sha256": "aacd8b6971bc1f44bc508806c65ddf7bbfb0669f637070074b1090b46d2be571"
+    },
+    "action_clock": {
+      "path": "/home/admin123/liminghe/vla-benchmark/RoboTwin/integrations/realman_rm65b_gen4/action_clock.py",
+      "sha256": "3aba14c746b8aba4254ebe9ec0a298de90c7773f9a7afa34396e0b91922a750e"
+    },
+    "official_eval_loop": {
+      "path": "/home/admin123/liminghe/vla-benchmark/RoboTwin/XPolicyLab/policy/Pi_05/deploy.py",
+      "sha256": "4ce7ac892b92ce5eae7d17b94108e7a66f69bcca121bf0cea7b53f5414133680"
+    },
+    "official_aloha_layout": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb20_20261004/openpi/src/openpi/policies/aloha_policy.py",
+      "sha256": "50d7ad972d80142ecb0f03b0780dacfd3af212946f4c9aac31a204b02db4543d"
+    }
+  },
+  "version_binding": {
+    "RoboTwin_local_commit": "931ce21f4f0e63feab661f349634d5a25bd92681",
+    "OpenPI_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "checkpoint_step": 60000,
+    "official_initialization_step": 29999,
+    "source_archive_sha256": "957b07d4319746c70ed5173c2b0ae11b96872410d139931de603d9b4c974ee1c",
+    "training_config_server_sha256": "39699d3313c78e0842968a59c7c12ddefa0ba849b3126579f517952e4b148ee8"
+  }
+}

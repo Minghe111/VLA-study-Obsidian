@@ -1,0 +1,36 @@
+{
+  "command": [
+    "venv/bin/python",
+    "code/VLA-Precision/scripts/realman_acob_probe.py",
+    "--stage",
+    "restore",
+    "--output-dir",
+    "outputs/restore_v2",
+    "--checkpoint",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000",
+    "--initial-observation-npz",
+    "reports/native_sim_seed2010_initial.npz",
+    "--instruction",
+    "Pick up the bottle and adjust it to an upright position.",
+    "--critic-weights",
+    "models/resnet10_params.pkl",
+    "--seed",
+    "2010"
+  ],
+  "cwd": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1",
+  "exit_code": 0,
+  "memory_guard_stopped": true,
+  "wall_time_s": 55.8474338054657,
+  "peak_process_tree_rss_bytes": 25233760256,
+  "minimum_available_bytes": 1571786752,
+  "peak_whole_gpu_used_bytes": 19079888896,
+  "owned_process_ids": [
+    327595,
+    328413,
+    328515,
+    328755,
+    328808,
+    329005
+  ],
+  "rss_note": "Process RSS sum can double-count shared pages; whole GPU includes desktop and renderer allocations."
+}

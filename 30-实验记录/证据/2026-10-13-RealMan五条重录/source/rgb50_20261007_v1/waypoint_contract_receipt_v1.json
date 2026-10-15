@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "scope": "Zero-step mocked CPU contracts only; not native IK/RRT/FCL/physics success",
+  "physical_validation_completed": false,
+  "GPU_initialized_by_fixture": false,
+  "control_methods_not_overridden": true,
+  "v11_not_imported": true,
+  "physical_setters_or_scene_steps_not_present": true,
+  "original_direct_success_returned_unchanged": true,
+  "negative_endpoint_and_collision_fixtures_rejected": true,
+  "cases": [
+    {
+      "case": "direct_success",
+      "passed": true,
+      "RRT_calls": 0,
+      "TOPP_calls": 0,
+      "full_mesh_gate_calls": 0
+    },
+    {
+      "case": "fallback_success",
+      "passed": true,
+      "RRT_calls": 2,
+      "TOPP_calls": 1,
+      "full_mesh_gate_calls": 1
+    },
+    {
+      "case": "audit_reject",
+      "passed": true,
+      "RRT_calls": 2,
+      "TOPP_calls": 1,
+      "full_mesh_gate_calls": 1
+    },
+    {
+      "case": "bad_endpoint",
+      "passed": true,
+      "RRT_calls": 1,
+      "TOPP_calls": 0,
+      "full_mesh_gate_calls": 0
+    },
+    {
+      "case": "start_collision",
+      "passed": true,
+      "RRT_calls": 0,
+      "TOPP_calls": 0,
+      "full_mesh_gate_calls": 0
+    },
+    {
+      "case": "physical_write",
+      "passed": true,
+      "unauthorized_state_change_rejected": true
+    }
+  ],
+  "source_sha256": {
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/full_native_approach_waypoint_v3.py": "fd252ba323e9103d9e92017f6033fb612d9d29ba743bf58894273603f1607fa5",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v9_waypoint.py": "01f161993278b14c8ad9891db3cfb9e4ffe48b1a7925b5a3d8862b4afc731b4c",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/waypoint_contract_check_v1.py": "e3f08d59c38be925800b6703d98c8c016dc9f9d6dec2619b34f4d055d04d3a0a"
+  }
+}

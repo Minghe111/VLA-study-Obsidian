@@ -1,0 +1,311 @@
+{
+  "schema": "realman_tiny_cgroup_probe_v1",
+  "scope": "CPU-only 32 MiB task probe",
+  "mode": "v1",
+  "results": [
+    {
+      "launcher_returncode": 0,
+      "unit_terminal": {
+        "MainPID": "0",
+        "Result": "success",
+        "ExecMainCode": "0",
+        "ExecMainStatus": "0",
+        "ControlGroup": "",
+        "MemoryCurrent": "[not set]",
+        "CPUUsageNSec": "[not set]",
+        "User": "",
+        "Group": "",
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead",
+        "InvocationID": ""
+      },
+      "wall_seconds": 0.7721593739988748,
+      "monitor_stop_reason": null,
+      "unit_owner_attestation": {
+        "unit": "realman-rerecord-20261014-v6-hybrid-v7e-probe-positive-d826aa3212eb4deaa7494c5025fe4888.service",
+        "pid": 397395,
+        "uid": 1002,
+        "invocation_id": "17f9f54c7cc44fb498d270e2140987ba",
+        "pid_starttime": "11101963",
+        "controller_paths": {
+          "memory": "/sys/fs/cgroup/memory/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-positive-d826aa3212eb4deaa7494c5025fe4888.service",
+          "cpu": "/sys/fs/cgroup/cpu,cpuacct/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-positive-d826aa3212eb4deaa7494c5025fe4888.service",
+          "pids": "/sys/fs/cgroup/pids/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-positive-d826aa3212eb4deaa7494c5025fe4888.service"
+        },
+        "boot_id": "5a6976ba-b91a-45b8-98aa-b57464b003d1"
+      },
+      "peak": {
+        "cgroup_bytes": 5619712,
+        "rss_sum_bytes": 13209600,
+        "minimum_available_bytes": 1060817858560
+      },
+      "last_resource_sample": {
+        "mode": "v1",
+        "memory.current": 5574656,
+        "memory.peak": 5619712,
+        "memory.swap.current": 0,
+        "memory.stat.swap_before_bytes": 0,
+        "memory.stat.total_swap_before_bytes": 0,
+        "memory.stat.swap_after_bytes": 0,
+        "memory.stat.total_swap_after_bytes": 0,
+        "memory.usage_in_bytes.raw": 5574656,
+        "memory.memsw.usage_in_bytes.raw": 5574656,
+        "memory.memsw_minus_memory.diagnostic_bytes": 0,
+        "memory.memsw.max_usage": 5619712,
+        "pids.current": 1,
+        "memory.events": {
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "memsw_max": 0
+        },
+        "memory.oom_control": {
+          "oom_kill_disable": 0,
+          "under_oom": 0,
+          "oom_kill": 0
+        },
+        "cpu.stat": {
+          "nr_periods": 4,
+          "nr_throttled": 0,
+          "throttled_time": 0
+        },
+        "member_pids": [
+          397395
+        ],
+        "member_vm_swap_bytes": {
+          "397395": 0
+        },
+        "rss_sum_bytes": 13209600,
+        "swap_zero_observed": true
+      },
+      "swap_observation_count": 5,
+      "maximum_sample_gap_seconds": 0.11602093100373168,
+      "tail_sample_gap_seconds": 0.1134387640049681,
+      "gate_release_elapsed_seconds": 0.18022071800078265,
+      "unit_exit_elapsed_seconds": 0.7597131619986612,
+      "resource_samples_sha256": "84d934d3b91fbf22fe64e8377fb6dca9308c31cf6938e943b01f909320e4e7ad",
+      "swap_zero_observed": true,
+      "unit": "realman-rerecord-20261014-v6-hybrid-v7e-probe-positive-d826aa3212eb4deaa7494c5025fe4888.service",
+      "negative": false,
+      "probe_terminal": {
+        "negative": false,
+        "child_returncode": null,
+        "resource": {
+          "mode": "v1",
+          "memory.current": 5574656,
+          "memory.peak": 5705728,
+          "memory.swap.current": 0,
+          "memory.stat.swap_before_bytes": 0,
+          "memory.stat.total_swap_before_bytes": 0,
+          "memory.stat.swap_after_bytes": 0,
+          "memory.stat.total_swap_after_bytes": 0,
+          "memory.usage_in_bytes.raw": 5574656,
+          "memory.memsw.usage_in_bytes.raw": 5574656,
+          "memory.memsw_minus_memory.diagnostic_bytes": 0,
+          "memory.memsw.max_usage": 5705728,
+          "pids.current": 1,
+          "memory.events": {
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0,
+            "oom_group_kill": 0,
+            "memsw_max": 0
+          },
+          "memory.oom_control": {
+            "oom_kill_disable": 0,
+            "under_oom": 0,
+            "oom_kill": 0
+          },
+          "cpu.stat": {
+            "nr_periods": 4,
+            "nr_throttled": 0,
+            "throttled_time": 0
+          }
+        },
+        "swap_zero_observed": true,
+        "source_unchanged": true,
+        "rejection": null,
+        "passed": true
+      },
+      "cgroup_readback": {
+        "mode": "v1",
+        "actual": {
+          "memory.soft_limit_in_bytes": "25165824",
+          "memory.limit_in_bytes": "33554432",
+          "memory.memsw.limit_in_bytes": "33554432",
+          "memory.swappiness": "0",
+          "cpu.cfs_quota_us": "100000",
+          "cpu.cfs_period_us": "100000",
+          "pids.max": "32"
+        },
+        "controller_paths": {
+          "memory": "/sys/fs/cgroup/memory/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-positive-d826aa3212eb4deaa7494c5025fe4888.service",
+          "cpu": "/sys/fs/cgroup/cpu,cpuacct/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-positive-d826aa3212eb4deaa7494c5025fe4888.service",
+          "pids": "/sys/fs/cgroup/pids/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-positive-d826aa3212eb4deaa7494c5025fe4888.service"
+        },
+        "limits_verified": true,
+        "unit": "realman-rerecord-20261014-v6-hybrid-v7e-probe-positive-d826aa3212eb4deaa7494c5025fe4888.service",
+        "pid": 397395,
+        "boot_id": "5a6976ba-b91a-45b8-98aa-b57464b003d1"
+      },
+      "passed": true
+    },
+    {
+      "launcher_returncode": 0,
+      "unit_terminal": {
+        "MainPID": "0",
+        "Result": "success",
+        "ExecMainCode": "0",
+        "ExecMainStatus": "0",
+        "ControlGroup": "",
+        "MemoryCurrent": "[not set]",
+        "CPUUsageNSec": "[not set]",
+        "User": "",
+        "Group": "",
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead",
+        "InvocationID": ""
+      },
+      "wall_seconds": 0.8832671190029941,
+      "monitor_stop_reason": null,
+      "unit_owner_attestation": {
+        "unit": "realman-rerecord-20261014-v6-hybrid-v7e-probe-negative-dc4cbbb9a50447f6a586164ebcdd51af.service",
+        "pid": 397441,
+        "uid": 1002,
+        "invocation_id": "2f8ca47b37864c7fb5165064ea56b15c",
+        "pid_starttime": "11102041",
+        "controller_paths": {
+          "memory": "/sys/fs/cgroup/memory/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-negative-dc4cbbb9a50447f6a586164ebcdd51af.service",
+          "cpu": "/sys/fs/cgroup/cpu,cpuacct/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-negative-dc4cbbb9a50447f6a586164ebcdd51af.service",
+          "pids": "/sys/fs/cgroup/pids/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-negative-dc4cbbb9a50447f6a586164ebcdd51af.service"
+        },
+        "boot_id": "5a6976ba-b91a-45b8-98aa-b57464b003d1"
+      },
+      "peak": {
+        "cgroup_bytes": 33554432,
+        "rss_sum_bytes": 13504512,
+        "minimum_available_bytes": 1060817608704
+      },
+      "last_resource_sample": {
+        "mode": "v1",
+        "memory.current": 5701632,
+        "memory.peak": 33554432,
+        "memory.swap.current": 0,
+        "memory.stat.swap_before_bytes": 0,
+        "memory.stat.total_swap_before_bytes": 0,
+        "memory.stat.swap_after_bytes": 0,
+        "memory.stat.total_swap_after_bytes": 0,
+        "memory.usage_in_bytes.raw": 5701632,
+        "memory.memsw.usage_in_bytes.raw": 5701632,
+        "memory.memsw_minus_memory.diagnostic_bytes": 0,
+        "memory.memsw.max_usage": 33554432,
+        "pids.current": 1,
+        "memory.events": {
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 1,
+          "oom_group_kill": 0,
+          "memsw_max": 66
+        },
+        "memory.oom_control": {
+          "oom_kill_disable": 0,
+          "under_oom": 0,
+          "oom_kill": 1
+        },
+        "cpu.stat": {
+          "nr_periods": 4,
+          "nr_throttled": 0,
+          "throttled_time": 0
+        },
+        "member_pids": [
+          397441
+        ],
+        "member_vm_swap_bytes": {
+          "397441": 0
+        },
+        "rss_sum_bytes": 13504512,
+        "swap_zero_observed": true
+      },
+      "swap_observation_count": 6,
+      "maximum_sample_gap_seconds": 0.1159356919961283,
+      "tail_sample_gap_seconds": 0.11395609499595594,
+      "gate_release_elapsed_seconds": 0.1760256729903631,
+      "unit_exit_elapsed_seconds": 0.8698905439960072,
+      "resource_samples_sha256": "7b9c115ec9322469bc2412f26771987a763b20bc1197243115d5cc1bc02c69d4",
+      "swap_zero_observed": true,
+      "unit": "realman-rerecord-20261014-v6-hybrid-v7e-probe-negative-dc4cbbb9a50447f6a586164ebcdd51af.service",
+      "negative": true,
+      "probe_terminal": {
+        "negative": true,
+        "child_returncode": -9,
+        "resource": {
+          "mode": "v1",
+          "memory.current": 5701632,
+          "memory.peak": 33554432,
+          "memory.swap.current": 0,
+          "memory.stat.swap_before_bytes": 0,
+          "memory.stat.total_swap_before_bytes": 0,
+          "memory.stat.swap_after_bytes": 0,
+          "memory.stat.total_swap_after_bytes": 0,
+          "memory.usage_in_bytes.raw": 5701632,
+          "memory.memsw.usage_in_bytes.raw": 5701632,
+          "memory.memsw_minus_memory.diagnostic_bytes": 0,
+          "memory.memsw.max_usage": 33554432,
+          "pids.current": 1,
+          "memory.events": {
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 1,
+            "oom_group_kill": 0,
+            "memsw_max": 66
+          },
+          "memory.oom_control": {
+            "oom_kill_disable": 0,
+            "under_oom": 0,
+            "oom_kill": 1
+          },
+          "cpu.stat": {
+            "nr_periods": 4,
+            "nr_throttled": 0,
+            "throttled_time": 0
+          }
+        },
+        "swap_zero_observed": true,
+        "source_unchanged": true,
+        "rejection": null,
+        "passed": true
+      },
+      "cgroup_readback": {
+        "mode": "v1",
+        "actual": {
+          "memory.soft_limit_in_bytes": "25165824",
+          "memory.limit_in_bytes": "33554432",
+          "memory.memsw.limit_in_bytes": "33554432",
+          "memory.swappiness": "0",
+          "cpu.cfs_quota_us": "100000",
+          "cpu.cfs_period_us": "100000",
+          "pids.max": "32"
+        },
+        "controller_paths": {
+          "memory": "/sys/fs/cgroup/memory/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-negative-dc4cbbb9a50447f6a586164ebcdd51af.service",
+          "cpu": "/sys/fs/cgroup/cpu,cpuacct/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-negative-dc4cbbb9a50447f6a586164ebcdd51af.service",
+          "pids": "/sys/fs/cgroup/pids/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-probe-negative-dc4cbbb9a50447f6a586164ebcdd51af.service"
+        },
+        "limits_verified": true,
+        "unit": "realman-rerecord-20261014-v6-hybrid-v7e-probe-negative-dc4cbbb9a50447f6a586164ebcdd51af.service",
+        "pid": 397441,
+        "boot_id": "5a6976ba-b91a-45b8-98aa-b57464b003d1"
+      },
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "guard_sha256": "f47c12148b616b54eb2350038d8b434d4a18b6e603881013d70f4b2d65a7b842",
+  "probe_sha256": "4a613367c585f29699378c97acf5837372e878ed20cb8a90228c041e42103ab1",
+  "adapter_sha256": "d76fb7e6882b52625e4913be0631ef93e082601994d21077903f3456cbfc1b4b",
+  "boot_id": "5a6976ba-b91a-45b8-98aa-b57464b003d1",
+  "time_unix": 1791978375.3458464
+}

@@ -1,0 +1,2828 @@
+{
+  "scope": "Independent read-only CPU diagnosis of TWO actually failed Sprite LU0 runs; no new physics, GPU, controller/guard/source/label mutations. Derived receipt only.",
+  "date_utc": "2026-10-07T10:14:18.641144+00:00",
+  "new_physics_steps": 0,
+  "gpu_runs": 0,
+  "supersedes_only_descriptive_hand_order_in_v1": true,
+  "v1_reference": {
+    "path": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/independent_sprite_LU0_preload_diagnostic_v1.json",
+    "sha256": "4d2d2a04fc966d507217f0a0990159c4850537252ae8c4eca27d53e5d170e321"
+  },
+  "hand24_drive_target_order_correction": {
+    "incorrect_v1_description": "sorted full_qpos_joint_names excluding12 arm columns",
+    "actual_order_basis": "ExpertGeneration.__init__ manifest hands left/right limits insertion order; actual telemetry production at step()",
+    "manifest_path": "/bigdata2/liminghe/VLA-benchmark/RoboTwin/assets/embodiments/realman-rm65b-inspire-gen4/source_manifest.json",
+    "manifest_sha256": "6cac675e0f2228d3b233f82b7082b8df17860d2e18bfd7ba7dcc67ccf3c5d6e5",
+    "actual_hand24_drive_target_order": [
+      "l_inspire_left_thumb_1_joint",
+      "l_inspire_left_thumb_2_joint",
+      "l_inspire_left_thumb_3_joint",
+      "l_inspire_left_thumb_4_joint",
+      "l_inspire_left_index_1_joint",
+      "l_inspire_left_index_2_joint",
+      "l_inspire_left_middle_1_joint",
+      "l_inspire_left_middle_2_joint",
+      "l_inspire_left_ring_1_joint",
+      "l_inspire_left_ring_2_joint",
+      "l_inspire_left_little_1_joint",
+      "l_inspire_left_little_2_joint",
+      "r_inspire_right_thumb_1_joint",
+      "r_inspire_right_thumb_2_joint",
+      "r_inspire_right_thumb_3_joint",
+      "r_inspire_right_thumb_4_joint",
+      "r_inspire_right_index_1_joint",
+      "r_inspire_right_index_2_joint",
+      "r_inspire_right_middle_1_joint",
+      "r_inspire_right_middle_2_joint",
+      "r_inspire_right_ring_1_joint",
+      "r_inspire_right_ring_2_joint",
+      "r_inspire_right_little_1_joint",
+      "r_inspire_right_little_2_joint"
+    ],
+    "main_names_M_I_T": [
+      "l_inspire_left_middle_1_joint",
+      "l_inspire_left_index_1_joint",
+      "l_inspire_left_thumb_2_joint"
+    ],
+    "main_indices_M_I_T": [
+      6,
+      4,
+      1
+    ]
+  },
+  "comparison": {
+    "comparison_scope": "Same actual seed800000 and same initial pose; trajectories compared by recorded physical step before first paired latch. RRT seed alone would not prove identical execution; actual arrays are compared.",
+    "before_first_paired_through_step": 1207,
+    "max_full36_actual_q_difference_rad": 0.0,
+    "max_hand24_drive_target_difference_rad": 0.0,
+    "max_full36_before_difference_rad": 0.0,
+    "all_pre_pair_left_hand_command_SDK_bitwise_equal": true,
+    "max_pre_pair_FP_world_difference_m": 0.0
+  },
+  "trials": {
+    "original": {
+      "trial_dir": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_gpu4_upright_neighbour_attempt60/slot0000000_candidate_attempt60_v9_upright_resample",
+      "actual_seed": 800000,
+      "source_SHA256": {
+        "expert_report.json": "dd095b5543e16b973c5985418454c89e6e8ee6216eb66573b6794313c1dfdf64",
+        "physics_trace.json": "4f856efa7dcd960ca0f0f896a7772b50659c607b78422229af4786ac12b10184",
+        "physics_telemetry.npz": "9c0227696cd3588d1f5bb63a22aaf17ff323adb08c5c4237bf84651927f683a6"
+      },
+      "source_bytes_before_after_unchanged": true,
+      "accepted": false,
+      "result": "failed",
+      "error": "Closure pushed/rotated bottle",
+      "dt_s": 0.004000000189989805,
+      "feedback_gain": 0.3,
+      "initial_preload_N": [
+        0.0,
+        0.0,
+        0.12,
+        0.12,
+        0.24
+      ],
+      "first_events": {
+        "close_first_step": 1029,
+        "actual_index_force_over_.025_step": 1198,
+        "latched_index_first_step": 1199,
+        "actual_middle_force_over_.025_step": 1204,
+        "latched_middle_first_step": 1205,
+        "actual_thumb_force_over_.025_step": 1207,
+        "latched_thumb_first_step": 1208,
+        "paired_latched_first_step": 1208,
+        "actual_three_main_over_.05_first_step": 1262,
+        "recorded_pair_streak50_first_step": 1324,
+        "official_guard_crossing_step": 1339,
+        "first_LP_global_step": 1324
+      },
+      "first_independent_metric_over_2_close_step": {
+        "actor_mm": 1334,
+        "COM_mm": 1338,
+        "FP_mm": 1339
+      },
+      "max_metric_pre_first_paired": {
+        "actor_mm": 1.5886124862755504,
+        "COM_mm": 1.7711758443293477,
+        "FP_mm": 1.799947740923571,
+        "polar_deg": 0.10782586996533065
+      },
+      "max_metric_before_actual_thumb_force_over_.025": {
+        "actor_mm": 1.5488753731857448,
+        "COM_mm": 1.7055884795951524,
+        "FP_mm": 1.7302830871599995,
+        "polar_deg": 0.09132979143721585
+      },
+      "max_polar_angle_during_closure_deg": 0.3777011711019485,
+      "LP_previous_row": {
+        "step": 1323,
+        "sim_time_s": 5.292000251356512,
+        "LP_relative_time_ms": -4.000000189989805,
+        "world_origin_m": [
+          -0.105155810713768,
+          -0.07471927255392075,
+          0.7420393228530884
+        ],
+        "world_COM_m": [
+          -0.10508200793628437,
+          -0.07443653637866585,
+          0.8508186395971535
+        ],
+        "world_FP_m": [
+          -0.10505062706239886,
+          -0.07441505853520235,
+          0.8679172705244143
+        ],
+        "actor_mm": 1.5688969982235303,
+        "COM_mm": 1.3437051468359396,
+        "FP_mm": 1.3132351165598488,
+        "polar_deg": 0.3777011711019485,
+        "recorded_angle_deg": 0.377228948656325,
+        "native_main_force_after_N_M_I_T": [
+          0.11898199753548776,
+          0.12105469948259212,
+          0.24059022274324543
+        ],
+        "native_passive_force_after_N_L_R": [
+          0,
+          0
+        ],
+        "capture_latched_before": [
+          false,
+          false,
+          true,
+          true,
+          true
+        ],
+        "capture_filtered_before_N_M_I_T": [
+          0.11012312353188172,
+          0.12278281671458079,
+          0.23535753896025882
+        ],
+        "actual_pair_streak_before": 49
+      },
+      "LP_to_failure_all_actual_rows": [
+        {
+          "step": 1324,
+          "sim_time_s": 5.296000251546502,
+          "LP_relative_time_ms": 0.0,
+          "world_origin_m": [
+            -0.10514741390943527,
+            -0.07473164051771164,
+            0.7420395612716675
+          ],
+          "world_COM_m": [
+            -0.10507207220695414,
+            -0.07444583186734374,
+            0.8508188906630705
+          ],
+          "world_FP_m": [
+            -0.10504044831090868,
+            -0.07442387010761375,
+            0.8679175239488641
+          ],
+          "actor_mm": 1.5838415463993085,
+          "COM_mm": 1.357284289267468,
+          "FP_mm": 1.326667609558319,
+          "polar_deg": 0.3761170056548149,
+          "recorded_angle_deg": 0.37338966029104437,
+          "native_main_force_after_N_M_I_T": [
+            0.18746576662105127,
+            0.20106007787020508,
+            0.37391292832832845
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.11092847574880244,
+            0.1226257151412528,
+            0.2358332375065253
+          ],
+          "actual_pair_streak_before": 50,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.3117214572753592,
+            0.3082122854576241,
+            0.6288495419290498
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.15999376013904645,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.10390715242511975,
+            0.10273742848587471,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.051953576212559874,
+            0.051368714242937354,
+            0.10480825698817497
+          ]
+        },
+        {
+          "step": 1325,
+          "sim_time_s": 5.300000251736492,
+          "LP_relative_time_ms": 4.000000189989805,
+          "world_origin_m": [
+            -0.10512515902519226,
+            -0.07475857436656952,
+            0.7420395612716675
+          ],
+          "world_COM_m": [
+            -0.10504959942424215,
+            -0.07446685471049361,
+            0.850818863694257
+          ],
+          "world_FP_m": [
+            -0.10501793832686208,
+            -0.07444396127938706,
+            0.8679174939371226
+          ],
+          "actor_mm": 1.6185211745802632,
+          "COM_mm": 1.3879781657678059,
+          "FP_mm": 1.3567795519497032,
+          "polar_deg": 0.3712838559615423,
+          "recorded_angle_deg": 0.36918208588498697,
+          "native_main_force_after_N_M_I_T": [
+            0.238017997225823,
+            0.25149704275992774,
+            0.46214645396036175
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.11788641158308343,
+            0.1297561120608627,
+            0.24838593721416305
+          ],
+          "actual_pair_streak_before": 51,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.30963407652507496,
+            0.30607316638174115,
+            0.6250837320167585
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.15999748542916797
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.10321135884169166,
+            0.10202438879391372,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.05160567942084583,
+            0.05101219439695686,
+            0.10418062200279309
+          ]
+        },
+        {
+          "step": 1326,
+          "sim_time_s": 5.304000251926482,
+          "LP_relative_time_ms": 8.00000037997961,
+          "world_origin_m": [
+            -0.10510066151618958,
+            -0.07478734105825424,
+            0.7420403957366943
+          ],
+          "world_COM_m": [
+            -0.10502568804977701,
+            -0.07449035881281932,
+            0.8508196906289832
+          ],
+          "world_FP_m": [
+            -0.10499411608204538,
+            -0.07446663558752718,
+            0.8679183208992141
+          ],
+          "actor_mm": 1.6559938018314977,
+          "COM_mm": 1.421493484704845,
+          "FP_mm": 1.3896706207976428,
+          "polar_deg": 0.3662305570762748,
+          "recorded_angle_deg": 0.363575884842082,
+          "native_main_force_after_N_M_I_T": [
+            0.31272675520827575,
+            0.33667341487450136,
+            0.5730528810753516
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.12880746529489812,
+            0.1408234698750243,
+            0.267818712302915
+          ],
+          "actual_pair_streak_before": 52,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.30635776041153057,
+            0.30275295903749266,
+            0.6192538994901329
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.1021192534705102,
+            0.10091765301249755,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.0510596267352551,
+            0.05045882650624878,
+            0.10320898324835548
+          ]
+        },
+        {
+          "step": 1327,
+          "sim_time_s": 5.3080002521164715,
+          "LP_relative_time_ms": 12.000000569969416,
+          "world_origin_m": [
+            -0.10506831854581833,
+            -0.07482199370861053,
+            0.7420408129692078
+          ],
+          "world_COM_m": [
+            -0.10499446738020422,
+            -0.07451936093321289,
+            0.8508200872184046
+          ],
+          "world_FP_m": [
+            -0.10496306736803059,
+            -0.07449474567821489,
+            0.8679187156229212
+          ],
+          "actor_mm": 1.702689359644495,
+          "COM_mm": 1.4640099145569112,
+          "FP_mm": 1.431504114023935,
+          "polar_deg": 0.3583040677588916,
+          "recorded_angle_deg": 0.35672396983923316,
+          "native_main_force_after_N_M_I_T": [
+            0.3630604306086134,
+            0.3926052409011244,
+            0.6685669914848017
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.14552740146352727,
+            0.1586280110983134,
+            0.2955672742985782
+          ],
+          "actual_pair_streak_before": 53,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.30134177956094177,
+            0.29741159667050593,
+            0.6109293308914339
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.10044725985364727,
+            0.09913719889016866,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.05022362992682364,
+            0.04956859944508433,
+            0.10182155514857233
+          ]
+        },
+        {
+          "step": 1328,
+          "sim_time_s": 5.312000252306461,
+          "LP_relative_time_ms": 16.00000075995922,
+          "world_origin_m": [
+            -0.10503911972045898,
+            -0.07485572248697281,
+            0.7420414686203003
+          ],
+          "world_COM_m": [
+            -0.10496353402285773,
+            -0.07454825550705182,
+            0.85082072930117
+          ],
+          "world_FP_m": [
+            -0.10493185775598411,
+            -0.07452287726676896,
+            0.867919356268143
+          ],
+          "actor_mm": 1.7469232999769835,
+          "COM_mm": 1.5062639626817957,
+          "FP_mm": 1.4734784661160738,
+          "polar_deg": 0.35225185106367546,
+          "recorded_angle_deg": 0.35047146630671927,
+          "native_main_force_after_N_M_I_T": [
+            0.43674864827265863,
+            0.4858138041789606,
+            0.8094770798614891
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.165303132239714,
+            0.17989866927157078,
+            0.3294763409615023
+          ],
+          "actual_pair_streak_before": 54,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.2954090603280857,
+            0.29103039921852875,
+            0.6007566108925567
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.15999376013904645,
+            0.15999748542916797
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.09846968677602859,
+            0.09701013307284292,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.049234843388014295,
+            0.04850506653642146,
+            0.10012610181542612
+          ]
+        },
+        {
+          "step": 1329,
+          "sim_time_s": 5.316000252496451,
+          "LP_relative_time_ms": 20.000000949949026,
+          "world_origin_m": [
+            -0.10500896722078323,
+            -0.07488909363746643,
+            0.7420424818992615
+          ],
+          "world_COM_m": [
+            -0.10493014319587764,
+            -0.0745785823541195,
+            0.850821736060127
+          ],
+          "world_FP_m": [
+            -0.10489795378860849,
+            -0.07455272203762468,
+            0.8679203620441688
+          ],
+          "actor_mm": 1.7914179795579446,
+          "COM_mm": 1.5512664332109116,
+          "FP_mm": 1.5185891802778257,
+          "polar_deg": 0.3448717378785101,
+          "recorded_angle_deg": 0.34252726486951673,
+          "native_main_force_after_N_M_I_T": [
+            0.49163259093345874,
+            0.5549149091349352,
+            0.899929976187247
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.18997999839915278,
+            0.20770913728217558,
+            0.37311277365479134
+          ],
+          "actual_pair_streak_before": 55,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.2880060004802541,
+            0.2826872588153473,
+            0.58766568108457
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.09600200016008471,
+            0.09422908627178245,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.04800100008004236,
+            0.047114543135891224,
+            0.09794428018076168
+          ]
+        },
+        {
+          "step": 1330,
+          "sim_time_s": 5.320000252686441,
+          "LP_relative_time_ms": 24.00000113993883,
+          "world_origin_m": [
+            -0.10497115552425385,
+            -0.07492569833993912,
+            0.7420429587364197
+          ],
+          "world_COM_m": [
+            -0.10489353831744286,
+            -0.07461139108296733,
+            0.850822205544515
+          ],
+          "world_FP_m": [
+            -0.10486153388659575,
+            -0.07458493001995312,
+            0.8679208313783916
+          ],
+          "actor_mm": 1.8428827027283383,
+          "COM_mm": 1.6002728960646284,
+          "FP_mm": 1.5671357033541187,
+          "polar_deg": 0.3363984920827871,
+          "recorded_angle_deg": 0.3336296167642082,
+          "native_main_force_after_N_M_I_T": [
+            0.5464121672631982,
+            0.6158700851636246,
+            0.9925098385494185
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.2174029625409268,
+            0.2392732997226239,
+            0.4210052486802604
+          ],
+          "actual_pair_streak_before": 56,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.2797791112377219,
+            0.2732180100832128,
+            0.5732979385769292
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.15999376013904645,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.09325970374590731,
+            0.09107267002773761,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.046629851872953654,
+            0.045536335013868806,
+            0.0955496564294882
+          ]
+        },
+        {
+          "step": 1331,
+          "sim_time_s": 5.324000252876431,
+          "LP_relative_time_ms": 28.000001329928637,
+          "world_origin_m": [
+            -0.10493139922618866,
+            -0.07496471703052521,
+            0.7420433163642883
+          ],
+          "world_COM_m": [
+            -0.10485471016595528,
+            -0.0746459331195925,
+            0.8508225492554211
+          ],
+          "world_FP_m": [
+            -0.10482284675682503,
+            -0.07461876418217799,
+            0.8679211740003894
+          ],
+          "actor_mm": 1.8974974993726674,
+          "COM_mm": 1.6520745043153928,
+          "FP_mm": 1.6184402104729618,
+          "polar_deg": 0.3280788619288466,
+          "recorded_angle_deg": 0.3251576992519583,
+          "native_main_force_after_N_M_I_T": [
+            0.6083859191018326,
+            0.6808855363864802,
+            1.1316581557369176
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.24731289153444724,
+            0.2735093726046477,
+            0.4729602136390278
+          ],
+          "actual_pair_streak_before": 57,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.2708061325396658,
+            0.26294718821860563,
+            0.557711449089299
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.15999748542916797
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.09026871084655527,
+            0.08764906273953522,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.045134355423277636,
+            0.04382453136976761,
+            0.09295190818154984
+          ]
+        },
+        {
+          "step": 1332,
+          "sim_time_s": 5.3280002530664206,
+          "LP_relative_time_ms": 32.00000151991844,
+          "world_origin_m": [
+            -0.10490121692419052,
+            -0.07499690353870392,
+            0.7420442700386047
+          ],
+          "world_COM_m": [
+            -0.10482021958782593,
+            -0.07467702683527845,
+            0.8508234904533379
+          ],
+          "world_FP_m": [
+            -0.10478767500278606,
+            -0.07464968269427413,
+            0.867922112668835
+          ],
+          "actor_mm": 1.9411291593853945,
+          "COM_mm": 1.69841168118432,
+          "FP_mm": 1.665217696620642,
+          "polar_deg": 0.3209824127838604,
+          "recorded_angle_deg": 0.31857623936155716,
+          "native_main_force_after_N_M_I_T": [
+            0.6737537012794625,
+            0.7695115853612396,
+            1.2740411889030592
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.28013771363975076,
+            0.31054357091120516,
+            0.5328418473244949
+          ],
+          "actual_pair_streak_before": 58,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.26095868590807475,
+            0.2518369287266384,
+            0.5397469589836589
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.08698622863602493,
+            0.08394564290887947,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.04349311431801246,
+            0.041972821454439736,
+            0.08995782649727649
+          ]
+        },
+        {
+          "step": 1333,
+          "sim_time_s": 5.33200025325641,
+          "LP_relative_time_ms": 36.00000170990825,
+          "world_origin_m": [
+            -0.10486029088497162,
+            -0.07503536343574524,
+            0.7420443296432495
+          ],
+          "world_COM_m": [
+            -0.1047800503057266,
+            -0.07471281294457338,
+            0.8508235494687392
+          ],
+          "world_FP_m": [
+            -0.10474761930407352,
+            -0.07468504387899536,
+            0.8679221722734798
+          ],
+          "actor_mm": 1.9960445642336153,
+          "COM_mm": 1.7520485133049548,
+          "FP_mm": 1.7185677219476503,
+          "polar_deg": 0.31158765909840413,
+          "recorded_angle_deg": 0.30916360017708544,
+          "native_main_force_after_N_M_I_T": [
+            0.7164850490719662,
+            0.8127438100521133,
+            1.3190818091172982
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.31592098678846475,
+            0.35226793766284553,
+            0.6002236085593297
+          ],
+          "actual_pair_streak_before": 59,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.25022370396346055,
+            0.23931961870114632,
+            0.5195324306132084
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.08340790132115353,
+            0.07977320623371545,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.041703950660576763,
+            0.039886603116857725,
+            0.08658873843553475
+          ]
+        },
+        {
+          "step": 1334,
+          "sim_time_s": 5.3360002534464,
+          "LP_relative_time_ms": 40.00000189989805,
+          "world_origin_m": [
+            -0.10481483489274979,
+            -0.07507877051830292,
+            0.7420445084571838
+          ],
+          "world_COM_m": [
+            -0.10473738032547367,
+            -0.07475140645064231,
+            0.8508237075317939
+          ],
+          "world_FP_m": [
+            -0.10470538207113818,
+            -0.07472287628055102,
+            0.867922328578608
+          ],
+          "actor_mm": 2.057683248837911,
+          "COM_mm": 1.8094517680241835,
+          "FP_mm": 1.7752098879674287,
+          "polar_deg": 0.3034644613700106,
+          "recorded_angle_deg": 0.3019705287383699,
+          "native_main_force_after_N_M_I_T": [
+            0.7733075977874105,
+            0.872567429206391,
+            1.4955267996789265
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.3523359031138882,
+            0.39412938241488066,
+            0.6655743568864121
+          ],
+          "actual_pair_streak_before": 60,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.2392992290658335,
+            0.2267611852755358,
+            0.49992720611508373
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.15999376013904645,
+            0.15999748542916797
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.07976640968861118,
+            0.07558706175851193,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.03988320484430559,
+            0.037793530879255965,
+            0.08332120101918063
+          ]
+        },
+        {
+          "step": 1335,
+          "sim_time_s": 5.34000025363639,
+          "LP_relative_time_ms": 44.00000208988786,
+          "world_origin_m": [
+            -0.10478551685810089,
+            -0.07511091977357864,
+            0.7420461177825928
+          ],
+          "world_COM_m": [
+            -0.10470318990819212,
+            -0.07478218409954032,
+            0.8508252979372082
+          ],
+          "world_FP_m": [
+            -0.10467042182906867,
+            -0.074753434913522,
+            0.8679239153952106
+          ],
+          "actor_mm": 2.1008960835015986,
+          "COM_mm": 1.8553908603139138,
+          "FP_mm": 1.8216145783281081,
+          "polar_deg": 0.29718246260488923,
+          "recorded_angle_deg": 0.296677892535834,
+          "native_main_force_after_N_M_I_T": [
+            0.855975219835773,
+            0.9768043646430387,
+            1.5885056173300496
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.39060605882760363,
+            0.4376237521830831,
+            0.7410245822163618
+          ],
+          "actual_pair_streak_before": 61,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.22781818235171886,
+            0.21371287434507505,
+            0.47729213851609886
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.07593939411723963,
+            0.0712376247816917,
+            0.1590973795053663
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.037969697058619814,
+            0.03561881239084585,
+            0.07954868975268314
+          ]
+        },
+        {
+          "step": 1336,
+          "sim_time_s": 5.34400025382638,
+          "LP_relative_time_ms": 48.00000227987766,
+          "world_origin_m": [
+            -0.10474599152803421,
+            -0.0751461312174797,
+            0.7420457601547241
+          ],
+          "world_COM_m": [
+            -0.10466230137936515,
+            -0.07481738679524584,
+            0.8508249470212095
+          ],
+          "world_FP_m": [
+            -0.10462931337963265,
+            -0.07478863135155225,
+            0.8679235652702775
+          ],
+          "actor_mm": 2.15250801763861,
+          "COM_mm": 1.909128722548489,
+          "FP_mm": 1.8756095930198862,
+          "polar_deg": 0.28740843434509344,
+          "recorded_angle_deg": 0.2858897517511195,
+          "native_main_force_after_N_M_I_T": [
+            0.8953761582596376,
+            1.023466300967353,
+            1.663754033063114
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.432912348018747,
+            0.48664017361412903,
+            0.8180683160079524
+          ],
+          "actual_pair_streak_before": 62,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.21512629559437588,
+            0.19900794791576126,
+            0.4541790183786216
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.07170876519812529,
+            0.06633598263858709,
+            0.1513930061262072
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.035854382599062644,
+            0.033167991319293544,
+            0.0756965030631036
+          ]
+        },
+        {
+          "step": 1337,
+          "sim_time_s": 5.34800025401637,
+          "LP_relative_time_ms": 52.00000246986747,
+          "world_origin_m": [
+            -0.10469872504472733,
+            -0.07518693059682846,
+            0.7420458197593689
+          ],
+          "world_COM_m": [
+            -0.10461878066164844,
+            -0.07485524654576282,
+            0.8508250119970594
+          ],
+          "world_FP_m": [
+            -0.10458637609005142,
+            -0.07482602439822952,
+            0.8679236323778576
+          ],
+          "actor_mm": 2.2132656255490706,
+          "COM_mm": 1.9666285433891715,
+          "FP_mm": 1.932461925891169,
+          "polar_deg": 0.27921166075305276,
+          "recorded_angle_deg": 0.2761329031184847,
+          "native_main_force_after_N_M_I_T": [
+            0.9457060501621957,
+            1.074517327546716,
+            1.8129548128129025
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.47495451440146036,
+            0.5354425509353207,
+            0.8949488390599023
+          ],
+          "actual_pair_streak_before": 63,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.20251364567956184,
+            0.18436723471940378,
+            0.4311148614630367
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.15999376013904645,
+            0.1600012107192895,
+            0.15999748542916797
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.06750454855985395,
+            0.06145574490646793,
+            0.14370495382101223
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.033752274279926976,
+            0.030727872453233964,
+            0.07185247691050611
+          ]
+        },
+        {
+          "step": 1338,
+          "sim_time_s": 5.352000254206359,
+          "LP_relative_time_ms": 56.00000265985727,
+          "world_origin_m": [
+            -0.10465957224369049,
+            -0.07522501796483994,
+            0.7420459985733032
+          ],
+          "world_COM_m": [
+            -0.10457931755874322,
+            -0.07489101632519012,
+            0.8508251839669364
+          ],
+          "world_FP_m": [
+            -0.10454685939664769,
+            -0.07486142571536789,
+            0.8679238036888566
+          ],
+          "actor_mm": 2.2671198066548035,
+          "COM_mm": 2.0198004620700476,
+          "FP_mm": 1.9854738654919912,
+          "polar_deg": 0.2723693302635327,
+          "recorded_angle_deg": 0.2690220420292824,
+          "native_main_force_after_N_M_I_T": [
+            1.0226658292524915,
+            1.1554315603086636,
+            1.921082057081922
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.5177501104094197,
+            0.5844493509251729,
+            0.9784039311864514
+          ],
+          "actual_pair_streak_before": 64,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.18967496687717408,
+            0.1696651947224481,
+            0.4060783338250719
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.06322498895905802,
+            0.0565550649074827,
+            0.13535944460835733
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.03161249447952901,
+            0.02827753245374135,
+            0.06767972230417867
+          ]
+        },
+        {
+          "step": 1339,
+          "sim_time_s": 5.356000254396349,
+          "LP_relative_time_ms": 60.00000284984708,
+          "world_origin_m": [
+            -0.10462981462478638,
+            -0.07525084167718887,
+            0.7420459985733032
+          ],
+          "world_COM_m": [
+            -0.10454522012981998,
+            -0.07491980038212265,
+            0.8508251787244467
+          ],
+          "world_FP_m": [
+            -0.10451207481102574,
+            -0.07489067076625912,
+            0.8679237961859211
+          ],
+          "actor_mm": 2.305562936013199,
+          "COM_mm": 2.06423957073286,
+          "FP_mm": 2.030813209772488,
+          "polar_deg": 0.2637927716013637,
+          "recorded_angle_deg": 0.26245011707311217,
+          "native_main_force_after_N_M_I_T": [
+            1.1095205027744681,
+            1.2427663305950511,
+            1.998540850425527
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.5636515413771542,
+            0.636356826746829,
+            1.0641019463318915
+          ],
+          "actual_pair_streak_before": 65,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.15,
+            2.3319983772700246
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.1759045375868537,
+            0.15409295197595127,
+            0.3803689292814399
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.15409295197595127,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.15409290058655858,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            false,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.05863484586228457,
+            0.05136431732531709,
+            0.12678964309381333
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.029317422931142284,
+            0.025682158662658546,
+            0.06339482154690666
+          ]
+        }
+      ],
+      "max_source_vs_raw_float32_drive_target_rate_error_rad_s": 6.23986095354967e-06,
+      "main_target_rate_is_NOT_actual_joint_velocity": true
+    },
+    "low_preload": {
+      "trial_dir": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_gpu4_sprite_upright_closure_attempt110/slot0000000_candidate_attempt110_v9_sprite_lower_preload",
+      "actual_seed": 800000,
+      "source_SHA256": {
+        "expert_report.json": "917a78ba9c43b368d3811bb0da5578e9aae6d0445bee81147a126dac263b5972",
+        "physics_trace.json": "4eaf90e0e1f386f388f94655234a07e9d38e9e687cc10bca0faddb27338c6c83",
+        "physics_telemetry.npz": "191b767bac31f64d078e755c8430df7ceef39574a352f7ce651ba035b87a1209"
+      },
+      "source_bytes_before_after_unchanged": true,
+      "accepted": false,
+      "result": "failed",
+      "error": "Closure pushed/rotated bottle",
+      "dt_s": 0.004000000189989805,
+      "feedback_gain": 0.3,
+      "initial_preload_N": [
+        0.0,
+        0.0,
+        0.06,
+        0.06,
+        0.12
+      ],
+      "first_events": {
+        "close_first_step": 1029,
+        "actual_index_force_over_.025_step": 1198,
+        "latched_index_first_step": 1199,
+        "actual_middle_force_over_.025_step": 1204,
+        "latched_middle_first_step": 1205,
+        "actual_thumb_force_over_.025_step": 1207,
+        "latched_thumb_first_step": 1208,
+        "paired_latched_first_step": 1208,
+        "actual_three_main_over_.05_first_step": 1318,
+        "recorded_pair_streak50_first_step": 1405,
+        "official_guard_crossing_step": 1419,
+        "first_LP_global_step": 1405
+      },
+      "first_independent_metric_over_2_close_step": {
+        "actor_mm": 1412,
+        "COM_mm": 1418,
+        "FP_mm": 1419
+      },
+      "max_metric_pre_first_paired": {
+        "actor_mm": 1.5886124862755504,
+        "COM_mm": 1.7711758443293477,
+        "FP_mm": 1.799947740923571,
+        "polar_deg": 0.10782586996533065
+      },
+      "max_metric_before_actual_thumb_force_over_.025": {
+        "actor_mm": 1.5488753731857448,
+        "COM_mm": 1.7055884795951524,
+        "FP_mm": 1.7302830871599995,
+        "polar_deg": 0.09132979143721585
+      },
+      "max_polar_angle_during_closure_deg": 0.39519159989752617,
+      "LP_previous_row": {
+        "step": 1404,
+        "sim_time_s": 5.6160002667456865,
+        "LP_relative_time_ms": -4.000000189989805,
+        "world_origin_m": [
+          -0.10502774268388748,
+          -0.07479941099882126,
+          0.7420535683631897
+        ],
+        "world_COM_m": [
+          -0.10496113968966074,
+          -0.07442776523886564,
+          0.850832634345103
+        ],
+        "world_FP_m": [
+          -0.10493088729081207,
+          -0.07439230922696605,
+          0.8679312459288412
+        ],
+        "actor_mm": 1.7071467848561228,
+        "COM_mm": 1.423735249510583,
+        "FP_mm": 1.3863463718061575,
+        "polar_deg": 0.39519159989752617,
+        "recorded_angle_deg": 0.3928880289157534,
+        "native_main_force_after_N_M_I_T": [
+          0.05865197175531596,
+          0.061068106161455235,
+          0.11867653102148037
+        ],
+        "native_passive_force_after_N_L_R": [
+          0,
+          0
+        ],
+        "capture_latched_before": [
+          false,
+          false,
+          true,
+          true,
+          true
+        ],
+        "capture_filtered_before_N_M_I_T": [
+          0.06092915432953062,
+          0.06041883890507509,
+          0.11810883731025054
+        ],
+        "actual_pair_streak_before": 49
+      },
+      "LP_to_failure_all_actual_rows": [
+        {
+          "step": 1405,
+          "sim_time_s": 5.620000266935676,
+          "LP_relative_time_ms": 0.0,
+          "world_origin_m": [
+            -0.10501837730407715,
+            -0.0748114287853241,
+            0.7420538067817688
+          ],
+          "world_COM_m": [
+            -0.1049506176374042,
+            -0.07443707988032895,
+            0.8508328724555843
+          ],
+          "world_FP_m": [
+            -0.10492018263703287,
+            -0.07440119828940718,
+            0.8679314843474203
+          ],
+          "actor_mm": 1.7223600684670906,
+          "COM_mm": 1.4377807965041132,
+          "FP_mm": 1.4002558489981716,
+          "polar_deg": 0.39446179865606024,
+          "recorded_angle_deg": 0.39201552162519243,
+          "native_main_force_after_N_M_I_T": [
+            0.11716095639838951,
+            0.13326336287760035,
+            0.2569299709485578
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.060722137722935866,
+            0.060477863203658284,
+            0.11816044583168168
+          ],
+          "actual_pair_streak_before": 50,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.3267833586831192,
+            0.32685664103890244,
+            0.664277038231235
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.10892778622770641,
+            0.10895221367963415,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.054463893113853204,
+            0.05447610683981707,
+            0.11071283970520583
+          ]
+        },
+        {
+          "step": 1406,
+          "sim_time_s": 5.624000267125666,
+          "LP_relative_time_ms": 4.000000189989805,
+          "world_origin_m": [
+            -0.10499975085258484,
+            -0.07483512163162231,
+            0.7420545816421509
+          ],
+          "world_COM_m": [
+            -0.10493102396943503,
+            -0.07445597654984121,
+            0.8508336336328965
+          ],
+          "world_FP_m": [
+            -0.10490043449669831,
+            -0.07441933896350958,
+            0.8679322442019316
+          ],
+          "actor_mm": 1.7524581231662744,
+          "COM_mm": 1.4650055523979482,
+          "FP_mm": 1.4270636928916574,
+          "polar_deg": 0.3910761386176656,
+          "recorded_angle_deg": 0.38817066662350813,
+          "native_main_force_after_N_M_I_T": [
+            0.1815899654653964,
+            0.20431554487897755,
+            0.35105259818613294
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.06585293964224984,
+            0.06709472709609315,
+            0.13077585775067033
+          ],
+          "actual_pair_streak_before": 51,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.325244118107325,
+            0.324871581871172,
+            0.6604924146555383
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.15999376013904645,
+            0.15999748542916797
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.10841470603577502,
+            0.10829052729039067,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.05420735301788751,
+            0.054145263645195334,
+            0.1100820691092564
+          ]
+        },
+        {
+          "step": 1407,
+          "sim_time_s": 5.628000267315656,
+          "LP_relative_time_ms": 8.00000037997961,
+          "world_origin_m": [
+            -0.10497695952653885,
+            -0.0748647153377533,
+            0.7420548796653748
+          ],
+          "world_COM_m": [
+            -0.10490654329270506,
+            -0.07448006156333598,
+            0.8508338920302947
+          ],
+          "world_FP_m": [
+            -0.10487568490451298,
+            -0.07444255517455077,
+            0.8679324972075431
+          ],
+          "actor_mm": 1.7897590072611618,
+          "COM_mm": 1.499315770693495,
+          "FP_mm": 1.4609454122191248,
+          "polar_deg": 0.38618446145479896,
+          "recorded_angle_deg": 0.38523488493116115,
+          "native_main_force_after_N_M_I_T": [
+            0.24353615597789738,
+            0.2733261078227018,
+            0.4580502064334596
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.07637448789866925,
+            0.07956934743318504,
+            0.15080101683675234
+          ],
+          "actual_pair_streak_before": 52,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.3220876536303992,
+            0.32112919577004434,
+            0.6544848669297137
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.10736255121013308,
+            0.10704306525668146,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.05368127560506654,
+            0.05352153262834073,
+            0.1090808111549523
+          ]
+        },
+        {
+          "step": 1408,
+          "sim_time_s": 5.632000267505646,
+          "LP_relative_time_ms": 12.000000569969416,
+          "world_origin_m": [
+            -0.10495094954967499,
+            -0.07489820569753647,
+            0.7420557141304016
+          ],
+          "world_COM_m": [
+            -0.1048777223200583,
+            -0.07450827668356184,
+            0.8508347130158793
+          ],
+          "world_FP_m": [
+            -0.10484641865368563,
+            -0.07446993814491855,
+            0.8679333166666992
+          ],
+          "actor_mm": 1.8321162569469904,
+          "COM_mm": 1.5396365267613144,
+          "FP_mm": 1.500989550499702,
+          "polar_deg": 0.3813176949915602,
+          "recorded_angle_deg": 0.379415012542465,
+          "native_main_force_after_N_M_I_T": [
+            0.29939353440974814,
+            0.3443909063339827,
+            0.5815131895642982
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.09157100383477704,
+            0.09718359913826113,
+            0.1787327625516227
+          ],
+          "actual_pair_streak_before": 53,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.31752869884956686,
+            0.3158449202585215,
+            0.6461053432152526
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.1058428996165223,
+            0.10528164008617386,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.05292144980826115,
+            0.05264082004308693,
+            0.10768422386920878
+          ]
+        },
+        {
+          "step": 1409,
+          "sim_time_s": 5.636000267695636,
+          "LP_relative_time_ms": 16.00000075995922,
+          "world_origin_m": [
+            -0.10492348670959473,
+            -0.07493511587381363,
+            0.7420560121536255
+          ],
+          "world_COM_m": [
+            -0.10484669038314733,
+            -0.0745391210335105,
+            0.8508349975360074
+          ],
+          "world_FP_m": [
+            -0.1048148216962001,
+            -0.07449982557366154,
+            0.8679335996840521
+          ],
+          "actor_mm": 1.8780883803232382,
+          "COM_mm": 1.5833446169980976,
+          "FP_mm": 1.544411961945752,
+          "polar_deg": 0.3758078285636587,
+          "recorded_angle_deg": 0.3729192665492012,
+          "native_main_force_after_N_M_I_T": [
+            0.36048037616117,
+            0.41410811024763283,
+            0.6819531230445864
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.11046396197556288,
+            0.11965699167189839,
+            0.21534916658839848
+          ],
+          "actual_pair_streak_before": 54,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.3118608114073311,
+            0.30910290249843037,
+            0.6351204220042199
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.15999376013904645,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.1039536038024437,
+            0.10303430083281014,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.05197680190122185,
+            0.05151715041640507,
+            0.10585340366737
+          ]
+        },
+        {
+          "step": 1410,
+          "sim_time_s": 5.640000267885625,
+          "LP_relative_time_ms": 20.000000949949026,
+          "world_origin_m": [
+            -0.10489480197429657,
+            -0.07497353851795197,
+            0.7420565485954285
+          ],
+          "world_COM_m": [
+            -0.1048133733265231,
+            -0.0745716335637907,
+            0.8508355077087008
+          ],
+          "world_FP_m": [
+            -0.10478077236209112,
+            -0.0745314055407153,
+            0.8679341061141136
+          ],
+          "actor_mm": 1.9260092308488335,
+          "COM_mm": 1.6298700632621062,
+          "FP_mm": 1.5908066001719554,
+          "polar_deg": 0.3702818637880422,
+          "recorded_angle_deg": 0.36739301799040197,
+          "native_main_force_after_N_M_I_T": [
+            0.4157636815645287,
+            0.48153801513049865,
+            0.8077274740728538
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.1331927278829439,
+            0.14642527633462446,
+            0.25776770991602704
+          ],
+          "actual_pair_streak_before": 55,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.3050421816351168,
+            0.3010724170996125,
+            0.6223948590059313
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.15999748542916797
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.10168072721170561,
+            0.10035747236653753,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.050840363605852805,
+            0.05017873618326876,
+            0.10373247650098856
+          ]
+        },
+        {
+          "step": 1411,
+          "sim_time_s": 5.644000268075615,
+          "LP_relative_time_ms": 24.00000113993883,
+          "world_origin_m": [
+            -0.1048663929104805,
+            -0.07501295208930969,
+            0.7420568466186523
+          ],
+          "world_COM_m": [
+            -0.10477959601672401,
+            -0.0746048906252716,
+            0.8508357730522104
+          ],
+          "world_FP_m": [
+            -0.10474614711629635,
+            -0.07456369132344326,
+            0.8679343666226604
+          ],
+          "actor_mm": 1.9745744335181035,
+          "COM_mm": 1.6772321183770909,
+          "FP_mm": 1.6380912081366472,
+          "polar_deg": 0.36517855225026813,
+          "recorded_angle_deg": 0.363186322001144,
+          "native_main_force_after_N_M_I_T": [
+            0.4762827076107095,
+            0.5517528363136625,
+            0.9113687123360072
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.15888099750865822,
+            0.17689007208606766,
+            0.3077640542709193
+          ],
+          "actual_pair_streak_before": 56,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.2973357007474025,
+            0.2919329783741796,
+            0.6073959556994636
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.09911190024913417,
+            0.09731099279139321,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.04955595012456709,
+            0.04865549639569661,
+            0.10123265928324394
+          ]
+        },
+        {
+          "step": 1412,
+          "sim_time_s": 5.648000268265605,
+          "LP_relative_time_ms": 28.000001329928637,
+          "world_origin_m": [
+            -0.10483799129724503,
+            -0.07505247741937637,
+            0.7420571446418762
+          ],
+          "world_COM_m": [
+            -0.10474478238584621,
+            -0.07463895979031895,
+            0.8508360451706121
+          ],
+          "world_FP_m": [
+            -0.10471032134848282,
+            -0.07459689918190335,
+            0.8679346346341428
+          ],
+          "actor_mm": 2.0232276327358356,
+          "COM_mm": 1.7259071168443736,
+          "FP_mm": 1.6868892143289917,
+          "polar_deg": 0.35992647630074376,
+          "recorded_angle_deg": 0.35772898611170795,
+          "native_main_force_after_N_M_I_T": [
+            0.5351640611948751,
+            0.6213331067115176,
+            1.0294683254297035
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.1877356996729581,
+            0.21096850666915692,
+            0.36263720737350436
+          ],
+          "actual_pair_streak_before": 57,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.28867929009811255,
+            0.28170944799925285,
+            0.5909340097686882
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.09622643003270419,
+            0.09390314933308429,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.048113215016352094,
+            0.046951574666542144,
+            0.09848900162811469
+          ]
+        },
+        {
+          "step": 1413,
+          "sim_time_s": 5.652000268455595,
+          "LP_relative_time_ms": 32.00000151991844,
+          "world_origin_m": [
+            -0.10480830073356628,
+            -0.07508929818868637,
+            0.7420586347579956
+          ],
+          "world_COM_m": [
+            -0.10471037585271005,
+            -0.07467171239354006,
+            0.8508375158524617
+          ],
+          "world_FP_m": [
+            -0.10467516864783306,
+            -0.07462900810778231,
+            0.8679361022414559
+          ],
+          "actor_mm": 2.0704550578156637,
+          "COM_mm": 1.7734308963963374,
+          "FP_mm": 1.734506810584458,
+          "polar_deg": 0.35324466152306905,
+          "recorded_angle_deg": 0.3509386474655374,
+          "native_main_force_after_N_M_I_T": [
+            0.6014402902932328,
+            0.693413163196229,
+            1.073436178504261
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.21932009753874904,
+            0.24827438101112959,
+            0.4232582207234711
+          ],
+          "actual_pair_streak_before": 58,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.2792039707383753,
+            0.270517685696661,
+            0.5727477057636982
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.15999376013904645,
+            0.15999748542916797
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.0930679902461251,
+            0.090172561898887,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.04653399512306255,
+            0.0450862809494435,
+            0.09545795096061636
+          ]
+        },
+        {
+          "step": 1414,
+          "sim_time_s": 5.656000268645585,
+          "LP_relative_time_ms": 36.00000170990825,
+          "world_origin_m": [
+            -0.10476889461278915,
+            -0.07512692362070084,
+            0.7420583367347717
+          ],
+          "world_COM_m": [
+            -0.10467137296177871,
+            -0.07470672873499722,
+            0.8508372043423658
+          ],
+          "world_FP_m": [
+            -0.10463622395758301,
+            -0.07466360985683067,
+            0.8679357892123613
+          ],
+          "actor_mm": 2.1239172344871826,
+          "COM_mm": 1.8257869295543327,
+          "FP_mm": 1.7865520755925546,
+          "polar_deg": 0.3454218341929855,
+          "recorded_angle_deg": 0.3432931366802365,
+          "native_main_force_after_N_M_I_T": [
+            0.6522172752180313,
+            0.745163089126984,
+            1.22681312489559
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.25405829838004385,
+            0.28874154477530867,
+            0.4823653103466665
+          ],
+          "actual_pair_streak_before": 59,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.2687825104859868,
+            0.2583775365674073,
+            0.5550155788767395
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.08959417016199561,
+            0.0861258455224691,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.044797085080997806,
+            0.04306292276123455,
+            0.09250259647945659
+          ]
+        },
+        {
+          "step": 1415,
+          "sim_time_s": 5.660000268835574,
+          "LP_relative_time_ms": 40.00000189989805,
+          "world_origin_m": [
+            -0.10472536087036133,
+            -0.07516756653785706,
+            0.7420584559440613
+          ],
+          "world_COM_m": [
+            -0.10463050510172518,
+            -0.07474364719456073,
+            0.8508373095076559
+          ],
+          "world_FP_m": [
+            -0.10459577017013678,
+            -0.07469993858613203,
+            0.8679358934157799
+          ],
+          "actor_mm": 2.1823035231240073,
+          "COM_mm": 1.8808207058428308,
+          "FP_mm": 1.8408861255832354,
+          "polar_deg": 0.33852892116432803,
+          "recorded_angle_deg": 0.33702255658743996,
+          "native_main_force_after_N_M_I_T": [
+            0.7095699210762363,
+            0.8078442968427584,
+            1.3530829977176777
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.29025457056461595,
+            0.3302344142352841,
+            0.5500423873188309
+          ],
+          "actual_pair_streak_before": 60,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.25792362883061515,
+            0.24592967572941465,
+            0.5347124557850902
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.15999376013904645,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.0859745429435384,
+            0.08197655857647157,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.0429872714717692,
+            0.040988279288235785,
+            0.08911874263084837
+          ]
+        },
+        {
+          "step": 1416,
+          "sim_time_s": 5.664000269025564,
+          "LP_relative_time_ms": 44.00000208988786,
+          "world_origin_m": [
+            -0.10469242185354233,
+            -0.07520169019699097,
+            0.7420593500137329
+          ],
+          "world_COM_m": [
+            -0.10459486925194132,
+            -0.0747760623035395,
+            0.8508382037018162
+          ],
+          "world_FP_m": [
+            -0.10455970618072379,
+            -0.0747320814703204,
+            0.8679367874854516
+          ],
+          "actor_mm": 2.229270579135856,
+          "COM_mm": 1.928990716126825,
+          "FP_mm": 1.8891939447258315,
+          "polar_deg": 0.3327149109831687,
+          "recorded_angle_deg": 0.33048724170912774,
+          "native_main_force_after_N_M_I_T": [
+            0.784054244880782,
+            0.9009487266201666,
+            1.4794330806926945
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.3283741495298385,
+            0.37365349634714146,
+            0.6230460823255345
+          ],
+          "actual_pair_streak_before": 61,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.24648775514104843,
+            0.2329039510958575,
+            0.5128113472830792
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.15999748542916797
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.08216258504701615,
+            0.07763465036528583,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.041081292523508076,
+            0.038817325182642914,
+            0.0854685578805132
+          ]
+        },
+        {
+          "step": 1417,
+          "sim_time_s": 5.668000269215554,
+          "LP_relative_time_ms": 48.00000227987766,
+          "world_origin_m": [
+            -0.10465468466281891,
+            -0.0752367153763771,
+            0.7420592308044434
+          ],
+          "world_COM_m": [
+            -0.10455602786667387,
+            -0.07481044302705224,
+            0.8508380651219083
+          ],
+          "world_FP_m": [
+            -0.10452068598804701,
+            -0.07476635635616657,
+            0.8679366457673559
+          ],
+          "actor_mm": 2.2797889620390293,
+          "COM_mm": 1.9808080050125019,
+          "FP_mm": 1.9410933495677545,
+          "polar_deg": 0.3250615672042656,
+          "recorded_angle_deg": 0.32454048136297053,
+          "native_main_force_after_N_M_I_T": [
+            0.8308504662724456,
+            0.9596214057498689,
+            1.553129331013564
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.3697996145322915,
+            0.42158942844181146,
+            0.7008994491751275
+          ],
+          "actual_pair_streak_before": 62,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.2340601156403125,
+            0.21852317146745645,
+            0.4894553372282012
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.07802003854677085,
+            0.07284105715581883,
+            0.16
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.039010019273385425,
+            0.036420528577909415,
+            0.08157588953803355
+          ]
+        },
+        {
+          "step": 1418,
+          "sim_time_s": 5.672000269405544,
+          "LP_relative_time_ms": 52.00000246986747,
+          "world_origin_m": [
+            -0.1046103686094284,
+            -0.0752761960029602,
+            0.7420593500137329
+          ],
+          "world_COM_m": [
+            -0.10451456581648404,
+            -0.0748472172310901,
+            0.8508381769211979
+          ],
+          "world_FP_m": [
+            -0.1044796674747647,
+            -0.07480270075575257,
+            0.86793675747371
+          ],
+          "actor_mm": 2.3378507195627654,
+          "COM_mm": 2.0361833365993,
+          "FP_mm": 1.9958679556523087,
+          "polar_deg": 0.318550908251597,
+          "recorded_angle_deg": 0.3176636162605542,
+          "native_main_force_after_N_M_I_T": [
+            0.8880904803121328,
+            1.0201414795338963,
+            1.680419816913632
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.4117133301366642,
+            0.47050142849090326,
+            0.7783748963239727
+          ],
+          "actual_pair_streak_before": 63,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.2214860009590007,
+            0.20384957145272892,
+            0.4662127030835477
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.1600012107192895,
+            0.1600012107192895
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.07382866698633357,
+            0.06794985715090965,
+            0.15540423436118256
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.036914333493166786,
+            0.033974928575454824,
+            0.07770211718059128
+          ]
+        },
+        {
+          "step": 1419,
+          "sim_time_s": 5.676000269595534,
+          "LP_relative_time_ms": 56.00000265985727,
+          "world_origin_m": [
+            -0.10457950830459595,
+            -0.07530595362186432,
+            0.7420603036880493
+          ],
+          "world_COM_m": [
+            -0.10447988375876753,
+            -0.07487769772790945,
+            0.8508391378280432
+          ],
+          "world_FP_m": [
+            -0.1044443804380464,
+            -0.07483329120048605,
+            0.8679377186509618
+          ],
+          "actor_mm": 2.3801588609876725,
+          "COM_mm": 2.0823423296521377,
+          "FP_mm": 2.0425744478471834,
+          "polar_deg": 0.3126249725945038,
+          "recorded_angle_deg": 0.31043849430861925,
+          "native_main_force_after_N_M_I_T": [
+            0.9655907757159978,
+            1.1140638433236107,
+            1.8079880697583859
+          ],
+          "native_passive_force_after_N_L_R": [
+            0,
+            0
+          ],
+          "capture_latched_before": [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capture_filtered_before_N_M_I_T": [
+            0.4550203456589548,
+            0.5204687080160102,
+            0.8603789835548371
+          ],
+          "actual_pair_streak_before": 64,
+          "LP_target_N_M_I_T": [
+            1.15,
+            1.1499999999999997,
+            2.3324172399357983
+          ],
+          "feedback_target_rate_uncapped_rad_s_M_I_T": [
+            0.20849389630231355,
+            0.18885938759519685,
+            0.44161147691428837
+          ],
+          "feedback_target_rate_capped_rad_s_M_I_T": [
+            0.16,
+            0.16,
+            0.16
+          ],
+          "raw_float32_drive_target_FD_rad_s_M_I_T": [
+            0.1600012107192895,
+            0.15999376013904645,
+            0.15999748542916797
+          ],
+          "rate_saturated_M_I_T": [
+            true,
+            true,
+            true
+          ],
+          "hypothetical_gain_.1_rate_M_I_T": [
+            0.06949796543410451,
+            0.06295312919839895,
+            0.14720382563809614
+          ],
+          "hypothetical_gain_.05_rate_M_I_T": [
+            0.034748982717052256,
+            0.03147656459919947,
+            0.07360191281904807
+          ]
+        }
+      ],
+      "max_source_vs_raw_float32_drive_target_rate_error_rad_s": 6.23986095354967e-06,
+      "main_target_rate_is_NOT_actual_joint_velocity": true
+    }
+  },
+  "interpretation": {
+    "first_unpaired_contact_executions_bit_identical": true,
+    "prepair_subthreshold_push_exists": true,
+    "actual_FP_guard_exceedance_before_thumb_contact_or_pair": false,
+    "FP_guard_exceedance_after_first_LP_steps": {
+      "original": 15,
+      "low_preload": 14
+    },
+    "both_runs_remain_failed": true,
+    "gain_.1_and_.05_fields": "counterfactual rate arithmetic only, not new execution/success or proven fix",
+    "control_suggestion": "Test existing feedback_force_gain only under unchanged LP feasibility/min_main_force_N=1.15, caps, full contact/path/velocity/closure/hold guards and RGB recording. No new capture rules or relaxed success labels."
+  }
+}

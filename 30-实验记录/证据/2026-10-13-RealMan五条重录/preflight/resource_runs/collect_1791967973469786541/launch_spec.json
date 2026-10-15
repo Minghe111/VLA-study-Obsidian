@@ -1,0 +1,74 @@
+{
+  "schema": "realman_guarded_stage_v1",
+  "stage": "collect",
+  "check_only": false,
+  "command": [
+    "/home/admin123/liminghe/miniconda3/envs/robotwin/bin/python",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot17_runtime/preflight/run_staged_collector.py",
+    "--index",
+    "17",
+    "--attempt",
+    "7",
+    "--domain-seed",
+    "61400017",
+    "--output",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot17_runtime/new_physical_episodes",
+    "--timeout",
+    "2000",
+    "--run"
+  ],
+  "runtime": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot17_runtime",
+  "unit": "realman-rerecord-protected.service",
+  "limits": {
+    "MemoryAccounting": "yes",
+    "MemoryHigh": "10737418240",
+    "MemoryMax": "12884901888",
+    "MemorySwapMax": "0",
+    "CPUAccounting": "yes",
+    "CPUQuota": "200%",
+    "TasksMax": "128",
+    "Nice": "10",
+    "KillMode": "control-group",
+    "TimeoutStopSec": "10s",
+    "RuntimeMaxSec": "2100",
+    "OOMPolicy": "stop",
+    "IOWeight": "25"
+  },
+  "environment_overrides": {
+    "PATH": "/home/admin123/liminghe/miniconda3/envs/robotwin-official-data/bin:/home/admin123/liminghe/miniconda3/envs/robotwin/bin:/usr/bin:/bin",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "CUDA_VISIBLE_DEVICES": "0",
+    "MPLCONFIGDIR": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot17_runtime/preflight/protected_mplcache"
+  },
+  "start_minimum_available_bytes": 19327352832,
+  "stop_available_floor_bytes": 6442450944,
+  "low_samples_required": 3,
+  "sample_seconds": 2.0,
+  "gpu_hard_memory_cap": false,
+  "auto_retry": false,
+  "available_before_bytes": 23490146304,
+  "gpu_before": {
+    "healthy": true,
+    "index": 0,
+    "total_bytes": 34190917632,
+    "used_bytes": 926941184,
+    "free_bytes": 32720814080,
+    "utilization_percent": 17,
+    "hard_memory_cap": false
+  },
+  "disk_before_bytes": {
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot17_runtime": 85044711424
+  },
+  "disk_start_minimum_bytes": 34359738368,
+  "disk_stop_floor_bytes": 17179869184,
+  "orphan_cleanup": null,
+  "source_binding": {
+    "entry_sha256": "4c501060c2973f8c8dda636cd4c5fa74b2615c94e9fb5c4068be86251b7dae03",
+    "guard_sha256": "7e4a318c00b89572d2f21156266061fab1c5a2feddae44b105ed163c63dd9abb",
+    "diagnostics_sha256": "2ec6bb8cf352aa1c22ccf0539fe1a563c8d1382e57c2018e9860ddab418cf9d9"
+  }
+}

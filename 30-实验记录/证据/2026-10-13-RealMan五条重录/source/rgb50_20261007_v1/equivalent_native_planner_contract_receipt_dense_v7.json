@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "scope": "Zero-step mocked planner contracts only; not actual native model, TOPP, FCL or physics success",
+  "new_physics_steps": 0,
+  "physical_validation_completed": false,
+  "cases": [
+    {
+      "case": "valid_predeclared_alternate",
+      "passed": true,
+      "RRT_calls": 1,
+      "TOPP_calls": 1,
+      "FMA_calls": 1
+    },
+    {
+      "case": "unmatched_endpoint",
+      "passed": true,
+      "RRT_calls": 1,
+      "TOPP_calls": 0,
+      "FMA_calls": 0
+    },
+    {
+      "case": "wrong_start",
+      "passed": true,
+      "RRT_calls": 1,
+      "TOPP_calls": 0,
+      "FMA_calls": 0
+    },
+    {
+      "case": "raw_limit_violation",
+      "passed": true,
+      "RRT_calls": 1,
+      "TOPP_calls": 0,
+      "FMA_calls": 0
+    },
+    {
+      "case": "retimed_limit_violation",
+      "passed": true,
+      "RRT_calls": 1,
+      "TOPP_calls": 1,
+      "FMA_calls": 0
+    },
+    {
+      "case": "audit_reject",
+      "passed": true,
+      "RRT_calls": 1,
+      "TOPP_calls": 1,
+      "FMA_calls": 1
+    },
+    {
+      "case": "nonfinite_path",
+      "passed": true,
+      "RRT_calls": 1,
+      "TOPP_calls": 0,
+      "FMA_calls": 0
+    },
+    {
+      "case": "approximate_status",
+      "passed": true,
+      "RRT_calls": 1,
+      "TOPP_calls": 0,
+      "FMA_calls": 0
+    },
+    {
+      "case": "endpoint_collision",
+      "passed": true,
+      "RRT_calls": 0,
+      "TOPP_calls": 0,
+      "FMA_calls": 0
+    },
+    {
+      "case": "start_collision",
+      "passed": true,
+      "RRT_calls": 0,
+      "TOPP_calls": 0,
+      "FMA_calls": 0
+    },
+    {
+      "case": "frozen_IK_changed",
+      "passed": true,
+      "RRT_calls": 0,
+      "TOPP_calls": 0,
+      "FMA_calls": 0
+    },
+    {
+      "case": "FK_not_equivalent",
+      "passed": true,
+      "RRT_calls": 1,
+      "TOPP_calls": 0,
+      "FMA_calls": 0
+    },
+    {
+      "case": "world_exception",
+      "passed": true,
+      "auxiliary_restored_despite_construction_exception": true
+    },
+    {
+      "case": "finite_goal_boundary",
+      "passed": true,
+      "RRT_calls": 2,
+      "TOPP_calls": 1,
+      "FMA_calls": 1
+    }
+  ],
+  "all_auxiliary_q_base_group_restored": true,
+  "returned_paths_never_wrapped_or_clipped": true,
+  "v9_physics_methods_inherited_no_v11_or_waypoint_planning": true,
+  "source_sha256": {
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/full_native_approach_equivalent_goals_dense_v7.py": "e87bedb3adb98ae5358bc695eed284c067f8c020a1eed742be5de493d84d31cb",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/equivalent_arm_goals_v5.py": "300514960dc38f72a630640c1903477e52bc3a1287d43eb67d35307d9388e087",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v9_equivalent_goals_dense_v7.py": "d4447f506d5ac3b1144f10642d099f2e02117f1471382622c0ff8a71eed64eca",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/equivalent_native_planner_contract_dense_v7.py": "40d9d9babf2eb6f495f54755e59795983f6b141d1dbd815dfef57744625d598d"
+  }
+}

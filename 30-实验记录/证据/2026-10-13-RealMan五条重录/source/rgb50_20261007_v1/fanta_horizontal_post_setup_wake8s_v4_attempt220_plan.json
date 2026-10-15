@@ -1,0 +1,61 @@
+{
+  "status": "candidate_jobs_only_pending_independent_source_review_no_episode_run",
+  "created_utc": "2026-10-07T11:06:11.854809+00:00",
+  "new_physics_runs": 0,
+  "gpu_runs": 0,
+  "accepted_episodes": 0,
+  "no_success_or_fix_claim": true,
+  "jobs_path": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/fanta_horizontal_post_setup_wake8s_v4_attempt220_jobs.json",
+  "jobs_sha256": "0261c8dee2d247db3a63137af41f6785d7318fe963ba748c40dd7ef6a5f157b8",
+  "sources_sha256": {
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/collector_settle_wake_v4.py": "574e8531ab59e3c9e4e066c00643415ec68ebfc1884477af53663e47c67c9181",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/worker_settle_wake_v4.py": "0a1eb2a69ab9224a06c8bb87d3a9fcb66b73bb8f25c0f330fdc86bac04cc22fe",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_v9_settle_wake_v4.py": "ca30ff61386ac31f2fc4c0b5a9d7621d44fca474d3283d858fcf7f174f865109",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/test_collector_settle_wake_v4.py": "99bc764408274d73853d48edd1646282309d285bed4284d46855963e78ca1ae9"
+  },
+  "original_failed_source_bindings": [
+    {
+      "slot": 27,
+      "new_actual_seed": 3400027,
+      "original_seed": 1000027,
+      "original_failed_trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_gpu1_grasp_refinement_attempt120/slot0000027_candidate_attempt120_v9_fanta_skin1mm",
+      "original_scene_sha256": "bbfd9907b69cddf3a2891ed73f46a5a44f521eef89b737f59de58c3c5a9a8a98",
+      "original_expert_sha256": "e46a151157de571b100466215b70ae9fb618203d6f2bafbeeec88c5de6048544",
+      "requested_xy_yaw_and_entire_grasp_setting_exactly_preserved": true,
+      "removed_stale_predicted_pose_fields": [
+        "initial_geometry_center_world_m",
+        "actor_origin_world_m",
+        "actor_q_wxyz",
+        "nearest_arm_distances_m",
+        "nearest_arm_margin_m"
+      ]
+    },
+    {
+      "slot": 37,
+      "new_actual_seed": 3400037,
+      "original_seed": 910037,
+      "original_failed_trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_gpu1_grasp_refinement_attempt120/slot0000037_candidate_attempt120_v9_fanta_skin1mm",
+      "original_scene_sha256": "539be6072ce9cee1f2b510e842804053622b01887087679603adbfd680422410",
+      "original_expert_sha256": "f8b1ca7f0890b30c1a9bf7561be1fa7f4619bfe80893d6eeaf0213b36dfbc827",
+      "requested_xy_yaw_and_entire_grasp_setting_exactly_preserved": true,
+      "removed_stale_predicted_pose_fields": [
+        "initial_geometry_center_world_m",
+        "actor_origin_world_m",
+        "actor_q_wxyz",
+        "nearest_arm_distances_m",
+        "nearest_arm_margin_m"
+      ]
+    }
+  ],
+  "intended_output_root": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v7_post_setup_native_wake_v4_fanta_horizontal_attempt220",
+  "worker_module": "worker_settle_wake_v4",
+  "expert_module": "expert_v9_settle_wake_v4",
+  "motion_base": "expert_generation_v9_equivalent_goals_dense_v7.ExpertSession",
+  "planning_backend": "full_native",
+  "all_three_RGB_required": true,
+  "depth": false,
+  "must_not_use_no_rgb_flag": true,
+  "extra_initializer_scope": "One explicit native wake after COMPLETE original setup_demo/delay/check_stable; strict immediate pose/velocity/sleep-threshold/q equality and awake check, then2000 ordinary actual4ms steps before original actual collision bbox/shoulder/pose measurements. No repeated official stable check or relaxed guard.",
+  "source_freeze_and_cleanup_review_required_before_parent_GPU_launch": true,
+  "final_qualification": "Full frozen independent v3 reader after stable worker/report/RGB evidence; no old trial relabel; observers and all quotas preserved"
+}

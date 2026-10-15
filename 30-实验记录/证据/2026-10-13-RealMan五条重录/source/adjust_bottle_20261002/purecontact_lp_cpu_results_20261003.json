@@ -1,0 +1,258 @@
+{
+  "tests_run": 10,
+  "successful": true,
+  "python": "3.10.21 (main, Aug 27 2026, 14:42:07) [GCC 14.3.0]",
+  "numpy": "1.26.4",
+  "scipy": "1.10.1",
+  "scope": "CPU static contact-wrench verification only; no SAPIEN import, physics step, GPU run, hardware IO, or physical grasp success",
+  "fixture_sequence_results": [
+    {
+      "geometry": "nominal",
+      "elapsed_s": 0.0028108698315918446,
+      "feasible": true,
+      "usable": true,
+      "reason": "feasible_contact_wrench",
+      "stale": false,
+      "target_source": "contact_lp",
+      "target_normal_forces_N": [
+        0,
+        0,
+        0.4994053707862293,
+        0.5558300886823623,
+        1.0488341436166655
+      ],
+      "normal_force_change_N": null,
+      "theoretical_net_wrench_world": [
+        -3.469446951953614e-18,
+        -2.220446049250313e-16,
+        0.09799999780952927,
+        8.673617379884035e-19,
+        -5.204170427930421e-18,
+        6.938893903907228e-18
+      ],
+      "theoretical_contact_forces_world_N": [
+        [
+          -0.014403523505017153,
+          -0.5265803690576162,
+          0.04963445415492598
+        ],
+        [
+          0.09704641902322317,
+          -0.4961711396787288,
+          -0.3007743212052327
+        ],
+        [
+          -0.08264289551820601,
+          1.0227515087363448,
+          0.349139864859836
+        ]
+      ],
+      "theoretical_contact_normal_forces_N": [
+        0.4994053707862293,
+        0.5558300886823623,
+        1.0488341436166655
+      ],
+      "objective": 2.1040696030852573,
+      "continuity_weight": 2,
+      "total_force_weight": 1,
+      "force_residual_inf_N": 2.220446049250313e-16,
+      "torque_residual_inf_Nm": 6.938893903907228e-18,
+      "cap_violation_N": 0,
+      "minimum_violation_N": 0,
+      "cone_violation_N": 0,
+      "ray_nonnegative_violation_N": 0,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "channels": [
+        "little",
+        "ring",
+        "middle",
+        "index",
+        "thumb"
+      ],
+      "mu": 0.35,
+      "cone_edges": 16,
+      "ignored_ring_little_contacts": 0,
+      "contact_count": 3,
+      "target_wrench_world": [
+        0,
+        0,
+        0.09799999780952931,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "geometry": "actual_v8",
+      "elapsed_s": 0.0029151281341910362,
+      "feasible": true,
+      "usable": true,
+      "reason": "feasible_contact_wrench",
+      "stale": false,
+      "target_source": "contact_lp",
+      "target_normal_forces_N": [
+        0,
+        0,
+        0.5045264111825785,
+        0.5558300886823623,
+        1.0529360334984212
+      ],
+      "normal_force_change_N": [
+        0,
+        0,
+        0.005121040396349141,
+        0,
+        0.004101889881755749
+      ],
+      "theoretical_net_wrench_world": [
+        1.0408340855860843e-17,
+        -2.220446049250313e-16,
+        0.0979999978095292,
+        0,
+        0,
+        3.469446951953614e-18
+      ],
+      "theoretical_contact_forces_world_N": [
+        [
+          -0.02223626068906974,
+          -0.5309864374103842,
+          0.052970770796619215
+        ],
+        [
+          0.09292321500821862,
+          -0.49905151168949263,
+          -0.2981419526820985
+        ],
+        [
+          -0.0706869543191489,
+          1.0300379490998766,
+          0.3431711796950085
+        ]
+      ],
+      "theoretical_contact_normal_forces_N": [
+        0.5045264111825785,
+        0.5558300886823623,
+        1.0529360334984212
+      ],
+      "objective": 2.1317383939195715,
+      "continuity_weight": 2,
+      "total_force_weight": 1,
+      "force_residual_inf_N": 2.220446049250313e-16,
+      "torque_residual_inf_Nm": 3.469446951953614e-18,
+      "cap_violation_N": 0,
+      "minimum_violation_N": 0,
+      "cone_violation_N": 0,
+      "ray_nonnegative_violation_N": 0,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "channels": [
+        "little",
+        "ring",
+        "middle",
+        "index",
+        "thumb"
+      ],
+      "mu": 0.35,
+      "cone_edges": 16,
+      "ignored_ring_little_contacts": 0,
+      "contact_count": 3,
+      "target_wrench_world": [
+        0,
+        0,
+        0.09799999780952931,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "geometry": "official_goal_upright",
+      "elapsed_s": 0.002909890143200755,
+      "feasible": true,
+      "usable": true,
+      "reason": "feasible_contact_wrench",
+      "stale": false,
+      "target_source": "contact_lp",
+      "target_normal_forces_N": [
+        0,
+        0,
+        0.5045264111825785,
+        0.5483770656790568,
+        1.0529360334984212
+      ],
+      "normal_force_change_N": [
+        0,
+        0,
+        0,
+        -0.007453023003305526,
+        0
+      ],
+      "theoretical_net_wrench_world": [
+        5.551115123125783e-17,
+        -6.245004513516506e-17,
+        0.09799999780952928,
+        2.6020852139652106e-18,
+        -3.469446951953614e-18,
+        4.336808689942018e-19
+      ],
+      "theoretical_contact_forces_world_N": [
+        [
+          0.48488184829523207,
+          0.14098696433143615,
+          0.1719138678554254
+        ],
+        [
+          0.5270723613656629,
+          0.16068835120630076,
+          0.10592320822582489
+        ],
+        [
+          -1.011954209660895,
+          -0.30167531553773697,
+          -0.17983707827172102
+        ]
+      ],
+      "theoretical_contact_normal_forces_N": [
+        0.5045264111825785,
+        0.5483770656790568,
+        1.0529360334984212
+      ],
+      "objective": 2.1207455563666673,
+      "continuity_weight": 2,
+      "total_force_weight": 1,
+      "force_residual_inf_N": 6.245004513516506e-17,
+      "torque_residual_inf_Nm": 3.469446951953614e-18,
+      "cap_violation_N": 0,
+      "minimum_violation_N": 0,
+      "cone_violation_N": 0,
+      "ray_nonnegative_violation_N": 0,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "channels": [
+        "little",
+        "ring",
+        "middle",
+        "index",
+        "thumb"
+      ],
+      "mu": 0.35,
+      "cone_edges": 16,
+      "ignored_ring_little_contacts": 0,
+      "contact_count": 3,
+      "target_wrench_world": [
+        0,
+        0,
+        0.09799999780952931,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "source_sha256": {
+    "purecontact_lp": "D06F677E5119474D83538F0364AC2E9C9849A8EF079E2FD2E4EBD3EF9D1C9419",
+    "test_purecontact_lp": "D0047B629B33113AA840626EEFED2A11EF58682C86230DA75349D8CE6B84E471",
+    "fixtures": "F7D8664FA138CE95A501CB3ACADE4AA40768DD9092C761BB3E2130BB53D738A2"
+  }
+}

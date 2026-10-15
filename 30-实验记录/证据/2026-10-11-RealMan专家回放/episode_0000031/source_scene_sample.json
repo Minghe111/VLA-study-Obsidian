@@ -1,0 +1,224 @@
+{
+  "shape_count_overlay": {
+    "source": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/full_mesh_path_audit.py",
+    "source_sha256": "6e63def2bc02f1c2bd9e4e90fdd71ee70e58961dddafdc6e858a235ce454a9f9",
+    "overlay_source": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/geometry_overlay.py",
+    "overlay_source_sha256": "c0caabd5a576e636c2ca35c6941e3030afd9ddd355b6b36a465e73b5bd816ac8",
+    "overlay_ast_sha256": "373b906ef01c6a5d33d290b3981b5feaa8bc0020a283bae3801410d68fdbab41",
+    "changed_assertions": 1,
+    "actual_native_count_must_be_positive": true,
+    "converted_count_must_equal_native_count": true,
+    "collision_pairs_or_clearance_changed": false,
+    "physical_scene_changed": false
+  },
+  "planning_backend": "full_native",
+  "creation_axial_roll_deg": 0.0,
+  "sample_spec": {
+    "model_id": 13,
+    "brand": "Coca-Cola",
+    "arm": "right",
+    "pose_class": "upright",
+    "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+    "position_reference": "collision_mesh_bbox_center_world",
+    "acceptance_requires_settled_pose_check": true,
+    "grasp_setting": {
+      "lift_axis": "world",
+      "pitch_deg": 10.0,
+      "hand_x": 0.02,
+      "hand_y": 0.085,
+      "hand_z": 0.165,
+      "open_sdk": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        0
+      ],
+      "close_sdk": [
+        650,
+        670,
+        610,
+        610,
+        887,
+        0
+      ],
+      "finger_force_allocation_N": [
+        0.0,
+        0.0,
+        0.12,
+        0.12,
+        0.24
+      ],
+      "lp_min_main_force_N": 1.15,
+      "feedback_joint_rate_cap_rad_s": 0.16,
+      "hand_joint_stiffness": 20.0,
+      "hand_joint_damping": 0.2,
+      "feedback_force_gain": 0.1
+    },
+    "index": 31,
+    "seed": 2100031,
+    "xy": [
+      0.10996677990831694,
+      -0.10307569524367086
+    ],
+    "yaw_deg": -40.62098702180611,
+    "candidate_provenance": {
+      "matched_original_failed_v7_gain01_trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_coke_right_upright_gain01_matched_parallel_v7_attempt03/slot0000031_coke_right_upright_anchor_neighbour_v7_gain01_matched_parallel",
+      "original_failed_report_sha256": "f8e62713842eb2d33bfd4bf22966335be1a21ec416b9c34c2e2c53dd09e607bd",
+      "original_failed_trace_sha256": "90ed23e7b6c176a5a1aa7b362e290103bb07f840f2cf91bc14567cd1460f0da1",
+      "completed_original_failed_worker_status_sha256": "de20796624caaf720435652f607dd2662fe0903898a3dd7e5ec98ad3e8317a12",
+      "baseline_jobs_sha256": "43b027964ce44e0908d28e4ebc410c05d8ab4606b1988e8d07eaedcadf3a95bf",
+      "all_scene_and_control_specification_inputs_unchanged": true,
+      "selected_expert_only_change": {
+        "before": "expert_generation_v9_equivalent_goals_dense_v7",
+        "after": "expert_generation_v9_equivalent_dense_waypoint_v8"
+      },
+      "original_frozen_v7_direct_attempt_retained_before_optional_waypoint": true,
+      "waypoint_world_z_m": 0.08,
+      "all_raw_numeric_limit_TOPP_FMA_and_actual_physics_guards_retained": true,
+      "new_native_planning_can_change_actual_paths": true,
+      "direct_success_cannot_be_attributed_to_waypoint_fallback": true,
+      "fresh_full_three_RGB_physics_and_independent_formal_admission_required": true,
+      "original_failed_trial_not_modified_or_relabelled": true,
+      "this_specification_is_not_a_physical_success_or_causal_improvement_claim": true,
+      "previous_baseline_provenance": {
+        "matched_original_failed_trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_coke_right_upright_anchor_neighbours_v7_attempt01/slot0000031_coke_right_upright_anchor_neighbour_v7",
+        "original_failed_report_sha256": "f9da7dd0cbf24b19cbf248cd29d4615a8fc0e22ebafd1d47cb0391a4f4b9e3fd",
+        "original_failed_trace_sha256": "59d62090e12bc136d0b766ac5619921af9cf48a147cbb425ea281b579cc0e54d",
+        "completed_original_failed_worker_status_sha256": "115548729d023cf8fc5dde849ceaa0324626751a375113d06f9157cc2242fbf7",
+        "baseline_jobs_sha256": "e58354856a90e21f065cd055636ed3be2e880ff6a5d0a8ad9f8eeae4078eb577",
+        "input_parameter_delta_only": {
+          "grasp_setting.feedback_force_gain": {
+            "before_effective_default": 0.3,
+            "after": 0.1
+          }
+        },
+        "same_scene_spec_and_seed_fresh_setup_required": true,
+        "LP_period_force_caps_rate_cap_five_finger_timing_skin_and_acceptance_guards_unchanged": true,
+        "new_native_planning_can_change_actual_paths": true,
+        "original_failed_trial_not_modified_or_relabelled": true,
+        "separate_active_micro_queue_not_modified": true,
+        "this_specification_is_not_a_physical_success_or_causal_improvement_claim": true,
+        "previous_baseline_provenance": {
+          "scene_profile_anchor_trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_equivalent_goals_dense_v7_attempt01/right_coke_upright_slot25_axial20mm_equivalent_goals_dense_v7",
+          "anchor_independent_formal_readback_receipt": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/independent_v7_right_coke_slot25_full_readback_v3.json",
+          "anchor_independent_formal_readback_receipt_sha256": "60289284b4e47a2021a140fef810face47e8dd68cca14a9555663df5009cd7d2",
+          "anchor_report_sha256": "dce8394801703633aeb21a05d283ce10f9f9a2e08d26a54d4082e24ebda539ba",
+          "original_sample_plan_sha256": "a146e9cb966bf8d029317dcce9f248e5f32af56a4c3b2080afbc9d12880b904e",
+          "original_sampling_cell_spec": {
+            "index": 31,
+            "seed": 100031,
+            "model_id": 13,
+            "brand": "Coca-Cola",
+            "arm": "right",
+            "pose_class": "upright",
+            "xy": [
+              0.11048074125380626,
+              -0.1313904342015881
+            ],
+            "yaw_deg": 97.02447947735868,
+            "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+            "position_reference": "collision_mesh_bbox_center_world",
+            "initial_geometry_center_world_m": [
+              0.11048074125380626,
+              -0.1313904342015881,
+              0.8659618526697159
+            ],
+            "actor_origin_world_m": [
+              0.11048074125380626,
+              -0.13139043420158808,
+              0.742
+            ],
+            "actor_q_wxyz": [
+              0.4684299854006034,
+              0.4684299854006034,
+              0.5296917488290624,
+              0.5296917488290624
+            ],
+            "nearest_arm_distances_m": {
+              "left": 0.6656017917127023,
+              "right": 0.5715221883330133
+            },
+            "nearest_arm_margin_m": 0.09407960337968901,
+            "acceptance_requires_settled_pose_check": true
+          },
+          "new_position_delta_m": [
+            -0.0015,
+            0.0015
+          ],
+          "new_upright_label_yaw_delta_deg": -0.15,
+          "fresh_scene_physics_and_native_planning_required": true,
+          "trajectory_or_dataset_not_copied": true,
+          "this_job_plan_is_not_an_accepted_episode": true
+        }
+      }
+    },
+    "planning_backend": "full_native"
+  },
+  "actual_bottle_center_world": [
+    0.11073233835924684,
+    -0.10369467010126387,
+    0.8639387995626915
+  ],
+  "actual_collision_vertices": 818,
+  "actual_collision_shape_count": 7,
+  "nearest_arm": "right",
+  "selected_arm": "right",
+  "nearest_rule": "Euclidean distance from actual collision bbox center to fixed shoulder joint1 origins",
+  "shoulder_origins_world": {
+    "left": [
+      -0.2638029456138611,
+      -0.6165398955345154,
+      1.1258991956710815
+    ],
+    "right": [
+      0.26388344168663025,
+      -0.61671382188797,
+      1.1258975267410278
+    ]
+  },
+  "arm_distances_m": {
+    "left": 0.6869571699311128,
+    "right": 0.5960421841574977
+  },
+  "nearest_margin_m": 0.09091498577361512,
+  "initial_pose": [
+    [
+      0.759082555770874,
+      0.006958901882171631,
+      -0.6509571075439453,
+      0.10997195541858673
+    ],
+    [
+      -0.6509240865707397,
+      -0.006577610969543457,
+      -0.7591143250465393,
+      -0.10307812690734863
+    ],
+    [
+      -0.009564369916915894,
+      0.9999541640281677,
+      -0.00046324729919433594,
+      0.7399399280548096
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "actual_axis_world": [
+    0.006958901882171631,
+    -0.006577610969543457,
+    0.9999541640281677
+  ],
+  "upright_angle_deg": 0.5485832095471306,
+  "actual_axis_yaw_deg": -43.38654327392578,
+  "sampled_pose_settled_by_gravity": true,
+  "source_config_sha256": "580d02b2a2a268f636a690e861406bc95fd83f3febf526d00c951808bf4a9a0a",
+  "camera_profile_sha256": "4a2cee5e91fd4acd13676bdb4acae4f3d7e8ccb327b459193c20460e0d9783d4",
+  "old20_manifest_sha256": "97b33109a740ae2d9b99155dbf228e5d2a19761b323e60fc622c8998aec0e577",
+  "hardware_io": false
+}

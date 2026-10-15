@@ -1,0 +1,33 @@
+WARNING:absl:Tensorflow library not found, tensorflow.io.gfile operations will use native shim calls. GCS paths (i.e. 'gs://...') cannot be accessed.
+Strict RM65 SFT restore: 51 base leaves, 3353433872 parameters; new LoRA only
+/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/venv/lib/python3.11/site-packages/flax/core/lift.py:310: RuntimeWarning: kwargs are not supported in vmap, so "train" is(are) ignored
+  warnings.warn(msg.format(name, ', '.join(kwargs.keys())), RuntimeWarning)
+Loaded critic pretrained ResNet-10: path=/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/models/resnet10_params.pkl, leaves=36, params=4905792
+/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/venv/lib/python3.11/site-packages/flax/core/lift.py:310: RuntimeWarning: kwargs are not supported in vmap, so "train" is(are) ignored
+  warnings.warn(msg.format(name, ', '.join(kwargs.keys())), RuntimeWarning)
+2026-10-15 15:31:37.238670: E external/xla/xla/service/gpu/gpu_hlo_schedule.cc:654] The byte size of input/output arguments (27858963696) exceeds the base limit (26917785181). This indicates an error in the calculation!
+2026-10-15 15:31:37.453582: W external/xla/xla/hlo/transforms/simplifiers/hlo_rematerialization.cc:3021] Can't reduce memory use below 0B (0 bytes) by rematerialization; only reduced to 13.32GiB (14302059296 bytes), down from 13.32GiB (14302126496 bytes) originally
+/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/venv/lib/python3.11/site-packages/flax/core/lift.py:310: RuntimeWarning: kwargs are not supported in vmap, so "train" is(are) ignored
+  warnings.warn(msg.format(name, ', '.join(kwargs.keys())), RuntimeWarning)
+/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/venv/lib/python3.11/site-packages/flax/core/lift.py:310: RuntimeWarning: kwargs are not supported in vmap, so "train" is(are) ignored
+  warnings.warn(msg.format(name, ', '.join(kwargs.keys())), RuntimeWarning)
+2026-10-15 15:31:54.045335: E external/xla/xla/service/gpu/gpu_hlo_schedule.cc:654] The byte size of input/output arguments (27876807194) exceeds the base limit (26917785181). This indicates an error in the calculation!
+2026-10-15 15:31:54.801023: W external/xla/xla/hlo/transforms/simplifiers/hlo_rematerialization.cc:3021] Can't reduce memory use below 0B (0 bytes) by rematerialization; only reduced to 13.85GiB (14868838436 bytes), down from 13.85GiB (14870599452 bytes) originally
+2026-10-15 15:32:17.207808: W external/xla/xla/tsl/framework/bfc_allocator.cc:501] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.12GiB (rounded to 1207959552)requested by op 
+2026-10-15 15:32:17.208160: W external/xla/xla/tsl/framework/bfc_allocator.cc:512] ***********************************_****************************************************************
+E1015 15:32:17.208222  357759 pjrt_stream_executor_client.cc:3077] Execution of replica 0 failed: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1207959552 bytes. [tf-allocator-allocation-error='']
+Traceback (most recent call last):
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/code/VLA-Precision/scripts/realman_acob_probe.py", line 655, in <module>
+    main()
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/code/VLA-Precision/scripts/realman_acob_probe.py", line 645, in main
+    result = run(args, output)
+             ^^^^^^^^^^^^^^^^^
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/code/VLA-Precision/scripts/realman_acob_probe.py", line 632, in run
+    agent, audit = update_probe(agent, paths, args, output)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/code/VLA-Precision/scripts/realman_acob_probe.py", line 507, in update_probe
+    agent, info = agent.update_ql(batch, networks_to_update=networks)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jaxlib.xla_extension.XlaRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1207959552 bytes.
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.

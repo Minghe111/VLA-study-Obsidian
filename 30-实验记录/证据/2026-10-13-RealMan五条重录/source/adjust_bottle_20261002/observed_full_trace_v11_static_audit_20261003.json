@@ -1,0 +1,21 @@
+{
+  "scope": "Pure CPU readers, synthetic independent FK/FCL control-flow and AST gates only; no SAPIEN import/scene step, GPU, planner, worker queue, actual-model experiment or HDF export",
+  "checks": [
+    "true_normal_not_tangential; native_only; configured_exemptions",
+    "exact_selected_touch_only; normal_force_dt_fallback; no_approach_exemption",
+    "full_fake_pipeline_pass; initial_table_support_allowed; later_release_required",
+    "nonallowed_geometric_self_collision_rejected",
+    "robot_table_collision_rejected",
+    "wrong_side_grasp_touch_not_exempted",
+    "historical_true_normal_self_collision_rejected",
+    "failed_acceptance_rejected",
+    "wrong_q_order_rejected",
+    "missing_physical_step_rejected",
+    "nonfinite_fullq_rejected",
+    "mandatory_full_audit_guard_precedes_export; full36_hdf_npz_fields; failure_sets_accepted_false"
+  ],
+  "passed": true,
+  "collector_sha256": "5ad50f270b99947e81476b6d5364628dd3e64fda758682b085b41cb8362832cb",
+  "full_audit_sha256": "0600e7fa2f814581ebd10001b254a1369130c162790f9721bb5d53a8b396dc91",
+  "v9_helper_preserved_sha256": "2e5728274e144919f83e9b39430f04ae4a982a979e5977848c879d219f4d00a3"
+}

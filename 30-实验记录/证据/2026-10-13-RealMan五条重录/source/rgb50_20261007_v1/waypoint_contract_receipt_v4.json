@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "scope": "Zero-step mocked CPU contracts only; not native IK/RRT/FCL/physics success",
+  "physical_validation_completed": false,
+  "GPU_initialized_by_fixture": false,
+  "control_methods_not_overridden": true,
+  "v11_not_imported": true,
+  "physical_setters_or_scene_steps_not_present": true,
+  "original_direct_success_returned_unchanged": true,
+  "negative_endpoint_and_collision_fixtures_rejected": true,
+  "cases": [
+    {
+      "case": "direct_success",
+      "passed": true,
+      "RRT_calls": 0,
+      "TOPP_calls": 0,
+      "full_mesh_gate_calls": 0
+    },
+    {
+      "case": "fallback_success",
+      "passed": true,
+      "RRT_calls": 2,
+      "TOPP_calls": 1,
+      "full_mesh_gate_calls": 1
+    },
+    {
+      "case": "audit_reject",
+      "passed": true,
+      "RRT_calls": 2,
+      "TOPP_calls": 1,
+      "full_mesh_gate_calls": 1
+    },
+    {
+      "case": "bad_endpoint",
+      "passed": true,
+      "RRT_calls": 1,
+      "TOPP_calls": 0,
+      "full_mesh_gate_calls": 0
+    },
+    {
+      "case": "start_collision",
+      "passed": true,
+      "RRT_calls": 0,
+      "TOPP_calls": 0,
+      "full_mesh_gate_calls": 0
+    },
+    {
+      "case": "physical_write",
+      "passed": true,
+      "unauthorized_state_change_rejected": true
+    },
+    {
+      "case": "world_constructor_exception",
+      "passed": true,
+      "auxiliary_base_q_and_group_restored": true,
+      "physical_q_unchanged": true
+    }
+  ],
+  "source_sha256": {
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/full_native_approach_waypoint_v4.py": "f20f53c7b4cf464ac0f21bdbe61ad008b0054d0e9bcbf2640f4b340ab5c8ae66",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v9_waypoint_v4.py": "1314c9de08b2929108614d0ff36151a048283ec16f59721c5087e37dab14fb76",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/waypoint_contract_check_v4.py": "fac46a6536e3d7d88f20b74e62dbbc64185a9da689c8cd402c4232d780d95dfa"
+  }
+}

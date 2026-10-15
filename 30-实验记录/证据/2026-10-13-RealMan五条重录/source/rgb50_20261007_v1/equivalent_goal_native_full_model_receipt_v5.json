@@ -1,0 +1,542 @@
+{
+  "passed": true,
+  "scope": "Installed complete-native zero-step goal declaration only; no RRT/TOPP/physics/dataset success and no historical alias proof",
+  "installed_mplib_version": "0.2.1",
+  "source_hashes_before": {
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/equivalent_goal_native_full_model_probe_v5.py": "377a0996d2b86884c33d735af06f143e76887b2804aee50855f953777e8e3017",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/equivalent_arm_goals_v5.py": "300514960dc38f72a630640c1903477e52bc3a1287d43eb67d35307d9388e087",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/independent_coke_right_diagonal_screen_20261007_v1/native_all93_best3_v3.json": "d897eb3ede833b2ecb9729f571e0c67afcc7bf6dd821c552420501818c70c728",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/independent_coke_right_diagonal_screen_20261007_v1/geometry_screen.json": "b8a90ec1f134441e8a86b587da299db7ec48d08695ba6970b3d4673fb969473a",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_gpu3_attempt02/slot0000018_candidate_attempt02_v9/run_config.yml": "eae09aa2c2b26627eb22a360451c037df40af48e47c9892988ef711c363c8ef4",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_gpu3_attempt02/slot0000018_candidate_attempt02_v9/scene_sample.json": "4a54ce4d4164409e6e69169cc4b3c79eb08b3c8210fd26cd9b52e5cc4001bc23",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/closure_boundary_audit_v14.py": "e40149ba15aff34de64a4e6d3cdcda700766934f077f47cab1888c1b36335020",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/benchmark_geometry_cache.py": "e5d13b16ef6aff9ad9624978e9c269a1bd4b86b4c526542bb03acaa9c139f490",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/geometry_overlay.py": "c0caabd5a576e636c2ca35c6941e3030afd9ddd355b6b36a465e73b5bd816ac8",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/full_mesh_path_audit.py": "6e63def2bc02f1c2bd9e4e90fdd71ee70e58961dddafdc6e858a235ce454a9f9",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/batch_runs_v32/realman_adjust_bottle_batch20_20261003/attempts/seed_0000007/bootstrap/robot_head_down_fixed.urdf": "18b0989d4317625cb79e6a8ea73ce60101d043bd9ea4938405ed231d1d211f5d",
+    "/bigdata2/liminghe/envs/robotwin/lib/python3.10/site-packages/mplib/pymp.cpython-310-x86_64-linux-gnu.so": "5e4a9173d23107dd0988f63d0a4f1a393692b81df7f7e7fd07cf63465493f3e9"
+  },
+  "source_hashes_after": {
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/equivalent_goal_native_full_model_probe_v5.py": "377a0996d2b86884c33d735af06f143e76887b2804aee50855f953777e8e3017",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/equivalent_arm_goals_v5.py": "300514960dc38f72a630640c1903477e52bc3a1287d43eb67d35307d9388e087",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/independent_coke_right_diagonal_screen_20261007_v1/native_all93_best3_v3.json": "d897eb3ede833b2ecb9729f571e0c67afcc7bf6dd821c552420501818c70c728",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/independent_coke_right_diagonal_screen_20261007_v1/geometry_screen.json": "b8a90ec1f134441e8a86b587da299db7ec48d08695ba6970b3d4673fb969473a",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_gpu3_attempt02/slot0000018_candidate_attempt02_v9/run_config.yml": "eae09aa2c2b26627eb22a360451c037df40af48e47c9892988ef711c363c8ef4",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_gpu3_attempt02/slot0000018_candidate_attempt02_v9/scene_sample.json": "4a54ce4d4164409e6e69169cc4b3c79eb08b3c8210fd26cd9b52e5cc4001bc23",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/closure_boundary_audit_v14.py": "e40149ba15aff34de64a4e6d3cdcda700766934f077f47cab1888c1b36335020",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/benchmark_geometry_cache.py": "e5d13b16ef6aff9ad9624978e9c269a1bd4b86b4c526542bb03acaa9c139f490",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/geometry_overlay.py": "c0caabd5a576e636c2ca35c6941e3030afd9ddd355b6b36a465e73b5bd816ac8",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/full_mesh_path_audit.py": "6e63def2bc02f1c2bd9e4e90fdd71ee70e58961dddafdc6e858a235ce454a9f9",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/batch_runs_v32/realman_adjust_bottle_batch20_20261003/attempts/seed_0000007/bootstrap/robot_head_down_fixed.urdf": "18b0989d4317625cb79e6a8ea73ce60101d043bd9ea4938405ed231d1d211f5d",
+    "/bigdata2/liminghe/envs/robotwin/lib/python3.10/site-packages/mplib/pymp.cpython-310-x86_64-linux-gnu.so": "5e4a9173d23107dd0988f63d0a4f1a393692b81df7f7e7fd07cf63465493f3e9"
+  },
+  "constructor_receipt": {
+    "cpu_only_scene": true,
+    "render_system_count": 0,
+    "scene_steps": 0,
+    "empty_nonphysical_scene_prefix_entities": 6,
+    "snapshot_initial_qpos_writes_before_audits": 1,
+    "audit_sapien_qpos_writes": 0,
+    "snapshot_initial_qpos_exact": true,
+    "urdf": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/batch_runs_v32/realman_adjust_bottle_batch20_20261003/attempts/seed_0000007/bootstrap/robot_head_down_fixed.urdf",
+    "urdf_sha256": "18b0989d4317625cb79e6a8ea73ce60101d043bd9ea4938405ed231d1d211f5d",
+    "model_data_sha256": "1bd52b232b290364b1100d5e9d22197e008a51d8254ed750a7bf73f3e2faad98",
+    "collision_asset_sha256": "dabf7af41598048aa4aba500bc3d6c8b3a1a538973ca36842bb9b3ea7a8d302b",
+    "geometry_configuration_source_sha256": "e60cd89ed304f012406d4830d93d16a8373eb568c3d89433f3ad122cbba42dce",
+    "table_geometry_source_sha256": "6bababee8e70da2460b2bbf47d3b5fbb20ccf73368782a7be596a63c962dce6d",
+    "original_trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v9_gpu3_attempt02/slot0000018_candidate_attempt02_v9",
+    "hardware_io": false,
+    "new_physics_episodes": 0,
+    "initialization_state": "exact_recorded_event_qpos_and_bottle_pose",
+    "event_step": 0,
+    "constructor_source_sha256": "e5d13b16ef6aff9ad9624978e9c269a1bd4b86b4c526542bb03acaa9c139f490",
+    "changed_initialization_values": 2,
+    "constructor_ast_sha256": "048876efba087befad4cb13f8bf370a3084b461aab862433b62b6559530d6a2f"
+  },
+  "new_physics_steps": 0,
+  "render_systems_created": 0,
+  "post_initialization_physical_state_writes": 0,
+  "physical_state_unchanged": true,
+  "auxiliary_q_base_group_restored": true,
+  "full_q_dof": 36,
+  "native_FK_checked_link_count": 93,
+  "native_collision_link_count": 93,
+  "native_collision_shape_count": 93,
+  "native_bottle_shape_count": 3,
+  "native_table_shape_count": 5,
+  "original_allowed_self_pairs": 448,
+  "both_arm_results": [
+    {
+      "side": "left",
+      "actual_selected_joint_names": [
+        "l_joint1",
+        "l_joint2",
+        "l_joint3",
+        "l_joint4",
+        "l_joint5",
+        "l_joint6"
+      ],
+      "declaration": {
+        "original_full_IK_qpos_rad": [
+          1.527219533920288,
+          -1.4338856935501099,
+          0.7739813923835754,
+          -0.17370343208312988,
+          0.9518482089042664,
+          -1.2848105430603027,
+          -1.2746937274932861,
+          0.7786586284637451,
+          0.5696111917495728,
+          -0.5827611684799194,
+          -1.9358569383621216,
+          0.7,
+          1.1641000509262085,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.1640998125076294,
+          3.212074443581514e-05,
+          4.212417479720898e-06,
+          -5.428552185549052e-07,
+          -1.59263436216861e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.4334361253531824e-07,
+          3.0341876481543295e-05,
+          4.594951690251037e-07,
+          1.481161348237947e-06,
+          6.549267368427536e-07,
+          0.0,
+          5.02518219036574e-07,
+          0.0,
+          -9.131105827009378e-08
+        ],
+        "commanded_indices": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11
+        ],
+        "commanded_native_limits_rad": [
+          [
+            -3.109999895095825,
+            3.109999895095825
+          ],
+          [
+            -2.2699999809265137,
+            2.2699999809265137
+          ],
+          [
+            -2.359999895095825,
+            2.359999895095825
+          ],
+          [
+            -3.109999895095825,
+            3.109999895095825
+          ],
+          [
+            -2.2300000190734863,
+            2.2300000190734863
+          ],
+          [
+            -6.28000020980835,
+            6.28000020980835
+          ]
+        ],
+        "commanded_native_URDF_types": [
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute"
+        ],
+        "finite_integer_goal_count": 2,
+        "declared_native_FK_equivalent_goal_count": 2,
+        "native_FK_link_count": 93,
+        "goal_attempts": [
+          {
+            "integer_turns": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ],
+            "arm_qpos_rad": [
+              -1.4338856935501099,
+              -0.17370343208312988,
+              -1.2848105430603027,
+              0.7786586284637451,
+              -0.5827611684799194,
+              -5.583185307179586
+            ],
+            "inside_exact_native_commanded_limits": true,
+            "native_FK_checked_links": 93,
+            "native_FK_max_matrix_error": 9.992007221626409e-16,
+            "native_FK_max_position_error_m": 1.1443916996305594e-16,
+            "native_FK_matrix_tolerance": 1e-08,
+            "native_FK_equivalent": true
+          },
+          {
+            "integer_turns": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "arm_qpos_rad": [
+              -1.4338856935501099,
+              -0.17370343208312988,
+              -1.2848105430603027,
+              0.7786586284637451,
+              -0.5827611684799194,
+              0.7
+            ],
+            "inside_exact_native_commanded_limits": true,
+            "native_FK_checked_links": 93,
+            "native_FK_max_matrix_error": 0.0,
+            "native_FK_max_position_error_m": 0.0,
+            "native_FK_matrix_tolerance": 1e-08,
+            "native_FK_equivalent": true
+          }
+        ],
+        "frozen_joints_bitwise_unchanged": true,
+        "returned_RRT_path_is_never_wrapped_or_clipped": true
+      },
+      "complete_native_world_checks": [
+        {
+          "declared_goal_index": 0,
+          "full_qpos_rad": [
+            1.527219533920288,
+            -1.4338856935501099,
+            0.7739813923835754,
+            -0.17370343208312988,
+            0.9518482089042664,
+            -1.2848105430603027,
+            -1.2746937274932861,
+            0.7786586284637451,
+            0.5696111917495728,
+            -0.5827611684799194,
+            -1.9358569383621216,
+            -5.583185307179586,
+            1.1641000509262085,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.1640998125076294,
+            3.212074443581514e-05,
+            4.212417479720898e-06,
+            -5.428552185549052e-07,
+            -1.59263436216861e-07,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.4334361253531824e-07,
+            3.0341876481543295e-05,
+            4.594951690251037e-07,
+            1.481161348237947e-06,
+            6.549267368427536e-07,
+            0.0,
+            5.02518219036574e-07,
+            0.0,
+            -9.131105827009378e-08
+          ],
+          "native_collision_count": 0
+        },
+        {
+          "declared_goal_index": 1,
+          "full_qpos_rad": [
+            1.527219533920288,
+            -1.4338856935501099,
+            0.7739813923835754,
+            -0.17370343208312988,
+            0.9518482089042664,
+            -1.2848105430603027,
+            -1.2746937274932861,
+            0.7786586284637451,
+            0.5696111917495728,
+            -0.5827611684799194,
+            -1.9358569383621216,
+            0.7,
+            1.1641000509262085,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.1640998125076294,
+            3.212074443581514e-05,
+            4.212417479720898e-06,
+            -5.428552185549052e-07,
+            -1.59263436216861e-07,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.4334361253531824e-07,
+            3.0341876481543295e-05,
+            4.594951690251037e-07,
+            1.481161348237947e-06,
+            6.549267368427536e-07,
+            0.0,
+            5.02518219036574e-07,
+            0.0,
+            -9.131105827009378e-08
+          ],
+          "native_collision_count": 0
+        }
+      ],
+      "all_link_FK_and_collision_count_equivalence_passed": true
+    },
+    {
+      "side": "right",
+      "actual_selected_joint_names": [
+        "r_joint1",
+        "r_joint2",
+        "r_joint3",
+        "r_joint4",
+        "r_joint5",
+        "r_joint6"
+      ],
+      "declaration": {
+        "original_full_IK_qpos_rad": [
+          1.527219533920288,
+          -1.4338856935501099,
+          0.7739813923835754,
+          -0.17370343208312988,
+          0.9518482089042664,
+          -1.2848105430603027,
+          -1.2746937274932861,
+          0.7786586284637451,
+          0.5696111917495728,
+          -0.5827611684799194,
+          0.7,
+          0.9314025640487671,
+          1.1641000509262085,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.1640998125076294,
+          3.212074443581514e-05,
+          4.212417479720898e-06,
+          -5.428552185549052e-07,
+          -1.59263436216861e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.4334361253531824e-07,
+          3.0341876481543295e-05,
+          4.594951690251037e-07,
+          1.481161348237947e-06,
+          6.549267368427536e-07,
+          0.0,
+          5.02518219036574e-07,
+          0.0,
+          -9.131105827009378e-08
+        ],
+        "commanded_indices": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10
+        ],
+        "commanded_native_limits_rad": [
+          [
+            -3.109999895095825,
+            3.109999895095825
+          ],
+          [
+            -2.2699999809265137,
+            2.2699999809265137
+          ],
+          [
+            -2.359999895095825,
+            2.359999895095825
+          ],
+          [
+            -3.109999895095825,
+            3.109999895095825
+          ],
+          [
+            -2.2300000190734863,
+            2.2300000190734863
+          ],
+          [
+            -6.28000020980835,
+            6.28000020980835
+          ]
+        ],
+        "commanded_native_URDF_types": [
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute"
+        ],
+        "finite_integer_goal_count": 2,
+        "declared_native_FK_equivalent_goal_count": 2,
+        "native_FK_link_count": 93,
+        "goal_attempts": [
+          {
+            "integer_turns": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ],
+            "arm_qpos_rad": [
+              1.527219533920288,
+              0.7739813923835754,
+              0.9518482089042664,
+              -1.2746937274932861,
+              0.5696111917495728,
+              -5.583185307179586
+            ],
+            "inside_exact_native_commanded_limits": true,
+            "native_FK_checked_links": 93,
+            "native_FK_max_matrix_error": 8.881784197001252e-16,
+            "native_FK_max_position_error_m": 1.1188630228279524e-16,
+            "native_FK_matrix_tolerance": 1e-08,
+            "native_FK_equivalent": true
+          },
+          {
+            "integer_turns": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "arm_qpos_rad": [
+              1.527219533920288,
+              0.7739813923835754,
+              0.9518482089042664,
+              -1.2746937274932861,
+              0.5696111917495728,
+              0.7
+            ],
+            "inside_exact_native_commanded_limits": true,
+            "native_FK_checked_links": 93,
+            "native_FK_max_matrix_error": 0.0,
+            "native_FK_max_position_error_m": 0.0,
+            "native_FK_matrix_tolerance": 1e-08,
+            "native_FK_equivalent": true
+          }
+        ],
+        "frozen_joints_bitwise_unchanged": true,
+        "returned_RRT_path_is_never_wrapped_or_clipped": true
+      },
+      "complete_native_world_checks": [
+        {
+          "declared_goal_index": 0,
+          "full_qpos_rad": [
+            1.527219533920288,
+            -1.4338856935501099,
+            0.7739813923835754,
+            -0.17370343208312988,
+            0.9518482089042664,
+            -1.2848105430603027,
+            -1.2746937274932861,
+            0.7786586284637451,
+            0.5696111917495728,
+            -0.5827611684799194,
+            -5.583185307179586,
+            0.9314025640487671,
+            1.1641000509262085,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.1640998125076294,
+            3.212074443581514e-05,
+            4.212417479720898e-06,
+            -5.428552185549052e-07,
+            -1.59263436216861e-07,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.4334361253531824e-07,
+            3.0341876481543295e-05,
+            4.594951690251037e-07,
+            1.481161348237947e-06,
+            6.549267368427536e-07,
+            0.0,
+            5.02518219036574e-07,
+            0.0,
+            -9.131105827009378e-08
+          ],
+          "native_collision_count": 0
+        },
+        {
+          "declared_goal_index": 1,
+          "full_qpos_rad": [
+            1.527219533920288,
+            -1.4338856935501099,
+            0.7739813923835754,
+            -0.17370343208312988,
+            0.9518482089042664,
+            -1.2848105430603027,
+            -1.2746937274932861,
+            0.7786586284637451,
+            0.5696111917495728,
+            -0.5827611684799194,
+            0.7,
+            0.9314025640487671,
+            1.1641000509262085,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.1640998125076294,
+            3.212074443581514e-05,
+            4.212417479720898e-06,
+            -5.428552185549052e-07,
+            -1.59263436216861e-07,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.4334361253531824e-07,
+            3.0341876481543295e-05,
+            4.594951690251037e-07,
+            1.481161348237947e-06,
+            6.549267368427536e-07,
+            0.0,
+            5.02518219036574e-07,
+            0.0,
+            -9.131105827009378e-08
+          ],
+          "native_collision_count": 0
+        }
+      ],
+      "all_link_FK_and_collision_count_equivalence_passed": true
+    }
+  ],
+  "raw_path_postprocessing_performed": false,
+  "elapsed_s": 0.04341587005183101
+}

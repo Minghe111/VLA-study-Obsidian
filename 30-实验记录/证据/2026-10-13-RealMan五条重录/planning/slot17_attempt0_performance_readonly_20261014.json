@@ -1,0 +1,140 @@
+{
+  "observed_at": "2026-10-14T11:25:09.861775+08:00",
+  "scope": "Read-only live source/artifact inspection, no active worker changes or additional physical/GPU execution",
+  "first_free_approach_status": "Success",
+  "endpoint_IK_attempt_count": 24,
+  "native_free_goal_family_count": 7,
+  "RRT_and_mesh_rows": [
+    {
+      "branch": 0,
+      "RRT_elapsed_s": 23.44370746612549,
+      "status": "Exact solution",
+      "rejection_reason": "Original numeric raw start/end predicate against explicit legal goals",
+      "numeric_endpoint_match_passed": false,
+      "numeric_endpoint_error_rad": 6.28318530718,
+      "retimed_rows": null
+    },
+    {
+      "branch": 1,
+      "RRT_elapsed_s": 45.37016320228577,
+      "status": "Exact solution",
+      "rejection_reason": null,
+      "numeric_endpoint_match_passed": true,
+      "numeric_endpoint_error_rad": 0.0,
+      "retimed_rows": 1197,
+      "original_complete_default_grid_audit": {
+        "passed": false,
+        "audited_samples": 4920,
+        "elapsed_s": 24.001509263000116,
+        "unique_collision_pairs": 0,
+        "max_vertex_displacement_bound_m": 0.0009997789596268636,
+        "vector_broadphase": {
+          "samples": 4920,
+          "original_pair_visits": 18843600,
+          "original_skip_proved_in_bulk": 18505743,
+          "scalar_pair_candidates": 337857,
+          "broadphase_elapsed_s": 1.0354080969991628
+        }
+      },
+      "refined_complete_native_audit": {
+        "passed": true,
+        "audited_samples": 49165,
+        "elapsed_s": 236.35914037800012,
+        "unique_collision_pairs": 0,
+        "max_vertex_displacement_bound_m": 9.999917885268237e-05,
+        "vector_broadphase": {
+          "samples": 49165,
+          "original_pair_visits": 188301950,
+          "original_skip_proved_in_bulk": 184965418,
+          "scalar_pair_candidates": 3336532,
+          "broadphase_elapsed_s": 10.36166601196419
+        }
+      },
+      "motion_quality_retimed": {
+        "passed": true,
+        "metrics": {
+          "start_max_error_rad": 0.0,
+          "selected_goal_max_error_rad": 0.0,
+          "each_joint_span_rad": [
+            0.8348836514402637,
+            1.570090684421434,
+            2.688377002876262,
+            1.9213033223172016,
+            0.38675202671714093,
+            1.0726205661042327
+          ],
+          "each_joint_total_variation_rad": [
+            0.8348836514402637,
+            1.5715810926750864,
+            2.68837700287627,
+            1.9213033223172047,
+            0.38905282716024603,
+            1.0728932005355856
+          ],
+          "each_joint_net_delta_rad": [
+            0.8348836514402637,
+            -1.5686002761677817,
+            2.688377002876262,
+            -1.9213033223172016,
+            -0.38445122627403583,
+            1.07234793167288
+          ],
+          "joint_path_L2_length_rad": 3.974852299680999,
+          "joint_endpoint_L2_distance_rad": 3.9209753551538236,
+          "joint_detour_ratio": 1.013740699608417,
+          "max_sparse_or_dense_step_rad": 0.004010246722842226,
+          "trajectory_rows": 1197,
+          "max_command_hardware_limit_excess_rad": 0.0,
+          "max_step_to_original_velocity_dt_budget_ratio": 0.9805003747754155,
+          "max_finite_difference_command_velocity_rad_s": 1.002561633091434,
+          "EE_path_length_m": 0.3476612730152783,
+          "EE_endpoint_distance_m": 0.17004037139788034,
+          "EE_detour_ratio": 2.0445807672448555,
+          "EE_max_distance_from_start_m": 0.19052670521292892
+        }
+      }
+    }
+  ],
+  "second_screw": {
+    "passed": false,
+    "elapsed_s": 3.089916816999903,
+    "audited_samples": 740,
+    "unique_collision_pairs": 2,
+    "collisions_first_64": [
+      {
+        "sample_index": 399,
+        "path_index": 155,
+        "interval_fraction": 0.25,
+        "link": "body_base_link",
+        "other": "l_link2",
+        "category": "self"
+      },
+      {
+        "sample_index": 602,
+        "path_index": 215,
+        "interval_fraction": 0.3333333333333333,
+        "link": "body_base_link",
+        "other": "l_link3",
+        "category": "self"
+      }
+    ]
+  },
+  "observations": [
+    "Complete dense geometry audit accounted for 236.36 seconds; default geometry audit 24.00 seconds; two RRT calls total 68.81 seconds.",
+    "No evidence that supplemental IK metadata/FK or path-quality composition is the dominant initial multi-minute cost.",
+    "First native OMPL result was a 2pi-far numeric endpoint despite a singleton near target and was correctly rejected before TOPP/geometry/physical execution.",
+    "The official screw path in the second approach was rejected for two body-arm self-collision pairs; original fallback remains required."
+  ],
+  "recommended_next_worker_instrumentation": [
+    "Monotonic begin/end events for auditor construction, each IK attempt, endpoint world collision, each RRT call, TOPP, raw/dense quality FK, coarse full geometry, dense refinement.",
+    "Inside actual geometry loop emit sample count and unchanged pair statistics every 5000 audited samples without changing sample enumeration or bounds.",
+    "Flush passive event records and include original source/derived AST SHA; logging is not a success criterion."
+  ],
+  "source_artifact_sha256": {
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261013_v1/new_physical_episodes/slot_0000017_randomized_attempt_000/free_approach_0.json": "86fa6a4114ac78dbf5a7ab3b443b8f9f129983cd67d15d2ca0bb4347381b88a9",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261013_v1/new_physical_episodes/slot_0000017_randomized_attempt_000/mesh_path_0.json": "7321e815dcfd27dbb37da9fd69cdc8179555895bd446b110c1bb886e04c10801",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261013_v1/new_physical_episodes/slot_0000017_randomized_attempt_000/mesh_path_1_screw.json": "2e47925ed31277e22b96cdcae7231f7dc457e5241c480ea4e1d8fc33e0a8c685"
+  },
+  "worker_or_code_modified": false,
+  "physical_success_not_inferred": true
+}

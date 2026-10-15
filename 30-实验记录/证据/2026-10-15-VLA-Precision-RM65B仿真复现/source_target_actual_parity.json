@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "scope": "one real simulator observation, same explicit noise, sequential native full-SFT GPU inference",
+  "source_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "target_commit": "2d70d966582e711128ad8358d8dbf23d2cc3d658",
+  "source_output": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/source_sft_sample_v1",
+  "target_output": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/target_sft_sample_v1",
+  "rows": {
+    "sample.npz:normalized_actions": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [
+        16,
+        32
+      ],
+      "dtype": "float32"
+    },
+    "sample.npz:sdk24_actions": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [
+        16,
+        24
+      ],
+      "dtype": "float32"
+    },
+    "sample.npz:normalized_state": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [
+        32
+      ],
+      "dtype": "float32"
+    },
+    "sample.npz:noise": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [
+        16,
+        32
+      ],
+      "dtype": "float32"
+    },
+    "preprocessed.npz:state": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [
+        32
+      ],
+      "dtype": "float64"
+    },
+    "preprocessed.npz:tokenized_prompt": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [
+        200
+      ],
+      "dtype": "int64"
+    },
+    "preprocessed.npz:tokenized_prompt_mask": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [
+        200
+      ],
+      "dtype": "bool"
+    },
+    "preprocessed.npz:base_0_rgb": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [
+        224,
+        224,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "preprocessed.npz:base_0_rgb_mask": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [],
+      "dtype": "bool"
+    },
+    "preprocessed.npz:left_wrist_0_rgb": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [
+        224,
+        224,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "preprocessed.npz:left_wrist_0_rgb_mask": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [],
+      "dtype": "bool"
+    },
+    "preprocessed.npz:right_wrist_0_rgb": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [
+        224,
+        224,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "preprocessed.npz:right_wrist_0_rgb_mask": {
+      "equal": true,
+      "max_abs_error": 0.0,
+      "shape": [],
+      "dtype": "bool"
+    }
+  },
+  "general_policy_equivalence_established": false
+}

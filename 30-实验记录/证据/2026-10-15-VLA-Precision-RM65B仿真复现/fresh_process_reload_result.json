@@ -1,0 +1,40 @@
+{
+  "label": "rm65b_acob_no_correction_mechanism_probe",
+  "contract": {
+    "physical_schema": "realman_sdk24",
+    "action_dim": 24,
+    "model_action_dim": 32,
+    "model_horizon": 16,
+    "execute_horizon": 1,
+    "ode_steps": 10,
+    "control_seconds": 0.06,
+    "physics_ticks_per_control": 15,
+    "image_keys": [
+      "base_0_rgb",
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "correction_pairs": false
+  },
+  "episodes": [
+    {
+      "seed": 2010,
+      "completed": false,
+      "success": false,
+      "return": 0.0,
+      "control_steps": 8,
+      "collection_budget_ended_before_environment": true
+    }
+  ],
+  "policy_implementation": "ACoB cached sampler; zero-LoRA at initialization is a bounded approximation to the native non-LoRA SFT graph",
+  "source_sft": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000",
+  "instruction": "Pick up the bottle and adjust it to an upright position.",
+  "reward_protocol": "native environment rewards unchanged; finite environment timeout masks bootstrap",
+  "completed_episodes": 0,
+  "accepted_transitions": 0,
+  "nonzero_reward_steps": 0,
+  "positive_reward_steps": 0,
+  "correction_pairs": 0,
+  "partial_rollout_is_not_success_rate_evaluation": true,
+  "transition_files": []
+}

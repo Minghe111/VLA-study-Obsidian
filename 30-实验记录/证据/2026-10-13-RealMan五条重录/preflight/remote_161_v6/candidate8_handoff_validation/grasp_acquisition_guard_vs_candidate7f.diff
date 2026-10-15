@@ -1,0 +1,124 @@
+--- /home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/preflight/remote_161_v6/server_bundle_20261014_v6_hybrid_candidate7f/payload/evidence/planning/grasp_acquisition_guard.py
++++ /home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/planning/grasp_acquisition_guard.py
+@@ -114,6 +114,49 @@
+         return np.asarray([self.robot._hand_joints[n].get_drive_velocity_target()[0]
+                            for n in self.mapping.channels], dtype=float)
+ 
++    def _drive_readback(self):
++        names = tuple(self.mapping.limits)
++        targets = np.asarray([self.robot._hand_joints[n].get_drive_target()[0]
++                              for n in names], dtype=float)
++        velocities = np.asarray([self.robot._hand_joints[n].get_drive_velocity_target()[0]
++                                 for n in names], dtype=float)
++        if not np.isfinite(targets).all() or not np.isfinite(velocities).all():
++            raise RuntimeError("Nonfinite actual hand drive readback")
++        return names, targets, velocities
++
++    def _feedback_drive_handoff_ready(self):
++        if self.last_update is None:
++            return False
++        names, targets, velocities = self._drive_readback()
++        return bool(list(names) == self.last_update["feedback_drive_joint_names"] and
++                    np.array_equal(targets, self.last_update["original_feedback_drive_target_readback_rad"]) and
++                    np.array_equal(velocities, self.last_update["original_feedback_drive_velocity_readback_rad_s"]))
++
++    def _original_command_witness(self, names, readback_q, readback_velocity):
++        # At completed closure the original profile is at its nominal endpoint;
++        # contacted channels use the original controller's double latched_q.
++        # Reconstruct that existing command only to validate its exact coupling.
++        # Any profile/recapture mismatch fails the all-joint readback identity.
++        primary = dict(zip(self.mapping.channels, self.nominal_q))
++        feedback = self.session.feedback
++        for i, name in enumerate(self.mapping.channels[:5]):
++            if feedback["latched"][i]:
++                primary[name] = float(feedback["latched_q"][i])
++        targets = self.h.coupled(primary)
++        observed_velocity = dict(zip(names, readback_velocity))
++        velocities = {n: observed_velocity[n] for n in self.mapping.channels}
++        for n, parent, multiplier, _ in self.mapping.mimic_order:
++            velocities[n] = multiplier * velocities[parent]
++        self.mapping.validate(targets, velocities)
++        if not (np.array_equal(np.asarray([targets[n] for n in names], dtype=np.float32).astype(float), readback_q)
++                and np.array_equal(np.asarray([velocities[n] for n in names], dtype=np.float32).astype(float), readback_velocity)):
++            return None
++        rates = feedback["feedback_applied_primary_target_rate_rad_s"]
++        if any(abs(float(rates[n])) > self.rate_caps[i] + 1e-10
++               for i, n in enumerate(self.mapping.channels)):
++            raise RuntimeError("Original feedback target slew exceeds acquisition rate budget")
++        return targets, velocities
++
+     def _validate_drive_readback(self, targets, velocities, raw_q):
+         # SAPIEN returns float32 drive targets. The exact nominal upper limit
+         # can round one representable value above its decimal URDF bound.
+@@ -171,10 +214,13 @@
+         paired = actual_opposing_pair(actual)
+         measured = self.robot._measured_positions()
+         previous_latches = copy.deepcopy(feedback["latched_q"])
++        _, previous_drive_targets, _ = self._drive_readback()
+         # Original updates real impulses, filter, latch booleans, pair counters,
+         # force feedback and LP. No acquisition code writes those fields.
+         result = self.original_update()
+         raw_q, raw_velocity = self._targets(), self._velocities()
++        drive_names, feedback_targets, feedback_velocities = self._drive_readback()
++        original_witness = self._original_command_witness(drive_names, feedback_targets, feedback_velocities)
+         if paired:
+             self.pair_seen = True
+             # A previous isolated touch can leave a stale captured position.
+@@ -234,6 +280,27 @@
+             joint.set_drive_target(float(value))
+             joint.set_drive_velocity_target(float(velocities[n]))
+         self.robot._hand_sdk_target[session.side] = self.h.to_sdk(targets)
++        _, applied_targets, applied_velocities = self._drive_readback()
++        primary_indices = [drive_names.index(n) for n in self.mapping.channels]
++        retained_original_followers = []
++        if (original_witness is not None and
++                np.array_equal(applied_targets[primary_indices], feedback_targets[primary_indices]) and
++                np.array_equal(applied_velocities[primary_indices], feedback_velocities[primary_indices])):
++            # The six physical primary commands already equal the controller's.
++            # Preserve its just-written follower commands, avoiding a second
++            # mimic calculation from rounded primary readbacks. The witness has
++            # passed the original limit/mimic/velocity validator; the actual
++            # follower transition must also fit its original hardware rate.
++            original_targets, original_velocities = original_witness
++            for n, _, _, _ in self.mapping.mimic_order:
++                i = drive_names.index(n)
++                if abs(feedback_targets[i] - previous_drive_targets[i]) > self.mapping.limits[n]["velocity"] * self.dt:
++                    raise RuntimeError("Original follower handoff exceeds hardware target slew budget")
++                joint = self.robot._hand_joints[n]
++                joint.set_drive_target(float(original_targets[n]))
++                joint.set_drive_velocity_target(float(original_velocities[n]))
++                retained_original_followers.append(n)
++            _, applied_targets, applied_velocities = self._drive_readback()
+         self.last_update = {
+             "actual_grip_before_step": copy.deepcopy(actual),
+             "original_normal_N": np.asarray(feedback["normal_N"]).tolist(),
+@@ -250,6 +317,19 @@
+             "applied_primary_drive_velocity_rad_s": velocity.tolist(),
+             "maximum_feedback_handoff_target_gap_rad": float(np.max(abs(raw_q - q))),
+             "maximum_feedback_handoff_drive_velocity_gap_rad_s": float(np.max(abs(raw_velocity - velocity))),
++            # Compare actual drive readbacks on both sides, including followers.
++            # SAPIEN quantizes a double target to float32; a nonzero arithmetic
++            # gap can represent the exact same physical drive command. No
++            # tolerance or adjacent-representable-value exception is allowed.
++            "feedback_drive_joint_names": list(drive_names),
++            "original_feedback_drive_target_readback_rad": feedback_targets.tolist(),
++            "original_feedback_drive_velocity_readback_rad_s": feedback_velocities.tolist(),
++            "applied_drive_target_readback_rad": applied_targets.tolist(),
++            "applied_drive_velocity_readback_rad_s": applied_velocities.tolist(),
++            "feedback_drive_target_readbacks_exactly_equal": bool(np.array_equal(feedback_targets, applied_targets)),
++            "feedback_drive_velocity_readbacks_exactly_equal": bool(np.array_equal(feedback_velocities, applied_velocities)),
++            "original_follower_drive_commands_retained": retained_original_followers,
++            "original_continuous_command_witness_validated": original_witness is not None,
+         }
+         self.last_q, self.last_velocity = q, velocity
+         return result
+@@ -263,8 +343,7 @@
+                     actual_opposing_pair(self.session.grip()) and
+                     latest is not None and latest["allocation"]["usable"] and
+                     int(feedback["lp_failure_steps"]) == 0 and
+-                    self.last_update["maximum_feedback_handoff_target_gap_rad"] <= 1e-10 and
+-                    self.last_update["maximum_feedback_handoff_drive_velocity_gap_rad_s"] <= 1e-10)
++                    self._feedback_drive_handoff_ready())
+ 
+     def before_carry(self, trigger):
+         session = self.session

@@ -1,0 +1,762 @@
+{
+  "verified_local_execution": true,
+  "hardware": {
+    "verified_utc": "2026-10-13T08:50:39.659063+00:00",
+    "host": "admin123-System-Product-Name",
+    "os": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "cpu_model": "Intel(R) Core(TM) i7-14700KF",
+    "logical_cpus": 28,
+    "ram_total_bytes": 33387954176,
+    "swap_total_bytes": 8589930496,
+    "gpu_csv": "NVIDIA GeForce RTX 5090, GPU-ca2dd5de-58fa-1e27-0c50-6de5293c94ac, 32607 MiB, 595.99.02",
+    "gpu_csv_fields": [
+      "name",
+      "uuid",
+      "memory.total_MiB",
+      "driver_version"
+    ],
+    "scope": "Current local Linux host, not Windows or remote 161/166; read-only inventory."
+  },
+  "contracts": {
+    "physical_action_dim": 24,
+    "native_rgb_cameras": 3,
+    "normal_physics_ticks_per_target": 15,
+    "physics_dt_s": 0.004,
+    "control_period_s": 0.06,
+    "H": 16,
+    "K": 1,
+    "sampling_steps": 10,
+    "success": "native"
+  },
+  "actual_optimizer_updates": 4,
+  "optimizer_updates": [
+    {
+      "global_step": 0,
+      "grad_norm": 858.805908203125,
+      "grad_norm_finite": true,
+      "group_changed": {
+        "action_expert": true,
+        "action_heads": true,
+        "value_head": true
+      },
+      "frozen_matches_initial": true,
+      "optimizer": {
+        "finite": true,
+        "nonfinite_states": [],
+        "state_entries": 198,
+        "state_tensors": 594,
+        "step_histogram": {
+          "1.0": 198
+        }
+      },
+      "key_sample_deltas": {
+        "action_in_proj.weight": {
+          "changed_sample_elements": 32768,
+          "max_abs_sample_delta": 5.066394805908203e-06,
+          "sample_elements": 32768
+        },
+        "action_out_proj.weight": {
+          "changed_sample_elements": 30698,
+          "max_abs_sample_delta": 5.02169132232666e-06,
+          "sample_elements": 32768
+        },
+        "llm.layers.0.attn.q_proj.1.weight": {
+          "changed_sample_elements": 380,
+          "max_abs_sample_delta": 7.62939453125e-06,
+          "sample_elements": 65536
+        },
+        "llm.layers.0.mlps.1.w_gating": {
+          "changed_sample_elements": 2408,
+          "max_abs_sample_delta": 7.62939453125e-06,
+          "sample_elements": 65536
+        },
+        "value_head.mlp.0.weight": {
+          "changed_sample_elements": 65536,
+          "max_abs_sample_delta": 0.0001001507043838501,
+          "sample_elements": 65536
+        }
+      }
+    },
+    {
+      "global_step": 1,
+      "grad_norm": 1009.14794921875,
+      "grad_norm_finite": true,
+      "group_changed": {
+        "action_expert": true,
+        "action_heads": true,
+        "value_head": true
+      },
+      "frozen_matches_initial": true,
+      "optimizer": {
+        "finite": true,
+        "nonfinite_states": [],
+        "state_entries": 198,
+        "state_tensors": 594,
+        "step_histogram": {
+          "2.0": 198
+        }
+      },
+      "key_sample_deltas": {
+        "action_in_proj.weight": {
+          "changed_sample_elements": 32726,
+          "max_abs_sample_delta": 5.066394805908203e-06,
+          "sample_elements": 32768
+        },
+        "action_out_proj.weight": {
+          "changed_sample_elements": 30696,
+          "max_abs_sample_delta": 5.0067901611328125e-06,
+          "sample_elements": 32768
+        },
+        "llm.layers.0.attn.q_proj.1.weight": {
+          "changed_sample_elements": 323,
+          "max_abs_sample_delta": 7.62939453125e-06,
+          "sample_elements": 65536
+        },
+        "llm.layers.0.mlps.1.w_gating": {
+          "changed_sample_elements": 1604,
+          "max_abs_sample_delta": 7.62939453125e-06,
+          "sample_elements": 65536
+        },
+        "value_head.mlp.0.weight": {
+          "changed_sample_elements": 65536,
+          "max_abs_sample_delta": 9.959936141967773e-05,
+          "sample_elements": 65536
+        }
+      }
+    },
+    {
+      "global_step": 2,
+      "grad_norm": 726.2392578125,
+      "grad_norm_finite": true,
+      "group_changed": {
+        "action_expert": true,
+        "action_heads": true,
+        "value_head": true
+      },
+      "frozen_matches_initial": true,
+      "optimizer": {
+        "finite": true,
+        "nonfinite_states": [],
+        "state_entries": 198,
+        "state_tensors": 594,
+        "step_histogram": {
+          "3.0": 198
+        }
+      },
+      "key_sample_deltas": {
+        "action_in_proj.weight": {
+          "changed_sample_elements": 32711,
+          "max_abs_sample_delta": 5.066394805908203e-06,
+          "sample_elements": 32768
+        },
+        "action_out_proj.weight": {
+          "changed_sample_elements": 30690,
+          "max_abs_sample_delta": 5.004112608730793e-06,
+          "sample_elements": 32768
+        },
+        "llm.layers.0.attn.q_proj.1.weight": {
+          "changed_sample_elements": 309,
+          "max_abs_sample_delta": 7.62939453125e-06,
+          "sample_elements": 65536
+        },
+        "llm.layers.0.mlps.1.w_gating": {
+          "changed_sample_elements": 1225,
+          "max_abs_sample_delta": 7.62939453125e-06,
+          "sample_elements": 65536
+        },
+        "value_head.mlp.0.weight": {
+          "changed_sample_elements": 65535,
+          "max_abs_sample_delta": 9.888410568237305e-05,
+          "sample_elements": 65536
+        }
+      }
+    },
+    {
+      "global_step": 3,
+      "grad_norm": 5.289376258850098,
+      "grad_norm_finite": true,
+      "group_changed": {
+        "action_expert": true,
+        "action_heads": true,
+        "value_head": true
+      },
+      "frozen_matches_initial": true,
+      "optimizer": {
+        "finite": true,
+        "nonfinite_states": [],
+        "state_entries": 198,
+        "state_tensors": 594,
+        "step_histogram": {
+          "4.0": 198
+        }
+      },
+      "key_sample_deltas": {
+        "action_in_proj.weight": {
+          "changed_sample_elements": 32707,
+          "max_abs_sample_delta": 5.066394805908203e-06,
+          "sample_elements": 32768
+        },
+        "action_out_proj.weight": {
+          "changed_sample_elements": 30696,
+          "max_abs_sample_delta": 4.999339580535889e-06,
+          "sample_elements": 32768
+        },
+        "llm.layers.0.attn.q_proj.1.weight": {
+          "changed_sample_elements": 628,
+          "max_abs_sample_delta": 7.62939453125e-06,
+          "sample_elements": 65536
+        },
+        "llm.layers.0.mlps.1.w_gating": {
+          "changed_sample_elements": 1129,
+          "max_abs_sample_delta": 7.62939453125e-06,
+          "sample_elements": 65536
+        },
+        "value_head.mlp.0.weight": {
+          "changed_sample_elements": 65536,
+          "max_abs_sample_delta": 9.667128324508667e-05,
+          "sample_elements": 65536
+        }
+      }
+    }
+  ],
+  "full_frozen_vlm_hash_unchanged": true,
+  "frozen_vlm_sha256": "d854a206927aea67509025dcd1ac01706bb80ebff215f20861cd13b9236247c8",
+  "resume": [
+    {
+      "run": "minppo_resume1_to3_v3",
+      "full_group_hashes_equal": true,
+      "optimizer_histogram": {
+        "1.0": 198
+      },
+      "optimizer_histogram_matches_saved": true
+    },
+    {
+      "run": "reward_window400_resume3_v4",
+      "full_group_hashes_equal": true,
+      "optimizer_histogram": {
+        "3.0": 198
+      },
+      "optimizer_histogram_matches_saved": true
+    }
+  ],
+  "sync": [
+    {
+      "run": "minppo_2steps_v2",
+      "version": 0,
+      "sample_key_count": 6,
+      "sample_key_hashes_equal": true,
+      "subsequent_collection_same_version": true
+    },
+    {
+      "run": "minppo_resume1_to3_v3",
+      "version": 1,
+      "sample_key_count": 6,
+      "sample_key_hashes_equal": true,
+      "subsequent_collection_same_version": true
+    },
+    {
+      "run": "minppo_resume1_to3_v3",
+      "version": 2,
+      "sample_key_count": 6,
+      "sample_key_hashes_equal": true,
+      "subsequent_collection_same_version": true
+    },
+    {
+      "run": "reward_window400_resume3_v4",
+      "version": 3,
+      "sample_key_count": 6,
+      "sample_key_hashes_equal": true,
+      "subsequent_collection_same_version": true
+    }
+  ],
+  "sync_validation_scope": "Six sampled parameter tensors plus applied version and subsequent collection; no full-model transport hash proof.",
+  "environment_interaction": [
+    {
+      "run": "minppo_2steps_v2",
+      "chunks": 16,
+      "reward_sum": 0.0,
+      "nonzero_reward_count": 0,
+      "positive_reward_count": 0,
+      "negative_reward_count": 0,
+      "termination_count": 0,
+      "truncation_count": 0
+    },
+    {
+      "run": "minppo_resume1_to3_v3",
+      "chunks": 32,
+      "reward_sum": 0.0,
+      "nonzero_reward_count": 0,
+      "positive_reward_count": 0,
+      "negative_reward_count": 0,
+      "termination_count": 0,
+      "truncation_count": 0
+    },
+    {
+      "run": "reward_window400_resume3_v4",
+      "chunks": 400,
+      "reward_sum": 0.0,
+      "nonzero_reward_count": 0,
+      "positive_reward_count": 0,
+      "negative_reward_count": 0,
+      "termination_count": 0,
+      "truncation_count": 1
+    }
+  ],
+  "paired_evaluation": {
+    "sft": {
+      "status": "complete",
+      "exit_code": 0,
+      "success": false,
+      "terminated": false,
+      "truncated": true,
+      "return_sum": 0.0,
+      "query_count": 400,
+      "executed_target_count": 400,
+      "environment_closed": true,
+      "vendor_urdf_unchanged": true,
+      "physics_ticks": [
+        6000
+      ],
+      "sim_time_s": [
+        24.0
+      ],
+      "median_query_wall_s": 0.14692934999766294,
+      "p95_query_wall_s": 0.15185862429934788
+    },
+    "ppo_step3": {
+      "status": "complete",
+      "exit_code": 0,
+      "success": false,
+      "terminated": false,
+      "truncated": true,
+      "return_sum": 0.0,
+      "query_count": 400,
+      "executed_target_count": 400,
+      "environment_closed": true,
+      "vendor_urdf_unchanged": true,
+      "physics_ticks": [
+        6000
+      ],
+      "sim_time_s": [
+        24.0
+      ],
+      "median_query_wall_s": 0.14525518200025545,
+      "p95_query_wall_s": 0.14989440030039985
+    },
+    "initial": {
+      "scene_spec_equal": true,
+      "reset_id_equal": true,
+      "norm_sha_equal": true,
+      "protocol_equal": true,
+      "arrays_exact": {
+        "main_images": true,
+        "wrist_images": true,
+        "states": true
+      }
+    },
+    "noise_arrays_exact_count": 400,
+    "first_target_max_absolute_delta_sdk24_mixed_units": 0.4124755859375
+  },
+  "resource_runs": {
+    "convert_fp32": {
+      "command": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "-B",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/scripts/convert_openpi_lowmem.py",
+        "--input-model",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000",
+        "--input-norm-stats",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000/assets/realman_rgb50_full50/norm_stats.json",
+        "--output-model",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi",
+        "--dtype",
+        "fp32"
+      ],
+      "cwd": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/code/RLinf",
+      "exit_code": 0,
+      "memory_guard_stopped": false,
+      "wall_time_s": 25.28194260597229,
+      "peak_process_tree_rss_bytes": 16694185984,
+      "minimum_available_bytes": 6470385664,
+      "peak_whole_gpu_used_bytes": 1440940032,
+      "rss_note": "Process RSS sum can double-count shared pages; whole GPU includes desktop and renderer allocations."
+    },
+    "sft_baseline_400": {
+      "command": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/scripts/realman_sft_single_scene.py",
+        "--model-path",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi",
+        "--norm-stats",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi/realman_rgb50_full50/norm_stats.json",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/reports/sft_baseline_400/episode",
+        "--budget",
+        "400"
+      ],
+      "cwd": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/code/RoboTwin",
+      "exit_code": 0,
+      "memory_guard_stopped": false,
+      "wall_time_s": 216.19351029396057,
+      "peak_process_tree_rss_bytes": 34430537728,
+      "minimum_available_bytes": 10118258688,
+      "peak_whole_gpu_used_bytes": 12973703168,
+      "rss_note": "Process RSS sum can double-count shared pages; whole GPU includes desktop and renderer allocations."
+    },
+    "minppo_2steps_v2": {
+      "command": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/scripts/run_isolated_rlinf.py",
+        "--config-name",
+        "robotwin_realman_local_5090_minppo",
+        "runner.logger.log_path=/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/logs/minppo_2steps_v2"
+      ],
+      "cwd": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/code/RLinf",
+      "exit_code": 1,
+      "memory_guard_stopped": false,
+      "wall_time_s": 334.1421570777893,
+      "peak_process_tree_rss_bytes": 72145776640,
+      "minimum_available_bytes": 4234182656,
+      "peak_whole_gpu_used_bytes": 33917960192,
+      "rss_note": "Process RSS sum can double-count shared pages; whole GPU includes desktop and renderer allocations."
+    },
+    "minppo_resume1_to3_v3": {
+      "command": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/scripts/run_isolated_rlinf.py",
+        "--config-name",
+        "robotwin_realman_local_5090_minppo",
+        "runner.logger.log_path=/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/logs/minppo_resume1_to3_v3",
+        "runner.resume_dir=/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/logs/minppo_2steps_v2/robotwin_realman_local_5090_minppo/checkpoints/global_step_1",
+        "runner.max_epochs=3",
+        "runner.max_steps=3"
+      ],
+      "cwd": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/code/RLinf",
+      "exit_code": 0,
+      "memory_guard_stopped": false,
+      "wall_time_s": 154.36723256111145,
+      "peak_process_tree_rss_bytes": 30178516992,
+      "minimum_available_bytes": 5632008192,
+      "peak_whole_gpu_used_bytes": 31427461120,
+      "rss_note": "Process RSS sum can double-count shared pages; whole GPU includes desktop and renderer allocations."
+    },
+    "postppo_step3_eval400": {
+      "command": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/scripts/realman_sft_single_scene.py",
+        "--model-path",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/logs/minppo_resume1_to3_v3/robotwin_realman_local_5090_minppo/checkpoints/global_step_3",
+        "--norm-stats",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi/realman_rgb50_full50/norm_stats.json",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/reports/postppo_step3_eval400/episode",
+        "--budget",
+        "400"
+      ],
+      "cwd": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/code/RoboTwin",
+      "exit_code": 0,
+      "memory_guard_stopped": false,
+      "wall_time_s": 204.7494297027588,
+      "peak_process_tree_rss_bytes": 23572537344,
+      "minimum_available_bytes": 5437104128,
+      "peak_whole_gpu_used_bytes": 12980977664,
+      "rss_note": "Process RSS sum can double-count shared pages; whole GPU includes desktop and renderer allocations."
+    },
+    "reward_window400_resume3_v4": {
+      "command": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/scripts/run_isolated_rlinf.py",
+        "--config-name",
+        "robotwin_realman_local_5090_minppo",
+        "runner.logger.log_path=/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/logs/reward_window400_resume3_v4",
+        "runner.resume_dir=/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/logs/minppo_resume1_to3_v3/robotwin_realman_local_5090_minppo/checkpoints/global_step_3",
+        "runner.max_epochs=4",
+        "runner.max_steps=4",
+        "env.train.max_steps_per_rollout_epoch=400",
+        "actor.global_batch_size=400"
+      ],
+      "cwd": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/code/RLinf",
+      "exit_code": 0,
+      "memory_guard_stopped": false,
+      "wall_time_s": 413.8992850780487,
+      "peak_process_tree_rss_bytes": 29784248320,
+      "minimum_available_bytes": 3080757248,
+      "peak_whole_gpu_used_bytes": 31384928256,
+      "rss_note": "Process RSS sum can double-count shared pages; whole GPU includes desktop and renderer allocations."
+    }
+  },
+  "small_weight_value_audit": {
+    "audit": "read-only CPU TensorStore small-leaf exact value comparisons",
+    "timestamp_utc": "2026-10-13T08:33:15.785309+00:00",
+    "source_checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000",
+    "target_checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi/model.safetensors",
+    "source_manifest_sha256": "ac166323988b731184ae454d11689ad2e1675aaa48dc8cd8119b5895e050b095",
+    "conversion_receipt_sha256": "ed106560572ad110503d268f52f6b6e097b08ed29291fb2e98f7d608feca71fc",
+    "source_restore_whole_tree": false,
+    "gpu_used": false,
+    "source_chunk_limit_bytes": 16777216,
+    "tensorstore_cache_limit_bytes": 1048576,
+    "target_tensor_count": 667,
+    "target_total_numel": 3353433872,
+    "target_all_f32": true,
+    "norm_stats_sha256": "34cbdd09c831e04549d6c4a4e2eb321fb975bdea13bb816ec8aa3a2332d1ccc5",
+    "norm_stats_equal": true,
+    "checks": [
+      {
+        "source": "action_in_proj/kernel",
+        "target": "action_in_proj.weight",
+        "source_dtype": "float32",
+        "source_shape": [
+          32,
+          1024
+        ],
+        "target_shape": [
+          1024,
+          32
+        ],
+        "checked_numel": 32768,
+        "chunk_bytes": 32768,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "action_in_proj/bias",
+        "target": "action_in_proj.bias",
+        "source_dtype": "float32",
+        "source_shape": [
+          1024
+        ],
+        "target_shape": [
+          1024
+        ],
+        "checked_numel": 1024,
+        "chunk_bytes": 1024,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "action_out_proj/kernel",
+        "target": "action_out_proj.weight",
+        "source_dtype": "float32",
+        "source_shape": [
+          1024,
+          32
+        ],
+        "target_shape": [
+          32,
+          1024
+        ],
+        "checked_numel": 32768,
+        "chunk_bytes": 32768,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "action_out_proj/bias",
+        "target": "action_out_proj.bias",
+        "source_dtype": "float32",
+        "source_shape": [
+          32
+        ],
+        "target_shape": [
+          32
+        ],
+        "checked_numel": 32,
+        "chunk_bytes": 32,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "time_mlp_in/kernel",
+        "target": "time_mlp_in.weight",
+        "source_dtype": "float32",
+        "source_shape": [
+          1024,
+          1024
+        ],
+        "target_shape": [
+          1024,
+          1024
+        ],
+        "checked_numel": 1048576,
+        "chunk_bytes": 1048576,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "time_mlp_in/bias",
+        "target": "time_mlp_in.bias",
+        "source_dtype": "float32",
+        "source_shape": [
+          1024
+        ],
+        "target_shape": [
+          1024
+        ],
+        "checked_numel": 1024,
+        "chunk_bytes": 1024,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "time_mlp_out/kernel",
+        "target": "time_mlp_out.weight",
+        "source_dtype": "float32",
+        "source_shape": [
+          1024,
+          1024
+        ],
+        "target_shape": [
+          1024,
+          1024
+        ],
+        "checked_numel": 1048576,
+        "chunk_bytes": 1048576,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "time_mlp_out/bias",
+        "target": "time_mlp_out.bias",
+        "source_dtype": "float32",
+        "source_shape": [
+          1024
+        ],
+        "target_shape": [
+          1024
+        ],
+        "checked_numel": 1024,
+        "chunk_bytes": 1024,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "PaliGemma/img/embedding/kernel",
+        "target": "img.stem.weight",
+        "source_dtype": "float32",
+        "source_shape": [
+          14,
+          14,
+          3,
+          1152
+        ],
+        "target_shape": [
+          1152,
+          3,
+          14,
+          14
+        ],
+        "checked_numel": 677376,
+        "chunk_bytes": 677376,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "PaliGemma/img/pos_embedding",
+        "target": "img.pos_embedding",
+        "source_dtype": "float32",
+        "source_shape": [
+          1,
+          256,
+          1152
+        ],
+        "target_shape": [
+          1,
+          256,
+          1152
+        ],
+        "checked_numel": 294912,
+        "chunk_bytes": 294912,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "PaliGemma/llm/final_norm/scale",
+        "target": "llm.final_norms.0.scale",
+        "source_dtype": "float32",
+        "source_shape": [
+          2048
+        ],
+        "target_shape": [
+          2048
+        ],
+        "checked_numel": 2048,
+        "chunk_bytes": 2048,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "PaliGemma/llm/final_norm_1/Dense_0/kernel",
+        "target": "llm.final_norms.1.ada_modulation.weight",
+        "source_dtype": "float32",
+        "source_shape": [
+          1024,
+          3072
+        ],
+        "target_shape": [
+          3072,
+          1024
+        ],
+        "checked_numel": 3145728,
+        "chunk_bytes": 3145728,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      },
+      {
+        "source": "PaliGemma/llm/final_norm_1/Dense_0/bias",
+        "target": "llm.final_norms.1.ada_modulation.bias",
+        "source_dtype": "float32",
+        "source_shape": [
+          3072
+        ],
+        "target_shape": [
+          3072
+        ],
+        "checked_numel": 3072,
+        "chunk_bytes": 3072,
+        "all_finite": true,
+        "equal": true,
+        "max_abs_error": 0.0
+      }
+    ],
+    "checked_numel": 6288928,
+    "all_checked_equal": true,
+    "elapsed_seconds": 0.1480888300029619,
+    "process_peak_rss_bytes": 145723392,
+    "whole_model_functional_equivalence_verified": false
+  },
+  "source_preservation": {
+    "RLinf": {
+      "head": "50f22ad9a7825eeaaf4180dca5300f2fa70758be",
+      "head_matches_start": true,
+      "tracked_diff_matches_start": true,
+      "untracked_names_match_start": true,
+      "diff_sha256": "af1f0779a50fe652cf54d0b7a50dd9c00ada3a963884b9e32bfa702bb245208a"
+    },
+    "RoboTwin": {
+      "head": "931ce21f4f0e63feab661f349634d5a25bd92681",
+      "head_matches_start": true,
+      "tracked_diff_matches_start": true,
+      "untracked_names_match_start": true,
+      "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "computational_closed_loop_passed": true,
+  "reward_learning_signal_gate_passed": false,
+  "performance_improvement_established": false,
+  "whole_jax_torch_functional_parity_verified": false,
+  "selected_independently_evaluated_checkpoint_global_step": 3,
+  "latest_capacity_probe_checkpoint_global_step": 4
+}

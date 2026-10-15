@@ -1,0 +1,2 @@
+from full_mesh_path_audit import validate_scene_fk,audit_path
+v=validate_scene_fk(task);print('FULL_MESH_FK',json.dumps(v,default=str),flush=True);(BASE/'full_mesh_fk_validation_20261003.json').write_text(json.dumps(v,default=str,indent=2))

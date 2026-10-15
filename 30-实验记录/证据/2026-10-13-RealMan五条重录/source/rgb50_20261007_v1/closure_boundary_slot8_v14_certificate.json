@@ -1,0 +1,1209 @@
+{
+  "passed": false,
+  "scope": "Every recorded actual36q state, full native geometry; exact real-normal selected-hand touch exclusions only. Discrete samples, no swept-volume claim. Initial bottle/table support is reported; any overlap after1mm table release fails.",
+  "trace_sha256": "a04200b72fa516a5a12685fcdd1920e9b50960bb7881b70919f1d7fa263930d0",
+  "report_sha256": "1ec3f4c6576d7ff4de1d146d5ca4bf59a338bd658a0fda1f52a3c38d17ddb4aa",
+  "source_hashes": {
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/try_coupled_side_entry_v29.py": "ba360bef60936aab7d872796e06cc34b955cf825292a12aad058059c5886e9c0",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/contact_capture_control_v26.py": "cf6de939d9cc0d165859b7c01ee95ed992fe2c11ed52e4a62a24e04eca2cf6a7",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/continuous_servo.py": "18716a2e0aca64425f1a2a3936bfa4e1f7886b3df7fa31f3b37284e779746c19",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/purecontact_lp_v26.py": "a8c9be5237c9a1b2fe7d0e085f5e7cf0fcdeddb03f3780aab34585a54c457f3f",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/planned_carry_wrench_v26.py": "32464bccbf179527f4e30e0ff5ca34a9a8e77ca38e00e53e66b964baa17b6ce0",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/full_mesh_path_audit.py": "6e63def2bc02f1c2bd9e4e90fdd71ee70e58961dddafdc6e858a235ce454a9f9",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/carry_mesh_path_audit.py": "17a2c3a81c73067cca26503e6b32851e7737fa3d3a8ff82e1ed45aca15d63431",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/full_native_carry_planner_v31.py": "7a0d4cb0cedc40ee25daed1226a073705fc71bf1dc9a2a34064a11cd588b21d7",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/support_departure_certificate_v20.py": "5ca698f162bc6440dac424ddf0454202948fedfd0c585fd95808bf5f61d33a00",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/observed_full_trace_audit_v13.py": "c55c1ea0b667ac709fd45445f193f4d9632be27ac8f523a43516450dd1dfa4eb",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation.py": "ab70935c945b4df83edf31b2cb914dff13b8c4c16c8a944fbf23025c1d639ccc",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v2.py": "0cbeb62f24d820b42517a7afd82a1bb501187363f62350579969cca2db77929d",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_generation_v3.py": "d89889b14b412b60328c23532e122460cbb66d94484fafe8eeeec9070f72b923",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/full_native_approach.py": "27ac8e69f8abc5d67ae9a7144fdf2d0cad8ec365514d53d0d404f9a873c9fc8d"
+  },
+  "full_qpos_joint_names": [
+    "r_joint1",
+    "l_joint1",
+    "r_joint2",
+    "l_joint2",
+    "r_joint3",
+    "l_joint3",
+    "r_joint4",
+    "l_joint4",
+    "r_joint5",
+    "l_joint5",
+    "r_joint6",
+    "l_joint6",
+    "r_inspire_right_thumb_1_joint",
+    "r_inspire_right_index_1_joint",
+    "r_inspire_right_middle_1_joint",
+    "r_inspire_right_ring_1_joint",
+    "r_inspire_right_little_1_joint",
+    "l_inspire_left_thumb_1_joint",
+    "l_inspire_left_index_1_joint",
+    "l_inspire_left_middle_1_joint",
+    "l_inspire_left_ring_1_joint",
+    "l_inspire_left_little_1_joint",
+    "r_inspire_right_thumb_2_joint",
+    "r_inspire_right_index_2_joint",
+    "r_inspire_right_middle_2_joint",
+    "r_inspire_right_ring_2_joint",
+    "r_inspire_right_little_2_joint",
+    "l_inspire_left_thumb_2_joint",
+    "l_inspire_left_index_2_joint",
+    "l_inspire_left_middle_2_joint",
+    "l_inspire_left_ring_2_joint",
+    "l_inspire_left_little_2_joint",
+    "r_inspire_right_thumb_3_joint",
+    "l_inspire_left_thumb_3_joint",
+    "r_inspire_right_thumb_4_joint",
+    "l_inspire_left_thumb_4_joint"
+  ],
+  "native_mesh_metadata": {
+    "geometry_source": "Current actual PhysX collision shapes copied through installed MPlib converter",
+    "full_dof": 36,
+    "collision_links": 93,
+    "collision_shapes": 93,
+    "geometry_types": {
+      "base_link": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_wheel_link": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_wheel_link": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "min_wheel_link1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "medium_wheel_link2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "swivel_wheel_link1_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "swivel_wheel_link2_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "swivel_wheel_link3_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "swivel_wheel_link4_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "body_base_link": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "swivel_wheel_link1_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "swivel_wheel_link2_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "swivel_wheel_link3_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "swivel_wheel_link4_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "head_link1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_base_link1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_base_link1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "head_link2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_base_link": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_base_link": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "camera_link": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_link1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_link1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_link2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_link2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_link3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_link3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_link4": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_link4": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_link5": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_link5": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_link6": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_link6": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_base_link": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_base_link": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_palm_force_sensor": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_thumb_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_index_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_middle_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_ring_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_little_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_palm_force_sensor": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_thumb_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_index_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_middle_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_ring_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_little_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_thumb_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_index_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_index_force_sensor_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_middle_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_middle_force_sensor_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_ring_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_ring_force_sensor_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_little_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_little_force_sensor_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_thumb_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_index_force_sensor_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_index_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_middle_force_sensor_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_middle_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_ring_force_sensor_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_ring_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_little_force_sensor_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_little_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_thumb_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_thumb_force_sensor_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_index_force_sensor_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_index_force_sensor_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_middle_force_sensor_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_middle_force_sensor_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_ring_force_sensor_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_ring_force_sensor_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_little_force_sensor_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_little_force_sensor_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_thumb_force_sensor_1": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_thumb_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_index_force_sensor_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_index_force_sensor_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_middle_force_sensor_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_middle_force_sensor_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_ring_force_sensor_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_ring_force_sensor_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_little_force_sensor_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_little_force_sensor_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_thumb_force_sensor_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_right_thumb_4": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_thumb_force_sensor_2": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_left_thumb_4": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_thumb_force_sensor_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "r_inspire_thumb_force_sensor_4": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_thumb_force_sensor_3": [
+        "PhysxCollisionShapeConvexMesh"
+      ],
+      "l_inspire_thumb_force_sensor_4": [
+        "PhysxCollisionShapeConvexMesh"
+      ]
+    },
+    "bottle_shapes": 7,
+    "native_exemption_pairs": 446,
+    "engine_adjacent_pairs": [
+      [
+        "base_link",
+        "r_wheel_link"
+      ],
+      [
+        "base_link",
+        "l_wheel_link"
+      ],
+      [
+        "base_link",
+        "min_wheel_link1"
+      ],
+      [
+        "base_link",
+        "medium_wheel_link2"
+      ],
+      [
+        "base_link",
+        "swivel_wheel_link1_1"
+      ],
+      [
+        "base_link",
+        "swivel_wheel_link2_1"
+      ],
+      [
+        "base_link",
+        "swivel_wheel_link3_1"
+      ],
+      [
+        "base_link",
+        "swivel_wheel_link4_1"
+      ],
+      [
+        "base_link",
+        "body_base_link"
+      ],
+      [
+        "swivel_wheel_link1_1",
+        "swivel_wheel_link1_2"
+      ],
+      [
+        "swivel_wheel_link2_1",
+        "swivel_wheel_link2_2"
+      ],
+      [
+        "swivel_wheel_link3_1",
+        "swivel_wheel_link3_2"
+      ],
+      [
+        "swivel_wheel_link4_1",
+        "swivel_wheel_link4_2"
+      ],
+      [
+        "body_base_link",
+        "head_link1"
+      ],
+      [
+        "body_base_link",
+        "r_base_link1"
+      ],
+      [
+        "body_base_link",
+        "l_base_link1"
+      ],
+      [
+        "head_link1",
+        "head_link2"
+      ],
+      [
+        "r_base_link",
+        "r_base_link1"
+      ],
+      [
+        "l_base_link",
+        "l_base_link1"
+      ],
+      [
+        "camera_link",
+        "head_link2"
+      ],
+      [
+        "r_base_link",
+        "r_link1"
+      ],
+      [
+        "l_base_link",
+        "l_link1"
+      ],
+      [
+        "r_link1",
+        "r_link2"
+      ],
+      [
+        "l_link1",
+        "l_link2"
+      ],
+      [
+        "r_link2",
+        "r_link3"
+      ],
+      [
+        "l_link2",
+        "l_link3"
+      ],
+      [
+        "r_link3",
+        "r_link4"
+      ],
+      [
+        "l_link3",
+        "l_link4"
+      ],
+      [
+        "r_link4",
+        "r_link5"
+      ],
+      [
+        "l_link4",
+        "l_link5"
+      ],
+      [
+        "r_link5",
+        "r_link6"
+      ],
+      [
+        "l_link5",
+        "l_link6"
+      ],
+      [
+        "r_inspire_base_link",
+        "r_link6"
+      ],
+      [
+        "l_inspire_base_link",
+        "l_link6"
+      ],
+      [
+        "r_inspire_base_link",
+        "r_inspire_palm_force_sensor"
+      ],
+      [
+        "r_inspire_base_link",
+        "r_inspire_right_thumb_1"
+      ],
+      [
+        "r_inspire_base_link",
+        "r_inspire_right_index_1"
+      ],
+      [
+        "r_inspire_base_link",
+        "r_inspire_right_middle_1"
+      ],
+      [
+        "r_inspire_base_link",
+        "r_inspire_right_ring_1"
+      ],
+      [
+        "r_inspire_base_link",
+        "r_inspire_right_little_1"
+      ],
+      [
+        "l_inspire_base_link",
+        "l_inspire_palm_force_sensor"
+      ],
+      [
+        "l_inspire_base_link",
+        "l_inspire_left_thumb_1"
+      ],
+      [
+        "l_inspire_base_link",
+        "l_inspire_left_index_1"
+      ],
+      [
+        "l_inspire_base_link",
+        "l_inspire_left_middle_1"
+      ],
+      [
+        "l_inspire_base_link",
+        "l_inspire_left_ring_1"
+      ],
+      [
+        "l_inspire_base_link",
+        "l_inspire_left_little_1"
+      ],
+      [
+        "r_inspire_right_thumb_1",
+        "r_inspire_right_thumb_2"
+      ],
+      [
+        "r_inspire_right_index_1",
+        "r_inspire_right_index_2"
+      ],
+      [
+        "r_inspire_index_force_sensor_1",
+        "r_inspire_right_index_1"
+      ],
+      [
+        "r_inspire_right_middle_1",
+        "r_inspire_right_middle_2"
+      ],
+      [
+        "r_inspire_middle_force_sensor_1",
+        "r_inspire_right_middle_1"
+      ],
+      [
+        "r_inspire_right_ring_1",
+        "r_inspire_right_ring_2"
+      ],
+      [
+        "r_inspire_right_ring_1",
+        "r_inspire_ring_force_sensor_1"
+      ],
+      [
+        "r_inspire_right_little_1",
+        "r_inspire_right_little_2"
+      ],
+      [
+        "r_inspire_little_force_sensor_1",
+        "r_inspire_right_little_1"
+      ],
+      [
+        "l_inspire_left_thumb_1",
+        "l_inspire_left_thumb_2"
+      ],
+      [
+        "l_inspire_index_force_sensor_1",
+        "l_inspire_left_index_1"
+      ],
+      [
+        "l_inspire_left_index_1",
+        "l_inspire_left_index_2"
+      ],
+      [
+        "l_inspire_left_middle_1",
+        "l_inspire_middle_force_sensor_1"
+      ],
+      [
+        "l_inspire_left_middle_1",
+        "l_inspire_left_middle_2"
+      ],
+      [
+        "l_inspire_left_ring_1",
+        "l_inspire_ring_force_sensor_1"
+      ],
+      [
+        "l_inspire_left_ring_1",
+        "l_inspire_left_ring_2"
+      ],
+      [
+        "l_inspire_left_little_1",
+        "l_inspire_little_force_sensor_1"
+      ],
+      [
+        "l_inspire_left_little_1",
+        "l_inspire_left_little_2"
+      ],
+      [
+        "r_inspire_right_thumb_2",
+        "r_inspire_right_thumb_3"
+      ],
+      [
+        "r_inspire_right_thumb_2",
+        "r_inspire_thumb_force_sensor_1"
+      ],
+      [
+        "r_inspire_index_force_sensor_2",
+        "r_inspire_right_index_2"
+      ],
+      [
+        "r_inspire_index_force_sensor_3",
+        "r_inspire_right_index_2"
+      ],
+      [
+        "r_inspire_middle_force_sensor_2",
+        "r_inspire_right_middle_2"
+      ],
+      [
+        "r_inspire_middle_force_sensor_3",
+        "r_inspire_right_middle_2"
+      ],
+      [
+        "r_inspire_right_ring_2",
+        "r_inspire_ring_force_sensor_2"
+      ],
+      [
+        "r_inspire_right_ring_2",
+        "r_inspire_ring_force_sensor_3"
+      ],
+      [
+        "r_inspire_little_force_sensor_2",
+        "r_inspire_right_little_2"
+      ],
+      [
+        "r_inspire_little_force_sensor_3",
+        "r_inspire_right_little_2"
+      ],
+      [
+        "l_inspire_left_thumb_2",
+        "l_inspire_thumb_force_sensor_1"
+      ],
+      [
+        "l_inspire_left_thumb_2",
+        "l_inspire_left_thumb_3"
+      ],
+      [
+        "l_inspire_index_force_sensor_2",
+        "l_inspire_left_index_2"
+      ],
+      [
+        "l_inspire_index_force_sensor_3",
+        "l_inspire_left_index_2"
+      ],
+      [
+        "l_inspire_left_middle_2",
+        "l_inspire_middle_force_sensor_2"
+      ],
+      [
+        "l_inspire_left_middle_2",
+        "l_inspire_middle_force_sensor_3"
+      ],
+      [
+        "l_inspire_left_ring_2",
+        "l_inspire_ring_force_sensor_2"
+      ],
+      [
+        "l_inspire_left_ring_2",
+        "l_inspire_ring_force_sensor_3"
+      ],
+      [
+        "l_inspire_left_little_2",
+        "l_inspire_little_force_sensor_2"
+      ],
+      [
+        "l_inspire_left_little_2",
+        "l_inspire_little_force_sensor_3"
+      ],
+      [
+        "r_inspire_right_thumb_3",
+        "r_inspire_thumb_force_sensor_2"
+      ],
+      [
+        "r_inspire_right_thumb_3",
+        "r_inspire_right_thumb_4"
+      ],
+      [
+        "l_inspire_left_thumb_3",
+        "l_inspire_thumb_force_sensor_2"
+      ],
+      [
+        "l_inspire_left_thumb_3",
+        "l_inspire_left_thumb_4"
+      ],
+      [
+        "r_inspire_right_thumb_4",
+        "r_inspire_thumb_force_sensor_3"
+      ],
+      [
+        "r_inspire_right_thumb_4",
+        "r_inspire_thumb_force_sensor_4"
+      ],
+      [
+        "l_inspire_left_thumb_4",
+        "l_inspire_thumb_force_sensor_3"
+      ],
+      [
+        "l_inspire_left_thumb_4",
+        "l_inspire_thumb_force_sensor_4"
+      ]
+    ],
+    "engine_adjacent_additional_pairs": [
+      [
+        "r_link5",
+        "r_link6"
+      ],
+      [
+        "l_link5",
+        "l_link6"
+      ]
+    ],
+    "engine_adjacent_source": "Installed mplib.sapien_utils.srdf_exporter.py:53-61 and NVIDIA PhysX articulation parent-child filtering",
+    "engine_adjacent_source_url": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/110.0/dev_guide/guides/articulation_stability_guide.html",
+    "effective_exemption_pairs": 448,
+    "checked_self_pairs": 3830,
+    "excluded_environment": [
+      "floor contact of wheels/base; planner table separately checked"
+    ],
+    "urdf_kinematic_export_sha256": "6ed56f156530303e2d63d7cf3806465a620a9a68e0342a258658f037ecd06327",
+    "fk_audit": {
+      "passed": true,
+      "checked_links": 93,
+      "worst_position": {
+        "link": "r_inspire_thumb_force_sensor_2",
+        "position_error_m": 6.544252977709611e-07,
+        "rotation_error_rad": 9.594774265292803e-07
+      },
+      "worst_rotation": {
+        "link": "r_inspire_right_thumb_3",
+        "position_error_m": 6.369056591362752e-07,
+        "rotation_error_rad": 1.0196140643690075e-06
+      },
+      "position_tolerance_m": 2e-05,
+      "rotation_tolerance_rad": 0.0002
+    }
+  },
+  "recorded_samples": 3240,
+  "full_temporal_coverage": true,
+  "complete_to_reported_endpoint": true,
+  "actual_self_normal_impulse_threshold_Ns": 1e-07,
+  "grasp_touch_normal_impulse_threshold_Ns": 1e-10,
+  "historical_reference_validation": {
+    "relative_bottle_palm": [
+      [
+        0.0029812075527046863,
+        0.9999884551634601,
+        -0.003815971109322766,
+        -0.12132597941095204
+      ],
+      [
+        0.22932108007076776,
+        -0.004397945878846536,
+        -0.9733409179606837,
+        0.08576210098737347
+      ],
+      [
+        -0.9733465016530183,
+        0.0020266465143624996,
+        -0.22933145135481456,
+        0.16447004230322343
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "relative_translation_delta_palm_m": [
+      2.883083167620759e-07,
+      -1.0175234210763051e-07,
+      -1.5346704024254976e-07
+    ],
+    "relative_translation_drift_m": 3.4209261476883446e-07,
+    "relative_rotation_drift_deg": 6.724788650779929e-05,
+    "no_slip_predicted_bottle_world_pose": [
+      [
+        -0.6712764681056135,
+        0.741198647128066,
+        0.003584632962577439,
+        -0.22292176876398925
+      ],
+      [
+        -0.7411963922093008,
+        -0.6712849203585638,
+        0.002164415076402402,
+        -0.045831474856655424
+      ],
+      [
+        0.004010486246582471,
+        -0.0012039885414441075,
+        0.9999911712171777,
+        0.773745880346448
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "actual_minus_no_slip_bottle_world_m": [
+      1.2908312682635703e-07,
+      -2.873975827044628e-07,
+      1.33294909443471e-07
+    ]
+  },
+  "max_measured_joint_limit_excess_rad": 5.750644504587399e-06,
+  "max_post_grasp_relative_translation_drift_m": 0.0005943024467032043,
+  "max_post_grasp_relative_rotation_drift_deg": 0.1652302882692762,
+  "bottle_table_first_release": {
+    "step": 1755,
+    "trace_index": 1754,
+    "distance_m": 0.0010135173797607422
+  },
+  "bottle_table_release_clearance_m": 0.001,
+  "bottle_table_recontacts": [],
+  "collision_events": [
+    {
+      "category": "bottle_robot_non_touch",
+      "pair": [
+        "bottle",
+        "l_inspire_left_thumb_4"
+      ],
+      "count": 1,
+      "first_step": 1512,
+      "last_step": 1512,
+      "first_trace_index": 1511
+    }
+  ],
+  "historical_actual_self_active_count": 0,
+  "physical_scene_unchanged": true,
+  "elapsed_s": 25.071180373895913,
+  "audit_version": "closure_boundary_v14",
+  "original_v13_passed": false,
+  "original_v13_collision_events": [
+    {
+      "category": "bottle_robot_non_touch",
+      "pair": [
+        "bottle",
+        "l_inspire_left_thumb_4"
+      ],
+      "count": 1,
+      "first_step": 1512,
+      "last_step": 1512,
+      "first_trace_index": 1511
+    }
+  ],
+  "resolved_closure_boundary_events": [],
+  "reviewed_original_non_touch_events": [
+    {
+      "step": 1512,
+      "trace_index": 1511,
+      "link": "l_inspire_left_thumb_4",
+      "native_evidence": {
+        "eligible": true,
+        "link": "l_inspire_left_thumb_4",
+        "reason": "adjacent_real_touch_to_zero_load_nonnegative_closure_boundary",
+        "previous_step": 1511,
+        "current_step": 1512,
+        "dense_call": 3,
+        "previous_normal_impulse_Ns": 1.157363491066022e-06,
+        "current_normal_impulse_Ns": 0.0,
+        "current_native_points": 4,
+        "minimum_native_separation_m": 7.909865473720856e-08,
+        "maximum_native_separation_m": 0.0008237896836362779
+      },
+      "resolved": false,
+      "depth_certificate": {
+        "original_boolean_collision_reproduced": true,
+        "all_shape_pairs_evaluated": true,
+        "contact_lists_untruncated": true,
+        "collision_count_positive": true,
+        "shape_pairs_evaluated": 7,
+        "shape_pairs_colliding": 1,
+        "measured_penetration_depth_m": 6.088867365861006e-08,
+        "numerical_vertex_budget_m": 4.6342702458791214e-07,
+        "measured_initial_fk_translation_budget_m": 6.544252977709611e-07,
+        "measured_initial_fk_rotation_rad": 1.0196140643690075e-06,
+        "finger_maximum_local_vertex_radius_m": 0.036474782855018276,
+        "rotation_vertex_budget_m": 3.7190201593780564e-08,
+        "recorded_bottle_matrix_to_fcl_vertex_residual_m": 1.4845094778260174e-08,
+        "event_specific_vertex_certificate": {
+          "event_step": 1512,
+          "link": "l_inspire_left_thumb_4",
+          "scene_receipt": {
+            "cpu_only_scene": true,
+            "render_system_count": 0,
+            "scene_steps": 0,
+            "empty_nonphysical_scene_prefix_entities": 6,
+            "snapshot_initial_qpos_writes_before_audits": 1,
+            "audit_sapien_qpos_writes": 0,
+            "snapshot_initial_qpos_exact": true,
+            "urdf": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/batch_runs_v32/realman_adjust_bottle_batch20_20261003/attempts/seed_0000007/bootstrap/robot_head_down_fixed.urdf",
+            "urdf_sha256": "18b0989d4317625cb79e6a8ea73ce60101d043bd9ea4938405ed231d1d211f5d",
+            "model_data_sha256": "a0b94d276bf41e03a7b0c2fa7f8352c8c45b7bcaa8db2925328955fc8e18ef1f",
+            "collision_asset_sha256": "3e661138f5dfbcda201766d181525c8e6e2cce26400df95829eb2772fed1a9e8",
+            "geometry_configuration_source_sha256": "e60cd89ed304f012406d4830d93d16a8373eb568c3d89433f3ad122cbba42dce",
+            "table_geometry_source_sha256": "6bababee8e70da2460b2bbf47d3b5fbb20ccf73368782a7be596a63c962dce6d",
+            "original_trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/left_coke_attempt00/slot0000008_attempt00",
+            "hardware_io": false,
+            "new_physics_episodes": 0,
+            "initialization_state": "exact_recorded_event_qpos_and_bottle_pose",
+            "event_step": 1512,
+            "constructor_source_sha256": "e5d13b16ef6aff9ad9624978e9c269a1bd4b86b4c526542bb03acaa9c139f490",
+            "changed_initialization_values": 2,
+            "constructor_ast_sha256": "048876efba087befad4cb13f8bf370a3084b461aab862433b62b6559530d6a2f"
+          },
+          "event_fk_audit": {
+            "passed": true,
+            "checked_links": 93,
+            "worst_position": {
+              "link": "r_inspire_thumb_force_sensor_2",
+              "position_error_m": 6.544252634038819e-07,
+              "rotation_error_rad": 9.597088210645458e-07
+            },
+            "worst_rotation": {
+              "link": "l_inspire_ring_force_sensor_3",
+              "position_error_m": 4.180691775731899e-07,
+              "rotation_error_rad": 1.4656259782240275e-06
+            },
+            "position_tolerance_m": 2e-05,
+            "rotation_tolerance_rad": 0.0002
+          },
+          "native_to_auxiliary_finger_vertex_error_m": 4.0637234590457215e-07,
+          "native_finger_matrix_to_fcl_vertex_error_m": 5.364790482081376e-09,
+          "recorded_to_native_bottle_vertex_error_m": 3.304772235923312e-08,
+          "native_bottle_matrix_to_fcl_vertex_error_m": 1.8642165842025496e-08,
+          "native_fk_signed_gap_probes": [
+            {
+              "gjk_tolerance": 1e-06,
+              "native_fcl_collision": true,
+              "signed_distance_m": -3.9056082812294335e-08
+            },
+            {
+              "gjk_tolerance": 1e-09,
+              "native_fcl_collision": true,
+              "signed_distance_m": -3.9056082812294335e-08
+            },
+            {
+              "gjk_tolerance": 1e-12,
+              "native_fcl_collision": true,
+              "signed_distance_m": -3.9056082812294335e-08
+            }
+          ],
+          "native_signed_gap_nonnegative": false,
+          "event_physical_scene_unchanged": true,
+          "numerical_vertex_budget_m": 4.6342702458791214e-07
+        },
+        "budget_scope": "Exact recorded-event independent native CPU FK and auxiliary-FK collision vertex agreement plus measured transform conversion errors; no extrapolation of original initial FK residual.",
+        "shape_pair_depths": [
+          {
+            "finger_shape_index": 0,
+            "bottle_shape_index": 0,
+            "probes": [
+              {
+                "gjk_tolerance": 1e-06,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-09,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-12,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              }
+            ]
+          },
+          {
+            "finger_shape_index": 0,
+            "bottle_shape_index": 1,
+            "probes": [
+              {
+                "gjk_tolerance": 1e-06,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-09,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-12,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              }
+            ]
+          },
+          {
+            "finger_shape_index": 0,
+            "bottle_shape_index": 2,
+            "probes": [
+              {
+                "gjk_tolerance": 1e-06,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-09,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-12,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              }
+            ]
+          },
+          {
+            "finger_shape_index": 0,
+            "bottle_shape_index": 3,
+            "probes": [
+              {
+                "gjk_tolerance": 1e-06,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-09,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-12,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              }
+            ]
+          },
+          {
+            "finger_shape_index": 0,
+            "bottle_shape_index": 4,
+            "probes": [
+              {
+                "gjk_tolerance": 1e-06,
+                "collision": true,
+                "contact_count": 1,
+                "penetration_depths_m": [
+                  6.088867365861006e-08
+                ]
+              },
+              {
+                "gjk_tolerance": 1e-09,
+                "collision": true,
+                "contact_count": 1,
+                "penetration_depths_m": [
+                  6.088867365861006e-08
+                ]
+              },
+              {
+                "gjk_tolerance": 1e-12,
+                "collision": true,
+                "contact_count": 1,
+                "penetration_depths_m": [
+                  6.088867365861006e-08
+                ]
+              }
+            ]
+          },
+          {
+            "finger_shape_index": 0,
+            "bottle_shape_index": 5,
+            "probes": [
+              {
+                "gjk_tolerance": 1e-06,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-09,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-12,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              }
+            ]
+          },
+          {
+            "finger_shape_index": 0,
+            "bottle_shape_index": 6,
+            "probes": [
+              {
+                "gjk_tolerance": 1e-06,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-09,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              },
+              {
+                "gjk_tolerance": 1e-12,
+                "collision": false,
+                "contact_count": 0,
+                "penetration_depths_m": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "original_noncollision_checks_unchanged": true,
+  "baseline_all_other_checks_passed": true,
+  "current_geometry_identity_checks": {
+    "full_dof": true,
+    "collision_links": true,
+    "collision_shapes": true,
+    "geometry_types": true,
+    "bottle_shapes": true,
+    "native_exemption_pairs": true,
+    "engine_adjacent_pairs": true,
+    "engine_adjacent_additional_pairs": true,
+    "effective_exemption_pairs": true,
+    "checked_self_pairs": true,
+    "urdf_kinematic_export_sha256": true
+  },
+  "cpu_review_fk_audit": {
+    "passed": true,
+    "checked_links": 93,
+    "worst_position": {
+      "link": "r_inspire_thumb_force_sensor_2",
+      "position_error_m": 6.544257091740797e-07,
+      "rotation_error_rad": 9.604026701642654e-07
+    },
+    "worst_rotation": {
+      "link": "l_inspire_thumb_force_sensor_2",
+      "position_error_m": 3.8593775753796533e-07,
+      "rotation_error_rad": 1.909908052684611e-06
+    },
+    "position_tolerance_m": 2e-05,
+    "rotation_tolerance_rad": 0.0002
+  },
+  "boundary_helper_sha256": "a5bfcdf5d39a6c932ac8bd085341f9505115ee1567da8920e6a7a731e79394c5",
+  "boundary_helper_path": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/closure_boundary_audit_v14.py",
+  "acceptance_scope": "Independent discrete geometry review only; original rejection retained. No dataset export or physical success is created by this review.",
+  "retained_original_v13_audit": {
+    "path": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/left_coke_attempt00/slot0000008_attempt00/actual36_geometry_audit.json",
+    "sha256": "ab5f0c3ddc767216ecde9163be0e0676c3bc4bb1031a868ebd61197788d48237"
+  },
+  "physical_snapshot_receipt": {
+    "cpu_only_scene": true,
+    "render_system_count": 0,
+    "scene_steps": 0,
+    "empty_nonphysical_scene_prefix_entities": 6,
+    "snapshot_initial_qpos_writes_before_audits": 1,
+    "audit_sapien_qpos_writes": 0,
+    "snapshot_initial_qpos_exact": true,
+    "urdf": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/batch_runs_v32/realman_adjust_bottle_batch20_20261003/attempts/seed_0000007/bootstrap/robot_head_down_fixed.urdf",
+    "urdf_sha256": "18b0989d4317625cb79e6a8ea73ce60101d043bd9ea4938405ed231d1d211f5d",
+    "model_data_sha256": "a0b94d276bf41e03a7b0c2fa7f8352c8c45b7bcaa8db2925328955fc8e18ef1f",
+    "collision_asset_sha256": "3e661138f5dfbcda201766d181525c8e6e2cce26400df95829eb2772fed1a9e8",
+    "geometry_configuration_source_sha256": "e60cd89ed304f012406d4830d93d16a8373eb568c3d89433f3ad122cbba42dce",
+    "table_geometry_source_sha256": "6bababee8e70da2460b2bbf47d3b5fbb20ccf73368782a7be596a63c962dce6d",
+    "original_trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/left_coke_attempt00/slot0000008_attempt00",
+    "hardware_io": false,
+    "new_physics_episodes": 0
+  },
+  "original_report_recorded_sha256": "1ec3f4c6576d7ff4de1d146d5ca4bf59a338bd658a0fda1f52a3c38d17ddb4aa",
+  "current_rejection_report_sha256": "dc9a5aaed033cd0e655b3a1a2dd3ce5868615dc83ee6b27a73f0c403daaf4235",
+  "current_rejection_report_unmodified": true,
+  "samples_retained_by_reference": true,
+  "sample_overlay": [],
+  "unchanged_sample_count": 3240,
+  "original_audit_unmodified": true
+}

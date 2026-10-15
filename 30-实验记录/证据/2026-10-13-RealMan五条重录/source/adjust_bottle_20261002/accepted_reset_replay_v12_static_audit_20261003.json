@@ -1,0 +1,143 @@
+{
+  "scope": "Pure Conda CPU AST/helper/guard tests only; no warm-worker execution, queue, SAPIEN scene, GPU, planner or HDF export",
+  "sha256": "5ad50f270b99947e81476b6d5364628dd3e64fda758682b085b41cb8362832cb",
+  "ast_compiled": true,
+  "version": "v12",
+  "rejection_tests": [
+    {
+      "name": "failed",
+      "rejected": true,
+      "reason": "Accepted replay requires current accepted is True"
+    },
+    {
+      "name": "missingversion",
+      "rejected": true,
+      "reason": "Set accepted_replay_version=v12 explicitly; other versions require review"
+    },
+    {
+      "name": "v10",
+      "rejected": true,
+      "reason": "Set accepted_replay_version=v12 explicitly; other versions require review"
+    },
+    {
+      "name": "v9",
+      "rejected": true,
+      "reason": "Set accepted_replay_version=v12 explicitly; other versions require review"
+    },
+    {
+      "name": "wrongreport",
+      "rejected": true,
+      "reason": "Current report is not a strict physics_success candidate"
+    },
+    {
+      "name": "sourcesmissing",
+      "rejected": true,
+      "reason": "Candidate canonical-source audit is missing or failed"
+    },
+    {
+      "name": "consumptionindex",
+      "rejected": true,
+      "reason": "Saved carry consumption index does not match candidate wrench"
+    },
+    {
+      "name": "unscheduledaction",
+      "rejected": true,
+      "reason": "Carry action has no saved candidate inertial wrench: 8"
+    },
+    {
+      "name": "missingarmsequence",
+      "rejected": true,
+      "reason": "Scheduled candidate carry action has no left arm path"
+    },
+    {
+      "name": "changedactualpath",
+      "rejected": true,
+      "reason": "Actual replay control sequence differs from accepted saved carry path"
+    },
+    {
+      "name": "nativepathnotcandidate",
+      "rejected": true,
+      "reason": "Original carry path differs from native saved trajectory: 2"
+    },
+    {
+      "name": "unexpectedpathcount",
+      "rejected": true,
+      "reason": "v12 replay expects official left-arm approach2 plus retreat/lift/place3, no right paths"
+    },
+    {
+      "name": "wrenchlength",
+      "rejected": true,
+      "reason": "Candidate wrench length/shape/finite mismatch: /tmp/v11_replay_static_75modekv/planned_wrench_4.npz"
+    },
+    {
+      "name": "nonfinitewrench",
+      "rejected": true,
+      "reason": "Candidate wrench length/shape/finite mismatch: /tmp/v11_replay_static_75modekv/planned_wrench_4.npz"
+    },
+    {
+      "name": "failedwrenchpreflight",
+      "rejected": true,
+      "reason": "Candidate carry mesh/inertial wrench preflight was not accepted"
+    },
+    {
+      "name": "sourcechangedwhilereading",
+      "rejected": true,
+      "reason": "Accepted source carry/wrench files changed during read"
+    },
+    {
+      "name": "source_report_reference_mismatch",
+      "rejected": true,
+      "reason": "Saved NPZ per-segment reference differs from accepted source report"
+    },
+    {
+      "name": "mesh_reference_mismatch",
+      "rejected": true,
+      "reason": "Per-segment reference differs between NPZ, continuous mesh audit and source report"
+    },
+    {
+      "name": "replay_segment_grip_reference_mismatch",
+      "rejected": true,
+      "reason": "Actual replay segment grip differs from accepted planning reference by >2mm/2deg"
+    },
+    {
+      "name": "missingwrenchartifact",
+      "rejected": true,
+      "reason": "Accepted v12 carry evidence missing: 4"
+    }
+  ],
+  "fresh_v12_helper_globals_verified": true,
+  "native_exporter_ast_anchor_verified": true,
+  "v11_capture_ast_verified": true,
+  "wrench_mapping": {
+    "path_index": [
+      2,
+      3,
+      4
+    ],
+    "candidate_planner_dense_call": [
+      4,
+      5,
+      6
+    ],
+    "replay_action_dense_call": [
+      5,
+      6,
+      7
+    ]
+  },
+  "inertial_arrays_loaded_exactly_and_fresh": true,
+  "source_v12_control_signatures": {
+    "install_contact_capture": "3b72b6bb18063ea7e6115c683e8b58647fb99482772668d1950e827e36cbd12c",
+    "realman_lift_displacement": "6d7206f67089bca8c27b7179e3ccc8b96a171e24ece3dbb703582181d89a54f2",
+    "strict_official_episode": "2997897b01ca04aa3cbdd7a81a2b9d33259319143326bbf774675016e619764f",
+    "realman_place_pose": "6f030a683af9195651e03aeb2aec163d9e7c1bef83f40335f1422d781e54c403",
+    "side_entry_grasp": "884ac3ff46e21d83b94a900b73b7f13a95eec0d08918dd1199c18b9b33eb4ba4",
+    "grip_measure": "ab529b017266dd7df03863e8cf19bce85ba60d8425c702153fc38faf93b34115"
+  },
+  "static_signature_contract_verified": true,
+  "candidate_snapshot": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/try_coupled_side_entry_v12.py",
+  "candidate_snapshot_sha256": "d7895c1614e52b164ec8a989ea45b7927047c1b421eb4f3dfbc8e2396ac8a881",
+  "capture_snapshot": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/contact_capture_control_v11.py",
+  "capture_snapshot_sha256": "c89e84da24d115233e6b68826e554083871ee76dde5b66df146c97312908e1c1",
+  "actual_reset_replay_executed": false
+}

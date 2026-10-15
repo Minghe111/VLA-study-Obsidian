@@ -1,0 +1,97 @@
+{
+  "schema": "realman_guarded_stage_v1",
+  "stage": "collect",
+  "check_only": false,
+  "command": [
+    "/bigdata/liminghe/VLA-benchmark/deploy/realman_gen4/simulation_conda/robotwin/bin/python",
+    "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v5/deploy/realman_gen4/rgb50_motion_quality_20261014_v6_161_hybrid_v5/jobs/slot20_runtime/preflight/run_staged_collector.py",
+    "--index",
+    "20",
+    "--attempt",
+    "1",
+    "--domain-seed",
+    "11400020",
+    "--output",
+    "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v5/deploy/realman_gen4/rgb50_motion_quality_20261014_v6_161_hybrid_v5/jobs/slot20_runtime/new_physical_episodes",
+    "--prepare-runtime"
+  ],
+  "runtime": "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v5/deploy/realman_gen4/rgb50_motion_quality_20261014_v6_161_hybrid_v5/jobs/slot20_runtime",
+  "unit": "realman-rerecord-20261014-v6-hybrid-v5-collect-32526678cab446c4a1af6a1d7291f099.service",
+  "limits": {
+    "MemoryAccounting": "yes",
+    "MemoryHigh": "10737418240",
+    "MemoryMax": "12884901888",
+    "MemorySwapMax": "not-enforceable-on-v1",
+    "CPUAccounting": "yes",
+    "CPUQuota": "800%",
+    "TasksMax": "128",
+    "Nice": "10",
+    "KillMode": "control-group",
+    "TimeoutStopSec": "10s",
+    "RuntimeMaxSec": "300",
+    "OOMPolicy": "stop"
+  },
+  "environment_overrides": {
+    "PATH": "/bigdata/liminghe/VLA-benchmark/deploy/realman_gen4/simulation_conda/robotwin/bin:/usr/bin:/bin",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "CUDA_VISIBLE_DEVICES": "0",
+    "MPLCONFIGDIR": "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v5/deploy/realman_gen4/rgb50_motion_quality_20261014_v6_161_hybrid_v5/jobs/slot20_runtime/preflight/protected_mplcache"
+  },
+  "sample_seconds": 2.0,
+  "gpu_hard_memory_cap": false,
+  "auto_retry": false,
+  "available_before_bytes": 1059097874432,
+  "gpu_before": {
+    "healthy": true,
+    "index": 0,
+    "total_bytes": 51527024640,
+    "used_bytes": 5075107840,
+    "free_bytes": 45834305536,
+    "utilization_percent": 0,
+    "hard_memory_cap": false
+  },
+  "disk_before_bytes": {
+    "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v5/deploy/realman_gen4/rgb50_motion_quality_20261014_v6_161_hybrid_v5/jobs/slot20_runtime": 1474526728192
+  },
+  "start_minimum_available_bytes": 19327352832,
+  "stop_available_floor_bytes": 6442450944,
+  "low_samples_required": 3,
+  "disk_start_minimum_bytes": 34359738368,
+  "disk_stop_floor_bytes": 17179869184,
+  "source_binding": {
+    "entry_sha256": "023480c3c39315d79107603cc744c9bf94051afd8bdbdbb93be3034c823a3c76",
+    "guard_sha256": "270f79a5b057fc1c496220d371ae9e5017f644d666735503e5ff3279ab1ab85d",
+    "cgroup_adapter_sha256": "80e61023c3567826c07fff8a39ca7fc514a51ae9fe5b80d4711874b13a73798a",
+    "release_contract_sha256": "fddad401bf9c9ddd28eb05263a708de8f49c6c58e83cbf1c4cf0938b9b9b06fe",
+    "diagnostics_sha256": "2ec6bb8cf352aa1c22ccf0539fe1a563c8d1382e57c2018e9860ddab418cf9d9"
+  },
+  "cgroup_mode_required": "v1",
+  "swap_guarantee": "zero_observed_not_hard_disabled",
+  "preflight_probe": {
+    "path": "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v5/evidence/preflight/resource_runs/cpu_probe_1791974161227381712/receipt.json",
+    "sha256": "d633482a44a759023bb26f77b5459957058b26c0855cb6ea33eba41df8cc7734",
+    "passed": true,
+    "guard_sha256": "270f79a5b057fc1c496220d371ae9e5017f644d666735503e5ff3279ab1ab85d",
+    "adapter_sha256": "80e61023c3567826c07fff8a39ca7fc514a51ae9fe5b80d4711874b13a73798a",
+    "probe_sha256": "b01d496090a6178452b74243421753958ab95e3d4b5d7c3625e531be62ece84f"
+  },
+  "available_after_probe_bytes": 1059084259328,
+  "disk_after_probe_bytes": {
+    "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v5/deploy/realman_gen4/rgb50_motion_quality_20261014_v6_161_hybrid_v5/jobs/slot20_runtime": 1474526646272
+  },
+  "gpu_after_probe": {
+    "healthy": true,
+    "index": 0,
+    "total_bytes": 51527024640,
+    "used_bytes": 5075107840,
+    "free_bytes": 45834305536,
+    "utilization_percent": 0,
+    "hard_memory_cap": false
+  },
+  "boot_id": "5a6976ba-b91a-45b8-98aa-b57464b003d1",
+  "probe_binding_verified": true
+}

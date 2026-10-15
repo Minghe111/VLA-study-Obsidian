@@ -1,0 +1,48 @@
+{
+  "proposal_only": true,
+  "deployed": false,
+  "target_slots": [
+    17,
+    18,
+    20,
+    29
+  ],
+  "excluded_slot": 34,
+  "original_master_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/planning/bounded_trace_overlay.py",
+  "original_sha256": "73fec914f5400c727cc6dc62eb61a27b57a552ccc7e5c9480194475bf7fdc275",
+  "proposed_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/preflight/proposals/audit_compact_future4_20261014/bounded_trace_overlay.py",
+  "proposed_sha256": "a07534e536dfdc72b4dea2876e56b916d9a3e60db57ac98f80579de1999f5085",
+  "exact_changes": [
+    "write_audit main full output: JSONEncoder indent2 to None; small summary retains indent2",
+    "receipt adds explicit whitespace layout field"
+  ],
+  "original_predicates_or_data_types_changed": false,
+  "recorded_rows_removed": false,
+  "old_or_current_candidates_modified": false,
+  "current_guard_modified": false,
+  "binding": "Copy proposed helper as bounded_trace_overlay.py only into future four runtimes before prepare/import. Existing install adds its actual SHA plus generated AST source SHAs into ExpertSession.sources before physical step1. All native source601 bytes remain untouched.",
+  "format": "Complete standard JSON object; every original samples row retained. Only structural whitespace changes. Final audit file SHA, source pins and summary bounded_full_audit_file SHA are computed for the new bytes.",
+  "small_CPU_validation": {
+    "passed": true,
+    "tests": 9,
+    "scope": "Small CPU fixtures only; no actual simulation/native geometry rerun or large audit loaded",
+    "test_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/planning/test_audit_whitespace_compaction.py",
+    "test_sha256": "16c5b6b94b271ab6f1d2f83241d3a97a105b423c26b195ccae6e3112db147d40",
+    "checks": [
+      "AST restores byte-equivalent semantic tree after only indent literal +receipt marker normalization",
+      "complete row/key/order/value equality",
+      "int/bool/float/null/negative zero/string types preserved",
+      "lazy allrows preserved",
+      "summary SHA and all_samples_written bind full compact file",
+      "unchanged real staged summary loader accepts complete compact JSON and rejects wrong SHA",
+      "nonfinite values rejected and partial JSON not published",
+      "newline and small summary formatting unchanged"
+    ]
+  },
+  "actual34_source_binding_checked": {
+    "E_evidence_root_source_pin_count": 0,
+    "registered_overlay_runtime": "slot34_runtime",
+    "registered_overlay_sha256": "73fec914f5400c727cc6dc62eb61a27b57a552ccc7e5c9480194475bf7fdc275",
+    "master_and_actual34_overlay_unmodified": true
+  }
+}

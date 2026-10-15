@@ -1,7 +1,7 @@
 ---
 title: RoboTwin 2.0框架与默认任务
 tags: [框架, 仿真, RoboTwin]
-updated: 2026-10-10
+updated: 2026-10-14
 status: 当前源码核对
 ---
 
@@ -33,12 +33,17 @@ state/left_arm_joint_states  当前左臂关节
 state/right_arm_joint_states 当前右臂关节
 state/left_ee_joint_states    当前左夹爪
 state/right_ee_joint_states   当前右夹爪
-action/...                   对应的下一帧目标
+action/...                   下一采样帧的绝对目标值（关节角/夹爪开合量）
 state|action/*_ee_poses       若采集endpose则包含末端位姿
 vision/<camera>/colors       编码RGB字节，并保存shape及可用相机参数
 ```
 
 构造配对的代码明确使用 `state=values[:-1]`、`action=values[1:]`；相机观测也去掉末帧。也就是说，默认监督对来自相邻采样时刻，不是动作和状态不加区分地复制同一帧。另输出用于查看的 episode 视频。
+
+在此原生导出与默认qpos动作表示下，`action[t]` 是记录序列中下一采样帧的绝对臂关节角/夹爪开合量，没有做 `values[1:] - values[:-1]` 的差分。例：某关节两次记录分别为0.50、0.55 rad，则该训练对为state=0.50、action=0.55，增量0.05不是这里保存的action。下一采样帧也不必等于下一物理仿真步；策略训练若另做归一化、差分或动作块构造，应依据具体策略转换器核对。2026-10-14补充为源码解释，未运行新采集。
+
+> [!info] 2026-10-14 复核：字段名称不等于实时测量值
+> 在线核对官方 main 的 `Base_Task.get_obs` → `Robot.get_left/right_arm_jointState`：常规本体的臂关节值读取 `get_drive_target()`，夹爪值读取保存的开合控制量，并非全部关节的实时测量反馈。每侧夹爪是连续0～1标量，0为闭合目标、1为张开目标；不是抓取成功标签，也不是手指所有物理关节角。6轴双臂例子为 `[左臂6 rad, 左夹爪1, 右臂6 rad, 右夹爪1]` 共14维，HDF5每侧臂字段通常为 `(N,6)`、夹爪字段为 `(N,1)`；其他本体按实际轴数确定。当前通用导出按相邻采样值构造state/action，不能据字段名自动断言为“测量状态/实际下发命令”。本机RealMan独立24维SDK接口应另行区分，不能用常规标量夹爪解释六通道灵巧手。本次仅官方在线源码与本地HEAD `931ce21f4f0e63feab661f349634d5a25bd92681` 静态核对，未重新采集或读回HDF5。来源：[官方Robot](https://github.com/RoboTwin-Platform/RoboTwin/blob/main/envs/robot/robot.py) · [官方采样入口](https://github.com/RoboTwin-Platform/RoboTwin/blob/main/envs/_base_task.py) · [官方导出](https://github.com/RoboTwin-Platform/RoboTwin/blob/main/envs/utils/pkl2hdf5.py)。
 
 `save_freq=15` 同时参与采集间隔及输出 frequency 字段；本次未测实际时序，不将其直接断言为真机控制 15 Hz。制作训练集时应核对导出时间语义。
 

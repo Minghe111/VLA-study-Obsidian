@@ -1,0 +1,1938 @@
+{
+  "status": "candidate_sampling_plan_only_not_generated_dataset",
+  "new_physics_runs": 0,
+  "dataset_goal": 50,
+  "old20_policy": "Kept unchanged as historical dataset, strict nearest-arm version collects 50 fresh real trajectories",
+  "model_counts": {
+    "16": 20,
+    "13": 20,
+    "4": 10
+  },
+  "arm_counts": {
+    "left": 25,
+    "right": 25
+  },
+  "pose_counts": {
+    "upright": 20,
+    "horizontal": 15,
+    "diagonal": 15
+  },
+  "cells": {
+    "13": {
+      "left": {
+        "upright": 4,
+        "horizontal": 3,
+        "diagonal": 3
+      },
+      "right": {
+        "upright": 4,
+        "horizontal": 3,
+        "diagonal": 3
+      }
+    },
+    "16": {
+      "left": {
+        "upright": 4,
+        "horizontal": 3,
+        "diagonal": 3
+      },
+      "right": {
+        "upright": 4,
+        "horizontal": 3,
+        "diagonal": 3
+      }
+    },
+    "4": {
+      "left": {
+        "upright": 2,
+        "horizontal": 1,
+        "diagonal": 2
+      },
+      "right": {
+        "upright": 2,
+        "horizontal": 2,
+        "diagonal": 1
+      }
+    }
+  },
+  "shoulders_world_m": {
+    "left": [
+      -0.26380305357951817,
+      -0.6165399525745515,
+      1.1258990198444143
+    ],
+    "right": [
+      0.26388325787272415,
+      -0.6167138122090484,
+      1.125897418553584
+    ]
+  },
+  "position_reference": "Actual collision mesh geometry center, not actor origin",
+  "arm_selection_rule": "Choose Euclidean nearest fixed shoulder before planning; after settling recompute with actual pose. Reject ambiguous margin<20mm or unexpected arm, do not change label.",
+  "post_settle_pose_checks": {
+    "upright": "PCA long axis <=15 degrees from world vertical",
+    "horizontal": "PCA long axis <=15 degrees from table plane and XY azimuth within20 degrees of0/180",
+    "diagonal": "PCA long axis <=15 degrees from table plane and XY azimuth35..65 degrees from0/180"
+  },
+  "formal_success_requirements": [
+    "Native unassisted bottle lift and physical support verified",
+    "No fixed constraint, no bottle pose writes during grasp",
+    "Validate no table support when airborne",
+    "Both hands remain in physical traces",
+    "Three D435 RGB streams and state/action timing must follow recording contract"
+  ],
+  "specs": [
+    {
+      "index": 0,
+      "seed": 100000,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "left",
+      "pose_class": "upright",
+      "xy": [
+        -0.09200565864474626,
+        -0.08487117125672503
+      ],
+      "yaw_deg": 68.83273709334628,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.09200565864474626,
+        -0.08487117125672503,
+        0.8696622038073838
+      ],
+      "actor_origin_world_m": [
+        -0.09200414144065372,
+        -0.08487468851313705,
+        0.7440074344053864
+      ],
+      "actor_q_wxyz": [
+        0.5833291971884724,
+        0.5833291971884724,
+        0.39965866399648114,
+        0.39965866399648114
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6146896321129484,
+        "right": 0.6893257581950295
+      },
+      "nearest_arm_margin_m": 0.07463612608208114,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 1,
+      "seed": 100001,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "left",
+      "pose_class": "horizontal",
+      "xy": [
+        -0.10504902017830231,
+        -0.10677577878877906
+      ],
+      "yaw_deg": -1.8013021118987709,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.10504902017830231,
+        -0.10677577878877906,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        -0.23064161092700722,
+        -0.10282328211429452,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.6959046364280455,
+        0.0,
+        -0.0,
+        -0.7181342054226005
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6376584761194563,
+        "right": 0.7195086402254512
+      },
+      "nearest_arm_margin_m": 0.081850164105995,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 2,
+      "seed": 100002,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "left",
+      "pose_class": "upright",
+      "xy": [
+        -0.14739256063290163,
+        -0.11828226755285431
+      ],
+      "yaw_deg": -150.61417749553993,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.14739256063290163,
+        -0.11828226755285431,
+        0.8659618526697159
+      ],
+      "actor_origin_world_m": [
+        -0.14739256063290163,
+        -0.11828226755285429,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.17934934093520358,
+        0.17934934093520358,
+        -0.6839837819028374,
+        -0.6839837819028374
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.5739158949097526,
+        "right": 0.6965258803570753
+      },
+      "nearest_arm_margin_m": 0.12260998544732271,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 3,
+      "seed": 100003,
+      "model_id": 4,
+      "brand": "Fanta",
+      "arm": "right",
+      "pose_class": "upright",
+      "xy": [
+        0.11278540308380286,
+        -0.0970902962800888
+      ],
+      "yaw_deg": 136.62690182258063,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.11278540308380286,
+        -0.0970902962800888,
+        0.8626720407009125
+      ],
+      "actor_origin_world_m": [
+        0.11278540308380286,
+        -0.09709029628008878,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.2612961940524868,
+        0.2612961940524868,
+        0.6570573026560813,
+        0.6570573026560813
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6934949557606825,
+        "right": 0.6017696898098718
+      },
+      "nearest_arm_margin_m": 0.09172526595081076,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 4,
+      "seed": 100004,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "left",
+      "pose_class": "diagonal",
+      "xy": [
+        -0.1556688571621746,
+        -0.13766644549802365
+      ],
+      "yaw_deg": 49.112419854156336,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.1556688571621746,
+        -0.13766644549802365,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        -0.23792163882448292,
+        -0.232659082000787,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.937015308796516,
+        0.0,
+        -0.0,
+        -0.3492882922185768
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6021285713076067,
+        "right": 0.7259856861024535
+      },
+      "nearest_arm_margin_m": 0.12385711479484685,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 5,
+      "seed": 100005,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "left",
+      "pose_class": "diagonal",
+      "xy": [
+        -0.13273678836788458,
+        -0.07648150035046998
+      ],
+      "yaw_deg": 41.453305532226096,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.13273678836788458,
+        -0.07648150035046998,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        -0.22691627987204624,
+        -0.15966409745437768,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.9115946056604921,
+        0.0,
+        -0.0,
+        -0.4110903488659055
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6560392319560915,
+        "right": 0.7554490528808632
+      },
+      "nearest_arm_margin_m": 0.09940982092477169,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 6,
+      "seed": 100006,
+      "model_id": 4,
+      "brand": "Fanta",
+      "arm": "right",
+      "pose_class": "horizontal",
+      "xy": [
+        0.14591243296639617,
+        -0.1015646780006232
+      ],
+      "yaw_deg": 185.70669151440427,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.14591243296639617,
+        -0.1015646780006232,
+        0.7753411975502967
+      ],
+      "actor_origin_world_m": [
+        0.2659864186562204,
+        -0.0895655377196466,
+        0.7753411975502967
+      ],
+      "actor_q_wxyz": [
+        0.6710305654105868,
+        0.0,
+        0.0,
+        0.7414296866761866
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7456253081204006,
+        "right": 0.6341808969756777
+      },
+      "nearest_arm_margin_m": 0.11144441114472292,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 7,
+      "seed": 100007,
+      "model_id": 4,
+      "brand": "Fanta",
+      "arm": "right",
+      "pose_class": "diagonal",
+      "xy": [
+        0.09246889148449153,
+        -0.08900734902784437
+      ],
+      "yaw_deg": 142.3197249087462,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.09246889148449153,
+        -0.08900734902784437,
+        0.7753411975502967
+      ],
+      "actor_origin_world_m": [
+        0.18797284893617433,
+        -0.16276869065060662,
+        0.7753411975502967
+      ],
+      "actor_q_wxyz": [
+        0.8975674386077647,
+        0.0,
+        0.0,
+        0.4408771860179393
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7267125521250161,
+        "right": 0.656312928694537
+      },
+      "nearest_arm_margin_m": 0.07039962343047912,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 8,
+      "seed": 100008,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "left",
+      "pose_class": "diagonal",
+      "xy": [
+        -0.13105896008232165,
+        -0.12886984209298974
+      ],
+      "yaw_deg": -42.30162579987588,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.13105896008232165,
+        -0.12886984209298974,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        -0.22274263355826257,
+        -0.04543936243917619,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.4043306192425085,
+        0.0,
+        -0.0,
+        -0.9146128964447033
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6148516343379659,
+        "right": 0.7187276080537941
+      },
+      "nearest_arm_margin_m": 0.10387597371582824,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 9,
+      "seed": 100009,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "right",
+      "pose_class": "upright",
+      "xy": [
+        0.15180028450829972,
+        -0.12833467227591994
+      ],
+      "yaw_deg": 139.6428109577833,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.15180028450829972,
+        -0.12833467227591994,
+        0.8696622038073838
+      ],
+      "actor_origin_world_m": [
+        0.1518041050313615,
+        -0.12833439550081135,
+        0.7440074344053864
+      ],
+      "actor_q_wxyz": [
+        0.2439147571260565,
+        0.2439147571260565,
+        0.663705952403726,
+        0.663705952403726
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6904548039039178,
+        "right": 0.5627906027254399
+      },
+      "nearest_arm_margin_m": 0.12766420117847788,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 10,
+      "seed": 100010,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "right",
+      "pose_class": "horizontal",
+      "xy": [
+        0.12293859292804599,
+        -0.10345608247775927
+      ],
+      "yaw_deg": 1.4116777072282076,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.12293859292804599,
+        -0.10345608247775927,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        -0.000985636003720633,
+        -0.10650999815692315,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.7157639035475682,
+        0.0,
+        -0.0,
+        -0.6983423475476389
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7317264243755723,
+        "right": 0.6371006008333095
+      },
+      "nearest_arm_margin_m": 0.09462582354226279,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 11,
+      "seed": 100011,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "left",
+      "pose_class": "horizontal",
+      "xy": [
+        -0.10604503667922399,
+        -0.09009605380652583
+      ],
+      "yaw_deg": 185.62558993180664,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.10604503667922399,
+        -0.09009605380652583,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        0.01900481166501905,
+        -0.07778116403782273,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.6715551403282223,
+        0.0,
+        0.0,
+        0.7409545826153866
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6508277395876226,
+        "right": 0.7319276372822908
+      },
+      "nearest_arm_margin_m": 0.08109989769466819,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 12,
+      "seed": 100012,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "right",
+      "pose_class": "upright",
+      "xy": [
+        0.15272130562607467,
+        -0.10188698920770414
+      ],
+      "yaw_deg": 161.98449188009192,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.15272130562607467,
+        -0.10188698920770414,
+        0.8659618526697159
+      ],
+      "actor_origin_world_m": [
+        0.15272130562607467,
+        -0.10188698920770412,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.11071038735940864,
+        0.11071038735940864,
+        0.6983861468634167,
+        0.6983861468634167
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7112858394434086,
+        "right": 0.5873415835102351
+      },
+      "nearest_arm_margin_m": 0.12394425593317349,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 13,
+      "seed": 100013,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "left",
+      "pose_class": "upright",
+      "xy": [
+        -0.09595518011106254,
+        -0.07290129134576516
+      ],
+      "yaw_deg": -60.35200208982556,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.09595518011106254,
+        -0.07290129134576516,
+        0.8696622038073838
+      ],
+      "actor_origin_world_m": [
+        -0.09595886498578761,
+        -0.07290024506703228,
+        0.7440074344053864
+      ],
+      "actor_q_wxyz": [
+        0.6112835037515193,
+        0.6112835037515193,
+        -0.3554328038339545,
+        -0.3554328038339545
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.623997763219793,
+        "right": 0.7006227548219667
+      },
+      "nearest_arm_margin_m": 0.07662499160217373,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 14,
+      "seed": 100014,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "left",
+      "pose_class": "upright",
+      "xy": [
+        -0.0956287861748146,
+        -0.11378039812340136
+      ],
+      "yaw_deg": -31.401983177297183,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.0956287861748146,
+        -0.11378039812340136,
+        0.8696622038073838
+      ],
+      "actor_origin_world_m": [
+        -0.09563251704356657,
+        -0.11378126623588358,
+        0.7440074344053864
+      ],
+      "actor_q_wxyz": [
+        0.6807225505063456,
+        0.6807225505063456,
+        -0.19135519128608963,
+        -0.19135519128608963
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.5888183588355774,
+        "right": 0.669214027120708
+      },
+      "nearest_arm_margin_m": 0.08039566828513056,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 15,
+      "seed": 100015,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "left",
+      "pose_class": "horizontal",
+      "xy": [
+        -0.11499866533994527,
+        -0.13451779238896355
+      ],
+      "yaw_deg": 169.30830363838905,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.11499866533994527,
+        -0.13451779238896355,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        0.008474191958695934,
+        -0.1578324785640524,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.7699104517609033,
+        0.0,
+        0.0,
+        0.6381519382320497
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6132161813257015,
+        "right": 0.705414327122925
+      },
+      "nearest_arm_margin_m": 0.09219814579722341,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 16,
+      "seed": 100016,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "left",
+      "pose_class": "upright",
+      "xy": [
+        -0.14961582497147854,
+        -0.10411837347256568
+      ],
+      "yaw_deg": -96.68846665934478,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.14961582497147854,
+        -0.10411837347256568,
+        0.8659618526697159
+      ],
+      "actor_origin_world_m": [
+        -0.14961582497147854,
+        -0.10411837347256568,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.4699811659308039,
+        0.4699811659308039,
+        -0.5283159127551641,
+        -0.5283159127551641
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.5858173169046512,
+        "right": 0.7080268877223596
+      },
+      "nearest_arm_margin_m": 0.12220957081770834,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 17,
+      "seed": 100017,
+      "model_id": 4,
+      "brand": "Fanta",
+      "arm": "left",
+      "pose_class": "upright",
+      "xy": [
+        -0.0951481636493397,
+        -0.07535250091537102
+      ],
+      "yaw_deg": 121.7339500116583,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.0951481636493397,
+        -0.07535250091537102,
+        0.8626720407009125
+      ],
+      "actor_origin_world_m": [
+        -0.0951481636493397,
+        -0.07535250091537099,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.3442471140141807,
+        0.3442471140141807,
+        0.6176519444581291,
+        0.6176519444581291
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6249934177891252,
+        "right": 0.7009017267430901
+      },
+      "nearest_arm_margin_m": 0.07590830895396494,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 18,
+      "seed": 100018,
+      "model_id": 4,
+      "brand": "Fanta",
+      "arm": "left",
+      "pose_class": "upright",
+      "xy": [
+        -0.13895253248812955,
+        -0.07708819635282448
+      ],
+      "yaw_deg": -124.75408131857978,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.13895253248812955,
+        -0.07708819635282448,
+        0.8626720407009125
+      ],
+      "actor_origin_world_m": [
+        -0.13895253248812955,
+        -0.07708819635282445,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.32785084677634024,
+        0.32785084677634024,
+        -0.6265092355807987,
+        -0.6265092355807987
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6130940323119369,
+        "right": 0.7230214926470334
+      },
+      "nearest_arm_margin_m": 0.10992746033509648,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 19,
+      "seed": 100019,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "left",
+      "pose_class": "diagonal",
+      "xy": [
+        -0.15277762691048985,
+        -0.13693084095408578
+      ],
+      "yaw_deg": 233.68795497003623,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.15277762691048985,
+        -0.13693084095408578,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        -0.07836485829147323,
+        -0.035679367150559416,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.31160567371707876,
+        0.0,
+        0.0,
+        0.950211504933152
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6032391909406697,
+        "right": 0.7248053890922702
+      },
+      "nearest_arm_margin_m": 0.12156619815160052,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 20,
+      "seed": 100020,
+      "model_id": 4,
+      "brand": "Fanta",
+      "arm": "right",
+      "pose_class": "upright",
+      "xy": [
+        0.08751715701289449,
+        -0.0897039904063092
+      ],
+      "yaw_deg": -98.51283451383816,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.08751715701289449,
+        -0.0897039904063092,
+        0.8626720407009125
+      ],
+      "actor_origin_world_m": [
+        0.08751715701289449,
+        -0.0897039904063092,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.4615108472594574,
+        0.4615108472594574,
+        -0.5357310312664909,
+        -0.5357310312664909
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6857626877816031,
+        "right": 0.6149243476678544
+      },
+      "nearest_arm_margin_m": 0.07083834011374868,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 21,
+      "seed": 100021,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "right",
+      "pose_class": "horizontal",
+      "xy": [
+        0.0898971268426054,
+        -0.11329469595548405
+      ],
+      "yaw_deg": 11.95909450545031,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.0898971268426054,
+        -0.11329469595548405,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        -0.03303097080541344,
+        -0.13932936302792107,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.7769212648438966,
+        0.0,
+        -0.0,
+        -0.6295977670174505
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7070400145045367,
+        "right": 0.6365900093804298
+      },
+      "nearest_arm_margin_m": 0.07045000512410693,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 22,
+      "seed": 100022,
+      "model_id": 4,
+      "brand": "Fanta",
+      "arm": "left",
+      "pose_class": "diagonal",
+      "xy": [
+        -0.15441283726726035,
+        -0.09384644088505559
+      ],
+      "yaw_deg": 238.7059571178925,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.15441283726726035,
+        -0.09384644088505559,
+        0.7753411975502967
+      ],
+      "actor_origin_world_m": [
+        -0.09173212660164337,
+        0.009269367395614389,
+        0.7753411975502967
+      ],
+      "actor_q_wxyz": [
+        0.26971017722476515,
+        0.0,
+        0.0,
+        0.9629415456305672
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6388000574191692,
+        "right": 0.7558118650092275
+      },
+      "nearest_arm_margin_m": 0.11701180759005825,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 23,
+      "seed": 100023,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "right",
+      "pose_class": "horizontal",
+      "xy": [
+        0.15189847152879793,
+        -0.12373036153462638
+      ],
+      "yaw_deg": 171.39883648302623,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.15189847152879793,
+        -0.12373036153462638,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        0.27446616790904527,
+        -0.14226952875831403,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.7581409573056082,
+        0.0,
+        0.0,
+        0.6520907060031879
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7336678078196527,
+        "right": 0.6149565471545405
+      },
+      "nearest_arm_margin_m": 0.11871126066511217,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 24,
+      "seed": 100024,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "right",
+      "pose_class": "diagonal",
+      "xy": [
+        0.12449944549560252,
+        -0.10578510767586449
+      ],
+      "yaw_deg": 52.881859950137894,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.12449944549560252,
+        -0.10578510767586449,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        0.04969336694595172,
+        -0.20463141023358197,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.9479960208344694,
+        0.0,
+        -0.0,
+        -0.318282177449527
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.730923213209187,
+        "right": 0.6348813024066922
+      },
+      "nearest_arm_margin_m": 0.0960419108024948,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 25,
+      "seed": 100025,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "right",
+      "pose_class": "upright",
+      "xy": [
+        0.11146677990831694,
+        -0.10457569524367086
+      ],
+      "yaw_deg": -40.47098702180611,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.11146677990831694,
+        -0.10457569524367086,
+        0.8659618526697159
+      ],
+      "actor_origin_world_m": [
+        0.11146677990831694,
+        -0.10457569524367083,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.6634633995936055,
+        0.6634633995936055,
+        -0.24457374634186702,
+        -0.24457374634186702
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6859316143677552,
+        "right": 0.5942076505862947
+      },
+      "nearest_arm_margin_m": 0.09172396378146053,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 26,
+      "seed": 100026,
+      "model_id": 4,
+      "brand": "Fanta",
+      "arm": "left",
+      "pose_class": "diagonal",
+      "xy": [
+        -0.13178246266597468,
+        -0.11536619586987379
+      ],
+      "yaw_deg": 215.657452815478,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.13178246266597468,
+        -0.11536619586987379,
+        0.7753411975502967
+      ],
+      "actor_origin_world_m": [
+        -0.033734422348228196,
+        -0.04502187700351304,
+        0.7753411975502967
+      ],
+      "actor_q_wxyz": [
+        0.4566519425860483,
+        0.0,
+        0.0,
+        0.8896454368636915
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6256958986650263,
+        "right": 0.7285536760613356
+      },
+      "nearest_arm_margin_m": 0.1028577773963093,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 27,
+      "seed": 100027,
+      "model_id": 4,
+      "brand": "Fanta",
+      "arm": "right",
+      "pose_class": "horizontal",
+      "xy": [
+        0.12422040284732906,
+        -0.09500557220490805
+      ],
+      "yaw_deg": -0.21491387276076068,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.12422040284732906,
+        -0.09500557220490805,
+        0.7753411975502967
+      ],
+      "actor_origin_world_m": [
+        0.0035492110527779314,
+        -0.09455293790954761,
+        0.7753411975502967
+      ],
+      "actor_q_wxyz": [
+        0.7057793756223978,
+        0.0,
+        -0.0,
+        -0.7084316995632384
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.73854661289358,
+        "right": 0.6438748829129521
+      },
+      "nearest_arm_margin_m": 0.0946717299806279,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 28,
+      "seed": 100028,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "right",
+      "pose_class": "upright",
+      "xy": [
+        0.12061344679659647,
+        -0.10280196778783093
+      ],
+      "yaw_deg": -12.45480397852296,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.12061344679659647,
+        -0.10280196778783093,
+        0.8696622038073838
+      ],
+      "actor_origin_world_m": [
+        0.12061019994555415,
+        -0.10280400026396491,
+        0.7440074344053864
+      ],
+      "actor_q_wxyz": [
+        0.7029342848235923,
+        0.7029342848235923,
+        -0.0767032673329166,
+        -0.0767032673329166
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6909124898762036,
+        "right": 0.591851423820403
+      },
+      "nearest_arm_margin_m": 0.09906106605580056,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 29,
+      "seed": 100029,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "left",
+      "pose_class": "upright",
+      "xy": [
+        -0.09470760542478525,
+        -0.10904301002817889
+      ],
+      "yaw_deg": -127.06634644082385,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.09470760542478525,
+        -0.10904301002817889,
+        0.8659618526697159
+      ],
+      "actor_origin_world_m": [
+        -0.09470760542478525,
+        -0.10904301002817886,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.3151430585837403,
+        0.3151430585837403,
+        -0.6329967240250816,
+        -0.6329967240250816
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.5947383863173566,
+        "right": 0.6737088013665751
+      },
+      "nearest_arm_margin_m": 0.07897041504921842,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 30,
+      "seed": 100030,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "left",
+      "pose_class": "horizontal",
+      "xy": [
+        -0.09560339767878838,
+        -0.08338419715563543
+      ],
+      "yaw_deg": 188.69113073156507,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.09560339767878838,
+        -0.08338419715563543,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        0.026935036964347417,
+        -0.0646525941137629,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.6514952794834014,
+        0.0,
+        0.0,
+        0.7586526878689911
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6596556563950737,
+        "right": 0.732304181122512
+      },
+      "nearest_arm_margin_m": 0.07264852472743832,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 31,
+      "seed": 100031,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "right",
+      "pose_class": "upright",
+      "xy": [
+        0.11048074125380626,
+        -0.1313904342015881
+      ],
+      "yaw_deg": 97.02447947735868,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.11048074125380626,
+        -0.1313904342015881,
+        0.8659618526697159
+      ],
+      "actor_origin_world_m": [
+        0.11048074125380626,
+        -0.13139043420158808,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.4684299854006034,
+        0.4684299854006034,
+        0.5296917488290624,
+        0.5296917488290624
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6656017917127023,
+        "right": 0.5715221883330133
+      },
+      "nearest_arm_margin_m": 0.09407960337968901,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 32,
+      "seed": 100032,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "left",
+      "pose_class": "diagonal",
+      "xy": [
+        -0.10342988055278747,
+        -0.11408083559160777
+      ],
+      "yaw_deg": 234.0189497562701,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.10342988055278747,
+        -0.11408083559160777,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        -0.03060010425741551,
+        -0.013769497239084438,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.30885971600790135,
+        0.0,
+        0.0,
+        0.951107604757484
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6330751299004865,
+        "right": 0.7142528478908482
+      },
+      "nearest_arm_margin_m": 0.08117771799036166,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 33,
+      "seed": 100033,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "right",
+      "pose_class": "upright",
+      "xy": [
+        0.13896841132940835,
+        -0.12092723368625324
+      ],
+      "yaw_deg": 161.46686016072204,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.13896841132940835,
+        -0.12092723368625324,
+        0.8659618526697159
+      ],
+      "actor_origin_world_m": [
+        0.13896841132940835,
+        -0.12092723368625324,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.11386398926613495,
+        0.11386398926613495,
+        0.6978789235593819,
+        0.6978789235593819
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6895100803813828,
+        "right": 0.5735630294410952
+      },
+      "nearest_arm_margin_m": 0.11594705094028768,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 34,
+      "seed": 100034,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "left",
+      "pose_class": "upright",
+      "xy": [
+        -0.1547257116752686,
+        -0.11424217783488612
+      ],
+      "yaw_deg": -68.46202566603964,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.1547257116752686,
+        -0.11424217783488612,
+        0.8659618526697159
+      ],
+      "actor_origin_world_m": [
+        -0.1547257116752686,
+        -0.11424217783488612,
+        0.742
+      ],
+      "actor_q_wxyz": [
+        0.5846190652241561,
+        0.5846190652241561,
+        -0.39776946662160223,
+        -0.39776946662160223
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.5759932741830613,
+        "right": 0.7037596970188339
+      },
+      "nearest_arm_margin_m": 0.12776642283577255,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 35,
+      "seed": 100035,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "right",
+      "pose_class": "upright",
+      "xy": [
+        0.13522941609050493,
+        -0.10774677525773252
+      ],
+      "yaw_deg": -171.100038119943,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.13522941609050493,
+        -0.10774677525773252,
+        0.8696622038073838
+      ],
+      "actor_origin_world_m": [
+        0.1352316999152672,
+        -0.10774370001052593,
+        0.7440074344053864
+      ],
+      "actor_q_wxyz": [
+        0.0548635382087797,
+        0.0548635382087797,
+        -0.7049751713182627,
+        -0.7049751713182627
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6955247767174776,
+        "right": 0.584170986085716
+      },
+      "nearest_arm_margin_m": 0.11135379063176154,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 36,
+      "seed": 100036,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "right",
+      "pose_class": "diagonal",
+      "xy": [
+        0.1070459418251673,
+        -0.11942616426881973
+      ],
+      "yaw_deg": -38.357686764130975,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.1070459418251673,
+        -0.11942616426881973,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        0.008515203005757366,
+        -0.04144658624588664,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.4355635147780058,
+        0.0,
+        -0.0,
+        -0.9001579997946082
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7114752786194907,
+        "right": 0.6272462101452285
+      },
+      "nearest_arm_margin_m": 0.08422906847426215,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 37,
+      "seed": 100037,
+      "model_id": 4,
+      "brand": "Fanta",
+      "arm": "left",
+      "pose_class": "horizontal",
+      "xy": [
+        -0.14188412525304236,
+        -0.0701941309703079
+      ],
+      "yaw_deg": 186.13058892259647,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.14188412525304236,
+        -0.0701941309703079,
+        0.7753411975502967
+      ],
+      "actor_origin_world_m": [
+        -0.021902199452437654,
+        -0.057306971155171575,
+        0.7753411975502967
+      ],
+      "actor_q_wxyz": [
+        0.6682832817236809,
+        0.0,
+        0.0,
+        0.7439068862220778
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6604913085274373,
+        "right": 0.7656504393482267
+      },
+      "nearest_arm_margin_m": 0.10515913082078943,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 38,
+      "seed": 100038,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "right",
+      "pose_class": "horizontal",
+      "xy": [
+        0.15036359989774273,
+        -0.09007706497884815
+      ],
+      "yaw_deg": -6.080183843691747,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.15036359989774273,
+        -0.09007706497884815,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        0.025415973588969812,
+        -0.07676497420629382,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.6686104373708395,
+        0.0,
+        -0.0,
+        -0.743612858306508
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7551444663364099,
+        "right": 0.6416991786831184
+      },
+      "nearest_arm_margin_m": 0.11344528765329143,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 39,
+      "seed": 100039,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "right",
+      "pose_class": "upright",
+      "xy": [
+        0.11717749379372386,
+        -0.09991174825640266
+      ],
+      "yaw_deg": 27.4855872721474,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.11717749379372386,
+        -0.09991174825640266,
+        0.8696622038073838
+      ],
+      "actor_origin_world_m": [
+        0.11717630922153369,
+        -0.0999153910286509,
+        0.7440074344053864
+      ],
+      "actor_q_wxyz": [
+        0.6868636978636135,
+        0.6868636978636135,
+        0.1679829174562782,
+        0.1679829174562782
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6911643689214636,
+        "right": 0.5952003358498289
+      },
+      "nearest_arm_margin_m": 0.0959640330716347,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 40,
+      "seed": 100040,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "left",
+      "pose_class": "diagonal",
+      "xy": [
+        -0.12607943544306188,
+        -0.13911771890675678
+      ],
+      "yaw_deg": 219.42075060761215,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.12607943544306188,
+        -0.13911771890675678,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        -0.030318452446463,
+        -0.06040066196968981,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.42719414220902696,
+        0.0,
+        0.0,
+        0.9041599221721197
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6078644465878222,
+        "right": 0.7090607945674281
+      },
+      "nearest_arm_margin_m": 0.10119634797960586,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 41,
+      "seed": 100041,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "right",
+      "pose_class": "diagonal",
+      "xy": [
+        0.10206378536383078,
+        -0.13987832748685747
+      ],
+      "yaw_deg": 232.7701068331246,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.10206378536383078,
+        -0.13987832748685747,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        0.17706251724273686,
+        -0.04117811910883877,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.3192065400322867,
+        0.0,
+        0.0,
+        0.9476851717741585
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6954597399578328,
+        "right": 0.613315498785236
+      },
+      "nearest_arm_margin_m": 0.08214424117259689,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 42,
+      "seed": 100042,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "left",
+      "pose_class": "horizontal",
+      "xy": [
+        -0.14296829970844094,
+        -0.13012195322054923
+      ],
+      "yaw_deg": -6.879175156472252,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.14296829970844094,
+        -0.13012195322054923,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        -0.2660377437540466,
+        -0.11527429819984365,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.6634093754036383,
+        0.0,
+        -0.0,
+        -0.7482566408836974
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6113942337569194,
+        "right": 0.7244985210592103
+      },
+      "nearest_arm_margin_m": 0.11310428730229094,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 43,
+      "seed": 100043,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "right",
+      "pose_class": "horizontal",
+      "xy": [
+        0.1281832887532205,
+        -0.10484237291619838
+      ],
+      "yaw_deg": 171.4418956572929,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.1281832887532205,
+        -0.10484237291619838,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        0.2524385434681434,
+        -0.1235440508265658,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.757895872761082,
+        0.0,
+        0.0,
+        0.6523755406602227
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7328258195328254,
+        "right": 0.634012390750681
+      },
+      "nearest_arm_margin_m": 0.09881342878214439,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 44,
+      "seed": 100044,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "right",
+      "pose_class": "diagonal",
+      "xy": [
+        0.14835733338107351,
+        -0.13837062518542478
+      ],
+      "yaw_deg": 126.38659744317384,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.14835733338107351,
+        -0.13837062518542478,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        0.22289738702005124,
+        -0.2395284300470953,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.9500085755230485,
+        0.0,
+        0.0,
+        0.312223808241249
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7211574491091499,
+        "right": 0.6030781901579546
+      },
+      "nearest_arm_margin_m": 0.11807925895119531,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 45,
+      "seed": 100045,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "right",
+      "pose_class": "diagonal",
+      "xy": [
+        0.10630634404487208,
+        -0.11877816410262719
+      ],
+      "yaw_deg": 59.49627419958972,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.10630634404487208,
+        -0.11877816410262719,
+        0.777264574944973
+      ],
+      "actor_origin_world_m": [
+        0.04252233387044643,
+        -0.2270404434385171,
+        0.7772672598361969
+      ],
+      "actor_q_wxyz": [
+        0.9647787711897536,
+        0.0,
+        -0.0,
+        -0.2630625831652784
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.711543210524139,
+        "right": 0.6279452627970835
+      },
+      "nearest_arm_margin_m": 0.08359794772705553,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 46,
+      "seed": 100046,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "right",
+      "pose_class": "diagonal",
+      "xy": [
+        0.11221276406642439,
+        -0.07465184468012129
+      ],
+      "yaw_deg": 58.44746101004928,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.11221276406642439,
+        -0.07465184468012129,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        0.047345981317095054,
+        -0.1802872620980482,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.9623306827887114,
+        0.0,
+        -0.0,
+        -0.2718816966318486
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7467462874564084,
+        "right": 0.6628977260555793
+      },
+      "nearest_arm_margin_m": 0.08384856140082908,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 47,
+      "seed": 100047,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "left",
+      "pose_class": "horizontal",
+      "xy": [
+        -0.13069187300532528,
+        -0.1056348327755314
+      ],
+      "yaw_deg": 179.7885195997323,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.13069187300532528,
+        -0.1056348327755314,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        -0.0067308647440236374,
+        -0.10609237856543079,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.708410552189619,
+        0.0,
+        0.0,
+        0.7058006018319899
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6335156107494772,
+        "right": 0.7344995146377665
+      },
+      "nearest_arm_margin_m": 0.10098390388828937,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 48,
+      "seed": 100048,
+      "model_id": 16,
+      "brand": "Sprite",
+      "arm": "left",
+      "pose_class": "upright",
+      "xy": [
+        -0.12182121198529576,
+        -0.08488864561544104
+      ],
+      "yaw_deg": 43.08939288580271,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        -0.12182121198529576,
+        -0.08488864561544104,
+        0.8696622038073838
+      ],
+      "actor_origin_world_m": [
+        -0.1218213730530268,
+        -0.08489247276295744,
+        0.7440074344053864
+      ],
+      "actor_q_wxyz": [
+        0.6577022042580957,
+        0.6577022042580957,
+        0.2596686552397926,
+        0.2596686552397926
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.6070166895783115,
+        "right": 0.7051683707929658
+      },
+      "nearest_arm_margin_m": 0.09815168121465434,
+      "acceptance_requires_settled_pose_check": true
+    },
+    {
+      "index": 49,
+      "seed": 100049,
+      "model_id": 13,
+      "brand": "Coca-Cola",
+      "arm": "right",
+      "pose_class": "horizontal",
+      "xy": [
+        0.12445527140898273,
+        -0.10005157129438877
+      ],
+      "yaw_deg": -4.370700048397958,
+      "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+      "position_reference": "collision_mesh_bbox_center_world",
+      "initial_geometry_center_world_m": [
+        0.12445527140898273,
+        -0.10005157129438877,
+        0.7757570468783379
+      ],
+      "actor_origin_world_m": [
+        0.0008539178457408203,
+        -0.09060454453234251,
+        0.7757570468783379
+      ],
+      "actor_q_wxyz": [
+        0.6796288896681333,
+        0.0,
+        -0.0,
+        -0.733556113960248
+      ],
+      "nearest_arm_distances_m": {
+        "left": 0.7349178023104731,
+        "right": 0.6395141237479987
+      },
+      "nearest_arm_margin_m": 0.09540367856247445,
+      "acceptance_requires_settled_pose_check": true
+    }
+  ],
+  "assets_identity_sha256": "73dd6d0eea8418b9cb6c41f2b6e5f608f22c6086d92977a1c36a7b5008f14d90",
+  "legacy20_nearest_arm_pass_count": 0
+}

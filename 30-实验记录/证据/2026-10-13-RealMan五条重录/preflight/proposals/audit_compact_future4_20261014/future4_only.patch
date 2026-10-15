@@ -1,0 +1,22 @@
+--- planning/bounded_trace_overlay.py
++++ planning/bounded_trace_overlay.py
+@@ -73,7 +73,8 @@
+   'native_physical_geometry_thresholds_and_predicates_changed':False}
+ 
+ def write_audit(path,data,*,newline=False):
+- write_json_stream(path,data,indent=2,allow_nan=False)
++ # Full audit whitespace only: every original key, row and value remains.
++ write_json_stream(path,data,indent=None,allow_nan=False)
+  if newline:
+   with Path(path).open('a') as f:f.write('\n')
+  if isinstance(data,dict) and 'samples' in data:
+@@ -95,7 +96,8 @@
+  expert=importlib.import_module('expert_generation')
+  receipt={'schema':'bounded-native-trace-IO-v1','only_residency_and_serialization_changed':True,
+   'no_recorded_rows_or_contacts_removed':True,'mutable_tail_rows':50,'physics_dt_and_observation_stride_unchanged':True,
+-  'native_v13_v14_full_geometry_checks_retained':True,'live_original_scene_audited':True,'derivations':[]}
++  'native_v13_v14_full_geometry_checks_retained':True,'live_original_scene_audited':True,
++  'full_audit_json_whitespace_layout':'compact; canonical JSON values unchanged','derivations':[]}
+  # v9 write() hashes the complete final audit: preserve SHA256 bytes while streaming.
+  retained._sha=stream_sha
+  receipt['final_report_audit_SHA256_streamed']=True

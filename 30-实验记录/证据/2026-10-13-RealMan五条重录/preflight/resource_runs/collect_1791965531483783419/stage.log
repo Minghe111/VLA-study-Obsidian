@@ -1,0 +1,230 @@
+TASK_STACK_DIAGNOSTIC_ENABLED pid=192137
+{"slot": {"brand": "Coca-Cola", "arm": "left", "pose_class": "upright", "seed": 31400034}, "jobs": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/prepared/slot_0000034_attempt_006_run_config.jobs.json", "domain_randomization": {"random_background": true, "cluttered_table": true, "clean_background_rate": 0.02, "random_head_camera_dis": 0, "random_table_height": 0.03, "random_light": true, "crazy_random_light_rate": 0.02}, "source_guard_count": 601, "hardware_guard_count": 116}
+WORKER_START slot_0000034_randomized_attempt_006 {"index": 34, "seed": 31400034, "model_id": 13, "brand": "Coca-Cola", "arm": "left", "pose_class": "upright", "xy": [-0.09450760542478524, -0.10874301002817889], "yaw_deg": -126.86634644082385, "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright", "position_reference": "collision_mesh_bbox_center_world", "acceptance_requires_settled_pose_check": true, "planning_backend": "full_native", "sampling_revision": "Fresh physical randomized candidate, retaining source slot brand/arm/upright and original sampling metadata; original seed saved separately and actual domain seed changed per attempt or explicitly selected; official demo_randomized DR enabled; nearest equivalent-goal and quality guards applied. Original bottle/robot pose and future command arrays are not restored or loaded.", "grasp_setting": {"lift_axis": "world", "pitch_deg": 10.0, "hand_x": 0.0, "hand_y": 0.085, "hand_z": 0.165, "open_sdk": [1000, 1000, 1000, 1000, 1000, 0], "close_sdk": [650, 670, 610, 610, 887, 0], "finger_force_allocation_N": [0.0, 0.0, 0.12, 0.12, 0.24], "lp_min_main_force_N": 1.15, "feedback_joint_rate_cap_rad_s": 0.16, "hand_joint_stiffness": 20.0, "hand_joint_damping": 0.2}, "grasp_setting_resolution": {"policy": "Exact original DEFAULT_SETTING plus original slot override, no target changes", "original_default_source": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", "original_default_source_sha256": "ab70935c945b4df83edf31b2cb914dff13b8c4c16c8a944fbf23025c1d639ccc", "original_slot_override": {}, "resolved_close_sdk": [650, 670, 610, 610, 887, 0]}, "source_slot_index": 34, "source_seed": 1400034, "actual_domain_seed": 31400034, "domain_seed_policy": "explicit --domain-seed", "rerecord_attempt": 6}
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/site-packages/sapien/wrapper/scene.py", line 116 in step
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/adjust_bottle_20261002/try_coupled_side_entry_v29.py:rgb50_additive", line 45 in initialization_step
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 387 in step
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/randomized_environment_guard.py", line 173 in step
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/collector_quality_overlay.py", line 263 in step
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/\u8bc1\u636e/2026-10-11-RealMan\u4e13\u5bb6\u56de\u653e/shared_frozen_runtime/remote_base_task_snapshot.py:readonly_instrumentation", line 1554 in take_dense_action
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 358 in dense
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/grasp_acquisition_guard.py", line 401 in dense
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 196 in <lambda>
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/\u8bc1\u636e/2026-10-11-RealMan\u4e13\u5bb6\u56de\u653e/shared_frozen_runtime/remote_base_task_snapshot.py:readonly_instrumentation", line 1056 in move
+  File "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/adjust_bottle.py", line 43 in play_once
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 5 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/camera/camera.py", line 335 in _get_rgba
+  File "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/camera/camera.py", line 350 in get_rgba
+  File "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/camera/camera.py", line 324 in get_rgb
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/\u8bc1\u636e/2026-10-11-RealMan\u4e13\u5bb6\u56de\u653e/shared_frozen_runtime/remote_base_task_snapshot.py:readonly_instrumentation", line 466 in get_obs
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 361 in get_obs
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 374 in capture
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 429 in step
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/randomized_environment_guard.py", line 173 in step
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/collector_quality_overlay.py", line 263 in step
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/\u8bc1\u636e/2026-10-11-RealMan\u4e13\u5bb6\u56de\u653e/shared_frozen_runtime/remote_base_task_snapshot.py:readonly_instrumentation", line 1554 in take_dense_action
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 358 in dense
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/grasp_acquisition_guard.py", line 401 in dense
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 196 in <lambda>
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/\u8bc1\u636e/2026-10-11-RealMan\u4e13\u5bb6\u56de\u653e/shared_frozen_runtime/remote_base_task_snapshot.py:readonly_instrumentation", line 1056 in move
+  File "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/adjust_bottle.py", line 43 in play_once
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 5 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+No left camera link
+No right camera link
+CONTACT_CAPTURE_LATCH 2 639.9480322871054 0.19463070733364105
+CONTACT_CAPTURE_LATCH 3 636.3271568425134 0.10903974389794567
+CONTACT_CAPTURE_LATCH 4 889.3970712551804 0.041060682502254094
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/adjust_bottle_20261002/full_mesh_path_audit.py:rgb50_native_shape_count", line 63 in _aabb_gap
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/randomized_environment_guard.py::CarryMeshPathAuditor.audit", line 49 in evaluate
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/randomized_environment_guard.py::CarryMeshPathAuditor.audit", line 4 in audit
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/full_native_carry_planner_v31_plan_carry_to_task_pose_conservative_native_ompl_generated.py", line 235 in plan_carry_to_task_pose
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v6.py", line 27 in plan_carry_to_task_pose
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 294 in plan_path
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v2.py", line 103 in plan_path
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v3.py", line 31 in plan_path
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v5.py", line 91 in _carry_candidate
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v6.py", line 59 in _carry_candidate
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v5.py", line 120 in plan_path
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v7.py", line 85 in plan_path
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v8.py", line 42 in plan_path
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/grasp_acquisition_guard.py", line 395 in plan_path
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 192 in <lambda>
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/\u8bc1\u636e/2026-10-11-RealMan\u4e13\u5bb6\u56de\u653e/shared_frozen_runtime/remote_base_task_snapshot.py:readonly_instrumentation", line 839 in left_move_to_pose
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/\u8bc1\u636e/2026-10-11-RealMan\u4e13\u5bb6\u56de\u653e/shared_frozen_runtime/remote_base_task_snapshot.py:readonly_instrumentation", line 1035 in move
+  File "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/adjust_bottle.py", line 45 in play_once
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 5 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/camera/camera.py", line 335 in _get_rgba
+  File "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/camera/camera.py", line 350 in get_rgba
+  File "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/camera/camera.py", line 324 in get_rgb
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/\u8bc1\u636e/2026-10-11-RealMan\u4e13\u5bb6\u56de\u653e/shared_frozen_runtime/remote_base_task_snapshot.py:readonly_instrumentation", line 466 in get_obs
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 361 in get_obs
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 374 in capture
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 429 in step
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/randomized_environment_guard.py", line 173 in step
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/collector_quality_overlay.py", line 263 in step
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/\u8bc1\u636e/2026-10-11-RealMan\u4e13\u5bb6\u56de\u653e/shared_frozen_runtime/remote_base_task_snapshot.py:readonly_instrumentation", line 1554 in take_dense_action
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 358 in dense
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/grasp_acquisition_guard.py", line 401 in dense
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation.py", line 196 in <lambda>
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/\u8bc1\u636e/2026-10-11-RealMan\u4e13\u5bb6\u56de\u653e/shared_frozen_runtime/remote_base_task_snapshot.py:readonly_instrumentation", line 1056 in move
+  File "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/adjust_bottle.py", line 47 in play_once
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 5 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 50 in _index
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 21 in __init__
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 116 in flush_json
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/expert_generation_save_evidence_bounded_save_generated.py", line 1 in save_evidence
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v2.py", line 100 in save_evidence
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v4.py", line 37 in save_evidence
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/grasp_acquisition_guard.py", line 405 in save_evidence
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 24 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/decoder.py", line 353 in raw_decode
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/decoder.py", line 337 in decode
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/__init__.py", line 346 in loads
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 67 in __iter__
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/observed_trace_audit_v13__load_trace_bounded_loader_generated.py", line 18 in <genexpr>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/observed_trace_audit_v13__load_trace_bounded_loader_generated.py", line 18 in _load_trace
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/observed_full_trace_audit_v13_audit_accepted_actual_trace_bounded_full_generated.py", line 16 in audit_accepted_actual_trace
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/closure_boundary_audit_v14_audit_accepted_actual_trace_v14_bounded_boundary_wrapper_generated.py", line 7 in audit_accepted_actual_trace_v14
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/expert_generation_v9_audit_with_retained_report_bounded_retained_generated.py", line 11 in audit_with_retained_report
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 32 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/decoder.py", line 353 in raw_decode
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/decoder.py", line 337 in decode
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/__init__.py", line 346 in loads
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 67 in __iter__
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/observed_full_trace_audit_v13_audit_accepted_actual_trace_bounded_full_generated.py", line 35 in <listcomp>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/observed_full_trace_audit_v13_audit_accepted_actual_trace_bounded_full_generated.py", line 35 in audit_accepted_actual_trace
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/closure_boundary_audit_v14_audit_accepted_actual_trace_v14_bounded_boundary_wrapper_generated.py", line 7 in audit_accepted_actual_trace_v14
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/expert_generation_v9_audit_with_retained_report_bounded_retained_generated.py", line 11 in audit_with_retained_report
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 32 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 95 in _flush_pending
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 100 in append
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/observed_full_trace_audit_v13_audit_accepted_actual_trace_bounded_full_generated.py", line 93 in audit_accepted_actual_trace
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/closure_boundary_audit_v14_audit_accepted_actual_trace_v14_bounded_boundary_wrapper_generated.py", line 7 in audit_accepted_actual_trace_v14
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/expert_generation_v9_audit_with_retained_report_bounded_retained_generated.py", line 11 in audit_with_retained_report
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 32 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/encoder.py", line 383 in _iterencode_dict
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 54 in _index
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 21 in __init__
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/closure_boundary_audit_v14_audit_accepted_actual_trace_v14_bounded_boundary_wrapper_generated.py", line 1 in audit_accepted_actual_trace_v14
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/expert_generation_v9_audit_with_retained_report_bounded_retained_generated.py", line 11 in audit_with_retained_report
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 32 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/decoder.py", line 353 in raw_decode
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/decoder.py", line 337 in decode
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/__init__.py", line 346 in loads
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 67 in __iter__
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/closure_boundary_audit_v14_reconcile_original_result_bounded_reconcile_generated.py", line 24 in reconcile_original_result
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/closure_boundary_audit_v14_audit_accepted_actual_trace_v14_bounded_boundary_wrapper_generated.py", line 11 in audit_accepted_actual_trace_v14
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/expert_generation_v9_audit_with_retained_report_bounded_retained_generated.py", line 11 in audit_with_retained_report
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 32 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/decoder.py", line 353 in raw_decode
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/decoder.py", line 337 in decode
+  File "/home/admin123/liminghe/miniconda3/envs/robotwin/lib/python3.10/json/__init__.py", line 346 in loads
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 67 in __iter__
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/closure_boundary_audit_v14_reconcile_original_result_bounded_reconcile_generated.py", line 60 in <genexpr>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/closure_boundary_audit_v14_reconcile_original_result_bounded_reconcile_generated.py", line 60 in reconcile_original_result
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/closure_boundary_audit_v14_audit_accepted_actual_trace_v14_bounded_boundary_wrapper_generated.py", line 11 in audit_accepted_actual_trace_v14
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/expert_generation_v9_audit_with_retained_report_bounded_retained_generated.py", line 11 in audit_with_retained_report
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 32 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 132 in write_json_stream
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_overlay.py", line 76 in write_audit
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/expert_generation_v9_audit_with_retained_report_bounded_retained_generated.py", line 1 in audit_with_retained_report
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 32 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+Timeout (0:01:30)!
+Thread 0x000076378484f740 (most recent call first):
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_storage.py", line 132 in write_json_stream
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/bounded_trace_overlay.py", line 76 in write_audit
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/planning/expert_generation_v9_audit_with_retained_report_bounded_retained_generated.py", line 1 in audit_with_retained_report
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_generation_v9.py:retained_v13_audit_selection", line 32 in run
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/expert_v9_settle_wake_v5.py", line 65 in run_episode
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py:private_worker", line 36 in <module>
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/source/rgb50_20261007_v1/worker_settle_wake_v5.py", line 55 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 725 in main
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py", line 777 in <module>
+WORKER_COLLECTED_PENDING_VALIDATION {"name": "slot_0000034_randomized_attempt_006", "accepted": false, "elapsed_s": 1319.5173788070679, "physics_steps": 20070, "rgb_recorded": true, "collected_physical": true, "published_accepted": false, "collection_artifact": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/new_physical_episodes/slot_0000034_randomized_attempt_006/physical_collection_seal.json"}
+PHYSICAL_COLLECTION_EXITED_PENDING_EXPORT {"candidate": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/new_physical_episodes/slot_0000034_randomized_attempt_006", "accepted": false, "collected_physical": true}

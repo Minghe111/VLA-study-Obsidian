@@ -1,0 +1,41 @@
+--- frozen_local/conservative_ompl_overlay.py
++++ server_speed_candidate/conservative_ompl_overlay.py
+@@ -1,4 +1,4 @@
+-"""Independent variant: smaller original RRT extensions, no path simplification.
++"""Server-only speed candidate: small native RRT extensions, native simplification.
+ 
+ Install after the existing window overlay and before observer wrappers. Changes
+ only the three kwargs of each original planner.plan call. It does not resample,
+@@ -10,7 +10,7 @@
+ from pathlib import Path
+ 
+ DIRECTORY=Path(__file__).resolve().parent
+-DEFAULT_POLICY={'time':30.0,'range':0.01,'simplify':False}
++DEFAULT_POLICY={'time':30.0,'range':0.01,'simplify':True}
+ _INSTALLED=None
+ 
+ def _sha(path):
+@@ -23,8 +23,8 @@
+         value=policy[key]
+         if isinstance(value,bool) or not isinstance(value,(int,float)) or not math.isfinite(value) or value<=0:
+             raise ValueError('Positive finite native time/range required')
+-    if policy['range']>0.01 or policy['simplify'] is not False:
+-        raise ValueError('This variant requires at most .01 rad extension and no simplification')
++    if policy['range']>0.01 or policy['simplify'] is not True:
++        raise ValueError('This server variant requires at most .01 rad extension and native simplification')
+ 
+ def derive_conservative_ast(parent,*,policy=None):
+     policy=dict(DEFAULT_POLICY if policy is None else policy);_validate(policy)
+@@ -58,7 +58,11 @@
+     policy=dict(DEFAULT_POLICY if policy is None else policy);_validate(policy)
+     receipt={'overlay_source':str(Path(__file__).resolve()),'overlay_sha256':_sha(__file__),
+         'effective_native_policy':policy,'source_original_bytes_modified':False,
+-        'GPU_scene_or_physics_started_during_install':False,'functions':{}}
++        'GPU_scene_or_physics_started_during_install':False,'functions':{},
++        'variant_id':'realman_server_native_simplify_v1',
++        'base_overlay_source_sha256':'4e8e100a2c8ad63614e3d0912f3e0d5d6821719a10ffab441bebc4054a4e042c',
++        'native_simplification_is_not_a_collision_certificate':True,
++        'physical_speedup_pending_remote_validation':True}
+     names=[('full_native_approach_equivalent_goals_v6','plan_free_approach'),
+            ('full_native_approach_equivalent_goals_dense_v7','plan_free_approach'),
+            ('full_native_carry_planner_v31','plan_carry_to_task_pose')]

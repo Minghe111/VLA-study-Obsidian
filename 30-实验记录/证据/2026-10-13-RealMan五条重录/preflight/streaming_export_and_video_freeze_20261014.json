@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-14",
+  "schema": "streaming-export-and-video-wrapper-freeze-v1",
+  "files": {
+    "streaming_export.py": {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/preflight/streaming_export.py",
+      "sha256": "5688b0f084fb215283c498bbefd9b04670479a93e2d4f403134abe59a3676ce3",
+      "bytes": 34252
+    },
+    "test_streaming_export.py": {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/preflight/test_streaming_export.py",
+      "sha256": "5835dbd21384650c92173909574b98674683c4a556c2a5b992d8f83466556c7c",
+      "bytes": 13099
+    },
+    "streaming_export_small_tests_20261014.log": {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/preflight/streaming_export_small_tests_20261014.log",
+      "sha256": "eb05566df623f3cf126a31d369f835b882c6ce2e14b5390be325fd665ccf6549",
+      "bytes": 2357
+    },
+    "render_staged_video.py": {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/preflight/render_staged_video.py",
+      "sha256": "f6e0392603b714c13c186de9b58a65823724a84fba9abc697183d15878fa6bea",
+      "bytes": 7319
+    },
+    "test_render_staged_video.py": {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/preflight/test_render_staged_video.py",
+      "sha256": "e483497ac2c6210b8c65565ce5f7903da009e95bcf5fb00894d0d2c2144af1bf",
+      "bytes": 5942
+    },
+    "render_staged_video_CPU_tests_20261014.log": {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/preflight/render_staged_video_CPU_tests_20261014.log",
+      "sha256": "5dab5a570f322ce019341188ff260c37f28029ab3d66acff4c6a20c5e55ba791",
+      "bytes": 787
+    }
+  },
+  "small_native_export_equivalence_and_failure_tests": 16,
+  "small_video_wrapper_scope_and_binding_tests": 9,
+  "all_small_CPU_tests_passed": true,
+  "fixtures_synthetic": true,
+  "GPU_or_physical_simulation_started_by_agent": false,
+  "full1340_export_or_video_benchmark_started_by_agent": false,
+  "frozen_original_exporter_not_modified_after_root1340_HDF_benchmark": true,
+  "scope": "Source freeze and bounded CPU unit evidence; actual34 resource benchmark and video encoding belong to root orchestrator",
+  "entry_API": {
+    "HDF": "streaming_export.py --candidate RAW --output NEW --hdf-only [--benchmark-only]",
+    "media": "render_staged_video.py --candidate RAW --output NEW --benchmark-only [--ffmpeg PATH]",
+    "strict_media": "render_staged_video.py --candidate RAW --output NEW [--ffmpeg PATH] (requires streaming_export_staged.py)"
+  }
+}

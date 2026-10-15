@@ -1,0 +1,152 @@
+{
+  "schema": "realman_guarded_stage_v1",
+  "stage": "collect",
+  "check_only": false,
+  "command": [
+    "/home/admin123/liminghe/miniconda3/envs/robotwin/bin/python",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/run_staged_collector.py",
+    "--index",
+    "34",
+    "--attempt",
+    "5",
+    "--domain-seed",
+    "31400034",
+    "--timeout",
+    "2000",
+    "--run"
+  ],
+  "runtime": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime",
+  "unit": "realman-rerecord-protected.service",
+  "limits": {
+    "MemoryAccounting": "yes",
+    "MemoryHigh": "10737418240",
+    "MemoryMax": "12884901888",
+    "MemorySwapMax": "0",
+    "CPUAccounting": "yes",
+    "CPUQuota": "200%",
+    "TasksMax": "128",
+    "Nice": "10",
+    "KillMode": "control-group",
+    "TimeoutStopSec": "10s",
+    "RuntimeMaxSec": "2100",
+    "OOMPolicy": "stop",
+    "IOWeight": "25"
+  },
+  "environment_overrides": {
+    "PATH": "/home/admin123/liminghe/miniconda3/envs/robotwin-official-data/bin:/home/admin123/liminghe/miniconda3/envs/robotwin/bin:/usr/bin:/bin",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "CUDA_VISIBLE_DEVICES": "0",
+    "MPLCONFIGDIR": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime/preflight/protected_mplcache"
+  },
+  "start_minimum_available_bytes": 19327352832,
+  "stop_available_floor_bytes": 6442450944,
+  "low_samples_required": 3,
+  "sample_seconds": 2.0,
+  "gpu_hard_memory_cap": false,
+  "auto_retry": false,
+  "available_before_bytes": 23477665792,
+  "gpu_before": {
+    "healthy": true,
+    "index": 0,
+    "total_bytes": 34190917632,
+    "used_bytes": 930086912,
+    "free_bytes": 32718716928,
+    "utilization_percent": 7,
+    "hard_memory_cap": false
+  },
+  "disk_before_bytes": {
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime": 107943497728
+  },
+  "disk_start_minimum_bytes": 34359738368,
+  "disk_stop_floor_bytes": 17179869184,
+  "orphan_cleanup": null,
+  "source_binding": {
+    "entry_sha256": "4c501060c2973f8c8dda636cd4c5fa74b2615c94e9fb5c4068be86251b7dae03",
+    "guard_sha256": "bb2dcb0f9433edc0e460d86ad78eb644c8a7508a1704872b039f4ce95b8037fb"
+  },
+  "wall_seconds": 473.492757643,
+  "launcher_returncode": 241,
+  "monitor_stop_reason": null,
+  "available_after_bytes": 23471509504,
+  "disk_after_bytes": {
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261014_v5_staged/jobs/slot34_runtime": 107350753280
+  },
+  "peak": {
+    "cgroup_bytes": 2399133696,
+    "rss_sum_bytes": 2348404736,
+    "minimum_available_bytes": 21588467712
+  },
+  "unit_terminal": {
+    "Result": "exit-code",
+    "ExecMainCode": "1",
+    "ExecMainStatus": "241",
+    "ControlGroup": "",
+    "MemoryCurrent": "[not set]",
+    "MemoryPeak": "2399133696",
+    "CPUUsageNSec": "78206202000",
+    "Description": "RealMan rerecord guarded stage collect",
+    "LoadState": "loaded",
+    "ActiveState": "failed",
+    "SubState": "failed"
+  },
+  "worker_terminal": {
+    "stage_returncode": -15,
+    "wall_time_unix": 1791965310.6003745,
+    "resource": {
+      "memory.current": 808214528,
+      "memory.peak": 2399133696,
+      "memory.swap.current": 0,
+      "memory.swap.peak": 0,
+      "memory.swap.max": 0,
+      "pids.current": 1,
+      "pids.peak": 22,
+      "memory.events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0,
+        "sock_throttled": 0
+      },
+      "memory.events.local": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0,
+        "sock_throttled": 0
+      },
+      "memory.swap.events": {
+        "high": 0,
+        "max": 0,
+        "fail": 0
+      },
+      "cpu.stat": {
+        "usage_usec": 78201690,
+        "user_usec": 53927848,
+        "system_usec": 24273842,
+        "nice_usec": 52982000,
+        "core_sched.force_idle_usec": 0,
+        "nr_periods": 4094,
+        "nr_throttled": 2,
+        "throttled_usec": 1278,
+        "nr_bursts": 0,
+        "burst_usec": 0
+      },
+      "rss_sum_bytes": 19779584,
+      "member_pids": [
+        178969
+      ]
+    },
+    "source_unchanged": true
+  },
+  "cgroup_readback_verified": true,
+  "receipt_directory": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/preflight/resource_runs/collect_1791964837629766616",
+  "passed": false
+}

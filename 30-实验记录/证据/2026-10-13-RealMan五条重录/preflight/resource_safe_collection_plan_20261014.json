@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-14",
+  "scope": "User-requested planning only; no new simulation/export/large validation started",
+  "evidence": "Current CodeGraph exact-source exploration plus read-only independent reviews",
+  "current_codegraph_parent_available": true,
+  "source_sha256": {
+    "original_pickle_exporter": {
+      "path": "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/utils/pkl2hdf5.py",
+      "sha256": "c19a77f69d9b5c624c73f0162c2fee7b5f5979bdfddf9fdef3dda020912371bf"
+    },
+    "original_video_exporter": {
+      "path": "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/utils/images_to_video.py",
+      "sha256": "5abee46ae85afc47005acb964bfff2501fabd9b593b2cba8b851585c93619cd7"
+    },
+    "existing_resource_guard": {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealMan五条重录/preflight/run_with_resource_guard.py",
+      "sha256": "eaa8c060f040c2a6eb4ae236c72ee3d7f6ea2885413ece6bfae8bd2983a57e11"
+    },
+    "physical_export_chain": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rgb50_motion_quality_20261013_v3_acquisition/jobs/slot34_runtime/source/rgb50_20261007_v1/generation_runner_v2.py",
+      "sha256": "aa466900867a899654bc7d6f1a5b1d8b643fd22436a1654820849fbce330955c"
+    }
+  },
+  "pipeline": [
+    "actual collect-only and evidence finalization",
+    "normal worker shutdown and resource release",
+    "CPU streaming HDF5 export",
+    "bounded independent data/motion quality",
+    "single video encoder and decode",
+    "next candidate"
+  ],
+  "planned_memory_limits_gib": {
+    "collect": {
+      "high": 10,
+      "max": 12
+    },
+    "export": {
+      "high": 3,
+      "max": 4
+    },
+    "quality": {
+      "high": 2,
+      "max": 3
+    },
+    "render": {
+      "high": 2,
+      "max": 3
+    }
+  },
+  "budget_status": "Initial planning limits, offline phases and whole collector chain require actual bounded validation",
+  "global_single_job_lock": true,
+  "CPU_quota": 200,
+  "swap_for_task": 0,
+  "minimum_host_available_gib_before_start": 18,
+  "host_available_gib_soft_stop_floor": 6,
+  "GPU_hard_cap_available": false,
+  "normal_capture_contract": {
+    "SDK_action_dim": 24,
+    "native_DOF": 36,
+    "RGB_views": 3,
+    "RGB_size": [
+      480,
+      640,
+      3
+    ],
+    "physics_dt_s": 0.004,
+    "observation_every_physics_steps": 15
+  },
+  "source601_and_hardware116_unchanged": true,
+  "ordered_gates": [
+    "small old/new exporter equivalence",
+    "1340-frame streaming resource benchmark, not episode acceptance",
+    "one genuine fully accepted bounded new episode",
+    "serial remaining slots"
+  ],
+  "crash_or_OOM_policy": "Stop queue, record interruption and cgroup result, preserve raw evidence, no automatic retry or acceptance",
+  "partial_34_policy": "Use raw caches for bounded exporter validation; only count as accepted if every original physical/source/clock/hardware/motion proof can be closed without inventing terminal evidence"
+}

@@ -1,0 +1,77 @@
+hardware_io: false
+rgb_profile:
+  width: 640
+  height: 480
+  format: RGB8
+  fps: 30
+  device_profile_source: librealsense D435 USB3 default color stream
+  simulation_fovy_deg: 37
+  simulation_intrinsics_source: RoboTwin Large_D435 nominal pinhole
+  physical_intrinsics_status: read per-device RGB profile K before real collection
+  depth_enabled: false
+  infrared_enabled: false
+  exposure_white_balance_gain: physical firmware defaults; not simulated
+mounts:
+  head_camera:
+    link: camera_link
+    position:
+    - 0
+    - 0.016
+    - 0.0125
+    forward:
+    - 0
+    - 1
+    - 0
+    left:
+    - -1
+    - 0
+    - 0
+    near: 0.005
+    far: 10
+    calibration_status: existing housing estimate; vendor_zero_view
+  left_camera:
+    link: l_link6
+    position:
+    - 0
+    - -0.08
+    - -0.045
+    forward:
+    - 0
+    - -0.18
+    - 0.983666610188635
+    left:
+    - 1
+    - 0
+    - 0
+    near: 0.005
+    far: 10
+    calibration_status: nominal fixed flange mount; not measured
+  right_camera:
+    link: r_link6
+    position:
+    - 0
+    - -0.08
+    - -0.041
+    forward:
+    - 0
+    - -0.18
+    - 0.983666610188635
+    left:
+    - 1
+    - 0
+    - 0
+    near: 0.005
+    far: 10
+    calibration_status: nominal fixed flange mount; not measured
+recording:
+  head_pose_rad:
+    yaw: 0
+    pitch: -0.419
+  extra_optical_pitch_deg: 0
+  save_freq_physics_steps: 15
+  state_action_clock: preserve recorded native timestamps; not 30Hz action labels
+  output_camera_names:
+  - cam_head
+  - cam_left_wrist
+  - cam_right_wrist
+  rgb_only: true

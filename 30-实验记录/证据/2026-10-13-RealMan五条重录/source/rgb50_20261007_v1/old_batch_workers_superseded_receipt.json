@@ -1,0 +1,93 @@
+{
+  "workers": [
+    {
+      "pid": 1245432,
+      "jobs": "batch_initial_left_coke_jobs.json",
+      "module": "expert_generation_v3",
+      "argv": [
+        "/bigdata2/liminghe/envs/robotwin/bin/python",
+        "-u",
+        "-B",
+        "../deploy/realman_gen4/rgb50_20261007_v1/generation_worker.py",
+        "--jobs",
+        "../deploy/realman_gen4/rgb50_20261007_v1/batch_initial_left_coke_jobs.json",
+        "--output",
+        "../deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/left_coke_attempt00",
+        "--timeout",
+        "1600",
+        "--expert-module",
+        "expert_generation_v3",
+        "--backend",
+        "full_native"
+      ]
+    },
+    {
+      "pid": 1254612,
+      "jobs": "batch_initial_sprite_lying_jobs.json",
+      "module": "expert_generation_v4",
+      "argv": [
+        "/bigdata2/liminghe/envs/robotwin/bin/python",
+        "-u",
+        "-B",
+        "../deploy/realman_gen4/rgb50_20261007_v1/generation_worker_v2.py",
+        "--jobs",
+        "../deploy/realman_gen4/rgb50_20261007_v1/batch_initial_sprite_lying_jobs.json",
+        "--output",
+        "../deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/sprite_lying_attempt00",
+        "--timeout",
+        "1600",
+        "--expert-module",
+        "expert_generation_v4",
+        "--backend",
+        "full_native"
+      ]
+    },
+    {
+      "pid": 1254683,
+      "jobs": "batch_initial_sprite_upright_jobs.json",
+      "module": "expert_generation_v4",
+      "argv": [
+        "/bigdata2/liminghe/envs/robotwin/bin/python",
+        "-u",
+        "-B",
+        "../deploy/realman_gen4/rgb50_20261007_v1/generation_worker_v2.py",
+        "--jobs",
+        "../deploy/realman_gen4/rgb50_20261007_v1/batch_initial_sprite_upright_jobs.json",
+        "--output",
+        "../deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/sprite_upright_attempt00",
+        "--timeout",
+        "1600",
+        "--expert-module",
+        "expert_generation_v4",
+        "--backend",
+        "full_native"
+      ]
+    },
+    {
+      "pid": 1255491,
+      "jobs": "batch_initial_fanta_jobs.json",
+      "module": "expert_generation_v4",
+      "argv": [
+        "/bigdata2/liminghe/envs/robotwin/bin/python",
+        "-u",
+        "-B",
+        "../deploy/realman_gen4/rgb50_20261007_v1/generation_worker_v2.py",
+        "--jobs",
+        "../deploy/realman_gen4/rgb50_20261007_v1/batch_initial_fanta_jobs.json",
+        "--output",
+        "../deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/fanta_attempt00",
+        "--timeout",
+        "1600",
+        "--expert-module",
+        "expert_generation_v4",
+        "--backend",
+        "full_native"
+      ]
+    }
+  ],
+  "signal": "SIGINT",
+  "reason": "Fresh v6 collection with independently bit-identical vectorized mesh audit and minimum-rotation final task target",
+  "completed_trials_kept": true,
+  "interrupted_trials_excluded": true,
+  "official_code_or_assets_deleted": false
+}

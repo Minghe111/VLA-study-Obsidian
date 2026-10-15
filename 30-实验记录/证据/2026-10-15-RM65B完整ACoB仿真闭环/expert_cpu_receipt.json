@@ -1,0 +1,46 @@
+{
+  "scope": "CPU teacher/geometry/controller regression only; not native rollout or training success",
+  "created_utc": "2026-10-15T13:19:37.859105+00:00",
+  "success": true,
+  "tests_run": 23,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_s": 0.4706129010010045,
+  "python": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+  "python_version": "3.11.15",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "transforms3d": "0.4.2",
+    "mplib": "0.2.1"
+  },
+  "derived_robotwin_root": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin",
+  "command": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/tests_acob/run_cpu_tests.py --report-dir /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/reports/expert_cpu_validation_v1",
+  "mapping_fixture_or_override": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/tests_acob/fixtures/realman_source_manifest.json",
+    "sha256": "6cac675e0f2228d3b233f82b7082b8df17860d2e18bfd7ba7dcc67ccf3c5d6e5"
+  },
+  "source_sha256": {
+    "integrations/realman_rm65b_gen4/acob_expert.py": "165933c047b0e2d4e08b1cc96cd27018d24ca7ba1ffd1da163cb265af73493d3",
+    "integrations/realman_rm65b_gen4/teacher_legacy/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "integrations/realman_rm65b_gen4/teacher_legacy/continuous_servo.py": "18716a2e0aca64425f1a2a3936bfa4e1f7886b3df7fa31f3b37284e779746c19",
+    "integrations/realman_rm65b_gen4/teacher_legacy/full_mesh_path_audit.py": "6e63def2bc02f1c2bd9e4e90fdd71ee70e58961dddafdc6e858a235ce454a9f9",
+    "integrations/realman_rm65b_gen4/teacher_legacy/full_mesh_path_audit_bounded.py": "c9803dcc88a261d3b53535fe5fd748fef4bc5b6e0ef30d4e2d50efb175d59477",
+    "integrations/realman_rm65b_gen4/teacher_legacy/purecontact_lp_v26.py": "a8c9be5237c9a1b2fe7d0e085f5e7cf0fcdeddb03f3780aab34585a54c457f3f",
+    "tests_acob/_test_paths.py": "f87d4afd6db60fff8e58237fdf03a3cb25b141dd3629be5672946ea3a2deab8f",
+    "tests_acob/fixtures/realman_source_manifest.json": "6cac675e0f2228d3b233f82b7082b8df17860d2e18bfd7ba7dcc67ccf3c5d6e5",
+    "tests_acob/fixtures/retained_grasp_v2.py": "15751319ef54ddaaa9bd716177d393437205e4c9b35cfddee0fd6bb07fcbe8b5",
+    "tests_acob/fixtures/source_manifest.json": "e9854e147416104d07b1552265cda21da9fedb0fa5d7e294f5ddd278634f10f0",
+    "tests_acob/run_cpu_tests.py": "d397ff084fcbe41bb6cdb5ae08f6485f47be65f031bc911ac9c3088f0f91a322",
+    "tests_acob/test_bounded_audit_cpu.py": "d03c62b08a4b7807d8be400828d15387ccb5af36798ceb757c1abaf8947fc657",
+    "tests_acob/test_contact_readiness_cpu.py": "a84ff642621e50006ffe85e6a5337a171652cdf708956f1ca8af28921116794c",
+    "tests_acob/test_teacher_cpu.py": "25965a0310153aa927d8a3383a9556dea334d6ba4bbfedab6cb63aa066b2f609"
+  },
+  "source_bytes_unchanged_during_tests": true,
+  "notes": [
+    "MPlib/FCL construction in tests is CPU-only; no SAPIEN scene or policy model is constructed.",
+    "Historical geometry and vendor mapping fixtures have retained provenance hashes.",
+    "An independent native rollout is required to establish expert task success."
+  ]
+}

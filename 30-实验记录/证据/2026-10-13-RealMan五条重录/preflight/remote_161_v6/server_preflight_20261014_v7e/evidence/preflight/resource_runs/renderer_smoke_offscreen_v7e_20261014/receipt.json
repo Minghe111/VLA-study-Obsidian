@@ -1,0 +1,461 @@
+{
+  "schema": "realman_guarded_stage_v1",
+  "stage": "renderer_smoke",
+  "check_only": false,
+  "command": [
+    "/bigdata/liminghe/VLA-benchmark/deploy/realman_gen4/simulation_conda/robotwin/bin/python",
+    "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v7e/evidence/preflight/renderer_only_smoke.py",
+    "--offscreen-example"
+  ],
+  "runtime": "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v7e/evidence",
+  "unit": "realman-rerecord-20261014-v6-hybrid-v7e-renderer_smoke-c6ac1b274f0248d98fb3eeb1ca8c6698.service",
+  "limits": {
+    "MemoryAccounting": "yes",
+    "MemoryHigh": "10737418240",
+    "MemoryMax": "12884901888",
+    "MemorySwapMax": "not-enforceable-on-v1",
+    "CPUAccounting": "yes",
+    "CPUQuota": "800%",
+    "TasksMax": "128",
+    "Nice": "10",
+    "KillMode": "control-group",
+    "TimeoutStopSec": "10s",
+    "RuntimeMaxSec": "300",
+    "OOMPolicy": "stop"
+  },
+  "environment_overrides": {
+    "PATH": "/bigdata/liminghe/VLA-benchmark/deploy/realman_gen4/simulation_conda/robotwin/bin:/usr/bin:/bin",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "CUDA_VISIBLE_DEVICES": "0",
+    "MPLCONFIGDIR": "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v7e/evidence/preflight/protected_mplcache"
+  },
+  "sample_seconds": 2.0,
+  "gpu_hard_memory_cap": false,
+  "all_eight_gpu_floor_required": true,
+  "auto_retry": false,
+  "available_before_bytes": 1060857257984,
+  "gpu_before": {
+    "healthy": true,
+    "index": 0,
+    "uuid": "GPU-cc40cb93-6236-38b8-0fcd-f590b566b885",
+    "pci_bus_id": "00000000:0C:00.0",
+    "driver_version": "570.133.07",
+    "total_bytes": 51527024640,
+    "used_bytes": 16777216,
+    "free_bytes": 42614128640,
+    "minimum_free_index": 1,
+    "cards": [
+      {
+        "index": 0,
+        "uuid": "GPU-cc40cb93-6236-38b8-0fcd-f590b566b885",
+        "pci_bus_id": "00000000:0C:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 16777216,
+        "free_bytes": 50892636160,
+        "utilization_percent": 0
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-0456ab90-0313-ebf1-4073-d6adabe0c513",
+        "pci_bus_id": "00000000:1F:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 8296333312,
+        "free_bytes": 42614128640,
+        "utilization_percent": 0
+      },
+      {
+        "index": 2,
+        "uuid": "GPU-8a62012d-c59e-a17b-4665-ddc8beff6dde",
+        "pci_bus_id": "00000000:32:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 17825792,
+        "free_bytes": 50892636160,
+        "utilization_percent": 0
+      },
+      {
+        "index": 3,
+        "uuid": "GPU-743fa7ac-7bd4-9c16-18ab-579294af1aaf",
+        "pci_bus_id": "00000000:45:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 15728640,
+        "free_bytes": 50893684736,
+        "utilization_percent": 0
+      },
+      {
+        "index": 4,
+        "uuid": "GPU-b84eba0f-7545-20ce-aa91-f0209da3150e",
+        "pci_bus_id": "00000000:58:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 15728640,
+        "free_bytes": 50893684736,
+        "utilization_percent": 0
+      },
+      {
+        "index": 5,
+        "uuid": "GPU-5af38d9f-f2ed-75b2-a873-0a405151356d",
+        "pci_bus_id": "00000000:84:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 15728640,
+        "free_bytes": 50893684736,
+        "utilization_percent": 0
+      },
+      {
+        "index": 6,
+        "uuid": "GPU-b9c5293e-8856-6b5c-e004-d53cb671694d",
+        "pci_bus_id": "00000000:AC:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 15728640,
+        "free_bytes": 50893684736,
+        "utilization_percent": 0
+      },
+      {
+        "index": 7,
+        "uuid": "GPU-ba182ab6-d9c0-2df8-dbe9-4a9141dc2188",
+        "pci_bus_id": "00000000:D4:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 15728640,
+        "free_bytes": 50893684736,
+        "utilization_percent": 0
+      }
+    ],
+    "all_eight_gpu_floor_required": true,
+    "hard_memory_cap": false
+  },
+  "disk_before_bytes": {
+    "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v7e/evidence": 1473645875200
+  },
+  "start_minimum_available_bytes": 19327352832,
+  "stop_available_floor_bytes": 6442450944,
+  "low_samples_required": 3,
+  "disk_start_minimum_bytes": 34359738368,
+  "disk_stop_floor_bytes": 17179869184,
+  "source_binding": {
+    "entry_sha256": "1125e2c46b0081c952d0e0d7ddf23ecc43bfa7f220b84d11ee50ac961e2ab233",
+    "guard_sha256": "f47c12148b616b54eb2350038d8b434d4a18b6e603881013d70f4b2d65a7b842",
+    "cgroup_adapter_sha256": "d76fb7e6882b52625e4913be0631ef93e082601994d21077903f3456cbfc1b4b",
+    "release_contract_sha256": "7fbc657ed6cc53b4715645102eaaa11980e873a91dfbaf2d5288b435c7ef1661",
+    "diagnostics_sha256": null
+  },
+  "cgroup_mode_required": "v1",
+  "swap_guarantee": "zero_observed_not_hard_disabled",
+  "swap_accounting_source": "v1 memory.stat swap and total_swap, bracketed",
+  "memory_usage_and_memsw_difference_role": "diagnostic_only_fuzzy",
+  "vulkan_runtime": {
+    "gpucomp": {
+      "path": "/lib/x86_64-linux-gnu/libnvidia-gpucomp.so.570.133.07",
+      "real_path": "/usr/lib/x86_64-linux-gnu/libnvidia-gpucomp.so.570.133.07",
+      "sha256": "66178cf6eef724402b77193665ab1defede1b36a6333d81423b48ee32f0742dc",
+      "bytes": 63745800
+    },
+    "nvidia_icd": {
+      "path": "/usr/share/vulkan/icd.d/nvidia_icd.json",
+      "real_path": "/usr/share/vulkan/icd.d/nvidia_icd.json",
+      "sha256": "46cee75b42b43649839bc7f29820d36ac6e85782b792a97d5b91d9adbca8ca09",
+      "bytes": 140
+    },
+    "driver": {
+      "kernel_module_version": "570.133.07",
+      "nvidia_smi_versions": [
+        "570.133.07",
+        "570.133.07",
+        "570.133.07",
+        "570.133.07",
+        "570.133.07",
+        "570.133.07",
+        "570.133.07",
+        "570.133.07"
+      ]
+    }
+  },
+  "renderer_child_environment": {
+    "LD_PRELOAD": "/lib/x86_64-linux-gnu/libnvidia-gpucomp.so.570.133.07",
+    "VK_ICD_FILENAMES": "/usr/share/vulkan/icd.d/nvidia_icd.json"
+  },
+  "bundle_manifest_sha256": "7e5dc1705b504a6e03a34fc7a874f02d1c8d23ac6c6a74aa604ce33a1344209b",
+  "renderer_smoke_gate": null,
+  "renderer_smoke_attempt": {
+    "path": "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v7e/evidence/preflight/resource_runs/renderer_smoke_attempt_offscreen_5a6976ba-b91a-45b8-98aa-b57464b003d1_00000110832327574473_9d57ea9409bc492487b49cfbf1a16479.json",
+    "sha256": "20e240aba4897219e0ef15b6494cb94a05b8759d27c85c533214bc73ebdeb9f8"
+  },
+  "preflight_probe": {
+    "path": "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v7e/evidence/preflight/resource_runs/cpu_probe_1791978187039799729/receipt.json",
+    "sha256": "6fe6f11404eaa6357a94f85aed5b5c7af113000757acfaa45d5f6581f3b8fe8a",
+    "passed": true,
+    "guard_sha256": "f47c12148b616b54eb2350038d8b434d4a18b6e603881013d70f4b2d65a7b842",
+    "adapter_sha256": "d76fb7e6882b52625e4913be0631ef93e082601994d21077903f3456cbfc1b4b",
+    "probe_sha256": "4a613367c585f29699378c97acf5837372e878ed20cb8a90228c041e42103ab1"
+  },
+  "available_after_probe_bytes": 1060847083520,
+  "disk_after_probe_bytes": {
+    "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v7e/evidence": 1473645789184
+  },
+  "gpu_after_probe": {
+    "healthy": true,
+    "index": 0,
+    "uuid": "GPU-cc40cb93-6236-38b8-0fcd-f590b566b885",
+    "pci_bus_id": "00000000:0C:00.0",
+    "driver_version": "570.133.07",
+    "total_bytes": 51527024640,
+    "used_bytes": 16777216,
+    "free_bytes": 42614128640,
+    "minimum_free_index": 1,
+    "cards": [
+      {
+        "index": 0,
+        "uuid": "GPU-cc40cb93-6236-38b8-0fcd-f590b566b885",
+        "pci_bus_id": "00000000:0C:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 16777216,
+        "free_bytes": 50892636160,
+        "utilization_percent": 0
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-0456ab90-0313-ebf1-4073-d6adabe0c513",
+        "pci_bus_id": "00000000:1F:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 8296333312,
+        "free_bytes": 42614128640,
+        "utilization_percent": 0
+      },
+      {
+        "index": 2,
+        "uuid": "GPU-8a62012d-c59e-a17b-4665-ddc8beff6dde",
+        "pci_bus_id": "00000000:32:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 17825792,
+        "free_bytes": 50892636160,
+        "utilization_percent": 0
+      },
+      {
+        "index": 3,
+        "uuid": "GPU-743fa7ac-7bd4-9c16-18ab-579294af1aaf",
+        "pci_bus_id": "00000000:45:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 15728640,
+        "free_bytes": 50893684736,
+        "utilization_percent": 0
+      },
+      {
+        "index": 4,
+        "uuid": "GPU-b84eba0f-7545-20ce-aa91-f0209da3150e",
+        "pci_bus_id": "00000000:58:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 15728640,
+        "free_bytes": 50893684736,
+        "utilization_percent": 0
+      },
+      {
+        "index": 5,
+        "uuid": "GPU-5af38d9f-f2ed-75b2-a873-0a405151356d",
+        "pci_bus_id": "00000000:84:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 15728640,
+        "free_bytes": 50893684736,
+        "utilization_percent": 0
+      },
+      {
+        "index": 6,
+        "uuid": "GPU-b9c5293e-8856-6b5c-e004-d53cb671694d",
+        "pci_bus_id": "00000000:AC:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 15728640,
+        "free_bytes": 50893684736,
+        "utilization_percent": 0
+      },
+      {
+        "index": 7,
+        "uuid": "GPU-ba182ab6-d9c0-2df8-dbe9-4a9141dc2188",
+        "pci_bus_id": "00000000:D4:00.0",
+        "driver_version": "570.133.07",
+        "total_bytes": 51527024640,
+        "used_bytes": 15728640,
+        "free_bytes": 50893684736,
+        "utilization_percent": 0
+      }
+    ],
+    "all_eight_gpu_floor_required": true,
+    "hard_memory_cap": false
+  },
+  "boot_id": "5a6976ba-b91a-45b8-98aa-b57464b003d1",
+  "probe_binding_verified": true,
+  "launcher_returncode": 0,
+  "unit_terminal": {
+    "MainPID": "0",
+    "Result": "success",
+    "ExecMainCode": "0",
+    "ExecMainStatus": "0",
+    "ControlGroup": "",
+    "MemoryCurrent": "[not set]",
+    "CPUUsageNSec": "[not set]",
+    "User": "",
+    "Group": "",
+    "LoadState": "not-found",
+    "ActiveState": "inactive",
+    "SubState": "dead",
+    "InvocationID": ""
+  },
+  "wall_seconds": 21.463195904012537,
+  "monitor_stop_reason": null,
+  "unit_owner_attestation": {
+    "unit": "realman-rerecord-20261014-v6-hybrid-v7e-renderer_smoke-c6ac1b274f0248d98fb3eeb1ca8c6698.service",
+    "pid": 396448,
+    "uid": 1002,
+    "invocation_id": "16c37c52e47a4675a836ceeda4143b47",
+    "pid_starttime": "11083565",
+    "controller_paths": {
+      "memory": "/sys/fs/cgroup/memory/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-renderer_smoke-c6ac1b274f0248d98fb3eeb1ca8c6698.service",
+      "cpu": "/sys/fs/cgroup/cpu,cpuacct/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-renderer_smoke-c6ac1b274f0248d98fb3eeb1ca8c6698.service",
+      "pids": "/sys/fs/cgroup/pids/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-renderer_smoke-c6ac1b274f0248d98fb3eeb1ca8c6698.service"
+    },
+    "boot_id": "5a6976ba-b91a-45b8-98aa-b57464b003d1"
+  },
+  "peak": {
+    "cgroup_bytes": 326959104,
+    "rss_sum_bytes": 373260288,
+    "minimum_available_bytes": 1060655472640
+  },
+  "last_resource_sample": {
+    "mode": "v1",
+    "memory.current": 10919936,
+    "memory.peak": 326959104,
+    "memory.swap.current": 0,
+    "memory.stat.swap_before_bytes": 0,
+    "memory.stat.total_swap_before_bytes": 0,
+    "memory.stat.swap_after_bytes": 0,
+    "memory.stat.total_swap_after_bytes": 0,
+    "memory.usage_in_bytes.raw": 10919936,
+    "memory.memsw.usage_in_bytes.raw": 10919936,
+    "memory.memsw_minus_memory.diagnostic_bytes": 0,
+    "memory.memsw.max_usage": 326959104,
+    "pids.current": 1,
+    "memory.events": {
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "memsw_max": 0
+    },
+    "memory.oom_control": {
+      "oom_kill_disable": 0,
+      "under_oom": 0,
+      "oom_kill": 0
+    },
+    "cpu.stat": {
+      "nr_periods": 191,
+      "nr_throttled": 0,
+      "throttled_time": 0
+    },
+    "member_pids": [
+      396448
+    ],
+    "member_vm_swap_bytes": {
+      "396448": 0
+    },
+    "rss_sum_bytes": 17776640,
+    "swap_zero_observed": true
+  },
+  "swap_observation_count": 10,
+  "maximum_sample_gap_seconds": 2.3446515199902933,
+  "tail_sample_gap_seconds": 2.0169981099897996,
+  "gate_release_elapsed_seconds": 0.6206747540127253,
+  "unit_exit_elapsed_seconds": 21.450055690002046,
+  "resource_samples_sha256": "d0914013dc815bf0c135213fb4a052a27c629cb986b286779943c9426671d57e",
+  "swap_zero_observed": true,
+  "available_after_bytes": 1060910321664,
+  "disk_after_bytes": {
+    "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v7e/evidence": 1473645694976
+  },
+  "worker_terminal": {
+    "stage_returncode": 0,
+    "wall_time_unix": 1791978208.8787668,
+    "resource": {
+      "mode": "v1",
+      "memory.current": 8921088,
+      "memory.peak": 326959104,
+      "memory.swap.current": 0,
+      "memory.stat.swap_before_bytes": 0,
+      "memory.stat.total_swap_before_bytes": 0,
+      "memory.stat.swap_after_bytes": 0,
+      "memory.stat.total_swap_after_bytes": 0,
+      "memory.usage_in_bytes.raw": 8921088,
+      "memory.memsw.usage_in_bytes.raw": 8921088,
+      "memory.memsw_minus_memory.diagnostic_bytes": 0,
+      "memory.memsw.max_usage": 326959104,
+      "pids.current": 1,
+      "memory.events": {
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0,
+        "memsw_max": 0
+      },
+      "memory.oom_control": {
+        "oom_kill_disable": 0,
+        "under_oom": 0,
+        "oom_kill": 0
+      },
+      "cpu.stat": {
+        "nr_periods": 189,
+        "nr_throttled": 0,
+        "throttled_time": 0
+      }
+    },
+    "resource_clean": true,
+    "resource_failure": null,
+    "source_unchanged": true
+  },
+  "cgroup_readback_verified": true,
+  "cgroup_readback": {
+    "mode": "v1",
+    "actual": {
+      "memory.soft_limit_in_bytes": "10737418240",
+      "memory.limit_in_bytes": "12884901888",
+      "memory.memsw.limit_in_bytes": "12884901888",
+      "memory.swappiness": "0",
+      "cpu.cfs_quota_us": "800000",
+      "cpu.cfs_period_us": "100000",
+      "pids.max": "128"
+    },
+    "controller_paths": {
+      "memory": "/sys/fs/cgroup/memory/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-renderer_smoke-c6ac1b274f0248d98fb3eeb1ca8c6698.service",
+      "cpu": "/sys/fs/cgroup/cpu,cpuacct/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-renderer_smoke-c6ac1b274f0248d98fb3eeb1ca8c6698.service",
+      "pids": "/sys/fs/cgroup/pids/system.slice/realman-rerecord-20261014-v6-hybrid-v7e-renderer_smoke-c6ac1b274f0248d98fb3eeb1ca8c6698.service"
+    },
+    "limits_verified": true,
+    "unit": "realman-rerecord-20261014-v6-hybrid-v7e-renderer_smoke-c6ac1b274f0248d98fb3eeb1ca8c6698.service",
+    "pid": 396448,
+    "boot_id": "5a6976ba-b91a-45b8-98aa-b57464b003d1"
+  },
+  "receipt_directory": "/bigdata/liminghe/realman_rerecord/20261014_v6_hybrid_v7e/evidence/preflight/resource_runs/renderer_smoke_offscreen_v7e_20261014",
+  "swap_accounting_last": {
+    "memory.stat.swap_before_bytes": 0,
+    "memory.stat.total_swap_before_bytes": 0,
+    "memory.stat.swap_after_bytes": 0,
+    "memory.stat.total_swap_after_bytes": 0,
+    "memory.usage_in_bytes.raw": 8921088,
+    "memory.memsw.usage_in_bytes.raw": 8921088,
+    "memory.memsw_minus_memory.diagnostic_bytes": 0
+  },
+  "renderer_smoke_result_sha256": "b255fced0ed875d712f8e7436cb2f643a55040256d1dcb33f4f445a0b76affe0",
+  "passed": true
+}

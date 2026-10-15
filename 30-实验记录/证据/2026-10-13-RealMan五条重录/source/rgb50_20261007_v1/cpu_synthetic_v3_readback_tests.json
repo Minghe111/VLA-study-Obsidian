@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "scope": "CPU pose/path/insufficient-publication fixtures only; no new episodes or GPU",
+  "test_count": 11,
+  "tests": [
+    {
+      "name": "real_float32_report_exact",
+      "passed": true,
+      "expected_rejection": false,
+      "error": null
+    },
+    {
+      "name": "heading_tamper_rejected",
+      "passed": true,
+      "expected_rejection": true,
+      "error": "Stored heading differs from exact native float32 producer arithmetic"
+    },
+    {
+      "name": "physical_pose_class_not_relaxed",
+      "passed": true,
+      "expected_rejection": true,
+      "error": "Horizontal/diagonal heading class differs"
+    },
+    {
+      "name": "wrong_nearest_arm_rejected",
+      "passed": true,
+      "expected_rejection": true,
+      "error": "Not actual nearest arm with20mm margin"
+    },
+    {
+      "name": "wrong_axis_rejected",
+      "passed": true,
+      "expected_rejection": true,
+      "error": "Values differ: Actual local+Y axis"
+    },
+    {
+      "name": "nonrigid_matrix_rejected",
+      "passed": true,
+      "expected_rejection": true,
+      "error": "Values differ: Initial rotation orthonormal"
+    },
+    {
+      "name": "producer_relative_path_correct",
+      "passed": true,
+      "expected_rejection": false,
+      "error": null
+    },
+    {
+      "name": "basename_guess_rejected",
+      "passed": true,
+      "expected_rejection": true,
+      "error": "Retained proof escapes its actual trial under fixed producer cwd"
+    },
+    {
+      "name": "cross_trial_absolute_path_rejected",
+      "passed": true,
+      "expected_rejection": true,
+      "error": "Retained proof escapes its actual trial under fixed producer cwd"
+    },
+    {
+      "name": "circular_plus_minus180",
+      "passed": true,
+      "expected_rejection": false,
+      "error": null
+    },
+    {
+      "name": "insufficient_dataset_never_published",
+      "passed": true
+    }
+  ],
+  "original_v1_global_unchanged": true,
+  "new_physics_runs": 0,
+  "gpu_runs": 0
+}

@@ -1,0 +1,140 @@
+{
+  "schema": "vla_precision_rm65b_static_audit_v1",
+  "checked_at_utc": "2026-10-14T13:21:27.057593+00:00",
+  "evidence_type": "local_clone_and_static_source_metadata_audit",
+  "official_repo": "https://github.com/scy-v/VLA-Precision.git",
+  "repos": {
+    "VLA-Precision": {
+      "path": "/home/admin123/liminghe/vla-benchmark/VLA-Precision",
+      "head": "41edacde80d8c9d8146d610202299d71b0e79f7c",
+      "status": "",
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "RLinf": {
+      "path": "/home/admin123/liminghe/vla-benchmark/RLinf",
+      "head": "50f22ad9a7825eeaaf4180dca5300f2fa70758be",
+      "status": "M .github/workflows/ci-tests.yml\n M docs/source-en/rst_source/examples/embodied/robotwin.rst\n M docs/source-zh/rst_source/examples/embodied/robotwin.rst\n M rlinf/envs/__init__.py\n M rlinf/models/embodiment/openpi/dataconfig/__init__.py\n?? evaluations/robotwin/robotwin_realman_adjust_bottle_openpi_pi05_eval.yaml\n?? examples/embodiment/config/env/robotwin_realman_adjust_bottle.yaml\n?? examples/embodiment/config/env/robotwin_realman_eval_seeds.json\n?? examples/embodiment/config/env/robotwin_realman_train_seeds.json\n?? examples/embodiment/config/model/pi0_5_realman.yaml\n?? examples/embodiment/config/robotwin_realman_adjust_bottle_ppo_openpi_pi05.yaml\n?? rlinf/envs/sim/robotwin/realman_env.py\n?? rlinf/models/embodiment/openpi/dataconfig/realman_dataconfig.py\n?? rlinf/models/embodiment/openpi/policies/realman_policy.py\n?? tests/unit_tests/test_openpi_realman.py\n?? tests/unit_tests/test_realman_configs.py\n?? tests/unit_tests/test_realman_cross_repo.py\n?? tests/unit_tests/test_robotwin_realman_env.py",
+      "tracked_diff_sha256": "af1f0779a50fe652cf54d0b7a50dd9c00ada3a963884b9e32bfa702bb245208a"
+    },
+    "RoboTwin": {
+      "path": "/home/admin123/liminghe/vla-benchmark/RoboTwin",
+      "head": "931ce21f4f0e63feab661f349634d5a25bd92681",
+      "status": "?? integrations/realman_rm65b_gen4/RL_ENV.md\n?? integrations/realman_rm65b_gen4/rl_contract.py\n?? integrations/realman_rm65b_gen4/rl_env.py\n?? integrations/realman_rm65b_gen4/rl_factory.py\n?? integrations/realman_rm65b_gen4/rl_smoke.py\n?? integrations/realman_rm65b_gen4/test_rl_env.py",
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "checkpoint": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000",
+    "kind": "native_JAX_Orbax_SFT",
+    "step": 80000,
+    "params_exists": true,
+    "assets_exists": true,
+    "train_state_exists": true,
+    "orbax_tree_leaf_count": 51,
+    "metadata_root_keys": [
+      "custom_metadata",
+      "store_array_data_equal_to_fill_value",
+      "tree_metadata",
+      "use_zarr3"
+    ],
+    "norm_dimensions": {
+      "state": {
+        "mean": 24,
+        "std": 24,
+        "q01": 24,
+        "q99": 24
+      },
+      "actions": {
+        "mean": 24,
+        "std": 24,
+        "q01": 24,
+        "q99": 24
+      }
+    },
+    "norm_sha256": "34cbdd09c831e04549d6c4a4e2eb321fb975bdea13bb816ec8aa3a2332d1ccc5"
+  },
+  "source_checks": [
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000/params/_METADATA",
+      "exists": true,
+      "bytes": 23498,
+      "sha256": "2912d15ba42fe0d742b5ac46e88804dacce69644369b4cf9b7405cf7d8fe7247"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000/params/_sharding",
+      "exists": true,
+      "bytes": 15300,
+      "sha256": "1e9d1ab166a3644c567742d374d6ff2bf61bfa33ec505c36e24a3b34ebf700f3"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000/assets/realman_rgb50_full50/norm_stats.json",
+      "exists": true,
+      "bytes": 5262,
+      "sha256": "34cbdd09c831e04549d6c4a4e2eb321fb975bdea13bb816ec8aa3a2332d1ccc5"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/data_pipeline_v1/data_adapter_rgb50_v1.py",
+      "exists": true,
+      "bytes": 20168,
+      "sha256": "4aaee44efff42054e66d7ec4e5ad4fc418d66d980b3c548d8c744a93c577947c"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/data50_v1/native_index.json",
+      "exists": true,
+      "bytes": 795315,
+      "sha256": "9b21feef1c660900196e35ae3615ec47570d02a34990c3e17df94208b43038df"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/training_v4_batch_save20k/full50_pi05_config_161_v3_batch.py",
+      "exists": true,
+      "bytes": 26880,
+      "sha256": "95e5c5ee5460efbe005c40fa3e025959e85c1c6dfab746f6b346b32fcb0b721f"
+    }
+  ],
+  "data_inventory": {
+    "source_training_hdf_count": 0,
+    "historical_tmp_hdf_root_exists": false,
+    "local_numeric_checkpoints": [
+      "80000"
+    ]
+  },
+  "operation_boundary": {
+    "repository_cloned": true,
+    "dependencies_installed": false,
+    "model_parameters_loaded": false,
+    "weights_converted": false,
+    "simulation_started": false,
+    "training_started": false,
+    "remote_server_accessed": false,
+    "original_source_or_assets_modified": false,
+    "adapter_code_implemented": false
+  },
+  "compatibility": {
+    "static_candidate": true,
+    "native_acob_restore_verified": false,
+    "jax_source_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "acob_pinned_openpi_commit": "2d70d966582e711128ad8358d8dbf23d2cc3d658",
+    "physical_action_dim": 24,
+    "internal_model_action_dim": 32,
+    "model_horizon": 16,
+    "camera_count": 3,
+    "normal_control_ms": 60,
+    "normal_physics_ticks": 15,
+    "physics_dt_ms": 4,
+    "source_factory_max_token_len_explicit": false,
+    "source_factory_dtype": "bfloat16",
+    "source_factory_action_expert_variant": "gemma_300m",
+    "acob_action_expert_variant": "gemma_300m_lora",
+    "native_source_finetuning": "full_parameter_SFT_no_LoRA"
+  },
+  "required_future_gates": [
+    "strict_non_lora_parameter_tree_and_value_wrapper_restore",
+    "same_observation_state_noise_reference_decode_parity",
+    "SDK24_actor_learner_normalization_roundtrip",
+    "actual_executed_mask_m_discount_and_terminal_context",
+    "real_correction_buffer_with_state_matched_original_proposal",
+    "same_protocol_SFT_baseline_and_independent_eval",
+    "single_GPU_JAX_simulator_memory_measurement",
+    "native_pi05_max_token_len_and_tokenizer_identity_resolution"
+  ]
+}

@@ -1,0 +1,24 @@
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Detaching after vfork from child process 391524]
+[Detaching after vfork from child process 391527]
+import_ok
+<string>:1: DeprecationWarning: SapienRenderer is no no longer needed.
+[New Thread 0x7fffe00c1700 (LWP 391535)]
+
+Thread 1 "python" received signal SIGSEGV, Segmentation fault.
+tls_get_addr_tail (dtv=0x5555562da310, the_map=0x0, ti=<optimized out>, ti=<optimized out>) at ../elf/dl-tls.c:758
+758	../elf/dl-tls.c: No such file or directory.
+#0  tls_get_addr_tail (dtv=0x5555562da310, the_map=0x0, ti=<optimized out>, ti=<optimized out>) at ../elf/dl-tls.c:758
+#1  0x00007ffff7fe9dec in __tls_get_addr () at ../sysdeps/x86_64/tls_get_addr.S:55
+#2  0x00007fffea35c88e in ?? () from /lib/x86_64-linux-gnu/libnvidia-gpucomp.so.570.133.07
+#3  0x00007ffff7c84fde in __cxa_finalize (d=0x7fffeb639740) at cxa_finalize.c:83
+#4  0x00007fffe7db95a6 in ?? () from /lib/x86_64-linux-gnu/libnvidia-gpucomp.so.570.133.07
+#5  0x00005555563159e0 in ?? ()
+#6  0xfffffffffffffff8 in ?? ()
+#7  0x00007fffffffd1b0 in ?? ()
+#8  0x00007fffea87063d in ?? () from /lib/x86_64-linux-gnu/libnvidia-gpucomp.so.570.133.07
+#9  0xfffffffffffffff8 in ?? ()
+#10 0x00007ffff7d9eba5 in __GI__dl_catch_exception (exception=<optimized out>, operate=<optimized out>, args=<optimized out>) at dl-error-skeleton.c:182
+#11 0x00007ffff7fe5f36 in _dl_close_worker (map=<optimized out>, force=<optimized out>) at dl-close.c:297
+Backtrace stopped: previous frame inner to this frame (corrupt stack?)

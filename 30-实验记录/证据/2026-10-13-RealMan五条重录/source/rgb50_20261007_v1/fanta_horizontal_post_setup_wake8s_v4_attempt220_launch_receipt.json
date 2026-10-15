@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-07T11:11:13.983989+00:00",
+  "authorized_by_parent": "Only new two-candidate Fanta27/37 GPU7 full3RGB queue after root+independent cleanup source review and freeze; other GPUs untouched",
+  "pid": 1377358,
+  "session_id": 1377358,
+  "command": [
+    "/bigdata2/liminghe/envs/robotwin/bin/python",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/worker_settle_wake_v4.py",
+    "--jobs",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/fanta_horizontal_post_setup_wake8s_v4_attempt220_jobs.json",
+    "--output",
+    "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v7_post_setup_native_wake_v4_fanta_horizontal_attempt220",
+    "--backend",
+    "full_native",
+    "--timeout",
+    "1600"
+  ],
+  "cwd": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1",
+  "env_delta": {
+    "CUDA_VISIBLE_DEVICES": "7",
+    "PYTHONUTF8": "1",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "intended_physical_gpu": 7,
+  "intended_gpu_uuid": "GPU-a5dd1d7f-b669-9b04-38e9-7f955eed265f",
+  "GPU7_compute_apps_before_launch": [],
+  "GPU_runtime_binding_status": "pending_readonly_PID_UUID_check",
+  "log_path": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/fanta_horizontal_post_setup_wake8s_v4_attempt220_worker.log",
+  "output_root": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v7_post_setup_native_wake_v4_fanta_horizontal_attempt220",
+  "source_freeze": {
+    "path": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/collector_settle_wake_v4_source_freeze.json",
+    "sha256": "b3c27aa1bf85c59ecd76da76196f32ffdf34af23e8b0551cb999aa8222590c26"
+  },
+  "jobs": {
+    "path": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/fanta_horizontal_post_setup_wake8s_v4_attempt220_jobs.json",
+    "sha256": "0261c8dee2d247db3a63137af41f6785d7318fe963ba748c40dd7ef6a5f157b8",
+    "indices": [
+      27,
+      37
+    ],
+    "fresh_seeds": [
+      3400027,
+      3400037
+    ]
+  },
+  "all_three_RGB_requested": true,
+  "depth": false,
+  "no_success_or_fix_claim": true,
+  "old_failed_trials_or_accepted_list_rewritten": false,
+  "GPU0_or_other_worker_action_taken": false
+}

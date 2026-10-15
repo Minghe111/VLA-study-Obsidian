@@ -1,0 +1,115 @@
+from integrations.realman_rm65b_gen4.native_robot import RealManRobot
+from types import MethodType
+from envs.robot.robot import Robot
+from envs._base_task import Base_Task
+
+# Physically couple serial joints while retaining all vendor assets and active DOFs.
+def install_hand_coupling(robot):
+    entity=robot.left_entity; q=robot._measured_positions(); records=[]
+    for side in ('left','right'):
+        for name,m in robot._manifest['hands'][side]['mimic'].items():
+            child=entity.find_joint_by_name(name); master=entity.find_joint_by_name(m['joint'])
+            a=float(m.get('multiplier',1)); b=float(m.get('offset',0))
+            assert child.parent_link==master.child_link
+            assert abs(q[name]-a*q[m['joint']]-b)<1e-4
+            child.set_drive_property(0,0,0,mode='force')
+            entity.create_fixed_tendon([child.parent_link.parent,child.parent_link,child.child_link],
+                [0,-a,1],[0,-1/a,1],rest_length=b,stiffness=1000,damping=.01)
+            records.append({'joint':name,'master':m['joint'],'multiplier':a,'stiffness':1000,'follower_drive':0})
+    robot.hand_coupling_audit=records
+    return records
+
+if 'original_initialize_hands' not in globals():original_initialize_hands=RealManRobot._initialize_hands
+
+def initialize_coupled_hands(self):
+    original_initialize_hands(self)
+    # Set the stationary ready initial condition before the scene advances or objects spawn.
+    # All task motions remain physical drive execution.
+    q=np.asarray(self.left_entity.get_qpos()).copy()
+    for side in ['left','right']:
+        for n,v in zip(getattr(self,side+'_arm_joints_name'),ready[side+'_joint_rad']):q[self._joint_index[n]]=v
+        initial=dict(zip(self._hand_joints,q))
+        for n,v in self._hand_maps[side].from_sdk([1000]*5+[0],initial).items():q[self._joint_index[n]]=v
+    self.left_entity.set_qpos(q);self.left_entity.set_qvel(np.zeros_like(q))
+    for n,j in self._hand_joints.items():j.set_drive_target(float(q[self._joint_index[n]]));j.set_drive_velocity_target(0)
+    install_hand_coupling(self)
+    for side in ['left','right']:self.set_hand_angle(side,[1000]*5+[0]);setattr(self,side+'_gripper_val',1.0)
+
+RealManRobot._initialize_hands=initialize_coupled_hands
+
+def velocity_limited_hand_plan(self,side,now_val,target_val):
+    h=self._hand_maps[side]; current=self._measured_positions()
+    def positions(t):
+        sdk=np.rint(self._synergy[side]['close']+t*(self._synergy[side]['open']-self._synergy[side]['close'])).astype(int).tolist()
+        return h.from_sdk(sdk,current)
+    q0=positions(now_val); q1=positions(target_val)
+    span=max(abs(q1[n]-q0[n])/h.limits[n]['velocity'] for n in q0)
+    # Smooth endpoint velocities; peak quintic derivative = 1.875.
+    steps=max(200,int(math.ceil(1.875*span/.004))+2)
+    t=np.linspace(0,1,steps); ramp=10*t**3-15*t**4+6*t**5
+    vals=now_val+(target_val-now_val)*ramp
+    increment=(target_val-now_val)/(steps-1)*1.9
+    return {'num_step':steps,'per_step':increment,'result':vals}
+RealManRobot.left_plan_grippers=lambda self,n,t:velocity_limited_hand_plan(self,'left',n,t)
+RealManRobot.right_plan_grippers=lambda self,n,t:velocity_limited_hand_plan(self,'right',n,t)
+
+def side_entry_grasp(self,actor,arm_tag,pre_dis=.1,target_dis=0,contact_point_id=None):
+    M=actor.get_pose().to_transformation_matrix();px=M[:3,1].copy()
+    if px[0]<0:px=-px
+    px/=np.linalg.norm(px); angle=math.radians(grasp_setting['pitch_deg']);pz=np.array([0,math.cos(angle),-math.sin(angle)])
+    pz-=px*np.dot(px,pz);pz/=np.linalg.norm(pz);py=np.cross(pz,px); R=np.stack([pz,py,-px],axis=1)
+    center=actor.get_contact_point(0,'matrix')[:3,3]
+    g=center-(grasp_setting['hand_z']-.06)*pz-grasp_setting['hand_y']*py-grasp_setting['hand_x']*px
+    return [*(g-pre_dis*py),*mat2quat(R)],[*(g-target_dis*py),*mat2quat(R)]
+
+for label,geometry in [('B10',{'pitch_deg':10,'hand_x':0,'hand_y':.095,'hand_z':.165,'close_sdk':[515,590,590,590,915,0]}),('A0',{'pitch_deg':0,'hand_x':-.025,'hand_y':.100,'hand_z':.163,'close_sdk':[490,540,565,540,940,0]})]:
+    OUT=BASE/f'coupled_side_entry_v2_{label}_20261003_seed7';OUT.mkdir(exist_ok=False)
+    grasp_setting=dict(geometry,open_sdk=[1000]*5+[0])
+    report={'result':'running','task':'adjust_bottle','seed':7,'attempts':[],'grasp_setting':grasp_setting,'hardware_io':False,'source_hashes':{str(p):sha(p) for p in protected}}
+    for side in ['left','right']:
+        args[side+'_embodiment_config'].update(hand_synergy={'open':grasp_setting['open_sdk'],'close':grasp_setting['close_sdk']},hand_joint_stiffness=5,hand_joint_damping=.1)
+        task.robot._hand_config[side].update(args[side+'_embodiment_config'])
+    args.update(seed=7,save_path=str(OUT),save_data=False,save_freq=None,need_plan=True)
+    for name in ['move','take_dense_action','choose_grasp_pose']:
+        if name in task.__dict__:del task.__dict__[name]
+    task.close_env();task.setup_demo(**args)
+    for side in ['left','right']:
+        for suffix in ['plan_path','plan_multi_path']:
+            name=side+'_'+suffix
+            setattr(task.robot,name,MethodType(getattr(Robot,name),task.robot))
+    task.choose_grasp_pose=MethodType(side_entry_grasp,task)
+    steps=[0]; dense_calls=[0]; traces=[]; original_step=task.scene.step
+    initial_fp=np.asarray(task.bottle.get_functional_point(0)[:3]);initial_R=task.bottle.get_pose().to_transformation_matrix()[:3,:3]
+    stage={'name':'ready','gripper':False}
+    def trace_step():
+        original_step();steps[0]+=1
+        q=task.robot._measured_positions();state=bottle_state(task);fp=np.asarray(state['functional_point0'][:3]);rot=np.asarray(state['pose'])[:3,:3]
+        delta=float(np.linalg.norm(fp-initial_fp));angle=float(np.degrees(np.arccos(np.clip((np.trace(initial_R.T@rot)-1)/2,-1,1))))
+        contacts=[c for c in state['hand_contacts'] if c['active_point_count']>0]
+        residual=max(abs(q[n]-float(m['multiplier'])*q[m['joint']]) for h in task.robot._manifest['hands'].values() for n,m in h['mimic'].items())
+        if steps[0]%10==0 or contacts:
+            traces.append({'step':steps[0],'phase':dict(stage),'fp_delta_m':delta,'rotation_delta_deg':angle,'bottle':state,'arm_qpos':{s:[q[n] for n in getattr(task.robot,s+'_arm_joints_name')] for s in ['left','right']},'sdk_measured':{s:task.robot.get_hand_sdk(s) for s in ['left','right']},'sdk_target':{s:task.robot.get_hand_sdk(s,False) for s in ['left','right']},'max_mimic_residual_rad':residual})
+        if stage['name']=='approach' and (delta>.001 or angle>1 or contacts):
+            raise RuntimeError(f'No-push approach guard: delta={delta}, angle={angle}, contacts={contacts}')
+    task.scene.step=trace_step
+    original_dense=Base_Task.take_dense_action
+    def dense_trace(self,seq,**kw):
+        dense_calls[0]+=1;stage['gripper']=seq.get('left_gripper') is not None
+        stage['name']='close' if stage['gripper'] else ('approach' if dense_calls[0]<=3 else 'after_grasp')
+        stage['dense_call']=dense_calls[0]
+        return original_dense(self,seq,**kw)
+    task.take_dense_action=MethodType(dense_trace,task)
+    phase=instrument(task,'plan')
+    try:
+        info,accepted=run_official_episode(task,'plan');report['final_bottle']=bottle_state(task)
+        legal,excess=task.planned_joints_legal();report.update(result='physics_success' if accepted and legal else 'physics_failed',accepted=accepted,plan_success=bool(task.plan_success),joint_limit_excess_rad=float(excess))
+        if accepted and legal:
+            accepted_grasp_setting=copy.deepcopy(grasp_setting);accepted_seed=7;task.save_traj_data(0)
+    except Exception:
+        report.update(result='exception',traceback=traceback.format_exc());print(report['traceback'],flush=True)
+    finally:
+        task.scene.step=original_step
+        report.update(tendons=task.robot.hand_coupling_audit,canonical_sources_unchanged=all(sha(p)==report['source_hashes'][str(p)] for p in protected));write()
+        (OUT/'physics_trace.json').write_text(json.dumps(traces,default=lambda x:x.tolist() if isinstance(x,np.ndarray) else str(x)))
+        print('COUPLED_SIDE_RESULT',label,report['result'],flush=True)
+    if 'accepted_grasp_setting' in globals():break

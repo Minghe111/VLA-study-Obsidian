@@ -1,0 +1,35 @@
+{
+  "schema": "staged-quality-publish-dispatch-freeze-v2",
+  "date_Asia_Shanghai": "2026-10-14",
+  "supersedes_source_version_only": "staged_quality_publish_dispatch_freeze_20261014.json",
+  "files": {
+    "preflight/staged_quality.py": "4112cdc9b3ec3fb85dbee5a096a65c93548b118359a9f853d3f86785a7e6f522",
+    "preflight/publish_staged_patch.py": "b3c9347c6bfa90f952cddb27faf77263fc5501cec4f9f92c2076731456420e3d",
+    "preflight/test_staged_quality.py": "98844e66d855d8a511cf7406f556a21d217b899946cbc0fe1c919ba8e82ba214"
+  },
+  "review_corrections": {
+    "quality_receipt_binds_output_motion_path_and_SHA": true,
+    "candidate_export_quality_directories_pairwise_disjoint_both_directions": true,
+    "publisher_motion_path_SHA_and_C_Q_copy_identity_required": true,
+    "publisher_C_X_Q_R_directories_pairwise_disjoint_both_directions": true
+  },
+  "CPU_fixture_tests": {
+    "passed": true,
+    "count": 22,
+    "elapsed_seconds_reported_by_unittest": 0.024,
+    "native_simulation_started": false,
+    "actual_publication_called": false,
+    "positive_physical_RGB_motion_callbacks_mocked": true,
+    "scope": "Counterexamples and producer/stage boundary metadata checks only. No physical episode acceptance established."
+  },
+  "successful_strict_quality_receipt_fields": {
+    "independent_motion_quality_path": "Q/independent_motion_quality.json",
+    "independent_motion_quality_sha256": "SHA256 of the actual Q file, byte-identical to C copy",
+    "accepted": false,
+    "pending_native_video_full_decode": true
+  },
+  "benchmark_quality_motion_fields": null,
+  "dispatch_CLI": "--publish-five REQUEST_JSON --output NEW_PATCH_DIRECTORY",
+  "collector_resource_guard_seal_overlay_baseexport_modified": false,
+  "actual_five_patch_published": false
+}

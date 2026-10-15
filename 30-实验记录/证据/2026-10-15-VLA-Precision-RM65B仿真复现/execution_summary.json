@@ -1,0 +1,669 @@
+{
+  "date": "2026-10-15",
+  "scope": "RM65-B single-GPU simulation adaptation and bounded no-correction computation loop",
+  "task_root": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1",
+  "precision_commit": "41edacde80d8c9d8146d610202299d71b0e79f7c",
+  "source_openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "target_openpi_commit": "2d70d966582e711128ad8358d8dbf23d2cc3d658",
+  "physical_contract": {
+    "action_dim": 24,
+    "three_native_rgb_shape": [
+      480,
+      640,
+      3
+    ],
+    "normal_control_dt_s": 0.06,
+    "physics_dt_s": 0.004,
+    "ticks_per_target": 15,
+    "model_horizon": 16,
+    "execute_horizon": 1,
+    "ode_steps": 10
+  },
+  "native_sft_baseline": {
+    "label": "rm65b_native_pi05_sft80000_independent_evaluation",
+    "contract": {
+      "physical_action_dimension": 24,
+      "model_action_dimension": 32,
+      "model_horizon": 16,
+      "execute_horizon": 1,
+      "ode_steps": 10,
+      "physics_dt_s": 0.004,
+      "normal_physics_ticks_per_target": 15,
+      "control_dt_s": 0.06,
+      "max_episode_targets": 400,
+      "task_time_budget_s": 24.0,
+      "image_keys": [
+        "base_0_rgb",
+        "left_wrist_0_rgb",
+        "right_wrist_0_rgb"
+      ],
+      "image_shape": [
+        480,
+        640,
+        3
+      ],
+      "image_dtype": "uint8_RGB",
+      "policy": "native OpenPI non-LoRA SFT",
+      "optimizer_created": false,
+      "critic_created": false,
+      "training_started": false
+    },
+    "instruction": "Pick up the bottle and adjust it to an upright position.",
+    "checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000",
+    "normalization_sha256": "34cbdd09c831e04549d6c4a4e2eb321fb975bdea13bb816ec8aa3a2332d1ccc5",
+    "success_mode": "upright_hold",
+    "task_thresholds": {
+      "hold_seconds": 1.0,
+      "min_lift_m": 0.01,
+      "max_upright_angle_deg": 15
+    },
+    "episodes": [
+      {
+        "seed": 2010,
+        "completed": true,
+        "success": false,
+        "control_steps": 400,
+        "return": 0.0,
+        "physics_steps": 6000,
+        "sim_time_s": 24.0,
+        "terminated": false,
+        "truncated": true,
+        "last_native_metrics": {
+          "success": false,
+          "native_success": false,
+          "failure_reason": null,
+          "bottom_gap_m": -5.196069241542034e-07,
+          "upright_angle_deg": 0.6504184635688735,
+          "opposed_contact": false,
+          "opposing_normals_dot": 1.0,
+          "thumb_contact_N": 0.0,
+          "finger_contact_N": 0.0,
+          "table_contact_N": 0.09793108703109352,
+          "hold_seconds": 0.0,
+          "success_mode": "upright_hold"
+        },
+        "last_failure_reason": null,
+        "collection_budget_ended_before_environment": false,
+        "native_success_is_diagnostic_only": true,
+        "reset_info": {
+          "seed": 2010,
+          "physics_step_count": 0,
+          "observation_valid": true,
+          "runtime_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/sft_baseline_v1/runtime/bridge-v26xja_5"
+        },
+        "video": {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/sft_baseline_v1/episode_000/three_views.mp4",
+          "fps": 30.0,
+          "frames": 721,
+          "playback_seconds": 24.033333333333335,
+          "method": "zero-order hold from actual simulator physics clock; final frame appended",
+          "image_size": [
+            240,
+            960
+          ],
+          "policy_images_modified": false
+        }
+      }
+    ],
+    "evaluation_valid": true,
+    "task_learning_established": false,
+    "noise_schedule": "jax.random.normal(PRNGKey(seed+episode*100000+step), (1,16,32))[0]",
+    "native_reward_protocol": "backend sparse rewards unchanged; time-limit failure has reward 0",
+    "wall_clock_seconds": 125.4245301789997,
+    "simulator_log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/sft_baseline_v1/runtime/bridge-v26xja_5/simulator.log",
+    "simulator_worker_exitcode": 0,
+    "completed_episodes": 1,
+    "success_rate": 0.0
+  },
+  "source_target_one_observation_parity": {
+    "passed": true,
+    "scope": "one real simulator observation, same explicit noise, sequential native full-SFT GPU inference",
+    "source_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "target_commit": "2d70d966582e711128ad8358d8dbf23d2cc3d658",
+    "source_output": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/source_sft_sample_v1",
+    "target_output": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/target_sft_sample_v1",
+    "rows": {
+      "sample.npz:normalized_actions": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          16,
+          32
+        ],
+        "dtype": "float32"
+      },
+      "sample.npz:sdk24_actions": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          16,
+          24
+        ],
+        "dtype": "float32"
+      },
+      "sample.npz:normalized_state": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          32
+        ],
+        "dtype": "float32"
+      },
+      "sample.npz:noise": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          16,
+          32
+        ],
+        "dtype": "float32"
+      },
+      "preprocessed.npz:state": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          32
+        ],
+        "dtype": "float64"
+      },
+      "preprocessed.npz:tokenized_prompt": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          200
+        ],
+        "dtype": "int64"
+      },
+      "preprocessed.npz:tokenized_prompt_mask": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          200
+        ],
+        "dtype": "bool"
+      },
+      "preprocessed.npz:base_0_rgb": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8"
+      },
+      "preprocessed.npz:base_0_rgb_mask": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [],
+        "dtype": "bool"
+      },
+      "preprocessed.npz:left_wrist_0_rgb": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8"
+      },
+      "preprocessed.npz:left_wrist_0_rgb_mask": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [],
+        "dtype": "bool"
+      },
+      "preprocessed.npz:right_wrist_0_rgb": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8"
+      },
+      "preprocessed.npz:right_wrist_0_rgb_mask": {
+        "equal": true,
+        "max_abs_error": 0.0,
+        "shape": [],
+        "dtype": "bool"
+      }
+    },
+    "general_policy_equivalence_established": false
+  },
+  "zero_lora_acceptance": {
+    "comparison": "target_openpi_full_sft_vs_zero_lora_cached_sampler",
+    "source_openpi_runtime_compared": false,
+    "normalized_action_max_abs_error": 0.0048828125,
+    "strict_full_sft_parity_passed": false,
+    "cached_sampler_implementation_parity_passed": true,
+    "atol": 1e-05,
+    "rtol": 1e-05,
+    "shape": [
+      1,
+      16,
+      32
+    ],
+    "same_explicit_noise": true,
+    "diagnostics": {
+      "native_full_vs_native_zero_lora_max_abs_error": 0.0048828125,
+      "native_zero_lora_vs_cached_max_abs_error": 0.0,
+      "native_dtype": "float32",
+      "native_zero_lora_dtype": "float32",
+      "cached_dtype": "float32"
+    },
+    "arm_radian_max_abs_error": 0.0036736726760864258,
+    "hand_sdk_max_abs_error": 0.8153076171875,
+    "passed": true,
+    "bounded_zero_lora_initialization_passed": true,
+    "engineering_bounds": {
+      "normalized_max_abs": 0.01,
+      "arm_radian_max_abs": 0.005,
+      "hand_sdk_max_abs": 2.0
+    },
+    "acceptance_policy": "cached sampler strict parity plus bounded zero-LoRA graph drift; not exact full-SFT equivalence",
+    "tolerance_revision_evidence": "outputs/restore_v4/zero_lora_parity.json"
+  },
+  "update_result": {
+    "label": "rm65b_acob_no_correction_mechanism_probe",
+    "status": "update_and_checkpoint_probe_completed_evaluation_pending",
+    "full_acob_reproduction": false,
+    "task_learning_established": false,
+    "collection": {
+      "label": "rm65b_acob_no_correction_mechanism_probe",
+      "contract": {
+        "physical_schema": "realman_sdk24",
+        "action_dim": 24,
+        "model_action_dim": 32,
+        "model_horizon": 16,
+        "execute_horizon": 1,
+        "ode_steps": 10,
+        "control_seconds": 0.06,
+        "physics_ticks_per_control": 15,
+        "image_keys": [
+          "base_0_rgb",
+          "left_wrist_0_rgb",
+          "right_wrist_0_rgb"
+        ],
+        "correction_pairs": false
+      },
+      "episodes": [
+        {
+          "seed": 2010,
+          "completed": false,
+          "success": false,
+          "return": 0.0,
+          "control_steps": 8,
+          "collection_budget_ended_before_environment": true
+        }
+      ],
+      "policy_implementation": "ACoB cached sampler; zero-LoRA at initialization is a bounded approximation to the native non-LoRA SFT graph",
+      "source_sft": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000",
+      "instruction": "Pick up the bottle and adjust it to an upright position.",
+      "reward_protocol": "native environment rewards unchanged; finite environment timeout masks bootstrap",
+      "completed_episodes": 0,
+      "accepted_transitions": 8,
+      "nonzero_reward_steps": 0,
+      "positive_reward_steps": 0,
+      "correction_pairs": 0,
+      "partial_rollout_is_not_success_rate_evaluation": true,
+      "transition_files": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/mechanism_probe_v1/collection/transition_000_0000.npz",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/mechanism_probe_v1/collection/transition_000_0001.npz",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/mechanism_probe_v1/collection/transition_000_0002.npz",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/mechanism_probe_v1/collection/transition_000_0003.npz",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/mechanism_probe_v1/collection/transition_000_0004.npz",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/mechanism_probe_v1/collection/transition_000_0005.npz",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/mechanism_probe_v1/collection/transition_000_0006.npz",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/mechanism_probe_v1/collection/transition_000_0007.npz"
+      ]
+    },
+    "parameter_audit": {
+      "changed_parameter_leaves": [
+        "PaliGemma/llm/layers/attn/attn_vec_einsum_1/lora_b",
+        "PaliGemma/llm/layers/attn/kv_einsum_1/lora_b",
+        "PaliGemma/llm/layers/attn/q_einsum_1/lora_b",
+        "PaliGemma/llm/layers/mlp_1/gating_einsum_lora_b",
+        "PaliGemma/llm/layers/mlp_1/linear_lora_b"
+      ],
+      "frozen_changed": [],
+      "trainable_leaves": [
+        "PaliGemma/llm/layers/attn/attn_vec_einsum_1/lora_a",
+        "PaliGemma/llm/layers/attn/attn_vec_einsum_1/lora_b",
+        "PaliGemma/llm/layers/attn/kv_einsum_1/lora_a",
+        "PaliGemma/llm/layers/attn/kv_einsum_1/lora_b",
+        "PaliGemma/llm/layers/attn/q_einsum_1/lora_a",
+        "PaliGemma/llm/layers/attn/q_einsum_1/lora_b",
+        "PaliGemma/llm/layers/mlp_1/gating_einsum_lora_a",
+        "PaliGemma/llm/layers/mlp_1/gating_einsum_lora_b",
+        "PaliGemma/llm/layers/mlp_1/linear_lora_a",
+        "PaliGemma/llm/layers/mlp_1/linear_lora_b"
+      ],
+      "unexpected_trainable": [],
+      "action_expert_lora_changed": true,
+      "frozen_unchanged": true,
+      "reference_parameter_values_unchanged": true,
+      "reference_audit": "per-leaf SHA256 from transient bounded host slices",
+      "partitioned_update": true
+    },
+    "checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/update_partitioned_v3/checkpoint",
+    "post_evaluation_pending": true
+  },
+  "update_metrics": [
+    {
+      "index": 0,
+      "networks": [
+        "critic"
+      ],
+      "seconds": 9.300802810001187,
+      "partitioned_update": true,
+      "batch_files": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/mechanism_probe_v1/collection/transition_000_0000.npz"
+      ],
+      "metrics": {
+        "ablate_critic_pref": 0.0,
+        "batch_reward_mean": 0.0,
+        "chunk_reward": 0.0,
+        "critic_gradient_norm": 112.07865142822266,
+        "critic_loss": 0.20672719180583954,
+        "critic_lr": 0.0003000000142492354,
+        "critic_preprocess_sample_rate": 0.0,
+        "critic_rl_sample_weight_mean": 1.0,
+        "critic_update_norm": 0.5521737933158875,
+        "predicted_advantages": -0.12008872628211975,
+        "predicted_qs": 0.42861413955688477,
+        "predicted_values": 0.5487028360366821,
+        "target_qs": -0.026057960465550423,
+        "td_loss": 0.20672719180583954
+      }
+    },
+    {
+      "index": 1,
+      "networks": [
+        "actor",
+        "critic"
+      ],
+      "seconds": 19.85336607499994,
+      "partitioned_update": true,
+      "batch_files": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_local_5090_rm65b_v1/outputs/mechanism_probe_v1/collection/transition_000_0001.npz"
+      ],
+      "metrics": {
+        "ablate_actor_advantage": 0.0,
+        "ablate_actor_bc": 0.0,
+        "ablate_critic_pref": 0.0,
+        "actor_gradient_norm": 0.0011248484952375293,
+        "actor_loss": 0.01732867956161499,
+        "actor_preprocess_sample_rate": 0.0,
+        "actor_rl_sample_weight_mean": 1.0,
+        "actor_update_norm": 1.646290547796525e-05,
+        "adv_bad_action": -5.739681720733643,
+        "adv_batch_action": -5.739516258239746,
+        "adv_ref_action": -5.739681720733643,
+        "adv_value": -5.739681720733643,
+        "batch_reward_mean": 0.0,
+        "bc_loss": 0.0,
+        "chunk_reward": 0.0,
+        "critic_gradient_norm": 1270.3914794921875,
+        "critic_loss": 105.99649047851562,
+        "critic_lr": 0.0003000000142492354,
+        "critic_preprocess_sample_rate": 0.0,
+        "critic_rl_sample_weight_mean": 1.0,
+        "critic_update_norm": 0.402450293302536,
+        "imp_direct_delta": 0.0,
+        "imp_loss": 0.03465735912322998,
+        "imp_margin": 0.0,
+        "imp_margin_satisfied_rate": 1.0,
+        "imp_tau": 0.05000000074505806,
+        "imp_under_baseline_rate": 0.0,
+        "imp_uses_q_delta": 0.0,
+        "local_delta_advantage": 0.0,
+        "local_delta_q": 0.0,
+        "predicted_advantages": -5.628861427307129,
+        "predicted_qs": -10.398260116577148,
+        "predicted_values": -4.7693986892700195,
+        "q_bad_action": -10.538092613220215,
+        "q_batch_action": -10.537927627563477,
+        "q_ref_action": -10.538092613220215,
+        "q_value": -10.538092613220215,
+        "ref_loss": 0.0,
+        "ref_to_flow_ratio": 0.0,
+        "ref_weight_mean": 1.0,
+        "sample_to_ref_l2": 0.0,
+        "target_qs": -0.10374820977449417,
+        "td_loss": 105.99649047851562
+      }
+    }
+  ],
+  "parameter_audit": {
+    "changed_parameter_leaves": [
+      "PaliGemma/llm/layers/attn/attn_vec_einsum_1/lora_b",
+      "PaliGemma/llm/layers/attn/kv_einsum_1/lora_b",
+      "PaliGemma/llm/layers/attn/q_einsum_1/lora_b",
+      "PaliGemma/llm/layers/mlp_1/gating_einsum_lora_b",
+      "PaliGemma/llm/layers/mlp_1/linear_lora_b"
+    ],
+    "frozen_changed": [],
+    "trainable_leaves": [
+      "PaliGemma/llm/layers/attn/attn_vec_einsum_1/lora_a",
+      "PaliGemma/llm/layers/attn/attn_vec_einsum_1/lora_b",
+      "PaliGemma/llm/layers/attn/kv_einsum_1/lora_a",
+      "PaliGemma/llm/layers/attn/kv_einsum_1/lora_b",
+      "PaliGemma/llm/layers/attn/q_einsum_1/lora_a",
+      "PaliGemma/llm/layers/attn/q_einsum_1/lora_b",
+      "PaliGemma/llm/layers/mlp_1/gating_einsum_lora_a",
+      "PaliGemma/llm/layers/mlp_1/gating_einsum_lora_b",
+      "PaliGemma/llm/layers/mlp_1/linear_lora_a",
+      "PaliGemma/llm/layers/mlp_1/linear_lora_b"
+    ],
+    "unexpected_trainable": [],
+    "action_expert_lora_changed": true,
+    "frozen_unchanged": true,
+    "reference_parameter_values_unchanged": true,
+    "reference_audit": "per-leaf SHA256 from transient bounded host slices",
+    "partitioned_update": true
+  },
+  "checkpoint_roundtrip": {
+    "passed": true,
+    "dynamic_state_exact": true,
+    "frozen_base_sha256": "34618c0a0e7af30ab144dcb60938807484634f7201b0628ce64ef91e340b98e3"
+  },
+  "fresh_process_reload_and_execution": {
+    "label": "rm65b_acob_no_correction_mechanism_probe",
+    "contract": {
+      "physical_schema": "realman_sdk24",
+      "action_dim": 24,
+      "model_action_dim": 32,
+      "model_horizon": 16,
+      "execute_horizon": 1,
+      "ode_steps": 10,
+      "control_seconds": 0.06,
+      "physics_ticks_per_control": 15,
+      "image_keys": [
+        "base_0_rgb",
+        "left_wrist_0_rgb",
+        "right_wrist_0_rgb"
+      ],
+      "correction_pairs": false
+    },
+    "episodes": [
+      {
+        "seed": 2010,
+        "completed": false,
+        "success": false,
+        "return": 0.0,
+        "control_steps": 8,
+        "collection_budget_ended_before_environment": true
+      }
+    ],
+    "policy_implementation": "ACoB cached sampler; zero-LoRA at initialization is a bounded approximation to the native non-LoRA SFT graph",
+    "source_sft": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/checkpoints/pi05_realman_rgb50_all50_full_v1/full50_100k_b64_fallback32_save20k_20261008_v4_bs64_formal100k/80000",
+    "instruction": "Pick up the bottle and adjust it to an upright position.",
+    "reward_protocol": "native environment rewards unchanged; finite environment timeout masks bootstrap",
+    "completed_episodes": 0,
+    "accepted_transitions": 0,
+    "nonzero_reward_steps": 0,
+    "positive_reward_steps": 0,
+    "correction_pairs": 0,
+    "partial_rollout_is_not_success_rate_evaluation": true,
+    "transition_files": []
+  },
+  "resources": {
+    "gpu_preflight_resources": {
+      "exit_code": 0,
+      "effective_exit_code": null,
+      "memory_guard_stopped": false,
+      "wall_time_s": 23.2361741065979,
+      "whole_gpu_peak_gib": 2.130126953125,
+      "process_tree_rss_peak_gib": 1.3741226196289062,
+      "minimum_available_host_gib": 19.24945068359375
+    },
+    "mechanism_probe_v1_resources": {
+      "exit_code": 1,
+      "effective_exit_code": 1,
+      "memory_guard_stopped": false,
+      "wall_time_s": 117.74272561073303,
+      "whole_gpu_peak_gib": 26.88055419921875,
+      "process_tree_rss_peak_gib": 20.036651611328125,
+      "minimum_available_host_gib": 5.844352722167969
+    },
+    "native_sim_seed2010_resources": {
+      "exit_code": 0,
+      "effective_exit_code": null,
+      "memory_guard_stopped": false,
+      "wall_time_s": 14.154228210449219,
+      "whole_gpu_peak_gib": 4.5523681640625,
+      "process_tree_rss_peak_gib": 2.321033477783203,
+      "minimum_available_host_gib": 17.200603485107422
+    },
+    "native_sim_smoke_resources": {
+      "exit_code": 1,
+      "effective_exit_code": null,
+      "memory_guard_stopped": false,
+      "wall_time_s": 13.638402462005615,
+      "whole_gpu_peak_gib": 1.83282470703125,
+      "process_tree_rss_peak_gib": 1.9651908874511719,
+      "minimum_available_host_gib": 17.000503540039062
+    },
+    "reload_partitioned_v3_resources": {
+      "exit_code": 0,
+      "effective_exit_code": 0,
+      "memory_guard_stopped": false,
+      "wall_time_s": 58.60686683654785,
+      "whole_gpu_peak_gib": 21.037353515625,
+      "process_tree_rss_peak_gib": 19.253936767578125,
+      "minimum_available_host_gib": 6.496212005615234
+    },
+    "restore_v1_resources": {
+      "exit_code": 1,
+      "effective_exit_code": null,
+      "memory_guard_stopped": false,
+      "wall_time_s": 23.26528000831604,
+      "whole_gpu_peak_gib": 1.77886962890625,
+      "process_tree_rss_peak_gib": 14.287944793701172,
+      "minimum_available_host_gib": 9.796623229980469
+    },
+    "restore_v2_resources": {
+      "exit_code": 0,
+      "effective_exit_code": null,
+      "memory_guard_stopped": true,
+      "wall_time_s": 55.8474338054657,
+      "whole_gpu_peak_gib": 17.76953125,
+      "process_tree_rss_peak_gib": 23.500770568847656,
+      "minimum_available_host_gib": 1.4638404846191406
+    },
+    "restore_v3_resources": {
+      "exit_code": 2,
+      "effective_exit_code": 2,
+      "memory_guard_stopped": false,
+      "wall_time_s": 0.505582332611084,
+      "whole_gpu_peak_gib": 1.1546630859375,
+      "process_tree_rss_peak_gib": 0.007717132568359375,
+      "minimum_available_host_gib": 24.21377944946289
+    },
+    "restore_v3b_resources": {
+      "exit_code": 1,
+      "effective_exit_code": 1,
+      "memory_guard_stopped": false,
+      "wall_time_s": 48.52019548416138,
+      "whole_gpu_peak_gib": 17.988525390625,
+      "process_tree_rss_peak_gib": 19.592334747314453,
+      "minimum_available_host_gib": 6.188865661621094
+    },
+    "restore_v4_resources": {
+      "exit_code": 1,
+      "effective_exit_code": 1,
+      "memory_guard_stopped": false,
+      "wall_time_s": 39.97652196884155,
+      "whole_gpu_peak_gib": 17.7733154296875,
+      "process_tree_rss_peak_gib": 19.50171661376953,
+      "minimum_available_host_gib": 6.524993896484375
+    },
+    "sft_baseline_v1_resources": {
+      "exit_code": 0,
+      "effective_exit_code": 0,
+      "memory_guard_stopped": false,
+      "wall_time_s": 140.4276406764984,
+      "whole_gpu_peak_gib": 13.06182861328125,
+      "process_tree_rss_peak_gib": 12.793251037597656,
+      "minimum_available_host_gib": 13.033214569091797
+    },
+    "source_sft_sample_v1_resources": {
+      "exit_code": 0,
+      "effective_exit_code": null,
+      "memory_guard_stopped": false,
+      "wall_time_s": 34.479392290115356,
+      "whole_gpu_peak_gib": 9.79071044921875,
+      "process_tree_rss_peak_gib": 12.226188659667969,
+      "minimum_available_host_gib": 11.690868377685547
+    },
+    "target_sft_sample_v1_resources": {
+      "exit_code": 0,
+      "effective_exit_code": null,
+      "memory_guard_stopped": false,
+      "wall_time_s": 19.218750953674316,
+      "whole_gpu_peak_gib": 9.76995849609375,
+      "process_tree_rss_peak_gib": 12.642890930175781,
+      "minimum_available_host_gib": 11.947254180908203
+    },
+    "update_partitioned_v3_resources": {
+      "exit_code": 0,
+      "effective_exit_code": 0,
+      "memory_guard_stopped": false,
+      "wall_time_s": 86.84815573692322,
+      "whole_gpu_peak_gib": 17.81024169921875,
+      "process_tree_rss_peak_gib": 19.343852996826172,
+      "minimum_available_host_gib": 6.486034393310547
+    },
+    "update_probe_v2_resources": {
+      "exit_code": 1,
+      "effective_exit_code": 1,
+      "memory_guard_stopped": false,
+      "wall_time_s": 60.08351492881775,
+      "whole_gpu_peak_gib": 30.63458251953125,
+      "process_tree_rss_peak_gib": 19.740535736083984,
+      "minimum_available_host_gib": 5.99493408203125
+    }
+  },
+  "cpu_contract_tests": {
+    "passed": 28,
+    "failed": 0,
+    "skipped": 0,
+    "receipt": "reports/cpu_contracts_28_target2d.xml"
+  },
+  "full_acob_reproduction": false,
+  "task_learning_established": false,
+  "correction_pairs": 0,
+  "limitations": [
+    "no successful SFT K1 episode in one tested seed",
+    "no valid correction pairs or successful demonstration cache",
+    "no full Replay/Correction/Context streaming pipeline acceptance",
+    "no K>1 effective-prefix learning support",
+    "zero-LoRA graph has bounded drift from native full-SFT, not exact equivalence",
+    "off-policy batch1 mechanism probe does not establish mixed-source batch2+ capacity or SR gains",
+    "one official OpenCV metadata override incompatibility remains recorded"
+  ],
+  "protected_source_comparison_receipt": "reports/protected_source_comparison_final.json"
+}

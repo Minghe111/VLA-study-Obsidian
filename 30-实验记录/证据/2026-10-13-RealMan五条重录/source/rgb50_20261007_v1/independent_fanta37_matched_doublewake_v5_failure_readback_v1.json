@@ -1,0 +1,902 @@
+{
+  "created_utc": "2026-10-07T12:03:22.052835+00:00",
+  "scope": "Read-only full actual trace and preserved native planner proof for failed matched doublewake initialization candidate. No scene steps/GPU or relabeling.",
+  "source_trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v5_gpu7_fanta_left_horizontal37_matched_doublewake_attempt300/slot0000037_candidate_attempt300_v5_matched_doublewake8s",
+  "source_expert_sha256": "d442967bd5e5700c481284205856d37539b39226a9a5e5462d816130f693cba4",
+  "scene_sample_sha256": "6da5ff339520a3a34377d8ff6edc527f514be75798f451994f9855fef822f1ce",
+  "trace_sha256": "679fd1542828ebc30c3db635c3b453df3badb711a745832672bf371a9a61e0c8",
+  "failed_free_path_sha256": "83c67d346970ce462be8d37a4d27045550ff662fcb7fb545aca030685071167f",
+  "reference_trial": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/v7_post_setup_native_wake_v4_fanta_horizontal_attempt220/slot0000037_candidate_attempt220_v7_post_setup_wake8s",
+  "reference_expert_sha256": "0c38a1c095710f37a7c9838ec2d45fb0131478d63d3c68bd5fde538626497c89",
+  "only_spec_difference": {
+    "initial_wake_rounds": 2
+  },
+  "all_other_spec_fields_exact": true,
+  "accepted": false,
+  "canonical_sources_unchanged": true,
+  "extra_settle_receipt": {
+    "requested_extra_seconds": 8,
+    "initial_wake_before_extra_settle": true,
+    "actual_physics_dt_s": 0.004000000189989805,
+    "initial_wake_rounds": 2,
+    "requested_seconds_per_round": 8,
+    "extra_physics_steps_per_round": 2000,
+    "extra_physics_steps": 4000,
+    "actual_extra_simulated_seconds": 16.00000075995922,
+    "step_count_rounding": "round(requested_seconds / actual_scene_timestep)",
+    "completed_extra_physics_steps": 4000,
+    "native_wake": {
+      "requested": true,
+      "wake_calls": 2,
+      "native_state_before": {
+        "native_is_sleeping": true,
+        "native_sleep_threshold": 0.004999999888241291,
+        "bottle_pose_matrix": [
+          [
+            -0.09917354583740234,
+            0.9950252175331116,
+            0.009464148432016373,
+            -0.2656685709953308
+          ],
+          [
+            -0.9939398169517517,
+            -0.099509596824646,
+            0.04670804366469383,
+            -0.08797851204872131
+          ],
+          [
+            0.047417450696229935,
+            -0.004774592816829681,
+            0.9988637566566467,
+            0.7734699249267578
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "linear_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_velocity_rad_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "robot_full_qpos_rad": [
+          1.440302848815918,
+          -1.4338856935501099,
+          0.1718713343143463,
+          -0.17370359599590302,
+          1.2854284048080444,
+          -1.2848105430603027,
+          -0.7795454263687134,
+          0.7786584496498108,
+          0.5846511721611023,
+          -0.5827611684799194,
+          -0.930358350276947,
+          0.9314404129981995,
+          1.1641000509262085,
+          -7.265406338774483e-07,
+          -6.809491992498806e-07,
+          -5.601118004960881e-07,
+          -9.1526132450781e-08,
+          1.1641000509262085,
+          -7.080028581185616e-07,
+          -6.664122338406742e-07,
+          -5.496316930475587e-07,
+          -8.37555447219529e-08,
+          7.304872997337952e-05,
+          2.5439019282202935e-06,
+          2.539300112402998e-06,
+          1.9759324914048193e-06,
+          4.195615019852994e-07,
+          7.280316640390083e-05,
+          2.5138187993434258e-06,
+          2.488573727532639e-06,
+          1.898090999929991e-06,
+          3.006560689300386e-07,
+          4.573346086544916e-05,
+          4.5555727410828695e-05,
+          6.391474744305015e-05,
+          6.366180605255067e-05
+        ]
+      },
+      "native_state_immediately_after": {
+        "native_is_sleeping": false,
+        "native_sleep_threshold": 0.004999999888241291,
+        "bottle_pose_matrix": [
+          [
+            -0.09917354583740234,
+            0.9950252175331116,
+            0.009464148432016373,
+            -0.2656685709953308
+          ],
+          [
+            -0.9939398169517517,
+            -0.099509596824646,
+            0.04670804366469383,
+            -0.08797851204872131
+          ],
+          [
+            0.047417450696229935,
+            -0.004774592816829681,
+            0.9988637566566467,
+            0.7734699249267578
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "linear_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_velocity_rad_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "robot_full_qpos_rad": [
+          1.440302848815918,
+          -1.4338856935501099,
+          0.1718713343143463,
+          -0.17370359599590302,
+          1.2854284048080444,
+          -1.2848105430603027,
+          -0.7795454263687134,
+          0.7786584496498108,
+          0.5846511721611023,
+          -0.5827611684799194,
+          -0.930358350276947,
+          0.9314404129981995,
+          1.1641000509262085,
+          -7.265406338774483e-07,
+          -6.809491992498806e-07,
+          -5.601118004960881e-07,
+          -9.1526132450781e-08,
+          1.1641000509262085,
+          -7.080028581185616e-07,
+          -6.664122338406742e-07,
+          -5.496316930475587e-07,
+          -8.37555447219529e-08,
+          7.304872997337952e-05,
+          2.5439019282202935e-06,
+          2.539300112402998e-06,
+          1.9759324914048193e-06,
+          4.195615019852994e-07,
+          7.280316640390083e-05,
+          2.5138187993434258e-06,
+          2.488573727532639e-06,
+          1.898090999929991e-06,
+          3.006560689300386e-07,
+          4.573346086544916e-05,
+          4.5555727410828695e-05,
+          6.391474744305015e-05,
+          6.366180605255067e-05
+        ]
+      },
+      "immediate_verification": {
+        "numeric_fields_exactly_equal_before_after": [
+          "native_sleep_threshold",
+          "bottle_pose_matrix",
+          "linear_velocity_m_s",
+          "angular_velocity_rad_s",
+          "robot_full_qpos_rad"
+        ],
+        "pose_velocity_threshold_q_before_after_equal": true,
+        "native_after_is_sleeping_false": true,
+        "only_native_sleep_state_allowed_to_change": true
+      },
+      "native_state_after_extra": {
+        "native_is_sleeping": true,
+        "native_sleep_threshold": 0.004999999888241291,
+        "bottle_pose_matrix": [
+          [
+            -0.09924280643463135,
+            0.9950233101844788,
+            0.008921296335756779,
+            -0.26568567752838135
+          ],
+          [
+            -0.9942700266838074,
+            -0.0995175838470459,
+            0.039032526314258575,
+            -0.0882272869348526
+          ],
+          [
+            0.039726100862026215,
+            -0.004996484145522118,
+            0.9991981387138367,
+            0.773471474647522
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "linear_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_velocity_rad_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "robot_full_qpos_rad": [
+          1.440302848815918,
+          -1.4338856935501099,
+          0.1718713343143463,
+          -0.17370359599590302,
+          1.2854284048080444,
+          -1.2848105430603027,
+          -0.7795454263687134,
+          0.7786584496498108,
+          0.5846511721611023,
+          -0.5827611684799194,
+          -0.930358350276947,
+          0.9314404129981995,
+          1.1641000509262085,
+          -7.265244335030729e-07,
+          -6.809577257627097e-07,
+          -5.601147563538689e-07,
+          -9.148513413492765e-08,
+          1.1641000509262085,
+          -7.079717079250258e-07,
+          -6.663896101599676e-07,
+          -5.496343078448263e-07,
+          -8.376914450991535e-08,
+          7.304872269742191e-05,
+          2.5438594093429856e-06,
+          2.5393167106813053e-06,
+          1.9758854250540026e-06,
+          4.195554197394813e-07,
+          7.280315912794322e-05,
+          2.51375172410917e-06,
+          2.4885212042136118e-06,
+          1.8980696268044994e-06,
+          3.006317399467662e-07,
+          4.5733453589491546e-05,
+          4.555574196274392e-05,
+          6.391476199496537e-05,
+          6.366179150063545e-05
+        ]
+      },
+      "rounds": [
+        {
+          "round_index": 1,
+          "wake_calls": 1,
+          "native_state_before": {
+            "native_is_sleeping": true,
+            "native_sleep_threshold": 0.004999999888241291,
+            "bottle_pose_matrix": [
+              [
+                -0.09917354583740234,
+                0.9950252175331116,
+                0.009464148432016373,
+                -0.2656685709953308
+              ],
+              [
+                -0.9939398169517517,
+                -0.099509596824646,
+                0.04670804366469383,
+                -0.08797851204872131
+              ],
+              [
+                0.047417450696229935,
+                -0.004774592816829681,
+                0.9988637566566467,
+                0.7734699249267578
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "linear_velocity_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "angular_velocity_rad_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "robot_full_qpos_rad": [
+              1.440302848815918,
+              -1.4338856935501099,
+              0.1718713343143463,
+              -0.17370359599590302,
+              1.2854284048080444,
+              -1.2848105430603027,
+              -0.7795454263687134,
+              0.7786584496498108,
+              0.5846511721611023,
+              -0.5827611684799194,
+              -0.930358350276947,
+              0.9314404129981995,
+              1.1641000509262085,
+              -7.265406338774483e-07,
+              -6.809491992498806e-07,
+              -5.601118004960881e-07,
+              -9.1526132450781e-08,
+              1.1641000509262085,
+              -7.080028581185616e-07,
+              -6.664122338406742e-07,
+              -5.496316930475587e-07,
+              -8.37555447219529e-08,
+              7.304872997337952e-05,
+              2.5439019282202935e-06,
+              2.539300112402998e-06,
+              1.9759324914048193e-06,
+              4.195615019852994e-07,
+              7.280316640390083e-05,
+              2.5138187993434258e-06,
+              2.488573727532639e-06,
+              1.898090999929991e-06,
+              3.006560689300386e-07,
+              4.573346086544916e-05,
+              4.5555727410828695e-05,
+              6.391474744305015e-05,
+              6.366180605255067e-05
+            ]
+          },
+          "native_state_immediately_after": {
+            "native_is_sleeping": false,
+            "native_sleep_threshold": 0.004999999888241291,
+            "bottle_pose_matrix": [
+              [
+                -0.09917354583740234,
+                0.9950252175331116,
+                0.009464148432016373,
+                -0.2656685709953308
+              ],
+              [
+                -0.9939398169517517,
+                -0.099509596824646,
+                0.04670804366469383,
+                -0.08797851204872131
+              ],
+              [
+                0.047417450696229935,
+                -0.004774592816829681,
+                0.9988637566566467,
+                0.7734699249267578
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "linear_velocity_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "angular_velocity_rad_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "robot_full_qpos_rad": [
+              1.440302848815918,
+              -1.4338856935501099,
+              0.1718713343143463,
+              -0.17370359599590302,
+              1.2854284048080444,
+              -1.2848105430603027,
+              -0.7795454263687134,
+              0.7786584496498108,
+              0.5846511721611023,
+              -0.5827611684799194,
+              -0.930358350276947,
+              0.9314404129981995,
+              1.1641000509262085,
+              -7.265406338774483e-07,
+              -6.809491992498806e-07,
+              -5.601118004960881e-07,
+              -9.1526132450781e-08,
+              1.1641000509262085,
+              -7.080028581185616e-07,
+              -6.664122338406742e-07,
+              -5.496316930475587e-07,
+              -8.37555447219529e-08,
+              7.304872997337952e-05,
+              2.5439019282202935e-06,
+              2.539300112402998e-06,
+              1.9759324914048193e-06,
+              4.195615019852994e-07,
+              7.280316640390083e-05,
+              2.5138187993434258e-06,
+              2.488573727532639e-06,
+              1.898090999929991e-06,
+              3.006560689300386e-07,
+              4.573346086544916e-05,
+              4.5555727410828695e-05,
+              6.391474744305015e-05,
+              6.366180605255067e-05
+            ]
+          },
+          "immediate_verification": {
+            "numeric_fields_exactly_equal_before_after": [
+              "native_sleep_threshold",
+              "bottle_pose_matrix",
+              "linear_velocity_m_s",
+              "angular_velocity_rad_s",
+              "robot_full_qpos_rad"
+            ],
+            "pose_velocity_threshold_q_before_after_equal": true,
+            "native_after_is_sleeping_false": true,
+            "only_native_sleep_state_allowed_to_change": true
+          },
+          "native_state_after_extra": {
+            "native_is_sleeping": true,
+            "native_sleep_threshold": 0.004999999888241291,
+            "bottle_pose_matrix": [
+              [
+                -0.09936654567718506,
+                0.9950248599052429,
+                0.0072105200961232185,
+                -0.26574158668518066
+              ],
+              [
+                -0.9947201609611511,
+                -0.099517822265625,
+                0.025062264874577522,
+                -0.08868348598480225
+              ],
+              [
+                0.025655150413513184,
+                -0.004682101309299469,
+                0.9996598958969116,
+                0.7734518051147461
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "linear_velocity_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "angular_velocity_rad_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "robot_full_qpos_rad": [
+              1.440302848815918,
+              -1.4338856935501099,
+              0.1718713343143463,
+              -0.17370359599590302,
+              1.2854284048080444,
+              -1.2848105430603027,
+              -0.7795454263687134,
+              0.7786584496498108,
+              0.5846511721611023,
+              -0.5827611684799194,
+              -0.930358350276947,
+              0.9314404129981995,
+              1.1641000509262085,
+              -7.265404633471917e-07,
+              -6.809652290939994e-07,
+              -5.601511361419398e-07,
+              -9.151854385436309e-08,
+              1.1641000509262085,
+              -7.080175237206277e-07,
+              -6.664152465418738e-07,
+              -5.496144694916438e-07,
+              -8.377495674949387e-08,
+              7.304874452529475e-05,
+              2.5438905595365213e-06,
+              2.539319211791735e-06,
+              1.975932264031144e-06,
+              4.1955433971452294e-07,
+              7.280309364432469e-05,
+              2.5138895125564886e-06,
+              2.4885841867217096e-06,
+              1.89807508377271e-06,
+              3.006574615938007e-07,
+              4.573349724523723e-05,
+              4.5555701944977045e-05,
+              6.391475471900776e-05,
+              6.366170418914407e-05
+            ]
+          },
+          "completed_extra_physics_steps": 2000,
+          "actual_physics_dt_s": 0.004000000189989805,
+          "actual_extra_simulated_seconds": 8.00000037997961
+        },
+        {
+          "round_index": 2,
+          "wake_calls": 1,
+          "native_state_before": {
+            "native_is_sleeping": true,
+            "native_sleep_threshold": 0.004999999888241291,
+            "bottle_pose_matrix": [
+              [
+                -0.09936654567718506,
+                0.9950248599052429,
+                0.0072105200961232185,
+                -0.26574158668518066
+              ],
+              [
+                -0.9947201609611511,
+                -0.099517822265625,
+                0.025062264874577522,
+                -0.08868348598480225
+              ],
+              [
+                0.025655150413513184,
+                -0.004682101309299469,
+                0.9996598958969116,
+                0.7734518051147461
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "linear_velocity_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "angular_velocity_rad_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "robot_full_qpos_rad": [
+              1.440302848815918,
+              -1.4338856935501099,
+              0.1718713343143463,
+              -0.17370359599590302,
+              1.2854284048080444,
+              -1.2848105430603027,
+              -0.7795454263687134,
+              0.7786584496498108,
+              0.5846511721611023,
+              -0.5827611684799194,
+              -0.930358350276947,
+              0.9314404129981995,
+              1.1641000509262085,
+              -7.265404633471917e-07,
+              -6.809652290939994e-07,
+              -5.601511361419398e-07,
+              -9.151854385436309e-08,
+              1.1641000509262085,
+              -7.080175237206277e-07,
+              -6.664152465418738e-07,
+              -5.496144694916438e-07,
+              -8.377495674949387e-08,
+              7.304874452529475e-05,
+              2.5438905595365213e-06,
+              2.539319211791735e-06,
+              1.975932264031144e-06,
+              4.1955433971452294e-07,
+              7.280309364432469e-05,
+              2.5138895125564886e-06,
+              2.4885841867217096e-06,
+              1.89807508377271e-06,
+              3.006574615938007e-07,
+              4.573349724523723e-05,
+              4.5555701944977045e-05,
+              6.391475471900776e-05,
+              6.366170418914407e-05
+            ]
+          },
+          "native_state_immediately_after": {
+            "native_is_sleeping": false,
+            "native_sleep_threshold": 0.004999999888241291,
+            "bottle_pose_matrix": [
+              [
+                -0.09936654567718506,
+                0.9950248599052429,
+                0.0072105200961232185,
+                -0.26574158668518066
+              ],
+              [
+                -0.9947201609611511,
+                -0.099517822265625,
+                0.025062264874577522,
+                -0.08868348598480225
+              ],
+              [
+                0.025655150413513184,
+                -0.004682101309299469,
+                0.9996598958969116,
+                0.7734518051147461
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "linear_velocity_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "angular_velocity_rad_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "robot_full_qpos_rad": [
+              1.440302848815918,
+              -1.4338856935501099,
+              0.1718713343143463,
+              -0.17370359599590302,
+              1.2854284048080444,
+              -1.2848105430603027,
+              -0.7795454263687134,
+              0.7786584496498108,
+              0.5846511721611023,
+              -0.5827611684799194,
+              -0.930358350276947,
+              0.9314404129981995,
+              1.1641000509262085,
+              -7.265404633471917e-07,
+              -6.809652290939994e-07,
+              -5.601511361419398e-07,
+              -9.151854385436309e-08,
+              1.1641000509262085,
+              -7.080175237206277e-07,
+              -6.664152465418738e-07,
+              -5.496144694916438e-07,
+              -8.377495674949387e-08,
+              7.304874452529475e-05,
+              2.5438905595365213e-06,
+              2.539319211791735e-06,
+              1.975932264031144e-06,
+              4.1955433971452294e-07,
+              7.280309364432469e-05,
+              2.5138895125564886e-06,
+              2.4885841867217096e-06,
+              1.89807508377271e-06,
+              3.006574615938007e-07,
+              4.573349724523723e-05,
+              4.5555701944977045e-05,
+              6.391475471900776e-05,
+              6.366170418914407e-05
+            ]
+          },
+          "immediate_verification": {
+            "numeric_fields_exactly_equal_before_after": [
+              "native_sleep_threshold",
+              "bottle_pose_matrix",
+              "linear_velocity_m_s",
+              "angular_velocity_rad_s",
+              "robot_full_qpos_rad"
+            ],
+            "pose_velocity_threshold_q_before_after_equal": true,
+            "native_after_is_sleeping_false": true,
+            "only_native_sleep_state_allowed_to_change": true
+          },
+          "native_state_after_extra": {
+            "native_is_sleeping": true,
+            "native_sleep_threshold": 0.004999999888241291,
+            "bottle_pose_matrix": [
+              [
+                -0.09924280643463135,
+                0.9950233101844788,
+                0.008921296335756779,
+                -0.26568567752838135
+              ],
+              [
+                -0.9942700266838074,
+                -0.0995175838470459,
+                0.039032526314258575,
+                -0.0882272869348526
+              ],
+              [
+                0.039726100862026215,
+                -0.004996484145522118,
+                0.9991981387138367,
+                0.773471474647522
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "linear_velocity_m_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "angular_velocity_rad_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "robot_full_qpos_rad": [
+              1.440302848815918,
+              -1.4338856935501099,
+              0.1718713343143463,
+              -0.17370359599590302,
+              1.2854284048080444,
+              -1.2848105430603027,
+              -0.7795454263687134,
+              0.7786584496498108,
+              0.5846511721611023,
+              -0.5827611684799194,
+              -0.930358350276947,
+              0.9314404129981995,
+              1.1641000509262085,
+              -7.265244335030729e-07,
+              -6.809577257627097e-07,
+              -5.601147563538689e-07,
+              -9.148513413492765e-08,
+              1.1641000509262085,
+              -7.079717079250258e-07,
+              -6.663896101599676e-07,
+              -5.496343078448263e-07,
+              -8.376914450991535e-08,
+              7.304872269742191e-05,
+              2.5438594093429856e-06,
+              2.5393167106813053e-06,
+              1.9758854250540026e-06,
+              4.195554197394813e-07,
+              7.280315912794322e-05,
+              2.51375172410917e-06,
+              2.4885212042136118e-06,
+              1.8980696268044994e-06,
+              3.006317399467662e-07,
+              4.5733453589491546e-05,
+              4.555574196274392e-05,
+              6.391476199496537e-05,
+              6.366179150063545e-05
+            ]
+          },
+          "completed_extra_physics_steps": 2000,
+          "actual_physics_dt_s": 0.004000000189989805,
+          "actual_extra_simulated_seconds": 8.00000037997961
+        }
+      ]
+    },
+    "source_hashes": {
+      "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/generation_runner_v2.py": "aa466900867a899654bc7d6f1a5b1d8b643fd22436a1654820849fbce330955c",
+      "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/generation_worker_v2.py": "258833e23cb43e6fc1d55d0b300ded27414e548e12f328dfb2e7efad7fe2c6bd",
+      "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/collector_settle_wake_v5.py": "9dc514a20f13736d549f08d51a86918aebaca0d9207ba6b030fe98f605b61846",
+      "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/worker_settle_wake_v5.py": "bb319485cdc788698f58398698ac2a9b7c7e30b4b218a109acabc78744dcf62b",
+      "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_v9_settle_wake_v5.py": "a8a7d652a6c0bc45c41cc60d86a6fbb8a6e3db8c42560df10e972115d34d0d05"
+    },
+    "hardware_io": false,
+    "scope": "Initialized candidate: explicitly requested one/two native wake rounds and ordinary extra physics after complete original setup_demo including unchanged delay(4) and official check_stable, before original actual geometry measurements and expert/recording. This is not an official stability certification or a demonstrated fix.",
+    "original_delay_4_gripper_cycles_preserved": true,
+    "official_check_stable_unmodified": true,
+    "original_setup_demo_completed_before_extra": true,
+    "official_check_stable_not_repeated": true,
+    "recording_or_episode_pause": false,
+    "stability_not_certified": true,
+    "no_fix_or_grasp_success_claim": true,
+    "object_pose_velocity_sleep_threshold_and_robot_q_not_written_by_helper": true,
+    "object_pose_velocity_and_robot_q_not_written_by_extra_settle": true,
+    "renderer_observation_calls_by_extra_settle": 0,
+    "private_prepare_binding": {
+      "inserted_extra_settle_sites": 1,
+      "original_delay_statement_changed": false,
+      "insertion_scope": "Immediately after complete original task.setup_demo(**args), before original actual mesh/bbox/shoulder/pose measurements",
+      "original_official_stability_chain_preserved_and_not_repeated": true,
+      "private_prepare_ast_sha256": "891a0c233e039701e2b819f7d98f1a192820fb556150856f22585e50f6b1a127"
+    },
+    "three_RGB_exporter_original_function_reused": true
+  },
+  "actual_executed_physics_steps": 784,
+  "first_approach_max_functional_point_delta_m": 0.0,
+  "first_approach_max_rotation_delta_deg": 0.0,
+  "second_free_approach_status": "Fail",
+  "second_free_approach_reason": "No predeclared finite exact native path passed IK/RRT/TOPP/full mesh audit",
+  "whole_original_geometry_audit": {
+    "passed": false,
+    "path_rows": 2,
+    "audited_samples": 745,
+    "sampled_minimum_gap": {
+      "bottle": {
+        "sample_index": 519,
+        "path_index": 1,
+        "interval_fraction": 0.6971736204576043,
+        "link": "l_inspire_left_thumb_4",
+        "other": "bottle",
+        "distance_m": 0.0
+      },
+      "table": {
+        "sample_index": 744,
+        "path_index": 1,
+        "interval_fraction": 1.0,
+        "link": "l_inspire_left_thumb_4",
+        "other": "table",
+        "distance_m": 0.006038665771484375
+      },
+      "self": {
+        "sample_index": 255,
+        "path_index": 1,
+        "interval_fraction": 0.34185733512786004,
+        "link": "l_inspire_left_little_1",
+        "other": "l_inspire_left_ring_1",
+        "distance_m": 0.0034969239495694637
+      }
+    },
+    "continuous_gap_lower_bound": {
+      "bottle": {
+        "sample_index": 519,
+        "path_index": 1,
+        "interval_fraction": 0.6971736204576043,
+        "link": "l_inspire_left_thumb_4",
+        "other": "bottle",
+        "lower_bound_m": -0.0008929844776242806,
+        "interval_vertex_bound_m": 0.0008929844776242806
+      },
+      "table": {
+        "sample_index": 743,
+        "path_index": 1,
+        "interval_fraction": 0.9986541049798116,
+        "link": "l_inspire_left_thumb_4",
+        "other": "table",
+        "lower_bound_m": 0.0052984479984194205,
+        "interval_vertex_bound_m": 0.0008929844776242806
+      },
+      "self": {
+        "sample_index": 255,
+        "path_index": 1,
+        "interval_fraction": 0.34185733512786004,
+        "link": "l_inspire_left_little_1",
+        "other": "l_inspire_left_ring_1",
+        "lower_bound_m": 0.0016963112947789279,
+        "interval_vertex_bound_m": 0.0018006126547905359
+      }
+    },
+    "thresholds_m": {
+      "bottle": 0.0005,
+      "table": 0.0,
+      "self": 0.0
+    },
+    "collisions_first_64": [
+      {
+        "sample_index": 519,
+        "path_index": 1,
+        "interval_fraction": 0.6971736204576043,
+        "link": "l_inspire_left_thumb_4",
+        "other": "bottle",
+        "category": "bottle"
+      }
+    ],
+    "unique_collision_pairs": 1,
+    "collision_pair_sample_occurrences": 74
+  },
+  "dense_certificate_refinement_eligible": false,
+  "first_approach_zero_delta_is_not_full_task_success": true,
+  "not_a_causal_init_fix_claim": true,
+  "failure_labels_unchanged": true,
+  "scene_steps": 0,
+  "gpu_runs": 0
+}

@@ -1,0 +1,745 @@
+{
+  "scope": "Actual frozen recorded geometry only; not a reachability prediction or new physical success",
+  "rows": [
+    {
+      "episode": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000011_axial2mm_rollkeep_v9",
+      "accepted": false,
+      "error": "No feasible current physical contact wrench: lp_infeasible",
+      "physical_steps": 1438,
+      "selected_LP_control_step": 300,
+      "selected_LP_phase": {
+        "name": "close",
+        "gripper": true,
+        "dense_call": 3,
+        "terminal_hold": false
+      },
+      "LP_issued_before_physics_step": 1439,
+      "actual_pose_row_before_LP_step": 1438,
+      "pose_comes_from_previous_actual_physics_not_post_LP_step": true,
+      "actual_mass_kg": 0.009999999776482582,
+      "pre_step_COM_world_m": [
+        -0.12284526120828382,
+        -0.09289770200566791,
+        0.775594616219826
+      ],
+      "pre_step_bottle_axis_world": [
+        0.9952637997880771,
+        0.09719318003642118,
+        0.0018586516097607133
+      ],
+      "contacts": [
+        {
+          "channel": "thumb",
+          "point_world_m": [
+            -0.07347585260868073,
+            -0.12241586297750473,
+            0.768286406993866
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.04625303784760905,
+          "normal_world": [
+            -0.08436872065067291,
+            0.979752779006958,
+            0.18156680464744568
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            0.0018007201319732314,
+            -0.008347261504122372,
+            0.045879405796236644
+          ]
+        },
+        {
+          "channel": "index",
+          "point_world_m": [
+            -0.07888121902942657,
+            -0.05584803596138954,
+            0.7887314558029175
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.04738121134314186,
+          "normal_world": [
+            0.1011989563703537,
+            -0.8922762870788574,
+            -0.44000205397605896
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            -0.004580238711458051,
+            0.020673703315600894,
+            -0.042977459857880124
+          ]
+        },
+        {
+          "channel": "middle",
+          "point_world_m": [
+            -0.10236215591430664,
+            -0.0580991730093956,
+            0.7874715328216553
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.023790347950241302,
+          "normal_world": [
+            0.07368200272321701,
+            -0.8634854555130005,
+            -0.4989626705646515
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            -0.0071076222176809836,
+            0.011095419920339213,
+            -0.020250888813357917
+          ]
+        }
+      ],
+      "different_channel_normal_dots": [
+        {
+          "channels": [
+            "thumb",
+            "index"
+          ],
+          "normal_dot": -0.9626379653664168
+        },
+        {
+          "channels": [
+            "thumb",
+            "middle"
+          ],
+          "normal_dot": -0.9428137887084683
+        },
+        {
+          "channels": [
+            "index",
+            "middle"
+          ],
+          "normal_dot": 0.9974687378764294
+        }
+      ],
+      "allocation": {
+        "feasible": false,
+        "usable": false,
+        "reason": "lp_infeasible",
+        "stale": true,
+        "target_normal_forces_N": [
+          0.0,
+          0.0,
+          0.12,
+          0.12,
+          0.24
+        ],
+        "target_source": "previous_unverified",
+        "force_residual_inf_N": null,
+        "torque_residual_inf_Nm": null,
+        "solver_status": 2,
+        "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "solver_attempts": [
+          {
+            "method": "highs",
+            "positive_row_scaling": false,
+            "elapsed_s": 0.0011891680769622326,
+            "options": {
+              "time_limit": 0.25,
+              "primal_feasibility_tolerance": 1e-09,
+              "dual_feasibility_tolerance": 1e-09
+            },
+            "status": 2,
+            "success": false,
+            "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+            "equality_row_divisors": null,
+            "inequality_row_divisors": null
+          }
+        ],
+        "solver_method_used": "highs",
+        "solver_recovered_unknown": false,
+        "solver_feasible_region_unchanged": true,
+        "allocator_module": "purecontact_lp_v26",
+        "allocator_implementation": "realman_contact_lp_v26_unknown_status_fallback_v1",
+        "allocator_source_sha256": "a8c9be5237c9a1b2fe7d0e085f5e7cf0fcdeddb03f3780aab34585a54c457f3f",
+        "channels": [
+          "little",
+          "ring",
+          "middle",
+          "index",
+          "thumb"
+        ],
+        "mu": 0.35,
+        "cone_edges": 16,
+        "ignored_ring_little_contacts": 0,
+        "contact_count": 3,
+        "target_wrench_world": [
+          0.0,
+          0.0,
+          0.09799999780952931,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "inputs_sha256": {
+        "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000011_axial2mm_rollkeep_v9/expert_report.json": "6cd854ce5849064e37b5e49d8cea2b46658f6cd5b57e6a246506a1b4bdf9f8e2",
+        "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000011_axial2mm_rollkeep_v9/physics_trace.json": "95c0fe9a63647d9de55e70d571e00beabfb12cbfd2f907f78adecf989c4f04ab"
+      }
+    },
+    {
+      "episode": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000011_axial5mm_rollkeep_v9",
+      "accepted": false,
+      "error": "No feasible current physical contact wrench: lp_infeasible",
+      "physical_steps": 1438,
+      "selected_LP_control_step": 300,
+      "selected_LP_phase": {
+        "name": "close",
+        "gripper": true,
+        "dense_call": 3,
+        "terminal_hold": false
+      },
+      "LP_issued_before_physics_step": 1439,
+      "actual_pose_row_before_LP_step": 1438,
+      "pose_comes_from_previous_actual_physics_not_post_LP_step": true,
+      "actual_mass_kg": 0.009999999776482582,
+      "pre_step_COM_world_m": [
+        -0.12279380524405936,
+        -0.09305736965513922,
+        0.775592180173631
+      ],
+      "pre_step_bottle_axis_world": [
+        0.9951676819149308,
+        0.09817288633653905,
+        0.0018355545254821832
+      ],
+      "contacts": [
+        {
+          "channel": "thumb",
+          "point_world_m": [
+            -0.07644550502300262,
+            -0.1228071078658104,
+            0.7683423757553101
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.043190405412479385,
+          "normal_world": [
+            -0.08537744730710983,
+            0.9802537560462952,
+            0.17836296558380127
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            0.0018003964790630524,
+            -0.007647850482483986,
+            0.04289313867157031
+          ]
+        },
+        {
+          "channel": "index",
+          "point_world_m": [
+            -0.08182598650455475,
+            -0.05637872964143753,
+            0.7888638377189636
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.04439505801621582,
+          "normal_world": [
+            0.10219814628362656,
+            -0.8935965895652771,
+            -0.4370820224285126
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            -0.004172066236728559,
+            0.019262635868391498,
+            -0.04035719212515454
+          ]
+        },
+        {
+          "channel": "middle",
+          "point_world_m": [
+            -0.10531120002269745,
+            -0.058535173535346985,
+            0.7873150706291199
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.020808785352359978,
+          "normal_world": [
+            0.07467672973871231,
+            -0.8647769689559937,
+            -0.49657243490219116
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            -0.0070050853098753574,
+            0.009556806965506521,
+            -0.01769655906240813
+          ]
+        }
+      ],
+      "different_channel_normal_dots": [
+        {
+          "channels": [
+            "thumb",
+            "index"
+          ],
+          "normal_dot": -0.9626360758844521
+        },
+        {
+          "channels": [
+            "thumb",
+            "middle"
+          ],
+          "normal_dot": -0.9426467126361013
+        },
+        {
+          "channels": [
+            "index",
+            "middle"
+          ],
+          "normal_dot": 0.9974364576727939
+        }
+      ],
+      "allocation": {
+        "feasible": false,
+        "usable": false,
+        "reason": "lp_infeasible",
+        "stale": true,
+        "target_normal_forces_N": [
+          0.0,
+          0.0,
+          0.12,
+          0.12,
+          0.24
+        ],
+        "target_source": "previous_unverified",
+        "force_residual_inf_N": null,
+        "torque_residual_inf_Nm": null,
+        "solver_status": 2,
+        "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "solver_attempts": [
+          {
+            "method": "highs",
+            "positive_row_scaling": false,
+            "elapsed_s": 0.0011473959311842918,
+            "options": {
+              "time_limit": 0.25,
+              "primal_feasibility_tolerance": 1e-09,
+              "dual_feasibility_tolerance": 1e-09
+            },
+            "status": 2,
+            "success": false,
+            "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+            "equality_row_divisors": null,
+            "inequality_row_divisors": null
+          }
+        ],
+        "solver_method_used": "highs",
+        "solver_recovered_unknown": false,
+        "solver_feasible_region_unchanged": true,
+        "allocator_module": "purecontact_lp_v26",
+        "allocator_implementation": "realman_contact_lp_v26_unknown_status_fallback_v1",
+        "allocator_source_sha256": "a8c9be5237c9a1b2fe7d0e085f5e7cf0fcdeddb03f3780aab34585a54c457f3f",
+        "channels": [
+          "little",
+          "ring",
+          "middle",
+          "index",
+          "thumb"
+        ],
+        "mu": 0.35,
+        "cone_edges": 16,
+        "ignored_ring_little_contacts": 0,
+        "contact_count": 3,
+        "target_wrench_world": [
+          0.0,
+          0.0,
+          0.09799999780952931,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "inputs_sha256": {
+        "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000011_axial5mm_rollkeep_v9/expert_report.json": "b903542eddb1c7fe84b7307a3e42008368a9c9acd4cca676e087190812b818a4",
+        "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000011_axial5mm_rollkeep_v9/physics_trace.json": "d9512abadce51414c7bd7cde0932abe5838062d427a0ffdc6b749a7ea5a7f60a"
+      }
+    },
+    {
+      "episode": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000006_axial20mm_roll5.0_v9",
+      "accepted": true,
+      "error": null,
+      "physical_steps": 3570,
+      "selected_LP_control_step": 279,
+      "selected_LP_phase": {
+        "name": "close",
+        "gripper": true,
+        "dense_call": 3,
+        "terminal_hold": false
+      },
+      "LP_issued_before_physics_step": 1797,
+      "actual_pose_row_before_LP_step": 1796,
+      "pose_comes_from_previous_actual_physics_not_post_LP_step": true,
+      "actual_mass_kg": 0.009999999776482582,
+      "pre_step_COM_world_m": [
+        0.15715172221455903,
+        -0.10196732376076764,
+        0.7729515761305883
+      ],
+      "pre_step_bottle_axis_world": [
+        -0.9951083480130615,
+        -0.09866142685449204,
+        -0.00502976796198657
+      ],
+      "contacts": [
+        {
+          "channel": "thumb",
+          "point_world_m": [
+            0.11190593242645264,
+            -0.13898566365242004,
+            0.7640479803085327
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.04872152838509604,
+          "normal_world": [
+            -0.09834103286266327,
+            0.9406594634056091,
+            0.3247905373573303
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            -0.0036479548371308596,
+            0.015570993187768523,
+            -0.046201302123249376
+          ]
+        },
+        {
+          "channel": "index",
+          "point_world_m": [
+            0.10617409646511078,
+            -0.07549308985471725,
+            0.7851081490516663
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.04805513051210506,
+          "normal_world": [
+            0.08232379704713821,
+            -0.8819108009338379,
+            -0.4641725718975067
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            -0.0015676002797491081,
+            -0.022661640411406402,
+            0.04277825929534119
+          ]
+        },
+        {
+          "channel": "middle",
+          "point_world_m": [
+            0.13867157697677612,
+            -0.07188672572374344,
+            0.7840198278427124
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.01536628133778551,
+          "normal_world": [
+            0.09843483567237854,
+            -0.9650453329086304,
+            -0.24289512634277344
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            0.0033749339975741536,
+            -0.0033992356739006233,
+            0.014873199188494696
+          ]
+        }
+      ],
+      "different_channel_normal_dots": [
+        {
+          "channels": [
+            "thumb",
+            "index"
+          ],
+          "normal_dot": -0.988432407061952
+        },
+        {
+          "channels": [
+            "thumb",
+            "middle"
+          ],
+          "normal_dot": -0.9963492470319539
+        },
+        {
+          "channels": [
+            "index",
+            "middle"
+          ],
+          "normal_dot": 0.9719326874130687
+        }
+      ],
+      "allocation": {
+        "feasible": true,
+        "usable": true,
+        "reason": "feasible_contact_wrench",
+        "stale": false,
+        "target_source": "contact_lp",
+        "target_normal_forces_N": [
+          0.0,
+          0.0,
+          1.15,
+          1.15,
+          2.3214756448030074
+        ],
+        "normal_force_change_N": [
+          0.0,
+          0.0,
+          1.0299999999999998,
+          1.0299999999999998,
+          2.0814756448030076
+        ],
+        "theoretical_net_wrench_world": [
+          -7.979727989493313e-17,
+          -2.220446049250313e-16,
+          0.09799999780952914,
+          -4.119968255444917e-18,
+          -1.3877787807814457e-17,
+          0.0
+        ],
+        "theoretical_contact_forces_world_N": [
+          [
+            0.3780967388243463,
+            2.247103879702078,
+            0.7540202108385927
+          ],
+          [
+            -0.10574774673988907,
+            -1.0818272195133085,
+            -0.44084998682540266
+          ],
+          [
+            -0.2723489920844573,
+            -1.1652766601887694,
+            -0.215170226203661
+          ]
+        ],
+        "theoretical_contact_normal_forces_N": [
+          2.3214756448030074,
+          1.15,
+          1.15
+        ],
+        "objective": 12.904426934409019,
+        "continuity_weight": 2.0,
+        "total_force_weight": 1.0,
+        "lp_all_inequality_violation_N": 2.220446049250313e-16,
+        "lp_all_variable_nonnegative_violation_N": 0.0,
+        "lp_continuity_auxiliary_violation_N": 2.220446049250313e-16,
+        "complete_original_lp_checked": true,
+        "force_residual_inf_N": 2.220446049250313e-16,
+        "torque_residual_inf_Nm": 1.3877787807814457e-17,
+        "cap_violation_N": 0.0,
+        "minimum_violation_N": 0.0,
+        "cone_violation_N": 0.0,
+        "ray_nonnegative_violation_N": 0.0,
+        "solver_status": 0,
+        "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "solver_attempts": [
+          {
+            "method": "highs",
+            "positive_row_scaling": false,
+            "elapsed_s": 0.001488621812313795,
+            "options": {
+              "time_limit": 0.25,
+              "primal_feasibility_tolerance": 1e-09,
+              "dual_feasibility_tolerance": 1e-09
+            },
+            "status": 0,
+            "success": true,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "equality_row_divisors": null,
+            "inequality_row_divisors": null
+          }
+        ],
+        "solver_method_used": "highs",
+        "solver_recovered_unknown": false,
+        "solver_feasible_region_unchanged": true,
+        "allocator_module": "purecontact_lp_v26",
+        "allocator_implementation": "realman_contact_lp_v26_unknown_status_fallback_v1",
+        "allocator_source_sha256": "a8c9be5237c9a1b2fe7d0e085f5e7cf0fcdeddb03f3780aab34585a54c457f3f",
+        "channels": [
+          "little",
+          "ring",
+          "middle",
+          "index",
+          "thumb"
+        ],
+        "mu": 0.35,
+        "cone_edges": 16,
+        "ignored_ring_little_contacts": 0,
+        "contact_count": 3,
+        "target_wrench_world": [
+          0.0,
+          0.0,
+          0.09799999780952931,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "inputs_sha256": {
+        "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000006_axial20mm_roll5.0_v9/expert_report.json": "4238c0ed4a6b8019e410815939f2490d0ac8cdab54f62d1e88f643aa60b8a243",
+        "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000006_axial20mm_roll5.0_v9/physics_trace.json": "a4f3794a4c1f34d0e36e37ed3f4c8846310c535aa590893345791e41d86e4844"
+      }
+    },
+    {
+      "episode": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000006_axial20mm_roll-5.0_v9",
+      "accepted": false,
+      "error": "No feasible current physical contact wrench: lp_infeasible",
+      "physical_steps": 1817,
+      "selected_LP_control_step": 300,
+      "selected_LP_phase": {
+        "name": "close",
+        "gripper": true,
+        "dense_call": 3,
+        "terminal_hold": false
+      },
+      "LP_issued_before_physics_step": 1818,
+      "actual_pose_row_before_LP_step": 1817,
+      "pose_comes_from_previous_actual_physics_not_post_LP_step": true,
+      "actual_mass_kg": 0.009999999776482582,
+      "pre_step_COM_world_m": [
+        0.15714701949373905,
+        -0.1018876112811899,
+        0.7729526766305779
+      ],
+      "pre_step_bottle_axis_world": [
+        -0.9951051538157488,
+        -0.09869455172891448,
+        -0.005011816872501964
+      ],
+      "contacts": [
+        {
+          "channel": "thumb",
+          "point_world_m": [
+            0.10239854454994202,
+            -0.14063839614391327,
+            0.7685301303863525
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.05832714591318114,
+          "normal_world": [
+            0.004729477223008871,
+            0.9903528094291687,
+            0.13848818838596344
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            -0.0009866448963737973,
+            0.007561100780130996,
+            -0.05403703501816987
+          ]
+        },
+        {
+          "channel": "index",
+          "point_world_m": [
+            0.10054928064346313,
+            -0.07692644745111465,
+            0.7869410514831543
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.0537870635762811,
+          "normal_world": [
+            0.08602011948823929,
+            -0.8648800253868103,
+            -0.4945533871650696
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            -0.0002463621221294142,
+            -0.026787321778023097,
+            0.046803091518434106
+          ]
+        },
+        {
+          "channel": "middle",
+          "point_world_m": [
+            0.12695492804050446,
+            -0.07321113348007202,
+            0.7846006155014038
+          ],
+          "axial_offset_from_pre_step_COM_m": 0.027155716351281996,
+          "normal_world": [
+            0.08239339292049408,
+            -0.8823943138122559,
+            -0.46324050426483154
+          ],
+          "moment_per_unit_normal_Nm_per_N": [
+            -0.0030060310098795357,
+            -0.013026486465508446,
+            0.02427857751739048
+          ]
+        }
+      ],
+      "different_channel_normal_dots": [
+        {
+          "channels": [
+            "thumb",
+            "index"
+          ],
+          "normal_dot": -0.9246193354137907
+        },
+        {
+          "channels": [
+            "thumb",
+            "middle"
+          ],
+          "normal_dot": -0.9376453482557839
+        },
+        {
+          "channels": [
+            "index",
+            "middle"
+          ],
+          "normal_dot": 0.9993498664914106
+        }
+      ],
+      "allocation": {
+        "feasible": false,
+        "usable": false,
+        "reason": "lp_infeasible",
+        "stale": true,
+        "target_normal_forces_N": [
+          0.0,
+          0.0,
+          0.12,
+          0.12,
+          0.24
+        ],
+        "target_source": "previous_unverified",
+        "force_residual_inf_N": null,
+        "torque_residual_inf_Nm": null,
+        "solver_status": 2,
+        "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "solver_attempts": [
+          {
+            "method": "highs",
+            "positive_row_scaling": false,
+            "elapsed_s": 0.0011502387933433056,
+            "options": {
+              "time_limit": 0.25,
+              "primal_feasibility_tolerance": 1e-09,
+              "dual_feasibility_tolerance": 1e-09
+            },
+            "status": 2,
+            "success": false,
+            "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+            "equality_row_divisors": null,
+            "inequality_row_divisors": null
+          }
+        ],
+        "solver_method_used": "highs",
+        "solver_recovered_unknown": false,
+        "solver_feasible_region_unchanged": true,
+        "allocator_module": "purecontact_lp_v26",
+        "allocator_implementation": "realman_contact_lp_v26_unknown_status_fallback_v1",
+        "allocator_source_sha256": "a8c9be5237c9a1b2fe7d0e085f5e7cf0fcdeddb03f3780aab34585a54c457f3f",
+        "channels": [
+          "little",
+          "ring",
+          "middle",
+          "index",
+          "thumb"
+        ],
+        "mu": 0.35,
+        "cone_edges": 16,
+        "ignored_ring_little_contacts": 0,
+        "contact_count": 3,
+        "target_wrench_world": [
+          0.0,
+          0.0,
+          0.09799999780952931,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "inputs_sha256": {
+        "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000006_axial20mm_roll-5.0_v9/expert_report.json": "e34df7f2a641958b145f6740a7185cdb6279b0444bb18fe8f9696ad435968171",
+        "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/smoke_worker_axial_geometry_v9/slot0000006_axial20mm_roll-5.0_v9/physics_trace.json": "77004072c282503a267c0c3a48b682d7089f05674dd3a84d4953af53d1b5e242"
+      }
+    }
+  ]
+}

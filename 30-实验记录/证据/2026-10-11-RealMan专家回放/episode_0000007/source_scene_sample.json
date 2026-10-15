@@ -1,0 +1,423 @@
+{
+  "shape_count_overlay": {
+    "source": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/adjust_bottle_20261002/full_mesh_path_audit.py",
+    "source_sha256": "6e63def2bc02f1c2bd9e4e90fdd71ee70e58961dddafdc6e858a235ce454a9f9",
+    "overlay_source": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/geometry_overlay.py",
+    "overlay_source_sha256": "c0caabd5a576e636c2ca35c6941e3030afd9ddd355b6b36a465e73b5bd816ac8",
+    "overlay_ast_sha256": "373b906ef01c6a5d33d290b3981b5feaa8bc0020a283bae3801410d68fdbab41",
+    "changed_assertions": 1,
+    "actual_native_count_must_be_positive": true,
+    "converted_count_must_equal_native_count": true,
+    "collision_pairs_or_clearance_changed": false,
+    "physical_scene_changed": false
+  },
+  "planning_backend": "full_native",
+  "creation_axial_roll_deg": 0.0,
+  "sample_spec": {
+    "index": 7,
+    "seed": 3500007,
+    "model_id": 4,
+    "brand": "Fanta",
+    "arm": "right",
+    "pose_class": "diagonal",
+    "xy": [
+      0.094375,
+      -0.0875
+    ],
+    "yaw_deg": 225.0,
+    "yaw_semantics": "world XY azimuth of bottle long axis for lying poses; vertical-axis label rotation for upright",
+    "position_reference": "collision_mesh_bbox_center_world",
+    "acceptance_requires_settled_pose_check": true,
+    "grasp_setting": {
+      "lift_axis": "world",
+      "pitch_deg": 25,
+      "hand_x": 0.01,
+      "hand_y": 0.085,
+      "hand_z": 0.165,
+      "open_sdk": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        0
+      ],
+      "close_sdk": [
+        650,
+        670,
+        610,
+        610,
+        850,
+        0
+      ],
+      "finger_force_allocation_N": [
+        0.0,
+        0.0,
+        0.12,
+        0.12,
+        0.24
+      ],
+      "lp_min_main_force_N": 1.15,
+      "feedback_joint_rate_cap_rad_s": 0.16,
+      "hand_joint_stiffness": 20.0,
+      "hand_joint_damping": 0.2,
+      "palm_roll_deg": 1,
+      "feedback_force_gain": 0.1
+    },
+    "planning_backend": "full_native",
+    "sampling_revision": "New complete actual-RGB candidate matched retained original physically complete RD7 scene seed3500007. Feedback gain.1 and explicitly stated palm profile variation; all original LP minima/caps/rate/native hardware/collision/no-push/carry/hold and full actual geometry remain unchanged. Original failures preserved. No outcome inferred.",
+    "initial_extra_settle_s": 8,
+    "initial_wake_before_extra_settle": true
+  },
+  "actual_bottle_center_world": [
+    0.0999406433206802,
+    -0.08376367921488773,
+    0.7731449245428534
+  ],
+  "actual_collision_vertices": 419,
+  "actual_collision_shape_count": 3,
+  "nearest_arm": "right",
+  "selected_arm": "right",
+  "nearest_rule": "Euclidean distance from actual collision bbox center to fixed shoulder joint1 origins",
+  "shoulder_origins_world": {
+    "left": [
+      -0.2638029456138611,
+      -0.6165398955345154,
+      1.1258991956710815
+    ],
+    "right": [
+      0.26388344168663025,
+      -0.61671382188797,
+      1.1258975267410278
+    ]
+  },
+  "arm_distances_m": {
+    "left": 0.7352519778729241,
+    "right": 0.6598086798981208
+  },
+  "nearest_margin_m": 0.07544329797480331,
+  "initial_pose": [
+    [
+      -0.7066055536270142,
+      -0.7072156667709351,
+      0.02354796603322029,
+      0.1804811805486679
+    ],
+    [
+      0.7065688371658325,
+      -0.7069799900054932,
+      -0.03065478429198265,
+      -0.0031777918338775635
+    ],
+    [
+      0.03832748532295227,
+      -0.005022584460675716,
+      0.9992526173591614,
+      0.7734711170196533
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "actual_axis_world": [
+    -0.7072156667709351,
+    -0.7069799900054932,
+    -0.005022584460675716
+  ],
+  "upright_angle_deg": 89.71222589823138,
+  "actual_axis_yaw_deg": -135.00953674316406,
+  "sampled_pose_settled_by_gravity": true,
+  "source_config_sha256": "580d02b2a2a268f636a690e861406bc95fd83f3febf526d00c951808bf4a9a0a",
+  "camera_profile_sha256": "4a2cee5e91fd4acd13676bdb4acae4f3d7e8ccb327b459193c20460e0d9783d4",
+  "old20_manifest_sha256": "97b33109a740ae2d9b99155dbf228e5d2a19761b323e60fc622c8998aec0e577",
+  "hardware_io": false,
+  "initial_extra_settle": {
+    "requested_extra_seconds": 8,
+    "initial_wake_before_extra_settle": true,
+    "actual_physics_dt_s": 0.004000000189989805,
+    "extra_physics_steps": 2000,
+    "actual_extra_simulated_seconds": 8.00000037997961,
+    "step_count_rounding": "round(requested_seconds / actual_scene_timestep)",
+    "completed_extra_physics_steps": 2000,
+    "native_wake": {
+      "requested": true,
+      "wake_calls": 1,
+      "native_state_before": {
+        "native_is_sleeping": true,
+        "native_sleep_threshold": 0.004999999888241291,
+        "bottle_pose_matrix": [
+          [
+            -0.7066832780838013,
+            -0.7072144150733948,
+            0.021126639097929,
+            0.1804019808769226
+          ],
+          [
+            0.7066730856895447,
+            -0.7069817781448364,
+            -0.028100408613681793,
+            -0.0030941739678382874
+          ],
+          [
+            0.0348091647028923,
+            -0.004928463138639927,
+            0.9993818402290344,
+            0.7734664082527161
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "linear_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_velocity_rad_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "robot_full_qpos_rad": [
+          1.440302848815918,
+          -1.4338856935501099,
+          0.1718713343143463,
+          -0.17370359599590302,
+          1.2854284048080444,
+          -1.2848105430603027,
+          -0.7795454263687134,
+          0.7786584496498108,
+          0.5846511721611023,
+          -0.5827611684799194,
+          -0.930358350276947,
+          0.9314404129981995,
+          1.1641000509262085,
+          -7.265406338774483e-07,
+          -6.809491992498806e-07,
+          -5.601118004960881e-07,
+          -9.1526132450781e-08,
+          1.1641000509262085,
+          -7.080028581185616e-07,
+          -6.664122338406742e-07,
+          -5.496316930475587e-07,
+          -8.37555447219529e-08,
+          7.304872997337952e-05,
+          2.5439019282202935e-06,
+          2.539300112402998e-06,
+          1.9759324914048193e-06,
+          4.195615019852994e-07,
+          7.280316640390083e-05,
+          2.5138187993434258e-06,
+          2.488573727532639e-06,
+          1.898090999929991e-06,
+          3.006560689300386e-07,
+          4.573346086544916e-05,
+          4.5555727410828695e-05,
+          6.391474744305015e-05,
+          6.366180605255067e-05
+        ]
+      },
+      "native_state_immediately_after": {
+        "native_is_sleeping": false,
+        "native_sleep_threshold": 0.004999999888241291,
+        "bottle_pose_matrix": [
+          [
+            -0.7066832780838013,
+            -0.7072144150733948,
+            0.021126639097929,
+            0.1804019808769226
+          ],
+          [
+            0.7066730856895447,
+            -0.7069817781448364,
+            -0.028100408613681793,
+            -0.0030941739678382874
+          ],
+          [
+            0.0348091647028923,
+            -0.004928463138639927,
+            0.9993818402290344,
+            0.7734664082527161
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "linear_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_velocity_rad_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "robot_full_qpos_rad": [
+          1.440302848815918,
+          -1.4338856935501099,
+          0.1718713343143463,
+          -0.17370359599590302,
+          1.2854284048080444,
+          -1.2848105430603027,
+          -0.7795454263687134,
+          0.7786584496498108,
+          0.5846511721611023,
+          -0.5827611684799194,
+          -0.930358350276947,
+          0.9314404129981995,
+          1.1641000509262085,
+          -7.265406338774483e-07,
+          -6.809491992498806e-07,
+          -5.601118004960881e-07,
+          -9.1526132450781e-08,
+          1.1641000509262085,
+          -7.080028581185616e-07,
+          -6.664122338406742e-07,
+          -5.496316930475587e-07,
+          -8.37555447219529e-08,
+          7.304872997337952e-05,
+          2.5439019282202935e-06,
+          2.539300112402998e-06,
+          1.9759324914048193e-06,
+          4.195615019852994e-07,
+          7.280316640390083e-05,
+          2.5138187993434258e-06,
+          2.488573727532639e-06,
+          1.898090999929991e-06,
+          3.006560689300386e-07,
+          4.573346086544916e-05,
+          4.5555727410828695e-05,
+          6.391474744305015e-05,
+          6.366180605255067e-05
+        ]
+      },
+      "immediate_verification": {
+        "numeric_fields_exactly_equal_before_after": [
+          "native_sleep_threshold",
+          "bottle_pose_matrix",
+          "linear_velocity_m_s",
+          "angular_velocity_rad_s",
+          "robot_full_qpos_rad"
+        ],
+        "pose_velocity_threshold_q_before_after_equal": true,
+        "native_after_is_sleeping_false": true,
+        "only_native_sleep_state_allowed_to_change": true
+      },
+      "native_state_after_extra": {
+        "native_is_sleeping": true,
+        "native_sleep_threshold": 0.004999999888241291,
+        "bottle_pose_matrix": [
+          [
+            -0.7066055536270142,
+            -0.7072156667709351,
+            0.02354796603322029,
+            0.1804811805486679
+          ],
+          [
+            0.7065688371658325,
+            -0.7069799900054932,
+            -0.03065478429198265,
+            -0.0031777918338775635
+          ],
+          [
+            0.03832748532295227,
+            -0.005022584460675716,
+            0.9992526173591614,
+            0.7734711170196533
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "linear_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_velocity_rad_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "robot_full_qpos_rad": [
+          1.440302848815918,
+          -1.4338856935501099,
+          0.1718713343143463,
+          -0.17370359599590302,
+          1.2854284048080444,
+          -1.2848105430603027,
+          -0.7795454263687134,
+          0.7786584496498108,
+          0.5846511721611023,
+          -0.5827611684799194,
+          -0.930358350276947,
+          0.9314404129981995,
+          1.1641000509262085,
+          -7.265404633471917e-07,
+          -6.809652290939994e-07,
+          -5.601511361419398e-07,
+          -9.151854385436309e-08,
+          1.1641000509262085,
+          -7.080175237206277e-07,
+          -6.664152465418738e-07,
+          -5.496144694916438e-07,
+          -8.377495674949387e-08,
+          7.304874452529475e-05,
+          2.5438905595365213e-06,
+          2.539319211791735e-06,
+          1.975932264031144e-06,
+          4.1955433971452294e-07,
+          7.280309364432469e-05,
+          2.5138895125564886e-06,
+          2.4885841867217096e-06,
+          1.89807508377271e-06,
+          3.006574615938007e-07,
+          4.573349724523723e-05,
+          4.5555701944977045e-05,
+          6.391475471900776e-05,
+          6.366170418914407e-05
+        ]
+      }
+    },
+    "source_hashes": {
+      "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/generation_runner_v2.py": "aa466900867a899654bc7d6f1a5b1d8b643fd22436a1654820849fbce330955c",
+      "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/generation_worker_v2.py": "258833e23cb43e6fc1d55d0b300ded27414e548e12f328dfb2e7efad7fe2c6bd",
+      "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/collector_settle_wake_v4.py": "574e8531ab59e3c9e4e066c00643415ec68ebfc1884477af53663e47c67c9181",
+      "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/worker_settle_wake_v4.py": "0a1eb2a69ab9224a06c8bb87d3a9fcb66b73bb8f25c0f330fdc86bac04cc22fe",
+      "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/expert_v9_settle_wake_v4.py": "ca30ff61386ac31f2fc4c0b5a9d7621d44fca474d3283d858fcf7f174f865109"
+    },
+    "hardware_io": false,
+    "scope": "Initialized candidate: optional one native wake and ordinary extra physics after complete original setup_demo including unchanged delay(4) and official check_stable, before original actual geometry measurements and expert/recording",
+    "original_delay_4_gripper_cycles_preserved": true,
+    "official_check_stable_unmodified": true,
+    "original_setup_demo_completed_before_extra": true,
+    "official_check_stable_not_repeated": true,
+    "recording_or_episode_pause": false,
+    "stability_not_certified": true,
+    "no_fix_or_grasp_success_claim": true,
+    "object_pose_velocity_sleep_threshold_and_robot_q_not_written_by_helper": true,
+    "object_pose_velocity_and_robot_q_not_written_by_extra_settle": true,
+    "renderer_observation_calls_by_extra_settle": 0,
+    "private_prepare_binding": {
+      "inserted_extra_settle_sites": 1,
+      "original_delay_statement_changed": false,
+      "insertion_scope": "Immediately after complete original task.setup_demo(**args), before original actual mesh/bbox/shoulder/pose measurements",
+      "original_official_stability_chain_preserved_and_not_repeated": true,
+      "private_prepare_ast_sha256": "891a0c233e039701e2b819f7d98f1a192820fb556150856f22585e50f6b1a127"
+    },
+    "three_RGB_exporter_original_function_reused": true
+  }
+}

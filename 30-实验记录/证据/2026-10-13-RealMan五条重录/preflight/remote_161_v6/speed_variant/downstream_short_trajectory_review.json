@@ -1,0 +1,46 @@
+{
+  "schema": "server-native-simplify-downstream-static-and-CPU-edge-review-v1",
+  "date": "2026-10-14",
+  "variant_sha256": "1c323046a17febaf649acc16bf96cef23051c00e3ca525d80071c35e3b99b117",
+  "original_thresholds_modified": false,
+  "component_only": true,
+  "physical_speedup_verified": false,
+  "actual_CPU_cases": [
+    {
+      "case": "one_node",
+      "passed": false,
+      "exception_type": "ValueError",
+      "message": "Invalid official TOPP polyline"
+    },
+    {
+      "case": "tiny_nonzero_segment",
+      "passed": false,
+      "exception_type": "ValueError",
+      "message": "Official TOPP returned invalid/too-short trajectory"
+    },
+    {
+      "case": "normal_two_node_shortcut",
+      "passed": true,
+      "rows": 418,
+      "duration_s": 1.672,
+      "segment_count": 1
+    }
+  ],
+  "source_line_evidence": {
+    "official_topp_polyline_minimum_two_input_rows": "full_native_carry_planner_v31.py:65",
+    "official_topp_polyline_minimum_two_samples_per_segment": "full_native_carry_planner_v31.py:90",
+    "official_topp_polyline_preserves_native_and_physical_clock": "full_native_carry_planner_v31.py:91-117",
+    "motion_gate_minimum_two_precontact_observations": "motion_gate.py:181-183",
+    "source_binding_variable_raw_and_dense_path_lengths": "motion_gate.py:499-519",
+    "native_RGB_nonempty_episode_only": "validate_rgb_three_camera.py:159-160",
+    "airhold_original_one_second_minimum": "staged_quality.py:242-243"
+  },
+  "findings": [
+    "No minimum RRT segment count or 80-second episode requirement found in the reviewed downstream path/timing/source/quality/RGB gates. Two-node nonzero simplified paths are admissible in principle.",
+    "A one-node path is rejected at original TOPP admission. Exact duplicates may collapse to one no-motion row, then original motion/source binding requires >=2 rows and rejects incomplete planning evidence.",
+    "A nonzero segment whose installed native TOPP duration supplies fewer than two samples is rejected unchanged; component tiny segment reproduces this. No interpolation/resampling or relaxed minimum added.",
+    "Precontact numerical quality requires >=2 actual 60ms observations as well as physical samples. Contact before adequate evidence remains a rejection; no relaxation introduced.",
+    "Native simplification may produce a new edge that fails complete mesh or timing/dense velocity gates, or changes physical tracking/contact. These remain mandatory real collection rejection conditions."
+  ],
+  "scope": "Read-only reviewed original source plus actual original TOPP CPU tiny-model cases; no SAPIEN scene or GPU, no real randomized robot trajectory acceptance"
+}

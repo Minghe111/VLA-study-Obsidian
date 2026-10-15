@@ -1,0 +1,505 @@
+render_freq: 0
+episode_num: 1
+use_seed: false
+save_freq: null
+embodiment:
+- realman-rm65b-inspire-gen4
+language_num: 1
+eval_instruction: seen
+domain_randomization:
+  random_background: true
+  cluttered_table: true
+  clean_background_rate: 0.02
+  random_head_camera_dis: 0
+  random_table_height: 0.03
+  random_light: true
+  crazy_random_light_rate: 0.02
+camera:
+  head_camera_type: Large_D435
+  wrist_camera_type: Large_D435
+  collect_head_camera: true
+  collect_wrist_camera: true
+data_type:
+  rgb: true
+  third_view: false
+  depth: false
+  pointcloud: false
+  observer: false
+  endpose: true
+  qpos: true
+  mesh_segmentation: false
+  actor_segmentation: false
+pcd_down_sample_num: 1024
+pcd_crop: true
+save_path: "/home/admin123/liminghe/VLA-WAM-RL/30-\u5B9E\u9A8C\u8BB0\u5F55/\u8BC1\u636E\
+  /2026-10-13-RealMan\u4E94\u6761\u91CD\u5F55/new_physical_episodes"
+clear_cache_freq: 5
+collect_data: false
+eval_video_log: false
+left_robot_file: /home/admin123/liminghe/vla-benchmark/RoboTwin/assets/embodiments/realman-rm65b-inspire-gen4
+left_embodiment_config:
+  urdf_path: "/home/admin123/liminghe/VLA-WAM-RL/30-\u5B9E\u9A8C\u8BB0\u5F55/\u8BC1\
+    \u636E/2026-10-11-RealMan\u4E13\u5BB6\u56DE\u653E/shared_frozen_runtime/robot_head_down_fixed.urdf"
+  srdf_path: ./robot.srdf
+  joint_stiffness: 1000
+  joint_damping: 200
+  gripper_stiffness: 80
+  gripper_damping: 4
+  move_group:
+  - l_inspire_base_link
+  - r_inspire_base_link
+  ee_joints:
+  - l_arm_hand_joint
+  - r_arm_hand_joint
+  arm_joints_name:
+  - - l_joint1
+    - l_joint2
+    - l_joint3
+    - l_joint4
+    - l_joint5
+    - l_joint6
+  - - r_joint1
+    - r_joint2
+    - r_joint3
+    - r_joint4
+    - r_joint5
+    - r_joint6
+  gripper_name:
+  - base: l_inspire_left_little_1_joint
+    mimic: []
+  - base: r_inspire_right_little_1_joint
+    mimic: []
+  gripper_bias: 0.18
+  gripper_scale:
+  - 0
+  - 1
+  homestate:
+  - - -1.4338856935501099
+    - -0.17370359599590302
+    - -1.2848105430603027
+    - 0.7786584496498108
+    - -0.5827611684799194
+    - 0.9314123392105103
+  - - 1.440302848815918
+    - 0.1718713343143463
+    - 1.2854284048080444
+    - -0.7795454263687134
+    - 0.5846511721611023
+    - -0.9303343296051025
+  delta_matrix:
+  - - 0
+    - 0
+    - -1
+  - - 0
+    - 1
+    - 0
+  - - 1
+    - 0
+    - 0
+  global_trans_matrix:
+  - - 1
+    - 0
+    - 0
+  - - 0
+    - -1
+    - 0
+  - - 0
+    - 0
+    - -1
+  robot_pose:
+  - - 0.0
+    - -0.65
+    - 0.09539821919202804
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+  planner: curobo
+  dual_arm: true
+  hardware_adapter: realman_rm65b_gen4
+  rotate_lim:
+  - 0
+  - 1
+  grasp_perfect_direction:
+  - front_right
+  - front_left
+  preserve_vendor_inertial: true
+  hand_synergy:
+    open:
+    - 1000
+    - 1000
+    - 1000
+    - 1000
+    - 1000
+    - 0
+    close:
+    - 650
+    - 670
+    - 610
+    - 610
+    - 887
+    - 0
+  planner_table_pose:
+    frame: world
+    pose:
+    - 0
+    - 0
+    - 0.715
+    - 1
+    - 0
+    - 0
+    - 0
+    dims:
+    - 1.2
+    - 0.7
+    - 0.05
+  static_camera_list:
+  - name: head_camera
+    type: D435
+    position:
+    - 0
+    - -0.65
+    - 1.25
+    forward:
+    - 0
+    - 1
+    - 0
+    left:
+    - -1
+    - 0
+    - 0
+  wrist_camera_reserved:
+    left:
+      installed: false
+    right:
+      installed: false
+  tcp_calibration:
+    status: nominal_geometry_not_calibrated
+    frame: palm +Z
+    offset_m: 0.18
+  planner_collision_scope: independent arm and fixed open hand; adjacent finger sphere
+    self-pairs exempt; excludes torso and other arm; native PhysX retains full-model
+    contacts
+  head_camera_mount:
+    link: camera_link
+    position:
+    - 0
+    - 0.016
+    - 0.0125
+    left:
+    - -1
+    - 0
+    - 0
+    near: 0.005
+    far: 10.0
+    optical_preset: vendor_zero_view
+    calibration_status: simulation_preset_not_calibrated
+    position_source: camera housing mesh local +Y front max 0.01495 m + 1.05 mm, Z
+      midpoint 0.0125 m; not measured RGB lens center
+    orientation_source: mesh front +Y; selected pitch is an explicit optical simulation
+      reference; fixed-zero URDF head joints remain unchanged
+    physical_calibration_available: false
+    presets:
+      vendor_zero_view:
+        forward:
+        - 0
+        - 1
+        - 0
+        description: Housing front normal +Y at vendor fixed-zero head pose; optical
+          center is estimated, not calibrated
+      sim_optical_pitch_24_deg:
+        forward:
+        - 0
+        - 0.9135454576426009
+        - -0.4067366430758002
+        description: 24 degree downward optical simulation reference for tabletop
+          visibility, not a measured D435 extrinsic or a changed head_joint2 pose
+    head_joint2_vendor_range_rad:
+    - -0.419
+    - 0.419
+    intrinsics_source: RoboTwin D435 preset 320x240 fovy 37 degrees; not measured
+      RealSense calibration
+  wrist_camera_mount:
+    enabled: false
+    installed: false
+    calibration_status: reserved_not_installed
+    left:
+      link: null
+      optical_transform: null
+    right:
+      link: null
+      optical_transform: null
+    activation_requirement: Install cameras and measure mounting/optical transforms
+      before enabling collect_wrist_camera
+  hand_joint_stiffness: 20.0
+  hand_joint_damping: 0.2
+right_robot_file: /home/admin123/liminghe/vla-benchmark/RoboTwin/assets/embodiments/realman-rm65b-inspire-gen4
+right_embodiment_config:
+  urdf_path: "/home/admin123/liminghe/VLA-WAM-RL/30-\u5B9E\u9A8C\u8BB0\u5F55/\u8BC1\
+    \u636E/2026-10-11-RealMan\u4E13\u5BB6\u56DE\u653E/shared_frozen_runtime/robot_head_down_fixed.urdf"
+  srdf_path: ./robot.srdf
+  joint_stiffness: 1000
+  joint_damping: 200
+  gripper_stiffness: 80
+  gripper_damping: 4
+  move_group:
+  - l_inspire_base_link
+  - r_inspire_base_link
+  ee_joints:
+  - l_arm_hand_joint
+  - r_arm_hand_joint
+  arm_joints_name:
+  - - l_joint1
+    - l_joint2
+    - l_joint3
+    - l_joint4
+    - l_joint5
+    - l_joint6
+  - - r_joint1
+    - r_joint2
+    - r_joint3
+    - r_joint4
+    - r_joint5
+    - r_joint6
+  gripper_name:
+  - base: l_inspire_left_little_1_joint
+    mimic: []
+  - base: r_inspire_right_little_1_joint
+    mimic: []
+  gripper_bias: 0.18
+  gripper_scale:
+  - 0
+  - 1
+  homestate:
+  - - -1.4338856935501099
+    - -0.17370359599590302
+    - -1.2848105430603027
+    - 0.7786584496498108
+    - -0.5827611684799194
+    - 0.9314123392105103
+  - - 1.440302848815918
+    - 0.1718713343143463
+    - 1.2854284048080444
+    - -0.7795454263687134
+    - 0.5846511721611023
+    - -0.9303343296051025
+  delta_matrix:
+  - - 0
+    - 0
+    - -1
+  - - 0
+    - 1
+    - 0
+  - - 1
+    - 0
+    - 0
+  global_trans_matrix:
+  - - 1
+    - 0
+    - 0
+  - - 0
+    - -1
+    - 0
+  - - 0
+    - 0
+    - -1
+  robot_pose:
+  - - 0.0
+    - -0.65
+    - 0.09539821919202804
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+  planner: curobo
+  dual_arm: true
+  hardware_adapter: realman_rm65b_gen4
+  rotate_lim:
+  - 0
+  - 1
+  grasp_perfect_direction:
+  - front_right
+  - front_left
+  preserve_vendor_inertial: true
+  hand_synergy:
+    open:
+    - 1000
+    - 1000
+    - 1000
+    - 1000
+    - 1000
+    - 0
+    close:
+    - 650
+    - 670
+    - 610
+    - 610
+    - 887
+    - 0
+  planner_table_pose:
+    frame: world
+    pose:
+    - 0
+    - 0
+    - 0.715
+    - 1
+    - 0
+    - 0
+    - 0
+    dims:
+    - 1.2
+    - 0.7
+    - 0.05
+  static_camera_list:
+  - name: head_camera
+    type: D435
+    position:
+    - 0
+    - -0.65
+    - 1.25
+    forward:
+    - 0
+    - 1
+    - 0
+    left:
+    - -1
+    - 0
+    - 0
+  wrist_camera_reserved:
+    left:
+      installed: false
+    right:
+      installed: false
+  tcp_calibration:
+    status: nominal_geometry_not_calibrated
+    frame: palm +Z
+    offset_m: 0.18
+  planner_collision_scope: independent arm and fixed open hand; adjacent finger sphere
+    self-pairs exempt; excludes torso and other arm; native PhysX retains full-model
+    contacts
+  head_camera_mount:
+    link: camera_link
+    position:
+    - 0
+    - 0.016
+    - 0.0125
+    left:
+    - -1
+    - 0
+    - 0
+    near: 0.005
+    far: 10.0
+    optical_preset: vendor_zero_view
+    calibration_status: simulation_preset_not_calibrated
+    position_source: camera housing mesh local +Y front max 0.01495 m + 1.05 mm, Z
+      midpoint 0.0125 m; not measured RGB lens center
+    orientation_source: mesh front +Y; selected pitch is an explicit optical simulation
+      reference; fixed-zero URDF head joints remain unchanged
+    physical_calibration_available: false
+    presets:
+      vendor_zero_view:
+        forward:
+        - 0
+        - 1
+        - 0
+        description: Housing front normal +Y at vendor fixed-zero head pose; optical
+          center is estimated, not calibrated
+      sim_optical_pitch_24_deg:
+        forward:
+        - 0
+        - 0.9135454576426009
+        - -0.4067366430758002
+        description: 24 degree downward optical simulation reference for tabletop
+          visibility, not a measured D435 extrinsic or a changed head_joint2 pose
+    head_joint2_vendor_range_rad:
+    - -0.419
+    - 0.419
+    intrinsics_source: RoboTwin D435 preset 320x240 fovy 37 degrees; not measured
+      RealSense calibration
+  wrist_camera_mount:
+    enabled: false
+    installed: false
+    calibration_status: reserved_not_installed
+    left:
+      link: null
+      optical_transform: null
+    right:
+      link: null
+      optical_transform: null
+    activation_requirement: Install cameras and measure mounting/optical transforms
+      before enabling collect_wrist_camera
+  hand_joint_stiffness: 20.0
+  hand_joint_damping: 0.2
+dual_arm_embodied: true
+task_name: adjust_bottle
+task_config: realman_rm65b_gen4_head
+save_data: false
+seed: 21400017
+now_ep_num: 0
+need_plan: true
+eval_mode: false
+eval_video_save_dir: null
+rgb_camera_profile:
+  width: 640
+  height: 480
+  format: RGB8
+  fps: 30
+  device_profile_source: librealsense D435 USB3 default color stream
+  simulation_fovy_deg: 37
+  simulation_intrinsics_source: RoboTwin Large_D435 nominal pinhole
+  physical_intrinsics_status: read per-device RGB profile K before real collection
+  depth_enabled: false
+  infrared_enabled: false
+  exposure_white_balance_gain: physical firmware defaults; not simulated
+rgb_camera_mounts:
+  head_camera:
+    link: camera_link
+    position:
+    - 0
+    - 0.016
+    - 0.0125
+    forward:
+    - 0
+    - 1
+    - 0
+    left:
+    - -1
+    - 0
+    - 0
+    near: 0.005
+    far: 10
+    calibration_status: existing housing estimate; vendor_zero_view
+  left_camera:
+    link: l_link6
+    position:
+    - 0
+    - -0.08
+    - -0.045
+    forward:
+    - 0
+    - -0.18
+    - 0.983666610188635
+    left:
+    - 1
+    - 0
+    - 0
+    near: 0.005
+    far: 10
+    calibration_status: nominal fixed flange mount; not measured
+  right_camera:
+    link: r_link6
+    position:
+    - 0
+    - -0.08
+    - -0.041
+    forward:
+    - 0
+    - -0.18
+    - 0.983666610188635
+    left:
+    - 1
+    - 0
+    - 0
+    near: 0.005
+    far: 10
+    calibration_status: nominal fixed flange mount; not measured

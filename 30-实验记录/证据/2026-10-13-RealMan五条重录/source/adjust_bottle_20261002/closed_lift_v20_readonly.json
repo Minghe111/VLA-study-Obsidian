@@ -1,0 +1,4903 @@
+{
+  "status": "Fail",
+  "reason": "No RRT branch passed complete continuous carry audit.",
+  "planning_metadata": {
+    "scope": "Independent full-native CPU IK/RRT, planning-only attached collision object, physical scene unchanged.",
+    "task_goal_pose_world": [
+      0.0053343148222794665,
+      -0.2024454429292023,
+      0.9755023730310098,
+      0.4984615786451291,
+      -0.5777583787438162,
+      -0.4056985778089085,
+      0.503130176365672
+    ],
+    "ik_attempts_requested": 24,
+    "endpoint_position_tolerance_m": 5e-05,
+    "endpoint_rotation_tolerance_rad": 0.0002,
+    "planning_coordinate_frame": "Robot BASE, ALL geometry consistently transformed from unchanged scene WORLD",
+    "planning_model_base_pose_identity": true,
+    "world_from_planning_base": [
+      [
+        -1.0,
+        -9.094946150367544e-12,
+        2.455635347842211e-11,
+        -5.820766091346741e-11
+      ],
+      [
+        9.094946150367544e-12,
+        -1.0,
+        3.0740918144367413e-10,
+        -0.6499999761581421
+      ],
+      [
+        2.455635347842211e-11,
+        3.0740918144367413e-10,
+        1.0,
+        0.09539820998907089
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "planning_object_names": [
+      "held_bottle",
+      "realman_table"
+    ],
+    "only_planning_attached_object": "held_bottle",
+    "independent_obstacle_collision_objects": true,
+    "table_world_pose_unchanged": true,
+    "attachment_frame_validation": {
+      "anchor_world_error_m_rad": [
+        3.9175279702574025e-07,
+        6.179941103854194e-07
+      ],
+      "bottle_actor_world_error_m_rad": [
+        3.984577515309082e-07,
+        4.4203987640712997e-07
+      ],
+      "bottle_predicted_world_error_m_rad": [
+        4.2847003687017134e-07,
+        4.39015622814189e-07
+      ],
+      "collision_shape_pose_errors_m_rad": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "anchor_matrix_base": [
+        [
+          -0.9858257597222368,
+          0.032790440651362746,
+          -0.1645367997439223,
+          0.004538038486342762
+        ],
+        [
+          0.1677417115513818,
+          0.17388954659112676,
+          -0.9703737134692739,
+          -0.3893322358017666
+        ],
+        [
+          -0.0032077521561307276,
+          -0.9842190876975639,
+          -0.17692511901333963,
+          0.790719307467979
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bottle_matrix_base": [
+        [
+          0.16613093231284026,
+          -0.986103636568495,
+          -0.0003623192785273872,
+          0.10000216404284108
+        ],
+        [
+          0.9860922397360923,
+          0.16612721818716536,
+          0.00488283827854652,
+          -0.552999126781447
+        ],
+        [
+          -0.004754793489413227,
+          -0.0011684707044104011,
+          0.9999880132357017,
+          0.6783580696242578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "actual_start_arm_joint_rad": [
+      -0.9443488121032715,
+      -1.3603531122207642,
+      -1.1994913816452026,
+      0.44065961241722107,
+      1.3059101104736328,
+      2.8509933948516846
+    ],
+    "goal_palm_matrix_world": [
+      [
+        0.9858256578445435,
+        -0.032790616154670715,
+        0.16453737020492554,
+        -0.00453792791813612
+      ],
+      [
+        -0.1677423119544983,
+        -0.1738893985748291,
+        0.9703736305236816,
+        -0.2606678605079651
+      ],
+      [
+        -0.0032078400254249573,
+        -0.9842190742492676,
+        -0.17692506313323975,
+        0.9861178994178772
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "goal_palm_matrix_base": [
+      [
+        -0.9858256578461478,
+        0.03279061612892037,
+        -0.16453737020044468,
+        0.004537927885342241
+      ],
+      [
+        0.16774231194454614,
+        0.17388939827256936,
+        -0.9703736305795665,
+        -0.3893321153763204
+      ],
+      [
+        -0.003207840052782201,
+        -0.984219074303528,
+        -0.17692506283089754,
+        0.8907196895483791
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "move_group_joint_names": [
+      "l_joint1",
+      "l_joint2",
+      "l_joint3",
+      "l_joint4",
+      "l_joint5",
+      "l_joint6"
+    ],
+    "frozen_joint_names": [
+      "r_joint1",
+      "r_joint2",
+      "r_joint3",
+      "r_joint4",
+      "r_joint5",
+      "r_joint6",
+      "r_inspire_right_thumb_1_joint",
+      "r_inspire_right_index_1_joint",
+      "r_inspire_right_middle_1_joint",
+      "r_inspire_right_ring_1_joint",
+      "r_inspire_right_little_1_joint",
+      "l_inspire_left_thumb_1_joint",
+      "l_inspire_left_index_1_joint",
+      "l_inspire_left_middle_1_joint",
+      "l_inspire_left_ring_1_joint",
+      "l_inspire_left_little_1_joint",
+      "r_inspire_right_thumb_2_joint",
+      "r_inspire_right_index_2_joint",
+      "r_inspire_right_middle_2_joint",
+      "r_inspire_right_ring_2_joint",
+      "r_inspire_right_little_2_joint",
+      "l_inspire_left_thumb_2_joint",
+      "l_inspire_left_index_2_joint",
+      "l_inspire_left_middle_2_joint",
+      "l_inspire_left_ring_2_joint",
+      "l_inspire_left_little_2_joint",
+      "r_inspire_right_thumb_3_joint",
+      "l_inspire_left_thumb_3_joint",
+      "r_inspire_right_thumb_4_joint",
+      "l_inspire_left_thumb_4_joint"
+    ],
+    "native_self_exception_count": 448,
+    "actual_bottle_touch_links": [
+      "l_inspire_left_index_2",
+      "l_inspire_left_middle_2",
+      "l_inspire_left_thumb_4"
+    ],
+    "start_collisions": [
+      {
+        "link_name1": "held_bottle",
+        "link_name2": "realman_table",
+        "object_name1": "held_bottle",
+        "object_name2": "realman_table"
+      }
+    ],
+    "full_mesh_metadata": {
+      "geometry_source": "Current actual PhysX collision shapes copied through installed MPlib converter",
+      "full_dof": 36,
+      "collision_links": 93,
+      "collision_shapes": 93,
+      "geometry_types": {
+        "base_link": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_wheel_link": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_wheel_link": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "min_wheel_link1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "medium_wheel_link2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "swivel_wheel_link1_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "swivel_wheel_link2_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "swivel_wheel_link3_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "swivel_wheel_link4_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "body_base_link": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "swivel_wheel_link1_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "swivel_wheel_link2_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "swivel_wheel_link3_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "swivel_wheel_link4_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "head_link1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_base_link1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_base_link1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "head_link2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_base_link": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_base_link": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "camera_link": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_link1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_link1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_link2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_link2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_link3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_link3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_link4": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_link4": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_link5": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_link5": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_link6": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_link6": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_base_link": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_base_link": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_palm_force_sensor": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_thumb_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_index_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_middle_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_ring_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_little_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_palm_force_sensor": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_thumb_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_index_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_middle_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_ring_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_little_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_thumb_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_index_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_index_force_sensor_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_middle_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_middle_force_sensor_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_ring_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_ring_force_sensor_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_little_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_little_force_sensor_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_thumb_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_index_force_sensor_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_index_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_middle_force_sensor_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_middle_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_ring_force_sensor_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_ring_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_little_force_sensor_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_little_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_thumb_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_thumb_force_sensor_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_index_force_sensor_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_index_force_sensor_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_middle_force_sensor_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_middle_force_sensor_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_ring_force_sensor_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_ring_force_sensor_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_little_force_sensor_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_little_force_sensor_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_thumb_force_sensor_1": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_thumb_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_index_force_sensor_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_index_force_sensor_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_middle_force_sensor_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_middle_force_sensor_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_ring_force_sensor_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_ring_force_sensor_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_little_force_sensor_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_little_force_sensor_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_thumb_force_sensor_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_right_thumb_4": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_thumb_force_sensor_2": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_left_thumb_4": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_thumb_force_sensor_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "r_inspire_thumb_force_sensor_4": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_thumb_force_sensor_3": [
+          "PhysxCollisionShapeConvexMesh"
+        ],
+        "l_inspire_thumb_force_sensor_4": [
+          "PhysxCollisionShapeConvexMesh"
+        ]
+      },
+      "bottle_shapes": 7,
+      "native_exemption_pairs": 446,
+      "engine_adjacent_pairs": [
+        [
+          "base_link",
+          "r_wheel_link"
+        ],
+        [
+          "base_link",
+          "l_wheel_link"
+        ],
+        [
+          "base_link",
+          "min_wheel_link1"
+        ],
+        [
+          "base_link",
+          "medium_wheel_link2"
+        ],
+        [
+          "base_link",
+          "swivel_wheel_link1_1"
+        ],
+        [
+          "base_link",
+          "swivel_wheel_link2_1"
+        ],
+        [
+          "base_link",
+          "swivel_wheel_link3_1"
+        ],
+        [
+          "base_link",
+          "swivel_wheel_link4_1"
+        ],
+        [
+          "base_link",
+          "body_base_link"
+        ],
+        [
+          "swivel_wheel_link1_1",
+          "swivel_wheel_link1_2"
+        ],
+        [
+          "swivel_wheel_link2_1",
+          "swivel_wheel_link2_2"
+        ],
+        [
+          "swivel_wheel_link3_1",
+          "swivel_wheel_link3_2"
+        ],
+        [
+          "swivel_wheel_link4_1",
+          "swivel_wheel_link4_2"
+        ],
+        [
+          "body_base_link",
+          "head_link1"
+        ],
+        [
+          "body_base_link",
+          "r_base_link1"
+        ],
+        [
+          "body_base_link",
+          "l_base_link1"
+        ],
+        [
+          "head_link1",
+          "head_link2"
+        ],
+        [
+          "r_base_link",
+          "r_base_link1"
+        ],
+        [
+          "l_base_link",
+          "l_base_link1"
+        ],
+        [
+          "camera_link",
+          "head_link2"
+        ],
+        [
+          "r_base_link",
+          "r_link1"
+        ],
+        [
+          "l_base_link",
+          "l_link1"
+        ],
+        [
+          "r_link1",
+          "r_link2"
+        ],
+        [
+          "l_link1",
+          "l_link2"
+        ],
+        [
+          "r_link2",
+          "r_link3"
+        ],
+        [
+          "l_link2",
+          "l_link3"
+        ],
+        [
+          "r_link3",
+          "r_link4"
+        ],
+        [
+          "l_link3",
+          "l_link4"
+        ],
+        [
+          "r_link4",
+          "r_link5"
+        ],
+        [
+          "l_link4",
+          "l_link5"
+        ],
+        [
+          "r_link5",
+          "r_link6"
+        ],
+        [
+          "l_link5",
+          "l_link6"
+        ],
+        [
+          "r_inspire_base_link",
+          "r_link6"
+        ],
+        [
+          "l_inspire_base_link",
+          "l_link6"
+        ],
+        [
+          "r_inspire_base_link",
+          "r_inspire_palm_force_sensor"
+        ],
+        [
+          "r_inspire_base_link",
+          "r_inspire_right_thumb_1"
+        ],
+        [
+          "r_inspire_base_link",
+          "r_inspire_right_index_1"
+        ],
+        [
+          "r_inspire_base_link",
+          "r_inspire_right_middle_1"
+        ],
+        [
+          "r_inspire_base_link",
+          "r_inspire_right_ring_1"
+        ],
+        [
+          "r_inspire_base_link",
+          "r_inspire_right_little_1"
+        ],
+        [
+          "l_inspire_base_link",
+          "l_inspire_palm_force_sensor"
+        ],
+        [
+          "l_inspire_base_link",
+          "l_inspire_left_thumb_1"
+        ],
+        [
+          "l_inspire_base_link",
+          "l_inspire_left_index_1"
+        ],
+        [
+          "l_inspire_base_link",
+          "l_inspire_left_middle_1"
+        ],
+        [
+          "l_inspire_base_link",
+          "l_inspire_left_ring_1"
+        ],
+        [
+          "l_inspire_base_link",
+          "l_inspire_left_little_1"
+        ],
+        [
+          "r_inspire_right_thumb_1",
+          "r_inspire_right_thumb_2"
+        ],
+        [
+          "r_inspire_right_index_1",
+          "r_inspire_right_index_2"
+        ],
+        [
+          "r_inspire_index_force_sensor_1",
+          "r_inspire_right_index_1"
+        ],
+        [
+          "r_inspire_right_middle_1",
+          "r_inspire_right_middle_2"
+        ],
+        [
+          "r_inspire_middle_force_sensor_1",
+          "r_inspire_right_middle_1"
+        ],
+        [
+          "r_inspire_right_ring_1",
+          "r_inspire_right_ring_2"
+        ],
+        [
+          "r_inspire_right_ring_1",
+          "r_inspire_ring_force_sensor_1"
+        ],
+        [
+          "r_inspire_right_little_1",
+          "r_inspire_right_little_2"
+        ],
+        [
+          "r_inspire_little_force_sensor_1",
+          "r_inspire_right_little_1"
+        ],
+        [
+          "l_inspire_left_thumb_1",
+          "l_inspire_left_thumb_2"
+        ],
+        [
+          "l_inspire_index_force_sensor_1",
+          "l_inspire_left_index_1"
+        ],
+        [
+          "l_inspire_left_index_1",
+          "l_inspire_left_index_2"
+        ],
+        [
+          "l_inspire_left_middle_1",
+          "l_inspire_middle_force_sensor_1"
+        ],
+        [
+          "l_inspire_left_middle_1",
+          "l_inspire_left_middle_2"
+        ],
+        [
+          "l_inspire_left_ring_1",
+          "l_inspire_ring_force_sensor_1"
+        ],
+        [
+          "l_inspire_left_ring_1",
+          "l_inspire_left_ring_2"
+        ],
+        [
+          "l_inspire_left_little_1",
+          "l_inspire_little_force_sensor_1"
+        ],
+        [
+          "l_inspire_left_little_1",
+          "l_inspire_left_little_2"
+        ],
+        [
+          "r_inspire_right_thumb_2",
+          "r_inspire_right_thumb_3"
+        ],
+        [
+          "r_inspire_right_thumb_2",
+          "r_inspire_thumb_force_sensor_1"
+        ],
+        [
+          "r_inspire_index_force_sensor_2",
+          "r_inspire_right_index_2"
+        ],
+        [
+          "r_inspire_index_force_sensor_3",
+          "r_inspire_right_index_2"
+        ],
+        [
+          "r_inspire_middle_force_sensor_2",
+          "r_inspire_right_middle_2"
+        ],
+        [
+          "r_inspire_middle_force_sensor_3",
+          "r_inspire_right_middle_2"
+        ],
+        [
+          "r_inspire_right_ring_2",
+          "r_inspire_ring_force_sensor_2"
+        ],
+        [
+          "r_inspire_right_ring_2",
+          "r_inspire_ring_force_sensor_3"
+        ],
+        [
+          "r_inspire_little_force_sensor_2",
+          "r_inspire_right_little_2"
+        ],
+        [
+          "r_inspire_little_force_sensor_3",
+          "r_inspire_right_little_2"
+        ],
+        [
+          "l_inspire_left_thumb_2",
+          "l_inspire_thumb_force_sensor_1"
+        ],
+        [
+          "l_inspire_left_thumb_2",
+          "l_inspire_left_thumb_3"
+        ],
+        [
+          "l_inspire_index_force_sensor_2",
+          "l_inspire_left_index_2"
+        ],
+        [
+          "l_inspire_index_force_sensor_3",
+          "l_inspire_left_index_2"
+        ],
+        [
+          "l_inspire_left_middle_2",
+          "l_inspire_middle_force_sensor_2"
+        ],
+        [
+          "l_inspire_left_middle_2",
+          "l_inspire_middle_force_sensor_3"
+        ],
+        [
+          "l_inspire_left_ring_2",
+          "l_inspire_ring_force_sensor_2"
+        ],
+        [
+          "l_inspire_left_ring_2",
+          "l_inspire_ring_force_sensor_3"
+        ],
+        [
+          "l_inspire_left_little_2",
+          "l_inspire_little_force_sensor_2"
+        ],
+        [
+          "l_inspire_left_little_2",
+          "l_inspire_little_force_sensor_3"
+        ],
+        [
+          "r_inspire_right_thumb_3",
+          "r_inspire_thumb_force_sensor_2"
+        ],
+        [
+          "r_inspire_right_thumb_3",
+          "r_inspire_right_thumb_4"
+        ],
+        [
+          "l_inspire_left_thumb_3",
+          "l_inspire_thumb_force_sensor_2"
+        ],
+        [
+          "l_inspire_left_thumb_3",
+          "l_inspire_left_thumb_4"
+        ],
+        [
+          "r_inspire_right_thumb_4",
+          "r_inspire_thumb_force_sensor_3"
+        ],
+        [
+          "r_inspire_right_thumb_4",
+          "r_inspire_thumb_force_sensor_4"
+        ],
+        [
+          "l_inspire_left_thumb_4",
+          "l_inspire_thumb_force_sensor_3"
+        ],
+        [
+          "l_inspire_left_thumb_4",
+          "l_inspire_thumb_force_sensor_4"
+        ]
+      ],
+      "engine_adjacent_additional_pairs": [
+        [
+          "r_link5",
+          "r_link6"
+        ],
+        [
+          "l_link5",
+          "l_link6"
+        ]
+      ],
+      "engine_adjacent_source": "Installed mplib.sapien_utils.srdf_exporter.py:53-61 and NVIDIA PhysX articulation parent-child filtering",
+      "engine_adjacent_source_url": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/110.0/dev_guide/guides/articulation_stability_guide.html",
+      "effective_exemption_pairs": 448,
+      "checked_self_pairs": 3830,
+      "excluded_environment": [
+        "floor contact of wheels/base; planner table separately checked"
+      ],
+      "urdf_kinematic_export_sha256": "520e4df27e9cec7508d08940c845a6d1614adbb890c9c21f954161ccc29a673f",
+      "fk_audit": {
+        "passed": true,
+        "checked_links": 93,
+        "worst_position": {
+          "link": "r_inspire_right_middle_2",
+          "position_error_m": 5.407463388446692e-07,
+          "rotation_error_rad": 5.372690074837256e-07
+        },
+        "worst_rotation": {
+          "link": "l_inspire_middle_force_sensor_2",
+          "position_error_m": 4.317148447008487e-07,
+          "rotation_error_rad": 1.157120982308284e-06
+        },
+        "position_tolerance_m": 2e-05,
+        "rotation_tolerance_rad": 0.0002
+      },
+      "rigid_carry_reference": [
+        [
+          0.0016480734338983893,
+          0.9999967813491821,
+          -0.0020315556321293116,
+          -0.12120433151721954
+        ],
+        [
+          0.18159841001033783,
+          -0.002297063823789358,
+          -0.9833701252937317,
+          0.08525842428207397
+        ],
+        [
+          -0.9833714962005615,
+          0.0012517329305410385,
+          -0.18160149455070496,
+          0.16299021244049072
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "measured_palm_to_bottle": [
+        [
+          0.0016480686920031754,
+          0.9999967306677574,
+          -0.0020315556709485532,
+          -0.12120432943814508
+        ],
+        [
+          0.18159841674447985,
+          -0.002297061351319152,
+          -0.9833701359653608,
+          0.08525845889708139
+        ],
+        [
+          -0.9833715066877436,
+          0.001251731458784299,
+          -0.18160150477043824,
+          0.16299021975081562
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "reference_position_error_m": 3.543955613731292e-08,
+      "reference_rotation_error_rad": 0.0,
+      "max_reference_position_error_m": 0.001,
+      "max_reference_rotation_error_rad": 0.008726646259971648,
+      "palm_link": "l_inspire_base_link",
+      "real_grasp_contact_evidence": {
+        "allowed_exact_hand_links": [
+          "l_inspire_left_index_2",
+          "l_inspire_left_middle_2",
+          "l_inspire_left_thumb_4"
+        ],
+        "active_contact_evidence": [
+          {
+            "hand_link": "l_inspire_left_thumb_4",
+            "normal_impulse_Ns": 0.0059668248101904684,
+            "active_point_count": 1,
+            "points": [
+              {
+                "normal_impulse_Ns": 0.0059668248101904684,
+                "impulse_Ns": [
+                  -0.0009406675235368311,
+                  -0.005608279258012772,
+                  -0.001807027030736208
+                ],
+                "normal": [
+                  -0.15764959156513214,
+                  -0.9399101138114929,
+                  -0.30284565687179565
+                ]
+              }
+            ]
+          },
+          {
+            "hand_link": "l_inspire_left_index_2",
+            "normal_impulse_Ns": 0.0034431996214121306,
+            "active_point_count": 1,
+            "points": [
+              {
+                "normal_impulse_Ns": 0.0034431996214121306,
+                "impulse_Ns": [
+                  0.0005386323900893331,
+                  0.003238217905163765,
+                  0.0010389627423137426
+                ],
+                "normal": [
+                  0.15643368661403656,
+                  0.9404676556587219,
+                  0.30174338817596436
+                ]
+              }
+            ]
+          },
+          {
+            "hand_link": "l_inspire_left_middle_2",
+            "normal_impulse_Ns": 0.00277982679413389,
+            "active_point_count": 1,
+            "points": [
+              {
+                "normal_impulse_Ns": 0.00277982679413389,
+                "impulse_Ns": [
+                  0.000431286811362952,
+                  0.0026054789777845144,
+                  0.000867702707182616
+                ],
+                "normal": [
+                  0.15514880418777466,
+                  0.93728107213974,
+                  0.3121427297592163
+                ]
+              }
+            ]
+          }
+        ],
+        "zero_impulse_near_contacts_not_excluded": [
+          {
+            "hand_link": "l_inspire_little_force_sensor_2",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_little_force_sensor_2",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_little_force_sensor_2",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_left_little_2",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_left_little_2",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_left_little_2",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_ring_force_sensor_3",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_left_ring_2",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_ring_force_sensor_2",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_left_thumb_3",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_thumb_force_sensor_2",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_thumb_force_sensor_3",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_thumb_force_sensor_4",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_index_force_sensor_2",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_index_force_sensor_3",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_middle_force_sensor_2",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_middle_force_sensor_3",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_little_force_sensor_3",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_little_force_sensor_3",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          },
+          {
+            "hand_link": "l_inspire_little_force_sensor_3",
+            "normal_impulse_Ns": 0.0,
+            "active_point_count": 0,
+            "points": []
+          }
+        ],
+        "foreign_bottle_contacts_not_excluded": [
+          {
+            "hand_link": "table",
+            "normal_impulse_Ns": 0.0007040030533039287,
+            "active_point_count": 1,
+            "points": [
+              {
+                "normal_impulse_Ns": 0.0007040030533039287,
+                "impulse_Ns": [
+                  -7.226338993859827e-07,
+                  -4.246107437211322e-06,
+                  0.0007039898773655295
+                ],
+                "normal": [
+                  -0.0010264641605317593,
+                  -0.006031376775354147,
+                  0.9999812841415405
+                ]
+              }
+            ]
+          },
+          {
+            "hand_link": "table",
+            "normal_impulse_Ns": 0.0022731609175814954,
+            "active_point_count": 1,
+            "points": [
+              {
+                "normal_impulse_Ns": 0.0022731609175814954,
+                "impulse_Ns": [
+                  -2.7338237487128936e-06,
+                  -1.609529135748744e-05,
+                  0.002273102290928364
+                ],
+                "normal": [
+                  -0.0012026529293507338,
+                  -0.007080577313899994,
+                  0.9999741911888123
+                ]
+              }
+            ]
+          }
+        ],
+        "normal_impulse_threshold_Ns": 1e-10
+      },
+      "allowed_bottle_robot_pairs": [
+        [
+          "l_inspire_left_index_2",
+          "bottle"
+        ],
+        [
+          "l_inspire_left_middle_2",
+          "bottle"
+        ],
+        [
+          "l_inspire_left_thumb_4",
+          "bottle"
+        ]
+      ],
+      "checked_bottle_robot_links": 90,
+      "attached_bottle_vertex_radius_in_palm_m": 0.2422192254830852,
+      "bottle_motion_coefficients_m_per_rad": {
+        "l_joint1": 0.8512199303220837,
+        "l_joint2": 0.851219926529145,
+        "l_joint3": 0.5952198547069949,
+        "l_joint4": 0.3852196245012475,
+        "l_joint5": 0.3852196191885572,
+        "l_joint6": 0.27021923397308
+      },
+      "relative_pair_bound": "Common ancestor rigid transforms cancel exactly in pairwise distance. All noncommon branch displacement bounds retained.",
+      "predicted_start_bottle_vs_measured_position_m": 3.9845775266383114e-07
+    },
+    "support_departure": {
+      "enabled": true,
+      "planning_only_allowed_pair": [
+        "held_bottle",
+        "realman_table"
+      ],
+      "actual_start_signed_gap_m": -4.788800535115989e-06,
+      "max_initial_penetration_m": 0.0005,
+      "max_extra_depth_m": 2e-05,
+      "release_gap_m": 0.001,
+      "physical_table_collisions_unchanged": true,
+      "qualification": "Every candidate requires unchanged full CMA raw evidence plus independent continuous signed support-exit certificate"
+    },
+    "endpoint_candidates": [
+      {
+        "label": "CLIK_0",
+        "ik_success": true,
+        "ik_error_vector": [
+          1.4555143215668882e-08,
+          -9.061651389375107e-08,
+          -2.2334348037278225e-10,
+          5.00716915369584e-09,
+          -2.863685522492155e-09,
+          -1.8631544779212916e-09
+        ],
+        "arm_joint_rad": [
+          -1.2024828304333515,
+          -1.2734290683878906,
+          -1.5135719339106426,
+          0.17667074660256762,
+          1.485765862808902,
+          3.0329773660352837
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.2024828304333515,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 9.182963916513841e-08,
+        "rotation_error_rad": 0.0,
+        "collisions": [],
+        "reason": "Accepted free endpoint",
+        "joint_distance_from_start_rad": 0.5549702089453118,
+        "wrist6_delta_rad": 0.1819839711835991
+      },
+      {
+        "label": "CLIK_1",
+        "ik_success": true,
+        "ik_error_vector": [
+          7.371286931498243e-09,
+          -2.975665428505122e-08,
+          -8.053932254056985e-09,
+          -7.087311916964718e-08,
+          -2.746420263248766e-09,
+          -5.4625448234202345e-08
+        ],
+        "arm_joint_rad": [
+          -1.202483030738101,
+          -1.2734290072416667,
+          -1.5135720820502534,
+          0.1766704989670176,
+          1.4857659306212863,
+          3.0329773786853953
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.202483030738101,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 3.3117867948973984e-08,
+        "rotation_error_rad": 9.884312124119404e-08,
+        "collisions": [],
+        "reason": "Duplicate endpoint branch"
+      },
+      {
+        "label": "CLIK_2",
+        "ik_success": true,
+        "ik_error_vector": [
+          1.4339557772788798e-08,
+          -2.2248653353566645e-08,
+          -2.775310363410011e-08,
+          3.133085327050762e-08,
+          7.610306042353477e-08,
+          -2.0939392109120547e-08
+        ],
+        "arm_joint_rad": [
+          -1.2024830427138666,
+          -1.2734289668152552,
+          -1.513572090494147,
+          0.1766705128970488,
+          1.4857659804422936,
+          3.0329774772309492
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.2024830427138666,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 4.025060198313957e-08,
+        "rotation_error_rad": 8.429369702178808e-08,
+        "collisions": [],
+        "reason": "Duplicate endpoint branch"
+      },
+      {
+        "label": "CLIK_3",
+        "ik_success": true,
+        "ik_error_vector": [
+          -2.9050609045624824e-09,
+          -1.1336178521402976e-08,
+          2.2907577691899088e-08,
+          -2.199714018054355e-08,
+          -9.191906074772259e-08,
+          -5.049259940714812e-09
+        ],
+        "arm_joint_rad": [
+          -1.202483070299919,
+          -1.2734290786566411,
+          -1.5135720738940022,
+          0.17667051893067942,
+          1.4857659072082714,
+          3.032977447266649
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.202483070299919,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 2.8097525696658773e-08,
+        "rotation_error_rad": 9.424321830774487e-08,
+        "collisions": [],
+        "reason": "Duplicate endpoint branch"
+      },
+      {
+        "label": "CLIK_4",
+        "ik_success": true,
+        "ik_error_vector": [
+          -3.602426275682214e-09,
+          1.0181492423757478e-08,
+          2.2623309288051397e-08,
+          9.577774597946745e-09,
+          -8.950233743195129e-08,
+          2.493906775535848e-08
+        ],
+        "arm_joint_rad": [
+          -1.2024831256639343,
+          -1.273429070715794,
+          -1.5135721000090077,
+          0.17667049478276617,
+          1.4857659273742725,
+          3.0329774985214035
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.2024831256639343,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 2.761942607813971e-08,
+        "rotation_error_rad": 7.884953353001449e-08,
+        "collisions": [],
+        "reason": "Duplicate endpoint branch"
+      },
+      {
+        "label": "CLIK_5",
+        "ik_success": true,
+        "ik_error_vector": [
+          -3.2966085194376356e-08,
+          -1.901953683023217e-09,
+          -3.5028624946710134e-09,
+          5.423067977127459e-08,
+          -7.297812879925123e-08,
+          -2.025649603609736e-08
+        ],
+        "arm_joint_rad": [
+          -1.202278434983844,
+          -2.600891831288386,
+          -4.768962229163724,
+          5.589667320798878,
+          6.0053703956620845,
+          10.00564006829723
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 3.775370376588598,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint5",
+              "joint_index": 9,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 6.0053703956620845,
+              "lower_rad": -2.2300000190734863,
+              "upper_rad": 2.2300000190734863,
+              "excess_rad": 3.775370376588598
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 3.775370376588598,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint5",
+              "joint_index": 9,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 6.0053703956620845,
+              "lower_rad": -2.2300000190734863,
+              "upper_rad": 2.2300000190734863,
+              "excess_rad": 3.775370376588598
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      },
+      {
+        "label": "CLIK_6",
+        "ik_success": true,
+        "ik_error_vector": [
+          -3.233733447594877e-09,
+          9.332339678291627e-09,
+          2.383569398863435e-08,
+          -1.5500350219500858e-08,
+          -8.401863423398862e-08,
+          4.317908075535115e-08
+        ],
+        "arm_joint_rad": [
+          -1.202483117304546,
+          -1.2734290792338072,
+          -1.5135720877610215,
+          0.1766705205231452,
+          1.4857659316411946,
+          3.0329774684229664
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.202483117304546,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 2.841478169637739e-08,
+        "rotation_error_rad": 9.185692672385244e-08,
+        "collisions": [],
+        "reason": "Duplicate endpoint branch"
+      },
+      {
+        "label": "CLIK_7",
+        "ik_success": true,
+        "ik_error_vector": [
+          -9.889426102709482e-09,
+          -2.6762572797955817e-08,
+          -2.2828698916589998e-09,
+          -7.272813307580145e-08,
+          -1.784551293846845e-09,
+          -5.278659917506978e-08
+        ],
+        "arm_joint_rad": [
+          -1.2024830315106623,
+          -1.273429023107266,
+          -1.5135721507584896,
+          0.17667049868319396,
+          1.4857660149871224,
+          3.0329773918664578
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.2024830315106623,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 3.000529919185393e-08,
+        "rotation_error_rad": 9.65705618025044e-08,
+        "collisions": [],
+        "reason": "Duplicate endpoint branch"
+      },
+      {
+        "label": "CLIK_8",
+        "ik_success": true,
+        "ik_error_vector": [
+          -1.950997860155545e-08,
+          1.4417986360327368e-08,
+          -1.8942801626603074e-08,
+          -5.048074895185224e-08,
+          -4.738374229990754e-08,
+          6.25586126512534e-08
+        ],
+        "arm_joint_rad": [
+          -1.202483105992184,
+          -1.273428923150672,
+          -1.5135723142494986,
+          0.176670545756177,
+          1.4857660401608637,
+          3.032977440677306
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.202483105992184,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 3.086132755420352e-08,
+        "rotation_error_rad": 7.884953353001449e-08,
+        "collisions": [],
+        "reason": "Duplicate endpoint branch"
+      },
+      {
+        "label": "CLIK_9",
+        "ik_success": true,
+        "ik_error_vector": [
+          -1.0287161001692276e-08,
+          -3.036378582936781e-08,
+          -1.6859655872759124e-08,
+          1.5786800159440714e-08,
+          2.132589852008992e-08,
+          -7.835538176625967e-08
+        ],
+        "arm_joint_rad": [
+          -1.2024830258098262,
+          -1.27342897706626,
+          -1.5135721955014205,
+          0.1766704761903238,
+          1.4857660342596224,
+          3.0329774805766783
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.2024830258098262,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 3.8348026091403016e-08,
+        "rotation_error_rad": 9.185692672385244e-08,
+        "collisions": [],
+        "reason": "Duplicate endpoint branch"
+      },
+      {
+        "label": "CLIK_10",
+        "ik_success": true,
+        "ik_error_vector": [
+          -7.990336525336802e-09,
+          -1.9734072815701387e-08,
+          1.5718475997934214e-08,
+          7.832105521012218e-08,
+          -5.288940501275161e-08,
+          8.670552567591194e-09
+        ],
+        "arm_joint_rad": [
+          -1.2024830359324223,
+          -1.2734290707407472,
+          -1.5135720969001003,
+          0.17667056137737597,
+          1.4857659644478518,
+          3.032977537655201
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.2024830359324223,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 2.71951239077185e-08,
+        "rotation_error_rad": 9.884312124119404e-08,
+        "collisions": [],
+        "reason": "Duplicate endpoint branch"
+      },
+      {
+        "label": "CLIK_11",
+        "ik_success": true,
+        "ik_error_vector": [
+          -1.1077963653326033e-08,
+          6.221661463249684e-09,
+          1.097491076584438e-08,
+          3.861353135739369e-08,
+          -8.078772063694131e-08,
+          1.4719574142896263e-08
+        ],
+        "arm_joint_rad": [
+          -1.2024831098736892,
+          -1.2734290281552785,
+          -1.5135721730419187,
+          0.1766704984499865,
+          1.485765965891395,
+          3.0329775284617493
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.2024831098736892,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 1.849178162949236e-08,
+        "rotation_error_rad": 9.65705618025044e-08,
+        "collisions": [],
+        "reason": "Duplicate endpoint branch"
+      },
+      {
+        "label": "CLIK_12",
+        "ik_success": true,
+        "ik_error_vector": [
+          -7.875048400675262e-11,
+          9.778780350662275e-09,
+          -2.114111303280978e-08,
+          4.3601950861903854e-08,
+          3.7480898131469695e-08,
+          7.099192655957154e-08
+        ],
+        "arm_joint_rad": [
+          11.364092159286146,
+          -2.6008917038453183,
+          1.5142229328123757,
+          -0.6935184680671629,
+          -6.5610001514027605,
+          10.005640529242518
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 8.254092264190321,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 11.364092159286146,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 8.254092264190321
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 8.254092264190321,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 11.364092159286146,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 8.254092264190321
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      },
+      {
+        "label": "CLIK_13",
+        "ik_success": true,
+        "ik_error_vector": [
+          -8.679426724517853e-09,
+          -1.0260243342229073e-08,
+          3.1167706293539536e-09,
+          8.377705301623045e-08,
+          -1.580677509282341e-08,
+          -3.088617590851772e-08
+        ],
+        "arm_joint_rad": [
+          11.365532519461274,
+          3.6822931856886965,
+          1.5123851933810684,
+          8.723014570133923,
+          0.27720992594837196,
+          -11.977628794269762
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 8.255532624365449,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 11.365532519461274,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 8.255532624365449
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 8.255532624365449,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 11.365532519461274,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 8.255532624365449
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      },
+      {
+        "label": "CLIK_14",
+        "ik_success": true,
+        "ik_error_vector": [
+          -2.519523187479472e-08,
+          -2.8243425344412808e-08,
+          -2.4562154156610808e-08,
+          8.505345030053804e-09,
+          3.940381493620568e-08,
+          -7.721245051661718e-08
+        ],
+        "arm_joint_rad": [
+          -4.342186376073836,
+          1.2734226194312974,
+          1.5135633277786498,
+          -2.9630957252388703,
+          1.485880859076712,
+          3.0323365337805335
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 1.2321864809780108,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -4.342186376073836,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 1.2321864809780108
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 1.2321864809780108,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -4.342186376073836,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 1.2321864809780108
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      },
+      {
+        "label": "CLIK_15",
+        "ik_success": true,
+        "ik_error_vector": [
+          -3.9986359994074244e-08,
+          -7.2020460515448354e-09,
+          -1.9857462503436976e-08,
+          4.3117787977206556e-08,
+          -6.502225026336567e-08,
+          3.5394163599988815e-08
+        ],
+        "arm_joint_rad": [
+          -1.2006287007285814,
+          -1.2734364350856,
+          -1.51305909983046,
+          -2.963128289223787,
+          -1.48539766081463,
+          6.1738370633608755
+        ],
+        "joint_limit_audit": {
+          "passed": true,
+          "commanded": {
+            "excess_rad": 0.0,
+            "tolerance_rad": 1e-05,
+            "passed": true,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -1.2006287007285814,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 0.0
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "position_error_m": 4.4303647248828774e-08,
+        "rotation_error_rad": 7.884953353001449e-08,
+        "collisions": [],
+        "reason": "Accepted free endpoint",
+        "joint_distance_from_start_rad": 5.530824513825176,
+        "wrist6_delta_rad": 3.322843668509191
+      },
+      {
+        "label": "CLIK_16",
+        "ik_success": true,
+        "ik_error_vector": [
+          -1.0388682355903467e-08,
+          -2.4555148863139905e-09,
+          -6.779075767515284e-10,
+          8.934177782781924e-08,
+          -1.2228375000956915e-08,
+          2.5886098251048928e-08
+        ],
+        "arm_joint_rad": [
+          -1.2022784319339979,
+          -2.600891751628534,
+          -4.768962385368209,
+          5.58966687831074,
+          -0.2778148289145017,
+          -8.843915379984258
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 2.5639151701759086,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint6",
+              "joint_index": 11,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -8.843915379984258,
+              "lower_rad": -6.28000020980835,
+              "upper_rad": 6.28000020980835,
+              "excess_rad": 2.5639151701759086
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 2.5639151701759086,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint6",
+              "joint_index": 11,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -8.843915379984258,
+              "lower_rad": -6.28000020980835,
+              "upper_rad": 6.28000020980835,
+              "excess_rad": 2.5639151701759086
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      },
+      {
+        "label": "CLIK_17",
+        "ik_success": true,
+        "ik_error_vector": [
+          -1.7738313464855768e-08,
+          -7.85200976723724e-09,
+          5.395963790836168e-09,
+          7.108652517497094e-08,
+          -5.666443125726091e-08,
+          -6.776518263196252e-09
+        ],
+        "arm_joint_rad": [
+          -23.18988861930853,
+          1.2734287160074438,
+          1.5130513789060775,
+          -12.386080490473383,
+          4.797671777803416,
+          18.73956625515676
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 20.079888724212704,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -23.18988861930853,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 20.079888724212704
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 20.079888724212704,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint1",
+              "joint_index": 1,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -23.18988861930853,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 20.079888724212704
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      },
+      {
+        "label": "CLIK_18",
+        "ik_success": true,
+        "ik_error_vector": [
+          1.6395375496992237e-08,
+          -1.5377053138049803e-08,
+          -2.9014553829784837e-08,
+          4.394254442654025e-08,
+          6.397888539669359e-08,
+          -3.6298838962389723e-08
+        ],
+        "arm_joint_rad": [
+          -1.200838088315317,
+          -2.6008920039492986,
+          1.512385145716901,
+          2.439829257342956,
+          0.2772099137201288,
+          0.5887417715887172
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 0.330892023022785,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint2",
+              "joint_index": 3,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -2.6008920039492986,
+              "lower_rad": -2.2699999809265137,
+              "upper_rad": 2.2699999809265137,
+              "excess_rad": 0.330892023022785
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 0.330892023022785,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint2",
+              "joint_index": 3,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -2.6008920039492986,
+              "lower_rad": -2.2699999809265137,
+              "upper_rad": 2.2699999809265137,
+              "excess_rad": 0.330892023022785
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      },
+      {
+        "label": "CLIK_19",
+        "ik_success": true,
+        "ik_error_vector": [
+          -8.531869197773444e-09,
+          1.0505031024478634e-08,
+          -1.025369801592871e-08,
+          1.3954922941381356e-08,
+          -9.007096963696733e-08,
+          3.630397794884832e-08
+        ],
+        "arm_joint_rad": [
+          1.9412064263656839,
+          2.600883162202887,
+          -1.5142345123203957,
+          2.442725913377115,
+          -0.27888816154651197,
+          3.72710150243264
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 0.3308831812763735,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint2",
+              "joint_index": 3,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 2.600883162202887,
+              "lower_rad": -2.2699999809265137,
+              "upper_rad": 2.2699999809265137,
+              "excess_rad": 0.3308831812763735
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 0.3308831812763735,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint2",
+              "joint_index": 3,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 2.600883162202887,
+              "lower_rad": -2.2699999809265137,
+              "upper_rad": 2.2699999809265137,
+              "excess_rad": 0.3308831812763735
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      },
+      {
+        "label": "CLIK_20",
+        "ik_success": true,
+        "ik_error_vector": [
+          8.71461236158128e-09,
+          2.551256271273909e-09,
+          -2.3652523557126058e-08,
+          1.7148674652392795e-08,
+          7.534547487037923e-08,
+          4.534090466967733e-08
+        ],
+        "arm_joint_rad": [
+          1.942852584987757,
+          -5.009756637984029,
+          -4.770134004980849,
+          0.1802901396150681,
+          4.797671763910199,
+          -6.393175044535524
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 2.739756657057515,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint2",
+              "joint_index": 3,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -5.009756637984029,
+              "lower_rad": -2.2699999809265137,
+              "upper_rad": 2.2699999809265137,
+              "excess_rad": 2.739756657057515
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 2.739756657057515,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint2",
+              "joint_index": 3,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -5.009756637984029,
+              "lower_rad": -2.2699999809265137,
+              "upper_rad": 2.2699999809265137,
+              "excess_rad": 2.739756657057515
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      },
+      {
+        "label": "CLIK_21",
+        "ik_success": true,
+        "ik_error_vector": [
+          -1.707581279318659e-08,
+          -1.714397947913579e-08,
+          4.9259104896328066e-09,
+          4.3165869651265454e-08,
+          -7.03256546154339e-08,
+          -3.0606630979646e-08
+        ],
+        "arm_joint_rad": [
+          1.942852629831447,
+          1.2734287111042695,
+          1.513051374845006,
+          -6.1028951856791025,
+          -1.4855135056360032,
+          -0.10998970102975683
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 2.9928952905832773,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint4",
+              "joint_index": 7,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -6.1028951856791025,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 2.9928952905832773
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 2.9928952905832773,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint4",
+              "joint_index": 7,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -6.1028951856791025,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 2.9928952905832773
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      },
+      {
+        "label": "CLIK_22",
+        "ik_success": true,
+        "ik_error_vector": [
+          5.356252876044088e-09,
+          1.8063834821640956e-08,
+          -2.181171641735472e-08,
+          4.5480707310061735e-09,
+          5.281167229394387e-08,
+          7.901449042280184e-08
+        ],
+        "arm_joint_rad": [
+          -45.18457563136065,
+          -2.6008916887535514,
+          1.5142229107166896,
+          -88.65811276517053,
+          -12.844185430054644,
+          129.38616133134101
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 123.10616112153266,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint6",
+              "joint_index": 11,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 129.38616133134101,
+              "lower_rad": -6.28000020980835,
+              "upper_rad": 6.28000020980835,
+              "excess_rad": 123.10616112153266
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 123.10616112153266,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint6",
+              "joint_index": 11,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 129.38616133134101,
+              "lower_rad": -6.28000020980835,
+              "upper_rad": 6.28000020980835,
+              "excess_rad": 123.10616112153266
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      },
+      {
+        "label": "CLIK_23",
+        "ik_success": true,
+        "ik_error_vector": [
+          -1.3291934414600858e-08,
+          -8.228129911301634e-09,
+          4.123460688713867e-09,
+          -4.203537454293242e-08,
+          -5.853264406757014e-08,
+          -6.15364067618751e-08
+        ],
+        "arm_joint_rad": [
+          1.9428525891018005,
+          1.273428709205138,
+          1.5130513695190402,
+          6.46347535725694,
+          -1.4855135043155454,
+          -0.10998977080963294
+        ],
+        "joint_limit_audit": {
+          "passed": false,
+          "commanded": {
+            "excess_rad": 3.353475462161115,
+            "tolerance_rad": 1e-05,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint4",
+              "joint_index": 7,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 6.46347535725694,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 3.353475462161115
+            }
+          },
+          "frozen_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "start_measured": {
+            "excess_rad": 7.290389021363808e-07,
+            "tolerance_rad": 0.0001,
+            "passed": true,
+            "worst": {
+              "joint": "r_inspire_right_index_1_joint",
+              "joint_index": 13,
+              "source_row_with_start": 0,
+              "path_index": -1,
+              "sample_index": null,
+              "position_rad": -7.290389021363808e-07,
+              "lower_rad": 0.0,
+              "upper_rad": 1.438099980354309,
+              "excess_rad": 7.290389021363808e-07
+            }
+          },
+          "overall": {
+            "excess_rad": 3.353475462161115,
+            "tolerance_rad": 0.0001,
+            "passed": false,
+            "worst": {
+              "joint": "l_joint4",
+              "joint_index": 7,
+              "source_row_with_start": 1,
+              "path_index": 0,
+              "sample_index": null,
+              "position_rad": 6.46347535725694,
+              "lower_rad": -3.109999895095825,
+              "upper_rad": 3.109999895095825,
+              "excess_rad": 3.353475462161115
+            }
+          },
+          "commanded_joints": [
+            "l_joint1",
+            "l_joint2",
+            "l_joint3",
+            "l_joint4",
+            "l_joint5",
+            "l_joint6"
+          ],
+          "frozen_joints": [
+            "r_joint1",
+            "r_joint2",
+            "r_joint3",
+            "r_joint4",
+            "r_joint5",
+            "r_joint6",
+            "r_inspire_right_thumb_1_joint",
+            "r_inspire_right_index_1_joint",
+            "r_inspire_right_middle_1_joint",
+            "r_inspire_right_ring_1_joint",
+            "r_inspire_right_little_1_joint",
+            "l_inspire_left_thumb_1_joint",
+            "l_inspire_left_index_1_joint",
+            "l_inspire_left_middle_1_joint",
+            "l_inspire_left_ring_1_joint",
+            "l_inspire_left_little_1_joint",
+            "r_inspire_right_thumb_2_joint",
+            "r_inspire_right_index_2_joint",
+            "r_inspire_right_middle_2_joint",
+            "r_inspire_right_ring_2_joint",
+            "r_inspire_right_little_2_joint",
+            "l_inspire_left_thumb_2_joint",
+            "l_inspire_left_index_2_joint",
+            "l_inspire_left_middle_2_joint",
+            "l_inspire_left_ring_2_joint",
+            "l_inspire_left_little_2_joint",
+            "r_inspire_right_thumb_3_joint",
+            "l_inspire_left_thumb_3_joint",
+            "r_inspire_right_thumb_4_joint",
+            "l_inspire_left_thumb_4_joint"
+          ],
+          "scope": "Command endpoints strictly checked; measured start and unchanged joints have separate numerical tolerance; no qpos clipping."
+        },
+        "reason": "Strict joint limit rejection"
+      }
+    ],
+    "accepted_free_endpoints": 2,
+    "RRT_attempts": [
+      {
+        "branch": 0,
+        "goal_arm_joint_rad": [
+          -1.2024828304333515,
+          -1.2734290683878906,
+          -1.5135719339106426,
+          0.17667074660256762,
+          1.485765862808902,
+          3.0329773660352837
+        ],
+        "RRT_status": "Exact solution",
+        "RRT_elapsed_s": 1.2797740511596203,
+        "polyline_waypoints": 2,
+        "audit_passed": false,
+        "retiming": {
+          "method": "Actual official MPlib TOPP, separately on each two-endpoint native RRT segment; no minimum duration or global speed override",
+          "official_TOPP_source_sha256": "3aeae04bf979a573315010c6580b51ecaad714e99b41ea6f5df039d2af0e4b8f",
+          "duration_s": 1.120857870299692,
+          "dense_step_s": 0.004000000189989805,
+          "dense_rows": 280,
+          "dense_duration_s": 1.1200000531971455,
+          "dense_last_row_time_s": 1.1160000530071557,
+          "native_vs_dense_timing_note": "Installed TOPP uses linspace(T,int(T/step)); returned native times are preserved. Official take_dense_action executes one physical dt per row. Wrench must use physical dt, not native time.",
+          "official_joint_velocity_limits_rad_s": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "official_joint_acceleration_limits_rad_s2": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "segments": [
+            {
+              "index": 0,
+              "official_native_duration_s": 1.120857870299692,
+              "official_native_times_s": [
+                0.0,
+                0.004017411721504272,
+                0.008034823443008545,
+                0.012052235164512818,
+                0.01606964688601709,
+                0.02008705860752136,
+                0.024104470329025636,
+                0.028121882050529907,
+                0.03213929377203418,
+                0.03615670549353845,
+                0.04017411721504272,
+                0.044191528936546993,
+                0.04820894065805127,
+                0.05222635237955554,
+                0.056243764101059815,
+                0.060261175822564086,
+                0.06427858754406836,
+                0.06829599926557263,
+                0.0723134109870769,
+                0.07633082270858117,
+                0.08034823443008544,
+                0.08436564615158972,
+                0.08838305787309399,
+                0.09240046959459826,
+                0.09641788131610254,
+                0.10043529303760682,
+                0.10445270475911109,
+                0.10847011648061536,
+                0.11248752820211963,
+                0.1165049399236239,
+                0.12052235164512817,
+                0.12453976336663244,
+                0.12855717508813672,
+                0.132574586809641,
+                0.13659199853114526,
+                0.14060941025264953,
+                0.1446268219741538,
+                0.14864423369565807,
+                0.15266164541716234,
+                0.15667905713866662,
+                0.1606964688601709,
+                0.16471388058167516,
+                0.16873129230317943,
+                0.1727487040246837,
+                0.17676611574618797,
+                0.18078352746769225,
+                0.18480093918919652,
+                0.1888183509107008,
+                0.1928357626322051,
+                0.19685317435370936,
+                0.20087058607521363,
+                0.2048879977967179,
+                0.20890540951822217,
+                0.21292282123972645,
+                0.21694023296123072,
+                0.220957644682735,
+                0.22497505640423926,
+                0.22899246812574353,
+                0.2330098798472478,
+                0.23702729156875207,
+                0.24104470329025635,
+                0.24506211501176062,
+                0.2490795267332649,
+                0.25309693845476916,
+                0.25711435017627343,
+                0.2611317618977777,
+                0.265149173619282,
+                0.26916658534078625,
+                0.2731839970622905,
+                0.2772014087837948,
+                0.28121882050529906,
+                0.28523623222680333,
+                0.2892536439483076,
+                0.2932710556698119,
+                0.29728846739131615,
+                0.3013058791128204,
+                0.3053232908343247,
+                0.30934070255582896,
+                0.31335811427733323,
+                0.3173755259988375,
+                0.3213929377203418,
+                0.32541034944184605,
+                0.3294277611633503,
+                0.3334451728848546,
+                0.33746258460635886,
+                0.34147999632786313,
+                0.3454974080493674,
+                0.3495148197708717,
+                0.35353223149237595,
+                0.3575496432138802,
+                0.3615670549353845,
+                0.36558446665688876,
+                0.36960187837839303,
+                0.3736192900998973,
+                0.3776367018214016,
+                0.38165411354290585,
+                0.3856715252644102,
+                0.38968893698591445,
+                0.3937063487074187,
+                0.397723760428923,
+                0.40174117215042726,
+                0.40575858387193153,
+                0.4097759955934358,
+                0.4137934073149401,
+                0.41781081903644435,
+                0.4218282307579486,
+                0.4258456424794529,
+                0.42986305420095716,
+                0.43388046592246143,
+                0.4378978776439657,
+                0.44191528936547,
+                0.44593270108697425,
+                0.4499501128084785,
+                0.4539675245299828,
+                0.45798493625148706,
+                0.46200234797299133,
+                0.4660197596944956,
+                0.4700371714159999,
+                0.47405458313750415,
+                0.4780719948590084,
+                0.4820894065805127,
+                0.48610681830201696,
+                0.49012423002352123,
+                0.4941416417450255,
+                0.4981590534665298,
+                0.502176465188034,
+                0.5061938769095383,
+                0.5102112886310426,
+                0.5142287003525469,
+                0.5182461120740511,
+                0.5222635237955554,
+                0.5262809355170597,
+                0.530298347238564,
+                0.5343157589600682,
+                0.5383331706815725,
+                0.5423505824030768,
+                0.546367994124581,
+                0.5503854058460853,
+                0.5544028175675896,
+                0.5584202292890939,
+                0.5624376410105981,
+                0.5664550527321024,
+                0.5704724644536067,
+                0.5744898761751109,
+                0.5785072878966152,
+                0.5825246996181195,
+                0.5865421113396238,
+                0.590559523061128,
+                0.5945769347826323,
+                0.5985943465041366,
+                0.6026117582256408,
+                0.6066291699471451,
+                0.6106465816686494,
+                0.6146639933901537,
+                0.6186814051116579,
+                0.6226988168331622,
+                0.6267162285546665,
+                0.6307336402761707,
+                0.634751051997675,
+                0.6387684637191793,
+                0.6427858754406836,
+                0.6468032871621878,
+                0.6508206988836921,
+                0.6548381106051964,
+                0.6588555223267006,
+                0.6628729340482049,
+                0.6668903457697092,
+                0.6709077574912135,
+                0.6749251692127177,
+                0.678942580934222,
+                0.6829599926557263,
+                0.6869774043772305,
+                0.6909948160987348,
+                0.6950122278202391,
+                0.6990296395417434,
+                0.7030470512632476,
+                0.7070644629847519,
+                0.7110818747062562,
+                0.7150992864277604,
+                0.7191166981492647,
+                0.723134109870769,
+                0.7271515215922733,
+                0.7311689333137775,
+                0.7351863450352818,
+                0.7392037567567861,
+                0.7432211684782903,
+                0.7472385801997946,
+                0.7512559919212989,
+                0.7552734036428032,
+                0.7592908153643074,
+                0.7633082270858117,
+                0.767325638807316,
+                0.7713430505288204,
+                0.7753604622503246,
+                0.7793778739718289,
+                0.7833952856933332,
+                0.7874126974148374,
+                0.7914301091363417,
+                0.795447520857846,
+                0.7994649325793503,
+                0.8034823443008545,
+                0.8074997560223588,
+                0.8115171677438631,
+                0.8155345794653673,
+                0.8195519911868716,
+                0.8235694029083759,
+                0.8275868146298802,
+                0.8316042263513844,
+                0.8356216380728887,
+                0.839639049794393,
+                0.8436564615158972,
+                0.8476738732374015,
+                0.8516912849589058,
+                0.85570869668041,
+                0.8597261084019143,
+                0.8637435201234186,
+                0.8677609318449229,
+                0.8717783435664271,
+                0.8757957552879314,
+                0.8798131670094357,
+                0.88383057873094,
+                0.8878479904524442,
+                0.8918654021739485,
+                0.8958828138954528,
+                0.899900225616957,
+                0.9039176373384613,
+                0.9079350490599656,
+                0.9119524607814699,
+                0.9159698725029741,
+                0.9199872842244784,
+                0.9240046959459827,
+                0.9280221076674869,
+                0.9320395193889912,
+                0.9360569311104955,
+                0.9400743428319998,
+                0.944091754553504,
+                0.9481091662750083,
+                0.9521265779965126,
+                0.9561439897180168,
+                0.9601614014395211,
+                0.9641788131610254,
+                0.9681962248825297,
+                0.9722136366040339,
+                0.9762310483255382,
+                0.9802484600470425,
+                0.9842658717685467,
+                0.988283283490051,
+                0.9923006952115553,
+                0.9963181069330596,
+                1.0003355186545637,
+                1.004352930376068,
+                1.0083703420975723,
+                1.0123877538190766,
+                1.0164051655405808,
+                1.0204225772620852,
+                1.0244399889835893,
+                1.0284574007050937,
+                1.032474812426598,
+                1.0364922241481023,
+                1.0405096358696067,
+                1.0445270475911108,
+                1.0485444593126152,
+                1.0525618710341194,
+                1.0565792827556237,
+                1.060596694477128,
+                1.0646141061986323,
+                1.0686315179201364,
+                1.0726489296416408,
+                1.076666341363145,
+                1.0806837530846494,
+                1.0847011648061535,
+                1.088718576527658,
+                1.092735988249162,
+                1.0967533999706665,
+                1.1007708116921706,
+                1.104788223413675,
+                1.1088056351351792,
+                1.1128230468566835,
+                1.1168404585781877,
+                1.120857870299692
+              ],
+              "native_sample_count": 280,
+              "kept_dense_sample_count": 280,
+              "dense_start_index": 0,
+              "dense_end_index": 279,
+              "official_native_grid_min_s": 0.0040174117215041605,
+              "official_native_grid_max_s": 0.0040174117215043825,
+              "native_grid_over_physical_dt_ratio": 1.0043528826718935,
+              "sample_line_error_rad": 4.440892098500626e-16,
+              "two_point_spline_high_order_coeff_max": 0.0,
+              "native_peak_velocity_rad_s": [
+                0.45894992614440294,
+                0.15454678835184504,
+                0.5584201849803989,
+                0.4693595646647924,
+                0.3197749168626297,
+                0.3235587880841714
+              ],
+              "native_peak_acceleration_rad_s2": [
+                0.8218720212639128,
+                0.27675716693026,
+                1.0000000000000122,
+                0.840513250217259,
+                0.5726421169282375,
+                0.5794181456666587
+              ],
+              "physical_clock_command_fd_peak_rad_s": [
+                0.46177669060983356,
+                0.15549867295768927,
+                0.5618596066814563,
+                0.4722504441776502,
+                0.3217444745865603,
+                0.32555165142842574
+              ],
+              "physical_clock_velocity_target_acc_peak_rad_s2": [
+                0.8254495337437807,
+                0.27796185840651366,
+                1.0043528826719075,
+                0.8441719057796185,
+                0.575134760876205,
+                0.5819402848727129
+              ]
+            }
+          ],
+          "audit_vertices": [
+            [
+              -0.9443488121032715,
+              -1.3603531122207642,
+              -1.1994913816452026,
+              0.44065961241722107,
+              1.3059101104736328,
+              2.8509933948516846
+            ],
+            [
+              -1.2024828304333515,
+              -1.2734290683878906,
+              -1.5135719339106426,
+              0.17667074660256765,
+              1.485765862808902,
+              3.0329773660352837
+            ]
+          ],
+          "waypoints": [
+            [
+              -0.9443488121032715,
+              -1.3603531122207642,
+              -1.1994913816452026,
+              0.44065961241722107,
+              1.3059101104736328,
+              2.8509933948516846
+            ],
+            [
+              -1.2024828304333515,
+              -1.2734290683878906,
+              -1.5135719339106426,
+              0.17667074660256765,
+              1.485765862808902,
+              3.0329773660352837
+            ]
+          ],
+          "peak_command_velocity_rad_s": 0.5584201849803989,
+          "curve": "Each actual native two-point spline is certified affine. Returned samples are collinear, monotonic and match endpoints. Fresh continuous mesh audit covers precisely these actual native curves; no old certificate reused.",
+          "unused_external_velocity_acceleration_arguments": [
+            1.0,
+            1.0
+          ]
+        },
+        "audit_collision_pairs": [
+          {
+            "sample_index": 0,
+            "path_index": -1,
+            "interval_fraction": 0.0,
+            "link": "bottle",
+            "other": "table",
+            "category": "bottle_table"
+          }
+        ],
+        "audit_continuous_lower_bound": {
+          "bottle_robot": {
+            "sample_index": 0,
+            "path_index": -1,
+            "interval_fraction": 0.0,
+            "link": "l_inspire_thumb_force_sensor_3",
+            "other": "bottle",
+            "lower_bound_m": 0.0002652025141287595,
+            "relative_vertex_bound_m": 0.0
+          },
+          "self": {
+            "sample_index": 0,
+            "path_index": -1,
+            "interval_fraction": 0.0,
+            "link": "l_inspire_left_little_1",
+            "other": "l_inspire_left_ring_1",
+            "lower_bound_m": 0.003427284536883235,
+            "relative_vertex_bound_m": 0.0
+          },
+          "bottle_table": {
+            "sample_index": 1,
+            "path_index": 0,
+            "interval_fraction": 1.0,
+            "link": "bottle",
+            "other": "table",
+            "lower_bound_m": -0.0009801685391062618,
+            "relative_vertex_bound_m": 0.0009801685391062618
+          },
+          "robot_table": {
+            "sample_index": 1,
+            "path_index": 0,
+            "interval_fraction": 1.0,
+            "link": "l_inspire_left_thumb_4",
+            "other": "table",
+            "lower_bound_m": 0.011141812363514778,
+            "relative_vertex_bound_m": 0.0008880738822127615
+          }
+        }
+      },
+      {
+        "branch": 1,
+        "goal_arm_joint_rad": [
+          -1.2006287007285814,
+          -1.2734364350856,
+          -1.51305909983046,
+          -2.963128289223787,
+          -1.48539766081463,
+          6.1738370633608755
+        ],
+        "RRT_status": "Exact solution",
+        "RRT_elapsed_s": 12.008422014070675,
+        "reason": "OMPL endpoint differs from exact checked q"
+      }
+    ],
+    "elapsed_s": 73.33302391087636
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "verified_date": "2026-10-11",
+  "scope": "Six selected train50 original expert command24 labels, restored source initial scenes, current inference actuator and physics, new physical RGB; not learned-policy or full50 SR",
+  "robotwin_commit": "931ce21f4f0e63feab661f349634d5a25bd92681",
+  "current_action_clock_sha256": "3aba14c746b8aba4254ebe9ec0a298de90c7773f9a7afa34396e0b91922a750e",
+  "base_task_snapshot_sha256": "ed7b6235ed9fb20dc631c800d909619a1c10056b36354a27e0e6b74a329514aa",
+  "source_manifest_sha256": "2339d5749b650761011e3975cbeb8d42ceb31dbff4f1f2aba6d71cac9a3edf80",
+  "hardware_guard_sha256": "072dd0ab914b1508c1f5eb6d248b9b45de3a1b42908042d5af84fb0892eaadbd",
+  "selected_indices": [
+    0,
+    38,
+    30,
+    31,
+    17,
+    7
+  ],
+  "native_success_count": 6,
+  "air_hold_success_count": 6,
+  "total_physics_steps": 18390,
+  "initialization_limits": [
+    "Source initial qvel and original PhysX contact cache absent; robot qvel=0",
+    "Initial bottle pose restored once, zero velocity and native sleep before episode; source episode7 explicitly records sleep/zero velocity, others inferred from settled data",
+    "No pose/state teleport or forced sleep during replay",
+    "Same initial geometry/camera/joints is verified; RGB differs by JPEG/noise/denoising, not bit-identical resumption"
+  ],
+  "setup_errors_not_episode_failures": [
+    "ep0 setup helper used wrong Actor API before physics; fixed",
+    "ep38 reconstructed temporary bootstrap pose was unstable; changed creation to saved exact original pose; all final episode starts match recorded state"
+  ],
+  "source_expert_hand_offset_difference": "Sprite source 1mm vs current default10mm; source code confirms change. Both Sprite current replay succeeded; not sufficient explanation for low model success by itself.",
+  "source_feedback_recomputed": false,
+  "model_queries": 0,
+  "hardware_io": false,
+  "server_master_closed": true,
+  "interpretation": "Demonstration actions can execute in current integration for these six scenes. Prior model failures should prioritize predicted action/hand timing/input transforms/generalization; cannot infer all50 data is correct or isolate the learned-model failure cause without model replay on the same restored scenes.",
+  "episodes": [
+    {
+      "index": 0,
+      "source_episode": {
+        "index": 0,
+        "seed": 800000,
+        "model_id": 16,
+        "brand": "Sprite",
+        "arm": "left",
+        "pose_class": "upright",
+        "physical_success": true,
+        "state_action_pairs": 169,
+        "physical_steps": 2535
+      },
+      "native_success": true,
+      "air_grasp_1cm_1s": true,
+      "continuous_air_hold_s": 3.988000189419836,
+      "maximum_bottom_gap_m": 0.09819016165242556,
+      "terminal_bottom_gap_m": 0.09494892238336583,
+      "terminal_upright_error_deg": 0.3483600080318478,
+      "physical_steps": 2535,
+      "duration_s": 10.140000481624156,
+      "source_initial_qpos_error_rad": 0.0,
+      "source_initial_state24_error": 0.0,
+      "source_initial_bottle_pose_matrix_error": 5.960464477539063e-08,
+      "source_initial_camera_world_model_matrix_error": {
+        "cam_head": 7.066364560159855e-08,
+        "cam_left_wrist": 1.1920928955078125e-07,
+        "cam_right_wrist": 2.980232238769531e-07
+      },
+      "source_vs_new_first_RGB_mean_abs_pixel_difference": {
+        "cam_head": 4.267290581597222,
+        "cam_left_wrist": 4.287227647569445,
+        "cam_right_wrist": 4.047633463541667
+      },
+      "recorded_target_values_exactly_used": true,
+      "max_pre_hand_contact_bottle_xy_displacement_m": 2.173042048525531e-06,
+      "max_pre_hand_contact_bottle_rotation_deg": 0.027976455118293345,
+      "max_arm_actual_qpos_difference_from_source_rad": 0.005057930946350098,
+      "max_hand_actual_qpos_difference_from_source_rad": 0.0113658607006073,
+      "source_hand_contact_offset_m": 0.001,
+      "replay_robot_contact_offsets_m": [
+        0.009999999776482582
+      ],
+      "no_contact_setting_changes": true,
+      "no_hardware_io": true,
+      "model_queries": 0,
+      "actual_trace_sha256": "1f0e41ec692285c761aac36e61f4aa220a32c579fb721c7eb0051ab5173f63ce",
+      "report_sha256": "2696d824e045c98da81f09032e1715bb48185d547a51ff653810c742011a831a",
+      "initial_state_sha256": "3a48607a4f725e3e3106ceac653e3466bc27e82e547d841442a52e9931d1101f",
+      "source_hdf_sha256": "a7d6017069d85091f9284f901d96114156bc9f255ed98c96dadd33dd05141ad6"
+    },
+    {
+      "index": 38,
+      "source_episode": {
+        "index": 38,
+        "seed": 1610038,
+        "model_id": 16,
+        "brand": "Sprite",
+        "arm": "right",
+        "pose_class": "horizontal",
+        "physical_success": true,
+        "state_action_pairs": 205,
+        "physical_steps": 3075
+      },
+      "native_success": true,
+      "air_grasp_1cm_1s": true,
+      "continuous_air_hold_s": 5.804000275675207,
+      "maximum_bottom_gap_m": 0.09850313363475993,
+      "terminal_bottom_gap_m": 0.09395099048628242,
+      "terminal_upright_error_deg": 0.3831731197491856,
+      "physical_steps": 3075,
+      "duration_s": 12.300000584218651,
+      "source_initial_qpos_error_rad": 0.0,
+      "source_initial_state24_error": 0.0,
+      "source_initial_bottle_pose_matrix_error": 1.1920928955078125e-07,
+      "source_initial_camera_world_model_matrix_error": {
+        "cam_head": 7.066364560159855e-08,
+        "cam_left_wrist": 1.1920928955078125e-07,
+        "cam_right_wrist": 2.980232238769531e-07
+      },
+      "source_vs_new_first_RGB_mean_abs_pixel_difference": {
+        "cam_head": 4.106052517361111,
+        "cam_left_wrist": 3.8049609375,
+        "cam_right_wrist": 3.6849880642361112
+      },
+      "recorded_target_values_exactly_used": true,
+      "max_pre_hand_contact_bottle_xy_displacement_m": 4.777675712830387e-07,
+      "max_pre_hand_contact_bottle_rotation_deg": 0.027976455118293345,
+      "max_arm_actual_qpos_difference_from_source_rad": 0.00477147102355957,
+      "max_hand_actual_qpos_difference_from_source_rad": 0.012323230504989624,
+      "source_hand_contact_offset_m": 0.001,
+      "replay_robot_contact_offsets_m": [
+        0.009999999776482582
+      ],
+      "no_contact_setting_changes": true,
+      "no_hardware_io": true,
+      "model_queries": 0,
+      "actual_trace_sha256": "829906fd336eb4bc6a3a7546e0880b9ce1ec805b6073c084df2474d4c2e555ae",
+      "report_sha256": "27541f2905c660cda26a1404b5f0f2da9b924667a08a1e80332d59bb6f907aa4",
+      "initial_state_sha256": "2b9dc0d5401d4231f3f8927de8010dd19ef989cb339e864e0c6d6eab9b134a29",
+      "source_hdf_sha256": "da105fc5778d0b4a75f001650e9fc8053266dc9e5691c499b352acf2670c5d09"
+    },
+    {
+      "index": 30,
+      "source_episode": {
+        "index": 30,
+        "seed": 500030,
+        "model_id": 13,
+        "brand": "Coca-Cola",
+        "arm": "left",
+        "pose_class": "horizontal",
+        "physical_success": true,
+        "state_action_pairs": 201,
+        "physical_steps": 3015
+      },
+      "native_success": true,
+      "air_grasp_1cm_1s": true,
+      "continuous_air_hold_s": 5.704000270925462,
+      "maximum_bottom_gap_m": 0.10101418889404057,
+      "terminal_bottom_gap_m": 0.10038931323662392,
+      "terminal_upright_error_deg": 0.8289101059227877,
+      "physical_steps": 3015,
+      "duration_s": 12.060000572819263,
+      "source_initial_qpos_error_rad": 0.0,
+      "source_initial_state24_error": 0.0,
+      "source_initial_bottle_pose_matrix_error": 5.960464477539063e-08,
+      "source_initial_camera_world_model_matrix_error": {
+        "cam_head": 7.066364560159855e-08,
+        "cam_left_wrist": 1.1920928955078125e-07,
+        "cam_right_wrist": 2.980232238769531e-07
+      },
+      "source_vs_new_first_RGB_mean_abs_pixel_difference": {
+        "cam_head": 4.191761067708334,
+        "cam_left_wrist": 3.804943576388889,
+        "cam_right_wrist": 4.008170572916667
+      },
+      "recorded_target_values_exactly_used": true,
+      "max_pre_hand_contact_bottle_xy_displacement_m": 0.00038235780084505677,
+      "max_pre_hand_contact_bottle_rotation_deg": 0.6489124985378275,
+      "max_arm_actual_qpos_difference_from_source_rad": 0.003522634506225586,
+      "max_hand_actual_qpos_difference_from_source_rad": 0.005654096603393555,
+      "source_hand_contact_offset_m": 0.01,
+      "replay_robot_contact_offsets_m": [
+        0.009999999776482582
+      ],
+      "no_contact_setting_changes": true,
+      "no_hardware_io": true,
+      "model_queries": 0,
+      "actual_trace_sha256": "cbb181c4e64180cc428f19b404c55033a1b0bf2da5bb9763d5998d78d7b36a92",
+      "report_sha256": "ef3da24752d2e3c1e77d1e4f52b00a8dafd0318a856a4ea9ab814b9b91081329",
+      "initial_state_sha256": "56f1cbc484ffa05e1054f9533eeaeefecd89d57ab3d351b0df5c029bd2608ca7",
+      "source_hdf_sha256": "43ca291eb90ca6b0fbd8319ef502730fafc6d29dbe9a1d4dc1a847cebe28b7a9"
+    },
+    {
+      "index": 31,
+      "source_episode": {
+        "index": 31,
+        "seed": 2100031,
+        "model_id": 13,
+        "brand": "Coca-Cola",
+        "arm": "right",
+        "pose_class": "upright",
+        "physical_success": true,
+        "state_action_pairs": 246,
+        "physical_steps": 3690
+      },
+      "native_success": true,
+      "air_grasp_1cm_1s": true,
+      "continuous_air_hold_s": 3.9160001860000193,
+      "maximum_bottom_gap_m": 0.09988126297593003,
+      "terminal_bottom_gap_m": 0.09936815720832559,
+      "terminal_upright_error_deg": 0.9033804558337712,
+      "physical_steps": 3690,
+      "duration_s": 14.760000701062381,
+      "source_initial_qpos_error_rad": 0.0,
+      "source_initial_state24_error": 0.0,
+      "source_initial_bottle_pose_matrix_error": 0.0,
+      "source_initial_camera_world_model_matrix_error": {
+        "cam_head": 7.066364560159855e-08,
+        "cam_left_wrist": 1.1920928955078125e-07,
+        "cam_right_wrist": 2.980232238769531e-07
+      },
+      "source_vs_new_first_RGB_mean_abs_pixel_difference": {
+        "cam_head": 4.393700086805556,
+        "cam_left_wrist": 4.178473307291667,
+        "cam_right_wrist": 4.319205729166667
+      },
+      "recorded_target_values_exactly_used": true,
+      "max_pre_hand_contact_bottle_xy_displacement_m": 2.171393816752243e-06,
+      "max_pre_hand_contact_bottle_rotation_deg": 0.2036717727852554,
+      "max_arm_actual_qpos_difference_from_source_rad": 0.0037140846252441406,
+      "max_hand_actual_qpos_difference_from_source_rad": 0.004619896411895752,
+      "source_hand_contact_offset_m": 0.01,
+      "replay_robot_contact_offsets_m": [
+        0.009999999776482582
+      ],
+      "no_contact_setting_changes": true,
+      "no_hardware_io": true,
+      "model_queries": 0,
+      "actual_trace_sha256": "302c0816202682779eae2c51b3d3a1d7d499bab08b1c558c59cb48633e3d47c8",
+      "report_sha256": "1a288cee60e8001bc3c3206b03d1a335e6a9a326cc93048280aba22b4b1a1bd5",
+      "initial_state_sha256": "cbc62ef46d289a40597a5c927bcfe8411a7678167790b3b0322274eac0f30c1f",
+      "source_hdf_sha256": "f7b7757b24555b2bcc9a6148f0f19a9592b13e39cec69cb8d6c56506ef71f553"
+    },
+    {
+      "index": 17,
+      "source_episode": {
+        "index": 17,
+        "seed": 1400017,
+        "model_id": 4,
+        "brand": "Fanta",
+        "arm": "left",
+        "pose_class": "upright",
+        "physical_success": true,
+        "state_action_pairs": 243,
+        "physical_steps": 3645
+      },
+      "native_success": true,
+      "air_grasp_1cm_1s": true,
+      "continuous_air_hold_s": 3.8320001820102334,
+      "maximum_bottom_gap_m": 0.10528073993130849,
+      "terminal_bottom_gap_m": 0.10462969539502276,
+      "terminal_upright_error_deg": 0.2064112134221158,
+      "physical_steps": 3645,
+      "duration_s": 14.58000069251284,
+      "source_initial_qpos_error_rad": 0.0,
+      "source_initial_state24_error": 0.0,
+      "source_initial_bottle_pose_matrix_error": 1.7881393432617188e-07,
+      "source_initial_camera_world_model_matrix_error": {
+        "cam_head": 7.066364560159855e-08,
+        "cam_left_wrist": 1.1920928955078125e-07,
+        "cam_right_wrist": 2.980232238769531e-07
+      },
+      "source_vs_new_first_RGB_mean_abs_pixel_difference": {
+        "cam_head": 4.263347439236111,
+        "cam_left_wrist": 4.160442708333333,
+        "cam_right_wrist": 3.955308159722222
+      },
+      "recorded_target_values_exactly_used": true,
+      "max_pre_hand_contact_bottle_xy_displacement_m": 2.6915060402643576e-07,
+      "max_pre_hand_contact_bottle_rotation_deg": 0.03956468264845247,
+      "max_arm_actual_qpos_difference_from_source_rad": 0.004108428955078125,
+      "max_hand_actual_qpos_difference_from_source_rad": 0.006863951683044434,
+      "source_hand_contact_offset_m": 0.01,
+      "replay_robot_contact_offsets_m": [
+        0.009999999776482582
+      ],
+      "no_contact_setting_changes": true,
+      "no_hardware_io": true,
+      "model_queries": 0,
+      "actual_trace_sha256": "6ebbe24286c4c178e0fb05c20bd2be55093ca0afe94b9ae162b313f0e852bcb6",
+      "report_sha256": "8f77b26df52142617e9030bd1f9bc9d63178416579526246f0343fb078bdd38b",
+      "initial_state_sha256": "34625c2e6be7432968310fa096b1f3e8afeb90f8ec23b15cec05d8528072fe55",
+      "source_hdf_sha256": "0682ed8cce98890805aaf1736e77564ddc54a036038d5214fa53dd017b966cb2"
+    },
+    {
+      "index": 7,
+      "source_episode": {
+        "index": 7,
+        "seed": 3500007,
+        "model_id": 4,
+        "brand": "Fanta",
+        "arm": "right",
+        "pose_class": "diagonal",
+        "physical_success": true,
+        "state_action_pairs": 162,
+        "physical_steps": 2430
+      },
+      "native_success": true,
+      "air_grasp_1cm_1s": true,
+      "continuous_air_hold_s": 4.768000226467848,
+      "maximum_bottom_gap_m": 0.10473963351959603,
+      "terminal_bottom_gap_m": 0.10473963351959603,
+      "terminal_upright_error_deg": 0.5321396646814356,
+      "physical_steps": 2430,
+      "duration_s": 9.720000461675227,
+      "source_initial_qpos_error_rad": 0.0,
+      "source_initial_state24_error": 0.0,
+      "source_initial_bottle_pose_matrix_error": 1.862645149230957e-09,
+      "source_initial_camera_world_model_matrix_error": {
+        "cam_head": 7.066364560159855e-08,
+        "cam_left_wrist": 1.1920928955078125e-07,
+        "cam_right_wrist": 2.980232238769531e-07
+      },
+      "source_vs_new_first_RGB_mean_abs_pixel_difference": {
+        "cam_head": 4.164749348958333,
+        "cam_left_wrist": 3.820187717013889,
+        "cam_right_wrist": 3.8255360243055554
+      },
+      "recorded_target_values_exactly_used": true,
+      "max_pre_hand_contact_bottle_xy_displacement_m": 1.1628131687757559e-05,
+      "max_pre_hand_contact_bottle_rotation_deg": 0.03956468264845247,
+      "max_arm_actual_qpos_difference_from_source_rad": 0.004358410835266113,
+      "max_hand_actual_qpos_difference_from_source_rad": 0.0026166439056396484,
+      "source_hand_contact_offset_m": 0.01,
+      "replay_robot_contact_offsets_m": [
+        0.009999999776482582
+      ],
+      "no_contact_setting_changes": true,
+      "no_hardware_io": true,
+      "model_queries": 0,
+      "actual_trace_sha256": "a468e32259ef81e4862cf8ee4bd21f206c0c7c865da43355c9e48a799dc16869",
+      "report_sha256": "100346a0a2259622f09607fff8506f2dda9c94e80c8976d6e654d143fb5a21f2",
+      "initial_state_sha256": "71b5a67d385593c5ea0d3c9c127d4012bd83ca02c77617112f9fe29ff61077ab",
+      "source_hdf_sha256": "18dbdf32c6ed11ba21b406c531061ffe4ff55514583d5f64f2ff2ff127980a00"
+    }
+  ]
+}

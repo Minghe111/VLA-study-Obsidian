@@ -1,0 +1,178 @@
+{
+  "passed": true,
+  "readback_only": true,
+  "hardware_io": false,
+  "hdf5": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/fanta_rd7_gain01_orientation_attempt330/slot0000007_candidate_attempt330_v4_gain01_palm_search/data/episode_0000000.hdf5",
+  "source_hdf5": null,
+  "validator_source_sha256": "10947dd61be6e9f6d276a849f680d93a9f5cbd1caab7360bf822e8e473b4882c",
+  "codec_path": "/bigdata2/liminghe/VLA-benchmark/RoboTwin/data/decode_image_bit.py",
+  "codec_sha256": "90df99c52d3f127a09f5960680113f17e8b3e25b2e3cb9117abdeb249d7a337e",
+  "source_refs": {
+    "native_exporter": "envs/utils/pkl2hdf5.py:79-168; CAMERA_MAP:19-24; optional depth:145-148",
+    "native_observation": "envs/_base_task.py:449-513; RGB:461-464; depth:480-483",
+    "native_three_camera_rgb_profile": "env_cfg/task_config/demo_clean.yml:18-32",
+    "native_loader": "XPolicyLab/utils/data_loader.py:8-54",
+    "dexterous_extension": "deployment/realman_adjust_bottle_20261002/accepted_reset_replay_v32.py:983-1003"
+  },
+  "checks": {
+    "native14d_and_endposes": {
+      "passed": true,
+      "pairs": 162
+    },
+    "measured24d_commands_and_clock": {
+      "passed": true,
+      "duplicate_boundary_sample_count": 0,
+      "sample_first_s": 0.0,
+      "sample_last_s": 9.66000045882538,
+      "next_sample_last_s": 9.720000461675227,
+      "native_frequency_metadata": 15,
+      "frequency_metadata_is_not_assumed_rgb_fps": true
+    },
+    "three_camera_rgb_and_render_geometry": {
+      "passed": true,
+      "cameras": {
+        "cam_head": {
+          "passed": true,
+          "decoded_rgb_frames": 162,
+          "shape_HWC": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "decoded_rgb_stream_sha256": "175b7ac0eb7086ab4945aa5b0440c300b8e5801ee578d038ba2794aaf6d4c34c",
+          "pixel_min": 0,
+          "pixel_max": 255,
+          "intrinsic_first": [
+            [
+              717.2843627929688,
+              0.0,
+              320.0
+            ],
+            [
+              0.0,
+              717.2843627929688,
+              240.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "extrinsics_convention": "OpenGL camera-to-world as native exporter",
+          "depth_dataset_absent": true,
+          "real_camera_calibrated": false
+        },
+        "cam_left_wrist": {
+          "passed": true,
+          "decoded_rgb_frames": 162,
+          "shape_HWC": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "decoded_rgb_stream_sha256": "a736df4205b9cec4e6121930cfe7e406fd54481d7de8eb37c8ed38ddfbcbe1a0",
+          "pixel_min": 0,
+          "pixel_max": 255,
+          "intrinsic_first": [
+            [
+              717.2843627929688,
+              0.0,
+              320.0
+            ],
+            [
+              0.0,
+              717.2843627929688,
+              240.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "extrinsics_convention": "OpenGL camera-to-world as native exporter",
+          "depth_dataset_absent": true,
+          "real_camera_calibrated": false
+        },
+        "cam_right_wrist": {
+          "passed": true,
+          "decoded_rgb_frames": 162,
+          "shape_HWC": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "decoded_rgb_stream_sha256": "50ee2cd5edd473c4fc4dd6159492ae7dc2ce1e0c03bb2986ef3f2bbd14576186",
+          "pixel_min": 1,
+          "pixel_max": 255,
+          "intrinsic_first": [
+            [
+              717.2843627929688,
+              0.0,
+              320.0
+            ],
+            [
+              0.0,
+              717.2843627929688,
+              240.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "extrinsics_convention": "OpenGL camera-to-world as native exporter",
+          "depth_dataset_absent": true,
+          "real_camera_calibrated": false
+        }
+      }
+    },
+    "full36_and_per_step24d": {
+      "passed": true,
+      "physics_steps": 2430,
+      "physics_dt_s": 0.004000000189989805,
+      "physical_duration_s": 9.720000461675227,
+      "field_names": [
+        "physics_step",
+        "sim_time_before_s",
+        "sim_time_after_s",
+        "measured_state24_before",
+        "applied_command24",
+        "measured_state24_after",
+        "hand24_qpos_before_rad",
+        "hand24_qpos_after_rad",
+        "hand24_drive_target_rad",
+        "hand24_actual_fd_rad_s",
+        "hand24_engine_qvel_rad_s",
+        "full36_qpos_before_rad",
+        "full36_qpos_after_rad"
+      ]
+    },
+    "all_nonvision_fields_exact_vs_accepted_source": {
+      "verified": false,
+      "reason": "No --source-hdf supplied"
+    },
+    "readback_inputs_unchanged": {
+      "passed": true,
+      "source_sha256": {
+        "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_20261007_v1/batch_candidates/fanta_rd7_gain01_orientation_attempt330/slot0000007_candidate_attempt330_v4_gain01_palm_search/data/episode_0000000.hdf5": "18dbdf32c6ed11ba21b406c531061ffe4ff55514583d5f64f2ff2ff127980a00",
+        "/bigdata2/liminghe/VLA-benchmark/RoboTwin/data/decode_image_bit.py": "90df99c52d3f127a09f5960680113f17e8b3e25b2e3cb9117abdeb249d7a337e"
+      }
+    }
+  },
+  "pairs": 162,
+  "training_cameras": [
+    "cam_head",
+    "cam_left_wrist",
+    "cam_right_wrist"
+  ],
+  "rgb_only": true,
+  "camera_calibration_available": false,
+  "physical_trajectory_rerender_requires_source_provenance": true,
+  "physical_success_not_inferred_from_images": true
+}
