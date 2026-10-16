@@ -1,0 +1,111 @@
+{
+  "source": "readonly existing operator_validation_v3 evidence",
+  "training_run": false,
+  "code_modified": false,
+  "collection": {
+    "transitions": 262,
+    "human_control_steps": 225,
+    "autonomous_steps": 37,
+    "physics_ticks": 3930,
+    "sim_time_s": 15.72,
+    "wall_seconds": 124.33092073999978
+  },
+  "wall_timings": {
+    "decisions": {
+      "n": 261,
+      "min_ms": 262.729249,
+      "p50_ms": 302.164512,
+      "p95_ms": 328.39472800000004,
+      "max_ms": 4100.319087,
+      "mean_ms": 318.244366532567
+    },
+    "inference_excluding_compile": {
+      "n": 262,
+      "min_ms": 71.82873199963069,
+      "p50_ms": 75.96661999923526,
+      "p95_ms": 78.11977999881492,
+      "max_ms": 83.7852530003147,
+      "mean_ms": 75.96121431293892
+    },
+    "publish_to_decision": {
+      "n": 262,
+      "min_ms": 0.49267600000000006,
+      "p50_ms": 0.8505389999999999,
+      "p95_ms": 1.05498,
+      "max_ms": 3765.726028,
+      "mean_ms": 17.553511828244275
+    },
+    "decision_to_next_publish": {
+      "n": 262,
+      "min_ms": 262.152856,
+      "p50_ms": 301.394842,
+      "p95_ms": 326.898497,
+      "max_ms": 444.403999,
+      "mean_ms": 303.0057193740458
+    }
+  },
+  "rejections": [
+    {
+      "revision": 263,
+      "wall_time_ns": 1792134530528204461,
+      "command": {
+        "error": "IK FK residual too large: 0.00031410629043467103m/0.0012275644062586777deg"
+      }
+    }
+  ],
+  "blocking_edges": [
+    {
+      "file": "keyboard_collect.py",
+      "lines": "98-137",
+      "behavior": "hash -> synchronous sample_actions and device_get -> publish RPC -> controlled_step RPC -> recorder save npz/json -> video -> next inference; each 60ms simulated action waits whole chain"
+    },
+    {
+      "file": "keyboard_sim_worker.py",
+      "lines": "49-78",
+      "behavior": "viewer event polling and driver.step share one worker main thread; during 15physics+capture no render event pump"
+    },
+    {
+      "file": "native_keyboard_viewer.py",
+      "lines": "298-335",
+      "behavior": "native keyboard polls only key_down in after_render: a complete press/release inside blocked interval is never seen"
+    },
+    {
+      "file": "native_keyboard_viewer.py",
+      "lines": "106-136,186-191",
+      "behavior": "full pose IK max_iterations150 per active moving arm synchronous on same UI thread"
+    },
+    {
+      "file": "native_keyboard_viewer.py",
+      "lines": "204-209",
+      "behavior": "any ValueError or RuntimeError globally pauses; last right IK error0.314mm >0.25mm threshold explains final unresponsive state"
+    },
+    {
+      "file": "keyboard_recording.py",
+      "lines": "240-244,247-279,282-305",
+      "behavior": "npz write plus hashes/deepcopy/jsonl/summary scan+write every step; included in next control deadline"
+    },
+    {
+      "file": "rl_contract.py",
+      "lines": "268-271",
+      "behavior": "driver synchronously calls session.apply and session.capture"
+    },
+    {
+      "file": "rl_factory.py",
+      "lines": "216-219,499-519",
+      "behavior": "camera configured RT32samples/depth8 and actual three rawRGB per capture"
+    }
+  ],
+  "limits": [
+    "No per-stage runtime profiler existed in v3: 225ms non-inference residual cannot be attributed entirely to render or disk.",
+    "Recorded key timestamps are event-pump timestamps, not OS hardware timestamps: they do not directly measure physical key response.",
+    "Fresh current observation proposal policy is incompatible with16.7Hz wallclock while inference alone76ms; decoupling requires explicit reference semantics."
+  ],
+  "suggested_boundaries": [
+    "Dedicated input capture with actual press/release queue and OS timestamps independent of render; no blocking inference or IK or disk on it.",
+    "Scene owner main thread serial physics/camera/viewport accesses; use incremental DLS IK budget, pump input/viewport before bounded physics slices; SAPIEN sharing threads without contract unsafe.",
+    "Policy process receives immutable obs_id/hash+policyversion+seed, returns actionplan bound to that obs. Separate bounded recorder process saves immutable transition snapshots.",
+    "Strict same-observation pair mode may remain slower. Smooth teleop mode must mark absent/stale proposals and never claim fresh pairs. Posthoc policy queries on exact saved observation can form separately labeled reference data, never online rejected candidates or counterfactual reward/successor.",
+    "Input release/Pause supersedes motion immediately with generation tokens; on single-arm IK fail hold that side with visible warning, no silent entire-system pause except global faults."
+  ],
+  "profile_script": "/tmp/rm65b_keyboard_perf_20261016/profile_keyboard.py"
+}

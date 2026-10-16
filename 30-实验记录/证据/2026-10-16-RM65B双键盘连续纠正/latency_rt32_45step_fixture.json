@@ -1,0 +1,2453 @@
+{
+  "fixture_only": true,
+  "model_loaded": false,
+  "training_started": false,
+  "source_actions_unchanged": true,
+  "task_config": {
+    "task_name": "adjust_bottle",
+    "profile": "full50_sdk24",
+    "asset_root": "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets",
+    "max_episode_steps": 400,
+    "instruction": "Pick up the bottle and adjust it to an upright position.",
+    "success_mode": "upright_hold",
+    "hold_seconds": 1.0,
+    "min_lift_m": 0.01,
+    "max_upright_angle_deg": 15,
+    "renderer_denoiser": "optix",
+    "renderer_device": "cuda:0"
+  },
+  "parent_summary": {
+    "controlled_step_rpc": {
+      "count": 45,
+      "min_ms": 226.034077,
+      "p50_ms": 252.551536,
+      "p95_ms": 271.087144,
+      "max_ms": 276.735165,
+      "mean_ms": 252.4253764888889
+    },
+    "fixture_key_rpc": {
+      "count": 26,
+      "min_ms": 0.457071,
+      "p50_ms": 0.6055145,
+      "p95_ms": 0.93548,
+      "max_ms": 1.133345,
+      "mean_ms": 0.6674974615384616
+    },
+    "flatten_current": {
+      "count": 45,
+      "min_ms": 0.007966,
+      "p50_ms": 0.009847,
+      "p95_ms": 0.012184,
+      "max_ms": 0.019429,
+      "mean_ms": 0.01009048888888889
+    },
+    "observation_hash": {
+      "count": 45,
+      "min_ms": 1.109827,
+      "p50_ms": 1.136406,
+      "p95_ms": 1.163,
+      "max_ms": 1.528473,
+      "mean_ms": 1.1445457777777779
+    },
+    "parent_iteration_total": {
+      "count": 45,
+      "min_ms": 238.642045,
+      "p50_ms": 264.812354,
+      "p95_ms": 284.839789,
+      "max_ms": 288.467196,
+      "mean_ms": 265.1346829777778
+    },
+    "publish_rpc": {
+      "count": 45,
+      "min_ms": 0.296345,
+      "p50_ms": 0.419354,
+      "p95_ms": 0.487156,
+      "max_ms": 0.653369,
+      "mean_ms": 0.41896833333333333
+    },
+    "record_inclusive": {
+      "count": 45,
+      "min_ms": 8.460341,
+      "p50_ms": 8.588323,
+      "p95_ms": 8.83011,
+      "max_ms": 9.253561,
+      "mean_ms": 8.637736288888888
+    },
+    "record_save_observation_npz": {
+      "count": 45,
+      "min_ms": 1.330882,
+      "p50_ms": 1.390479,
+      "p95_ms": 1.535915,
+      "max_ms": 1.675884,
+      "mean_ms": 1.4069207333333333
+    },
+    "status_rpc": {
+      "count": 45,
+      "min_ms": 0.403143,
+      "p50_ms": 0.755198,
+      "p95_ms": 0.817431,
+      "max_ms": 0.933919,
+      "mean_ms": 0.7193398444444444
+    },
+    "video_advance": {
+      "count": 45,
+      "min_ms": 0.783946,
+      "p50_ms": 1.385037,
+      "p95_ms": 1.6762,
+      "max_ms": 1.7514,
+      "mean_ms": 1.3517901777777777
+    }
+  },
+  "worker_summary": {
+    "controller.next_decision": {
+      "count": 45,
+      "min_ms": 0.513702,
+      "p50_ms": 0.628466,
+      "p95_ms": 0.93542,
+      "max_ms": 1.12179,
+      "mean_ms": 0.6719095111111111
+    },
+    "controller.solve_arm": {
+      "count": 60,
+      "min_ms": 0.151427,
+      "p50_ms": 0.30387450000000005,
+      "p95_ms": 0.355557,
+      "max_ms": 0.465792,
+      "mean_ms": 0.28251003333333335
+    },
+    "driver.step_inclusive": {
+      "count": 45,
+      "min_ms": 217.942431,
+      "p50_ms": 244.373697,
+      "p95_ms": 262.61732,
+      "max_ms": 269.264652,
+      "mean_ms": 244.47699173333334
+    },
+    "session.apply_15ticks": {
+      "count": 45,
+      "min_ms": 118.637057,
+      "p50_ms": 141.715164,
+      "p95_ms": 151.731185,
+      "max_ms": 157.337885,
+      "mean_ms": 140.86031673333332
+    },
+    "session.capture_3RGB": {
+      "count": 90,
+      "min_ms": 80.165171,
+      "p50_ms": 104.774551,
+      "p95_ms": 113.383659,
+      "max_ms": 121.423953,
+      "mean_ms": 104.00470901111112
+    },
+    "viewer.render": {
+      "count": 68,
+      "min_ms": 0.236549,
+      "p50_ms": 0.5086634999999999,
+      "p95_ms": 0.715124,
+      "max_ms": 165.242531,
+      "mean_ms": 3.437725911764706
+    }
+  },
+  "render_start_intervals": {
+    "count": 67,
+    "min_ms": 0.633397,
+    "p50_ms": 254.44662,
+    "p95_ms": 280.767011,
+    "max_ms": 310.082431,
+    "mean_ms": 184.68999513432837
+  },
+  "shader_probe": {
+    "viewer_class": "Viewer",
+    "viewer_shader_attributes": {
+      "shader_dir": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/lib/python3.11/site-packages/sapien/vulkan_shader/default"
+    },
+    "viewer_window_shader_attributes": {},
+    "renderer_shader_attributes": {},
+    "configured_camera_shader": "rt (rl_factory.py)",
+    "configured_camera_samples_per_pixel": 32,
+    "configured_camera_path_depth": 8,
+    "camera_shader_getter_values": {
+      "get_camera_shader_dir": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/lib/python3.11/site-packages/sapien/vulkan_shader/rt",
+      "get_viewer_shader_dir": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/lib/python3.11/site-packages/sapien/vulkan_shader/default",
+      "get_ray_tracing_samples_per_pixel": "32",
+      "get_ray_tracing_path_depth": "8",
+      "get_ray_tracing_denoiser": "optix"
+    },
+    "inspection_only": true,
+    "sapien_render_shader_symbols": [
+      "get_camera_shader_dir",
+      "get_viewer_shader_dir",
+      "set_camera_shader_dir",
+      "set_viewer_shader_dir"
+    ]
+  },
+  "parent_timings": [
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 1.133345,
+      "step": 0
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.93548,
+      "step": 0
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.791044,
+      "step": 0
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.019429,
+      "step": 0
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.528473,
+      "step": 0
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.562072,
+      "step": 0
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 271.867531,
+      "step": 0
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.366316,
+      "step": 0
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.559985,
+      "step": 0
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.7514,
+      "step": 0
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 287.174568,
+      "step": 0
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.731377,
+      "step": 1
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.009641,
+      "step": 1
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.118195,
+      "step": 1
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.456278,
+      "step": 1
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 251.806946,
+      "step": 1
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.558881,
+      "step": 1
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 9.253561,
+      "step": 1
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.410905,
+      "step": 1
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 264.819783,
+      "step": 1
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.812633,
+      "step": 2
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.012513,
+      "step": 2
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.14958,
+      "step": 2
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.366717,
+      "step": 2
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 256.528482,
+      "step": 2
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.364399,
+      "step": 2
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.551986,
+      "step": 2
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.450147,
+      "step": 2
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 268.911342,
+      "step": 2
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.766869,
+      "step": 3
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.008859,
+      "step": 3
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.12395,
+      "step": 3
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.419354,
+      "step": 3
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 267.356955,
+      "step": 3
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.378274,
+      "step": 3
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.531468,
+      "step": 3
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.315775,
+      "step": 3
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 279.560732,
+      "step": 3
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.780831,
+      "step": 4
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.010063,
+      "step": 4
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.218406,
+      "step": 4
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.417142,
+      "step": 4
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 247.156381,
+      "step": 4
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.381013,
+      "step": 4
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.566098,
+      "step": 4
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 0.897029,
+      "step": 4
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 259.088697,
+      "step": 4
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.811288,
+      "step": 5
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.500704,
+      "step": 5
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.527911,
+      "step": 5
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.009716,
+      "step": 5
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.137052,
+      "step": 5
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.433484,
+      "step": 5
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 248.635645,
+      "step": 5
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.389593,
+      "step": 5
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.638121,
+      "step": 5
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.337457,
+      "step": 5
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 262.075792,
+      "step": 5
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.751812,
+      "step": 6
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.010264,
+      "step": 6
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.132861,
+      "step": 6
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.487156,
+      "step": 6
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 256.220199,
+      "step": 6
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.38974,
+      "step": 6
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.486833,
+      "step": 6
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.60591,
+      "step": 6
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 268.732739,
+      "step": 6
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.72164,
+      "step": 7
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.009195,
+      "step": 7
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.120704,
+      "step": 7
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.397206,
+      "step": 7
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 255.207348,
+      "step": 7
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.560923,
+      "step": 7
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.755384,
+      "step": 7
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.37463,
+      "step": 7
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 267.624445,
+      "step": 7
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.790131,
+      "step": 8
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.009419,
+      "step": 8
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.111425,
+      "step": 8
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.420926,
+      "step": 8
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 261.212139,
+      "step": 8
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.400462,
+      "step": 8
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.639624,
+      "step": 8
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.502187,
+      "step": 8
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 273.721872,
+      "step": 8
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.746416,
+      "step": 9
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.009753,
+      "step": 9
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.130723,
+      "step": 9
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.653369,
+      "step": 9
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 257.687641,
+      "step": 9
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.370459,
+      "step": 9
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.682584,
+      "step": 9
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 0.894636,
+      "step": 9
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 269.846541,
+      "step": 9
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.833105,
+      "step": 10
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.646753,
+      "step": 10
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.548666,
+      "step": 10
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.009574,
+      "step": 10
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.151014,
+      "step": 10
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.396495,
+      "step": 10
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 252.818663,
+      "step": 10
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.379396,
+      "step": 10
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.559597,
+      "step": 10
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.34053,
+      "step": 10
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 266.348491,
+      "step": 10
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.70451,
+      "step": 11
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.010788,
+      "step": 11
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.139205,
+      "step": 11
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.358232,
+      "step": 11
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 233.780537,
+      "step": 11
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.391069,
+      "step": 11
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.56788,
+      "step": 11
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.488239,
+      "step": 11
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 246.093444,
+      "step": 11
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.76371,
+      "step": 12
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.010065,
+      "step": 12
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.16778,
+      "step": 12
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.405279,
+      "step": 12
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 264.06299,
+      "step": 12
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.388871,
+      "step": 12
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.534926,
+      "step": 12
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.449944,
+      "step": 12
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 276.432833,
+      "step": 12
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.711383,
+      "step": 13
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.010321,
+      "step": 13
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.143966,
+      "step": 13
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.35883,
+      "step": 13
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 249.160476,
+      "step": 13
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.395251,
+      "step": 13
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.675975,
+      "step": 13
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.666498,
+      "step": 13
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 261.76964,
+      "step": 13
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.844877,
+      "step": 14
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.010496,
+      "step": 14
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.136406,
+      "step": 14
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.348151,
+      "step": 14
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 252.59679,
+      "step": 14
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.363042,
+      "step": 14
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.463979,
+      "step": 14
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 0.783946,
+      "step": 14
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 264.219778,
+      "step": 14
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.838364,
+      "step": 15
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.616718,
+      "step": 15
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.612211,
+      "step": 15
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.598818,
+      "step": 15
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.525905,
+      "step": 15
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.008823,
+      "step": 15
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.15308,
+      "step": 15
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.390414,
+      "step": 15
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 236.790788,
+      "step": 15
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.379146,
+      "step": 15
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.574914,
+      "step": 15
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.483094,
+      "step": 15
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 251.638006,
+      "step": 15
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.747937,
+      "step": 16
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.01063,
+      "step": 16
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.147114,
+      "step": 16
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.423333,
+      "step": 16
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 271.087144,
+      "step": 16
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.385422,
+      "step": 16
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.529077,
+      "step": 16
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.535057,
+      "step": 16
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 283.517171,
+      "step": 16
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.698407,
+      "step": 17
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.008841,
+      "step": 17
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.135673,
+      "step": 17
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.360361,
+      "step": 17
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 252.551536,
+      "step": 17
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.365094,
+      "step": 17
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.687515,
+      "step": 17
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.334271,
+      "step": 17
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 264.812354,
+      "step": 17
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.762533,
+      "step": 18
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.007966,
+      "step": 18
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.115803,
+      "step": 18
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.430987,
+      "step": 18
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 249.868942,
+      "step": 18
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.405097,
+      "step": 18
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.549737,
+      "step": 18
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.392469,
+      "step": 18
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 262.160964,
+      "step": 18
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.72935,
+      "step": 19
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.008565,
+      "step": 19
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.117897,
+      "step": 19
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.421272,
+      "step": 19
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 231.505302,
+      "step": 19
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.39274,
+      "step": 19
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.460341,
+      "step": 19
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 0.87024,
+      "step": 19
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 243.147044,
+      "step": 19
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.823182,
+      "step": 20
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.553206,
+      "step": 20
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.427318,
+      "step": 20
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.012206,
+      "step": 20
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.14994,
+      "step": 20
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.385558,
+      "step": 20
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 249.241506,
+      "step": 20
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.416818,
+      "step": 20
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.595817,
+      "step": 20
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.750506,
+      "step": 20
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 262.99054,
+      "step": 20
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.933919,
+      "step": 21
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.00888,
+      "step": 21
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.138904,
+      "step": 21
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.563308,
+      "step": 21
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 260.489123,
+      "step": 21
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.410433,
+      "step": 21
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.704309,
+      "step": 21
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.356652,
+      "step": 21
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 273.232204,
+      "step": 21
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.679126,
+      "step": 22
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.009064,
+      "step": 22
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.111859,
+      "step": 22
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.443234,
+      "step": 22
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 251.451624,
+      "step": 22
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.3834,
+      "step": 22
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.596923,
+      "step": 22
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.71202,
+      "step": 22
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 264.044792,
+      "step": 22
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.781837,
+      "step": 23
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.011148,
+      "step": 23
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.14672,
+      "step": 23
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.435993,
+      "step": 23
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 254.622794,
+      "step": 23
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.417336,
+      "step": 23
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.586281,
+      "step": 23
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.269564,
+      "step": 23
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 266.904366,
+      "step": 23
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.73933,
+      "step": 24
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.009631,
+      "step": 24
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.126409,
+      "step": 24
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.438868,
+      "step": 24
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 276.735165,
+      "step": 24
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.391176,
+      "step": 24
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.524994,
+      "step": 24
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 0.854294,
+      "step": 24
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 288.467196,
+      "step": 24
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.738914,
+      "step": 25
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.596285,
+      "step": 25
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.525958,
+      "step": 25
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.008006,
+      "step": 25
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.147485,
+      "step": 25
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.401577,
+      "step": 25
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 241.797984,
+      "step": 25
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.420035,
+      "step": 25
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.835729,
+      "step": 25
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.394587,
+      "step": 25
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 255.485816,
+      "step": 25
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.791356,
+      "step": 26
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.011832,
+      "step": 26
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.163,
+      "step": 26
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.479302,
+      "step": 26
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 254.157309,
+      "step": 26
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.416684,
+      "step": 26
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.737556,
+      "step": 26
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.647161,
+      "step": 26
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 267.034377,
+      "step": 26
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.761183,
+      "step": 27
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.012184,
+      "step": 27
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.152976,
+      "step": 27
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.485957,
+      "step": 27
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 251.045368,
+      "step": 27
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.361889,
+      "step": 27
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.588323,
+      "step": 27
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.28064,
+      "step": 27
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 263.37374,
+      "step": 27
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.800634,
+      "step": 28
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.008211,
+      "step": 28
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.148207,
+      "step": 28
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.410495,
+      "step": 28
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 242.157186,
+      "step": 28
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.375095,
+      "step": 28
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.486468,
+      "step": 28
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.385037,
+      "step": 28
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 254.434885,
+      "step": 28
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.759051,
+      "step": 29
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.008792,
+      "step": 29
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.11792,
+      "step": 29
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.44007,
+      "step": 29
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 256.237263,
+      "step": 29
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.359088,
+      "step": 29
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.600993,
+      "step": 29
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 0.810168,
+      "step": 29
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 268.010979,
+      "step": 29
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.723871,
+      "step": 30
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.534651,
+      "step": 30
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.464393,
+      "step": 30
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.467619,
+      "step": 30
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.533275,
+      "step": 30
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.011414,
+      "step": 30
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.134202,
+      "step": 30
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.358182,
+      "step": 30
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 255.86565,
+      "step": 30
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.330882,
+      "step": 30
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.53687,
+      "step": 30
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.266298,
+      "step": 30
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 269.944696,
+      "step": 30
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.76977,
+      "step": 31
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.00868,
+      "step": 31
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.143355,
+      "step": 31
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.440384,
+      "step": 31
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 243.745405,
+      "step": 31
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.400745,
+      "step": 31
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.730806,
+      "step": 31
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.649869,
+      "step": 31
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 256.527336,
+      "step": 31
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.811915,
+      "step": 32
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.011769,
+      "step": 32
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.150014,
+      "step": 32
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.425421,
+      "step": 32
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 226.034077,
+      "step": 32
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.535915,
+      "step": 32
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.83011,
+      "step": 32
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.323019,
+      "step": 32
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 238.642045,
+      "step": 32
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.712269,
+      "step": 33
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.010713,
+      "step": 33
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.133191,
+      "step": 33
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.426446,
+      "step": 33
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 249.451716,
+      "step": 33
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.675884,
+      "step": 33
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.98363,
+      "step": 33
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.618645,
+      "step": 33
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 262.384728,
+      "step": 33
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.817333,
+      "step": 34
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.008172,
+      "step": 34
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.109827,
+      "step": 34
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.455344,
+      "step": 34
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 241.099928,
+      "step": 34
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.421167,
+      "step": 34
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.679933,
+      "step": 34
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 0.927469,
+      "step": 34
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 253.134545,
+      "step": 34
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.770712,
+      "step": 35
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.594353,
+      "step": 35
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.576337,
+      "step": 35
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.49863,
+      "step": 35
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.421055,
+      "step": 35
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.010209,
+      "step": 35
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.118079,
+      "step": 35
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.296345,
+      "step": 35
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 238.465514,
+      "step": 35
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.383044,
+      "step": 35
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.488987,
+      "step": 35
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.38442,
+      "step": 35
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 252.67606,
+      "step": 35
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.755198,
+      "step": 36
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.008945,
+      "step": 36
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.124731,
+      "step": 36
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.40747,
+      "step": 36
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 255.979231,
+      "step": 36
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.385275,
+      "step": 36
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.547499,
+      "step": 36
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.310569,
+      "step": 36
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 268.170226,
+      "step": 36
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.716833,
+      "step": 37
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.010114,
+      "step": 37
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.128847,
+      "step": 37
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.361746,
+      "step": 37
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 251.848825,
+      "step": 37
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.422677,
+      "step": 37
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.822222,
+      "step": 37
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.38374,
+      "step": 37
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 264.310337,
+      "step": 37
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.774337,
+      "step": 38
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.00905,
+      "step": 38
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.138852,
+      "step": 38
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.346421,
+      "step": 38
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 237.631337,
+      "step": 38
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.416482,
+      "step": 38
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.666615,
+      "step": 38
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.456538,
+      "step": 38
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 250.063573,
+      "step": 38
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.817431,
+      "step": 39
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.00985,
+      "step": 39
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.111936,
+      "step": 39
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.44002,
+      "step": 39
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 243.834394,
+      "step": 39
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.390479,
+      "step": 39
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.550259,
+      "step": 39
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 0.906489,
+      "step": 39
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 255.716355,
+      "step": 39
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.943433,
+      "step": 40
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.593606,
+      "step": 40
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.491885,
+      "step": 40
+    },
+    {
+      "stage": "fixture_key_rpc",
+      "elapsed_ms": 0.457071,
+      "step": 40
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.403143,
+      "step": 40
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.009881,
+      "step": 40
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.13836,
+      "step": 40
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.37579,
+      "step": 40
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 270.025836,
+      "step": 40
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.361883,
+      "step": 40
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.671755,
+      "step": 40
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.6762,
+      "step": 40
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 284.839789,
+      "step": 40
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.714097,
+      "step": 41
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.010732,
+      "step": 41
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.113583,
+      "step": 41
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.34497,
+      "step": 41
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 272.751455,
+      "step": 41
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.415021,
+      "step": 41
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.793466,
+      "step": 41
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.624682,
+      "step": 41
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 285.393259,
+      "step": 41
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.791225,
+      "step": 42
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.009847,
+      "step": 42
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.124476,
+      "step": 42
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.43442,
+      "step": 42
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 256.834488,
+      "step": 42
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.449202,
+      "step": 42
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.7645,
+      "step": 42
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.614447,
+      "step": 42
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 269.618227,
+      "step": 42
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.910609,
+      "step": 43
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.011632,
+      "step": 43
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.141786,
+      "step": 43
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.41294,
+      "step": 43
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 267.722196,
+      "step": 43
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.367241,
+      "step": 43
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.54694,
+      "step": 43
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 1.390507,
+      "step": 43
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 280.182475,
+      "step": 43
+    },
+    {
+      "stage": "status_rpc",
+      "elapsed_ms": 0.764149,
+      "step": 44
+    },
+    {
+      "stage": "flatten_current",
+      "elapsed_ms": 0.008189,
+      "step": 44
+    },
+    {
+      "stage": "observation_hash",
+      "elapsed_ms": 1.110594,
+      "step": 44
+    },
+    {
+      "stage": "publish_rpc",
+      "elapsed_ms": 0.336256,
+      "step": 44
+    },
+    {
+      "stage": "controlled_step_rpc",
+      "elapsed_ms": 242.014133,
+      "step": 44
+    },
+    {
+      "stage": "record_save_observation_npz",
+      "elapsed_ms": 1.398394,
+      "step": 44
+    },
+    {
+      "stage": "record_inclusive",
+      "elapsed_ms": 8.557563,
+      "step": 44
+    },
+    {
+      "stage": "video_advance",
+      "elapsed_ms": 0.952673,
+      "step": 44
+    },
+    {
+      "stage": "parent_iteration_total",
+      "elapsed_ms": 253.781952,
+      "step": 44
+    }
+  ],
+  "summary": {
+    "format": "rm65b_dual_keyboard_episode_v2",
+    "data_source": "explicit_per_arm_keyboard_policy_or_fixture",
+    "instruction": "Pick up the bottle and adjust it to an upright position.",
+    "seed": 2010,
+    "task_config": {
+      "task_name": "adjust_bottle",
+      "profile": "full50_sdk24",
+      "asset_root": "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets",
+      "max_episode_steps": 400,
+      "instruction": "Pick up the bottle and adjust it to an upright position.",
+      "success_mode": "upright_hold",
+      "hold_seconds": 1.0,
+      "min_lift_m": 0.01,
+      "max_upright_angle_deg": 15,
+      "renderer_denoiser": "optix",
+      "renderer_device": "cuda:0"
+    },
+    "reset_info": {
+      "seed": 2010,
+      "physics_step_count": 0,
+      "observation_valid": true,
+      "runtime_path": "/tmp/rm65b_keyboard_perf_20261016/run_rt_45/runtime/bridge-wrzmdq5r"
+    },
+    "completed": false,
+    "success": false,
+    "transitions": 45,
+    "observations": 46,
+    "human_control_steps": 0,
+    "autonomous_steps": 0,
+    "fixture_steps": 45,
+    "manual_only_steps": 45,
+    "correction_pairs": 0,
+    "correction_arm_counts": {
+      "left": 0,
+      "right": 0
+    },
+    "human_arm_counts": {
+      "left": 0,
+      "right": 0
+    },
+    "physics_ticks": 675,
+    "sim_time_s": 2.7,
+    "return": 0.0,
+    "rows_jsonl": "rows.jsonl",
+    "terminal_metrics": {
+      "success": false,
+      "native_success": false,
+      "failure_reason": null,
+      "bottom_gap_m": 7.228660838798362e-07,
+      "upright_angle_deg": 0.03426402009603798,
+      "opposed_contact": false,
+      "opposing_normals_dot": 1.0,
+      "thumb_contact_N": 0.0,
+      "finger_contact_N": 0.0,
+      "table_contact_N": 0.09794158560435734,
+      "hold_seconds": 0.0,
+      "success_mode": "upright_hold"
+    },
+    "collector_budget_truncated": true,
+    "collector_assigned_done": false,
+    "training_allowed": false,
+    "trainable": false,
+    "requires_v2_mask_aware_importer": true,
+    "not_trainable_reason": "operation_and_recording_validation_only_requires_v2_mask_aware_importer",
+    "stop_reason": "fixture_profile_bounded_partial_no_training",
+    "automatic_expert_called": false,
+    "human_preference_is_not_measured_counterfactual_return": true,
+    "wall_seconds": 11.98271863500122
+  },
+  "audit": {
+    "passed": true,
+    "format": "rm65b_dual_keyboard_episode_v2",
+    "files_opened_readonly": true,
+    "allow_pickle": false,
+    "dataset_root": "/tmp/rm65b_keyboard_perf_20261016/run_rt_45/fixture_episode",
+    "transitions": 45,
+    "observations": 46,
+    "completed": false,
+    "success": false,
+    "physics_ticks": 675,
+    "human_control_steps": 0,
+    "autonomous_steps": 0,
+    "fixture_steps": 45,
+    "manual_only_steps": 45,
+    "correction_pairs": 0,
+    "correction_arm_counts": {
+      "left": 0,
+      "right": 0
+    },
+    "human_arm_counts": {
+      "left": 0,
+      "right": 0
+    },
+    "collector_budget_truncated": true,
+    "collector_assigned_done": false,
+    "sim_time_s": 2.7,
+    "return": 0.0,
+    "training_allowed": false,
+    "trainable": false,
+    "requires_v2_mask_aware_importer": true,
+    "automatic_expert_called": false,
+    "partial_preserved_without_fabricated_done": true,
+    "counterfactual_rewards_or_successors_created": false
+  },
+  "failure": null,
+  "notes": [
+    "No VLA inference here; separate v3 inference timing exists.",
+    "Inclusive timings overlap: do not add driver.step to its apply+capture children.",
+    "Fixture RPC input is not a physical key latency benchmark.",
+    "Original ray tracing camera settings are preserved. Viewer shader is probed separately."
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "status": "native_dual_keyboard_fixture_preflight_passed",
+  "native_window_opened": true,
+  "human_keyboard_operation_verified": false,
+  "physical_two_keyboard_devices_verified": false,
+  "native_operation_source": "scripted_test_fixture",
+  "model_loaded": false,
+  "training_started": false,
+  "training_allowed": false,
+  "human_control_steps": 0,
+  "correction_pairs": 0,
+  "fixture_control_steps": 16,
+  "physics_ticks": 240,
+  "control_dt_s": 0.06,
+  "physics_dt_s": 0.004,
+  "checks": [
+    {
+      "check": "native_render_and_fk_probe_do_not_step_physics",
+      "passed": true,
+      "legacy_diagnostic_success": true
+    },
+    {
+      "check": "left_then_both_then_right_then_no_ownership",
+      "passed": true
+    },
+    {
+      "check": "uncontrolled_blocks_equal_fresh_actual_drive_reference",
+      "passed": true
+    },
+    {
+      "check": "hold_stops_hand_preset_and_hand_slew_le50SDK",
+      "passed": true
+    },
+    {
+      "check": "left_and_right_1mm_keyboard_IK_and_native_execution",
+      "passed": true
+    },
+    {
+      "check": "three_raw_RGB_SDK24_and_15x4ms_records",
+      "passed": true
+    },
+    {
+      "check": "fixture_source_excluded_from_human_pairs_and_training",
+      "passed": true
+    }
+  ],
+  "ik_reports": {
+    "left": [
+      {
+        "side": "left",
+        "solver_converged": true,
+        "solver_residual": [
+          5.9309165829337865e-06,
+          -6.864638996335925e-06,
+          3.436565712588446e-06,
+          9.529911500238443e-10,
+          2.191877312984758e-08,
+          -2.1861824292057977e-10
+        ],
+        "position_error_m": 9.728488360600942e-06,
+        "angle_error_deg": 7.3444386094852035e-06,
+        "acceptance": "independent_FK_limits_inactive_joint_checks",
+        "physical_qpos_unchanged": true,
+        "collision_checked": false
+      },
+      {
+        "side": "left",
+        "solver_converged": true,
+        "solver_residual": [
+          5.925832166466447e-06,
+          -6.871088179139033e-06,
+          3.434202912121619e-06,
+          5.084076166328054e-09,
+          2.3853366892812033e-08,
+          -3.444615665146593e-09
+        ],
+        "position_error_m": 9.728499334155525e-06,
+        "angle_error_deg": 1.306022544728445e-05,
+        "acceptance": "independent_FK_limits_inactive_joint_checks",
+        "physical_qpos_unchanged": true,
+        "collision_checked": false
+      },
+      {
+        "side": "left",
+        "solver_converged": true,
+        "solver_residual": [
+          5.916871256188244e-06,
+          -6.879902391037772e-06,
+          3.4309780800932286e-06,
+          3.423119592714215e-09,
+          2.4131497439183747e-08,
+          7.792987096290945e-10
+        ],
+        "position_error_m": 9.728488362585815e-06,
+        "angle_error_deg": 7.143182815269534e-06,
+        "acceptance": "independent_FK_limits_inactive_joint_checks",
+        "physical_qpos_unchanged": true,
+        "collision_checked": false
+      }
+    ],
+    "right": [
+      {
+        "side": "right",
+        "solver_converged": true,
+        "solver_residual": [
+          -5.940669285503908e-06,
+          6.867710495420182e-06,
+          3.4197961387563534e-06,
+          2.5563201565585118e-09,
+          -1.4137370080158362e-08,
+          5.890362197053531e-09
+        ],
+        "position_error_m": 9.728488291671966e-06,
+        "angle_error_deg": 5.122641877509565e-06,
+        "acceptance": "independent_FK_limits_inactive_joint_checks",
+        "physical_qpos_unchanged": true,
+        "collision_checked": false
+      },
+      {
+        "side": "right",
+        "solver_converged": true,
+        "solver_residual": [
+          -5.94346158263871e-06,
+          6.863028258410471e-06,
+          3.422142087725327e-06,
+          4.5730648195649835e-09,
+          -1.1356601853362847e-08,
+          4.965361920727333e-09
+        ],
+        "position_error_m": 9.698686046257258e-06,
+        "angle_error_deg": 5.122641877509565e-06,
+        "acceptance": "independent_FK_limits_inactive_joint_checks",
+        "physical_qpos_unchanged": true,
+        "collision_checked": false
+      },
+      {
+        "side": "right",
+        "solver_converged": true,
+        "solver_residual": [
+          -5.951887016023713e-06,
+          6.854744123283152e-06,
+          3.428100431925048e-06,
+          4.47742129873821e-09,
+          -1.482474984437765e-08,
+          4.572495964922773e-09
+        ],
+        "position_error_m": 9.698697059569765e-06,
+        "angle_error_deg": 1.0386604689550578e-05,
+        "acceptance": "independent_FK_limits_inactive_joint_checks",
+        "physical_qpos_unchanged": true,
+        "collision_checked": false
+      }
+    ]
+  },
+  "audit": {
+    "passed": true,
+    "format": "rm65b_dual_keyboard_episode_v2",
+    "files_opened_readonly": true,
+    "allow_pickle": false,
+    "dataset_root": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_dual_keyboard_5090_rm65b_20261016_v1/outputs/native_preflight_v3/episode",
+    "transitions": 16,
+    "observations": 17,
+    "completed": false,
+    "success": false,
+    "physics_ticks": 240,
+    "human_control_steps": 0,
+    "autonomous_steps": 0,
+    "fixture_steps": 16,
+    "manual_only_steps": 16,
+    "correction_pairs": 0,
+    "correction_arm_counts": {
+      "left": 0,
+      "right": 0
+    },
+    "human_arm_counts": {
+      "left": 0,
+      "right": 0
+    },
+    "collector_budget_truncated": true,
+    "collector_assigned_done": false,
+    "sim_time_s": 0.96,
+    "return": 0.0,
+    "training_allowed": false,
+    "trainable": false,
+    "requires_v2_mask_aware_importer": true,
+    "automatic_expert_called": false,
+    "partial_preserved_without_fabricated_done": true,
+    "counterfactual_rewards_or_successors_created": false
+  },
+  "summary": {
+    "format": "rm65b_dual_keyboard_episode_v2",
+    "data_source": "explicit_per_arm_keyboard_policy_or_fixture",
+    "instruction": "Pick up the bottle and adjust it to an upright position.",
+    "seed": 2010,
+    "task_config": {
+      "task_name": "adjust_bottle",
+      "profile": "full50_sdk24",
+      "asset_root": "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets",
+      "max_episode_steps": 400,
+      "instruction": "Pick up the bottle and adjust it to an upright position.",
+      "success_mode": "upright_hold",
+      "hold_seconds": 1.0,
+      "min_lift_m": 0.01,
+      "max_upright_angle_deg": 15,
+      "renderer_denoiser": "optix",
+      "renderer_device": "cuda:0"
+    },
+    "reset_info": {
+      "seed": 2010,
+      "physics_step_count": 0,
+      "observation_valid": true,
+      "runtime_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_dual_keyboard_5090_rm65b_20261016_v1/outputs/native_preflight_v3/runtime/bridge-ertqzw_z"
+    },
+    "completed": false,
+    "success": false,
+    "transitions": 16,
+    "observations": 17,
+    "human_control_steps": 0,
+    "autonomous_steps": 0,
+    "fixture_steps": 16,
+    "manual_only_steps": 16,
+    "correction_pairs": 0,
+    "correction_arm_counts": {
+      "left": 0,
+      "right": 0
+    },
+    "human_arm_counts": {
+      "left": 0,
+      "right": 0
+    },
+    "physics_ticks": 240,
+    "sim_time_s": 0.96,
+    "return": 0.0,
+    "rows_jsonl": "rows.jsonl",
+    "terminal_metrics": {
+      "success": false,
+      "native_success": false,
+      "failure_reason": null,
+      "bottom_gap_m": 7.338794960620731e-08,
+      "upright_angle_deg": 0.03956468264845247,
+      "opposed_contact": false,
+      "opposing_normals_dot": 1.0,
+      "thumb_contact_N": 0.0,
+      "finger_contact_N": 0.0,
+      "table_contact_N": 0.09806946205341041,
+      "hold_seconds": 0.0,
+      "success_mode": "upright_hold"
+    },
+    "collector_budget_truncated": true,
+    "collector_assigned_done": false,
+    "training_allowed": false,
+    "trainable": false,
+    "requires_v2_mask_aware_importer": true,
+    "not_trainable_reason": "operation_and_recording_validation_only_requires_v2_mask_aware_importer",
+    "stop_reason": "automated_keyboard_preflight_partial_no_training",
+    "automatic_expert_called": false,
+    "human_preference_is_not_measured_counterfactual_return": true,
+    "wall_seconds": 4.50925747600013
+  },
+  "reset_info": {
+    "seed": 2010,
+    "physics_step_count": 0,
+    "observation_valid": true,
+    "runtime_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_dual_keyboard_5090_rm65b_20261016_v1/outputs/native_preflight_v3/runtime/bridge-ertqzw_z"
+  },
+  "legacy_left_diagnostic": {
+    "success": true,
+    "source": "diagnostic_only",
+    "target_pose_world": [
+      [
+        0.35390037298202515,
+        0.7074803113937378,
+        0.6117403507232666,
+        -0.3195033838748932
+      ],
+      [
+        0.3545670509338379,
+        -0.706733226776123,
+        0.6122178435325623,
+        -0.18536141514778137
+      ],
+      [
+        0.8654690980911255,
+        0.00023877620697021484,
+        -0.5009623765945435,
+        1.0196031332015991
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "diagnostic_sdk24_target": [
+      -1.433980264501682,
+      -0.17498233247885464,
+      -1.2875739269465323,
+      0.7832887398527408,
+      -0.5800662111703851,
+      0.9259944794407516,
+      1000.0,
+      1000.0,
+      1000.0,
+      1000.0,
+      1000.0,
+      0.0,
+      1.440302848815918,
+      0.1718713343143463,
+      1.2854284048080444,
+      -0.7795454263687134,
+      0.5846511721611023,
+      -0.9303343296051025,
+      1000.0,
+      1000.0,
+      1000.0,
+      1000.0,
+      1000.0,
+      0.0
+    ],
+    "frozen_joints_unchanged": true,
+    "drive_endpoint_audit": {
+      "raw_drive_sdk24": [
+        -1.4338856935501099,
+        -0.17370359599590302,
+        -1.2848105430603027,
+        0.7786584496498108,
+        -0.5827611684799194,
+        0.9314123392105103,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        -4.374728002076722e-05,
+        1.440302848815918,
+        0.1718713343143463,
+        1.2854284048080444,
+        -0.7795454263687134,
+        0.5846511721611023,
+        -0.9303343296051025,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        -4.374728002076722e-05
+      ],
+      "manual_baseline_sdk24": [
+        -1.4338856935501099,
+        -0.17370359599590302,
+        -1.2848105430603027,
+        0.7786584496498108,
+        -0.5827611684799194,
+        0.9314123392105103,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        0.0,
+        1.440302848815918,
+        0.1718713343143463,
+        1.2854284048080444,
+        -0.7795454263687134,
+        0.5846511721611023,
+        -0.9303343296051025,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        0.0
+      ],
+      "affected_channels": [
+        {
+          "index_sdk24": 11,
+          "raw_sdk": -4.374728002076722e-05,
+          "manual_target_sdk": 0.0,
+          "numerical_roundoff_only": true
+        },
+        {
+          "index_sdk24": 23,
+          "raw_sdk": -4.374728002076722e-05,
+          "manual_target_sdk": 0.0,
+          "numerical_roundoff_only": true
+        }
+      ],
+      "max_recovery_delta_sdk": 4.374728002076722e-05,
+      "epsilon_sdk": 0.001,
+      "maximum_human_step_sdk": 50.0,
+      "physical_drives_modified": false,
+      "vla_proposal_modified": false,
+      "scope": "Explicit future human target representation only"
+    },
+    "backend": "sapien_cached_pinocchio",
+    "position_error_m": 9.728488360600942e-06,
+    "angle_error_deg": 7.3444386094852035e-06,
+    "max_iterations": 100,
+    "active_arm": "left",
+    "other_joints_unchanged": true,
+    "collision_checked": false,
+    "physical_qpos_unchanged": true,
+    "manual_target_audit": {
+      "raw_drive_sdk24": [
+        -1.4338856935501099,
+        -0.17370359599590302,
+        -1.2848105430603027,
+        0.7786584496498108,
+        -0.5827611684799194,
+        0.9314123392105103,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        -4.374728002076722e-05,
+        1.440302848815918,
+        0.1718713343143463,
+        1.2854284048080444,
+        -0.7795454263687134,
+        0.5846511721611023,
+        -0.9303343296051025,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        -4.374728002076722e-05
+      ],
+      "manual_baseline_sdk24": [
+        -1.4338856935501099,
+        -0.17370359599590302,
+        -1.2848105430603027,
+        0.7786584496498108,
+        -0.5827611684799194,
+        0.9314123392105103,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        0.0,
+        1.440302848815918,
+        0.1718713343143463,
+        1.2854284048080444,
+        -0.7795454263687134,
+        0.5846511721611023,
+        -0.9303343296051025,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        0.0
+      ],
+      "affected_channels": [
+        {
+          "index_sdk24": 11,
+          "raw_sdk": -4.374728002076722e-05,
+          "manual_target_sdk": 0.0,
+          "numerical_roundoff_only": true
+        },
+        {
+          "index_sdk24": 23,
+          "raw_sdk": -4.374728002076722e-05,
+          "manual_target_sdk": 0.0,
+          "numerical_roundoff_only": true
+        }
+      ],
+      "max_recovery_delta_sdk": 4.374728002076722e-05,
+      "epsilon_sdk": 0.001,
+      "maximum_human_step_sdk": 50.0,
+      "physical_drives_modified": false,
+      "vla_proposal_modified": false,
+      "scope": "Explicit future human target representation only"
+    }
+  },
+  "original_assets_and_original_entry_modified": false
+}

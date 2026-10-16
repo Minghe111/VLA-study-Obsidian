@@ -1,0 +1,70 @@
+{
+  "format": "rm65b_dual_keyboard_episode_v2",
+  "data_source": "explicit_per_arm_keyboard_policy_or_fixture",
+  "instruction": "Pick up the bottle and adjust it to an upright position.",
+  "seed": 2010,
+  "task_config": {
+    "task_name": "adjust_bottle",
+    "profile": "full50_sdk24",
+    "asset_root": "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets",
+    "max_episode_steps": 400,
+    "instruction": "Pick up the bottle and adjust it to an upright position.",
+    "success_mode": "upright_hold",
+    "hold_seconds": 1.0,
+    "min_lift_m": 0.01,
+    "max_upright_angle_deg": 15,
+    "renderer_denoiser": "optix",
+    "renderer_device": "cuda:0"
+  },
+  "reset_info": {
+    "seed": 2010,
+    "physics_step_count": 0,
+    "observation_valid": true,
+    "runtime_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_dual_keyboard_5090_rm65b_20261016_v1/outputs/operator_validation_v2/sim_runtime/bridge-spxqdlur"
+  },
+  "completed": false,
+  "success": false,
+  "transitions": 139,
+  "observations": 140,
+  "human_control_steps": 0,
+  "autonomous_steps": 139,
+  "fixture_steps": 0,
+  "manual_only_steps": 0,
+  "correction_pairs": 0,
+  "correction_arm_counts": {
+    "left": 0,
+    "right": 0
+  },
+  "human_arm_counts": {
+    "left": 0,
+    "right": 0
+  },
+  "physics_ticks": 2085,
+  "sim_time_s": 8.34,
+  "return": 0.0,
+  "rows_jsonl": "rows.jsonl",
+  "terminal_metrics": {
+    "success": false,
+    "native_success": false,
+    "failure_reason": null,
+    "bottom_gap_m": 7.325024138915559e-06,
+    "upright_angle_deg": 109.9510401348683,
+    "opposed_contact": false,
+    "opposing_normals_dot": 1.0,
+    "thumb_contact_N": 0.0,
+    "finger_contact_N": 0.0,
+    "table_contact_N": 0.08499692921759645,
+    "hold_seconds": 0.0,
+    "success_mode": "upright_hold"
+  },
+  "collector_budget_truncated": true,
+  "collector_assigned_done": false,
+  "training_allowed": false,
+  "trainable": false,
+  "requires_v2_mask_aware_importer": true,
+  "not_trainable_reason": "operation_and_recording_validation_only_requires_v2_mask_aware_importer",
+  "stop_reason": "operator_stop_or_wall_budget",
+  "automatic_expert_called": false,
+  "human_preference_is_not_measured_counterfactual_return": true,
+  "wall_seconds": 467.25457352299964
+}

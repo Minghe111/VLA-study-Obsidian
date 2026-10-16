@@ -1,7 +1,7 @@
 ---
 title: VLA-Precision精读-价值校准、动作专家更新与Q-VGM比较
 date: 2026-10-13
-updated: 2026-10-15
+updated: 2026-10-16
 tags: [论文精读, VLA, 强化学习, 价值校准, FlowMatching, 化学实验室, 动作专家]
 status: 论文全文与官方代码静态核查-未复现
 precision_version: 2609.04355v3
@@ -75,6 +75,14 @@ $$
 含义是纠正动作应比原提议高出一定价值间隔，防止critic学会纠正后的成功、却仍高估原提议。这依赖有效人类纠正的偏好信息，**不是从同一状态分别执行两动作后得到真实反事实收益差**。干预标记与动作改变不是任意纠正都更优的数学保证。
 
 证据：[论文式(5)–(10)](https://arxiv.org/html/2609.04355v3)、[agent.py:417](https://github.com/scy-v/VLA-Precision/blob/41edacde80d8c9d8146d610202299d71b0e79f7c/src/vla_precision/acob/agent.py#L417)。
+
+### 3.1 Critic是否只训练优秀案例（2026-10-16补核）
+
+不是。此次只读复核本地官方仓库HEAD仍为`41edacde80d8c9d8146d610202299d71b0e79f7c`，下列两文件相对HEAD无差异：`acob_stream/trajectories.py:99–105`逐条将整回合转移写入Replay，不以`succeeded`过滤，仅将`intervened`子集额外写入Correction；`acob/agent.py:527–540`对采到的实际动作转移做TD，没有按回合成功过滤，`:575–587`再叠加纠正偏好校准。特殊预处理来源可被配置为BC-only，不能将此来源mask误说成在线失败样本过滤。
+
+失败回合的自主动作仍可用于critic TD；有效人工纠正即使没有救成整回合，也不因此从纠正数据中消失。被覆盖的原提案没有真实后继，只参与相对排序，不能称为实测失败或借用纠正后的后继做TD。选择性模仿属于动作专家FM-BC：`agent.py:624–631`使用`max(episode_succeed, intervened)`。因此“critic只学优秀案例”混淆了TD、偏好校准与BC的不同数据用途；失败回合也不意味着每个局部动作都应标成坏动作。
+
+固定代码：[整回合提交](https://github.com/scy-v/VLA-Precision/blob/41edacde80d8c9d8146d610202299d71b0e79f7c/src/vla_precision/acob_stream/trajectories.py#L99)、[TD目标与损失](https://github.com/scy-v/VLA-Precision/blob/41edacde80d8c9d8146d610202299d71b0e79f7c/src/vla_precision/acob/agent.py#L527)、[BC筛选](https://github.com/scy-v/VLA-Precision/blob/41edacde80d8c9d8146d610202299d71b0e79f7c/src/vla_precision/acob/agent.py#L624)。本轮没有加载模型、仿真或训练。
 
 ## 4. 动作专家的完整目标与梯度
 

@@ -1,0 +1,92 @@
+{
+  "scope": "independent_CPU_readonly_audit_of_completed_operator_validation_v2_no_policy_or_simulator_loading",
+  "dataset": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_dual_keyboard_5090_rm65b_20261016_v1/outputs/operator_validation_v2/episode_000",
+  "audit_episode": {
+    "passed": true,
+    "format": "rm65b_dual_keyboard_episode_v2",
+    "files_opened_readonly": true,
+    "allow_pickle": false,
+    "dataset_root": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_dual_keyboard_5090_rm65b_20261016_v1/outputs/operator_validation_v2/episode_000",
+    "transitions": 139,
+    "observations": 140,
+    "completed": false,
+    "success": false,
+    "physics_ticks": 2085,
+    "human_control_steps": 0,
+    "autonomous_steps": 139,
+    "fixture_steps": 0,
+    "manual_only_steps": 0,
+    "correction_pairs": 0,
+    "correction_arm_counts": {
+      "left": 0,
+      "right": 0
+    },
+    "human_arm_counts": {
+      "left": 0,
+      "right": 0
+    },
+    "collector_budget_truncated": true,
+    "collector_assigned_done": false,
+    "sim_time_s": 8.34,
+    "return": 0.0,
+    "training_allowed": false,
+    "trainable": false,
+    "requires_v2_mask_aware_importer": true,
+    "automatic_expert_called": false,
+    "partial_preserved_without_fabricated_done": true,
+    "counterfactual_rewards_or_successors_created": false
+  },
+  "checks": {
+    "all_actual_actions_sdk24": true,
+    "all_uncontrolled_arm_actions_bit_identical_to_fresh_proposal": true,
+    "all_proposals_available_fresh_and_stamp_verified": true,
+    "all_native_steps_15_ticks_60ms": true,
+    "all_rows_nontrainable": true
+  },
+  "raw_observations": {
+    "N": 139,
+    "N_plus_1": 140,
+    "camera_arrays": 420,
+    "camera_shape_dtype_counts": {
+      "((480, 640, 3), 'uint8')": 420
+    },
+    "state_shape_dtype_counts": {
+      "((24,), 'float32')": 140
+    }
+  },
+  "ownership_mask_counts": {
+    "[False, False]": 139
+  },
+  "per_arm_segments": {
+    "left": [],
+    "right": []
+  },
+  "per_arm_preset_counts": {
+    "left": {},
+    "right": {}
+  },
+  "max_actual_vs_proposal_abs_delta": 0.0,
+  "policy": {
+    "initial_dynamic_sha256": "0275b3902fcc5d8c1eafc37d526b70a02851ec1664ea2f8d307f0034e717be0a",
+    "initial_frozen_sha256": "34618c0a0e7af30ab144dcb60938807484634f7201b0628ce64ef91e340b98e3",
+    "collector_reported_policy_state_unchanged": true,
+    "comparison_basis": "collector compares final and initial dynamic state SHA at collection completion; no checkpoint/model load performed by this read-only CPU audit",
+    "running_collector_source_hash_matches_current": true,
+    "all_published_python_source_hashes_still_match": true
+  },
+  "training": {
+    "training_allowed": false,
+    "training_started": false,
+    "trainable": false
+  },
+  "verified_boundary": "Autonomous policy rollout and raw data persistence passed. No executed human-controlled action was recorded.",
+  "not_accepted": [
+    "real left-arm takeover and handback execution",
+    "real right-arm takeover and handback execution",
+    "simultaneous bimanual takeover execution",
+    "human hand-preset command execution and slew",
+    "effective correction-pair generation",
+    "task success or success-rate improvement"
+  ],
+  "unchanged_data": true
+}

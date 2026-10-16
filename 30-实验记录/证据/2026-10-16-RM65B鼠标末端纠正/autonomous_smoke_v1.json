@@ -1,0 +1,69 @@
+{
+  "status": "autonomous_partial_gpu_smoke_passed",
+  "episodes": [
+    {
+      "format": "rm65b_human_intervention_episode_v1",
+      "data_source": "human_operator_and_actual_vla_online",
+      "instruction": "Pick up the bottle and adjust it to an upright position.",
+      "seed": 2010,
+      "task_config": {
+        "task_name": "adjust_bottle",
+        "profile": "full50_sdk24",
+        "asset_root": "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets",
+        "max_episode_steps": 400,
+        "instruction": "Pick up the bottle and adjust it to an upright position.",
+        "success_mode": "upright_hold",
+        "hold_seconds": 1.0,
+        "min_lift_m": 0.01,
+        "max_upright_angle_deg": 15,
+        "renderer_denoiser": "optix",
+        "renderer_device": "cuda:0"
+      },
+      "reset_info": {
+        "seed": 2010,
+        "physics_step_count": 0,
+        "observation_valid": true,
+        "runtime_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_human_5090_rm65b_20261016_v1/outputs/autonomous_smoke_v1/sim_runtime/bridge-r5hysl3s"
+      },
+      "completed": false,
+      "success": false,
+      "transitions": 3,
+      "observations": 4,
+      "human_control_steps": 0,
+      "autonomous_steps": 3,
+      "correction_pairs": 0,
+      "human_segments": 0,
+      "physics_ticks": 45,
+      "sim_time_s": 0.18,
+      "return": 0.0,
+      "rows_jsonl": "rows.jsonl",
+      "terminal_metrics": {
+        "success": false,
+        "native_success": false,
+        "failure_reason": null,
+        "bottom_gap_m": 7.228660838798362e-07,
+        "upright_angle_deg": 0.03426402009603798,
+        "opposed_contact": false,
+        "opposing_normals_dot": 1.0,
+        "thumb_contact_N": 0.0,
+        "finger_contact_N": 0.0,
+        "table_contact_N": 0.09794158560435734,
+        "hold_seconds": 0.0,
+        "success_mode": "upright_hold"
+      },
+      "collector_budget_truncated": true,
+      "collector_assigned_done": false,
+      "trainable": false,
+      "stop_reason": "smoke_budget",
+      "wall_seconds": 10.660490045000188,
+      "automatic_expert_called": false,
+      "human_preference_is_not_measured_counterfactual_return": true
+    }
+  ],
+  "automatic_expert_called": false,
+  "human_steps": 0,
+  "correction_pairs": 0,
+  "native_completed_episodes": 0,
+  "task_learning_or_SR_improvement_proven": false,
+  "wall_seconds": 61.882627034001416
+}

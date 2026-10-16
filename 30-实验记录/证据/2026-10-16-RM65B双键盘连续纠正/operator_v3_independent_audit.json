@@ -1,0 +1,185 @@
+{
+  "scope": "independent_CPU_readonly_operator_validation_v3_no_model_simulator_or_training",
+  "audit_episode": {
+    "passed": true,
+    "format": "rm65b_dual_keyboard_episode_v2",
+    "files_opened_readonly": true,
+    "allow_pickle": false,
+    "dataset_root": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_dual_keyboard_5090_rm65b_20261016_v1/outputs/operator_validation_v3/episode_000",
+    "transitions": 262,
+    "observations": 263,
+    "completed": false,
+    "success": false,
+    "physics_ticks": 3930,
+    "human_control_steps": 225,
+    "autonomous_steps": 37,
+    "fixture_steps": 0,
+    "manual_only_steps": 0,
+    "correction_pairs": 225,
+    "correction_arm_counts": {
+      "left": 2,
+      "right": 223
+    },
+    "human_arm_counts": {
+      "left": 2,
+      "right": 223
+    },
+    "collector_budget_truncated": true,
+    "collector_assigned_done": false,
+    "sim_time_s": 15.72,
+    "return": 0.0,
+    "training_allowed": false,
+    "trainable": false,
+    "requires_v2_mask_aware_importer": true,
+    "automatic_expert_called": false,
+    "partial_preserved_without_fabricated_done": true,
+    "counterfactual_rewards_or_successors_created": false
+  },
+  "raw_observations": {
+    "N": 262,
+    "N_plus_1": 263,
+    "camera_arrays": 789,
+    "camera_shape_dtype_counts": {
+      "((480, 640, 3), 'uint8')": 789
+    },
+    "state_shape_dtype_counts": {
+      "((24,), 'float32')": 263
+    }
+  },
+  "checks": {
+    "all_unowned_arm_targets_bit_equal_fresh_proposal": true,
+    "all_proposals_fresh_and_stamped": true,
+    "all_human_rows_genuine_provenance": true,
+    "all_15ticks_60ms": true,
+    "all_rows_nontrainable": true
+  },
+  "ownership_mask_counts": {
+    "[False, False]": 37,
+    "[True, False]": 2,
+    "[False, True]": 223
+  },
+  "source_counts": {
+    "actual_vla_online": 37,
+    "human_operator": 225
+  },
+  "per_arm_segments": {
+    "left": [
+      "left-4"
+    ],
+    "right": [
+      "right-2"
+    ]
+  },
+  "takeover_first_executed_row": {
+    "left": [
+      26
+    ],
+    "right": [
+      39
+    ]
+  },
+  "handback_execution_boundaries": {
+    "left": [
+      {
+        "last_human_row": 27,
+        "first_policy_row": 28,
+        "new_proposal_revision": 29,
+        "new_proposal_physics_stamp": 420
+      }
+    ],
+    "right": []
+  },
+  "per_arm_preset_execution_counts": {
+    "left": {
+      "hold": 2
+    },
+    "right": {
+      "hold": 223
+    }
+  },
+  "per_arm_held_key_snapshot_counts": {
+    "left": {
+      "['SPACE']": 1,
+      "['S', 'SPACE']": 1
+    },
+    "right": {
+      "['ENTER']": 93,
+      "['ENTER', 'TAB']": 3,
+      "['ENTER', 'J']": 63,
+      "['ENTER', 'K']": 41,
+      "['ENTER', 'K', 'L']": 1,
+      "['ENTER', 'L']": 22
+    }
+  },
+  "manual_delta_audit": {
+    "reference": "native action_trace.start_drive_command24, not measured qpos",
+    "maxima": {
+      "left": {
+        "arm_rad": 0.0014100074768066406,
+        "hand_sdk": 0.1984863225599156,
+        "arm_row": 27,
+        "hand_row": 26,
+        "nonzero_hand_steps": 1,
+        "ik_rows": 1,
+        "solver_converged_false_accepted": 0,
+        "max_FK_position_error_m": 9.52505525403385e-06,
+        "max_FK_angle_error_deg": 7.040397847728103e-06
+      },
+      "right": {
+        "arm_rad": 0.02000001072883606,
+        "hand_sdk": 1.1240234053880158,
+        "arm_row": 146,
+        "hand_row": 39,
+        "nonzero_hand_steps": 1,
+        "ik_rows": 127,
+        "solver_converged_false_accepted": 1,
+        "max_FK_position_error_m": 8.137063987860918e-05,
+        "max_FK_angle_error_deg": 0.0003099680457067661
+      }
+    },
+    "violations": [],
+    "comparison_tolerance_arm_rad": 2e-06,
+    "comparison_tolerance_hand_sdk": 0.0001,
+    "max_trace_start_vs_previous_recorded_endpoint_abs_delta": 8.051461009017657e-08
+  },
+  "command_ids_unique_strictly_increasing": true,
+  "policy": {
+    "initial_dynamic_sha256": "0275b3902fcc5d8c1eafc37d526b70a02851ec1664ea2f8d307f0034e717be0a",
+    "collector_reported_state_unchanged": true,
+    "evidence_basis": "collector compares final and initial dynamic SHA; CPU audit does not load model",
+    "all_source_hashes_match": true,
+    "source_hash_checks": {
+      "keyboard_preflight.py": true,
+      "test_native_keyboard_viewer.py": true,
+      "native_mouse_viewer.py": true,
+      "keyboard_recording.py": true,
+      "keyboard_sim.py": true,
+      "keyboard_sim_worker.py": true,
+      "test_keyboard_commit.py": true,
+      "dual_keyboard_input.py": true,
+      "native_keyboard_viewer.py": true,
+      "test_keyboard_recording.py": true,
+      "human_recording.py": true,
+      "keyboard_collect.py": true,
+      "human_sim.py": true,
+      "test_dual_keyboard_input.py": true,
+      "deploy_keyboard.py": true
+    }
+  },
+  "training": {
+    "training_allowed": false,
+    "training_started": false,
+    "trainable": false
+  },
+  "limits": [
+    "No both-arms-simultaneous execution if the [True, True] mask is absent",
+    "Left-arm coverage is only 2 executed steps",
+    "One revision263 FK residual rejection 0.314106mm exceeds0.25mm, per root live-event audit; rejected action is not among executed rows",
+    "Task success and improved success rate are not proven",
+    "Hand preset target execution does not prove grasp stability",
+    "All executed human rows used hold; open/pregrasp/bottle_grasp presets were not exercised",
+    "Right-arm human-to-policy executed handback was not exercised before stopping",
+    "225 correction pairs are actual action differences under expert-preference assumption, not measured task improvements"
+  ],
+  "source_data_modified": false
+}

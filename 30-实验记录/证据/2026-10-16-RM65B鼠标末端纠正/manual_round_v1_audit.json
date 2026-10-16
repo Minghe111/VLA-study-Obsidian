@@ -1,0 +1,58 @@
+{
+  "verified_at": "2026-10-16T13:35:36.369831+08:00",
+  "status": "v1_partial_autonomous_data_valid_human_correction_not_occurred",
+  "actual_data_reader": "human_dataset.load_human_episode, CPU read-only audited by subagent",
+  "transitions": 151,
+  "observations": 152,
+  "physics_ticks": 2265,
+  "normal_tick_count_per_target": 15,
+  "human_steps": 0,
+  "correction_pairs": 0,
+  "native_completed": false,
+  "trainable": false,
+  "operator_events": {
+    "run": 63,
+    "pause": 1,
+    "stop": 1,
+    "takeover": 0,
+    "successful_apply": 0,
+    "successful_release": 0
+  },
+  "rejected_operations": [
+    {
+      "op": "apply_target",
+      "reason": "Takeover had not occurred"
+    },
+    {
+      "op": "release",
+      "reason": "Raw VLA hand drive1001.7116 blocked old manual endpoint validation"
+    }
+  ],
+  "stopped_by": "explicit operator stop event command_id66",
+  "training_result": {
+    "status": "skipped_no_valid_corrections",
+    "model_loaded": false,
+    "training_started": false,
+    "metadata_gate": {
+      "accepted": false,
+      "completed_metadata_correction_pairs": 0,
+      "episodes": [
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_human_5090_rm65b_20261016_v1/outputs/interactive_cycle_v1/collection/episode_000/episode.json",
+          "completed_and_trainable": false,
+          "metadata_correction_pairs": 0,
+          "manifest_sha256": "d242d2f36d7b257feadae6c361e6dc77be31e34af65e0223fb42a7397b1a333f"
+        }
+      ],
+      "metadata_is_not_row_validation": true
+    },
+    "reason": "Require completed trainable episodes and >=2 genuine approved human correction pairs",
+    "task_learning_or_SR_improvement_proven": false,
+    "elapsed_seconds": 0.00012853399857704062
+  },
+  "evaluation_started": false,
+  "raw_data_rewritten": false,
+  "repair_cpu_tests_passed": 79,
+  "repair_scope": "Release/Pause unconditional; explicit bounded human-only hand target recovery, raw VLA/physical entry unchanged",
+  "new_active_cycle": "outputs/interactive_cycle_v2"
+}
