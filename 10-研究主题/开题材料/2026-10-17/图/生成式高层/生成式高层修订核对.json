@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-17",
+  "output": "/home/admin123/liminghe/VLA-WAM-RL/10-研究主题/开题材料/2026-10-17/东北大学开题报告扩展稿-自身VLM记忆与子任务生成版.docx",
+  "output_sha256": "92da417b8acb3d67432f0e65d8413b1b83bdeb77b665cdfa860387b7d20fb25c",
+  "training_target_table": [
+    [
+      "训练分支",
+      "监督信号与目标",
+      "更新参数",
+      "梯度与输入边界"
+    ],
+    [
+      "高层文本生成",
+      "实际READ／WRITE和子任务token的回报条件化交叉熵。",
+      "共享VLM θ",
+      "工具正文仅作上下文，不计生成损失。"
+    ],
+    [
+      "FAST动作监督",
+      "记录动作经FAST编码后的条件化交叉熵。",
+      "共享VLM θ",
+      "仅训练使用；FAST标签不输入连续专家。"
+    ],
+    [
+      "连续动作专家",
+      "记录动作加噪后构造速度场目标，采用条件化流匹配。",
+      "动作专家 φ",
+      "前向读取主干K/V；该条件路径停止FM梯度。"
+    ],
+    [
+      "独立价值模型",
+      "实测Monte Carlo回报分箱交叉熵。",
+      "价值参数 ψ",
+      "价值及优势只提供标签，不向θ或φ反传。"
+    ],
+    [
+      "可选记忆偏好",
+      "可信配对续跑对应的READ／WRITE token辅助目标。",
+      "共享VLM θ",
+      "不直接监督子任务token；共享参数可间接影响其输出。"
+    ]
+  ],
+  "original_paragraph_properties_unchanged": true,
+  "styles_and_section_properties_unchanged": true,
+  "equation_images_and_extents_unchanged": true,
+  "office_math_count": 0,
+  "render_status": "passed",
+  "wps_desktop_verified": false,
+  "rendered_page_count": 22,
+  "visual_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "original_inline_math_runs_unchanged": true,
+  "new_training_table_column_twips": [
+    1300,
+    2900,
+    1400,
+    3000
+  ],
+  "local_note_links_checked": 7,
+  "training_or_robot_execution": false,
+  "figure_sha256": {
+    "图3-自身VLM记忆与子任务生成.png": "fa95e46fbee598cf420611af017b9589cb51e107e5ad9d5e2518754566bb11a5",
+    "图4-生成式高层目标与梯度路由.png": "04781bef2c4dafef060b1b8c710a9b0903b186338cfa094fdee2cb15ae891379"
+  },
+  "file_cleanup": {
+    "date": "2026-10-17",
+    "old_reports_removed": true,
+    "tex_svg_removed": true,
+    "final_report_sha256_unchanged": true
+  }
+}
