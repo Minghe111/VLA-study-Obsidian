@@ -1,0 +1,15 @@
+{
+  "scope": "actual_simulator_history_capture",
+  "policy_loaded": false,
+  "high_text_source": "authored_diagnostic_fixture",
+  "motor_source": "measured_state_hold_not_vla",
+  "training": false,
+  "optimizer_steps": 0,
+  "excluded_from_training": true,
+  "policy_success_claimed": false,
+  "passed": false,
+  "error": "ValueError: runtime_dir must be absolute",
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/rm65b_mem_20261018_o3sfjq4_/verification/mem/verify_scene_history.py\", line 64, in main\n    env = RealManVectorEnv(task, n_envs=1, env_seeds=[9001])\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/rm65b_mem_20261018_o3sfjq4_/code/RoboTwin/integrations/realman_rm65b_gen4/rl_env.py\", line 93, in __init__\n    self.config = EnvConfig.from_mapping(task_config)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/rm65b_mem_20261018_o3sfjq4_/code/RoboTwin/integrations/realman_rm65b_gen4/rl_contract.py\", line 149, in from_mapping\n    raise ValueError(\"runtime_dir must be absolute\")\nValueError: runtime_dir must be absolute\n",
+  "vendor_urdf_unchanged": true,
+  "elapsed_s": 0.002494334999937564
+}

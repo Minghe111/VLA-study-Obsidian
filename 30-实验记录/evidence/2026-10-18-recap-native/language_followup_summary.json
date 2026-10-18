@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-18",
+  "training": false,
+  "optimizer_steps": 0,
+  "contract": {
+    "physical_action_dim": 24,
+    "three_rgb": true,
+    "control_period_s": 0.06
+  },
+  "native_language_cases": {
+    "bf16": {
+      "cases": 6,
+      "eos_successes": 0,
+      "parameters_unmutated": true,
+      "no_gradients": true
+    },
+    "fp32": {
+      "cases": 6,
+      "eos_successes": 0,
+      "parameters_unmutated": true,
+      "no_gradients": true
+    }
+  },
+  "source_jax_agrees_on_first_two_tokens": true,
+  "source_scope": "Two greedy steps of one causal pure-text case; not multimodal, full generation or action parity",
+  "first_token_logits_cosine": 0.9999999949853866,
+  "first_token_KL": 6.049427258069794e-06,
+  "language_failure_cause_proven": false,
+  "language_failure_hypothesis": "Source all-parameter FM-only SFT can alter VLM features without a text/FAST CE objective; no before/after baseline isolates causality",
+  "reference_native_sim": {
+    "date": "2026-10-18",
+    "status": "passed_recording_and_data_replay_postprocess",
+    "training": false,
+    "optimizer_steps": 0,
+    "gpu_used_by_postprocess": false,
+    "physical_simulation_previously_completed": true,
+    "high_text_source": "explicitly_authored_diagnostic_fixture",
+    "motor_source": "real_pi05_sft_80000_H16_K1_replanned_each_step",
+    "autonomous_high_level_generation": false,
+    "policy_success_claimed": false,
+    "original_episode_preserved": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/reports/reference_native_sim_20261018_v1/diagnostic_episode/episode.json",
+    "derived_provenance_record": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/reports/reference_native_sim_20261018_v1/diagnostic_episode/episode_diagnostic_provenance.json",
+    "initial_wrapper_failure_preserved": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/reports/reference_native_sim_20261018_v1/report.json",
+    "steps": 16,
+    "decisions": 1,
+    "observations": 17,
+    "physics_steps": 240,
+    "sim_time_s": 0.96,
+    "high_samples": 3,
+    "action_samples": 16,
+    "complete_actual_h16_windows": 1,
+    "action_value_examples": 16,
+    "pre_read_value_examples": 1,
+    "all_native_receipts_have_15_ticks": true,
+    "memory_replay_valid": true,
+    "no_advantage_labels_assigned": true,
+    "standard_replay_rejected": true,
+    "replay_rejection": "Held-out evaluation episodes must never enter replay",
+    "rewards": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "task_success": false,
+    "final_truncated": true,
+    "final_termination_reason": "collector_time_limit",
+    "model_parameter_invariance_measured_after_run": false,
+    "limitations": [
+      "Authored high-level text is a wiring fixture, not a fixed library or autonomous VLM policy",
+      "Native v1 wrapper failed only after episode collection when an exclusive save was accidentally reused; no GPU rerun performed",
+      "CPU postprocess verifies retained records, not runtime parameter-version invariance or training memory"
+    ]
+  },
+  "legal_tools_cpu_status": "passed_cpu_reference_tool_chain",
+  "audit_scope": "local_asset_paths_and_package_discovery_only",
+  "assets_ready": true,
+  "autonomous_hierarchical_rollout_passed": false,
+  "learned_value_calibrated": false,
+  "preservation": {
+    "date": "2026-10-18",
+    "original_source_checked_files": 2137,
+    "original_source_mismatches": [],
+    "checkpoint_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi/model.safetensors",
+    "checkpoint_bytes_unchanged": true,
+    "checkpoint_mtime_ns_unchanged": true,
+    "checkpoint_sha256_reference": "56ea95e75fb455f1751f9b420596da50b6c077c7b0b22322ea1c5410927c3b73",
+    "checkpoint_sha256_recomputed_this_followup": false
+  },
+  "verification_scripts": {
+    "verification/language_and_wiring/validate_language.py": "3b88db9f6dae718c8a86ce6a41530900d3c030848c930a820aff64e35d041686",
+    "verification/language_and_wiring/validate_legal_tools.py": "2150c260067d3db4623cdab36a3f95ad992f61c6cb48336e391f6c0981c51771",
+    "verification/language_and_wiring/validate_reference_sim.py": "a21d5974ed8c39ebf82a2c9d8f3363f0dc63027e37602ebac67d271260ba263c",
+    "verification/language_and_wiring/validate_retained_reference_record.py": "1621bf0c7f1000abb1078006e6afda8d1a5d737f415c17134fb515da966bfa39",
+    "verification/language_and_wiring/validate_source_jax_llm.py": "ac6e33f3ad3f8f5d98f58d339771af2754a879f91d25b58142de8b34599fbe53"
+  }
+}

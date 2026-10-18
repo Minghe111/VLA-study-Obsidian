@@ -1,0 +1,189 @@
+{
+  "scope": "Independent scientific-claim and shortcut review; CPU only, not training or execution evaluation",
+  "source_corpus": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1",
+  "source_sha256": {
+    "train.shuffled.reviewed.jsonl": "274223a45aaf35cba2c2a4a2f6f682eaffec420d31ca17ccd4213c25f228040d",
+    "val.reviewed.jsonl": "f277e275effda6370e06658ef51c199e56e79ea6ca6d206fb333865d50a3e9aa",
+    "test.reviewed.jsonl": "080c774d2f53a810dd4aff4e0da23e87409290038672724c97cd97cd94a76264"
+  },
+  "counts": {
+    "rows": 480,
+    "episodes": 32,
+    "families": 8,
+    "raw_observation_files": 160,
+    "unique_full_camera_pixels": 32,
+    "unique_three_camera_pixel_tuples": 32,
+    "unique_actor_input_digests": 224,
+    "consistent_duplicate_rows": 256
+  },
+  "splits": {
+    "train": {
+      "rows": 360,
+      "unique_actor_inputs": 168,
+      "families": [
+        "protocol_layout_00",
+        "protocol_layout_01",
+        "protocol_layout_02",
+        "protocol_layout_03",
+        "protocol_layout_04",
+        "protocol_layout_05"
+      ],
+      "seeds": [
+        31000,
+        31001,
+        31010,
+        31011,
+        31100,
+        31101,
+        31110,
+        31111,
+        31200,
+        31201,
+        31210,
+        31211,
+        31300,
+        31301,
+        31310,
+        31311,
+        31400,
+        31401,
+        31410,
+        31411,
+        31500,
+        31501,
+        31510,
+        31511
+      ],
+      "unique_three_camera_tuples": 24
+    },
+    "val": {
+      "rows": 60,
+      "unique_actor_inputs": 28,
+      "families": [
+        "protocol_layout_06"
+      ],
+      "seeds": [
+        31600,
+        31601,
+        31610,
+        31611
+      ],
+      "unique_three_camera_tuples": 4
+    },
+    "test": {
+      "rows": 60,
+      "unique_actor_inputs": 28,
+      "families": [
+        "protocol_layout_07"
+      ],
+      "seeds": [
+        31700,
+        31701,
+        31710,
+        31711
+      ],
+      "unique_three_camera_tuples": 4
+    }
+  },
+  "split_intersections": {
+    "train__val": {
+      "families": 0,
+      "seeds": 0,
+      "actor_digests": 0,
+      "rgb_tuples": 0
+    },
+    "train__test": {
+      "families": 0,
+      "seeds": 0,
+      "actor_digests": 0,
+      "rgb_tuples": 0
+    },
+    "val__test": {
+      "families": 0,
+      "seeds": 0,
+      "actor_digests": 0,
+      "rgb_tuples": 0
+    }
+  },
+  "text_only_exact_rule": {
+    "matches": 480,
+    "eligible": 480,
+    "uses": [
+      "mode",
+      "first left/right phrase in goal",
+      "selected-memory status/confirmed/value"
+    ],
+    "does_not_use": [
+      "RGB",
+      "state",
+      "video",
+      "physical clock",
+      "family/seed",
+      "audit metadata"
+    ]
+  },
+  "context_boundary": {
+    "nested_keys": [
+      "actor_memory",
+      "catalogue",
+      "confirmed",
+      "current_writes",
+      "description",
+      "goal",
+      "mode",
+      "read_ids",
+      "revision",
+      "selected",
+      "selected_memory",
+      "slot_id",
+      "status",
+      "value",
+      "visible_history"
+    ],
+    "forbidden_metadata_keys_in_context": [],
+    "all_visible_histories_empty": true,
+    "raw_npz_field_sets": [
+      {
+        "keys": [
+          "full_image",
+          "left_wrist_image",
+          "right_wrist_image",
+          "state",
+          "instruction"
+        ],
+        "count": 160
+      }
+    ],
+    "raw_camera_evidence_hash_mismatches": [],
+    "collator_inspection": "native_transform_input whitelists three RGB and state; high prefix uses only mode/goal/catalogue/visible_memory/visible_history/normalized state; audit metadata does not enter input"
+  },
+  "memory_conditions": {
+    "EMPTY": "64 rows: active, confirmed=true, correct visible value",
+    "KEEP": "32 rows: active, confirmed=false, correct visible value",
+    "CORRECT": "32 rows: active, confirmed=false, wrong first-role side; goal already supplies answer",
+    "CF_provenance": "Authored bank confidence/corruption, not naturally occurring policy mistakes or executed recovery",
+    "source_provenance": "Full private bank audit contains source/layout; current strict actor view strips source; revision is visible"
+  },
+  "can_claim": [
+    "Protocol-only SFT execution and parameter update if actual training receipts pass",
+    "Unrestricted EOS/JSON/READ-WRITE legality on teacher contexts",
+    "Lexical first-role left/right mapping on a fixed goal template",
+    "Paired same-input old action preservation on separately audited 8-case anchor if that test passes"
+  ],
+  "cannot_claim": [
+    "Visual grounding, temporal/MEM learning or multimodal condition use",
+    "Adaptive memory retrieval: every READ target is sample_identity",
+    "Natural uncertainty calibration or online memory error recovery",
+    "Autonomous READ->WRITE->SUBTASK closed loop: evaluation teacher-forces selected/corrected bank",
+    "Robot motor skill, verification/return-home success, task SR or Full50 retention",
+    "Independent 160-sample visual evidence: only 32 camera tuples and 8 layout families"
+  ],
+  "followup_gates": [
+    "Run generated READ then actual tool retrieval, generated WRITE then actual apply and generated SUBTASK with no teacher bank replacement",
+    "Measure text-only/image-shuffle/image-occlusion controls when claiming visual improvement",
+    "Add genuinely observed relevant change, occlusion or failure with causal labels; keep privileged simulator truths audit-only",
+    "Increase independent families and episode-level uncertainty estimates before claiming generalization"
+  ],
+  "files_modified": "Only this independent report under /tmp; source data/code unchanged",
+  "GPU_used": false
+}

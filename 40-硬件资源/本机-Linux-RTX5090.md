@@ -1,7 +1,7 @@
 ---
 title: 本机-Linux-RTX5090
 date: 2026-10-13
-updated: 2026-10-15
+updated: 2026-10-18
 verified: 2026-10-13
 tags: [资源, 硬件, RTX5090, 本机]
 sources:
@@ -35,3 +35,15 @@ sources:
 随后在另一独立根实际完成单环境、batch2、三RGB／SDK24／60ms的完整ACoB机制闭环：成功专家示范、489对在线纠正、三Buffer、并发Actor／Learner、3次LoRA及8次critic更新、保存和独立恢复。Stream整卡显存峰值21.25GiB，进程树RSS19.23GiB、最低可用主存6.43GiB；独立恢复并执行完整原生自主评测回合峰值21.14GiB、RSS20.41GiB、最低可用6.64GiB。无OOM或资源保护中止。
 
 该结果补充了上节未验收的B2与本地共享内存Stream范围；没有重新核验硬件清单、更多环境、长训或跨主机网络。自主评测0/1，容量通过与任务学习分开。详细收据见[[2026-10-15-RM65B完整ACoB仿真闭环补齐]]。
+
+## 2026-10-18 RECAP扩展的无训练功能验证
+
+本次只读重新确认GPU为RTX5090、32607MiB、driver595.99.02，未重新核验完整CPU／主存库存，故上方完整清单的`verified`日期仍保留10月13日。真实新actor推理与三个loss的no-grad前向，PyTorch峰值allocated约6835MiB，整卡采样约8448MiB；原SFT actor与新单环境共驻reset后采样11535MiB，约11.26GiB，实际首动作60ms执行通过。新actor加载期间进程峰值RSS约24.18GiB。
+
+同日补齐授权Gemma3资产后，完整value单独两阶段无梯度前向通过：PyTorch峰值allocated1556.75MiB（约1.52GiB），reserved1622MiB，整卡当时3091MiB（约3.02GiB），进程峰值RSS约4.47GiB；进程退出后整卡恢复818MiB。本次没有训练、反向或优化器显存测量，不能据推理共驻数字认定联合训练容量。高层生成未通过，value新增模块仍未拟合。详见[[2026-10-18-RM65B-RECAP资产准备与真实功能验证]]。
+
+## 2026-10-18 MEM真实反向及隔离更新容量
+
+同日按后续授权接入MEM并完成microbatch1真实SFT四帧前向／反向、一次诊断LoRA更新回退及跨进程恢复。BF16基座／FP32扩展、checkpoint、CE分块、分支串行；短高层目标10token、FAST23token、H16，value／仿真未与反向同时常驻。PyTorch allocated最高7288.35MiB≈7.12GiB，reserved7948MiB≈7.76GiB；整卡各阶段采样最大9348MiB≈9.13GiB，不是连续采样精确峰值。actor加载RSS峰约24.06GiB。
+
+此为明确配置下功能探针，不是高层SFT完成、长文本容量、持续训练稳定性或策略SR；原硬件库存verified日期不变。高层生成仍失败。详见[[2026-10-18-RM65B-MEM代码接入与小规模验证]]。

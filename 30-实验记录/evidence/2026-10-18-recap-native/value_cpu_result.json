@@ -1,0 +1,46 @@
+{
+  "status": "cpu_compatibility_passed",
+  "real_pretrained_assets_loaded": false,
+  "gpu_model_loaded": false,
+  "optimizer_constructed": false,
+  "backward_performed": false,
+  "parameter_update_performed": false,
+  "new_cpu_tests_passed": 4,
+  "existing_regression_tests_passed": 18,
+  "new_tests_seconds": 3.97,
+  "regression_tests_seconds": 2.24,
+  "new_test_asset_semantics": "Tiny randomly initialized native HF models saved and reloaded locally, only to check API contracts. Not production or pretrained assets.",
+  "tested": [
+    "three native uint8 RGB cameras and finite SDK24 state to actual ValueProcessor/StrictValueCollator",
+    "pre_read/action context inclusion",
+    "local SiglipVisionModel/Gemma3ForCausalLM checkpoint parameters equal their sources",
+    "two-stage 201 bin logits/loss finite",
+    "eval repeats identical",
+    "no parameter _version change and all gradients absent",
+    "post-cleanup text budget enforcement",
+    "explicit rejection of packed Siglip2/NaFlex config",
+    "default BF16 and FP32 independently load local tiny native backbones and execute both phases without autocast or updates"
+  ],
+  "production_asset_limit": "Current Gemma3 pretrained download blocked by gated authorization per parent report; isolated diagnostic script is ready but actual pretrained full value forward not run.",
+  "script": "/tmp/recap_value_preflight_20261018.py",
+  "changes": [
+    {
+      "relative_path": "rlinf/models/embodiment/value_model/recap/value_expert.py",
+      "before_sha256": "77f19bbecee3376c289f6789e4b50b11dd2f26141519a22532f78c7429b632a4",
+      "after_sha256": "827dfd4564dd0e1f7efc5b30cd9c8cd560e92c4e244fb47d88650ca76caf5875"
+    },
+    {
+      "relative_path": "rlinf/data/datasets/recap/hierarchical_value.py",
+      "before_sha256": "9f68fe4e146d807a14b20c8a1dd1aa7a08f25a5c5b63617bb9409554779903ec",
+      "after_sha256": "05b872540d1be046301d646fc96045cc907acfc83dc5ebfaf19e606e6d884daa"
+    }
+  ],
+  "precisions_tested": [
+    "float32",
+    "bfloat16"
+  ],
+  "persistent_script": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/verification/value_compat/value_functional_probe.py",
+  "persistent_test": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/verification/value_compat/test_value_local.py",
+  "report_date": "2026-10-18",
+  "default_bf16_two_phase_forward_passed": true
+}

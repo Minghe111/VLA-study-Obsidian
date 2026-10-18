@@ -1,0 +1,178 @@
+{
+  "date": "2026-10-18",
+  "scope": "Real assets and no-training functional validation",
+  "task_root": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017",
+  "training": false,
+  "real_model_backward": false,
+  "optimizer_steps": 0,
+  "ready_for_full_hierarchical_rollout": false,
+  "assets": {
+    "fast": "downloaded_and_real_codec_passed",
+    "siglip": "downloaded_checksum_and_pretrained_vision_passed",
+    "gemma3": "blocked_by_official_license_and_authorized_access"
+  },
+  "sft_strict_non_adapter_load": true,
+  "original_native_action_parity": {
+    "date": "2026-10-18",
+    "scope": "original eval vs new recap_hier using identical input/noise/native prompt",
+    "original_module": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/code/RLinf/rlinf/models/embodiment/openpi/__init__.py",
+    "checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi",
+    "shape": [
+      1,
+      16,
+      24
+    ],
+    "finite": true,
+    "exact_equal": true,
+    "max_absolute_difference": 0.0,
+    "mean_absolute_difference": 0.0,
+    "original_action_sha256": "98bdc150c12af80ba99e7603d7fa1f4b443bc0a9336bab9b2648f86599409ebb",
+    "new_action_sha256": "98bdc150c12af80ba99e7603d7fa1f4b443bc0a9336bab9b2648f86599409ebb",
+    "optimizer_steps": 0,
+    "training": false,
+    "elapsed_s": 22.86665059500001,
+    "peak_allocated_mib": 6807.20458984375,
+    "peak_reserved_mib": 6968.0,
+    "whole_gpu_actor_and_renderer_after_reset_mib": 11535,
+    "combined_scene_physics_steps": 15,
+    "combined_scene_observation_valid": true
+  },
+  "three_loss_forward_no_grad": {
+    "loss": 30.916765213012695,
+    "high_ce": 16.205699920654297,
+    "fast_ce": 14.69465160369873,
+    "fm": 0.01641242764890194,
+    "fast_target_tokens": 23,
+    "action_label_source": "actual 16-step static controller hold; not verified SFT or learned policy",
+    "high_label_source": "explicit diagnostic JSON for finite-loss test, not validated supervision",
+    "backward": false,
+    "optimizer_steps": 0
+  },
+  "high_level_generation": {
+    "read": {
+      "ended_with_eos": false,
+      "format_gate_passed": false,
+      "token_count": 96
+    },
+    "write": {
+      "ended_with_eos": false,
+      "format_gate_passed": false,
+      "token_count": 96
+    },
+    "subtask": {
+      "ended_with_eos": false,
+      "format_gate_passed": false,
+      "token_count": 96
+    }
+  },
+  "real_rollout": {
+    "attempted": true,
+    "semantic_success_claimed": false,
+    "autonomous_collection_completed": false,
+    "recorded_steps": 0,
+    "failure_guard_required": true,
+    "failure_guard_passed": true,
+    "error": "READ generation must produce nonempty text ending with EOS"
+  },
+  "low_level_transition": {
+    "mode": "explicit low-level SFT diagnostic, separate from failed high-level controller",
+    "executed_actions": 1,
+    "physics_steps": 15,
+    "duration_s": 0.06,
+    "reward": 0.0,
+    "terminated": false,
+    "truncated": false,
+    "observations_finite": true,
+    "reset_matches_model_input": true,
+    "task_success": false
+  },
+  "scene_contract": {
+    "passed": true,
+    "valid_action_count": 16,
+    "physics_step_count": 240,
+    "sim_time_s": 0.96,
+    "behavior_source": "diagnostic_hold_controller_actual_execution",
+    "workers_closed": true
+  },
+  "siglip_production_vision": {
+    "status": "passed_pretrained_vision_only",
+    "parameters_unmutated": true,
+    "no_gradients": true
+  },
+  "production_full_value_validated": false,
+  "tiny_value_interface": {
+    "fp32_and_bf16": true,
+    "passed_tests": 4,
+    "pretrained_semantics": false
+  },
+  "memory_mib": {
+    "actor_peak_allocated": 6835.16162109375,
+    "actor_whole_gpu_sample": 8461,
+    "original_actor_and_scene_after_reset": 11535,
+    "siglip_peak_allocated": 845.17529296875,
+    "training_memory_measured": false
+  },
+  "cpu_suites": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "62",
+      "time": "7.732",
+      "timestamp": "2026-10-18T11:16:04.119025+08:00",
+      "hostname": "admin123-System-Product-Name"
+    },
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "30",
+      "time": "0.105",
+      "timestamp": "2026-10-18T11:16:07.440580+08:00",
+      "hostname": "admin123-System-Product-Name"
+    }
+  ],
+  "cpu_tests_passed": 92,
+  "deselected": 1,
+  "source_preservation": {
+    "changed_files": [
+      {
+        "path": "code/RLinf/rlinf/data/datasets/recap/hierarchical_value.py",
+        "before_sha256": "9f68fe4e146d807a14b20c8a1dd1aa7a08f25a5c5b63617bb9409554779903ec",
+        "after_sha256": "05b872540d1be046301d646fc96045cc907acfc83dc5ebfaf19e606e6d884daa"
+      },
+      {
+        "path": "code/RLinf/rlinf/models/embodiment/openpi/tasks/recap_hier.py",
+        "before_sha256": "a26ebfba692ad3b07c45081f2b151046706cc958b50caf245ca30dd24c5b9f94",
+        "after_sha256": "cfd322cd7be965e5ffbc621d676919c94621472c4c2def57c31b33d6fb58ef05"
+      },
+      {
+        "path": "code/RLinf/rlinf/models/embodiment/value_model/recap/value_expert.py",
+        "before_sha256": "77f19bbecee3376c289f6789e4b50b11dd2f26141519a22532f78c7429b632a4",
+        "after_sha256": "827dfd4564dd0e1f7efc5b30cd9c8cd560e92c4e244fb47d88650ca76caf5875"
+      },
+      {
+        "path": "code/RLinf/tests/unit_tests/test_openpi_recap.py",
+        "before_sha256": "1b0f83a8cf5f7385fa9f881c1f3fdf2cd282f7b5d7401ab8093f47ca8843cb07",
+        "after_sha256": "933fb19e0a0843eb647958f8daac87505e7b01e8c14f150d5a6f9e55fa8f5ad9"
+      }
+    ],
+    "original_source_checked_files": 2137,
+    "original_mismatches": []
+  },
+  "checkpoint_fingerprint": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi/model.safetensors",
+    "sha256": "56ea95e75fb455f1751f9b420596da50b6c077c7b0b22322ea1c5410927c3b73",
+    "bytes": 13413809848,
+    "mtime_ns": 1791878531344546590,
+    "scope": "read-only fingerprint after validation; existing checkpoint not rewritten"
+  },
+  "limitations": [
+    "READ WRITE SUBTASK actual generations failed the response gate; no learned high-level semantics are claimed",
+    "Gemma3 files require user-authorized official access; full production value forward remains unverified",
+    "No complete grasp verify return task success or training memory profile was measured",
+    "Text-generation failure cause is not established by static head/cache checks"
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "script": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/verification/value_compat/siglip_backbone_probe.py",
+  "pid": 55826,
+  "stage": "complete",
+  "device": "cuda:0",
+  "production_value_model_validated": false,
+  "production_pretrained_vision_only": true,
+  "optimizer_constructed": false,
+  "backward_performed": false,
+  "versions": {
+    "torch": "2.7.1+cu128",
+    "transformers": "4.53.2"
+  },
+  "asset": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/assets/siglip2_so400m_patch14_224-78e403963a4f",
+    "config_sha256": "946cfbcedeb7aaa497606d78540163d13ab92fe70da8f5d25049991bd3b69b8d",
+    "model_type": "siglip",
+    "vision_model_type": "siglip_vision_model",
+    "image_size": 224,
+    "patch_size": 14,
+    "hidden_size": 1152
+  },
+  "observation": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/reports/scene_native_h16_20261018_v2/initial.npz",
+    "sha256": "36b455734201e85f1ae356ba052e5e9f6ee781726fa266adf6762366e1a57bb4",
+    "native_image_shapes": {
+      "base_0_rgb": [
+        1,
+        480,
+        640,
+        3
+      ],
+      "left_wrist_0_rgb": [
+        1,
+        480,
+        640,
+        3
+      ],
+      "right_wrist_0_rgb": [
+        1,
+        480,
+        640,
+        3
+      ]
+    },
+    "state_shape": [
+      24
+    ],
+    "state_finite": true,
+    "state_used_by_vision": false
+  },
+  "memory_before": {
+    "cpu_peak_rss_kib": 1000720,
+    "cpu_current_rss_kib": 1003032,
+    "cuda_allocated_bytes": 0,
+    "cuda_reserved_bytes": 0,
+    "cuda_peak_allocated_bytes": 0,
+    "cuda_peak_reserved_bytes": 0,
+    "nvidia_smi_gpu": [
+      "0, NVIDIA GeForce RTX 5090, 32607, 1092"
+    ],
+    "nvidia_smi_returncode": 0
+  },
+  "load_seconds": 1.596135731000004,
+  "model": {
+    "class": "SiglipVisionModel",
+    "parameter_count": 427680704,
+    "parameter_dtypes": [
+      "torch.bfloat16"
+    ],
+    "missing_keys": [],
+    "mismatched_keys": [],
+    "unexpected_key_count": 440,
+    "unexpected_key_examples": [
+      "logit_bias",
+      "logit_scale",
+      "text_model.embeddings.position_embedding.weight",
+      "text_model.embeddings.token_embedding.weight",
+      "text_model.encoder.layers.0.layer_norm1.bias"
+    ],
+    "eval_all_modules": true
+  },
+  "memory_after_load": {
+    "cpu_peak_rss_kib": 3669200,
+    "cpu_current_rss_kib": 2003984,
+    "cuda_allocated_bytes": 867424768,
+    "cuda_reserved_bytes": 903872512,
+    "cuda_peak_allocated_bytes": 867424768,
+    "cuda_peak_reserved_bytes": 903872512,
+    "nvidia_smi_gpu": [
+      "0, NVIDIA GeForce RTX 5090, 32607, 1954"
+    ],
+    "nvidia_smi_returncode": 0
+  },
+  "forwards": [
+    {
+      "camera": "base_0_rgb",
+      "processed_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "processed_dtype": "torch.float32",
+      "processed_range": [
+        -1.0,
+        1.0
+      ],
+      "output_shape": [
+        1,
+        256,
+        1152
+      ],
+      "output_dtype": "torch.bfloat16",
+      "finite": true,
+      "repeat_max_abs_difference": 0.0,
+      "seconds_two_forwards": 0.18227962299988576,
+      "memory": {
+        "cpu_peak_rss_kib": 3669200,
+        "cpu_current_rss_kib": 2092208,
+        "cuda_allocated_bytes": 877726208,
+        "cuda_reserved_bytes": 912261120,
+        "cuda_peak_allocated_bytes": 886230528,
+        "cuda_peak_reserved_bytes": 912261120,
+        "nvidia_smi_gpu": [
+          "0, NVIDIA GeForce RTX 5090, 32607, 2092"
+        ],
+        "nvidia_smi_returncode": 0
+      }
+    },
+    {
+      "camera": "left_wrist_0_rgb",
+      "processed_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "processed_dtype": "torch.float32",
+      "processed_range": [
+        -1.0,
+        1.0
+      ],
+      "output_shape": [
+        1,
+        256,
+        1152
+      ],
+      "output_dtype": "torch.bfloat16",
+      "finite": true,
+      "repeat_max_abs_difference": 0.0,
+      "seconds_two_forwards": 0.007706873999950403,
+      "memory": {
+        "cpu_peak_rss_kib": 3669200,
+        "cpu_current_rss_kib": 2092208,
+        "cuda_allocated_bytes": 877726208,
+        "cuda_reserved_bytes": 912261120,
+        "cuda_peak_allocated_bytes": 886230528,
+        "cuda_peak_reserved_bytes": 912261120,
+        "nvidia_smi_gpu": [
+          "0, NVIDIA GeForce RTX 5090, 32607, 2092"
+        ],
+        "nvidia_smi_returncode": 0
+      }
+    },
+    {
+      "camera": "right_wrist_0_rgb",
+      "processed_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "processed_dtype": "torch.float32",
+      "processed_range": [
+        -1.0,
+        1.0
+      ],
+      "output_shape": [
+        1,
+        256,
+        1152
+      ],
+      "output_dtype": "torch.bfloat16",
+      "finite": true,
+      "repeat_max_abs_difference": 0.0,
+      "seconds_two_forwards": 0.011319365999952424,
+      "memory": {
+        "cpu_peak_rss_kib": 3669200,
+        "cpu_current_rss_kib": 2092208,
+        "cuda_allocated_bytes": 877726208,
+        "cuda_reserved_bytes": 912261120,
+        "cuda_peak_allocated_bytes": 886230528,
+        "cuda_peak_reserved_bytes": 912261120,
+        "nvidia_smi_gpu": [
+          "0, NVIDIA GeForce RTX 5090, 32607, 2092"
+        ],
+        "nvidia_smi_returncode": 0
+      }
+    }
+  ],
+  "parameters_unmutated": true,
+  "no_gradients": true,
+  "memory_final": {
+    "cpu_peak_rss_kib": 3669200,
+    "cpu_current_rss_kib": 2092208,
+    "cuda_allocated_bytes": 875944448,
+    "cuda_reserved_bytes": 912261120,
+    "cuda_peak_allocated_bytes": 886230528,
+    "cuda_peak_reserved_bytes": 912261120,
+    "nvidia_smi_gpu": [
+      "0, NVIDIA GeForce RTX 5090, 32607, 2092"
+    ],
+    "nvidia_smi_returncode": 0
+  },
+  "status": "passed_pretrained_vision_only",
+  "not_validated": [
+    "Gemma3 pretrained language backbone",
+    "Full categorical value model or calibration",
+    "Value expert/projector/value-head learning",
+    "Training memory or backward/update",
+    "Task success rate"
+  ]
+}

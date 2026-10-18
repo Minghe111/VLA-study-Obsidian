@@ -1,0 +1,511 @@
+{
+  "status": "completed",
+  "scope": "small_standalone_protocol_SFT_pilot",
+  "selection_split": "validation_only",
+  "test_used": false,
+  "task_success_or_SR_measured": false,
+  "automatic_promotion": false,
+  "video_FAST_expert_training": false,
+  "optimizer_update_limit": 128,
+  "samples_per_split": 16,
+  "steps": [
+    {
+      "name": "00_data_audit",
+      "command": "audit",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/scripts/protocol_pilot.py",
+        "audit",
+        "--config",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/configs/rm65b_protocol_sft_pilot.yaml",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/00_data_audit",
+        "--train-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/train.shuffled.reviewed.jsonl",
+        "--heldout-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/val.reviewed.jsonl"
+      ],
+      "log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/logs/00_data_audit.log",
+      "report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/00_data_audit/report.json",
+      "status": "completed",
+      "started_unix": 1792330122.7684703,
+      "exit_code": 0,
+      "elapsed_s": 3.9504075959994225
+    },
+    {
+      "name": "01_retention_baseline",
+      "command": "retention",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/scripts/protocol_pilot.py",
+        "retention",
+        "--config",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/configs/rm65b_protocol_sft_pilot.yaml",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/01_retention_baseline",
+        "--anchor-manifest",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/retention_anchor/manifest.json",
+        "--execute"
+      ],
+      "log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/logs/01_retention_baseline.log",
+      "report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/01_retention_baseline/report.json",
+      "status": "completed",
+      "started_unix": 1792330126.7191925,
+      "exit_code": 0,
+      "elapsed_s": 38.052254822003306
+    },
+    {
+      "name": "02_eval_baseline",
+      "command": "eval",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/scripts/protocol_pilot.py",
+        "eval",
+        "--config",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/configs/rm65b_protocol_sft_pilot.yaml",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/02_eval_baseline",
+        "--train-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/train.shuffled.reviewed.jsonl",
+        "--heldout-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/val.reviewed.jsonl",
+        "--samples-per-split",
+        "16",
+        "--execute"
+      ],
+      "log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/logs/02_eval_baseline.log",
+      "report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/02_eval_baseline/report.json",
+      "status": "completed",
+      "started_unix": 1792330164.778698,
+      "exit_code": 0,
+      "elapsed_s": 74.52100089599844
+    },
+    {
+      "name": "03_fit32",
+      "command": "fit",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/scripts/protocol_pilot.py",
+        "fit",
+        "--config",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/configs/rm65b_protocol_sft_pilot.yaml",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/03_fit32",
+        "--updates",
+        "32",
+        "--learning-rate",
+        "0.0001",
+        "--execute",
+        "--enable-training"
+      ],
+      "log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/logs/03_fit32.log",
+      "report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/03_fit32/report.json",
+      "status": "completed",
+      "started_unix": 1792330239.365139,
+      "exit_code": 0,
+      "elapsed_s": 137.20100107300095
+    },
+    {
+      "name": "04_eval32",
+      "command": "eval",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/scripts/protocol_pilot.py",
+        "eval",
+        "--config",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/configs/rm65b_protocol_sft_pilot.yaml",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/04_eval32",
+        "--train-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/train.shuffled.reviewed.jsonl",
+        "--heldout-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/val.reviewed.jsonl",
+        "--samples-per-split",
+        "16",
+        "--checkpoint",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/03_fit32/checkpoint",
+        "--execute"
+      ],
+      "log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/logs/04_eval32.log",
+      "report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/04_eval32/report.json",
+      "status": "completed",
+      "started_unix": 1792330376.5689027,
+      "exit_code": 0,
+      "elapsed_s": 75.24755626399565
+    },
+    {
+      "name": "05_fit128",
+      "command": "fit",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/scripts/protocol_pilot.py",
+        "fit",
+        "--config",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/configs/rm65b_protocol_sft_pilot.yaml",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/05_fit128",
+        "--resume",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/03_fit32/checkpoint",
+        "--total-updates",
+        "128",
+        "--learning-rate",
+        "0.0001",
+        "--execute",
+        "--enable-training"
+      ],
+      "log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/logs/05_fit128.log",
+      "report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/05_fit128/report.json",
+      "status": "completed",
+      "started_unix": 1792330451.85409,
+      "exit_code": 0,
+      "elapsed_s": 68.87550811200344
+    },
+    {
+      "name": "06_eval128",
+      "command": "eval",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/scripts/protocol_pilot.py",
+        "eval",
+        "--config",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/configs/rm65b_protocol_sft_pilot.yaml",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/06_eval128",
+        "--train-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/train.shuffled.reviewed.jsonl",
+        "--heldout-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/val.reviewed.jsonl",
+        "--samples-per-split",
+        "16",
+        "--checkpoint",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/05_fit128/checkpoint",
+        "--execute"
+      ],
+      "log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/logs/06_eval128.log",
+      "report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/06_eval128/report.json",
+      "status": "completed",
+      "started_unix": 1792330520.743964,
+      "exit_code": 0,
+      "elapsed_s": 77.22645611900225
+    },
+    {
+      "name": "07_retention_final",
+      "command": "retention",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/scripts/protocol_pilot.py",
+        "retention",
+        "--config",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/configs/rm65b_protocol_sft_pilot.yaml",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/07_retention_final",
+        "--checkpoint",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/05_fit128/checkpoint",
+        "--anchor-manifest",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/retention_anchor/manifest.json",
+        "--baseline",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/01_retention_baseline/retention.pt",
+        "--execute"
+      ],
+      "log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/logs/07_retention_final.log",
+      "report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/07_retention_final/report.json",
+      "status": "completed",
+      "started_unix": 1792330597.9719908,
+      "exit_code": 0,
+      "elapsed_s": 30.7491183020029
+    }
+  ],
+  "root": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1",
+  "config": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/configs/rm65b_protocol_sft_pilot.yaml",
+  "python": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+  "training_labels": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/train.shuffled.reviewed.jsonl",
+  "validation_labels": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/val.reviewed.jsonl",
+  "started_unix": 1792330122.7585273,
+  "limitations": [
+    "High-level text evaluation uses standalone, reviewed contexts rather than an autonomous robot episode.",
+    "SUBTASK side binding is a lexical proxy; it does not establish visual grounding or motor success.",
+    "Continuation restores model and AdamW state; RNG and data cursor restart.",
+    "Final checkpoint means the last bounded training state; no deployment or video-stage promotion is performed."
+  ],
+  "baseline_metrics": {
+    "train": {
+      "count": 16,
+      "teacher_forced_ce": 16.7154278755188,
+      "eos": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "first_token_match": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 5
+      },
+      "passed": {
+        "passed": 0,
+        "eligible": 16
+      }
+    },
+    "heldout": {
+      "count": 16,
+      "teacher_forced_ce": 16.640815496444702,
+      "eos": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "first_token_match": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 5
+      },
+      "passed": {
+        "passed": 0,
+        "eligible": 16
+      }
+    }
+  },
+  "continuation_gate": {
+    "continue_to_128": true,
+    "reason": "validation_CE_decreased_with_frozen_parameters_preserved",
+    "baseline_validation_ce": 16.640815496444702,
+    "after32_validation_ce": 16.053394675254822
+  },
+  "after32_metrics": {
+    "train": {
+      "count": 16,
+      "teacher_forced_ce": 16.03959882259369,
+      "eos": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "first_token_match": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 5
+      },
+      "passed": {
+        "passed": 0,
+        "eligible": 16
+      }
+    },
+    "heldout": {
+      "count": 16,
+      "teacher_forced_ce": 16.053394675254822,
+      "eos": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "first_token_match": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 5
+      },
+      "passed": {
+        "passed": 0,
+        "eligible": 16
+      }
+    }
+  },
+  "after128_metrics": {
+    "train": {
+      "count": 16,
+      "teacher_forced_ce": 11.667466223239899,
+      "eos": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "first_token_match": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "side_binding_lexical": {
+        "passed": 3,
+        "eligible": 5
+      },
+      "passed": {
+        "passed": 0,
+        "eligible": 16
+      }
+    },
+    "heldout": {
+      "count": 16,
+      "teacher_forced_ce": 11.745140492916107,
+      "eos": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "first_token_match": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 5
+      },
+      "passed": {
+        "passed": 0,
+        "eligible": 16
+      }
+    }
+  },
+  "final_checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/05_fit128/checkpoint",
+  "final_global_step": 128,
+  "final_metrics": {
+    "train": {
+      "count": 16,
+      "teacher_forced_ce": 11.667466223239899,
+      "eos": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "first_token_match": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "side_binding_lexical": {
+        "passed": 3,
+        "eligible": 5
+      },
+      "passed": {
+        "passed": 0,
+        "eligible": 16
+      }
+    },
+    "heldout": {
+      "count": 16,
+      "teacher_forced_ce": 11.745140492916107,
+      "eos": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "first_token_match": {
+        "passed": 0,
+        "eligible": 16
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 11
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 5
+      },
+      "passed": {
+        "passed": 0,
+        "eligible": 16
+      }
+    }
+  },
+  "retention_passed": true,
+  "validation_protocol_passed": false,
+  "raw_generated_text_reports": [
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/02_eval_baseline/report.json",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/04_eval32/report.json",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/06_eval128/report.json"
+  ],
+  "standalone_protocol_and_retention_passed": false,
+  "elapsed_s": 505.96967044199846
+}

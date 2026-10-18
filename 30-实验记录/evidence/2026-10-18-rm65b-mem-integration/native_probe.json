@@ -1,0 +1,297 @@
+{
+  "scope": "excluded_functional_probe_only",
+  "production_training_started": false,
+  "optimizer_steps_probe": 1,
+  "probe_parameters_rolled_back": true,
+  "stages": {
+    "load": {
+      "elapsed_s": 22.349975409000763,
+      "memory": {
+        "peak_allocated_mib": 6656.09033203125,
+        "peak_reserved_mib": 6688.0,
+        "whole_gpu_mib": 7944,
+        "host_peak_rss_mib": 24637.65625
+      },
+      "strict_base_restore": true,
+      "trainable_parameters": 4085760,
+      "trainable_by_group": {
+        "vlm": 3686400,
+        "vision": 331776,
+        "history_state": 67584,
+        "action_expert": 0
+      }
+    },
+    "three_original_entry_parities": {
+      "result": [
+        {
+          "exact_equal": true,
+          "max_abs": 0.0
+        },
+        {
+          "exact_equal": true,
+          "max_abs": 0.0
+        },
+        {
+          "exact_equal": true,
+          "max_abs": 0.0
+        }
+      ],
+      "elapsed_s": 1.1119232440032647,
+      "memory": {
+        "peak_allocated_mib": 6827.6484375,
+        "peak_reserved_mib": 6988.0,
+        "whole_gpu_mib": 8376,
+        "host_peak_rss_mib": 24637.65625
+      }
+    },
+    "four_frame_forward": {
+      "result": {
+        "prefix_shape": [
+          1,
+          1012,
+          2048
+        ],
+        "valid_tokens": 1012,
+        "visual_tokens": 768,
+        "history_state_tokens": 3,
+        "action_shape": [
+          1,
+          16,
+          24
+        ],
+        "history_valid": [
+          [
+            true,
+            true,
+            true,
+            true
+          ]
+        ]
+      },
+      "elapsed_s": 0.26790746900223894,
+      "memory": {
+        "peak_allocated_mib": 6878.4873046875,
+        "peak_reserved_mib": 6964.0,
+        "whole_gpu_mib": 8352,
+        "host_peak_rss_mib": 24637.65625
+      }
+    },
+    "untrained_high_generation_capability": {
+      "result": {
+        "READ": {
+          "text": "Ẁٶӝӝӝ􏰁ӝӝӝӝӝ􏰁􏰁􏰁􏰁􏰁",
+          "ended_with_eos": false,
+          "tokens": 16
+        },
+        "WRITE": {
+          "text": "ٶٶӝٶٶ􏰁ӝӝӝӝ􏰁ӝӝ􏰁􏰁ٶ",
+          "ended_with_eos": false,
+          "tokens": 16
+        },
+        "SUBTASK": {
+          "text": "ᔑٶٶӝӝӝٶӝӝӝӝӝӝ􏰁􏰁􏰁",
+          "ended_with_eos": false,
+          "tokens": 16
+        }
+      },
+      "elapsed_s": 0.9568735029970412,
+      "memory": {
+        "peak_allocated_mib": 6893.24853515625,
+        "peak_reserved_mib": 7134.0,
+        "whole_gpu_mib": 8524,
+        "host_peak_rss_mib": 24637.65625
+      }
+    },
+    "high_ce_backward": {
+      "result": {
+        "loss": 15.914774894714355,
+        "gradients": {
+          "vision": {
+            "tensors": 24,
+            "nonzero_tensors": 12,
+            "l1": 8.995617836713791,
+            "finite": true
+          },
+          "history_state": {
+            "tensors": 2,
+            "nonzero_tensors": 2,
+            "l1": 5.91187983751297,
+            "finite": true
+          },
+          "vlm": {
+            "tensors": 144,
+            "nonzero_tensors": 72,
+            "l1": 536.1521924734116,
+            "finite": true
+          },
+          "action_expert": {
+            "tensors": 0,
+            "nonzero_tensors": 0,
+            "l1": 0.0,
+            "finite": true
+          }
+        }
+      },
+      "elapsed_s": 0.5172442480034078,
+      "memory": {
+        "peak_allocated_mib": 7287.08544921875,
+        "peak_reserved_mib": 7852.0,
+        "whole_gpu_mib": 9250,
+        "host_peak_rss_mib": 24637.65625
+      }
+    },
+    "fast_ce_backward": {
+      "result": {
+        "loss": 14.713549613952637,
+        "gradients": {
+          "vision": {
+            "tensors": 24,
+            "nonzero_tensors": 12,
+            "l1": 12.319178819656372,
+            "finite": true
+          },
+          "history_state": {
+            "tensors": 2,
+            "nonzero_tensors": 2,
+            "l1": 50.294042348861694,
+            "finite": true
+          },
+          "vlm": {
+            "tensors": 144,
+            "nonzero_tensors": 72,
+            "l1": 602.5120076537132,
+            "finite": true
+          },
+          "action_expert": {
+            "tensors": 0,
+            "nonzero_tensors": 0,
+            "l1": 0.0,
+            "finite": true
+          }
+        }
+      },
+      "elapsed_s": 0.3983505950018298,
+      "memory": {
+        "peak_allocated_mib": 7285.74169921875,
+        "peak_reserved_mib": 7730.0,
+        "whole_gpu_mib": 9129,
+        "host_peak_rss_mib": 24637.65625
+      }
+    },
+    "ki_fm_backward": {
+      "result": {
+        "loss": 0.05993352457880974,
+        "gradients": {
+          "vision": {
+            "tensors": 0,
+            "nonzero_tensors": 0,
+            "l1": 0.0,
+            "finite": true
+          },
+          "history_state": {
+            "tensors": 0,
+            "nonzero_tensors": 0,
+            "l1": 0.0,
+            "finite": true
+          },
+          "vlm": {
+            "tensors": 0,
+            "nonzero_tensors": 0,
+            "l1": 0.0,
+            "finite": true
+          },
+          "action_expert": {
+            "tensors": 144,
+            "nonzero_tensors": 72,
+            "l1": 2.524315869435668,
+            "finite": true
+          }
+        }
+      },
+      "elapsed_s": 0.28747207000560593,
+      "memory": {
+        "peak_allocated_mib": 6872.24853515625,
+        "peak_reserved_mib": 6960.0,
+        "whole_gpu_mib": 8359,
+        "host_peak_rss_mib": 24637.65625
+      }
+    },
+    "nonzero_k1_anchor_backward": {
+      "result": {
+        "loss": 0.0001707246556179598,
+        "gradients": {
+          "vision": {
+            "tensors": 24,
+            "nonzero_tensors": 12,
+            "l1": 0.009604142062016763,
+            "finite": true
+          },
+          "history_state": {
+            "tensors": 0,
+            "nonzero_tensors": 0,
+            "l1": 0.0,
+            "finite": true
+          },
+          "vlm": {
+            "tensors": 140,
+            "nonzero_tensors": 71,
+            "l1": 0.14324439333722694,
+            "finite": true
+          },
+          "action_expert": {
+            "tensors": 0,
+            "nonzero_tensors": 0,
+            "l1": 0.0,
+            "finite": true
+          }
+        },
+        "temporary_delta_restored": true
+      },
+      "elapsed_s": 0.24890143900120165,
+      "memory": {
+        "peak_allocated_mib": 7099.0546875,
+        "peak_reserved_mib": 7216.0,
+        "whole_gpu_mib": 8615,
+        "host_peak_rss_mib": 24637.65625
+      }
+    },
+    "one_functional_update_and_compact_reload": {
+      "result": {
+        "metrics": {
+          "loss": 30.688258033245802,
+          "high_ce": 15.914774894714355,
+          "fast_ce": 14.713549613952637,
+          "fm": 0.05993352457880974,
+          "kv_anchor": 0.0,
+          "grad_norm": 2.5434775352478027,
+          "updates": 1,
+          "global_step": 1,
+          "anchor_micro_batches": 0
+        },
+        "changed_tensors_by_group": {
+          "vlm": 72,
+          "action_expert": 72,
+          "vision": 12,
+          "history_state": 2
+        },
+        "same_instance_compact_reload_exact": true
+      },
+      "elapsed_s": 2.224807503000193,
+      "memory": {
+        "peak_allocated_mib": 7288.35205078125,
+        "peak_reserved_mib": 7948.0,
+        "whole_gpu_mib": 9348,
+        "host_peak_rss_mib": 24637.65625
+      }
+    }
+  },
+  "passed": true,
+  "label_source": "authored_diagnostic_text_and_actual_hold_commands",
+  "policy_success_claimed": false,
+  "diagnostic_target_tokens": {
+    "high": 10,
+    "fast": 23
+  },
+  "compact_reload_exact": true,
+  "autonomous_high_level_passed": false
+}

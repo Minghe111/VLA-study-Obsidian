@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-18",
+  "training": false,
+  "optimizer_steps": 0,
+  "hardware_io": false,
+  "high_text_source": "explicitly_authored_diagnostic_fixture",
+  "autonomous_high_level_generation": false,
+  "policy_success_claimed": false,
+  "excluded_from_training": true,
+  "status": "failed",
+  "error_type": "FileExistsError",
+  "error": "[Errno 17] File exists: '/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/reports/reference_native_sim_20261018_v1/diagnostic_episode/episode.json'",
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/recap_reference_sim_20261018.py\", line 74, in main\n    save_episode_json(args.output/'diagnostic_episode/episode.json',episode)\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/code/RLinf/rlinf/data/schema/hierarchical_types.py\", line 267, in save_episode_json\n    with target.open(\"x\", encoding=\"utf-8\") as stream:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/miniconda3/envs/isaaclab/lib/python3.11/pathlib.py\", line 1044, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileExistsError: [Errno 17] File exists: '/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/reports/reference_native_sim_20261018_v1/diagnostic_episode/episode.json'\n",
+  "workers_closed": true,
+  "seconds": 92.01994627400018
+}
