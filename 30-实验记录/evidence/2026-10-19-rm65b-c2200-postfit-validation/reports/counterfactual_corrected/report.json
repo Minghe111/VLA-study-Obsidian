@@ -1,0 +1,4903 @@
+{
+  "status": "completed",
+  "stage": "counterfactual",
+  "checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint",
+  "script_sha256": "2ca4febfbca78cad2a26eacc24cd178d3d054acd87bdf989314c7950c4667b4d",
+  "evaluation_count": 88,
+  "audit": {
+    "status": "CPU_audit_passed_no_model_loaded",
+    "splits": {
+      "fit96": {
+        "rows": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "families": [
+          "protocol_layout_00",
+          "protocol_layout_01",
+          "protocol_layout_02",
+          "protocol_layout_03",
+          "protocol_layout_04",
+          "protocol_layout_05"
+        ],
+        "episode_count": 12,
+        "observation_files": 52,
+        "unique_actor_input_digests": 96,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "EMPTY": 8,
+          "CORRECT": 8,
+          "WRITE": 8,
+          "KEEP": 8
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "sha256": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true
+      },
+      "train": {
+        "rows": 360,
+        "modes": {
+          "READ": 120,
+          "WRITE": 120,
+          "SUBTASK": 120
+        },
+        "families": [
+          "protocol_layout_00",
+          "protocol_layout_01",
+          "protocol_layout_02",
+          "protocol_layout_03",
+          "protocol_layout_04",
+          "protocol_layout_05"
+        ],
+        "episode_count": 24,
+        "observation_files": 120,
+        "unique_actor_input_digests": 168,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 24,
+          "EMPTY": 48,
+          "KEEP": 24,
+          "CORRECT": 24
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/train.reviewed.jsonl",
+        "sha256": "c80260d0d34d84628038172ac8485837ad6153d8d023d960ff5e2f1c9af76140",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true
+      },
+      "val": {
+        "rows": 60,
+        "modes": {
+          "READ": 20,
+          "WRITE": 20,
+          "SUBTASK": 20
+        },
+        "families": [
+          "protocol_layout_06"
+        ],
+        "episode_count": 4,
+        "observation_files": 20,
+        "unique_actor_input_digests": 28,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 4,
+          "EMPTY": 8,
+          "KEEP": 4,
+          "CORRECT": 4
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/val.reviewed.jsonl",
+        "sha256": "f277e275effda6370e06658ef51c199e56e79ea6ca6d206fb333865d50a3e9aa",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true,
+        "historically_inferred_rows": 16,
+        "no_historical_inference_found_rows": 44,
+        "historically_inferred_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          12,
+          13,
+          15,
+          16,
+          32,
+          35
+        ],
+        "historically_inferred_unique_actor_inputs": 13,
+        "fresh_actor_input_rows_in_searched_history": 32,
+        "fresh_unique_actor_inputs_in_searched_history": 15,
+        "not_inferred_rows_with_already_seen_actor_input": 12
+      },
+      "test": {
+        "rows": 60,
+        "modes": {
+          "READ": 20,
+          "WRITE": 20,
+          "SUBTASK": 20
+        },
+        "families": [
+          "protocol_layout_07"
+        ],
+        "episode_count": 4,
+        "observation_files": 20,
+        "unique_actor_input_digests": 28,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 4,
+          "EMPTY": 8,
+          "KEEP": 4,
+          "CORRECT": 4
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/test.reviewed.jsonl",
+        "sha256": "080c774d2f53a810dd4aff4e0da23e87409290038672724c97cd97cd94a76264",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true,
+        "historically_inferred_rows": 0,
+        "no_historical_inference_found_rows": 60,
+        "historically_inferred_indices": [],
+        "historically_inferred_unique_actor_inputs": 0,
+        "fresh_actor_input_rows_in_searched_history": 60,
+        "fresh_unique_actor_inputs_in_searched_history": 28,
+        "not_inferred_rows_with_already_seen_actor_input": 0
+      }
+    },
+    "overlaps": {
+      "fit96_vs_val": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "fit96_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "train_vs_val": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "train_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "val_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      }
+    },
+    "historical_report_search_scope": "SOURCE/reports/protocol_sft_sequence_v1/*/report.json; absence is bounded to this search",
+    "historical_inference_reports": [
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/02_eval_baseline/report.json",
+        "case_count": 32,
+        "status": "completed"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/04_eval32/report.json",
+        "case_count": 32,
+        "status": "completed"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/06_eval128/report.json",
+        "case_count": 32,
+        "status": "completed"
+      }
+    ],
+    "test_read_for_source_exclusion_and_label_integrity_only": true,
+    "semantic_limit": "All labels are static role/memory rules from authored contexts; nine target strings, not visual grounding or robot task success",
+    "test_policy": "Use val for interface decisions; no test inference until a frozen validation report for the same C2200 and evaluator hash",
+    "counterfactual": {
+      "rows": 88,
+      "modes": {
+        "READ": 8,
+        "WRITE": 40,
+        "SUBTASK": 40
+      },
+      "families": [
+        "protocol_layout_06"
+      ],
+      "episode_count": 1,
+      "observation_files": 4,
+      "unique_actor_input_digests": 88,
+      "unique_target_strings": 9,
+      "write_operations": {
+        "WRITE": 8,
+        "EMPTY": 8,
+        "KEEP": 8,
+        "CORRECT": 16
+      },
+      "target_basis": "Formal visible-context rule only, no fabricated physical event",
+      "actual_visible_memory_schema_validated": true,
+      "memory_tool": "EpisodeMemory(strict_protocol=True).read/actor_view; current_writes empty in seeded fresh round",
+      "subtask_scope": "Stale/empty/unconfirmed selected-memory pressure, not a claimed post-correct-WRITE natural trajectory",
+      "v2_erratum": "Prior v2 SUBTASK inputs were list-shaped, so their40 failures do not establish model generalization failure; prior WRITE16/40 remains a valid failure result",
+      "source_observation_paths": 20,
+      "available_unique_image_and_state_inputs": 4,
+      "selection": "Deduplicate actual image+normalized-state-prefix before choosing observations",
+      "unique_goal_pairs": 44,
+      "unique_memory_groups": 16,
+      "original_val_actor_input_overlap": 14,
+      "fit96_input_digest_overlap": 0
+    }
+  },
+  "optimizer_updates": 0,
+  "simulation_rollouts": 0,
+  "decoding": "NativePi05Actor unrestricted greedy, max96, real EOS; no repair/grammar constraints",
+  "finished_utc": "2026-10-19T08:20:45.591014+00:00",
+  "cases": [
+    {
+      "sample_id": "cf_val_obs00:READ:none:goal_left",
+      "actor_input_digest": "d892289a6a92a2096ebc6a4d89bc888773787bd53724354098e2bd31333f7be1",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "left",
+        "memory": "none",
+        "goal_pair": "obs0:READ:none",
+        "memory_pair": null
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:WRITE:empty:goal_left",
+      "actor_input_digest": "17b592e8e945814f7e98cb9784a8716495c8131dd0a5dcb98e7f13bce0f1cfee",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "left",
+        "memory": "empty",
+        "goal_pair": "obs0:WRITE:empty",
+        "memory_pair": "obs0:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:WRITE:confirmed_left:goal_left",
+      "actor_input_digest": "0f697832ec188be6f6e66b0ffdb826806840589713575909c2a0fcbf9ea0e46d",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "left",
+        "memory": "confirmed_left",
+        "goal_pair": "obs0:WRITE:confirmed_left",
+        "memory_pair": "obs0:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:WRITE:unconfirmed_left:goal_left",
+      "actor_input_digest": "6a7e28350dd62ef3350cb4459a1005e68f9c28ec31800d8bc059ff1ce66caae9",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "left",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs0:WRITE:unconfirmed_left",
+        "memory_pair": "obs0:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:WRITE:confirmed_right:goal_left",
+      "actor_input_digest": "2c27dd4fc020a207b39dec38c1ae31c28a2bb0a42d87433bfb3c071afe05014b",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "left",
+        "memory": "confirmed_right",
+        "goal_pair": "obs0:WRITE:confirmed_right",
+        "memory_pair": "obs0:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:WRITE:unconfirmed_right:goal_left",
+      "actor_input_digest": "f930e7718887aa0fb7fbc296a8606a7aea76121b2d1d3c2ef5897323feee0c89",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "left",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs0:WRITE:unconfirmed_right",
+        "memory_pair": "obs0:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:SUBTASK:empty:goal_left",
+      "actor_input_digest": "6b1f28a1d58dc3ac9c4d555f153f6d55770042e0a5770c16a508c0c1f6a1bce8",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "{\"operations\":[Sub the left",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        3351,
+        573,
+        2731,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": false,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "left",
+        "memory": "empty",
+        "goal_pair": "obs0:SUBTASK:empty",
+        "memory_pair": "obs0:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:SUBTASK:confirmed_left:goal_left",
+      "actor_input_digest": "8841385e2a151140aca0af4b42e3187c90c2214c108ef25849dee3df9c4ac142",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "left",
+        "memory": "confirmed_left",
+        "goal_pair": "obs0:SUBTASK:confirmed_left",
+        "memory_pair": "obs0:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:SUBTASK:unconfirmed_left:goal_left",
+      "actor_input_digest": "ec4125a5d477ddc4048165231b3360120b53d9891d6224790de3c8c6b0b2add2",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "left",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs0:SUBTASK:unconfirmed_left",
+        "memory_pair": "obs0:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:SUBTASK:confirmed_right:goal_left",
+      "actor_input_digest": "2172731cadd2fd9c0f9c8d79a80ed760674a61df0f1dabd2060dfd89f86a020f",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "left",
+        "memory": "confirmed_right",
+        "goal_pair": "obs0:SUBTASK:confirmed_right",
+        "memory_pair": "obs0:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:SUBTASK:unconfirmed_right:goal_left",
+      "actor_input_digest": "a8a0e4f58190090ed2a41acc80f560daf0ba40df81d13a7a731b7f09610f4193",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "left",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs0:SUBTASK:unconfirmed_right",
+        "memory_pair": "obs0:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:READ:none:goal_right",
+      "actor_input_digest": "e63cba75482c499068f484d8ea1150e5493b90bb44f050d549046971bc0f9cfc",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "right",
+        "memory": "none",
+        "goal_pair": "obs0:READ:none",
+        "memory_pair": null
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:WRITE:empty:goal_right",
+      "actor_input_digest": "92621f8900da2d15d48330859ec68f6db0e53ac0dd46b3d8a88b3318b5b3e44b",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "right",
+        "memory": "empty",
+        "goal_pair": "obs0:WRITE:empty",
+        "memory_pair": "obs0:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:WRITE:confirmed_left:goal_right",
+      "actor_input_digest": "74e1dddeffbaa7c951f992446aefc9c4f9d076ebc98e3033833cae583958f17d",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "right",
+        "memory": "confirmed_left",
+        "goal_pair": "obs0:WRITE:confirmed_left",
+        "memory_pair": "obs0:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:WRITE:unconfirmed_left:goal_right",
+      "actor_input_digest": "86a8a60511ca7796d324f34e1cabdd2dd947571c8ddae5e09a3ef4e381b7c6e9",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "right",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs0:WRITE:unconfirmed_left",
+        "memory_pair": "obs0:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:WRITE:confirmed_right:goal_right",
+      "actor_input_digest": "d76610a111bfe2757a036cba4abdb610567f627e5b4cca5a9a36264103463762",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "right",
+        "memory": "confirmed_right",
+        "goal_pair": "obs0:WRITE:confirmed_right",
+        "memory_pair": "obs0:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:WRITE:unconfirmed_right:goal_right",
+      "actor_input_digest": "fbe3a061ae29ff8dc0aa834eed4ade1533dfd2e86f501bf8efc6064e752b59b1",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "right",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs0:WRITE:unconfirmed_right",
+        "memory_pair": "obs0:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:SUBTASK:empty:goal_right",
+      "actor_input_digest": "dc0249b662bb7b99dcedc033aef4edf61776c825ddce44e96895325a73f27950",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "{\"operations\":[ up andSub and hold the left⍀ the shenan increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        908,
+        578,
+        3351,
+        578,
+        3385,
+        573,
+        2731,
+        255694,
+        573,
+        179498,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711
+      ],
+      "checks": {
+        "eos": false,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": false,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "right",
+        "memory": "empty",
+        "goal_pair": "obs0:SUBTASK:empty",
+        "memory_pair": "obs0:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:SUBTASK:confirmed_left:goal_right",
+      "actor_input_digest": "9bbb15963b3b88e1953adfd313dfb1d79be1c08274cf4e962a5637aba0fdc480",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "right",
+        "memory": "confirmed_left",
+        "goal_pair": "obs0:SUBTASK:confirmed_left",
+        "memory_pair": "obs0:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:SUBTASK:unconfirmed_left:goal_right",
+      "actor_input_digest": "bd2bb58a1e352aa6532a6d3d412145d08ce089cb579b1fe95271ce31976bf31c",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "right",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs0:SUBTASK:unconfirmed_left",
+        "memory_pair": "obs0:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:SUBTASK:confirmed_right:goal_right",
+      "actor_input_digest": "59355397fc100abfdb3d72226cb43fa7e43e8ccb05c12e9082cb934aa48f3c01",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "right",
+        "memory": "confirmed_right",
+        "goal_pair": "obs0:SUBTASK:confirmed_right",
+        "memory_pair": "obs0:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs00:SUBTASK:unconfirmed_right:goal_right",
+      "actor_input_digest": "e7bc8aff7bedd7859220d971a24878aa466f93e1a0c21fdbdc5a3f494eede243",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 0,
+        "goal_side": "right",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs0:SUBTASK:unconfirmed_right",
+        "memory_pair": "obs0:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:READ:none:goal_left",
+      "actor_input_digest": "f9d2b1cc21bc08950d18ab7ea5fb84710d34b6f717402008837b356e29da5377",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "left",
+        "memory": "none",
+        "goal_pair": "obs1:READ:none",
+        "memory_pair": null
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:WRITE:empty:goal_left",
+      "actor_input_digest": "89c0dad0956225e7be6b15d33dca36e3da753b040bffc2d837a466950825b7e1",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "left",
+        "memory": "empty",
+        "goal_pair": "obs1:WRITE:empty",
+        "memory_pair": "obs1:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:WRITE:confirmed_left:goal_left",
+      "actor_input_digest": "51bc2a59703f83bad4dbd1d50f71bd257200fb20e5e288607906a996ae94af6c",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "left",
+        "memory": "confirmed_left",
+        "goal_pair": "obs1:WRITE:confirmed_left",
+        "memory_pair": "obs1:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:WRITE:unconfirmed_left:goal_left",
+      "actor_input_digest": "51731321df4540ef0bd425b7cb104d1199c1be223b049bcb62a8c8379f8cea4e",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "left",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs1:WRITE:unconfirmed_left",
+        "memory_pair": "obs1:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:WRITE:confirmed_right:goal_left",
+      "actor_input_digest": "5c984d91eb31ad44eb55ed96620861b6cf6963b8981d184c4367b1d14ff480ff",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "left",
+        "memory": "confirmed_right",
+        "goal_pair": "obs1:WRITE:confirmed_right",
+        "memory_pair": "obs1:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:WRITE:unconfirmed_right:goal_left",
+      "actor_input_digest": "4430aba2d459b87693e36bebf4c820b1019b863c438b052bd3724da03b581d54",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "left",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs1:WRITE:unconfirmed_right",
+        "memory_pair": "obs1:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:SUBTASK:empty:goal_left",
+      "actor_input_digest": "844989d14004450a337ba74768f5543cac9e0b801bc2c003480db992ea9b27b4",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "{\"operations\":[Sub the left",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        3351,
+        573,
+        2731,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": false,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "left",
+        "memory": "empty",
+        "goal_pair": "obs1:SUBTASK:empty",
+        "memory_pair": "obs1:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:SUBTASK:confirmed_left:goal_left",
+      "actor_input_digest": "821e3ff3f95db8547282fc0db3ae7caafad9834a2bbf0047fa1cc29f64325190",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "left",
+        "memory": "confirmed_left",
+        "goal_pair": "obs1:SUBTASK:confirmed_left",
+        "memory_pair": "obs1:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:SUBTASK:unconfirmed_left:goal_left",
+      "actor_input_digest": "02e124ceb45560359e3010e0a98d29f411412e76a85765199eccef8f0116e2c1",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "left",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs1:SUBTASK:unconfirmed_left",
+        "memory_pair": "obs1:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:SUBTASK:confirmed_right:goal_left",
+      "actor_input_digest": "925dcdc4d454a813714a2b26e3b3c9181f602983d0e6c14aa22e1e2e0da24bce",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "left",
+        "memory": "confirmed_right",
+        "goal_pair": "obs1:SUBTASK:confirmed_right",
+        "memory_pair": "obs1:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:SUBTASK:unconfirmed_right:goal_left",
+      "actor_input_digest": "eddc0d15c8c2f77b011636c05d7af7f477bdfdd10b6b96fc5ca6f50ee9872732",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "left",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs1:SUBTASK:unconfirmed_right",
+        "memory_pair": "obs1:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:READ:none:goal_right",
+      "actor_input_digest": "1df8cad35c11ab5663435956eea209c2264c2a9d6e5710a85f3aef784e1370ff",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "right",
+        "memory": "none",
+        "goal_pair": "obs1:READ:none",
+        "memory_pair": null
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:WRITE:empty:goal_right",
+      "actor_input_digest": "e0e8474479086be2811800e2f309c159d92a74110b9fbb26e17a7882c9a38633",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "right",
+        "memory": "empty",
+        "goal_pair": "obs1:WRITE:empty",
+        "memory_pair": "obs1:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:WRITE:confirmed_left:goal_right",
+      "actor_input_digest": "27aa2de26ede4b73bb125cbf4c81d4bc2fc2f53478261f9e97d807633e13ba35",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "right",
+        "memory": "confirmed_left",
+        "goal_pair": "obs1:WRITE:confirmed_left",
+        "memory_pair": "obs1:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:WRITE:unconfirmed_left:goal_right",
+      "actor_input_digest": "bb6ecb6d816a70de397cbceb652ba4355dc7b0eb407cd8a27fbd81f0929ca047",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "right",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs1:WRITE:unconfirmed_left",
+        "memory_pair": "obs1:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:WRITE:confirmed_right:goal_right",
+      "actor_input_digest": "6530709e16e4d3a2e8d439dd5521671fe09f009af32b07b281bc186afb7cb90e",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "right",
+        "memory": "confirmed_right",
+        "goal_pair": "obs1:WRITE:confirmed_right",
+        "memory_pair": "obs1:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:WRITE:unconfirmed_right:goal_right",
+      "actor_input_digest": "3d775aae8dedcad13520e863728f641b340f89e3fd03e29a246c68c124a6f81b",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "right",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs1:WRITE:unconfirmed_right",
+        "memory_pair": "obs1:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:SUBTASK:empty:goal_right",
+      "actor_input_digest": "fa2ffc898d99e96d84bf27bd4023f2dc04596735f7d41a7ea7c36eb07893dea9",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "{\"operations\":[{\"𝖿 africain fortn increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        255524,
+        127348,
+        58479,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711
+      ],
+      "checks": {
+        "eos": false,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": false,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "right",
+        "memory": "empty",
+        "goal_pair": "obs1:SUBTASK:empty",
+        "memory_pair": "obs1:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:SUBTASK:confirmed_left:goal_right",
+      "actor_input_digest": "1aafae34d14b53ad00c02205d0e4619d7947c0a1d5f64ce3aa84f45a96d54a0d",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "right",
+        "memory": "confirmed_left",
+        "goal_pair": "obs1:SUBTASK:confirmed_left",
+        "memory_pair": "obs1:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:SUBTASK:unconfirmed_left:goal_right",
+      "actor_input_digest": "1e7df0a68e5e82b24d85fd25e31d5b04b0a2d397c5c59538e60f03b735797e63",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "right",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs1:SUBTASK:unconfirmed_left",
+        "memory_pair": "obs1:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:SUBTASK:confirmed_right:goal_right",
+      "actor_input_digest": "677fb339c925cfc64171549dc30acd272dcc0c5da6491562d6589ab53cef5238",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "right",
+        "memory": "confirmed_right",
+        "goal_pair": "obs1:SUBTASK:confirmed_right",
+        "memory_pair": "obs1:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs01:SUBTASK:unconfirmed_right:goal_right",
+      "actor_input_digest": "2ae76b1f6975ab112b9831d7e824191f85badab1ed02ff67a789a1037812d19a",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 1,
+        "goal_side": "right",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs1:SUBTASK:unconfirmed_right",
+        "memory_pair": "obs1:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:READ:none:goal_left",
+      "actor_input_digest": "b7f2e85a5546e2feb670ba2f6f7c8fb886a14cdf17595a0e817e8b89a20e22c5",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "left",
+        "memory": "none",
+        "goal_pair": "obs2:READ:none",
+        "memory_pair": null
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:WRITE:empty:goal_left",
+      "actor_input_digest": "a2e1b30332fcbee359cf5a7fbba689fce3481ba170d7e4992b1bbc95a0accbd1",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "left",
+        "memory": "empty",
+        "goal_pair": "obs2:WRITE:empty",
+        "memory_pair": "obs2:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:WRITE:confirmed_left:goal_left",
+      "actor_input_digest": "5770751d8a9d47131213607c216dd8ac9958d7358e3a58a8bf78d9cb066f7088",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "left",
+        "memory": "confirmed_left",
+        "goal_pair": "obs2:WRITE:confirmed_left",
+        "memory_pair": "obs2:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:WRITE:unconfirmed_left:goal_left",
+      "actor_input_digest": "ed13ff8ef537383ae3416bc1349a19c2cdf59afaffed198211eae0f84902c8ea",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "left",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs2:WRITE:unconfirmed_left",
+        "memory_pair": "obs2:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:WRITE:confirmed_right:goal_left",
+      "actor_input_digest": "7f0e5b2cb531165482d5748bddb3f075d0710f2d4dea6bc4f1db16c4fda1f95e",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "left",
+        "memory": "confirmed_right",
+        "goal_pair": "obs2:WRITE:confirmed_right",
+        "memory_pair": "obs2:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:WRITE:unconfirmed_right:goal_left",
+      "actor_input_digest": "92ef2365d6e31d5d1dacc8c49a5ddd9412d8e528e0ab71b65e2fd2541d751148",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "left",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs2:WRITE:unconfirmed_right",
+        "memory_pair": "obs2:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:SUBTASK:empty:goal_left",
+      "actor_input_digest": "c6a8fd5dbb06caa4c8e08f7782a46351a93c380ab831b2ccb061e1107545c19b",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "{\"operations\":[Sub the left",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        3351,
+        573,
+        2731,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": false,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "left",
+        "memory": "empty",
+        "goal_pair": "obs2:SUBTASK:empty",
+        "memory_pair": "obs2:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:SUBTASK:confirmed_left:goal_left",
+      "actor_input_digest": "0528762ee382fba338e67f33b9451442c8f82f7a3571bf85b41025967fefd083",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "left",
+        "memory": "confirmed_left",
+        "goal_pair": "obs2:SUBTASK:confirmed_left",
+        "memory_pair": "obs2:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:SUBTASK:unconfirmed_left:goal_left",
+      "actor_input_digest": "c9350e6ba318e3de9d088fbe1b697c27f7c9bad429b84eda87475c8255ac5b93",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "left",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs2:SUBTASK:unconfirmed_left",
+        "memory_pair": "obs2:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:SUBTASK:confirmed_right:goal_left",
+      "actor_input_digest": "3bdf27270f8b63e0675c71797f43fbb438a4c525184d3e6ae6652997e3edb7c3",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "left",
+        "memory": "confirmed_right",
+        "goal_pair": "obs2:SUBTASK:confirmed_right",
+        "memory_pair": "obs2:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:SUBTASK:unconfirmed_right:goal_left",
+      "actor_input_digest": "c3bc3eecaf1576d1ae0b582f05b0a423c3530fb95036ea69a68f5fd87aff94b9",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "left",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs2:SUBTASK:unconfirmed_right",
+        "memory_pair": "obs2:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:READ:none:goal_right",
+      "actor_input_digest": "237331fd737def0b389e993d1609a46d9a232616c646c472fe3f4d08bf60299b",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "right",
+        "memory": "none",
+        "goal_pair": "obs2:READ:none",
+        "memory_pair": null
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:WRITE:empty:goal_right",
+      "actor_input_digest": "b5215c5f238b3300ca1496bfe32298686e2d574d17ade1a6c1522affd1ecc644",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "right",
+        "memory": "empty",
+        "goal_pair": "obs2:WRITE:empty",
+        "memory_pair": "obs2:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:WRITE:confirmed_left:goal_right",
+      "actor_input_digest": "1dc8cc2e5707f1e7c98aa073d95092bb54a13ca7c2b9b1c79a44542b02aba946",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "right",
+        "memory": "confirmed_left",
+        "goal_pair": "obs2:WRITE:confirmed_left",
+        "memory_pair": "obs2:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:WRITE:unconfirmed_left:goal_right",
+      "actor_input_digest": "1371e55dd32d2a9a7f9ad3ef8bc31996025b28c055d95e317b82403aebe79055",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "right",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs2:WRITE:unconfirmed_left",
+        "memory_pair": "obs2:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:WRITE:confirmed_right:goal_right",
+      "actor_input_digest": "50906c17e467d3818cfe904cbe38f927eccf78e13c40f44f150dde60f87bccae",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "right",
+        "memory": "confirmed_right",
+        "goal_pair": "obs2:WRITE:confirmed_right",
+        "memory_pair": "obs2:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:WRITE:unconfirmed_right:goal_right",
+      "actor_input_digest": "3198b05b53df293ba2d5383be522cb8465d47ff967bcd07f235fb62657d7d852",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "right",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs2:WRITE:unconfirmed_right",
+        "memory_pair": "obs2:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:SUBTASK:empty:goal_right",
+      "actor_input_digest": "541f8bcb2f2171ddc5f87269f15ec4e2ca39c32ee110291d29e9ae0f9cf7e1f0",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "{\"operations\":[{\"𝖿 africain increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa increa",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        255524,
+        127348,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711,
+        229711
+      ],
+      "checks": {
+        "eos": false,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": false,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "right",
+        "memory": "empty",
+        "goal_pair": "obs2:SUBTASK:empty",
+        "memory_pair": "obs2:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:SUBTASK:confirmed_left:goal_right",
+      "actor_input_digest": "2e4f3d94aad5d06b4c469690256cd49a681b463b9fb533cfb9c40a518963b121",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "right",
+        "memory": "confirmed_left",
+        "goal_pair": "obs2:SUBTASK:confirmed_left",
+        "memory_pair": "obs2:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:SUBTASK:unconfirmed_left:goal_right",
+      "actor_input_digest": "dce84e1cbbe46d593aed9a54b3cfea7c23c4bf76fae52c3535e7277f66184659",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "right",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs2:SUBTASK:unconfirmed_left",
+        "memory_pair": "obs2:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:SUBTASK:confirmed_right:goal_right",
+      "actor_input_digest": "42aa61735ded292eb1749f040add044b78672fea07e8b85a42f20136b6f45e8e",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "right",
+        "memory": "confirmed_right",
+        "goal_pair": "obs2:SUBTASK:confirmed_right",
+        "memory_pair": "obs2:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs02:SUBTASK:unconfirmed_right:goal_right",
+      "actor_input_digest": "f663785464e490106a40f268954a741fdd76721dbf9229079944b8f7e2d53f07",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 2,
+        "goal_side": "right",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs2:SUBTASK:unconfirmed_right",
+        "memory_pair": "obs2:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:READ:none:goal_left",
+      "actor_input_digest": "36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "left",
+        "memory": "none",
+        "goal_pair": "obs3:READ:none",
+        "memory_pair": null
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:WRITE:empty:goal_left",
+      "actor_input_digest": "9bd751ff65deb6edbb38249c5ed6598ce10662190e10fa80457dc91ca1a0f6a8",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "left",
+        "memory": "empty",
+        "goal_pair": "obs3:WRITE:empty",
+        "memory_pair": "obs3:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:WRITE:confirmed_left:goal_left",
+      "actor_input_digest": "f137ae37ab3dc1eee76b1bf92bf6a3c6f86945bfcbd617c1c43f860265dadd4a",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "left",
+        "memory": "confirmed_left",
+        "goal_pair": "obs3:WRITE:confirmed_left",
+        "memory_pair": "obs3:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:WRITE:unconfirmed_left:goal_left",
+      "actor_input_digest": "db49c756afb8a2e58d51f55db30d7d6ea2f0450e63e802b5d2a8c331896c9f0f",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "left",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs3:WRITE:unconfirmed_left",
+        "memory_pair": "obs3:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:WRITE:confirmed_right:goal_left",
+      "actor_input_digest": "1b8b8ffcf32468dcc54ae1e24c5429fdb9760676cf46988b8e107d431d7272c2",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "left",
+        "memory": "confirmed_right",
+        "goal_pair": "obs3:WRITE:confirmed_right",
+        "memory_pair": "obs3:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:WRITE:unconfirmed_right:goal_left",
+      "actor_input_digest": "3f713c7b05f9998fb0d7cdf9ad43d289ed9fa30353299739d3a956f70bfc86db",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "left",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs3:WRITE:unconfirmed_right",
+        "memory_pair": "obs3:WRITE:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:SUBTASK:empty:goal_left",
+      "actor_input_digest": "a91defe2c514d6ac97fab1c8a4bec9a7d2151503ed3a2ddaa6084e02e5889a97",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "{\"operations\":[Sub the left",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        3351,
+        573,
+        2731,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": false,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "left",
+        "memory": "empty",
+        "goal_pair": "obs3:SUBTASK:empty",
+        "memory_pair": "obs3:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:SUBTASK:confirmed_left:goal_left",
+      "actor_input_digest": "a6cb01a935b7e9ad1900c622f0d70ec86c82decbff66d655d580b17769e4c9fd",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "left",
+        "memory": "confirmed_left",
+        "goal_pair": "obs3:SUBTASK:confirmed_left",
+        "memory_pair": "obs3:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:SUBTASK:unconfirmed_left:goal_left",
+      "actor_input_digest": "7a9c54ed1947ecb75d786f54be6e4d65475c11c6ddc748937369bcd3a6e9123a",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "left",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs3:SUBTASK:unconfirmed_left",
+        "memory_pair": "obs3:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:SUBTASK:confirmed_right:goal_left",
+      "actor_input_digest": "4984a7421c9d1fae85e1949e3782ae13e192067a8a6e0a0e5c9982ec0688c5f8",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "left",
+        "memory": "confirmed_right",
+        "goal_pair": "obs3:SUBTASK:confirmed_right",
+        "memory_pair": "obs3:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:SUBTASK:unconfirmed_right:goal_left",
+      "actor_input_digest": "2c54d77b4d4fcad44c0065c9be7c46a6a19115c3b1873cda49074513d31c90c5",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "left",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs3:SUBTASK:unconfirmed_right",
+        "memory_pair": "obs3:SUBTASK:left"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:READ:none:goal_right",
+      "actor_input_digest": "2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "right",
+        "memory": "none",
+        "goal_pair": "obs3:READ:none",
+        "memory_pair": null
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:WRITE:empty:goal_right",
+      "actor_input_digest": "28023b49fffa7302fe80aa60a3252446439c599f831bc3f625aca99b686a606f",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "right",
+        "memory": "empty",
+        "goal_pair": "obs3:WRITE:empty",
+        "memory_pair": "obs3:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:WRITE:confirmed_left:goal_right",
+      "actor_input_digest": "a33ade809fd9eecf99bf3107f62771c242986cb57506660057f86528025681a8",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "right",
+        "memory": "confirmed_left",
+        "goal_pair": "obs3:WRITE:confirmed_left",
+        "memory_pair": "obs3:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:WRITE:unconfirmed_left:goal_right",
+      "actor_input_digest": "d837e42f424f06bfd2bef4ecd1d39c232dbe2a7865daea123425de72167ba58f",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "right",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs3:WRITE:unconfirmed_left",
+        "memory_pair": "obs3:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:WRITE:confirmed_right:goal_right",
+      "actor_input_digest": "8013117af48911e9ea03e5386df5b837edf503e856796141175822135806a5a0",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "right",
+        "memory": "confirmed_right",
+        "goal_pair": "obs3:WRITE:confirmed_right",
+        "memory_pair": "obs3:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:WRITE:unconfirmed_right:goal_right",
+      "actor_input_digest": "4cfce28141dcc418d7cd26cb6d3d86c07955762f4bdc8c5340b570781f74e082",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "right",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs3:WRITE:unconfirmed_right",
+        "memory_pair": "obs3:WRITE:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:SUBTASK:empty:goal_right",
+      "actor_input_digest": "9965e13658a22444dec8fc1454565b8767fcf91312e9573cd0ab8c1b8685ae3f",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "{\"operations\":[Sub the left",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        3351,
+        573,
+        2731,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": false,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "right",
+        "memory": "empty",
+        "goal_pair": "obs3:SUBTASK:empty",
+        "memory_pair": "obs3:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:SUBTASK:confirmed_left:goal_right",
+      "actor_input_digest": "7bb7e33046be3ec0c414809f912fead49eb198bc0159def655073db97f7af62b",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "right",
+        "memory": "confirmed_left",
+        "goal_pair": "obs3:SUBTASK:confirmed_left",
+        "memory_pair": "obs3:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:SUBTASK:unconfirmed_left:goal_right",
+      "actor_input_digest": "1d6395076935fc81f3e0869df2912f31ac75459383ee387c6ee3516893f8cb94",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "right",
+        "memory": "unconfirmed_left",
+        "goal_pair": "obs3:SUBTASK:unconfirmed_left",
+        "memory_pair": "obs3:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:SUBTASK:confirmed_right:goal_right",
+      "actor_input_digest": "6b7d732999e0da956b029c8285fad71fb7ff1f5c062f117a873ec703a88447a9",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "right",
+        "memory": "confirmed_right",
+        "goal_pair": "obs3:SUBTASK:confirmed_right",
+        "memory_pair": "obs3:SUBTASK:right"
+      }
+    },
+    {
+      "sample_id": "cf_val_obs03:SUBTASK:unconfirmed_right:goal_right",
+      "actor_input_digest": "236979578c642e0011a74f75c981b6bdac05c48ab177adf6190352255e5ad59f",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "observation_index": 3,
+        "goal_side": "right",
+        "memory": "unconfirmed_right",
+        "goal_pair": "obs3:SUBTASK:unconfirmed_right",
+        "memory_pair": "obs3:SUBTASK:right"
+      }
+    }
+  ],
+  "summary": {
+    "count": 88,
+    "eos": {
+      "passed": 85,
+      "eligible": 88
+    },
+    "nonempty": {
+      "passed": 88,
+      "eligible": 88
+    },
+    "json": {
+      "passed": 48,
+      "eligible": 48
+    },
+    "schema_legal": {
+      "passed": 48,
+      "eligible": 48
+    },
+    "target_match": {
+      "passed": 24,
+      "eligible": 48
+    },
+    "side_binding_lexical": {
+      "passed": 20,
+      "eligible": 40
+    },
+    "text_exact": {
+      "passed": 40,
+      "eligible": 88
+    },
+    "semantic_passed": {
+      "passed": 40,
+      "eligible": 88
+    },
+    "strict_passed": {
+      "passed": 40,
+      "eligible": 88
+    },
+    "strict_text_exact": {
+      "passed": 40,
+      "eligible": 88
+    },
+    "all_strict_passed": false
+  },
+  "by_mode": {
+    "READ": {
+      "count": 8,
+      "eos": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "nonempty": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "json": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "schema_legal": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "target_match": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "text_exact": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "semantic_passed": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "strict_passed": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "strict_text_exact": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "all_strict_passed": true
+    },
+    "WRITE": {
+      "count": 40,
+      "eos": {
+        "passed": 40,
+        "eligible": 40
+      },
+      "nonempty": {
+        "passed": 40,
+        "eligible": 40
+      },
+      "json": {
+        "passed": 40,
+        "eligible": 40
+      },
+      "schema_legal": {
+        "passed": 40,
+        "eligible": 40
+      },
+      "target_match": {
+        "passed": 16,
+        "eligible": 40
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "text_exact": {
+        "passed": 16,
+        "eligible": 40
+      },
+      "semantic_passed": {
+        "passed": 16,
+        "eligible": 40
+      },
+      "strict_passed": {
+        "passed": 16,
+        "eligible": 40
+      },
+      "strict_text_exact": {
+        "passed": 16,
+        "eligible": 40
+      },
+      "all_strict_passed": false
+    },
+    "SUBTASK": {
+      "count": 40,
+      "eos": {
+        "passed": 37,
+        "eligible": 40
+      },
+      "nonempty": {
+        "passed": 40,
+        "eligible": 40
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "side_binding_lexical": {
+        "passed": 20,
+        "eligible": 40
+      },
+      "text_exact": {
+        "passed": 16,
+        "eligible": 40
+      },
+      "semantic_passed": {
+        "passed": 16,
+        "eligible": 40
+      },
+      "strict_passed": {
+        "passed": 16,
+        "eligible": 40
+      },
+      "strict_text_exact": {
+        "passed": 16,
+        "eligible": 40
+      },
+      "all_strict_passed": false
+    }
+  },
+  "scope": "Heldout validation or controlled evaluation-only protocol conditions; not a training fitting report, visual grounding or task SR result",
+  "parameter_protection": {
+    "before": {
+      "False": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652",
+      "True": "0df6dfae511ab582e0325478d98d0836a9748c4a69a9a143f2a835efb0b44353"
+    },
+    "after": {
+      "False": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652",
+      "True": "0df6dfae511ab582e0325478d98d0836a9748c4a69a9a143f2a835efb0b44353"
+    },
+    "all_parameters_exact": true,
+    "checkpoint_weights_sha_before": "5e16c2c36ba8c99351d4b0f9af66b6600d94250e1a07bea4f227b8bd5e2e4531",
+    "checkpoint_weights_sha_after": "5e16c2c36ba8c99351d4b0f9af66b6600d94250e1a07bea4f227b8bd5e2e4531",
+    "checkpoint_version_sha256": "4653b02a41dc8f44ff8482bfe21e2e5d7ea33611cbc3a5764cd85c10710344bb",
+    "checkpoint_unchanged": true,
+    "optimizer_created": false,
+    "parameters_with_grad": 0
+  },
+  "unique_actual_actor_inputs": {
+    "count": 88,
+    "summary": {
+      "count": 88,
+      "eos": {
+        "passed": 85,
+        "eligible": 88
+      },
+      "nonempty": {
+        "passed": 88,
+        "eligible": 88
+      },
+      "json": {
+        "passed": 48,
+        "eligible": 48
+      },
+      "schema_legal": {
+        "passed": 48,
+        "eligible": 48
+      },
+      "target_match": {
+        "passed": 24,
+        "eligible": 48
+      },
+      "side_binding_lexical": {
+        "passed": 20,
+        "eligible": 40
+      },
+      "text_exact": {
+        "passed": 40,
+        "eligible": 88
+      },
+      "semantic_passed": {
+        "passed": 40,
+        "eligible": 88
+      },
+      "strict_passed": {
+        "passed": 40,
+        "eligible": 88
+      },
+      "strict_text_exact": {
+        "passed": 40,
+        "eligible": 88
+      },
+      "all_strict_passed": false
+    },
+    "by_mode": {
+      "READ": {
+        "count": 8,
+        "eos": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "semantic_passed": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "strict_passed": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "strict_text_exact": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "all_strict_passed": true
+      },
+      "WRITE": {
+        "count": 40,
+        "eos": {
+          "passed": 40,
+          "eligible": 40
+        },
+        "nonempty": {
+          "passed": 40,
+          "eligible": 40
+        },
+        "json": {
+          "passed": 40,
+          "eligible": 40
+        },
+        "schema_legal": {
+          "passed": 40,
+          "eligible": 40
+        },
+        "target_match": {
+          "passed": 16,
+          "eligible": 40
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 16,
+          "eligible": 40
+        },
+        "semantic_passed": {
+          "passed": 16,
+          "eligible": 40
+        },
+        "strict_passed": {
+          "passed": 16,
+          "eligible": 40
+        },
+        "strict_text_exact": {
+          "passed": 16,
+          "eligible": 40
+        },
+        "all_strict_passed": false
+      },
+      "SUBTASK": {
+        "count": 40,
+        "eos": {
+          "passed": 37,
+          "eligible": 40
+        },
+        "nonempty": {
+          "passed": 40,
+          "eligible": 40
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "side_binding_lexical": {
+          "passed": 20,
+          "eligible": 40
+        },
+        "text_exact": {
+          "passed": 16,
+          "eligible": 40
+        },
+        "semantic_passed": {
+          "passed": 16,
+          "eligible": 40
+        },
+        "strict_passed": {
+          "passed": 16,
+          "eligible": 40
+        },
+        "strict_text_exact": {
+          "passed": 16,
+          "eligible": 40
+        },
+        "all_strict_passed": false
+      }
+    }
+  },
+  "controlled_pairs": {
+    "goal_pair": {
+      "count": 44,
+      "all_cases_passed": 8,
+      "groups": [
+        {
+          "pair_id": "obs0:READ:none",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs0:WRITE:empty",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs0:WRITE:confirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs0:WRITE:unconfirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs0:WRITE:confirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs0:WRITE:unconfirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs0:SUBTASK:empty",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs0:SUBTASK:confirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs0:SUBTASK:unconfirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs0:SUBTASK:confirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs0:SUBTASK:unconfirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs1:READ:none",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs1:WRITE:empty",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs1:WRITE:confirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs1:WRITE:unconfirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs1:WRITE:confirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs1:WRITE:unconfirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs1:SUBTASK:empty",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs1:SUBTASK:confirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs1:SUBTASK:unconfirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs1:SUBTASK:confirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs1:SUBTASK:unconfirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs2:READ:none",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs2:WRITE:empty",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs2:WRITE:confirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs2:WRITE:unconfirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs2:WRITE:confirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs2:WRITE:unconfirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs2:SUBTASK:empty",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs2:SUBTASK:confirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs2:SUBTASK:unconfirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs2:SUBTASK:confirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs2:SUBTASK:unconfirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs3:READ:none",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs3:WRITE:empty",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs3:WRITE:confirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs3:WRITE:unconfirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs3:WRITE:confirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs3:WRITE:unconfirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs3:SUBTASK:empty",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs3:SUBTASK:confirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs3:SUBTASK:unconfirmed_left",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs3:SUBTASK:confirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "obs3:SUBTASK:unconfirmed_right",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 2,
+          "observed_distinct_outputs": 1
+        }
+      ]
+    },
+    "memory_pair": {
+      "count": 16,
+      "all_cases_passed": 0,
+      "groups": [
+        {
+          "pair_id": "obs0:WRITE:left",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 4,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs0:SUBTASK:left",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 3
+        },
+        {
+          "pair_id": "obs0:WRITE:right",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 4,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs0:SUBTASK:right",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 3
+        },
+        {
+          "pair_id": "obs1:WRITE:left",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 4,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs1:SUBTASK:left",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 3
+        },
+        {
+          "pair_id": "obs1:WRITE:right",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 4,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs1:SUBTASK:right",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 3
+        },
+        {
+          "pair_id": "obs2:WRITE:left",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 4,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs2:SUBTASK:left",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 3
+        },
+        {
+          "pair_id": "obs2:WRITE:right",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 4,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs2:SUBTASK:right",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 3
+        },
+        {
+          "pair_id": "obs3:WRITE:left",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 4,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs3:SUBTASK:left",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 3
+        },
+        {
+          "pair_id": "obs3:WRITE:right",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 4,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "obs3:SUBTASK:right",
+          "count": 5,
+          "all_passed": false,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 3
+        }
+      ]
+    }
+  }
+}

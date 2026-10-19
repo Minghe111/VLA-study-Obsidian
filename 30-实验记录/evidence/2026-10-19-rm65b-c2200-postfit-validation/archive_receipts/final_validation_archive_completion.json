@@ -1,0 +1,84 @@
+{
+  "kind": "final_validation_archive_completion",
+  "at_local": "2026-10-19T16:47:57.047597",
+  "previous_archive_manifest_sha256": "d10813396b6417b3bb2307044743bafcae86b95e35c5a1c7f80e54c41c6fdcb6",
+  "previous_payload_count": 64,
+  "all_previous_sources_and_archivedcopies_verified": true,
+  "new_payloads": [
+    {
+      "source": "/tmp/highlevel_closedloop_independent_audit.json",
+      "destination_relative": "audits/highlevel_closedloop_independent_audit.json",
+      "destination": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-c2200-postfit-validation/audits/highlevel_closedloop_independent_audit.json",
+      "bytes": 9717,
+      "sha256": "7b402015e7d1246b08ae52847724f01196e2103af8ebaf5f14dbdf68283043f8",
+      "role": "IndependentCPU realhighlevel tool/action/errorintegrity audit",
+      "execution_evidence": "Final completed CPU/source/audit receipt, no newGPUexecution"
+    },
+    {
+      "source": "/tmp/audit_highlevel_closedloop.py",
+      "destination_relative": "audit_src/audit_highlevel_closedloop.py",
+      "destination": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-c2200-postfit-validation/audit_src/audit_highlevel_closedloop.py",
+      "bytes": 16873,
+      "sha256": "4fe9049273973a45992fbcd95a16e0bd7bae0e8dec4005f6837f9696c32a6c39",
+      "role": "ExecutedCPU highlevel auditor",
+      "execution_evidence": "Final completed CPU/source/audit receipt, no newGPUexecution"
+    },
+    {
+      "source": "/tmp/highlevel_history_coverage_audit.json",
+      "destination_relative": "audits/highlevel_history_coverage_audit.json",
+      "destination": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-c2200-postfit-validation/audits/highlevel_history_coverage_audit.json",
+      "bytes": 37885,
+      "sha256": "a71101aa25d7d3a260a94e96861a16f02b0bc56f75bdc80443e3a21c07e46e65",
+      "role": "Read-only historycoverage andeffectivetoken audit",
+      "execution_evidence": "Final completed CPU/source/audit receipt, no newGPUexecution"
+    },
+    {
+      "source": "/tmp/audit_highlevel_history_coverage.py",
+      "destination_relative": "audit_src/audit_highlevel_history_coverage.py",
+      "destination": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-c2200-postfit-validation/audit_src/audit_highlevel_history_coverage.py",
+      "bytes": 11777,
+      "sha256": "71a4af37c897daab67f96166acd64c467ea7cbc71eeeb0cf1d5aad68952c9fa7",
+      "role": "ExecutedCPU historycoverage auditor",
+      "execution_evidence": "Final completed CPU/source/audit receipt, no newGPUexecution"
+    },
+    {
+      "source": "/tmp/c2200_final_source_protection.json",
+      "destination_relative": "audits/c2200_final_source_protection.json",
+      "destination": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-c2200-postfit-validation/audits/c2200_final_source_protection.json",
+      "bytes": 1355,
+      "sha256": "bbec4fb473df2e31af536a93937a3dea9e035804a6006a0fc37bac5a33f96efe",
+      "role": "Final originalsource snapshot guard withscope",
+      "execution_evidence": "Final completed CPU/source/audit receipt, no newGPUexecution"
+    },
+    {
+      "source": "/tmp/build_c2200_postfit_summary.py",
+      "destination_relative": "audit_src/build_c2200_postfit_summary.py",
+      "destination": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-c2200-postfit-validation/audit_src/build_c2200_postfit_summary.py",
+      "bytes": 7388,
+      "sha256": "4344ab5def95a1134a56c05b16e1e7320b865b831559b37ac324c7d06a43dd18",
+      "role": "Rootsummary builder source",
+      "execution_evidence": "Final completed CPU/source/audit receipt, no newGPUexecution"
+    },
+    {
+      "source": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/postfit_validation_20261019_v1/summary.json",
+      "destination_relative": "summary.json",
+      "destination": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-c2200-postfit-validation/summary.json",
+      "bytes": 29471,
+      "sha256": "114388069cac6c673a665886f93ec36ba622547884b1bc6d004aa6b7206f0378",
+      "role": "Actualroot final validation summary; capabilitygatesfailed",
+      "execution_evidence": "Final completed CPU/source/audit receipt, no newGPUexecution"
+    }
+  ],
+  "target_archive_status": "completed_validation_recorded_capability_gates_failed",
+  "completion_meaning": "Evidencearchivecomplete forperformedvalidation; modelcapabilities didnotpassgates.",
+  "summary_status": "validation_completed_capability_gates_failed",
+  "required_interpretations": {
+    "oldv2_invalid_SUBTASK40": "PreservedwithERRATUM,excludedfromcapabilitymetrics",
+    "highlevel": "Bothcasesfailed after32controls andsecondREADinvalidJSON; initialtool/actioncycle successnot fulltask success",
+    "oldmotor": "Bothbaselineandcandidate0/2 inK1,andboth0/2 inK16; skillretention andLoRAcausationunproven",
+    "history": "Training/eval usesemptylist[]=>text[];runtime initialemptystr=>blank, laterprior-subtaskstring. Effectivetokensdiffer.",
+    "dynamic_history_training_coverage": "fit96/train360/val60 allnonemptyhistory0; nextREADchangesimages,stateandhistorytogether, sohistoryalonecauseunisolated"
+  },
+  "no_notes_engineering_or_GPU_changes": true,
+  "large_models_trajectories_media_remain_excluded": true
+}

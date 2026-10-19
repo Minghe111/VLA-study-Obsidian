@@ -1,0 +1,45 @@
+{
+  "frozen_at_local": "2026-10-19T16:19:19.092687",
+  "version": "closedloop_v3",
+  "files": {
+    "/tmp/c2200_closedloop_runner_v3.py": {
+      "sha256": "777f3b1e9a55f83ce375e630873d460e52c40e3fff8416fa9b21aaec1f85a3c4",
+      "bytes": 24781
+    },
+    "/tmp/test_c2200_closedloop_runner_v3.py": {
+      "sha256": "bc525c5be6871aeba17d4d5f65a1e0510818a1b455729889ddfacbb509ec71e3",
+      "bytes": 10123
+    },
+    "/tmp/c2200_closedloop_v3_cpu_plan.json": {
+      "sha256": "2f8f822ba83abf2199688f461f028cf69a46a8a27b6abc9fcb698d2197cff6c4",
+      "bytes": 2089
+    }
+  },
+  "CPU_tests": {
+    "tests": 14,
+    "passed": 14,
+    "exit_code": 0,
+    "command": "venv/bin/python /tmp/test_c2200_closedloop_runner_v3.py"
+  },
+  "v1_preserved": true,
+  "v2_preserved": true,
+  "GPU_or_sim_started": false,
+  "original_engineering_modified": false,
+  "motor_RNG_audit": {
+    "protocol": "Before eachmotor call torch.manual_seed(7+index) and torch.cuda.manual_seed_all(7+index), indexresetpercase",
+    "chain": "NativePi05Actor.actions -> EnvIO._predict_eval(noise=None,rng=None) -> Pi0.sample_actions torch.randn(generator=None), deterministicEuler",
+    "high_level": "Defaulttemperature0 argmax: no sampling RNG",
+    "boundaries": [
+      "Pairs initial noise by query index andshape; doesnotmake observations or resulting actions identical.",
+      "Exact motor inputs/state24 andthreeRGB hashes recorded.",
+      "Runtimeimplementation qualnames guardPi0.sample_actions/EnvIO._predict_eval; nohiddenexplicitgeneratorfound inreviewedpath."
+    ],
+    "source_files_SHA256": {
+      "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py": "7e5b1aa881ec649ebf6e32a8ab83931cd6252fb30aff0623b6912e2b65c7069d",
+      "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/models/embodiment/openpi/env_io.py": "ba36371be49982fc921cb4bd1a1ec1e7a32f2c3f5eef084be59385f0155b86dc",
+      "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/models/embodiment/openpi/pi0.py": "b53ee990217ad9018c1f6516ea86595dc0f27370d9c9477c2957e4e63223b64e",
+      "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/models/embodiment/openpi/tasks/recap_hier.py": "abc5f096f3868f9fd703747c069a3081f2515d7972d5b24ace64801245bce356"
+    }
+  },
+  "error_propagation": "Currentcontroller stores collection_error infailed_episode.metadata andraises. Runnerreads persistedfullmetadata, laststepterminalfields, envfailure_reason andPythonexception; customfields preserved."
+}

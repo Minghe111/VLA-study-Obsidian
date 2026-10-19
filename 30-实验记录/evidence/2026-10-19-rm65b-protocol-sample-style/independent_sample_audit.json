@@ -1,0 +1,1414 @@
+{
+  "status": "read_only_cpu_audit_completed_no_inference_no_training",
+  "created_at_utc": "2026-10-19T09:11:31.565990+00:00",
+  "source": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+    "sha256": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8",
+    "rows": 96,
+    "unique_sample_ids": 96
+  },
+  "distribution": {
+    "modes": {
+      "READ": 32,
+      "SUBTASK": 32,
+      "WRITE": 32
+    },
+    "categories": {
+      "READ": 32,
+      "SUBTASK": 32,
+      "EMPTY": 8,
+      "CORRECT": 8,
+      "WRITE": 8,
+      "KEEP": 8
+    },
+    "target_side": {
+      "left": 48,
+      "right": 48
+    },
+    "unique_targets": 9,
+    "targets": [
+      {
+        "target_text": "Pick up and hold the sample initially on the left.",
+        "count": 16
+      },
+      {
+        "target_text": "Pick up and hold the sample initially on the right.",
+        "count": 16
+      },
+      {
+        "target_text": "{\"operations\":[]}",
+        "count": 8
+      },
+      {
+        "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+        "count": 4
+      },
+      {
+        "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+        "count": 4
+      },
+      {
+        "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+        "count": 8
+      },
+      {
+        "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+        "count": 4
+      },
+      {
+        "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+        "count": 4
+      },
+      {
+        "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+        "count": 32
+      }
+    ],
+    "history_types": {
+      "list": 96
+    },
+    "empty_history_count": 96,
+    "motor_labels_false_count": 96,
+    "label_schedule": {
+      "offline_sampled_protocol_contexts_not_online_W32": 96
+    },
+    "physical_behavior": {
+      "static_hold_only_not_a_skill_demonstration": 96
+    }
+  },
+  "selection_rationale": {
+    "main_episode": "fresh_protocol_layout_01_left_31100",
+    "right_example_episode": "fresh_protocol_layout_03_right_31310",
+    "same_observation_group": [
+      "READ",
+      "WRITE/WRITE",
+      "SUBTASK/left"
+    ],
+    "same_observation_group_step": 0,
+    "other_WRITE_cases": "KEEP/CORRECT/EMPTY are each the first matching actual row in source JSONL order, with their original episode, observation and authored memory context; not one online policy trajectory.",
+    "temporal_warning": "The selected decision_step values are source snapshot indices. WRITE/KEEP/CORRECT/EMPTY examples must not be displayed as executed online memory transitions."
+  },
+  "examples": [
+    {
+      "example_kind": "READ",
+      "source_jsonl_line_1based": 22,
+      "source_line_sha256": "e465913390323d91ca116c7514703edbf7a3639fc4ed7158921f582ca00a1dc1",
+      "sample_id": "fresh_protocol_layout_01_left_31100:d0:static_hold_protocol:READ",
+      "episode_id": "fresh_protocol_layout_01_left_31100",
+      "mode": "READ",
+      "decision_step": 0,
+      "observed_until_step": 0,
+      "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+      "visible_history": [],
+      "context_field_names": [
+        "catalogue",
+        "goal",
+        "mode",
+        "visible_history"
+      ],
+      "context": {
+        "catalogue": [
+          {
+            "description": "Last confirmed progress and unresolved requirements.",
+            "slot_id": "current_progress"
+          },
+          {
+            "description": "Observed original side and location of the sample.",
+            "slot_id": "original_location"
+          },
+          {
+            "description": "Observed identity and role of the requested sample.",
+            "slot_id": "sample_identity"
+          },
+          {
+            "description": "Observed verification status and evidence.",
+            "slot_id": "verification_result"
+          }
+        ],
+        "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "mode": "READ",
+        "visible_history": []
+      },
+      "observation": {
+        "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz"
+      },
+      "observation_actual_fields": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "state": {
+          "shape": [
+            24
+          ],
+          "dtype": "float32"
+        },
+        "instruction": {
+          "shape": [],
+          "dtype": "<U125"
+        }
+      },
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "target_parsed_json": {
+        "read_ids": [
+          "sample_identity"
+        ]
+      },
+      "sample_type": "high_level",
+      "supervision_kind": "verified_high_sft",
+      "motor_labels": false,
+      "metadata": {
+        "counterfactual_memory_confidence": false,
+        "label_builder_version": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "label_schedule": "offline_sampled_protocol_contexts_not_online_W32",
+        "layout": {
+          "execution_order": [
+            "sample_a",
+            "sample_b"
+          ],
+          "home_xy": [
+            [
+              -0.099,
+              -0.098
+            ],
+            [
+              0.098,
+              -0.096
+            ]
+          ],
+          "model_ids": [
+            13,
+            4
+          ]
+        },
+        "memory_condition_source": "authored_teacher_replay_not_policy_rollout",
+        "motor_labels": false,
+        "observation_index": 0,
+        "prompt_version": "rm65b_recap_prompt_v2_native_state",
+        "subtask_history_source": "omitted_authored_targets_not_executed",
+        "training_eligible": true
+      },
+      "provenance": {
+        "capture_run_id": "fresh_capture_v2_20261018",
+        "kind": "agent_visual_review",
+        "label_builder": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "physical_behavior": "static_hold_only_not_a_skill_demonstration",
+        "review_status": "approved",
+        "reviewer": "/root",
+        "scenario": "static_hold_protocol"
+      },
+      "evidence": {
+        "candidate_fact": "The first requested sample is initially on the left.",
+        "counterfactual_bank_only": false,
+        "counterfactual_kind": null,
+        "does_not_establish": [
+          "grasp",
+          "contact",
+          "dwell",
+          "verification",
+          "return",
+          "success"
+        ],
+        "fact_basis": [
+          "explicit first role in goal",
+          "reviewed initial-side sample in current images"
+        ],
+        "kind": "goal_role_binding_plus_three_camera_observation",
+        "observation_refs": [
+          {
+            "camera_pixel_sha256": {
+              "full_image": "5c4955ff643e8d0bd2e4c965a25e8ea7a9fe8aec0f33c37c347c1dc2aa648123",
+              "left_wrist_image": "db0ed4b4a31e6394eea972b1ce2ec7e23a4343276b53b15e804c9327628f8565",
+              "right_wrist_image": "dd858dc80aeac7d5f904ffd4189d7472be93f6f1c00a40c63807b4fb8fa81492"
+            },
+            "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz",
+            "npz_sha256": "75076fbc651f0f69b1ba8f80ffa1ffb0c87b69136ce87d773d7ef745ee64076f"
+          }
+        ],
+        "observed_until_step": 0
+      },
+      "evaluation": {
+        "does_not_measure": [
+          "visual_grounding",
+          "motor_execution",
+          "task_success"
+        ],
+        "required_terms": [],
+        "role_side_is_lexical_proxy_only": true,
+        "target_side": "left"
+      },
+      "counterfactual_memory_corruption": false,
+      "counterfactual_memory_confidence": false
+    },
+    {
+      "example_kind": "WRITE/WRITE",
+      "source_jsonl_line_1based": 10,
+      "source_line_sha256": "2f63ce00f3fcb9a3c65852a3ecf8b6b7d54cf8ce9d6a94a11c0643ff4f188509",
+      "sample_id": "fresh_protocol_layout_01_left_31100:d0:static_hold_protocol:WRITE",
+      "episode_id": "fresh_protocol_layout_01_left_31100",
+      "mode": "WRITE",
+      "decision_step": 0,
+      "observed_until_step": 0,
+      "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+      "visible_history": [],
+      "context_field_names": [
+        "catalogue",
+        "goal",
+        "mode",
+        "read_ids",
+        "selected_memory",
+        "visible_history"
+      ],
+      "context": {
+        "catalogue": [
+          {
+            "description": "Last confirmed progress and unresolved requirements.",
+            "slot_id": "current_progress"
+          },
+          {
+            "description": "Observed original side and location of the sample.",
+            "slot_id": "original_location"
+          },
+          {
+            "description": "Observed identity and role of the requested sample.",
+            "slot_id": "sample_identity"
+          },
+          {
+            "description": "Observed verification status and evidence.",
+            "slot_id": "verification_result"
+          }
+        ],
+        "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "mode": "WRITE",
+        "read_ids": [
+          "sample_identity"
+        ],
+        "selected_memory": [
+          {
+            "confirmed": false,
+            "revision": 0,
+            "slot_id": "sample_identity",
+            "status": "empty",
+            "value": null
+          }
+        ],
+        "visible_history": []
+      },
+      "observation": {
+        "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz"
+      },
+      "observation_actual_fields": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "state": {
+          "shape": [
+            24
+          ],
+          "dtype": "float32"
+        },
+        "instruction": {
+          "shape": [],
+          "dtype": "<U125"
+        }
+      },
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "target_parsed_json": {
+        "operations": [
+          {
+            "confirmed": true,
+            "op": "WRITE",
+            "slot_id": "sample_identity",
+            "value": "The first requested sample is initially on the left."
+          }
+        ]
+      },
+      "sample_type": "high_level",
+      "supervision_kind": "verified_high_sft",
+      "motor_labels": false,
+      "metadata": {
+        "counterfactual_memory_confidence": false,
+        "label_builder_version": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "label_schedule": "offline_sampled_protocol_contexts_not_online_W32",
+        "layout": {
+          "execution_order": [
+            "sample_a",
+            "sample_b"
+          ],
+          "home_xy": [
+            [
+              -0.099,
+              -0.098
+            ],
+            [
+              0.098,
+              -0.096
+            ]
+          ],
+          "model_ids": [
+            13,
+            4
+          ]
+        },
+        "memory_condition_source": "authored_teacher_replay_not_policy_rollout",
+        "motor_labels": false,
+        "observation_index": 0,
+        "prompt_version": "rm65b_recap_prompt_v2_native_state",
+        "subtask_history_source": "omitted_authored_targets_not_executed",
+        "training_eligible": true
+      },
+      "provenance": {
+        "capture_run_id": "fresh_capture_v2_20261018",
+        "kind": "agent_visual_review",
+        "label_builder": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "physical_behavior": "static_hold_only_not_a_skill_demonstration",
+        "review_status": "approved",
+        "reviewer": "/root",
+        "scenario": "static_hold_protocol"
+      },
+      "evidence": {
+        "candidate_fact": "The first requested sample is initially on the left.",
+        "counterfactual_bank_only": false,
+        "counterfactual_kind": null,
+        "does_not_establish": [
+          "grasp",
+          "contact",
+          "dwell",
+          "verification",
+          "return",
+          "success"
+        ],
+        "fact_basis": [
+          "explicit first role in goal",
+          "reviewed initial-side sample in current images"
+        ],
+        "kind": "goal_role_binding_plus_three_camera_observation",
+        "observation_refs": [
+          {
+            "camera_pixel_sha256": {
+              "full_image": "5c4955ff643e8d0bd2e4c965a25e8ea7a9fe8aec0f33c37c347c1dc2aa648123",
+              "left_wrist_image": "db0ed4b4a31e6394eea972b1ce2ec7e23a4343276b53b15e804c9327628f8565",
+              "right_wrist_image": "dd858dc80aeac7d5f904ffd4189d7472be93f6f1c00a40c63807b4fb8fa81492"
+            },
+            "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz",
+            "npz_sha256": "75076fbc651f0f69b1ba8f80ffa1ffb0c87b69136ce87d773d7ef745ee64076f"
+          }
+        ],
+        "observed_until_step": 0
+      },
+      "evaluation": {
+        "does_not_measure": [
+          "visual_grounding",
+          "motor_execution",
+          "task_success"
+        ],
+        "required_terms": [],
+        "role_side_is_lexical_proxy_only": true,
+        "target_side": "left"
+      },
+      "counterfactual_memory_corruption": false,
+      "counterfactual_memory_confidence": false
+    },
+    {
+      "example_kind": "WRITE/KEEP",
+      "source_jsonl_line_1based": 11,
+      "source_line_sha256": "7e66255781a1293e72da1f7c5a8988b82f1060620f75619cfeaed92463361020",
+      "sample_id": "fresh_protocol_layout_05_right_31510:d16:counterfactual_memory_confidence:WRITE",
+      "episode_id": "fresh_protocol_layout_05_right_31510",
+      "mode": "WRITE",
+      "decision_step": 16,
+      "observed_until_step": 16,
+      "goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+      "visible_history": [],
+      "context_field_names": [
+        "catalogue",
+        "goal",
+        "mode",
+        "read_ids",
+        "selected_memory",
+        "visible_history"
+      ],
+      "context": {
+        "catalogue": [
+          {
+            "description": "Last confirmed progress and unresolved requirements.",
+            "slot_id": "current_progress"
+          },
+          {
+            "description": "Observed original side and location of the sample.",
+            "slot_id": "original_location"
+          },
+          {
+            "description": "Observed identity and role of the requested sample.",
+            "slot_id": "sample_identity"
+          },
+          {
+            "description": "Observed verification status and evidence.",
+            "slot_id": "verification_result"
+          }
+        ],
+        "goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "mode": "WRITE",
+        "read_ids": [
+          "sample_identity"
+        ],
+        "selected_memory": [
+          {
+            "confirmed": false,
+            "revision": 2,
+            "slot_id": "sample_identity",
+            "status": "active",
+            "value": "The first requested sample is initially on the right."
+          }
+        ],
+        "visible_history": []
+      },
+      "observation": {
+        "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0016.npz"
+      },
+      "observation_actual_fields": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "state": {
+          "shape": [
+            24
+          ],
+          "dtype": "float32"
+        },
+        "instruction": {
+          "shape": [],
+          "dtype": "<U125"
+        }
+      },
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "target_parsed_json": {
+        "operations": [
+          {
+            "confirmed": true,
+            "op": "KEEP",
+            "slot_id": "sample_identity"
+          }
+        ]
+      },
+      "sample_type": "high_level",
+      "supervision_kind": "verified_high_sft",
+      "motor_labels": false,
+      "metadata": {
+        "counterfactual_memory_confidence": true,
+        "label_builder_version": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "label_schedule": "offline_sampled_protocol_contexts_not_online_W32",
+        "layout": {
+          "execution_order": [
+            "sample_b",
+            "sample_a"
+          ],
+          "home_xy": [
+            [
+              -0.115,
+              -0.101
+            ],
+            [
+              0.11,
+              -0.096
+            ]
+          ],
+          "model_ids": [
+            13,
+            4
+          ]
+        },
+        "memory_condition_source": "authored_teacher_replay_not_policy_rollout",
+        "motor_labels": false,
+        "observation_index": 2,
+        "prompt_version": "rm65b_recap_prompt_v2_native_state",
+        "subtask_history_source": "omitted_authored_targets_not_executed",
+        "training_eligible": true
+      },
+      "provenance": {
+        "capture_run_id": "fresh_capture_v2_20261018",
+        "kind": "agent_visual_review",
+        "label_builder": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "physical_behavior": "static_hold_only_not_a_skill_demonstration",
+        "review_status": "approved",
+        "reviewer": "/root/protocol_label_review",
+        "scenario": "counterfactual_memory_confidence"
+      },
+      "evidence": {
+        "candidate_fact": "The first requested sample is initially on the right.",
+        "counterfactual_bank_only": true,
+        "counterfactual_kind": "counterfactual_memory_confidence",
+        "does_not_establish": [
+          "grasp",
+          "contact",
+          "dwell",
+          "verification",
+          "return",
+          "success"
+        ],
+        "fact_basis": [
+          "explicit first role in goal",
+          "reviewed initial-side sample in current images"
+        ],
+        "kind": "goal_role_binding_plus_three_camera_observation",
+        "observation_refs": [
+          {
+            "camera_pixel_sha256": {
+              "full_image": "03bc822447ca1a5d240bdc05b04e794abed4e65d7f0fc46377b5329ea7086e61",
+              "left_wrist_image": "cc60e443ac8160dc1e2d4fd103a816b394b57dd5b064eb460ed48dbe91e84a28",
+              "right_wrist_image": "e861743c145f6396e08facf0313f5ba8a990e58449c750e96bb3c0fcdabd67c1"
+            },
+            "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0016.npz",
+            "npz_sha256": "704d6480f9a14979361ab59e7c6f330da22f12d966c0d63fbb323ad6e46214e3"
+          }
+        ],
+        "observed_until_step": 16
+      },
+      "evaluation": {
+        "does_not_measure": [
+          "visual_grounding",
+          "motor_execution",
+          "task_success"
+        ],
+        "required_terms": [],
+        "role_side_is_lexical_proxy_only": true,
+        "target_side": "right"
+      },
+      "counterfactual_memory_corruption": false,
+      "counterfactual_memory_confidence": true
+    },
+    {
+      "example_kind": "WRITE/CORRECT",
+      "source_jsonl_line_1based": 7,
+      "source_line_sha256": "7998c2e515883939e8cf4d9e6f03cb32218ac896488875efe8199652e83b5793",
+      "sample_id": "fresh_protocol_layout_05_left_31500:d32:counterfactual_memory_corruption:WRITE",
+      "episode_id": "fresh_protocol_layout_05_left_31500",
+      "mode": "WRITE",
+      "decision_step": 32,
+      "observed_until_step": 32,
+      "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+      "visible_history": [],
+      "context_field_names": [
+        "catalogue",
+        "goal",
+        "mode",
+        "read_ids",
+        "selected_memory",
+        "visible_history"
+      ],
+      "context": {
+        "catalogue": [
+          {
+            "description": "Last confirmed progress and unresolved requirements.",
+            "slot_id": "current_progress"
+          },
+          {
+            "description": "Observed original side and location of the sample.",
+            "slot_id": "original_location"
+          },
+          {
+            "description": "Observed identity and role of the requested sample.",
+            "slot_id": "sample_identity"
+          },
+          {
+            "description": "Observed verification status and evidence.",
+            "slot_id": "verification_result"
+          }
+        ],
+        "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "mode": "WRITE",
+        "read_ids": [
+          "sample_identity"
+        ],
+        "selected_memory": [
+          {
+            "confirmed": false,
+            "revision": 4,
+            "slot_id": "sample_identity",
+            "status": "active",
+            "value": "The first requested sample is initially on the right."
+          }
+        ],
+        "visible_history": []
+      },
+      "observation": {
+        "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0032.npz"
+      },
+      "observation_actual_fields": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "state": {
+          "shape": [
+            24
+          ],
+          "dtype": "float32"
+        },
+        "instruction": {
+          "shape": [],
+          "dtype": "<U125"
+        }
+      },
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "target_parsed_json": {
+        "operations": [
+          {
+            "confirmed": true,
+            "op": "CORRECT",
+            "slot_id": "sample_identity",
+            "value": "The first requested sample is initially on the left."
+          }
+        ]
+      },
+      "sample_type": "high_level",
+      "supervision_kind": "verified_high_sft",
+      "motor_labels": false,
+      "metadata": {
+        "counterfactual_memory_confidence": false,
+        "label_builder_version": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "label_schedule": "offline_sampled_protocol_contexts_not_online_W32",
+        "layout": {
+          "execution_order": [
+            "sample_a",
+            "sample_b"
+          ],
+          "home_xy": [
+            [
+              -0.115,
+              -0.101
+            ],
+            [
+              0.11,
+              -0.096
+            ]
+          ],
+          "model_ids": [
+            13,
+            4
+          ]
+        },
+        "memory_condition_source": "authored_teacher_replay_not_policy_rollout",
+        "motor_labels": false,
+        "observation_index": 4,
+        "prompt_version": "rm65b_recap_prompt_v2_native_state",
+        "subtask_history_source": "omitted_authored_targets_not_executed",
+        "training_eligible": true
+      },
+      "provenance": {
+        "capture_run_id": "fresh_capture_v2_20261018",
+        "kind": "agent_visual_review",
+        "label_builder": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "physical_behavior": "static_hold_only_not_a_skill_demonstration",
+        "review_status": "approved",
+        "reviewer": "/root/protocol_label_review",
+        "scenario": "counterfactual_memory_corruption"
+      },
+      "evidence": {
+        "candidate_fact": "The first requested sample is initially on the left.",
+        "counterfactual_bank_only": true,
+        "counterfactual_kind": "counterfactual_memory_corruption",
+        "does_not_establish": [
+          "grasp",
+          "contact",
+          "dwell",
+          "verification",
+          "return",
+          "success"
+        ],
+        "fact_basis": [
+          "explicit first role in goal",
+          "reviewed initial-side sample in current images"
+        ],
+        "kind": "goal_role_binding_plus_three_camera_observation",
+        "observation_refs": [
+          {
+            "camera_pixel_sha256": {
+              "full_image": "c438f9c2cec887eb27470cb423d278be291e2cc1bd652b4f15ad256996530414",
+              "left_wrist_image": "545a3e002fa11692f0c9146bb5b4b12e7b1aa4ad800cb650f8628c1ee3879a27",
+              "right_wrist_image": "31eb0a16457a4b480e2c50060d3ac0d16309a3b074504cecf464f79a035b6441"
+            },
+            "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0032.npz",
+            "npz_sha256": "206dd877234a5bf3bb2729bdd913ee70f19c61cc55930d1fb819bb4cad55f79d"
+          }
+        ],
+        "observed_until_step": 32
+      },
+      "evaluation": {
+        "does_not_measure": [
+          "visual_grounding",
+          "motor_execution",
+          "task_success"
+        ],
+        "required_terms": [],
+        "role_side_is_lexical_proxy_only": true,
+        "target_side": "left"
+      },
+      "counterfactual_memory_corruption": true,
+      "counterfactual_memory_confidence": false
+    },
+    {
+      "example_kind": "WRITE/EMPTY",
+      "source_jsonl_line_1based": 6,
+      "source_line_sha256": "309382210313900bdc9c64189fa0a15a9be06ae8cc2b9cfe77d6bf9e0e1e038a",
+      "sample_id": "fresh_protocol_layout_02_left_31200:d8:static_hold_protocol:WRITE",
+      "episode_id": "fresh_protocol_layout_02_left_31200",
+      "mode": "WRITE",
+      "decision_step": 8,
+      "observed_until_step": 8,
+      "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+      "visible_history": [],
+      "context_field_names": [
+        "catalogue",
+        "goal",
+        "mode",
+        "read_ids",
+        "selected_memory",
+        "visible_history"
+      ],
+      "context": {
+        "catalogue": [
+          {
+            "description": "Last confirmed progress and unresolved requirements.",
+            "slot_id": "current_progress"
+          },
+          {
+            "description": "Observed original side and location of the sample.",
+            "slot_id": "original_location"
+          },
+          {
+            "description": "Observed identity and role of the requested sample.",
+            "slot_id": "sample_identity"
+          },
+          {
+            "description": "Observed verification status and evidence.",
+            "slot_id": "verification_result"
+          }
+        ],
+        "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "mode": "WRITE",
+        "read_ids": [
+          "sample_identity"
+        ],
+        "selected_memory": [
+          {
+            "confirmed": true,
+            "revision": 1,
+            "slot_id": "sample_identity",
+            "status": "active",
+            "value": "The first requested sample is initially on the left."
+          }
+        ],
+        "visible_history": []
+      },
+      "observation": {
+        "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0008.npz"
+      },
+      "observation_actual_fields": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "state": {
+          "shape": [
+            24
+          ],
+          "dtype": "float32"
+        },
+        "instruction": {
+          "shape": [],
+          "dtype": "<U125"
+        }
+      },
+      "target_text": "{\"operations\":[]}",
+      "target_parsed_json": {
+        "operations": []
+      },
+      "sample_type": "high_level",
+      "supervision_kind": "verified_high_sft",
+      "motor_labels": false,
+      "metadata": {
+        "counterfactual_memory_confidence": false,
+        "label_builder_version": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "label_schedule": "offline_sampled_protocol_contexts_not_online_W32",
+        "layout": {
+          "execution_order": [
+            "sample_a",
+            "sample_b"
+          ],
+          "home_xy": [
+            [
+              -0.10300000000000001,
+              -0.101
+            ],
+            [
+              0.101,
+              -0.092
+            ]
+          ],
+          "model_ids": [
+            4,
+            13
+          ]
+        },
+        "memory_condition_source": "authored_teacher_replay_not_policy_rollout",
+        "motor_labels": false,
+        "observation_index": 1,
+        "prompt_version": "rm65b_recap_prompt_v2_native_state",
+        "subtask_history_source": "omitted_authored_targets_not_executed",
+        "training_eligible": true
+      },
+      "provenance": {
+        "capture_run_id": "fresh_capture_v2_20261018",
+        "kind": "agent_visual_review",
+        "label_builder": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "physical_behavior": "static_hold_only_not_a_skill_demonstration",
+        "review_status": "approved",
+        "reviewer": "/root",
+        "scenario": "static_hold_protocol"
+      },
+      "evidence": {
+        "candidate_fact": "The first requested sample is initially on the left.",
+        "counterfactual_bank_only": false,
+        "counterfactual_kind": null,
+        "does_not_establish": [
+          "grasp",
+          "contact",
+          "dwell",
+          "verification",
+          "return",
+          "success"
+        ],
+        "fact_basis": [
+          "explicit first role in goal",
+          "reviewed initial-side sample in current images"
+        ],
+        "kind": "goal_role_binding_plus_three_camera_observation",
+        "observation_refs": [
+          {
+            "camera_pixel_sha256": {
+              "full_image": "9fd4ea11608108718db90c47bc0ca172b2f35231d1d2f481ed0609755fea4ed0",
+              "left_wrist_image": "612fb8fffdbf10641ecaeda97da983c8af5d9dd2a94bdba3ead9dc67f9cecfd9",
+              "right_wrist_image": "a799dfa1433a30b33ee92a4e39dc7ba6a01ac399ed6bba05018d4b4bcc51be91"
+            },
+            "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0008.npz",
+            "npz_sha256": "ef0a52d52c4ddeb6ae865e966711422ad2b9e5e9c7cf9b7e1aadcd5bae8849f7"
+          }
+        ],
+        "observed_until_step": 8
+      },
+      "evaluation": {
+        "does_not_measure": [
+          "visual_grounding",
+          "motor_execution",
+          "task_success"
+        ],
+        "required_terms": [],
+        "role_side_is_lexical_proxy_only": true,
+        "target_side": "left"
+      },
+      "counterfactual_memory_corruption": false,
+      "counterfactual_memory_confidence": false
+    },
+    {
+      "example_kind": "SUBTASK/left",
+      "source_jsonl_line_1based": 15,
+      "source_line_sha256": "20b3426b5a92afaf6fe33f8c75a2bbbe2ffab3f3806f6ec8fc4486ef2cbbab37",
+      "sample_id": "fresh_protocol_layout_01_left_31100:d0:static_hold_protocol:SUBTASK",
+      "episode_id": "fresh_protocol_layout_01_left_31100",
+      "mode": "SUBTASK",
+      "decision_step": 0,
+      "observed_until_step": 0,
+      "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+      "visible_history": [],
+      "context_field_names": [
+        "actor_memory",
+        "catalogue",
+        "goal",
+        "mode",
+        "read_ids",
+        "visible_history"
+      ],
+      "context": {
+        "actor_memory": {
+          "current_writes": [
+            {
+              "confirmed": true,
+              "revision": 1,
+              "slot_id": "sample_identity",
+              "status": "active",
+              "value": "The first requested sample is initially on the left."
+            }
+          ],
+          "selected": [
+            {
+              "confirmed": true,
+              "revision": 1,
+              "slot_id": "sample_identity",
+              "status": "active",
+              "value": "The first requested sample is initially on the left."
+            }
+          ]
+        },
+        "catalogue": [
+          {
+            "description": "Last confirmed progress and unresolved requirements.",
+            "slot_id": "current_progress"
+          },
+          {
+            "description": "Observed original side and location of the sample.",
+            "slot_id": "original_location"
+          },
+          {
+            "description": "Observed identity and role of the requested sample.",
+            "slot_id": "sample_identity"
+          },
+          {
+            "description": "Observed verification status and evidence.",
+            "slot_id": "verification_result"
+          }
+        ],
+        "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "mode": "SUBTASK",
+        "read_ids": [
+          "sample_identity"
+        ],
+        "visible_history": []
+      },
+      "observation": {
+        "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz"
+      },
+      "observation_actual_fields": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "state": {
+          "shape": [
+            24
+          ],
+          "dtype": "float32"
+        },
+        "instruction": {
+          "shape": [],
+          "dtype": "<U125"
+        }
+      },
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "target_parsed_json": null,
+      "sample_type": "high_level",
+      "supervision_kind": "verified_high_sft",
+      "motor_labels": false,
+      "metadata": {
+        "counterfactual_memory_confidence": false,
+        "label_builder_version": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "label_schedule": "offline_sampled_protocol_contexts_not_online_W32",
+        "layout": {
+          "execution_order": [
+            "sample_a",
+            "sample_b"
+          ],
+          "home_xy": [
+            [
+              -0.099,
+              -0.098
+            ],
+            [
+              0.098,
+              -0.096
+            ]
+          ],
+          "model_ids": [
+            13,
+            4
+          ]
+        },
+        "memory_condition_source": "authored_teacher_replay_not_policy_rollout",
+        "motor_labels": false,
+        "observation_index": 0,
+        "prompt_version": "rm65b_recap_prompt_v2_native_state",
+        "subtask_history_source": "omitted_authored_targets_not_executed",
+        "training_eligible": true
+      },
+      "provenance": {
+        "capture_run_id": "fresh_capture_v2_20261018",
+        "kind": "agent_visual_review",
+        "label_builder": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "physical_behavior": "static_hold_only_not_a_skill_demonstration",
+        "review_status": "approved",
+        "reviewer": "/root",
+        "scenario": "static_hold_protocol"
+      },
+      "evidence": {
+        "candidate_fact": "The first requested sample is initially on the left.",
+        "counterfactual_bank_only": false,
+        "counterfactual_kind": null,
+        "does_not_establish": [
+          "grasp",
+          "contact",
+          "dwell",
+          "verification",
+          "return",
+          "success"
+        ],
+        "fact_basis": [
+          "explicit first role in goal",
+          "reviewed initial-side sample in current images"
+        ],
+        "kind": "goal_role_binding_plus_three_camera_observation",
+        "observation_refs": [
+          {
+            "camera_pixel_sha256": {
+              "full_image": "5c4955ff643e8d0bd2e4c965a25e8ea7a9fe8aec0f33c37c347c1dc2aa648123",
+              "left_wrist_image": "db0ed4b4a31e6394eea972b1ce2ec7e23a4343276b53b15e804c9327628f8565",
+              "right_wrist_image": "dd858dc80aeac7d5f904ffd4189d7472be93f6f1c00a40c63807b4fb8fa81492"
+            },
+            "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz",
+            "npz_sha256": "75076fbc651f0f69b1ba8f80ffa1ffb0c87b69136ce87d773d7ef745ee64076f"
+          }
+        ],
+        "observed_until_step": 0
+      },
+      "evaluation": {
+        "does_not_measure": [
+          "visual_grounding",
+          "motor_execution",
+          "task_success"
+        ],
+        "required_terms": [
+          "pick",
+          "hold"
+        ],
+        "role_side_is_lexical_proxy_only": true,
+        "target_side": "left"
+      },
+      "counterfactual_memory_corruption": false,
+      "counterfactual_memory_confidence": false
+    },
+    {
+      "example_kind": "SUBTASK/right",
+      "source_jsonl_line_1based": 2,
+      "source_line_sha256": "bdc94415bb2ef21806bae231fbca46d6d57e0fd7ab8e6066aafef74010e6fa30",
+      "sample_id": "fresh_protocol_layout_03_right_31310:d0:static_hold_protocol:SUBTASK",
+      "episode_id": "fresh_protocol_layout_03_right_31310",
+      "mode": "SUBTASK",
+      "decision_step": 0,
+      "observed_until_step": 0,
+      "goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+      "visible_history": [],
+      "context_field_names": [
+        "actor_memory",
+        "catalogue",
+        "goal",
+        "mode",
+        "read_ids",
+        "visible_history"
+      ],
+      "context": {
+        "actor_memory": {
+          "current_writes": [
+            {
+              "confirmed": true,
+              "revision": 1,
+              "slot_id": "sample_identity",
+              "status": "active",
+              "value": "The first requested sample is initially on the right."
+            }
+          ],
+          "selected": [
+            {
+              "confirmed": true,
+              "revision": 1,
+              "slot_id": "sample_identity",
+              "status": "active",
+              "value": "The first requested sample is initially on the right."
+            }
+          ]
+        },
+        "catalogue": [
+          {
+            "description": "Last confirmed progress and unresolved requirements.",
+            "slot_id": "current_progress"
+          },
+          {
+            "description": "Observed original side and location of the sample.",
+            "slot_id": "original_location"
+          },
+          {
+            "description": "Observed identity and role of the requested sample.",
+            "slot_id": "sample_identity"
+          },
+          {
+            "description": "Observed verification status and evidence.",
+            "slot_id": "verification_result"
+          }
+        ],
+        "goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "mode": "SUBTASK",
+        "read_ids": [
+          "sample_identity"
+        ],
+        "visible_history": []
+      },
+      "observation": {
+        "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0000.npz"
+      },
+      "observation_actual_fields": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "state": {
+          "shape": [
+            24
+          ],
+          "dtype": "float32"
+        },
+        "instruction": {
+          "shape": [],
+          "dtype": "<U125"
+        }
+      },
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "target_parsed_json": null,
+      "sample_type": "high_level",
+      "supervision_kind": "verified_high_sft",
+      "motor_labels": false,
+      "metadata": {
+        "counterfactual_memory_confidence": false,
+        "label_builder_version": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "label_schedule": "offline_sampled_protocol_contexts_not_online_W32",
+        "layout": {
+          "execution_order": [
+            "sample_b",
+            "sample_a"
+          ],
+          "home_xy": [
+            [
+              -0.107,
+              -0.095
+            ],
+            [
+              0.10400000000000001,
+              -0.08800000000000001
+            ]
+          ],
+          "model_ids": [
+            13,
+            4
+          ]
+        },
+        "memory_condition_source": "authored_teacher_replay_not_policy_rollout",
+        "motor_labels": false,
+        "observation_index": 0,
+        "prompt_version": "rm65b_recap_prompt_v2_native_state",
+        "subtask_history_source": "omitted_authored_targets_not_executed",
+        "training_eligible": true
+      },
+      "provenance": {
+        "capture_run_id": "fresh_capture_v2_20261018",
+        "kind": "agent_visual_review",
+        "label_builder": "rm65b_static_protocol_labels_v2_consistent_contexts",
+        "physical_behavior": "static_hold_only_not_a_skill_demonstration",
+        "review_status": "approved",
+        "reviewer": "/root",
+        "scenario": "static_hold_protocol"
+      },
+      "evidence": {
+        "candidate_fact": "The first requested sample is initially on the right.",
+        "counterfactual_bank_only": false,
+        "counterfactual_kind": null,
+        "does_not_establish": [
+          "grasp",
+          "contact",
+          "dwell",
+          "verification",
+          "return",
+          "success"
+        ],
+        "fact_basis": [
+          "explicit first role in goal",
+          "reviewed initial-side sample in current images"
+        ],
+        "kind": "goal_role_binding_plus_three_camera_observation",
+        "observation_refs": [
+          {
+            "camera_pixel_sha256": {
+              "full_image": "2bd735d261845fd129448ff2d02faebbc0fd85314c11dd10864542f8089b75a8",
+              "left_wrist_image": "889cafe1cb34ff3a4a869f6410cc27293671a0ee72e9b74c9eb49c234edfc7cf",
+              "right_wrist_image": "d69a939b13563f9e8a979620dea17fffe9a27fdbb6a851ee220175287aff1baf"
+            },
+            "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0000.npz",
+            "npz_sha256": "b35d48a370d7bbbb729ebc15c37327e676db58b9ac7692c0286df5ff98dfd042"
+          }
+        ],
+        "observed_until_step": 0
+      },
+      "evaluation": {
+        "does_not_measure": [
+          "visual_grounding",
+          "motor_execution",
+          "task_success"
+        ],
+        "required_terms": [
+          "pick",
+          "hold"
+        ],
+        "role_side_is_lexical_proxy_only": true,
+        "target_side": "right"
+      },
+      "counterfactual_memory_corruption": false,
+      "counterfactual_memory_confidence": false
+    }
+  ],
+  "interpretation_zh": [
+    "输入：原始三路RGB、实测24维状态、总目标、记忆目录/选中记忆/动作可见记忆及visible_history；context逐字段来自原记录，没有补造在线历史。",
+    "监督：READ预测read_ids，WRITE模式预测operations，SUBTASK预测自然语言下一子任务。此处用已有标签的文本交叉熵，不包含连续动作监督。",
+    "96条全部motor_labels=false、visible_history=[]；它们来自static_hold_only观察和离线编写的协议上下文，不是完成任务示范或在线32步决策轨迹。",
+    "confirmed=true在这些样本中确认的是已审核的目标/初始位置语义事实或教师记忆操作，不等于抓取、接触、停留、物理验证、归位或任务成功。",
+    "sample_identity中的observed_fact描述首个请求对象的初始侧别；verification_result是目录中的另一个slot，不可据confirmed=true推断它已被物理验证。",
+    "保持24维、三相机、60ms合同；本审计只展示现有数据样式，不执行仿真、模型推理或训练，也不修改源数据/工程/笔记。"
+  ]
+}

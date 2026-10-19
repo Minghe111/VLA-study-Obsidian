@@ -1,0 +1,156 @@
+{
+  "source_experiment": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1",
+  "c300_checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/checkpoint",
+  "read_only": true,
+  "gpu_or_model_loaded": false,
+  "disk": {
+    "total": 982240026624,
+    "used": 792270761984,
+    "free": 139998748672
+  },
+  "original_source_integrity": {
+    "files": 2182,
+    "mismatches": []
+  },
+  "publication_integrity": {
+    "files": 2223,
+    "mismatches": []
+  },
+  "checkpoint_sizes": {
+    "trainer_state.pt": 29656363,
+    "version.json": 23209,
+    "full_weights.pt": 6968087357
+  },
+  "host_memory_kib": {
+    "MemTotal": 32605432,
+    "MemAvailable": 25939128,
+    "SwapTotal": 8388604,
+    "SwapFree": 3990720
+  },
+  "symlinks": {
+    "code/RoboTwin/assets": "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets",
+    "code/RoboTwin/envs/curobo/src/curobo/content/assets": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/code/RoboTwin/envs/curobo/src/curobo/content/assets"
+  },
+  "c300_metrics": {
+    "count": 96,
+    "modes": {
+      "READ": 32,
+      "SUBTASK": 32,
+      "WRITE": 32
+    },
+    "teacher_forced_ce": 2.582778215408325,
+    "gold_tokens": 1488,
+    "gold_correct": 788,
+    "eos": {
+      "passed": 89,
+      "eligible": 96
+    },
+    "nonempty": {
+      "passed": 96,
+      "eligible": 96
+    },
+    "first_token_match": {
+      "passed": 56,
+      "eligible": 96
+    },
+    "json": {
+      "passed": 5,
+      "eligible": 64
+    },
+    "schema_legal": {
+      "passed": 0,
+      "eligible": 64
+    },
+    "target_match": {
+      "passed": 0,
+      "eligible": 64
+    },
+    "required_terms": {
+      "passed": 3,
+      "eligible": 32
+    },
+    "side_binding_lexical": {
+      "passed": 12,
+      "eligible": 32
+    },
+    "text_exact": {
+      "passed": 0,
+      "eligible": 96
+    },
+    "passed": {
+      "passed": 1,
+      "eligible": 96
+    },
+    "fit_passed": {
+      "passed": 0,
+      "eligible": 96
+    },
+    "all_fit_passed": false
+  },
+  "c300_training": {
+    "loss": 4.412911088881083,
+    "high_ce": 4.393578965067864,
+    "fast_ce": 0.0,
+    "fm": 0.0,
+    "kv_anchor": 0.01933212381321937,
+    "grad_norm": 9.748432893753051,
+    "updates": 100,
+    "global_step": 300,
+    "anchor_micro_batches": 0
+  },
+  "c300_memory": {
+    "peak_allocated_mib": 7129.9267578125,
+    "peak_reserved_mib": 7354.0,
+    "host_peak_rss_mib": 20366.77734375
+  },
+  "retention": {
+    "count": 8,
+    "passed": 4,
+    "max_case_normalized_physical24_rms": 0.0015066646737977862,
+    "max_case_masked_all_layer_kv_relative_rms": 0.05319148468830894,
+    "all_sdk_actions_exact": false,
+    "all_kv_positions_exact": false
+  },
+  "retention_unanchored_times": {
+    "count": 8,
+    "passed": 5,
+    "max_case_normalized_physical24_rms": 0.007730783894658089,
+    "max_case_masked_all_layer_kv_relative_rms": 0.052548494999560116,
+    "all_sdk_actions_exact": false,
+    "all_kv_positions_exact": false
+  },
+  "parameter_count_note": "18 layers x 4 attention projections x 2 A/B tensors = 144 trainable tensors, 3686400 parameters; earlier 288-tensor narrative was arithmetic error",
+  "copy_plan": {
+    "copy_dirs": [
+      "code",
+      "scripts",
+      "configs",
+      "data"
+    ],
+    "exclude": [
+      "reports",
+      "runtime*",
+      "__pycache__",
+      ".pytest_cache"
+    ],
+    "symlinks": true,
+    "estimated_mib": 51,
+    "raw_obs_copy": false,
+    "base_weights_copy": false,
+    "c300_reference_only": true,
+    "preserve_absolute_observation_references": true
+  },
+  "checkpoint_recommendation": {
+    "current_saver": "full_weights.pt every checkpoint, ~6.5GiB",
+    "supported_adapter_load": "original SFT model_path + model.openpi.recap_adapter_path; mutual exclusion full_weights",
+    "adapter_only_save_exists": "adapter_state_dict covers all extension tensors incl frozen MEM/history; trainer exact manifest and base provenance must remain verified",
+    "max_new_full_checkpoints_at_current_disk_with_20GiB_reserve": 17,
+    "do_not_modify_legacy_loader_saver": true
+  },
+  "scope_limits": [
+    "Only same96 diagnostic; no3000 formal rows",
+    "Unanchored retention times share expert episode; not independent skillSR",
+    "Static-hold/text-solvable labels do not prove vision/MEM grounding",
+    "No simulator/controller/task training requested in this audit"
+  ]
+}

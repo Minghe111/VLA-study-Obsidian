@@ -1,0 +1,292 @@
+{
+  "audit_time": "2026-10-19T16:07:25.200941",
+  "read_only": true,
+  "GPU_or_model_loaded": false,
+  "val_recomputed": {
+    "count": 60,
+    "strict_passed": 60,
+    "eos": 60,
+    "unique_actual_inputs": 28,
+    "by_mode": {
+      "READ": {
+        "count": 20,
+        "strict_passed": 20
+      },
+      "WRITE": {
+        "count": 20,
+        "strict_passed": 20
+      },
+      "SUBTASK": {
+        "count": 20,
+        "strict_passed": 20
+      }
+    },
+    "bad_examples": [],
+    "errors": []
+  },
+  "val_dedup_history": {
+    "rows": 60,
+    "unique_actual_inputs": 28,
+    "source_target_conflicts": [],
+    "historically_seen_sample_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      15,
+      16,
+      32,
+      35
+    ],
+    "historically_seen_unique_inputs": 13,
+    "fresh_unique_inputs_in_searched_history": 15,
+    "fresh_input_rows": 32,
+    "historical_search_reports": [
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/02_eval_baseline/report.json",
+        "case_count": 16
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/04_eval32/report.json",
+        "case_count": 16
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/06_eval128/report.json",
+        "case_count": 16
+      }
+    ]
+  },
+  "paraphrase_recomputed": {
+    "count": 56,
+    "strict_passed": 54,
+    "eos": 56,
+    "unique_actual_inputs": 56,
+    "by_mode": {
+      "WRITE": {
+        "count": 20,
+        "strict_passed": 18
+      },
+      "SUBTASK": {
+        "count": 20,
+        "strict_passed": 20
+      },
+      "READ": {
+        "count": 16,
+        "strict_passed": 16
+      }
+    },
+    "bad_examples": [
+      {
+        "sample_id": "paraphrase:0fd7af5d850fdfdfe5948cc27613de6cf8e02791773750b4ca159ea2faae7ea3:v2",
+        "mode": "WRITE",
+        "goal": "Start with the sample initially on the left: verify it and return it home before verifying and returning the sample initially on the right.",
+        "target": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+        "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_ٶ\":\"Sub up and hold the left.\"",
+        "token_ids": [
+          9766,
+          27575,
+          87309,
+          9766,
+          55606,
+          1192,
+          3271,
+          1985,
+          715,
+          9330,
+          209163,
+          8332,
+          26930,
+          235298,
+          255672,
+          9330,
+          3351,
+          908,
+          578,
+          3385,
+          573,
+          2731,
+          1464,
+          1
+        ],
+        "checks": {
+          "eos": true,
+          "nonempty": true,
+          "mode": "WRITE",
+          "json": false,
+          "schema_legal": false,
+          "target_match": false,
+          "error": "Expecting ',' delimiter: line 1 column 85 (char 84)",
+          "passed": false,
+          "text_exact": false,
+          "semantic_passed": false,
+          "strict_passed": false,
+          "strict_text_exact": false
+        },
+        "context": {
+          "catalogue": [
+            {
+              "description": "Last confirmed progress and unresolved requirements.",
+              "slot_id": "current_progress"
+            },
+            {
+              "description": "Observed original side and location of the sample.",
+              "slot_id": "original_location"
+            },
+            {
+              "description": "Observed identity and role of the requested sample.",
+              "slot_id": "sample_identity"
+            },
+            {
+              "description": "Observed verification status and evidence.",
+              "slot_id": "verification_result"
+            }
+          ],
+          "goal": "Start with the sample initially on the left: verify it and return it home before verifying and returning the sample initially on the right.",
+          "mode": "WRITE",
+          "read_ids": [
+            "sample_identity"
+          ],
+          "selected_memory": [
+            {
+              "confirmed": false,
+              "revision": 4,
+              "slot_id": "sample_identity",
+              "status": "active",
+              "value": "The first requested sample is initially on the right."
+            }
+          ],
+          "visible_history": []
+        }
+      },
+      {
+        "sample_id": "paraphrase:ae9c9ab88379adb570110773f868999199fe4fb93f5f4092549a6e9161a2eaba:v2",
+        "mode": "WRITE",
+        "goal": "Start with the sample initially on the right: verify it and return it home before verifying and returning the sample initially on the left.",
+        "target": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+        "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_ٶ\":\"Sub up and hold the rightٶ",
+        "token_ids": [
+          9766,
+          27575,
+          87309,
+          9766,
+          55606,
+          1192,
+          3271,
+          1985,
+          715,
+          9330,
+          209163,
+          8332,
+          26930,
+          235298,
+          255672,
+          9330,
+          3351,
+          908,
+          578,
+          3385,
+          573,
+          1833,
+          255672,
+          1
+        ],
+        "checks": {
+          "eos": true,
+          "nonempty": true,
+          "mode": "WRITE",
+          "json": false,
+          "schema_legal": false,
+          "target_match": false,
+          "error": "Unterminated string starting at: line 1 column 58 (char 57)",
+          "passed": false,
+          "text_exact": false,
+          "semantic_passed": false,
+          "strict_passed": false,
+          "strict_text_exact": false
+        },
+        "context": {
+          "catalogue": [
+            {
+              "description": "Last confirmed progress and unresolved requirements.",
+              "slot_id": "current_progress"
+            },
+            {
+              "description": "Observed original side and location of the sample.",
+              "slot_id": "original_location"
+            },
+            {
+              "description": "Observed identity and role of the requested sample.",
+              "slot_id": "sample_identity"
+            },
+            {
+              "description": "Observed verification status and evidence.",
+              "slot_id": "verification_result"
+            }
+          ],
+          "goal": "Start with the sample initially on the right: verify it and return it home before verifying and returning the sample initially on the left.",
+          "mode": "WRITE",
+          "read_ids": [
+            "sample_identity"
+          ],
+          "selected_memory": [
+            {
+              "confirmed": false,
+              "revision": 4,
+              "slot_id": "sample_identity",
+              "status": "active",
+              "value": "The first requested sample is initially on the left."
+            }
+          ],
+          "visible_history": []
+        }
+      }
+    ],
+    "errors": []
+  },
+  "paraphrase_input_intervention": {
+    "count": 56,
+    "original_unique_inputs": 28,
+    "variant_counts": {
+      "1": 28,
+      "2": 28
+    },
+    "only_goal_differs": true,
+    "same_first_then_second_role": true,
+    "target_unchanged": true,
+    "memory_history_observation_ref_state_pixels_unchanged": true,
+    "source_rule": "Two authored English templates explicitly preserve first side, verify thenreturn beforesecond side",
+    "semantic_limit": "56 authored goal variants over28canonical inputs, not56novelphysicalepisodes or broadlanguage/generalrobot skills"
+  },
+  "v4_counterfactual_schema": {
+    "path": "/tmp/verify_protocol_generalization_v4.py",
+    "script_sha256": "2ca4febfbca78cad2a26eacc24cd178d3d054acd87bdf989314c7950c4667b4d",
+    "frozen_during_audit": true,
+    "rows": 88,
+    "mode_counts": {
+      "READ": 8,
+      "WRITE": 40,
+      "SUBTASK": 40
+    },
+    "selected_observation_count": 4,
+    "available_unique_image_state_inputs": 4,
+    "unique_actual_actor_inputs": 88,
+    "conflicting_targets": [],
+    "subtask_nested_envelope_counts": {
+      "('current_writes', 'selected')": 40
+    },
+    "invalid_current_writes": [],
+    "rejects_old_list_shaped_envelope": true,
+    "real_memory_tool_used": true,
+    "scope": "Native-schema controlled stale/empty/unconfirmed selected-memory stress. current_writesempty; NOT asserted to be natural result of preceding successfulCORRECT.",
+    "GPU_results_not_verified_here": true
+  },
+  "conclusion": "Val60/60=28deduplicatedactualinputs, ofwhich15freshwithinsearchedhistory; paraphrase54/56 with2WRITE syntaxerrors. v4schema corrected and oldlistregression rejected. No motor or taskSR claim."
+}

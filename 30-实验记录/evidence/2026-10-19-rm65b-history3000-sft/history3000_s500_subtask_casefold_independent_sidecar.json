@@ -1,0 +1,59 @@
+{
+  "schema": "rm65b_casefold_only_subtask_scoring_independent_audit_v1",
+  "status": "confirmed_case_sensitive_semantic_false_negative",
+  "GPU_used": false,
+  "model_constructed": false,
+  "original_reports_modified": false,
+  "new_model_generation": false,
+  "test_opened": false,
+  "same6_registered_phrases": true,
+  "transform": "Onlystrip+Unicodecasefold forSUBTASK matching; JSON/EOS/tool semantics unchanged; no additional synonym",
+  "source_reports_sha256": {
+    "val180": "87a029677433a0561e0e58ba62b7b2b31fccc638576e23643999989ab76081d1",
+    "train_quick96": "18601247257b26fc7402745a1ca9c0cf4d281bd425ae72cee0eed3811a4493cd",
+    "revision_only40": "d978ec7a1901bb3e070e98fc566fb00a5d1a78ea9a44ab1b39b49f3af3062b7b",
+    "history_ablation16": "97cc3d4e7f931d24a6b2b82d0a92ff3087def89c809188eb47fcd9187407a9f8",
+    "legacy_regression96": "9658f9345d103ae2389270e459810289a68dcd4ddad89f4a5e5e412c5f0c3ef0"
+  },
+  "suites": {
+    "val180": {
+      "old_strict": 126,
+      "casefold_only_strict": 127,
+      "eligible": 180,
+      "changes": [
+        {
+          "sample_id": "rm65b_dynamic_history_protocol_3000_v1:d904f49a76d4568ae084f4a7915e8aab9c163bee0e702a08bda457d9fe1312e3:SUBTASK:WRITE:r10:stress0",
+          "raw_text": " lift and hold the sample initially on the right.",
+          "side": "right",
+          "old_semantic6": false,
+          "new_casefold_semantic6": true,
+          "actualEOS": true
+        }
+      ]
+    },
+    "train_quick96": {
+      "old_strict": 66,
+      "casefold_only_strict": 66,
+      "eligible": 96,
+      "changes": []
+    },
+    "revision_only40": {
+      "old_strict": 5,
+      "casefold_only_strict": 5,
+      "eligible": 40,
+      "changes": []
+    },
+    "history_ablation16": {
+      "old_strict": 15,
+      "casefold_only_strict": 15,
+      "eligible": 16,
+      "changes": []
+    },
+    "legacy_regression96": {
+      "old_strict": 57,
+      "casefold_only_strict": 57,
+      "eligible": 96,
+      "changes": []
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "status": "passed",
+  "reviewed_at_utc": "2026-10-19T09:16:16.857497+00:00",
+  "scope": "Independent CPU/read-only source/note verification; no model load, inference, GPU, training or note/source mutation.",
+  "note": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/2026-10-19-RM65B高层协议延长训练与修复验证.md",
+  "followup": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/2026-10-19-RM65B-C2200留出绑定与仿真闭环验证.md",
+  "archive": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-protocol-sample-style",
+  "sha256": {
+    "source": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8",
+    "note": "26250c2e288c909e5f682e8fdb04fb4232a4951bbe9fcd73ff109c1656b8cd31",
+    "followup": "e5b02aa69fb84b250cdf90053e360517ccc872d353339148c16c29b7b4aab36b",
+    "excerpt": "cc140d114a1e332ef74b31feff62e032686a7afe7cf42262c43d6b9a876bf6fe",
+    "manifest": "fa975e9b94445c10223c1fbe62e4970c3034ab53d24fa521105c595a41111e95"
+  },
+  "checks_passed": 26,
+  "checks_total": 26,
+  "checks": [
+    {
+      "name": "source_sha_96_rows",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "seven_excerpt_rows_byte_exact_in_manifest_order",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "manifest_row_metadata_and_source_positions_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "archive_only_three_small_documents",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent_audit_manifest_sha",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent_audit_source_consistent",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "main_note_only_one_section_inserted",
+      "passed": true,
+      "details": {
+        "inserted_section_start_line": 26,
+        "inserted_lines": 185
+      }
+    },
+    {
+      "name": "followup_only_pointer_inserted",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "manifest_note_before_after_hashes_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_json_fences_legal",
+      "passed": true,
+      "details": {
+        "json_fences": 4,
+        "errors": []
+      }
+    },
+    {
+      "name": "READ_core_projection_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "WRITE_input_fields_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "WRITE_output_semantically_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "SUBTASK_actor_memory_and_inputs_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "SUBTASK_native_actor_memory_envelope",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "SUBTASK_left_right_exact_text_and_sample_ids",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_observation_three_modes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "four_WRITE_table_conditions_and_exact_target_strings",
+      "passed": true,
+      "details": [
+        {
+          "category": "WRITE",
+          "sample_id": "fresh_protocol_layout_01_left_31100:d0:static_hold_protocol:WRITE",
+          "row_exact": true,
+          "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}"
+        },
+        {
+          "category": "KEEP",
+          "sample_id": "fresh_protocol_layout_05_right_31510:d16:counterfactual_memory_confidence:WRITE",
+          "row_exact": true,
+          "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}"
+        },
+        {
+          "category": "CORRECT",
+          "sample_id": "fresh_protocol_layout_05_left_31500:d32:counterfactual_memory_corruption:WRITE",
+          "row_exact": true,
+          "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}"
+        },
+        {
+          "category": "EMPTY",
+          "sample_id": "fresh_protocol_layout_02_left_31200:d8:static_hold_protocol:WRITE",
+          "row_exact": true,
+          "target_text": "{\"operations\":[]}"
+        }
+      ]
+    },
+    {
+      "name": "EMPTY_is_statistics_name_no_EMPTY_operation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_visible_history_empty_list_motor_labels_false",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "offline_not_success_or_online_trajectory_scope_explicit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "confirmed_not_physical_validation_or_success_explicit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_context_history_field_vs_runtime_mapping_not_conflated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_sha_displayed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "distribution_96_nine_targets_episode_count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "NPZ_documented_shapes_and_instruction_real",
+      "passed": true,
+      "details": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "state": {
+          "shape": [
+            24
+          ],
+          "dtype": "float32"
+        },
+        "instruction": {
+          "shape": [],
+          "dtype": "<U125"
+        }
+      }
+    }
+  ],
+  "not_reverified": [
+    "Obsidian reading-view rendering",
+    "Historical training/GPU/simulation claims outside the new section",
+    "Physical task success; these records are not motor demonstrations."
+  ]
+}

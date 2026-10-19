@@ -1,0 +1,76 @@
+{
+  "status": "planned",
+  "checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint",
+  "checkpoint_audit": {
+    "global_step": 2200,
+    "trainable_numel": 3686400,
+    "trainable_tensors": 144,
+    "runtime_mem_enabled": false
+  },
+  "cases": [
+    {
+      "case_id": "case00_left_first",
+      "seed": 31600,
+      "first_side": "left",
+      "execution_order": [
+        "sample_a",
+        "sample_b"
+      ],
+      "home_xy": [
+        [
+          -0.1,
+          -0.1
+        ],
+        [
+          0.1,
+          -0.1
+        ]
+      ],
+      "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home."
+    },
+    {
+      "case_id": "case01_right_first",
+      "seed": 31610,
+      "first_side": "right",
+      "execution_order": [
+        "sample_b",
+        "sample_a"
+      ],
+      "home_xy": [
+        [
+          -0.1,
+          -0.1
+        ],
+        [
+          0.1,
+          -0.1
+        ]
+      ],
+      "goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home."
+    }
+  ],
+  "steps_per_case": 128,
+  "physical_time_cap_s": 7.68,
+  "mode": "autonomous_high_level",
+  "optimizer_constructed": false,
+  "optimizer_updates": 0,
+  "formal_3000_training": false,
+  "task_SR_claim": false,
+  "contract": {
+    "SDK_dim": 24,
+    "cameras": 3,
+    "period_s": 0.06,
+    "H": 16,
+    "K_exec": 1
+  },
+  "original_entry_modified": false,
+  "runner_version": "v3_frozen",
+  "script_sha256": "777f3b1e9a55f83ce375e630873d460e52c40e3fff8416fa9b21aaec1f85a3c4",
+  "motor_noise_protocol": {
+    "query_seed": "7+action_calls",
+    "reset_each_case": true,
+    "torch_CPU_and_CUDA_seeded": true,
+    "same_observation_claim": false,
+    "source_path": "NativePi05Actor.actions->_predict_eval(noise=None,rng=None)->Pi0.sample_actions torch.randn(generator=None); highlevel greedy argmax"
+  }
+}

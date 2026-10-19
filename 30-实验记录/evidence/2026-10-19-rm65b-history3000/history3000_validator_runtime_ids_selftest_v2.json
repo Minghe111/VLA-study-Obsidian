@@ -1,0 +1,63 @@
+{
+  "version": "rm65b_history3000_independent_acceptance_v2_runtime_ids",
+  "self_test": {
+    "status": "passed_cpu_only",
+    "negative_fixtures_rejected": [
+      "legacy",
+      "future",
+      "completed",
+      "bool_clock",
+      "negative_clock",
+      "float_clock",
+      "duplicate_id",
+      "overlap",
+      "end_before_start",
+      "alias_conflict"
+    ],
+    "source_clip_fixture_passed": true,
+    "future_unclipped_fixture_rejected": true,
+    "empty_and_serialized_typed_history_parity": true,
+    "native_confirmed_wrong_identity_stress_replayed": true,
+    "list_actor_memory_negative_fixture_rejected": true,
+    "active_revision_only_rule_invariance": true,
+    "wrong_value_requires_CORRECT_for_confirmed_true_and_false": true,
+    "same_row_static_source_ID_negative_fixture_rejected": true,
+    "forged_raw_to_model_ID_map_negative_fixture_rejected": true,
+    "actual_controller_runtime_ID_contract": {
+      "status": "passed_CPU_controller_entry_stub_no_model_no_simulator",
+      "controller_source": {
+        "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py",
+        "sha256": "ced775fdf711b671fe5560572176b798d28bf6992de4d5f3670690ad977ea75e"
+      },
+      "cases": [
+        {
+          "control_step": 0,
+          "actual_decision_id": "h000000",
+          "expected": "h000000"
+        },
+        {
+          "control_step": 32,
+          "actual_decision_id": "h000032",
+          "expected": "h000032"
+        },
+        {
+          "control_step": 64,
+          "actual_decision_id": "h000064",
+          "expected": "h000064"
+        },
+        {
+          "control_step": 256,
+          "actual_decision_id": "h000256",
+          "expected": "h000256"
+        }
+      ]
+    }
+  },
+  "GPU_loaded": false,
+  "training_started": false,
+  "validator_script": {
+    "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/scripts/validate_history3000.py",
+    "sha256_at_start": "a7a5d3c5322f5cb252a717128a13bb2962dbe5e91b3edc25a09bcc9b4cfd1175",
+    "sha256_at_end": "a7a5d3c5322f5cb252a717128a13bb2962dbe5e91b3edc25a09bcc9b4cfd1175"
+  }
+}

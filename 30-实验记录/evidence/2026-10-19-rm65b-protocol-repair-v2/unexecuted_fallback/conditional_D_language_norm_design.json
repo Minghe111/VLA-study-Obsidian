@@ -1,0 +1,30 @@
+{
+  "status": "reference_only_not_triggered",
+  "engineering_changes_applied": false,
+  "gpu_or_training": false,
+  "parent_reported_C2000_fit": 96,
+  "proposed_stage": "language_readout",
+  "trainable_tensors": 145,
+  "trainable_numel": 3688448,
+  "new_trainable_base_key": "llm.final_norms.0.scale",
+  "new_parameters_created": 0,
+  "requires_full_checkpoint": true,
+  "critical_blockers_if_implemented": [
+    "native KV trainable-base guard needs exact final-norm exception",
+    "mixed precision reload must preserve unrounded FP32 norm values",
+    "compact adapter format would omit norm and must be refused or versioned",
+    "cross-stage fork must reset trainer state and forbid exact-resume claims"
+  ],
+  "cpu_structural_proof": {
+    "device": "cpu",
+    "model": "actual Gemma dummy,4layers,64width",
+    "optimizer_constructed": false,
+    "prefix_hidden_changed": true,
+    "all_prefix_kv_exact": true,
+    "fixed_prefix_expert_suffix_exact": true,
+    "scope": "Only final_norms.0.scale changed; this does not prove jointly changing attention LoRA preserves actions or that generated prompt remains unchanged.",
+    "ce_gradient_finite": true,
+    "ce_gradient_nonzero": true
+  },
+  "design_path": "/tmp/conditional_D_language_norm_design.md"
+}

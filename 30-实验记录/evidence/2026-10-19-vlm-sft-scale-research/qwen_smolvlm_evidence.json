@@ -1,0 +1,65 @@
+{
+  "checked_on": "2026-10-19",
+  "qwen": {
+    "repo": "QwenLM/Qwen3-VL",
+    "commit": "96588727e44c78b25ba03ea03b8e12f7e64fd0da",
+    "train_url": "https://github.com/QwenLM/Qwen3-VL/blob/96588727e44c78b25ba03ea03b8e12f7e64fd0da/qwen-vl-finetune/qwenvl/train/train_qwen.py#L163-L178",
+    "argument_url": "https://github.com/QwenLM/Qwen3-VL/blob/96588727e44c78b25ba03ea03b8e12f7e64fd0da/qwen-vl-finetune/qwenvl/train/argument.py#L42-L45",
+    "script_url": "https://github.com/QwenLM/Qwen3-VL/blob/96588727e44c78b25ba03ea03b8e12f7e64fd0da/qwen-vl-finetune/scripts/sft_30a3b_lora.sh",
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "selection": "name matching throughout model, no last-layer restriction",
+    "lora_rank": 64,
+    "lora_alpha": 128,
+    "script_lr": 0.00001,
+    "script_micro_batch": 1,
+    "script_grad_accum": 4,
+    "script_epochs": 0.5,
+    "dataset": "public_dataset1,public_dataset2 placeholders, count unknown",
+    "result_status": "recipe only; no measured evaluation"
+  },
+  "smolvlm": {
+    "repo": "huggingface/cookbook",
+    "commit": "b23df069425fe24cd9a38f8a86c5cb9e163917a0",
+    "url": "https://github.com/huggingface/cookbook/blob/b23df069425fe24cd9a38f8a86c5cb9e163917a0/notebooks/en/fine_tuning_smol_vlm_sft_trl.ipynb",
+    "dataset": "HuggingFaceM4/ChartQA train[:10%]",
+    "train_count": 2830,
+    "micro_batch": 4,
+    "grad_accum": 4,
+    "effective_batch_single_gpu": 16,
+    "epochs": 1,
+    "planned_updates": 177,
+    "lora_rank": 8,
+    "lora_alpha": 8,
+    "use_dora": true,
+    "target_modules": [
+      "down_proj",
+      "o_proj",
+      "k_proj",
+      "q_proj",
+      "gate_proj",
+      "up_proj",
+      "v_proj"
+    ],
+    "trainable_params": 11269248,
+    "lr": 0.0001,
+    "warmup_steps": 50,
+    "caveats": [
+      "Model already trained on ChartQA",
+      "Only saved progress is 3/177, not completed-run proof",
+      "Qualitative example only, no quantitative holdout success metric",
+      "Uses existing fluent instruction VLM, unlike action-only pi05 checkpoint"
+    ]
+  },
+  "trl": {
+    "commit": "6d6901c5e3963108076131ac4979d344566b13a221",
+    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a221/docs/source/sft_trainer.md",
+    "assistant_only": "explicit option; requires generation markers in chat template, not default for every conversational recipe",
+    "eos": "align training template and inference end token; Qwen im_end example",
+    "adapter_lr": "docs suggest ~1e-4 for adapters as heuristic, not validated pi05 setting"
+  }
+}

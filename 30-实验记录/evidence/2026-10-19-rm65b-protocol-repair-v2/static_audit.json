@@ -1,0 +1,94 @@
+{
+  "verified_at_local": "2026-10-19T14:40:43.903106",
+  "read_only_model_scope": true,
+  "gpu_or_model_loaded_by_auditor": false,
+  "source_integrity": {
+    "manifest": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/source_snapshot_manifest.json",
+    "root": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1",
+    "files": 2215,
+    "mismatches": [],
+    "all_match": true
+  },
+  "publication_integrity": {
+    "manifest": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/publication_manifest.json",
+    "root": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2",
+    "files": 2229,
+    "mismatches": [],
+    "all_match": true
+  },
+  "worker_logging_only_ast_equivalence": true,
+  "worker_math_note": "After removing new diagnostic-only assignments and append, AST is identical to previous worker. No loss/backward/clip/optimizer/RNG expression changed.",
+  "cpu_receipt": {
+    "tests": 114,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "active_run_snapshot": {
+    "status_at_read": "running",
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_0600/report.json",
+    "training_label_provenance": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+      "sha256": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8",
+      "source_effective_config": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/effective_config.yaml",
+      "checkpoint_provenance_preserved": true
+    },
+    "resume": {
+      "restored": true,
+      "exact_resume": true,
+      "missing": [],
+      "global_step": 300,
+      "resume_state_version": 1
+    },
+    "sampler_before": {
+      "data_fingerprint": "7c137c5950704b7300d303464f20486157dcb2bb66d2349ce0a849375776ca45",
+      "microbatch_cursor": 1200,
+      "contract": {
+        "batch_size": 1,
+        "gradient_accumulation": 4,
+        "anchor_interval": 4,
+        "training_mode": "verified_sft",
+        "loss_weights": {
+          "high_ce": 1.0,
+          "fast_ce": 0.0,
+          "fm": 0.0,
+          "kv_anchor": 1.0
+        },
+        "shuffle": true,
+        "seed": 20261019
+      }
+    }
+  },
+  "provenance_review": {
+    "source_absolute_label_path_inherited_from_checkpoint_effective_yaml": true,
+    "sha_checked_against_version_metadata": true,
+    "saved_spelling_preserved": true,
+    "strict_sampler_fingerprint_not_weakened": true,
+    "fork_separate_from_exact_resume": true
+  },
+  "stopping_review": {
+    "full96_and_16_local_retention_two_consecutive": true,
+    "plateau_earliest_step": 1000,
+    "plateau_requires_language_and_two_retention_pools_stagnant": true,
+    "running_cap": 2000,
+    "parser_hard_max": 2400,
+    "automatic_promotion": false,
+    "formal3000": false
+  },
+  "preflight_probe": {
+    "status": "completed",
+    "optimizer_constructed": false,
+    "optimizer_updates": 0,
+    "parameters_unchanged": true,
+    "script_sha256": "37d0a61b267d7ac2d1ed0b05020c3e9d6917f858a4f815938b6b8dddc0dce3f3",
+    "peak_allocated_mib": 7074.8623046875,
+    "peak_reserved_mib": 7308.0
+  },
+  "issues": [],
+  "limitations": [
+    "Static code audit and current exact-resume receipt; training in progress is not completion.",
+    "Local retention is 8 anchors plus 8 unused times from same expert trajectory; not skill SR.",
+    "96 labels are fitting diagnostics; do not establish semantic/MEM/visual generalization.",
+    "No binary weights/checkpoints/NPZ archived."
+  ]
+}

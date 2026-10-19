@@ -1,0 +1,427 @@
+{
+  "read_only": true,
+  "GPU_or_model_loaded": false,
+  "source_labels": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+  "label_sha256": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8",
+  "input_field_audit": {
+    "records": 96,
+    "textual_train_vs_inference_prefix_mismatches": [],
+    "state_for_string_test": "same synthetic normalized32 zeros; visual/model transforms not executed in this check",
+    "text_only_unique_prefixes": 22,
+    "text_only_conflicting_targets": [],
+    "current_instruction_present_in_context_count": 0,
+    "advantage_verified_sft": null,
+    "evidence": "Both training and generation explicitly build same goal+memory_index+actor/selected_memory+history+mode. Initial raw prompt empty in both observation adapters. No current_instruction is separately read in either high-level path."
+  },
+  "step_metrics": {
+    "600": {
+      "READ": {
+        "count": 32,
+        "fit_passed": 32,
+        "ce": 0.03021907538641244,
+        "gold_correct": 320,
+        "gold_tokens": 320
+      },
+      "SUBTASK": {
+        "count": 32,
+        "fit_passed": 17,
+        "ce": 0.10258521419018507,
+        "gold_correct": 369,
+        "gold_tokens": 384,
+        "by_side": {
+          "left": {
+            "count": 16,
+            "fit_passed": 11
+          },
+          "right": {
+            "count": 16,
+            "fit_passed": 6
+          }
+        },
+        "generated_texts": {
+          "Pick up and hold the sample initially on the left.": 21,
+          "Pick up and hold the sample initially on the right.": 11
+        }
+      },
+      "WRITE": {
+        "count": 32,
+        "fit_passed": 8,
+        "ce": 1.1611065662000328,
+        "gold_correct": 598,
+        "gold_tokens": 784,
+        "by_operation": {
+          "EMPTY": {
+            "count": 8,
+            "fit_passed": 8,
+            "generated_texts": {
+              "{\"operations\":[]}": 8
+            }
+          },
+          "CORRECT": {
+            "count": 8,
+            "fit_passed": 0,
+            "generated_texts": {
+              "{\"operations\":[]}": 8
+            }
+          },
+          "WRITE": {
+            "count": 8,
+            "fit_passed": 0,
+            "generated_texts": {
+              "{\"operations\": yes: {\"read\"Sub the right.": 3,
+              "{\"operations\": yes: {\"read: {\"operations\": sponge\"\"op\":\" go initially on the left.": 1,
+              "{\"operations\": yes: {\"read - -ٶ": 2,
+              "{\"operations\": yes\":{\" go go go go go go go go go go go go go go go sample atopop\":\"The the sample at theSub theSub theSub theSub theSub thereturn on the right.": 1,
+              "{\"operations\": yes: {\"read\"Sub the left.": 1
+            }
+          },
+          "KEEP": {
+            "count": 8,
+            "fit_passed": 0,
+            "generated_texts": {
+              "{\"operations\":[]}": 8
+            }
+          }
+        }
+      }
+    },
+    "800": {
+      "READ": {
+        "count": 32,
+        "fit_passed": 32,
+        "ce": 0.01557286418392323,
+        "gold_correct": 320,
+        "gold_tokens": 320
+      },
+      "SUBTASK": {
+        "count": 32,
+        "fit_passed": 17,
+        "ce": 0.08080339268781245,
+        "gold_correct": 369,
+        "gold_tokens": 384,
+        "by_side": {
+          "left": {
+            "count": 16,
+            "fit_passed": 11
+          },
+          "right": {
+            "count": 16,
+            "fit_passed": 6
+          }
+        },
+        "generated_texts": {
+          "Pick up and hold the sample initially on the left.": 21,
+          "Pick up and hold the sample initially on the right.": 11
+        }
+      },
+      "WRITE": {
+        "count": 32,
+        "fit_passed": 8,
+        "ce": 0.3848394356900826,
+        "gold_correct": 722,
+        "gold_tokens": 784,
+        "by_operation": {
+          "EMPTY": {
+            "count": 8,
+            "fit_passed": 8,
+            "generated_texts": {
+              "{\"operations\":[]}": 8
+            }
+          },
+          "CORRECT": {
+            "count": 8,
+            "fit_passed": 0,
+            "generated_texts": {
+              "{\"operations\":[]}": 8
+            }
+          },
+          "WRITE": {
+            "count": 8,
+            "fit_passed": 0,
+            "generated_texts": {
+              "{\"operations\":[{\"confirmed\":true,\"op\":\"\":\" slot": 6,
+              "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first first first first\"\"\"\".": 1,
+              "{\"operations\":[{\"confirmed\":true,\"op\":\"\":\" slot_id\":\"sample_identity\":\"\":\"samplespiylecalciatore_identity": 1
+            }
+          },
+          "KEEP": {
+            "count": 8,
+            "fit_passed": 0,
+            "generated_texts": {
+              "{\"operations\":[]}": 8
+            }
+          }
+        }
+      }
+    },
+    "1000": {
+      "READ": {
+        "count": 32,
+        "fit_passed": 32,
+        "ce": 0.008981872524600476,
+        "gold_correct": 320,
+        "gold_tokens": 320
+      },
+      "SUBTASK": {
+        "count": 32,
+        "fit_passed": 16,
+        "ce": 0.07197884086053818,
+        "gold_correct": 368,
+        "gold_tokens": 384,
+        "by_side": {
+          "left": {
+            "count": 16,
+            "fit_passed": 0
+          },
+          "right": {
+            "count": 16,
+            "fit_passed": 16
+          }
+        },
+        "generated_texts": {
+          "Pick up and hold the sample initially on the right.": 32
+        }
+      },
+      "WRITE": {
+        "count": 32,
+        "fit_passed": 19,
+        "ce": 0.20726103824563324,
+        "gold_correct": 767,
+        "gold_tokens": 784,
+        "by_operation": {
+          "EMPTY": {
+            "count": 8,
+            "fit_passed": 8,
+            "generated_texts": {
+              "{\"operations\":[]}": 8
+            }
+          },
+          "CORRECT": {
+            "count": 8,
+            "fit_passed": 0,
+            "generated_texts": {
+              "{\"operations\":[]}": 8
+            }
+          },
+          "WRITE": {
+            "count": 8,
+            "fit_passed": 4,
+            "generated_texts": {
+              "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}": 8
+            }
+          },
+          "KEEP": {
+            "count": 8,
+            "fit_passed": 7,
+            "generated_texts": {
+              "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}": 7,
+              "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\"}]}": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "bad_examples_C1000": [
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d24:static_hold_protocol:SUBTASK",
+      "mode": "SUBTASK",
+      "target": "Pick up and hold the sample initially on the left.",
+      "generated": "Pick up and hold the sample initially on the right.",
+      "gold_correct": 11,
+      "gold_tokens": 12,
+      "context": {
+        "actor_memory": {
+          "current_writes": [],
+          "selected": [
+            {
+              "confirmed": true,
+              "revision": 3,
+              "slot_id": "sample_identity",
+              "status": "active",
+              "value": "The first requested sample is initially on the left."
+            }
+          ]
+        },
+        "catalogue": [
+          {
+            "description": "Last confirmed progress and unresolved requirements.",
+            "slot_id": "current_progress"
+          },
+          {
+            "description": "Observed original side and location of the sample.",
+            "slot_id": "original_location"
+          },
+          {
+            "description": "Observed identity and role of the requested sample.",
+            "slot_id": "sample_identity"
+          },
+          {
+            "description": "Observed verification status and evidence.",
+            "slot_id": "verification_result"
+          }
+        ],
+        "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "mode": "SUBTASK",
+        "read_ids": [
+          "sample_identity"
+        ],
+        "visible_history": []
+      }
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d32:counterfactual_memory_corruption:WRITE",
+      "mode": "WRITE",
+      "target": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "generated": "{\"operations\":[]}",
+      "gold_correct": 33,
+      "gold_tokens": 35,
+      "context": {
+        "catalogue": [
+          {
+            "description": "Last confirmed progress and unresolved requirements.",
+            "slot_id": "current_progress"
+          },
+          {
+            "description": "Observed original side and location of the sample.",
+            "slot_id": "original_location"
+          },
+          {
+            "description": "Observed identity and role of the requested sample.",
+            "slot_id": "sample_identity"
+          },
+          {
+            "description": "Observed verification status and evidence.",
+            "slot_id": "verification_result"
+          }
+        ],
+        "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "mode": "WRITE",
+        "read_ids": [
+          "sample_identity"
+        ],
+        "selected_memory": [
+          {
+            "confirmed": false,
+            "revision": 4,
+            "slot_id": "sample_identity",
+            "status": "active",
+            "value": "The first requested sample is initially on the right."
+          }
+        ],
+        "visible_history": []
+      }
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_left_31100:d0:static_hold_protocol:WRITE",
+      "mode": "WRITE",
+      "target": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "generated": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "gold_correct": 34,
+      "gold_tokens": 35,
+      "context": {
+        "catalogue": [
+          {
+            "description": "Last confirmed progress and unresolved requirements.",
+            "slot_id": "current_progress"
+          },
+          {
+            "description": "Observed original side and location of the sample.",
+            "slot_id": "original_location"
+          },
+          {
+            "description": "Observed identity and role of the requested sample.",
+            "slot_id": "sample_identity"
+          },
+          {
+            "description": "Observed verification status and evidence.",
+            "slot_id": "verification_result"
+          }
+        ],
+        "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "mode": "WRITE",
+        "read_ids": [
+          "sample_identity"
+        ],
+        "selected_memory": [
+          {
+            "confirmed": false,
+            "revision": 0,
+            "slot_id": "sample_identity",
+            "status": "empty",
+            "value": null
+          }
+        ],
+        "visible_history": []
+      }
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_left_31300:d16:counterfactual_memory_confidence:WRITE",
+      "mode": "WRITE",
+      "target": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "generated": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\"}]}",
+      "gold_correct": 22,
+      "gold_tokens": 23,
+      "context": {
+        "catalogue": [
+          {
+            "description": "Last confirmed progress and unresolved requirements.",
+            "slot_id": "current_progress"
+          },
+          {
+            "description": "Observed original side and location of the sample.",
+            "slot_id": "original_location"
+          },
+          {
+            "description": "Observed identity and role of the requested sample.",
+            "slot_id": "sample_identity"
+          },
+          {
+            "description": "Observed verification status and evidence.",
+            "slot_id": "verification_result"
+          }
+        ],
+        "goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "mode": "WRITE",
+        "read_ids": [
+          "sample_identity"
+        ],
+        "selected_memory": [
+          {
+            "confirmed": false,
+            "revision": 2,
+            "slot_id": "sample_identity",
+            "status": "active",
+            "value": "The first requested sample is initially on the left."
+          }
+        ],
+        "visible_history": []
+      }
+    }
+  ],
+  "prefix_examples": {
+    "READ": {
+      "sample_id": "fresh_protocol_layout_01_left_31100:d8:static_hold_protocol:READ",
+      "target": "{\"read_ids\":[\"sample_identity\"]}",
+      "prefix": "Task: Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home., State: 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: []\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: "
+    },
+    "SUBTASK": {
+      "sample_id": "fresh_protocol_layout_03_right_31310:d0:static_hold_protocol:SUBTASK",
+      "target": "Pick up and hold the sample initially on the right.",
+      "prefix": "Task: Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home., State: 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {\"current_writes\":[{\"confirmed\":true,\"revision\":1,\"slot_id\":\"sample_identity\",\"status\":\"active\",\"value\":\"The first requested sample is initially on the right.\"}],\"selected\":[{\"confirmed\":true,\"revision\":1,\"slot_id\":\"sample_identity\",\"status\":\"active\",\"value\":\"The first requested sample is initially on the right.\"}]}\nHistory: []\nMode: SUBTASK\nGenerate the next executable subtask as natural-language text. Do not return a skill identifier.\nResponse: "
+    },
+    "WRITE": {
+      "sample_id": "fresh_protocol_layout_02_left_31200:d8:static_hold_protocol:WRITE",
+      "target": "{\"operations\":[]}",
+      "prefix": "Task: Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home., State: 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: [{\"confirmed\":true,\"revision\":1,\"slot_id\":\"sample_identity\",\"status\":\"active\",\"value\":\"The first requested sample is initially on the left.\"}]\nHistory: []\nMode: WRITE\nReturn JSON {\"operations\":[{\"op\":\"WRITE|KEEP|CORRECT|REVOKE\",\"slot_id\":\"id\",\"value\":\"observed_fact\",\"confirmed\":false}]}. WRITE/CORRECT require value. Use an empty operations list for no write.\nResponse: "
+    }
+  },
+  "conclusions": [
+    "No missing goal/role/memory field mismatch found between teacher forcing and generation.",
+    "No contradictory targets even when images and state are removed from the distinguishability check: goal+memory+mode suffice on this96.",
+    "SUBTASK left-right is a single token: C1000 368/384 teacher tokens correct while only16/32 semantic answers correct.",
+    "C1000 WRITE CORRECT all8 collapse to empty operations; WRITE alwaysright gives4/8.",
+    "A low token-averaged CE is not evidence of correct role/memory conditioning.",
+    "Current instruction is not separately exposed, but given static task labels it is inferable from first role in goal; complex progress labels would need explicit future schema audit."
+  ]
+}

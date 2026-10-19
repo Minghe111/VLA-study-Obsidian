@@ -1,0 +1,296 @@
+{
+  "status": "completed",
+  "command": "baseline",
+  "stage": "protocol",
+  "size": 9,
+  "started_unix": 1792387473.8118858,
+  "formal_3000_training": false,
+  "task_SR_measured": false,
+  "contract": {
+    "action_dim": 24,
+    "cameras": 3,
+    "period_s": 0.06,
+    "H": 16,
+    "execute": 1
+  },
+  "script_sha256": "854f1c57e981436a17f2a003e325c18ed2daf39a9e053903b564a4a6a91e36cf",
+  "output": "reports/comparison_v1/00_baseline",
+  "data_audit": {
+    "records": 9,
+    "modes": {
+      "SUBTASK": 3,
+      "READ": 3,
+      "WRITE": 3
+    },
+    "distinct_observations": 9,
+    "files": [
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit9.train.jsonl",
+        "sha256": "74208b9db27bf62ee3ba75e3c8b795c8dec6ed4ac2d0febf6c62741f88e4f7d9"
+      }
+    ]
+  },
+  "initial_model_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi",
+  "loaded_model_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi",
+  "model_audit": {
+    "training_stage": "protocol",
+    "vlm_mode": "lora",
+    "runtime_mem_enabled": false,
+    "trainable_parameters": [
+      {
+        "name": "llm.layers.17.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      }
+    ],
+    "mem_config": {
+      "mem_enabled": true,
+      "mem_num_frames": 4,
+      "mem_temporal_interval": 4,
+      "mem_drop_after": 24,
+      "mem_vision_lora_rank": 8,
+      "mem_vision_lora_alpha": 8.0
+    },
+    "trainable_numel": 131072
+  },
+  "frozen_sha_before": "5ff29be69661d74b178699e8f89934b1617e93b73340ee5e897a00dab2f78357",
+  "frozen_sha_after": "5ff29be69661d74b178699e8f89934b1617e93b73340ee5e897a00dab2f78357",
+  "frozen_parameters_exact": true,
+  "changed_trainable_tensors": 0,
+  "max_trainable_delta": 0.0,
+  "evaluation": {
+    "count": 9,
+    "modes": {
+      "SUBTASK": 3,
+      "READ": 3,
+      "WRITE": 3
+    },
+    "teacher_forced_ce": 16.664328151279026,
+    "gold_tokens": 159,
+    "gold_correct": 0,
+    "eos": {
+      "passed": 0,
+      "eligible": 9
+    },
+    "nonempty": {
+      "passed": 9,
+      "eligible": 9
+    },
+    "first_token_match": {
+      "passed": 0,
+      "eligible": 9
+    },
+    "json": {
+      "passed": 0,
+      "eligible": 6
+    },
+    "schema_legal": {
+      "passed": 0,
+      "eligible": 6
+    },
+    "target_match": {
+      "passed": 0,
+      "eligible": 6
+    },
+    "required_terms": {
+      "passed": 0,
+      "eligible": 3
+    },
+    "side_binding_lexical": {
+      "passed": 0,
+      "eligible": 3
+    },
+    "text_exact": {
+      "passed": 0,
+      "eligible": 9
+    },
+    "passed": {
+      "passed": 0,
+      "eligible": 9
+    },
+    "fit_passed": {
+      "passed": 0,
+      "eligible": 9
+    },
+    "all_fit_passed": false
+  },
+  "retention": {
+    "format": "rm65b_fit_retention_v1",
+    "manifest_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/retention_anchor/manifest.json",
+    "manifest_sha256": "9f027c50fc5a2d5d80d378f24f5e26dc560f0e1d4d838d3ec7accbbb8172d6f2",
+    "teacher_mode": "all_adapters_disabled",
+    "student_mode": "not_evaluated_baseline_only",
+    "training_stage": "protocol",
+    "scope": "Eight fixed observation time points from one expert episode; same three RGB cameras, state, original instruction and stored noise. Local retention only, not rollout SR.",
+    "source_episode": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/data/expert_demo_v7",
+    "control_contract": {
+      "action_dim": 24,
+      "camera_count": 3,
+      "nominal_control_seconds": 0.06
+    },
+    "thresholds": {
+      "normalized_physical24_rms_max": 0.02,
+      "masked_all_layer_kv_relative_rms_max": 0.05,
+      "scope": "engineering local gates; not validated task-level safety or success thresholds"
+    },
+    "cases": [
+      {
+        "case_id": "legacy_single_bottle_step_000000",
+        "control_step": 0,
+        "sdk_action_shape": [
+          1,
+          16,
+          24
+        ],
+        "normalized_internal_shape": [
+          1,
+          16,
+          32
+        ],
+        "valid_prefix_tokens": 875
+      },
+      {
+        "case_id": "legacy_single_bottle_step_000032",
+        "control_step": 32,
+        "sdk_action_shape": [
+          1,
+          16,
+          24
+        ],
+        "normalized_internal_shape": [
+          1,
+          16,
+          32
+        ],
+        "valid_prefix_tokens": 876
+      },
+      {
+        "case_id": "legacy_single_bottle_step_000064",
+        "control_step": 64,
+        "sdk_action_shape": [
+          1,
+          16,
+          24
+        ],
+        "normalized_internal_shape": [
+          1,
+          16,
+          32
+        ],
+        "valid_prefix_tokens": 876
+      },
+      {
+        "case_id": "legacy_single_bottle_step_000096",
+        "control_step": 96,
+        "sdk_action_shape": [
+          1,
+          16,
+          24
+        ],
+        "normalized_internal_shape": [
+          1,
+          16,
+          32
+        ],
+        "valid_prefix_tokens": 875
+      },
+      {
+        "case_id": "legacy_single_bottle_step_000128",
+        "control_step": 128,
+        "sdk_action_shape": [
+          1,
+          16,
+          24
+        ],
+        "normalized_internal_shape": [
+          1,
+          16,
+          32
+        ],
+        "valid_prefix_tokens": 875
+      },
+      {
+        "case_id": "legacy_single_bottle_step_000160",
+        "control_step": 160,
+        "sdk_action_shape": [
+          1,
+          16,
+          24
+        ],
+        "normalized_internal_shape": [
+          1,
+          16,
+          32
+        ],
+        "valid_prefix_tokens": 875
+      },
+      {
+        "case_id": "legacy_single_bottle_step_000192",
+        "control_step": 192,
+        "sdk_action_shape": [
+          1,
+          16,
+          24
+        ],
+        "normalized_internal_shape": [
+          1,
+          16,
+          32
+        ],
+        "valid_prefix_tokens": 872
+      },
+      {
+        "case_id": "legacy_single_bottle_step_000224",
+        "control_step": 224,
+        "sdk_action_shape": [
+          1,
+          16,
+          24
+        ],
+        "normalized_internal_shape": [
+          1,
+          16,
+          32
+        ],
+        "valid_prefix_tokens": 874
+      }
+    ],
+    "snapshot_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/00_baseline/retention/snapshot.pt",
+    "baseline_created": true
+  },
+  "memory": {
+    "peak_allocated_mib": 6921.8671875,
+    "peak_reserved_mib": 7036.0,
+    "host_peak_rss_mib": 22925.5
+  },
+  "card_memory_samples": 26,
+  "sampled_card_peak_mib": 8426.0,
+  "elapsed_s": 54.605045440999675
+}

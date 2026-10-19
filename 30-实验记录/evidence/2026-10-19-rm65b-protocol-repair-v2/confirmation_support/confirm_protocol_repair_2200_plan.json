@@ -1,0 +1,53 @@
+{
+  "status": "planned",
+  "optimizer_updates_executed": 0,
+  "extension": {
+    "at_utc": "2026-10-19T07:28:38.344477+00:00",
+    "previous_cap": 2000,
+    "previous_stop_reason": "budget_exhausted_not_converged",
+    "previous_summary_snapshot": "summary_cap2000.json",
+    "new_cap": 2200,
+    "first_all_pass_checkpoint": 2000,
+    "additional_optimizer_updates": 200,
+    "source_checkpoint_global_step": 300,
+    "total_additional_optimizer_updates_after_confirmation": 1900,
+    "reason": "second checkpoint confirmation after first C2000allpass",
+    "same_learning_rate": 5e-05,
+    "same_kv_anchor_weight": 1.0,
+    "training_label_provenance": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+      "sha256": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8",
+      "source_effective_config": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2000/effective_config.yaml",
+      "checkpoint_provenance_preserved": true
+    },
+    "no_lr_kv_branches_started": true
+  },
+  "argv": [
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/scripts/fit_comparison.py",
+    "fit",
+    "--stage",
+    "language_warmup",
+    "--size",
+    "96",
+    "--output",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200",
+    "--resume",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2000/checkpoint",
+    "--training-labels",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+    "--baseline",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/00_baseline/retention/snapshot.pt",
+    "--total-updates",
+    "2200",
+    "--max-fit-updates",
+    "2200",
+    "--learning-rate",
+    "5e-05",
+    "--kv-weight",
+    "1.0",
+    "--eval-all",
+    "--execute",
+    "--enable-training"
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "case": {
+    "case_id": "case01_right_first",
+    "seed": 31610,
+    "first_side": "right",
+    "execution_order": [
+      "sample_b",
+      "sample_a"
+    ],
+    "home_xy": [
+      [
+        -0.1,
+        -0.1
+      ],
+      [
+        0.1,
+        -0.1
+      ]
+    ],
+    "goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home."
+  },
+  "status": "failed",
+  "error": "Traceback (most recent call last):\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 50, in _object\n    value = json.loads(text)\n            ^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/miniconda3/envs/isaaclab/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/miniconda3/envs/isaaclab/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/miniconda3/envs/isaaclab/lib/python3.11/json/decoder.py\", line 355, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/tmp/c2200_closedloop_runner_v3.py\", line 283, in main\n    episode=controller.collect_episode(out/'episode',episode_id=case['case_id'],goal=case['goal'],seed=case['seed'],evaluate=True)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 316, in collect_episode\n    decision = self._decision(observation, memory, index, history)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 163, in _decision\n    read_obj = _object(read.text, \"READ\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 52, in _object\n    raise ValueError(f\"{expected} must be one JSON object, got {text!r}\") from exc\nValueError: READ must be one JSON object, got 'Sub right right'\n",
+  "workers_closed": true,
+  "worker_exit_receipts": [
+    {
+      "pid": 670795,
+      "exitcode": 0,
+      "alive": false
+    }
+  ],
+  "elapsed_s": 38.043344541001716,
+  "episode_evidence": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/postfit_validation_20261019_v1/highlevel_closedloop/case01_right_first/episode/failed_episode.json",
+    "kind": "failed_episode.json",
+    "metadata": {
+      "seed": 31610,
+      "control_period_s": 0.06,
+      "physics_dt_s": 0.004,
+      "high_level_window": 32,
+      "split": "heldout_eval",
+      "strict_memory_protocol": true,
+      "mem_num_frames": 1,
+      "mem_stride_steps": 8,
+      "collection_error": "ValueError: READ must be one JSON object, got 'Sub right right'"
+    },
+    "recorded_decision_count": 1,
+    "recorded_step_count": 32,
+    "last_step_terminal_fields": {
+      "terminated": false,
+      "truncated": false,
+      "termination_reason": "",
+      "physics_steps": 15,
+      "env_reward": 0.0
+    }
+  },
+  "episode_metadata": {
+    "seed": 31610,
+    "control_period_s": 0.06,
+    "physics_dt_s": 0.004,
+    "high_level_window": 32,
+    "split": "heldout_eval",
+    "strict_memory_protocol": true,
+    "mem_num_frames": 1,
+    "mem_stride_steps": 8,
+    "collection_error": "ValueError: READ must be one JSON object, got 'Sub right right'"
+  },
+  "motor_noise_seeds": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38
+  ],
+  "first_motor_input": {
+    "state24": [
+      -1.4337589740753174,
+      -0.17371128499507904,
+      -1.284809947013855,
+      0.7787038683891296,
+      -0.5827764868736267,
+      0.9314509630203247,
+      1000.0,
+      1000.0,
+      1000.0,
+      1000.0,
+      999.8757934570312,
+      0.002618774538859725,
+      1.4401777982711792,
+      0.17187872529029846,
+      1.2854288816452026,
+      -0.7795907855033875,
+      0.5846660733222961,
+      -0.9303672909736633,
+      1000.0,
+      1000.0,
+      1000.0,
+      1000.0,
+      999.875244140625,
+      0.003540416480973363
+    ],
+    "state24_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+    "rgb_sha256": {
+      "full_image": "0a98d0b9f06c76a167c8fa3a8f8244d062704b6210e46ce30afb0c82a4914a86",
+      "left_wrist_image": "9c7f7cb6b7dc7173dc17b6c50b6730259cf25e8667d02ebe28ed2b1e881976ed",
+      "right_wrist_image": "2eb45504af2cae747e4d6c123ab1b497895365aae29e45295c1ef0162ccd4669"
+    }
+  },
+  "diagnosis": {
+    "protocol_or_execution_error": "Traceback (most recent call last):\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 50, in _object\n    value = json.loads(text)\n            ^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/miniconda3/envs/isaaclab/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/miniconda3/envs/isaaclab/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/miniconda3/envs/isaaclab/lib/python3.11/json/decoder.py\", line 355, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/tmp/c2200_closedloop_runner_v3.py\", line 283, in main\n    episode=controller.collect_episode(out/'episode',episode_id=case['case_id'],goal=case['goal'],seed=case['seed'],evaluate=True)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 316, in collect_episode\n    decision = self._decision(observation, memory, index, history)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 163, in _decision\n    read_obj = _object(read.text, \"READ\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 52, in _object\n    raise ValueError(f\"{expected} must be one JSON object, got {text!r}\") from exc\nValueError: READ must be one JSON object, got 'Sub right right'\n",
+    "all_failure_evidence": {
+      "python_exception": "Traceback (most recent call last):\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 50, in _object\n    value = json.loads(text)\n            ^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/miniconda3/envs/isaaclab/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/miniconda3/envs/isaaclab/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/miniconda3/envs/isaaclab/lib/python3.11/json/decoder.py\", line 355, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/tmp/c2200_closedloop_runner_v3.py\", line 283, in main\n    episode=controller.collect_episode(out/'episode',episode_id=case['case_id'],goal=case['goal'],seed=case['seed'],evaluate=True)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 316, in collect_episode\n    decision = self._decision(observation, memory, index, history)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 163, in _decision\n    read_obj = _object(read.text, \"READ\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py\", line 52, in _object\n    raise ValueError(f\"{expected} must be one JSON object, got {text!r}\") from exc\nValueError: READ must be one JSON object, got 'Sub right right'\n",
+      "episode_metadata_errors": {
+        "collection_error": "ValueError: READ must be one JSON object, got 'Sub right right'"
+      },
+      "environment_failure_reason": null,
+      "last_step_termination_reason": ""
+    },
+    "subtask_decisions": 1,
+    "subtask_first_role_matches": 1,
+    "autonomous_subtask": true,
+    "task_SR": false,
+    "task_SR_interpretation": "Diagnostic only:128-controls are not complete ordered verify-return training evidence",
+    "verified_count": 0,
+    "returned_count": 0,
+    "task_events": [],
+    "failure_reason": null,
+    "sim_time_s": 1.92,
+    "physics_step_count": 480,
+    "motor_steps_recorded": 32,
+    "role_check_limit": "Matches static first role only; this dataset did not train phase-dependent goal progress."
+  },
+  "executed_controls": 32
+}

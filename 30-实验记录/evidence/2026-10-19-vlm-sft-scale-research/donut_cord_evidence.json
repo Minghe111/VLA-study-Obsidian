@@ -1,0 +1,110 @@
+{
+  "verified_date": "2026-10-19",
+  "method": "read-only official GitHub plugin fetch_file/fetch calls; no reproduction or training",
+  "repository": "clovaai/donut",
+  "commit": "4cfcf972560e1a0f26eb3e294c8fc88a0d336626",
+  "task": "CORD-v2 image-to-structured document parsing",
+  "dataset": {
+    "name": "naver-clova-ix/cord-v2",
+    "train": 800,
+    "validation": 100,
+    "test": 100,
+    "total": 1000,
+    "source": "https://github.com/clovaai/cord#download-link"
+  },
+  "recipe_exact_fields": {
+    "pretrained_model_name_or_path": "naver-clova-ix/donut-base",
+    "dataset_name_or_paths": [
+      "naver-clova-ix/cord-v2"
+    ],
+    "sort_json_key": false,
+    "train_batch_sizes": [
+      8
+    ],
+    "val_batch_sizes": [
+      1
+    ],
+    "input_size": [
+      1280,
+      960
+    ],
+    "max_length": 768,
+    "align_long_axis": false,
+    "num_nodes": 1,
+    "seed": 2022,
+    "lr": 3e-05,
+    "warmup_steps": 300,
+    "num_training_samples_per_epoch": 800,
+    "max_epochs": 30,
+    "max_steps": -1,
+    "num_workers": 8,
+    "val_check_interval": 1.0,
+    "check_val_every_n_epoch": 3,
+    "gradient_clip_val": 1.0,
+    "verbose": true,
+    "resume_from_checkpoint_path": null,
+    "result_path": "./result"
+  },
+  "recipe_source": "https://github.com/clovaai/donut/blob/4cfcf972560e1a0f26eb3e294c8fc88a0d336626/config/train_cord.yaml",
+  "execution_claim": {
+    "author_says_single_gpu": "NVIDIA A100",
+    "source": "https://github.com/clovaai/donut/blob/4cfcf972560e1a0f26eb3e294c8fc88a0d336626/README.md#training",
+    "independently_reproduced": false
+  },
+  "optimizer": {
+    "type": "torch.optim.Adam",
+    "parameter_selection": "self.parameters()",
+    "scope": "all model parameters, including image encoder and text decoder; not last-layer LoRA",
+    "scheduler": "cosine with linear warmup",
+    "source": "https://github.com/clovaai/donut/blob/4cfcf972560e1a0f26eb3e294c8fc88a0d336626/lightning_module.py#L114"
+  },
+  "derived_training_scale": {
+    "single_gpu_effective_batch": 8,
+    "gradient_accumulation": "not configured in Trainer; standard default 1",
+    "optimizer_steps_arithmetic": 3000,
+    "formula": "30 * 800 / 8",
+    "sample_presentations": 24000,
+    "evidence_type": "derived from published recipe, not independently measured optimizer log",
+    "comparison_to_current_pilot": {
+      "current_steps": 128,
+      "current_effective_batch": 4,
+      "current_sample_presentations": 512,
+      "current_train_records": 360,
+      "current_effective_epochs": 1.4222222222222223,
+      "step_ratio": 23.4375,
+      "sample_presentation_ratio": 46.875
+    }
+  },
+  "reported_test": {
+    "samples": 100,
+    "tree_edit_distance_accuracy": 0.9129639764131697,
+    "f1_accuracy": 0.8406020841373987,
+    "source": "https://github.com/clovaai/donut/blob/4cfcf972560e1a0f26eb3e294c8fc88a0d336626/README.md#test",
+    "evidence_type": "author-reported example for the documented CORD recipe",
+    "short_original_excerpt": "Total number of samples: 100, Tree Edit Distance (TED) based accuracy score: 0.9129639764131697, F1 accuracy score: 0.8406020841373987"
+  },
+  "training_targets": {
+    "serialization": "task start token + json2token(gt_json) + tokenizer.eos_token",
+    "loss": "next-token cross entropy; input shifted by one against labels",
+    "masked_tokens": "prompt prefix and padding",
+    "target_source": "https://github.com/clovaai/donut/blob/4cfcf972560e1a0f26eb3e294c8fc88a0d336626/donut/util.py#L67",
+    "loss_source": "https://github.com/clovaai/donut/blob/4cfcf972560e1a0f26eb3e294c8fc88a0d336626/lightning_module.py#L49"
+  },
+  "inference": {
+    "num_beams": 1,
+    "use_cache": true,
+    "eos_token_id": "tokenizer.eos_token_id",
+    "max_length": 768,
+    "bad_words_ids": "tokenizer.unk_token_id",
+    "source": "https://github.com/clovaai/donut/blob/4cfcf972560e1a0f26eb3e294c8fc88a0d336626/donut/model.py#L468"
+  },
+  "limitations": [
+    "The model generates custom key boundary tokens such as <s_menu> and </s_menu>, then token2json constructs a JSON object; it does not directly generate literal brace-and-quote JSON.",
+    "The reported 91.3 percent is tree edit accuracy, not JSON syntax validity, complete protocol success, or native EOS rate.",
+    "The inference code strips EOS and padding before parsing; the official report does not separately quantify native EOS termination success.",
+    "Donut is pretrained for document reading and uses full encoder-decoder parameter updates; the current RM65-B pilot starts from action SFT weights and updates only last-layer q/o LoRA. Its sample efficiency is not a guarantee for the RM65-B setup.",
+    "The hundreds or thousands of downstream receipt samples must be distinguished from the millions of examples used to pretrain the document model.",
+    "OCR/document extraction is not robot perception, memory-dependent role binding, executability, or task success."
+  ],
+  "serialization_source": "https://github.com/clovaai/donut/blob/4cfcf972560e1a0f26eb3e294c8fc88a0d336626/donut/model.py#L499"
+}

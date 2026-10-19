@@ -1,0 +1,105 @@
+{
+  "status": "documentation_examples_archived_no_training",
+  "review_date": "2026-10-19",
+  "created_at_local": "2026-10-19T17:14:25.255428",
+  "source": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+    "sha256": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8",
+    "rows": 96
+  },
+  "excerpt": {
+    "path": "selected_7.train-examples.jsonl",
+    "bytes": 28420,
+    "sha256": "cc140d114a1e332ef74b31feff62e032686a7afe7cf42262c43d6b9a876bf6fe",
+    "exact_original_line_bytes": true,
+    "documentation_only": true
+  },
+  "selected": [
+    {
+      "category": "READ",
+      "source_line_1based": 22,
+      "sample_id": "fresh_protocol_layout_01_left_31100:d0:static_hold_protocol:READ",
+      "mode": "READ",
+      "observation_npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}"
+    },
+    {
+      "category": "WRITE",
+      "source_line_1based": 10,
+      "sample_id": "fresh_protocol_layout_01_left_31100:d0:static_hold_protocol:WRITE",
+      "mode": "WRITE",
+      "observation_npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}"
+    },
+    {
+      "category": "KEEP",
+      "source_line_1based": 11,
+      "sample_id": "fresh_protocol_layout_05_right_31510:d16:counterfactual_memory_confidence:WRITE",
+      "mode": "WRITE",
+      "observation_npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0016.npz",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}"
+    },
+    {
+      "category": "CORRECT",
+      "source_line_1based": 7,
+      "sample_id": "fresh_protocol_layout_05_left_31500:d32:counterfactual_memory_corruption:WRITE",
+      "mode": "WRITE",
+      "observation_npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0032.npz",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}"
+    },
+    {
+      "category": "EMPTY",
+      "source_line_1based": 6,
+      "sample_id": "fresh_protocol_layout_02_left_31200:d8:static_hold_protocol:WRITE",
+      "mode": "WRITE",
+      "observation_npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0008.npz",
+      "target_text": "{\"operations\":[]}"
+    },
+    {
+      "category": "SUBTASK_left",
+      "source_line_1based": 15,
+      "sample_id": "fresh_protocol_layout_01_left_31100:d0:static_hold_protocol:SUBTASK",
+      "mode": "SUBTASK",
+      "observation_npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz",
+      "target_text": "Pick up and hold the sample initially on the left."
+    },
+    {
+      "category": "SUBTASK_right",
+      "source_line_1based": 2,
+      "sample_id": "fresh_protocol_layout_03_right_31310:d0:static_hold_protocol:SUBTASK",
+      "mode": "SUBTASK",
+      "observation_npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0000.npz",
+      "target_text": "Pick up and hold the sample initially on the right."
+    }
+  ],
+  "independent_audit": {
+    "path": "independent_sample_audit.json",
+    "sha256": "acc7ad99b1963550ce115bd38daa335da307d4d269f6ae34c720c7cc37f45ba3"
+  },
+  "note_changes": [
+    {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/2026-10-19-RM65B高层协议延长训练与修复验证.md",
+      "before_sha256": "558eff43625453702405029431a0aa1831b03c4c4e95e91301da17da07e46d02",
+      "after_sha256": "26250c2e288c909e5f682e8fdb04fb4232a4951bbe9fcd73ff109c1656b8cd31",
+      "operation": "insert one sample-style section; original contents preserved"
+    },
+    {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/2026-10-19-RM65B-C2200留出绑定与仿真闭环验证.md",
+      "before_sha256": "298f5a65a6e82ad51cc8d816b6b52d87772939bef847af2399635073f2c64028",
+      "after_sha256": "e5b02aa69fb84b250cdf90053e360517ccc872d353339148c16c29b7b4aab36b",
+      "operation": "insert one backlink paragraph; original contents preserved"
+    }
+  ],
+  "limitations": [
+    "Offline static observation labels, not successful skill trajectories.",
+    "Selected rows are not an executed online sequence.",
+    "Motor/FAST/value labels absent; no new training or inference.",
+    "Referenced image NPZ files and weights not copied."
+  ],
+  "source_unchanged": true,
+  "final_style_review": {
+    "path": "final_style_review.json",
+    "sha256": "90e5d01250d17b9a3e0de27b477109959c58ff674309efa952ccee04f308b3d6",
+    "scope": "26 CPU documentation checks passed; no model run or Obsidian visual rendering claim"
+  }
+}

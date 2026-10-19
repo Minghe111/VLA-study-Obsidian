@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-19",
+  "scope": "read-only weight/tokenizer audit and no-gradient full-gold path comparison",
+  "training": false,
+  "optimizer_steps": 0,
+  "production_code_edits": false,
+  "checkpoint_file_sha_unchanged_vs_20261018": true,
+  "weights_counts": {
+    "direct_cast_equal": 553,
+    "bf16_roundtrip_fp32_island_equal": 114
+  },
+  "base_keys": 667,
+  "base_missing": [],
+  "unexplained_weight_mismatches": [],
+  "tokenizer": {
+    "vocab_size": 257152,
+    "bos": 2,
+    "eos": 1,
+    "pad": 0,
+    "unk": 3
+  },
+  "precision_groups": {
+    "bf16_default": {
+      "cases": 3,
+      "gold_tokens": 57,
+      "eos_tokens": 3,
+      "same_top1": 55,
+      "correct_top1": 0,
+      "max_abs_logit_difference": 1.5,
+      "max_ce_reconstruction_difference": 1.9073486328125e-06,
+      "free16_eos": 0
+    },
+    "bf16_base_adapter_off": {
+      "cases": 3,
+      "gold_tokens": 57,
+      "eos_tokens": 3,
+      "same_top1": 38,
+      "correct_top1": 0,
+      "max_abs_logit_difference": 0.875,
+      "max_ce_reconstruction_difference": 0.0,
+      "free16_eos": 0
+    },
+    "bf16_tf32_off": {
+      "cases": 3,
+      "gold_tokens": 57,
+      "eos_tokens": 3,
+      "same_top1": 54,
+      "correct_top1": 0,
+      "max_abs_logit_difference": 1.375,
+      "max_ce_reconstruction_difference": 1.9073486328125e-06,
+      "free16_eos": 0
+    },
+    "fp32_tf32_off": {
+      "cases": 3,
+      "gold_tokens": 57,
+      "eos_tokens": 3,
+      "same_top1": 57,
+      "correct_top1": 0,
+      "max_abs_logit_difference": 0.00011444091796875,
+      "max_ce_reconstruction_difference": 0.0,
+      "free16_eos": 0
+    }
+  },
+  "all_gradients_none": true,
+  "adapter_sha_unchanged": true,
+  "ce_reconstruction_passed": true,
+  "fp32_cache_full_passed": true,
+  "training_reconstruction": {
+    "prior_protocol_optimizer_steps": 128,
+    "micro_batch": 1,
+    "gradient_accumulation": 4,
+    "sample_presentations": 512,
+    "unique_training_rows": 360,
+    "trainable_parameters": 131072,
+    "stage": "protocol",
+    "loss": "high_ce_only",
+    "sampler_restart_on_resume": true
+  },
+  "verdict": "No demonstrated weight/tokenizer/EOS/shift root bug; tested FP32 gold-history paths agree but targets remain unlearned. Narrow last-layer q/o adaptation plus poor starting language readout is supported; unique cause not isolated.",
+  "confirmed_engineering_gap": "sampler/RNG position is not resumed; this alone does not explain invalid text",
+  "limits": [
+    "Three GPU cases, batch one, MEM bypass.",
+    "FP32 arithmetic uses BF16-rounded saved base.",
+    "No new formal validation, training, robot execution or SR.",
+    "Repair plan only; sampler code was not changed."
+  ]
+}

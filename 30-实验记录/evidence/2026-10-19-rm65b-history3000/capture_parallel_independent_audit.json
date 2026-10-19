@@ -1,0 +1,40 @@
+{
+  "status": "independent_static_and_cpu_selftest_review_passed_with_nonblocking_boundaries",
+  "created_at_utc": "2026-10-19T10:43:43.660639+00:00",
+  "GPU_or_model_or_real_simulation_started": false,
+  "script": {
+    "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/scripts/capture_dynamic_protocol_parallel.py",
+    "bytes": 28643,
+    "sha256": "2b90110e1955f4544063152fc884c1921c8d40ed87ed33d6a99950183767b70c"
+  },
+  "frozen_episode_function_sha256": "4af8bdfe824a00e41b35408e27b2bb89f5f45977fa16928d0227329f168cf30b",
+  "CPU_selftest": {
+    "executed": true,
+    "exit_code": 0,
+    "cpu_selftest_passed": true,
+    "scope": "TemporaryDirectory fake receipts and CPU subprocesses only, never actual simulator/capture data."
+  },
+  "static_checks": {
+    "parent_only_master_manifest_writes": true,
+    "exact_frozen_v2_plan_identity": true,
+    "private_runtime_per_episode": true,
+    "subprocess_new_session_per_episode": true,
+    "failure_stop_dispatch_then_drain": true,
+    "private_process_group_cleanup": true,
+    "resume_hashes_listed_obs_and_artifacts": true,
+    "supplementary_serial_stop_check_and_explicit_attestation": true
+  },
+  "nonblocking_boundaries": [
+    {
+      "code": "manifest_entry_vs_episode_JSON_full_equality_not_checked_by_wrapper",
+      "evidence": "verify_completed verifies episode JSON hash/completed flags and iterates observations/artifact_sha256 as listed by manifest entry. It does not compare all those lists/fields against the hashed on-disk episode object.",
+      "practical_scope": "No current source entry corruption established. Final independent source validator compares entire entry minus its two receipt keys to on_disk and rechecks all5 log hashes."
+    },
+    {
+      "code": "wrapper_completion_does_not_guarantee256_actual_controls",
+      "evidence": "verify_completed requires outer completed/status/worker_shutdown; no capture_budget_reached/executed_controls256 check.",
+      "practical_scope": "Frozen v2 may record an actual early-ended episode as workflow complete. Final source acceptance independently requires56 episodes with256 controls/15ticks,696 observations and split family counts."
+    }
+  ],
+  "conclusion": "No blocking error found for intact current manifests. Do not modify a frozen active wrapper in place. Its completed status remains acquisition orchestration evidence; final source/dataset acceptance is separate."
+}

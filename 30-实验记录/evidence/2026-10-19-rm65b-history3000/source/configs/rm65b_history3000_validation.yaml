@@ -1,0 +1,184 @@
+# Validation only, 2026-10-19; not a training/resume entry.
+# Copied from actual C2200 effective_config; no new parsed YAML keys were invented.
+# Actor/value max_updates and the existing experiment.max_updates_per_run are 0.
+# There is no parsed training_enabled or MEM_ready key in this config schema.
+# Do not pass --enable-training. Use only check_history3000_interface.py.
+# history_version=rm65b_history_events_v1 is declared/validated in dataset metadata.
+# PROMPT_VERSION comes from the staged/new recap_tokenizer module, not a YAML switch.
+# MEM_ready=false is the builder's real per-row metadata; video MEM is not ready.
+# Existing model.openpi.mem_enabled=false explicitly disables video MEM here.
+# C2200 model_path is a read-only reference; CPU checker never loads its tensors.
+# data.verified_high_sft_paths contains TRAIN ONLY. val/test have no parsed YAML path key.
+# Checker inputs (all explicit CLI paths, no model test inference/selection):
+# /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/train.jsonl
+# /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/val.jsonl
+# /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/test.jsonl
+
+actor_training:
+  anchor_interval: 4
+  gradient_accumulation: 4
+  gradient_checkpointing: true
+  learning_rate: 5.0e-05
+  loss_weights:
+    high_ce: 1.0
+    fast_ce: 0.0
+    fm: 0.0
+    kv_anchor: 1.0
+  max_grad_norm: 1.0
+  max_updates: 0
+  micro_batch_size: 1
+  weight_decay: 0.0
+  strict_resume: true
+  sampler:
+    shuffle: true
+    seed: 20261019
+  sequential_objectives: true
+contract:
+  action_horizon: 16
+  camera_keys:
+  - full_image
+  - left_wrist_image
+  - right_wrist_image
+  execute_actions: 1
+  model_action_dim: 32
+  native_rgb_shape:
+  - 480
+  - 640
+  - 3
+  physical_action_dim: 24
+  physics_dt_s: 0.004
+  physics_steps_per_action: 15
+data:
+  eval_family_ids:
+  - dynamic_reference_layout_16
+  - dynamic_reference_layout_17
+  - dynamic_reference_layout_18
+  - dynamic_reference_layout_19
+  - dynamic_reference_layout_20
+  - dynamic_reference_layout_21
+  - dynamic_reference_layout_22
+  - dynamic_reference_layout_23
+  - dynamic_reference_layout_24
+  - dynamic_reference_layout_25
+  - dynamic_reference_layout_26
+  - dynamic_reference_layout_27
+  prior_episode_paths: []
+  verified_high_sft_paths:
+  - /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/train.jsonl
+  verified_sft_episode_paths: []
+environment:
+  robotwin_root: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/code/RoboTwin
+  task_config:
+    asset_root: /home/admin123/liminghe/vla-benchmark/RoboTwin/assets
+    instruction: Verify the sample initially on the left and return it home, then
+      verify the sample initially on the right and return it home.
+    max_episode_steps: 160
+    memory_task:
+      execution_order:
+      - sample_a
+      - sample_b
+    profile: full50_sdk24
+    renderer_denoiser: optix
+    renderer_device: cuda:0
+    runtime_dir: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/runtime_interface_validation_unused
+    success_mode: native
+    task_name: sample_verify_return
+labeling:
+  action_horizon: 1
+  action_positive_fraction: 0.3
+  gamma: 0.99
+  high_positive_fraction: 0.3
+  reward_field: env_reward
+  truncation_mode: zero
+memory:
+  catalogue:
+    current_progress: Last confirmed progress and unresolved requirements.
+    original_location: Observed original side and location of the sample.
+    sample_identity: Observed identity and role of the requested sample.
+    verification_result: Observed verification status and evidence.
+  strict_protocol: true
+model:
+  action_dim: 24
+  is_lora: false
+  model_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint
+  model_type: openpi
+  num_action_chunks: 16
+  num_steps: 10
+  openpi:
+    action_chunk: 16
+    action_env_dim: 24
+    action_expert_variant: gemma_300m
+    action_horizon: 16
+    config_name: pi05_realman_rm65b_gen4
+    max_token_len: 2048
+    mem_drop_after: 24
+    mem_enabled: false
+    mem_num_frames: 4
+    mem_temporal_interval: 4
+    mem_vision_lora_alpha: 8.0
+    mem_vision_lora_rank: 8
+    model_action_dim: 32
+    num_steps: 10
+    paligemma_variant: gemma_2b
+    recap_ce_chunk_size: 8
+    recap_expert_lora_alpha: 8.0
+    recap_expert_lora_rank: 8
+    recap_lora_alpha: 16
+    recap_lora_rank: 16
+    recap_training_stage: language_warmup
+    recap_vlm_mode: lora
+    task: recap_hier
+    torch_compile: false
+  openpi_data:
+    norm_stats_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi/realman_rgb50_full50/norm_stats.json
+  pi05: true
+  precision: bf16
+  training_mode: verified_sft
+  version: c2200_history3000_interface_validation_only
+rollout:
+  eval_seeds: []
+  goal: Verify the sample initially on the left and return it home, then verify the
+    sample initially on the right and return it home.
+  high_level_window: 32
+  history_stride_steps: 8
+  max_new_tokens: 96
+  max_steps: 160
+  train_seeds: []
+runtime:
+  device: cpu
+tokenizer:
+  fast_processor_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/assets/fast-ec4d7aa71691
+  max_prefix_tokens: 1400
+  max_target_tokens: 96
+  text_tokenizer_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/cache/openpi/big_vision/paligemma_tokenizer.model
+value:
+  batch_size: 1
+  checkpoint: null
+  learning_rate: 0.0001
+  max_updates: 0
+  model:
+    action_dim: 32
+    action_horizon: 16
+    critic_expert_variant: gemma_1m
+    freeze_vision_encoder: true
+    freeze_vlm: false
+    gemma3_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/assets/gemma3_270m-9b0cfec892e2
+    max_token_len: 2048
+    model_type: recap_value_model
+    num_bins: 201
+    precision: bf16
+    siglip_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/assets/siglip2_so400m_patch14_224-78e403963a4f
+    tokenizer_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/assets/gemma3_270m-9b0cfec892e2
+    v_max: 1.0
+    v_min: -1.0
+  version: unfitted
+experiment:
+  scope: CPU-only full4200 history prefix interface acceptance; no checkpoint model
+    load, optimizer, training, renderer or learned generation. history_version=rm65b_history_events_v1;
+    prompt_version=rm65b_recap_prompt_v3_history_events; dataset MEM_ready=false;
+    temporal-video MEM is not ready and not evaluated. val/test are explicit checker
+    CLI inputs, not training-loader paths.
+  same_initial_checkpoint: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint
+  max_updates_per_run: 0
+  retention_scope: Eight original-task states, not skill SR
+  kv_weight: 1.0

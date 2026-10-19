@@ -1,0 +1,186 @@
+actor_training:
+  anchor_interval: 4
+  gradient_accumulation: 4
+  gradient_checkpointing: true
+  learning_rate: 5.0e-05
+  loss_weights:
+    high_ce: 1.0
+    fast_ce: 0.0
+    fm: 0.0
+    kv_anchor: 0.0
+  max_grad_norm: 1.0
+  max_updates: 300
+  micro_batch_size: 1
+  weight_decay: 0.0
+  strict_resume: true
+  sampler:
+    shuffle: true
+    seed: 20261019
+  sequential_objectives: true
+contract:
+  action_horizon: 16
+  camera_keys:
+  - full_image
+  - left_wrist_image
+  - right_wrist_image
+  execute_actions: 1
+  model_action_dim: 32
+  native_rgb_shape:
+  - 480
+  - 640
+  - 3
+  physical_action_dim: 24
+  physics_dt_s: 0.004
+  physics_steps_per_action: 15
+data:
+  eval_family_ids:
+  - protocol_layout_06
+  - protocol_layout_07
+  prior_episode_paths: []
+  verified_high_sft_paths:
+  - /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl
+  verified_sft_episode_paths: []
+environment:
+  robotwin_root: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/code/RoboTwin
+  task_config:
+    asset_root: /home/admin123/liminghe/vla-benchmark/RoboTwin/assets
+    instruction: Verify the sample initially on the left and return it home, then
+      verify the sample initially on the right and return it home.
+    max_episode_steps: 160
+    memory_task:
+      execution_order:
+      - sample_a
+      - sample_b
+    profile: full50_sdk24
+    renderer_denoiser: optix
+    renderer_device: cuda:0
+    runtime_dir: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/runtime_fit
+    success_mode: native
+    task_name: sample_verify_return
+labeling:
+  action_horizon: 1
+  action_positive_fraction: 0.3
+  gamma: 0.99
+  high_positive_fraction: 0.3
+  reward_field: env_reward
+  truncation_mode: zero
+memory:
+  catalogue:
+    current_progress: Last confirmed progress and unresolved requirements.
+    original_location: Observed original side and location of the sample.
+    sample_identity: Observed identity and role of the requested sample.
+    verification_result: Observed verification status and evidence.
+  strict_protocol: true
+model:
+  action_dim: 24
+  is_lora: false
+  model_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi
+  model_type: openpi
+  num_action_chunks: 16
+  num_steps: 10
+  openpi:
+    action_chunk: 16
+    action_env_dim: 24
+    action_expert_variant: gemma_300m
+    action_horizon: 16
+    config_name: pi05_realman_rm65b_gen4
+    max_token_len: 2048
+    mem_drop_after: 24
+    mem_enabled: true
+    mem_num_frames: 4
+    mem_temporal_interval: 4
+    mem_vision_lora_alpha: 8.0
+    mem_vision_lora_rank: 8
+    model_action_dim: 32
+    num_steps: 10
+    paligemma_variant: gemma_2b
+    recap_ce_chunk_size: 8
+    recap_expert_lora_alpha: 8.0
+    recap_expert_lora_rank: 8
+    recap_lora_alpha: 16
+    recap_lora_rank: 16
+    recap_training_stage: protocol
+    recap_vlm_mode: lora
+    task: recap_hier
+    torch_compile: false
+  openpi_data:
+    norm_stats_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi/realman_rgb50_full50/norm_stats.json
+  pi05: true
+  precision: bf16
+  training_mode: verified_sft
+  version: fit_protocol_96_initial
+rollout:
+  eval_seeds:
+  - 31600
+  - 31601
+  - 31610
+  - 31611
+  - 31700
+  - 31701
+  - 31710
+  - 31711
+  goal: Verify the sample initially on the left and return it home, then verify the
+    sample initially on the right and return it home.
+  high_level_window: 32
+  history_stride_steps: 8
+  max_new_tokens: 96
+  max_steps: 160
+  train_seeds:
+  - 31000
+  - 31001
+  - 31010
+  - 31011
+  - 31100
+  - 31101
+  - 31110
+  - 31111
+  - 31200
+  - 31201
+  - 31210
+  - 31211
+  - 31300
+  - 31301
+  - 31310
+  - 31311
+  - 31400
+  - 31401
+  - 31410
+  - 31411
+  - 31500
+  - 31501
+  - 31510
+  - 31511
+runtime:
+  device: cuda:0
+tokenizer:
+  fast_processor_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/assets/fast-ec4d7aa71691
+  max_prefix_tokens: 1400
+  max_target_tokens: 512
+  text_tokenizer_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/cache/openpi/big_vision/paligemma_tokenizer.model
+value:
+  batch_size: 1
+  checkpoint: null
+  learning_rate: 0.0001
+  max_updates: 2
+  model:
+    action_dim: 32
+    action_horizon: 16
+    critic_expert_variant: gemma_1m
+    freeze_vision_encoder: true
+    freeze_vlm: false
+    gemma3_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/assets/gemma3_270m-9b0cfec892e2
+    max_token_len: 2048
+    model_type: recap_value_model
+    num_bins: 201
+    precision: bf16
+    siglip_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/assets/siglip2_so400m_patch14_224-78e403963a4f
+    tokenizer_path: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/assets/gemma3_270m-9b0cfec892e2
+    v_max: 1.0
+    v_min: -1.0
+  version: unfitted
+experiment:
+  scope: 9/96-row diagnostic only; no 3000-row training
+  same_initial_checkpoint: /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi
+  max_updates_per_run: 300
+  retention_scope: Eight original-task states, not skill SR
+  kv_weight: 0.0

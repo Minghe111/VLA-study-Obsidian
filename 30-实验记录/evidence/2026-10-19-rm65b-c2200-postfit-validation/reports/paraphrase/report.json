@@ -1,0 +1,4081 @@
+{
+  "status": "completed",
+  "stage": "paraphrase",
+  "checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint",
+  "script_sha256": "b2cda9ccae58d2eccbd1e4fe32a535bd372a4051a9f2775d6683b849961e5021",
+  "evaluation_count": 56,
+  "audit": {
+    "status": "CPU_audit_passed_no_model_loaded",
+    "splits": {
+      "fit96": {
+        "rows": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "families": [
+          "protocol_layout_00",
+          "protocol_layout_01",
+          "protocol_layout_02",
+          "protocol_layout_03",
+          "protocol_layout_04",
+          "protocol_layout_05"
+        ],
+        "episode_count": 12,
+        "observation_files": 52,
+        "unique_actor_input_digests": 96,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "EMPTY": 8,
+          "CORRECT": 8,
+          "WRITE": 8,
+          "KEEP": 8
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "sha256": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true
+      },
+      "train": {
+        "rows": 360,
+        "modes": {
+          "READ": 120,
+          "WRITE": 120,
+          "SUBTASK": 120
+        },
+        "families": [
+          "protocol_layout_00",
+          "protocol_layout_01",
+          "protocol_layout_02",
+          "protocol_layout_03",
+          "protocol_layout_04",
+          "protocol_layout_05"
+        ],
+        "episode_count": 24,
+        "observation_files": 120,
+        "unique_actor_input_digests": 168,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 24,
+          "EMPTY": 48,
+          "KEEP": 24,
+          "CORRECT": 24
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/train.reviewed.jsonl",
+        "sha256": "c80260d0d34d84628038172ac8485837ad6153d8d023d960ff5e2f1c9af76140",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true
+      },
+      "val": {
+        "rows": 60,
+        "modes": {
+          "READ": 20,
+          "WRITE": 20,
+          "SUBTASK": 20
+        },
+        "families": [
+          "protocol_layout_06"
+        ],
+        "episode_count": 4,
+        "observation_files": 20,
+        "unique_actor_input_digests": 28,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 4,
+          "EMPTY": 8,
+          "KEEP": 4,
+          "CORRECT": 4
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/val.reviewed.jsonl",
+        "sha256": "f277e275effda6370e06658ef51c199e56e79ea6ca6d206fb333865d50a3e9aa",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true,
+        "historically_inferred_rows": 16,
+        "no_historical_inference_found_rows": 44,
+        "historically_inferred_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          12,
+          13,
+          15,
+          16,
+          32,
+          35
+        ],
+        "historically_inferred_unique_actor_inputs": 13,
+        "fresh_actor_input_rows_in_searched_history": 32,
+        "fresh_unique_actor_inputs_in_searched_history": 15,
+        "not_inferred_rows_with_already_seen_actor_input": 12
+      },
+      "test": {
+        "rows": 60,
+        "modes": {
+          "READ": 20,
+          "WRITE": 20,
+          "SUBTASK": 20
+        },
+        "families": [
+          "protocol_layout_07"
+        ],
+        "episode_count": 4,
+        "observation_files": 20,
+        "unique_actor_input_digests": 28,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 4,
+          "EMPTY": 8,
+          "KEEP": 4,
+          "CORRECT": 4
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/test.reviewed.jsonl",
+        "sha256": "080c774d2f53a810dd4aff4e0da23e87409290038672724c97cd97cd94a76264",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true,
+        "historically_inferred_rows": 0,
+        "no_historical_inference_found_rows": 60,
+        "historically_inferred_indices": [],
+        "historically_inferred_unique_actor_inputs": 0,
+        "fresh_actor_input_rows_in_searched_history": 60,
+        "fresh_unique_actor_inputs_in_searched_history": 28,
+        "not_inferred_rows_with_already_seen_actor_input": 0
+      }
+    },
+    "overlaps": {
+      "fit96_vs_val": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "fit96_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "train_vs_val": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "train_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "val_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      }
+    },
+    "historical_report_search_scope": "SOURCE/reports/protocol_sft_sequence_v1/*/report.json; absence is bounded to this search",
+    "historical_inference_reports": [
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/02_eval_baseline/report.json",
+        "case_count": 32,
+        "status": "completed"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/04_eval32/report.json",
+        "case_count": 32,
+        "status": "completed"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/06_eval128/report.json",
+        "case_count": 32,
+        "status": "completed"
+      }
+    ],
+    "test_read_for_source_exclusion_and_label_integrity_only": true,
+    "semantic_limit": "All labels are static role/memory rules from authored contexts; nine target strings, not visual grounding or robot task success",
+    "test_policy": "Use val for interface decisions; no test inference until a frozen validation report for the same C2200 and evaluator hash",
+    "paraphrase": {
+      "rows": 56,
+      "modes": {
+        "WRITE": 20,
+        "SUBTASK": 20,
+        "READ": 16
+      },
+      "families": [
+        "protocol_layout_06"
+      ],
+      "episode_count": 2,
+      "observation_files": 10,
+      "unique_actor_input_digests": 56,
+      "unique_target_strings": 9,
+      "write_operations": {
+        "KEEP": 4,
+        "CORRECT": 4,
+        "WRITE": 4,
+        "EMPTY": 8
+      },
+      "original_unique_actor_inputs": 28,
+      "variants_per_input": 2,
+      "fit96_actor_input_overlap": 0,
+      "canonical_val_actor_input_overlap": 0,
+      "unique_paraphrase_pairs": 28,
+      "only_modified_actor_context_field": "goal",
+      "memory_history_images_state_and_targets_unchanged": true,
+      "scope": "Two authored equivalent English goal templates; no novel task, motor capability, visual grounding or task SR claim"
+    }
+  },
+  "optimizer_updates": 0,
+  "simulation_rollouts": 0,
+  "decoding": "NativePi05Actor unrestricted greedy, max96, real EOS; no repair/grammar constraints",
+  "finished_utc": "2026-10-19T08:03:25.655217+00:00",
+  "cases": [
+    {
+      "sample_id": "paraphrase:028392da3aa56779243b21e6bfaed644babd07d067a2e1012deb72f3abe2314c:v1",
+      "actor_input_digest": "1ab450d50701a48a6d0630d2ad4e93e80f7715f817ea5e813c383e7dda8c3319",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:028392da3aa56779243b21e6bfaed644babd07d067a2e1012deb72f3abe2314c",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d16:counterfactual_memory_confidence:WRITE",
+        "original_actor_input_digest": "028392da3aa56779243b21e6bfaed644babd07d067a2e1012deb72f3abe2314c",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:028392da3aa56779243b21e6bfaed644babd07d067a2e1012deb72f3abe2314c:v2",
+      "actor_input_digest": "5371f7add18937c5bdba551718a9a0ae284cbe85794487a112b44aa787f17624",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:028392da3aa56779243b21e6bfaed644babd07d067a2e1012deb72f3abe2314c",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d16:counterfactual_memory_confidence:WRITE",
+        "original_actor_input_digest": "028392da3aa56779243b21e6bfaed644babd07d067a2e1012deb72f3abe2314c",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:0fd7af5d850fdfdfe5948cc27613de6cf8e02791773750b4ca159ea2faae7ea3:v1",
+      "actor_input_digest": "079420917898bc201217cd32c7b4637f588fd80071b979406f676d0f234bc784",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:0fd7af5d850fdfdfe5948cc27613de6cf8e02791773750b4ca159ea2faae7ea3",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d32:counterfactual_memory_corruption:WRITE",
+        "original_actor_input_digest": "0fd7af5d850fdfdfe5948cc27613de6cf8e02791773750b4ca159ea2faae7ea3",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:0fd7af5d850fdfdfe5948cc27613de6cf8e02791773750b4ca159ea2faae7ea3:v2",
+      "actor_input_digest": "af91768df5de33659f4ee1902e1a0beb764fc98cc7baabbddb78e64e3e3d5d2b",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_ٶ\":\"Sub up and hold the left.\"",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        255672,
+        9330,
+        3351,
+        908,
+        578,
+        3385,
+        573,
+        2731,
+        1464,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": false,
+        "schema_legal": false,
+        "target_match": false,
+        "error": "Expecting ',' delimiter: line 1 column 85 (char 84)",
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:0fd7af5d850fdfdfe5948cc27613de6cf8e02791773750b4ca159ea2faae7ea3",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d32:counterfactual_memory_corruption:WRITE",
+        "original_actor_input_digest": "0fd7af5d850fdfdfe5948cc27613de6cf8e02791773750b4ca159ea2faae7ea3",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:129122eb0764fa58d13ff36c3f644e437c1242a281bcf0a4ac5bf21a853771b5:v1",
+      "actor_input_digest": "1429a29a6bda6776b9d26403853757df35b862455d0bd989959468f15b6c003a",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:129122eb0764fa58d13ff36c3f644e437c1242a281bcf0a4ac5bf21a853771b5",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d32:counterfactual_memory_corruption:SUBTASK",
+        "original_actor_input_digest": "129122eb0764fa58d13ff36c3f644e437c1242a281bcf0a4ac5bf21a853771b5",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:129122eb0764fa58d13ff36c3f644e437c1242a281bcf0a4ac5bf21a853771b5:v2",
+      "actor_input_digest": "4964973a56573ca9c5acaff6aa4a10d168242c802e036267c13ffcff45111b97",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:129122eb0764fa58d13ff36c3f644e437c1242a281bcf0a4ac5bf21a853771b5",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d32:counterfactual_memory_corruption:SUBTASK",
+        "original_actor_input_digest": "129122eb0764fa58d13ff36c3f644e437c1242a281bcf0a4ac5bf21a853771b5",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:17b592e8e945814f7e98cb9784a8716495c8131dd0a5dcb98e7f13bce0f1cfee:v1",
+      "actor_input_digest": "add96d004516dc4b80d87e913def55888088ae5f669653083884a1fd574d3367",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:17b592e8e945814f7e98cb9784a8716495c8131dd0a5dcb98e7f13bce0f1cfee",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d0:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "17b592e8e945814f7e98cb9784a8716495c8131dd0a5dcb98e7f13bce0f1cfee",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:17b592e8e945814f7e98cb9784a8716495c8131dd0a5dcb98e7f13bce0f1cfee:v2",
+      "actor_input_digest": "c6a0d96d1ad231c51b6a744abbdd5b724907dc978c7d189c69fce1c487c7c42c",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:17b592e8e945814f7e98cb9784a8716495c8131dd0a5dcb98e7f13bce0f1cfee",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d0:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "17b592e8e945814f7e98cb9784a8716495c8131dd0a5dcb98e7f13bce0f1cfee",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:1df8cad35c11ab5663435956eea209c2264c2a9d6e5710a85f3aef784e1370ff:v1",
+      "actor_input_digest": "7ccbbe9362844708711fac0c20f53a9e260d65e4d9fe8474f3b163eeb5eaf194",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:1df8cad35c11ab5663435956eea209c2264c2a9d6e5710a85f3aef784e1370ff",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d8:static_hold_protocol:READ",
+        "original_actor_input_digest": "1df8cad35c11ab5663435956eea209c2264c2a9d6e5710a85f3aef784e1370ff",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:1df8cad35c11ab5663435956eea209c2264c2a9d6e5710a85f3aef784e1370ff:v2",
+      "actor_input_digest": "dbeb0bbb3440b012e1356abb4553cb825e9160d12e4a1ec4da16a615acd544f9",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:1df8cad35c11ab5663435956eea209c2264c2a9d6e5710a85f3aef784e1370ff",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d8:static_hold_protocol:READ",
+        "original_actor_input_digest": "1df8cad35c11ab5663435956eea209c2264c2a9d6e5710a85f3aef784e1370ff",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:237331fd737def0b389e993d1609a46d9a232616c646c472fe3f4d08bf60299b:v1",
+      "actor_input_digest": "4894cd1d928a9c5e1280b07281f99195abb0c1c81174465dd02f9962539dd984",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:237331fd737def0b389e993d1609a46d9a232616c646c472fe3f4d08bf60299b",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d16:counterfactual_memory_confidence:READ",
+        "original_actor_input_digest": "237331fd737def0b389e993d1609a46d9a232616c646c472fe3f4d08bf60299b",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:237331fd737def0b389e993d1609a46d9a232616c646c472fe3f4d08bf60299b:v2",
+      "actor_input_digest": "c0e8b42dabd6beaec4c6a208d0c3d16579e3fc166913f30c8e13db1cc07bd64d",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:237331fd737def0b389e993d1609a46d9a232616c646c472fe3f4d08bf60299b",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d16:counterfactual_memory_confidence:READ",
+        "original_actor_input_digest": "237331fd737def0b389e993d1609a46d9a232616c646c472fe3f4d08bf60299b",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:24be0f83cb361a5f35a10372ff5d898a45e70916d1d31b70f036d4b5becb39de:v1",
+      "actor_input_digest": "14fde94005ee92175f3ce657c704035492146ee5a45337a65c767bba9a97e7e5",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:24be0f83cb361a5f35a10372ff5d898a45e70916d1d31b70f036d4b5becb39de",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d24:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "24be0f83cb361a5f35a10372ff5d898a45e70916d1d31b70f036d4b5becb39de",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:24be0f83cb361a5f35a10372ff5d898a45e70916d1d31b70f036d4b5becb39de:v2",
+      "actor_input_digest": "f4a56758c4200b125c17961027d5da330922158427e041b3b1d3a249547ceb5b",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:24be0f83cb361a5f35a10372ff5d898a45e70916d1d31b70f036d4b5becb39de",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d24:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "24be0f83cb361a5f35a10372ff5d898a45e70916d1d31b70f036d4b5becb39de",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d:v1",
+      "actor_input_digest": "dc905f9a07e72d4efb2b41cc727bb2b5772ac81a8ed406df1c1a71a312e66d0c",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d24:static_hold_protocol:READ",
+        "original_actor_input_digest": "2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d:v2",
+      "actor_input_digest": "c0add5acaaa6c0fabd93c41dd6688ce3c8fd05bd51159a728df0ec204761c0b2",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d24:static_hold_protocol:READ",
+        "original_actor_input_digest": "2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739:v1",
+      "actor_input_digest": "2fca272534597e66a30a9512be1facaf52de2b10fca650c63de4e63a12e78a2e",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d24:static_hold_protocol:READ",
+        "original_actor_input_digest": "36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739:v2",
+      "actor_input_digest": "78dbe0497ec456664c84f96cfd4bcf583fcc61e58d3316b38f7ca4aabc34847d",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d24:static_hold_protocol:READ",
+        "original_actor_input_digest": "36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:40489e7135afc1705b67bc7347aaad21be2cdec087c4127725c4332f4e648bd9:v1",
+      "actor_input_digest": "956822dd0d3b35134c3944e410cc903bf9755d0df7d6af63e88bfe55d50bdaf1",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:40489e7135afc1705b67bc7347aaad21be2cdec087c4127725c4332f4e648bd9",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d24:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "40489e7135afc1705b67bc7347aaad21be2cdec087c4127725c4332f4e648bd9",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:40489e7135afc1705b67bc7347aaad21be2cdec087c4127725c4332f4e648bd9:v2",
+      "actor_input_digest": "55032a41a1fd449a62a3cbad4a717ad811b754368cfcdc3a3037f9ff97a6bedd",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:40489e7135afc1705b67bc7347aaad21be2cdec087c4127725c4332f4e648bd9",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d24:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "40489e7135afc1705b67bc7347aaad21be2cdec087c4127725c4332f4e648bd9",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:4a7b4507cefcb0279017c0c350703849106e5c121b2bd4958adbf4380f84c625:v1",
+      "actor_input_digest": "bbfe79ff29b4c7127fb22757774de13992c1e78eccf34039f8340a0d5528e219",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:4a7b4507cefcb0279017c0c350703849106e5c121b2bd4958adbf4380f84c625",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d16:counterfactual_memory_confidence:SUBTASK",
+        "original_actor_input_digest": "4a7b4507cefcb0279017c0c350703849106e5c121b2bd4958adbf4380f84c625",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:4a7b4507cefcb0279017c0c350703849106e5c121b2bd4958adbf4380f84c625:v2",
+      "actor_input_digest": "079b9357f7a80690c76005416c2579618308e8243a3981532b20be95c619f517",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:4a7b4507cefcb0279017c0c350703849106e5c121b2bd4958adbf4380f84c625",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d16:counterfactual_memory_confidence:SUBTASK",
+        "original_actor_input_digest": "4a7b4507cefcb0279017c0c350703849106e5c121b2bd4958adbf4380f84c625",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:51bc2a59703f83bad4dbd1d50f71bd257200fb20e5e288607906a996ae94af6c:v1",
+      "actor_input_digest": "160bda0e9dd86b94e46014d63825daad0588ba79f772b336ae4230ab9daa86e7",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:51bc2a59703f83bad4dbd1d50f71bd257200fb20e5e288607906a996ae94af6c",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d8:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "51bc2a59703f83bad4dbd1d50f71bd257200fb20e5e288607906a996ae94af6c",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:51bc2a59703f83bad4dbd1d50f71bd257200fb20e5e288607906a996ae94af6c:v2",
+      "actor_input_digest": "c98d135418b143ed6959b7279c0b519db740967ed9b1bfc905d3d989dba1fffd",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:51bc2a59703f83bad4dbd1d50f71bd257200fb20e5e288607906a996ae94af6c",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d8:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "51bc2a59703f83bad4dbd1d50f71bd257200fb20e5e288607906a996ae94af6c",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:6530709e16e4d3a2e8d439dd5521671fe09f009af32b07b281bc186afb7cb90e:v1",
+      "actor_input_digest": "f76e59b359c52b743bba2f5b338243186cc074983c723d95fddc508b902691af",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:6530709e16e4d3a2e8d439dd5521671fe09f009af32b07b281bc186afb7cb90e",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d8:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "6530709e16e4d3a2e8d439dd5521671fe09f009af32b07b281bc186afb7cb90e",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:6530709e16e4d3a2e8d439dd5521671fe09f009af32b07b281bc186afb7cb90e:v2",
+      "actor_input_digest": "13c26cb41f9a74dcab96de1a24d80bba5031eaeadc030c49185c75fb9b0cccc9",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:6530709e16e4d3a2e8d439dd5521671fe09f009af32b07b281bc186afb7cb90e",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d8:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "6530709e16e4d3a2e8d439dd5521671fe09f009af32b07b281bc186afb7cb90e",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:677fb339c925cfc64171549dc30acd272dcc0c5da6491562d6589ab53cef5238:v1",
+      "actor_input_digest": "fc8a9e2297cad4be15647daa06dcddc7d4b47b8e85d5a0390b1f70302be800ec",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:677fb339c925cfc64171549dc30acd272dcc0c5da6491562d6589ab53cef5238",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d8:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "677fb339c925cfc64171549dc30acd272dcc0c5da6491562d6589ab53cef5238",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:677fb339c925cfc64171549dc30acd272dcc0c5da6491562d6589ab53cef5238:v2",
+      "actor_input_digest": "e4f0bf4a38aec9e0b274e48172567692d509b8defadecc91fb68de26d105411d",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:677fb339c925cfc64171549dc30acd272dcc0c5da6491562d6589ab53cef5238",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d8:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "677fb339c925cfc64171549dc30acd272dcc0c5da6491562d6589ab53cef5238",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:821e3ff3f95db8547282fc0db3ae7caafad9834a2bbf0047fa1cc29f64325190:v1",
+      "actor_input_digest": "580483efdae31298cba6db2641be8398db15d1a8ff07dd8122f9b5b8cb934fd2",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:821e3ff3f95db8547282fc0db3ae7caafad9834a2bbf0047fa1cc29f64325190",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d8:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "821e3ff3f95db8547282fc0db3ae7caafad9834a2bbf0047fa1cc29f64325190",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:821e3ff3f95db8547282fc0db3ae7caafad9834a2bbf0047fa1cc29f64325190:v2",
+      "actor_input_digest": "a2d17bb7797384c41ce7355f1b8e8e337a124ce373ba1746ca25386ab48dc3eb",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:821e3ff3f95db8547282fc0db3ae7caafad9834a2bbf0047fa1cc29f64325190",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d8:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "821e3ff3f95db8547282fc0db3ae7caafad9834a2bbf0047fa1cc29f64325190",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:847e2d6e338143c2af09d6bb955d4e344f79a8c86083359325d7391144561040:v1",
+      "actor_input_digest": "0d37b6226a1f2700af8981aa5d69eac14dd2c4843f26e38e7b8d6018ffa25e5e",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:847e2d6e338143c2af09d6bb955d4e344f79a8c86083359325d7391144561040",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d16:counterfactual_memory_confidence:SUBTASK",
+        "original_actor_input_digest": "847e2d6e338143c2af09d6bb955d4e344f79a8c86083359325d7391144561040",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:847e2d6e338143c2af09d6bb955d4e344f79a8c86083359325d7391144561040:v2",
+      "actor_input_digest": "50a33a3550ffaa31165d97d5ea919442d3d8a0463645140f6679d5d11f3b555a",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:847e2d6e338143c2af09d6bb955d4e344f79a8c86083359325d7391144561040",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d16:counterfactual_memory_confidence:SUBTASK",
+        "original_actor_input_digest": "847e2d6e338143c2af09d6bb955d4e344f79a8c86083359325d7391144561040",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:89f3fa2a96de7afa74116c6f0c018864dbd6966df227005912bdac8f4307fa43:v1",
+      "actor_input_digest": "99a80e08bb8ef56a9424986582ed13f57a670747b6e8ded9897f7fd5a9f325cb",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:89f3fa2a96de7afa74116c6f0c018864dbd6966df227005912bdac8f4307fa43",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d0:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "89f3fa2a96de7afa74116c6f0c018864dbd6966df227005912bdac8f4307fa43",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:89f3fa2a96de7afa74116c6f0c018864dbd6966df227005912bdac8f4307fa43:v2",
+      "actor_input_digest": "913717e1c3e3ebc66dcb780a6a7ec4f73cac51adc315aaceec6e4d2f06788a16",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:89f3fa2a96de7afa74116c6f0c018864dbd6966df227005912bdac8f4307fa43",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d0:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "89f3fa2a96de7afa74116c6f0c018864dbd6966df227005912bdac8f4307fa43",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:92621f8900da2d15d48330859ec68f6db0e53ac0dd46b3d8a88b3318b5b3e44b:v1",
+      "actor_input_digest": "11496582c34f791ae9d373abd2f4d4fcaee620418c7bb9372e6a05be7ffa6d8a",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:92621f8900da2d15d48330859ec68f6db0e53ac0dd46b3d8a88b3318b5b3e44b",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d0:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "92621f8900da2d15d48330859ec68f6db0e53ac0dd46b3d8a88b3318b5b3e44b",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:92621f8900da2d15d48330859ec68f6db0e53ac0dd46b3d8a88b3318b5b3e44b:v2",
+      "actor_input_digest": "28e98d3b20586990d510f792737504f68c19ed6446023d646f891286dcf051ab",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:92621f8900da2d15d48330859ec68f6db0e53ac0dd46b3d8a88b3318b5b3e44b",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d0:static_hold_protocol:WRITE",
+        "original_actor_input_digest": "92621f8900da2d15d48330859ec68f6db0e53ac0dd46b3d8a88b3318b5b3e44b",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:adc1054409c2d17c2965b8b3a4ef759959730d8ca81cae4bfa5b9d0c24ed1850:v1",
+      "actor_input_digest": "69088049bfb7f438ad7b5bdac47386424ebbeaf9e2f83e0c64ee05a9055aaf30",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:adc1054409c2d17c2965b8b3a4ef759959730d8ca81cae4bfa5b9d0c24ed1850",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d32:counterfactual_memory_corruption:SUBTASK",
+        "original_actor_input_digest": "adc1054409c2d17c2965b8b3a4ef759959730d8ca81cae4bfa5b9d0c24ed1850",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:adc1054409c2d17c2965b8b3a4ef759959730d8ca81cae4bfa5b9d0c24ed1850:v2",
+      "actor_input_digest": "819804d80facb270e576d4f8c6c39b13e223ecf4d703433b4d463fd38eb59eb0",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:adc1054409c2d17c2965b8b3a4ef759959730d8ca81cae4bfa5b9d0c24ed1850",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d32:counterfactual_memory_corruption:SUBTASK",
+        "original_actor_input_digest": "adc1054409c2d17c2965b8b3a4ef759959730d8ca81cae4bfa5b9d0c24ed1850",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:ae9c9ab88379adb570110773f868999199fe4fb93f5f4092549a6e9161a2eaba:v1",
+      "actor_input_digest": "a3c62497130c2a31451ac83ca2d73c2eff9b1cb37b1c765bb3e65928855fdf38",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:ae9c9ab88379adb570110773f868999199fe4fb93f5f4092549a6e9161a2eaba",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d32:counterfactual_memory_corruption:WRITE",
+        "original_actor_input_digest": "ae9c9ab88379adb570110773f868999199fe4fb93f5f4092549a6e9161a2eaba",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:ae9c9ab88379adb570110773f868999199fe4fb93f5f4092549a6e9161a2eaba:v2",
+      "actor_input_digest": "bc972f81cd8ad7d727fd5580a2942a39696bfad08c9597705e198559a9a453f8",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_ٶ\":\"Sub up and hold the rightٶ",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        255672,
+        9330,
+        3351,
+        908,
+        578,
+        3385,
+        573,
+        1833,
+        255672,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": false,
+        "schema_legal": false,
+        "target_match": false,
+        "error": "Unterminated string starting at: line 1 column 58 (char 57)",
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:ae9c9ab88379adb570110773f868999199fe4fb93f5f4092549a6e9161a2eaba",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d32:counterfactual_memory_corruption:WRITE",
+        "original_actor_input_digest": "ae9c9ab88379adb570110773f868999199fe4fb93f5f4092549a6e9161a2eaba",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:b6610dd207258561c5289d446cdb7742d4ed3e6f6400466135e6f9319af50b8b:v1",
+      "actor_input_digest": "e07cfbe36302dd96b5e5b3a84b3a18fdf94d345a2e88e4f01c4d16cf06e2d4fa",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:b6610dd207258561c5289d446cdb7742d4ed3e6f6400466135e6f9319af50b8b",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d24:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "b6610dd207258561c5289d446cdb7742d4ed3e6f6400466135e6f9319af50b8b",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:b6610dd207258561c5289d446cdb7742d4ed3e6f6400466135e6f9319af50b8b:v2",
+      "actor_input_digest": "d4700a00776bbbd19c07c4f640e6138cdb246d862135ad1055a6076e4b5491f8",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:b6610dd207258561c5289d446cdb7742d4ed3e6f6400466135e6f9319af50b8b",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d24:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "b6610dd207258561c5289d446cdb7742d4ed3e6f6400466135e6f9319af50b8b",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:b7f2e85a5546e2feb670ba2f6f7c8fb886a14cdf17595a0e817e8b89a20e22c5:v1",
+      "actor_input_digest": "4674ab0f6a804de151a8cae9fd938c4729ad972923f0ef781b81726d140b9c4e",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:b7f2e85a5546e2feb670ba2f6f7c8fb886a14cdf17595a0e817e8b89a20e22c5",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d16:counterfactual_memory_confidence:READ",
+        "original_actor_input_digest": "b7f2e85a5546e2feb670ba2f6f7c8fb886a14cdf17595a0e817e8b89a20e22c5",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:b7f2e85a5546e2feb670ba2f6f7c8fb886a14cdf17595a0e817e8b89a20e22c5:v2",
+      "actor_input_digest": "5214ddad3a365f191e7e02251b290e522b18ba3cf0ea62f5e82104b7e787211a",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:b7f2e85a5546e2feb670ba2f6f7c8fb886a14cdf17595a0e817e8b89a20e22c5",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d16:counterfactual_memory_confidence:READ",
+        "original_actor_input_digest": "b7f2e85a5546e2feb670ba2f6f7c8fb886a14cdf17595a0e817e8b89a20e22c5",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:bda5fc279c4be96314f0dce5a72a1f0035307279ee7c3628a0dfd3153c1246ed:v1",
+      "actor_input_digest": "b0f393ae80c6271e070b772ce68bf12be5ffd48c59deaf67f5537d8613f7c399",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:bda5fc279c4be96314f0dce5a72a1f0035307279ee7c3628a0dfd3153c1246ed",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d24:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "bda5fc279c4be96314f0dce5a72a1f0035307279ee7c3628a0dfd3153c1246ed",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:bda5fc279c4be96314f0dce5a72a1f0035307279ee7c3628a0dfd3153c1246ed:v2",
+      "actor_input_digest": "5c975e2564d3d91357b084c8c700e115cfa2a477ec650bc1fbbc2ca53f88471d",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:bda5fc279c4be96314f0dce5a72a1f0035307279ee7c3628a0dfd3153c1246ed",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d24:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "bda5fc279c4be96314f0dce5a72a1f0035307279ee7c3628a0dfd3153c1246ed",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:d892289a6a92a2096ebc6a4d89bc888773787bd53724354098e2bd31333f7be1:v1",
+      "actor_input_digest": "64decf2f6ecfb04250abfd7281bccf41999551e3e2afff2ffcb03cee2b1712b5",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:d892289a6a92a2096ebc6a4d89bc888773787bd53724354098e2bd31333f7be1",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d0:static_hold_protocol:READ",
+        "original_actor_input_digest": "d892289a6a92a2096ebc6a4d89bc888773787bd53724354098e2bd31333f7be1",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:d892289a6a92a2096ebc6a4d89bc888773787bd53724354098e2bd31333f7be1:v2",
+      "actor_input_digest": "7cc55b3afc5ae8ec277d3482cf34522a256ca52d258eec04413d73123cae8f75",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:d892289a6a92a2096ebc6a4d89bc888773787bd53724354098e2bd31333f7be1",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d0:static_hold_protocol:READ",
+        "original_actor_input_digest": "d892289a6a92a2096ebc6a4d89bc888773787bd53724354098e2bd31333f7be1",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:dfc60d80c2ae9429561e9cab195238f3038b1ba3b546b86d07771282056a814b:v1",
+      "actor_input_digest": "9479b189807dc21b5ceb05cf0f271316f00c59a15bfc2c02d243d98cc5cbd8af",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:dfc60d80c2ae9429561e9cab195238f3038b1ba3b546b86d07771282056a814b",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d0:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "dfc60d80c2ae9429561e9cab195238f3038b1ba3b546b86d07771282056a814b",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:dfc60d80c2ae9429561e9cab195238f3038b1ba3b546b86d07771282056a814b:v2",
+      "actor_input_digest": "5652e4cb7f8d580aa5a398d97329d6acef274eb4ca45aae1ce15d822b0765e8e",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:dfc60d80c2ae9429561e9cab195238f3038b1ba3b546b86d07771282056a814b",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d0:static_hold_protocol:SUBTASK",
+        "original_actor_input_digest": "dfc60d80c2ae9429561e9cab195238f3038b1ba3b546b86d07771282056a814b",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:e63cba75482c499068f484d8ea1150e5493b90bb44f050d549046971bc0f9cfc:v1",
+      "actor_input_digest": "63dcaccbfa48fd38ceecadd2a0182be08ea2d89d1aa8d47cc84750db53690591",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:e63cba75482c499068f484d8ea1150e5493b90bb44f050d549046971bc0f9cfc",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d0:static_hold_protocol:READ",
+        "original_actor_input_digest": "e63cba75482c499068f484d8ea1150e5493b90bb44f050d549046971bc0f9cfc",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:e63cba75482c499068f484d8ea1150e5493b90bb44f050d549046971bc0f9cfc:v2",
+      "actor_input_digest": "d183a9c0ae785d9961c68c67a156615663988e87330565b2fdd0d53a9479361a",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:e63cba75482c499068f484d8ea1150e5493b90bb44f050d549046971bc0f9cfc",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d0:static_hold_protocol:READ",
+        "original_actor_input_digest": "e63cba75482c499068f484d8ea1150e5493b90bb44f050d549046971bc0f9cfc",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:f9d2b1cc21bc08950d18ab7ea5fb84710d34b6f717402008837b356e29da5377:v1",
+      "actor_input_digest": "28b45488e9c45e327321235b85a45384ea7aea5af5ec3e0b0e3cb5cf244d1270",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:f9d2b1cc21bc08950d18ab7ea5fb84710d34b6f717402008837b356e29da5377",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d8:static_hold_protocol:READ",
+        "original_actor_input_digest": "f9d2b1cc21bc08950d18ab7ea5fb84710d34b6f717402008837b356e29da5377",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:f9d2b1cc21bc08950d18ab7ea5fb84710d34b6f717402008837b356e29da5377:v2",
+      "actor_input_digest": "7826bf44bf772dafcdbf4a71073c8a07a99dc26c65953dd0878580096e6005b3",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:f9d2b1cc21bc08950d18ab7ea5fb84710d34b6f717402008837b356e29da5377",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_left_31600:d8:static_hold_protocol:READ",
+        "original_actor_input_digest": "f9d2b1cc21bc08950d18ab7ea5fb84710d34b6f717402008837b356e29da5377",
+        "original_goal": "Verify the sample initially on the left and return it home, then verify the sample initially on the right and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:fd6a25f1875f7e81b4a58933e4be20e9f984c705b076d5c81ac59cdecda82822:v1",
+      "actor_input_digest": "cf1f01186a6241a61c89525f7ea931bade2fb0a34b3d8d4827ae590acc68da2f",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:fd6a25f1875f7e81b4a58933e4be20e9f984c705b076d5c81ac59cdecda82822",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 1
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 1,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d16:counterfactual_memory_confidence:WRITE",
+        "original_actor_input_digest": "fd6a25f1875f7e81b4a58933e4be20e9f984c705b076d5c81ac59cdecda82822",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    },
+    {
+      "sample_id": "paraphrase:fd6a25f1875f7e81b4a58933e4be20e9f984c705b076d5c81ac59cdecda82822:v2",
+      "actor_input_digest": "38c64d5951476515bb5602b42118648f43e2231634b4f3fab95d9a4a8515d04a",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": {
+        "goal_pair": "paraphrase:fd6a25f1875f7e81b4a58933e4be20e9f984c705b076d5c81ac59cdecda82822",
+        "memory_pair": null,
+        "expected_response": "Invariant target under equivalent goal wording",
+        "variant": 2
+      },
+      "text_intervention": {
+        "kind": "equivalent_goal_paraphrase",
+        "variant": 2,
+        "original_sample_id": "fresh_protocol_layout_06_right_31610:d16:counterfactual_memory_confidence:WRITE",
+        "original_actor_input_digest": "fd6a25f1875f7e81b4a58933e4be20e9f984c705b076d5c81ac59cdecda82822",
+        "original_goal": "Verify the sample initially on the right and return it home, then verify the sample initially on the left and return it home.",
+        "modified_actor_context_fields": [
+          "goal"
+        ],
+        "memory_unchanged": true,
+        "history_unchanged": true,
+        "images_and_state_unchanged": true,
+        "target_unchanged": true,
+        "target_basis": "Static first-role/memory rule, no new physical outcomes"
+      }
+    }
+  ],
+  "summary": {
+    "count": 56,
+    "eos": {
+      "passed": 56,
+      "eligible": 56
+    },
+    "nonempty": {
+      "passed": 56,
+      "eligible": 56
+    },
+    "json": {
+      "passed": 34,
+      "eligible": 36
+    },
+    "schema_legal": {
+      "passed": 34,
+      "eligible": 36
+    },
+    "target_match": {
+      "passed": 34,
+      "eligible": 36
+    },
+    "side_binding_lexical": {
+      "passed": 20,
+      "eligible": 20
+    },
+    "text_exact": {
+      "passed": 54,
+      "eligible": 56
+    },
+    "semantic_passed": {
+      "passed": 54,
+      "eligible": 56
+    },
+    "strict_passed": {
+      "passed": 54,
+      "eligible": 56
+    },
+    "strict_text_exact": {
+      "passed": 54,
+      "eligible": 56
+    },
+    "all_strict_passed": false
+  },
+  "by_mode": {
+    "READ": {
+      "count": 16,
+      "eos": {
+        "passed": 16,
+        "eligible": 16
+      },
+      "nonempty": {
+        "passed": 16,
+        "eligible": 16
+      },
+      "json": {
+        "passed": 16,
+        "eligible": 16
+      },
+      "schema_legal": {
+        "passed": 16,
+        "eligible": 16
+      },
+      "target_match": {
+        "passed": 16,
+        "eligible": 16
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "text_exact": {
+        "passed": 16,
+        "eligible": 16
+      },
+      "semantic_passed": {
+        "passed": 16,
+        "eligible": 16
+      },
+      "strict_passed": {
+        "passed": 16,
+        "eligible": 16
+      },
+      "strict_text_exact": {
+        "passed": 16,
+        "eligible": 16
+      },
+      "all_strict_passed": true
+    },
+    "WRITE": {
+      "count": 20,
+      "eos": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "nonempty": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "json": {
+        "passed": 18,
+        "eligible": 20
+      },
+      "schema_legal": {
+        "passed": 18,
+        "eligible": 20
+      },
+      "target_match": {
+        "passed": 18,
+        "eligible": 20
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "text_exact": {
+        "passed": 18,
+        "eligible": 20
+      },
+      "semantic_passed": {
+        "passed": 18,
+        "eligible": 20
+      },
+      "strict_passed": {
+        "passed": 18,
+        "eligible": 20
+      },
+      "strict_text_exact": {
+        "passed": 18,
+        "eligible": 20
+      },
+      "all_strict_passed": false
+    },
+    "SUBTASK": {
+      "count": 20,
+      "eos": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "nonempty": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "side_binding_lexical": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "text_exact": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "semantic_passed": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "strict_passed": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "strict_text_exact": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "all_strict_passed": true
+    }
+  },
+  "scope": "Heldout validation or controlled evaluation-only protocol conditions; not a training fitting report, visual grounding or task SR result",
+  "parameter_protection": {
+    "before": {
+      "False": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652",
+      "True": "0df6dfae511ab582e0325478d98d0836a9748c4a69a9a143f2a835efb0b44353"
+    },
+    "after": {
+      "False": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652",
+      "True": "0df6dfae511ab582e0325478d98d0836a9748c4a69a9a143f2a835efb0b44353"
+    },
+    "all_parameters_exact": true,
+    "checkpoint_weights_sha_before": "5e16c2c36ba8c99351d4b0f9af66b6600d94250e1a07bea4f227b8bd5e2e4531",
+    "checkpoint_weights_sha_after": "5e16c2c36ba8c99351d4b0f9af66b6600d94250e1a07bea4f227b8bd5e2e4531",
+    "checkpoint_version_sha256": "4653b02a41dc8f44ff8482bfe21e2e5d7ea33611cbc3a5764cd85c10710344bb",
+    "checkpoint_unchanged": true,
+    "optimizer_created": false,
+    "parameters_with_grad": 0
+  },
+  "unique_actual_actor_inputs": {
+    "count": 56,
+    "summary": {
+      "count": 56,
+      "eos": {
+        "passed": 56,
+        "eligible": 56
+      },
+      "nonempty": {
+        "passed": 56,
+        "eligible": 56
+      },
+      "json": {
+        "passed": 34,
+        "eligible": 36
+      },
+      "schema_legal": {
+        "passed": 34,
+        "eligible": 36
+      },
+      "target_match": {
+        "passed": 34,
+        "eligible": 36
+      },
+      "side_binding_lexical": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "text_exact": {
+        "passed": 54,
+        "eligible": 56
+      },
+      "semantic_passed": {
+        "passed": 54,
+        "eligible": 56
+      },
+      "strict_passed": {
+        "passed": 54,
+        "eligible": 56
+      },
+      "strict_text_exact": {
+        "passed": 54,
+        "eligible": 56
+      },
+      "all_strict_passed": false
+    },
+    "by_mode": {
+      "READ": {
+        "count": 16,
+        "eos": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "nonempty": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "json": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "schema_legal": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "target_match": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "semantic_passed": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "strict_passed": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "strict_text_exact": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "all_strict_passed": true
+      },
+      "WRITE": {
+        "count": 20,
+        "eos": {
+          "passed": 20,
+          "eligible": 20
+        },
+        "nonempty": {
+          "passed": 20,
+          "eligible": 20
+        },
+        "json": {
+          "passed": 18,
+          "eligible": 20
+        },
+        "schema_legal": {
+          "passed": 18,
+          "eligible": 20
+        },
+        "target_match": {
+          "passed": 18,
+          "eligible": 20
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 18,
+          "eligible": 20
+        },
+        "semantic_passed": {
+          "passed": 18,
+          "eligible": 20
+        },
+        "strict_passed": {
+          "passed": 18,
+          "eligible": 20
+        },
+        "strict_text_exact": {
+          "passed": 18,
+          "eligible": 20
+        },
+        "all_strict_passed": false
+      },
+      "SUBTASK": {
+        "count": 20,
+        "eos": {
+          "passed": 20,
+          "eligible": 20
+        },
+        "nonempty": {
+          "passed": 20,
+          "eligible": 20
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "side_binding_lexical": {
+          "passed": 20,
+          "eligible": 20
+        },
+        "text_exact": {
+          "passed": 20,
+          "eligible": 20
+        },
+        "semantic_passed": {
+          "passed": 20,
+          "eligible": 20
+        },
+        "strict_passed": {
+          "passed": 20,
+          "eligible": 20
+        },
+        "strict_text_exact": {
+          "passed": 20,
+          "eligible": 20
+        },
+        "all_strict_passed": true
+      }
+    }
+  },
+  "controlled_pairs": {
+    "goal_pair": {
+      "count": 28,
+      "all_cases_passed": 26,
+      "groups": [
+        {
+          "pair_id": "paraphrase:028392da3aa56779243b21e6bfaed644babd07d067a2e1012deb72f3abe2314c",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:0fd7af5d850fdfdfe5948cc27613de6cf8e02791773750b4ca159ea2faae7ea3",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "paraphrase:129122eb0764fa58d13ff36c3f644e437c1242a281bcf0a4ac5bf21a853771b5",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:17b592e8e945814f7e98cb9784a8716495c8131dd0a5dcb98e7f13bce0f1cfee",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:1df8cad35c11ab5663435956eea209c2264c2a9d6e5710a85f3aef784e1370ff",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:237331fd737def0b389e993d1609a46d9a232616c646c472fe3f4d08bf60299b",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:24be0f83cb361a5f35a10372ff5d898a45e70916d1d31b70f036d4b5becb39de",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:40489e7135afc1705b67bc7347aaad21be2cdec087c4127725c4332f4e648bd9",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:4a7b4507cefcb0279017c0c350703849106e5c121b2bd4958adbf4380f84c625",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:51bc2a59703f83bad4dbd1d50f71bd257200fb20e5e288607906a996ae94af6c",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:6530709e16e4d3a2e8d439dd5521671fe09f009af32b07b281bc186afb7cb90e",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:677fb339c925cfc64171549dc30acd272dcc0c5da6491562d6589ab53cef5238",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:821e3ff3f95db8547282fc0db3ae7caafad9834a2bbf0047fa1cc29f64325190",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:847e2d6e338143c2af09d6bb955d4e344f79a8c86083359325d7391144561040",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:89f3fa2a96de7afa74116c6f0c018864dbd6966df227005912bdac8f4307fa43",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:92621f8900da2d15d48330859ec68f6db0e53ac0dd46b3d8a88b3318b5b3e44b",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:adc1054409c2d17c2965b8b3a4ef759959730d8ca81cae4bfa5b9d0c24ed1850",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:ae9c9ab88379adb570110773f868999199fe4fb93f5f4092549a6e9161a2eaba",
+          "count": 2,
+          "all_passed": false,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 2
+        },
+        {
+          "pair_id": "paraphrase:b6610dd207258561c5289d446cdb7742d4ed3e6f6400466135e6f9319af50b8b",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:b7f2e85a5546e2feb670ba2f6f7c8fb886a14cdf17595a0e817e8b89a20e22c5",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:bda5fc279c4be96314f0dce5a72a1f0035307279ee7c3628a0dfd3153c1246ed",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:d892289a6a92a2096ebc6a4d89bc888773787bd53724354098e2bd31333f7be1",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:dfc60d80c2ae9429561e9cab195238f3038b1ba3b546b86d07771282056a814b",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:e63cba75482c499068f484d8ea1150e5493b90bb44f050d549046971bc0f9cfc",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:f9d2b1cc21bc08950d18ab7ea5fb84710d34b6f717402008837b356e29da5377",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        },
+        {
+          "pair_id": "paraphrase:fd6a25f1875f7e81b4a58933e4be20e9f984c705b076d5c81ac59cdecda82822",
+          "count": 2,
+          "all_passed": true,
+          "expected_distinct_outputs": 1,
+          "observed_distinct_outputs": 1
+        }
+      ]
+    },
+    "memory_pair": {
+      "count": 0,
+      "all_cases_passed": 0,
+      "groups": []
+    }
+  }
+}

@@ -1,0 +1,733 @@
+{
+  "audit_time": "2026-10-19T16:25:29.956287",
+  "read_only": true,
+  "GPU_or_model_loaded": false,
+  "counterfactual_v4_recomputed": {
+    "rows": 88,
+    "unique_actual_inputs": 88,
+    "by_mode": {
+      "READ": {
+        "count": 8,
+        "strict_passed": 8,
+        "eos": 8,
+        "json": 8,
+        "json_eligible": 8,
+        "schema_legal": 8,
+        "schema_legal_eligible": 8,
+        "target_match": 8,
+        "target_match_eligible": 8
+      },
+      "WRITE": {
+        "count": 40,
+        "strict_passed": 16,
+        "eos": 40,
+        "json": 40,
+        "json_eligible": 40,
+        "schema_legal": 40,
+        "schema_legal_eligible": 40,
+        "target_match": 16,
+        "target_match_eligible": 40
+      },
+      "SUBTASK": {
+        "count": 40,
+        "strict_passed": 16,
+        "eos": 37
+      }
+    },
+    "strict_passed": 40,
+    "errors": []
+  },
+  "SUBTASK_by_memory_condition": {
+    "empty": {
+      "count": 8,
+      "strict_passed": 0,
+      "EOS": 5,
+      "lexical_goal_match": 4,
+      "format_crosstalk_starts_JSON": 8
+    },
+    "confirmed_left": {
+      "count": 8,
+      "strict_passed": 4,
+      "EOS": 8,
+      "lexical_goal_match": 4,
+      "followed_memory_value_side": 8,
+      "goal_conflicts_memory": 4,
+      "format_crosstalk_starts_JSON": 0
+    },
+    "unconfirmed_left": {
+      "count": 8,
+      "strict_passed": 4,
+      "EOS": 8,
+      "lexical_goal_match": 4,
+      "followed_memory_value_side": 8,
+      "goal_conflicts_memory": 4,
+      "format_crosstalk_starts_JSON": 0
+    },
+    "confirmed_right": {
+      "count": 8,
+      "strict_passed": 4,
+      "EOS": 8,
+      "lexical_goal_match": 4,
+      "followed_memory_value_side": 8,
+      "goal_conflicts_memory": 4,
+      "format_crosstalk_starts_JSON": 0
+    },
+    "unconfirmed_right": {
+      "count": 8,
+      "strict_passed": 4,
+      "EOS": 8,
+      "lexical_goal_match": 4,
+      "followed_memory_value_side": 8,
+      "goal_conflicts_memory": 4,
+      "format_crosstalk_starts_JSON": 0
+    }
+  },
+  "SUBTASK_examples": {
+    "empty": {
+      "sample_id": "cf_val_obs00:SUBTASK:empty:goal_left",
+      "goal_side": "left",
+      "memory": {
+        "selected": [
+          {
+            "slot_id": "sample_identity",
+            "status": "empty",
+            "value": null,
+            "confirmed": false,
+            "revision": 0
+          }
+        ],
+        "current_writes": []
+      },
+      "target": "Pick up and hold the sample initially on the left.",
+      "text": "{\"operations\":[Sub the left",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": false,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      }
+    },
+    "confirmed_left": {
+      "sample_id": "cf_val_obs03:SUBTASK:confirmed_left:goal_right",
+      "goal_side": "right",
+      "memory": {
+        "selected": [
+          {
+            "slot_id": "sample_identity",
+            "status": "active",
+            "value": "The first requested sample is initially on the left.",
+            "confirmed": true,
+            "revision": 1
+          }
+        ],
+        "current_writes": []
+      },
+      "target": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      }
+    },
+    "unconfirmed_left": {
+      "sample_id": "cf_val_obs03:SUBTASK:unconfirmed_left:goal_right",
+      "goal_side": "right",
+      "memory": {
+        "selected": [
+          {
+            "slot_id": "sample_identity",
+            "status": "active",
+            "value": "The first requested sample is initially on the left.",
+            "confirmed": false,
+            "revision": 1
+          }
+        ],
+        "current_writes": []
+      },
+      "target": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      }
+    },
+    "confirmed_right": {
+      "sample_id": "cf_val_obs03:SUBTASK:confirmed_right:goal_left",
+      "goal_side": "left",
+      "memory": {
+        "selected": [
+          {
+            "slot_id": "sample_identity",
+            "status": "active",
+            "value": "The first requested sample is initially on the right.",
+            "confirmed": true,
+            "revision": 1
+          }
+        ],
+        "current_writes": []
+      },
+      "target": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      }
+    },
+    "unconfirmed_right": {
+      "sample_id": "cf_val_obs03:SUBTASK:unconfirmed_right:goal_left",
+      "goal_side": "left",
+      "memory": {
+        "selected": [
+          {
+            "slot_id": "sample_identity",
+            "status": "active",
+            "value": "The first requested sample is initially on the right.",
+            "confirmed": false,
+            "revision": 1
+          }
+        ],
+        "current_writes": []
+      },
+      "target": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": false,
+        "required_terms": true,
+        "exact_target": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      }
+    }
+  },
+  "WRITE_by_memory_condition": {
+    "empty": {
+      "count": 8,
+      "strict_passed": 8,
+      "pred_WRITE": 8,
+      "target_WRITE": 8
+    },
+    "confirmed_left": {
+      "count": 8,
+      "strict_passed": 4,
+      "pred_EMPTY": 8,
+      "target_EMPTY": 4,
+      "target_CORRECT": 4
+    },
+    "unconfirmed_left": {
+      "count": 8,
+      "strict_passed": 0,
+      "pred_EMPTY": 8,
+      "target_KEEP": 4,
+      "target_CORRECT": 4
+    },
+    "confirmed_right": {
+      "count": 8,
+      "strict_passed": 4,
+      "pred_EMPTY": 8,
+      "target_CORRECT": 4,
+      "target_EMPTY": 4
+    },
+    "unconfirmed_right": {
+      "count": 8,
+      "strict_passed": 0,
+      "pred_EMPTY": 8,
+      "target_CORRECT": 4,
+      "target_KEEP": 4
+    }
+  },
+  "revision_v5_recomputed": {
+    "rows": 24,
+    "unique_actual_inputs": 24,
+    "by_mode": {
+      "WRITE": {
+        "count": 24,
+        "strict_passed": 8,
+        "eos": 24,
+        "json": 24,
+        "json_eligible": 24,
+        "schema_legal": 24,
+        "schema_legal_eligible": 24,
+        "target_match": 8,
+        "target_match_eligible": 24
+      }
+    },
+    "strict_passed": 8,
+    "errors": []
+  },
+  "revision_causal_conditions": {
+    "groups": 8,
+    "only_revision_changed_groups": 8,
+    "semantic_output_changed_groups": 8,
+    "triples": [
+      {
+        "group": "goal_left:value_left:confirmed_false",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "only_revision_input_change_verified": true,
+        "same_observation_state_pixels": true,
+        "target_invariant": true,
+        "target": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+        "token_changes_from_revision1": [
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235284,
+              "from_piece": "1",
+              "to_piece": "2"
+            }
+          ],
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235310,
+              "from_piece": "1",
+              "to_piece": "4"
+            }
+          ]
+        ],
+        "semantic_output_changed": true,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "strict_passed": true
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "strict_passed": false
+          }
+        ]
+      },
+      {
+        "group": "goal_left:value_left:confirmed_true",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "only_revision_input_change_verified": true,
+        "same_observation_state_pixels": true,
+        "target_invariant": true,
+        "target": "{\"operations\":[]}",
+        "token_changes_from_revision1": [
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235284,
+              "from_piece": "1",
+              "to_piece": "2"
+            }
+          ],
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235310,
+              "from_piece": "1",
+              "to_piece": "4"
+            }
+          ]
+        ],
+        "semantic_output_changed": true,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "strict_passed": true
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "strict_passed": false
+          }
+        ]
+      },
+      {
+        "group": "goal_left:value_right:confirmed_false",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "only_revision_input_change_verified": true,
+        "same_observation_state_pixels": true,
+        "target_invariant": true,
+        "target": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+        "token_changes_from_revision1": [
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235284,
+              "from_piece": "1",
+              "to_piece": "2"
+            }
+          ],
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235310,
+              "from_piece": "1",
+              "to_piece": "4"
+            }
+          ]
+        ],
+        "semantic_output_changed": true,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "strict_passed": true
+          }
+        ]
+      },
+      {
+        "group": "goal_left:value_right:confirmed_true",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "only_revision_input_change_verified": true,
+        "same_observation_state_pixels": true,
+        "target_invariant": true,
+        "target": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+        "token_changes_from_revision1": [
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235284,
+              "from_piece": "1",
+              "to_piece": "2"
+            }
+          ],
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235310,
+              "from_piece": "1",
+              "to_piece": "4"
+            }
+          ]
+        ],
+        "semantic_output_changed": true,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "strict_passed": true
+          }
+        ]
+      },
+      {
+        "group": "goal_right:value_left:confirmed_false",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "only_revision_input_change_verified": true,
+        "same_observation_state_pixels": true,
+        "target_invariant": true,
+        "target": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+        "token_changes_from_revision1": [
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235284,
+              "from_piece": "1",
+              "to_piece": "2"
+            }
+          ],
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235310,
+              "from_piece": "1",
+              "to_piece": "4"
+            }
+          ]
+        ],
+        "semantic_output_changed": true,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "strict_passed": true
+          }
+        ]
+      },
+      {
+        "group": "goal_right:value_left:confirmed_true",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "only_revision_input_change_verified": true,
+        "same_observation_state_pixels": true,
+        "target_invariant": true,
+        "target": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+        "token_changes_from_revision1": [
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235284,
+              "from_piece": "1",
+              "to_piece": "2"
+            }
+          ],
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235310,
+              "from_piece": "1",
+              "to_piece": "4"
+            }
+          ]
+        ],
+        "semantic_output_changed": true,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "strict_passed": true
+          }
+        ]
+      },
+      {
+        "group": "goal_right:value_right:confirmed_false",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "only_revision_input_change_verified": true,
+        "same_observation_state_pixels": true,
+        "target_invariant": true,
+        "target": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+        "token_changes_from_revision1": [
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235284,
+              "from_piece": "1",
+              "to_piece": "2"
+            }
+          ],
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235310,
+              "from_piece": "1",
+              "to_piece": "4"
+            }
+          ]
+        ],
+        "semantic_output_changed": true,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "strict_passed": true
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "strict_passed": false
+          }
+        ]
+      },
+      {
+        "group": "goal_right:value_right:confirmed_true",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "only_revision_input_change_verified": true,
+        "same_observation_state_pixels": true,
+        "target_invariant": true,
+        "target": "{\"operations\":[]}",
+        "token_changes_from_revision1": [
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235284,
+              "from_piece": "1",
+              "to_piece": "2"
+            }
+          ],
+          [
+            {
+              "position": 244,
+              "from_id": 235274,
+              "to_id": 235310,
+              "from_piece": "1",
+              "to_piece": "4"
+            }
+          ]
+        ],
+        "semantic_output_changed": true,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "strict_passed": true
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "strict_passed": false
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "strict_passed": false
+          }
+        ]
+      }
+    ],
+    "within_test_operation_mapping": "All8 groups: revision1 predictsEMPTY, revision2 predictsKEEP, revision4 predictsCORRECT",
+    "scope": "Causal revision-input effect in one fixed actual observation,2goals,4value/confirmed contexts; not proof of all dataset shortcuts."
+  },
+  "fit96_WRITE_revision_label_correlation": {
+    "EMPTY": {
+      "1": 3,
+      "3": 5
+    },
+    "CORRECT": {
+      "4": 8
+    },
+    "WRITE": {
+      "0": 8
+    },
+    "KEEP": {
+      "2": 8
+    }
+  },
+  "old_v2_SUBTASK": {
+    "excluded_from_model_generalization_evidence": true,
+    "reason": "Old40SUBTASK actor_memory waslist instead of native selected/current_writes envelope",
+    "preserved": "Correctedv4 replaces inference evidence; originalinvalid results should remain failure/provenance evidence, not silently overwritten."
+  },
+  "conclusions": [
+    "CorrectedSUBTASK: all32nonempty memory cases copy stored memory side regardless goal/confirmation;16/32goals thereforewrong. Empty8all fail:JSONmode cross-talk8,EOSmissing3.",
+    "CorrectedWRITE: all32active rev1cases predictEMPTY, empty8rev0predictWRITE;16/40targets correct.",
+    "Revisiononly24:8/24correct,all24legalJSON/EOS,8/8triples change semanticoperation whenonlyrevisionchanges. This directly establishes localrevisiondependence.",
+    "Fit96WRITE operation perfectly correlated with revision; controlled intervention supports a shortcut explanation for these contexts, not a blanket globalclaim.",
+    "Targetsareformal visiblegoal/memorytool logic; none demonstratesphysicalgrounding, graspability or robotSR."
+  ]
+}

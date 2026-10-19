@@ -1,0 +1,26 @@
+{
+  "status": "planned",
+  "scope": "96-row full-language-attention step continuation",
+  "formal_3000_training": false,
+  "automatic_promotion": false,
+  "task_SR_measured": false,
+  "source_checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/checkpoint",
+  "source_checkpoint_global_step": 300,
+  "branch_global_step_start": 300,
+  "max_total_updates": 2000,
+  "additional_optimizer_update_cap": 1700,
+  "eval_targets": [
+    600,
+    800,
+    1000,
+    1200,
+    1400,
+    1600,
+    1800,
+    2000
+  ],
+  "evaluation_count": 96,
+  "steps": [],
+  "started_unix": 1792391597.2664027,
+  "stop_rule": "two consecutive strict all96 AND anchor8 AND holdout8 passes; plateau earliest1000 requires language and both KV/action retention pools stagnant; hard cap"
+}

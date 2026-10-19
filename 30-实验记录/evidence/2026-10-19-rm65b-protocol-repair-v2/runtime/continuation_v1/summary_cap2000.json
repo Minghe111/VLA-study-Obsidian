@@ -1,0 +1,1003 @@
+{
+  "status": "completed",
+  "scope": "96-row full-language-attention step continuation",
+  "formal_3000_training": false,
+  "automatic_promotion": false,
+  "task_SR_measured": false,
+  "source_checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/checkpoint",
+  "source_checkpoint_global_step": 300,
+  "branch_global_step_start": 300,
+  "max_total_updates": 2000,
+  "additional_optimizer_update_cap": 1700,
+  "eval_targets": [
+    600,
+    800,
+    1000,
+    1200,
+    1400,
+    1600,
+    1800,
+    2000
+  ],
+  "evaluation_count": 96,
+  "steps": [
+    {
+      "name": "language_warmup_96_0600",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "96",
+        "--output",
+        "reports/continuation_v1/language_warmup_96_0600",
+        "--resume",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/checkpoint",
+        "--training-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+        "--baseline",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/00_baseline/retention/snapshot.pt",
+        "--total-updates",
+        "600",
+        "--max-fit-updates",
+        "2000",
+        "--learning-rate",
+        "5e-05",
+        "--kv-weight",
+        "1.0",
+        "--eval-all",
+        "--execute",
+        "--enable-training"
+      ],
+      "status": "completed",
+      "log": "reports/continuation_v1/logs/language_warmup_96_0600.log",
+      "start_global_step": 300,
+      "target_global_step": 600,
+      "additional_optimizer_updates": 300,
+      "started_unix": 1792391835.1759214,
+      "elapsed_s": 454.63440689199706,
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 0.4313036185922101,
+        "gold_tokens": 1488,
+        "gold_correct": 1287,
+        "eos": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 56,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 56,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 40,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 17,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 57,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 57,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 57,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7129.14892578125,
+        "peak_reserved_mib": 7544.0,
+        "host_peak_rss_mib": 20563.67578125
+      },
+      "sampled_card_peak_mib": 9170.0,
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0015731343301013112,
+        "max_case_masked_all_layer_kv_relative_rms": 0.0433790225304312,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "retention_holdout_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.007342069875448942,
+        "max_case_masked_all_layer_kv_relative_rms": 0.042949362728413376,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "both_gates_pass": false
+    },
+    {
+      "name": "language_warmup_96_0800",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "96",
+        "--output",
+        "reports/continuation_v1/language_warmup_96_0800",
+        "--resume",
+        "reports/continuation_v1/language_warmup_96_0600/checkpoint",
+        "--training-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+        "--baseline",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/00_baseline/retention/snapshot.pt",
+        "--total-updates",
+        "800",
+        "--max-fit-updates",
+        "2000",
+        "--learning-rate",
+        "5e-05",
+        "--kv-weight",
+        "1.0",
+        "--eval-all",
+        "--execute",
+        "--enable-training"
+      ],
+      "status": "completed",
+      "log": "reports/continuation_v1/logs/language_warmup_96_0800.log",
+      "start_global_step": 600,
+      "target_global_step": 800,
+      "additional_optimizer_updates": 200,
+      "started_unix": 1792392291.1275523,
+      "elapsed_s": 323.195564464997,
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 0.16040523085393943,
+        "gold_tokens": 1488,
+        "gold_correct": 1411,
+        "eos": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 56,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 56,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 40,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 17,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 57,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 57,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 57,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7128.9033203125,
+        "peak_reserved_mib": 7600.0,
+        "host_peak_rss_mib": 20562.83203125
+      },
+      "sampled_card_peak_mib": 9052.0,
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0014453153125941753,
+        "max_case_masked_all_layer_kv_relative_rms": 0.035060757189135594,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "retention_holdout_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.008150116540491581,
+        "max_case_masked_all_layer_kv_relative_rms": 0.03458199015707828,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "both_gates_pass": false
+    },
+    {
+      "name": "language_warmup_96_1000",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "96",
+        "--output",
+        "reports/continuation_v1/language_warmup_96_1000",
+        "--resume",
+        "reports/continuation_v1/language_warmup_96_0800/checkpoint",
+        "--training-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+        "--baseline",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/00_baseline/retention/snapshot.pt",
+        "--total-updates",
+        "1000",
+        "--max-fit-updates",
+        "2000",
+        "--learning-rate",
+        "5e-05",
+        "--kv-weight",
+        "1.0",
+        "--eval-all",
+        "--execute",
+        "--enable-training"
+      ],
+      "status": "completed",
+      "log": "reports/continuation_v1/logs/language_warmup_96_1000.log",
+      "start_global_step": 800,
+      "target_global_step": 1000,
+      "additional_optimizer_updates": 200,
+      "started_unix": 1792392615.5792778,
+      "elapsed_s": 325.69057867899755,
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 0.0960739172102573,
+        "gold_tokens": 1488,
+        "gold_correct": 1455,
+        "eos": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 64,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 63,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 51,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 16,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 67,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 67,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 67,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7128.9033203125,
+        "peak_reserved_mib": 7600.0,
+        "host_peak_rss_mib": 20563.51171875
+      },
+      "sampled_card_peak_mib": 9263.0,
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0014277929440140724,
+        "max_case_masked_all_layer_kv_relative_rms": 0.028924162024915632,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "retention_holdout_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.00426646089181304,
+        "max_case_masked_all_layer_kv_relative_rms": 0.028571396696989177,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "both_gates_pass": false
+    },
+    {
+      "name": "language_warmup_96_1200",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "96",
+        "--output",
+        "reports/continuation_v1/language_warmup_96_1200",
+        "--resume",
+        "reports/continuation_v1/language_warmup_96_1000/checkpoint",
+        "--training-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+        "--baseline",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/00_baseline/retention/snapshot.pt",
+        "--total-updates",
+        "1200",
+        "--max-fit-updates",
+        "2000",
+        "--learning-rate",
+        "5e-05",
+        "--kv-weight",
+        "1.0",
+        "--eval-all",
+        "--execute",
+        "--enable-training"
+      ],
+      "status": "completed",
+      "log": "reports/continuation_v1/logs/language_warmup_96_1200.log",
+      "start_global_step": 1000,
+      "target_global_step": 1200,
+      "additional_optimizer_updates": 200,
+      "started_unix": 1792392942.5939035,
+      "elapsed_s": 329.181887155999,
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 0.07290606508710577,
+        "gold_tokens": 1488,
+        "gold_correct": 1455,
+        "eos": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 53,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 53,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 49,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 16,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 65,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 65,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 65,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7129.9267578125,
+        "peak_reserved_mib": 7354.0,
+        "host_peak_rss_mib": 20561.44921875
+      },
+      "sampled_card_peak_mib": 9083.0,
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0014027026481926441,
+        "max_case_masked_all_layer_kv_relative_rms": 0.024721492966189005,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "retention_holdout_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0013077938929200172,
+        "max_case_masked_all_layer_kv_relative_rms": 0.024161491099308756,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "both_gates_pass": false
+    },
+    {
+      "name": "language_warmup_96_1400",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "96",
+        "--output",
+        "reports/continuation_v1/language_warmup_96_1400",
+        "--resume",
+        "reports/continuation_v1/language_warmup_96_1200/checkpoint",
+        "--training-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+        "--baseline",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/00_baseline/retention/snapshot.pt",
+        "--total-updates",
+        "1400",
+        "--max-fit-updates",
+        "2000",
+        "--learning-rate",
+        "5e-05",
+        "--kv-weight",
+        "1.0",
+        "--eval-all",
+        "--execute",
+        "--enable-training"
+      ],
+      "status": "completed",
+      "log": "reports/continuation_v1/logs/language_warmup_96_1400.log",
+      "start_global_step": 1200,
+      "target_global_step": 1400,
+      "additional_optimizer_updates": 200,
+      "started_unix": 1792393273.209802,
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 0.017169298024479456,
+        "gold_tokens": 1488,
+        "gold_correct": 1480,
+        "eos": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 64,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 64,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 56,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 88,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 88,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 88,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7128.9033203125,
+        "peak_reserved_mib": 7790.0,
+        "host_peak_rss_mib": 20562.25
+      },
+      "sampled_card_peak_mib": 9443.0,
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0012631764402613044,
+        "max_case_masked_all_layer_kv_relative_rms": 0.02089221910578054,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "retention_holdout_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.001837509567849338,
+        "max_case_masked_all_layer_kv_relative_rms": 0.020473207736040472,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "both_gates_pass": false,
+      "elapsed_s": 330.5120919830006,
+      "recovered_from_completed_disk_receipts": true,
+      "original_orchestrator_status": "running",
+      "recovery_did_not_observe_original_child_exit_code": true
+    },
+    {
+      "name": "language_warmup_96_1600",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "96",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1600",
+        "--resume",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1400/checkpoint",
+        "--training-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+        "--baseline",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/00_baseline/retention/snapshot.pt",
+        "--total-updates",
+        "1600",
+        "--max-fit-updates",
+        "2000",
+        "--learning-rate",
+        "5e-05",
+        "--kv-weight",
+        "1.0",
+        "--eval-all",
+        "--execute",
+        "--enable-training"
+      ],
+      "status": "completed",
+      "log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/logs/language_warmup_96_1600.log",
+      "start_global_step": 1400,
+      "target_global_step": 1600,
+      "additional_optimizer_updates": 200,
+      "started_unix": 1792393817.998932,
+      "created_by_recovery": true,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 0.010604986114534162,
+        "gold_tokens": 1488,
+        "gold_correct": 1480,
+        "eos": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 64,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 64,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 56,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 88,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 88,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 88,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7129.14892578125,
+        "peak_reserved_mib": 7544.0,
+        "host_peak_rss_mib": 20562.58984375
+      },
+      "sampled_card_peak_mib": 9254.0,
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0011677367147058249,
+        "max_case_masked_all_layer_kv_relative_rms": 0.017306916333271558,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "retention_holdout_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0026232313830405474,
+        "max_case_masked_all_layer_kv_relative_rms": 0.01714830143893446,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "both_gates_pass": false,
+      "elapsed_s": 329.2831009949987
+    },
+    {
+      "name": "language_warmup_96_1800",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "96",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1800",
+        "--resume",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1600/checkpoint",
+        "--training-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+        "--baseline",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/00_baseline/retention/snapshot.pt",
+        "--total-updates",
+        "1800",
+        "--max-fit-updates",
+        "2000",
+        "--learning-rate",
+        "5e-05",
+        "--kv-weight",
+        "1.0",
+        "--eval-all",
+        "--execute",
+        "--enable-training"
+      ],
+      "status": "completed",
+      "log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/logs/language_warmup_96_1800.log",
+      "start_global_step": 1600,
+      "target_global_step": 1800,
+      "additional_optimizer_updates": 200,
+      "started_unix": 1792394148.524127,
+      "created_by_recovery": true,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 0.009162207761013027,
+        "gold_tokens": 1488,
+        "gold_correct": 1480,
+        "eos": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 64,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 64,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 56,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 88,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 88,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 88,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7129.9267578125,
+        "peak_reserved_mib": 7354.0,
+        "host_peak_rss_mib": 20563.23828125
+      },
+      "sampled_card_peak_mib": 9066.0,
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0011839244980365038,
+        "max_case_masked_all_layer_kv_relative_rms": 0.01543698770933308,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "retention_holdout_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.002591255586594343,
+        "max_case_masked_all_layer_kv_relative_rms": 0.015276102079619736,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "both_gates_pass": false,
+      "elapsed_s": 328.91410576400085
+    },
+    {
+      "name": "language_warmup_96_2000",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "96",
+        "--output",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2000",
+        "--resume",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1800/checkpoint",
+        "--training-labels",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/data/fit_subsets_v1/fit96.train.jsonl",
+        "--baseline",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/00_baseline/retention/snapshot.pt",
+        "--total-updates",
+        "2000",
+        "--max-fit-updates",
+        "2000",
+        "--learning-rate",
+        "5e-05",
+        "--kv-weight",
+        "1.0",
+        "--eval-all",
+        "--execute",
+        "--enable-training"
+      ],
+      "status": "completed",
+      "log": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/logs/language_warmup_96_2000.log",
+      "start_global_step": 1800,
+      "target_global_step": 2000,
+      "additional_optimizer_updates": 200,
+      "started_unix": 1792394478.7928543,
+      "created_by_recovery": true,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 0.006368586126579127,
+        "gold_tokens": 1488,
+        "gold_correct": 1488,
+        "eos": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 64,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 64,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 64,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "all_fit_passed": true
+      },
+      "memory": {
+        "peak_allocated_mib": 7128.9033203125,
+        "peak_reserved_mib": 7600.0,
+        "host_peak_rss_mib": 20562.58984375
+      },
+      "sampled_card_peak_mib": 9146.0,
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0009592461865395308,
+        "max_case_masked_all_layer_kv_relative_rms": 0.014131630990972843,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "retention_holdout_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0017888281727209687,
+        "max_case_masked_all_layer_kv_relative_rms": 0.014032224851564815,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "both_gates_pass": true,
+      "elapsed_s": 326.48490835399934
+    }
+  ],
+  "started_unix": 1792391835.1753051,
+  "stop_rule": "two consecutive strict all96 AND anchor8 AND holdout8 passes; plateau earliest1000 requires language and both KV/action retention pools stagnant; hard cap",
+  "final_checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2000/checkpoint",
+  "total_additional_optimizer_updates": 1700,
+  "recovery": {
+    "at_utc": "2026-10-19T07:10:17.998489+00:00",
+    "root_tool_observed_parent_session_exit_code": 143,
+    "observation_source": "Root agent reported tool session 94875 exited143; this recovery script did not observe that exit itself",
+    "cause": "unknown; not established as a training numerical failure",
+    "actual_last_completed_global_step": 1400,
+    "source_checkpoint_global_step": 300,
+    "completed_disk_receipts_verified": [
+      600,
+      800,
+      1000,
+      1200,
+      1400
+    ],
+    "entries_reconciled": [
+      "language_warmup_96_1400"
+    ],
+    "remaining_targets": [
+      1600,
+      1800,
+      2000
+    ],
+    "decide_stop_at_recovery": null,
+    "additional_optimizer_update_cap": 600,
+    "max_total_updates": 2000,
+    "do_not_retrain_completed_segments": true
+  },
+  "stop_reason": "budget_exhausted_not_converged",
+  "finished_unix": 1792394806.6056492
+}

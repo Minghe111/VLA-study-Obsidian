@@ -1,0 +1,229 @@
+{
+  "schema": "history3000_data_and_interface_acceptance_v1",
+  "status": "passed_protocol_data_and_interface_no_training",
+  "training_executed": false,
+  "optimizer_updates": 0,
+  "checkpoint_models_loaded": 0,
+  "created_at_unix": 1792409660.2994695,
+  "prompt_version": "rm65b_recap_prompt_v3_history_events",
+  "history_version": "rm65b_history_events_v1",
+  "history_id_encoding": "runtime_control_step_h6",
+  "contract": {
+    "physical_action_dim": 24,
+    "order": [
+      "left_arm6",
+      "left_hand6",
+      "right_arm6",
+      "right_hand6"
+    ],
+    "camera_keys": [
+      "full_image",
+      "left_wrist_image",
+      "right_wrist_image"
+    ],
+    "physics_dt_s": 0.004,
+    "physics_steps_per_action": 15,
+    "control_period_s": 0.06
+  },
+  "labels": {
+    "train": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/train.jsonl",
+      "sha256": "3adeffbd18d7890405c399659a2029baea84f24701743ee3af0db55d151dd8f1",
+      "bytes": 34495522
+    },
+    "val": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/val.jsonl",
+      "sha256": "7b67548f34e323451436447858e75d722ed46d4e905e919a96b368540aed7773",
+      "bytes": 6972236
+    },
+    "test": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/test.jsonl",
+      "sha256": "a6d49e3df7fed02c380c5a086772a9cc1e69cd93a3b11205969dc5041728de01",
+      "bytes": 7021531
+    }
+  },
+  "dataset_manifest": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/manifest.json",
+    "sha256": "50a96273d941832dcb66d8672ab20fb2dc2d2085d9eedc77c3b3d9afd6afe402",
+    "bytes": 4138
+  },
+  "source_manifest": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/dynamic_capture_v2/manifest.json",
+    "sha256": "eec2b4a469c50a97ffaa6fffa34ab47dcba1fb031a11d51683f2a0dc9020163e",
+    "bytes": 3172993
+  },
+  "summary": {
+    "train": {
+      "rows": 3000,
+      "by_mode": {
+        "READ": 1000,
+        "WRITE": 1000,
+        "SUBTASK": 1000
+      },
+      "write_conditions": {
+        "WRITE": 250,
+        "KEEP": 250,
+        "CORRECT": 250,
+        "EMPTY": 250
+      },
+      "distinct_actual_inputs": 3000,
+      "distinct_base_contexts": 1000,
+      "selected_physical_contexts": 288,
+      "nonempty_history_rows": 2694,
+      "subtask_without_writer_repair": 200,
+      "unique_target_strings": 49,
+      "max_prefix_tokens": 845,
+      "max_target_tokens": 54
+    },
+    "val": {
+      "rows": 600,
+      "by_mode": {
+        "READ": 200,
+        "WRITE": 200,
+        "SUBTASK": 200
+      },
+      "write_conditions": {
+        "WRITE": 50,
+        "KEEP": 50,
+        "CORRECT": 50,
+        "EMPTY": 50
+      },
+      "distinct_actual_inputs": 600,
+      "distinct_base_contexts": 200,
+      "selected_physical_contexts": 200,
+      "nonempty_history_rows": 570,
+      "subtask_without_writer_repair": 40,
+      "unique_target_strings": 53,
+      "max_prefix_tokens": 841,
+      "max_target_tokens": 54
+    },
+    "test": {
+      "rows": 600,
+      "by_mode": {
+        "READ": 200,
+        "WRITE": 200,
+        "SUBTASK": 200
+      },
+      "write_conditions": {
+        "WRITE": 50,
+        "KEEP": 50,
+        "CORRECT": 50,
+        "EMPTY": 50
+      },
+      "distinct_actual_inputs": 600,
+      "distinct_base_contexts": 200,
+      "selected_physical_contexts": 200,
+      "nonempty_history_rows": 568,
+      "subtask_without_writer_repair": 40,
+      "unique_target_strings": 53,
+      "max_prefix_tokens": 848,
+      "max_target_tokens": 54
+    }
+  },
+  "source_counts": {
+    "episodes": 56,
+    "observations": 696,
+    "families": 28,
+    "actual_controls": 14336,
+    "unique_pixel_triplets": 668,
+    "unique_native_resized224_model_pixel_triplets": 668
+  },
+  "independent_checks": 549113,
+  "issues": 0,
+  "warnings": 0,
+  "checked_rows": 4200,
+  "actual_effective_inputs": 4200,
+  "actually_used_observation_points": 688,
+  "history_event_count_distribution": {
+    "8": 484,
+    "0": 368,
+    "5": 472,
+    "3": 464,
+    "2": 492,
+    "1": 456,
+    "6": 476,
+    "4": 484,
+    "7": 504
+  },
+  "legacy_comparison": {
+    "path": {
+      "distinct_shared_values": 0,
+      "new_source_points_matched": 0,
+      "legacy_source_points_matched": 0
+    },
+    "family_id": {
+      "distinct_shared_values": 0,
+      "new_source_points_matched": 0,
+      "legacy_source_points_matched": 0
+    },
+    "episode_id": {
+      "distinct_shared_values": 0,
+      "new_source_points_matched": 0,
+      "legacy_source_points_matched": 0
+    },
+    "seed": {
+      "distinct_shared_values": 0,
+      "new_source_points_matched": 0,
+      "legacy_source_points_matched": 0
+    },
+    "npz_sha256": {
+      "distinct_shared_values": 0,
+      "new_source_points_matched": 0,
+      "legacy_source_points_matched": 0
+    },
+    "raw_triplet_sha256": {
+      "distinct_shared_values": 0,
+      "new_source_points_matched": 0,
+      "legacy_source_points_matched": 0
+    },
+    "resize224_triplet_sha256": {
+      "distinct_shared_values": 0,
+      "new_source_points_matched": 0,
+      "legacy_source_points_matched": 0
+    }
+  },
+  "reports": {
+    "independent_quality": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/reports/history3000_acceptance_v1/report.json",
+      "sha256": "5fee0563e6e2c8f75392b6bb0b3a8a2c794cc08cfd6807896855e49b8d1f09b1",
+      "bytes": 2144681
+    },
+    "native_interface": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/reports/history3000_interface_check/report.json",
+      "sha256": "c7a5652bcd2951a0d3e4c743c92d892b184049e8efe24c77e2d621b5075fca29",
+      "bytes": 5782460
+    },
+    "legacy_overlap": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/reports/history3000_legacy_overlap_v1/report.json",
+      "sha256": "6f528574268aff6990dfb956e780f6aff5a22c879dd18e36fae562ab5fae5df5",
+      "bytes": 2319811
+    },
+    "source_protection": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/reports/source_protection_final.json",
+      "sha256": "4083fb774ab50831357f66f450ea143b1ee6739d2dc59547d8f1f7780fb6fc06",
+      "bytes": 40345
+    },
+    "capture_completion": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/reports/capture_completion_receipt.json",
+      "sha256": "4164d4bd1abdf1a0c1cec4dd3f7921dd8dd749f02b96ad1ec31b8c540d4b3c7f",
+      "bytes": 327
+    },
+    "code_freeze": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/reports/frozen_code_manifest_v2.json",
+      "sha256": "9be1f2e0c79f0bdd4c68cf873db56b3b2c8f72925a6990d19ef59983c6c6e1aa",
+      "bytes": 301473
+    }
+  },
+  "MEM_ready": false,
+  "video_history_rows": 0,
+  "physical_grounding_verified": false,
+  "motor_skill_retention_verified": false,
+  "model_generation_or_task_SR_evaluated": false,
+  "limitations": [
+    "Rows are correlated protocol contexts, not independent physical scenes.",
+    "Fresh reference execution and formal goal/history/memory labels; not autonomous policy rollout or successful motor demonstrations.",
+    "Canonical goal, issued-side and active arm agree; goal/history conflict is not covered.",
+    "Per-target endpoints are drive command readback; actual qpos is exported at saved observations.",
+    "CPU native-entry parity uses declared neural/image embedding stubs; it does not score learned JSON/EOS generation."
+  ]
+}

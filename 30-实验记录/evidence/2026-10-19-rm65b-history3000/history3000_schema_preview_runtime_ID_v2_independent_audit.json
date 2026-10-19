@@ -1,0 +1,311 @@
+{
+  "version": "rm65b_history3000_independent_acceptance_v2_runtime_ids",
+  "status": "schema_preview_passed_not_trainable",
+  "GPU_loaded": false,
+  "training_started": false,
+  "protocol_dataset_ready": false,
+  "MEM_ready": false,
+  "video_history_rows": 0,
+  "physical_source_groups_disjoint_verified": false,
+  "physical_grounding_verified": false,
+  "motor_skill_retention_verified": false,
+  "source_summary": {
+    "scope": "Preview referenced completed source only; no growing manifest read or complete source acceptance claim.",
+    "episodes": 1,
+    "observations": 1
+  },
+  "row_summary": {
+    "counts": {
+      "train": {
+        "READ": 1,
+        "WRITE": 1,
+        "SUBTASK": 1
+      }
+    },
+    "history_coverage": {
+      "train:READ": {
+        "rows": 1,
+        "empty": 0,
+        "nonempty_executed": 1,
+        "multiple_events": 0,
+        "observed_step_ge32": 1
+      },
+      "train:WRITE": {
+        "rows": 1,
+        "empty": 0,
+        "nonempty_executed": 1,
+        "multiple_events": 0,
+        "observed_step_ge32": 1
+      },
+      "train:SUBTASK": {
+        "rows": 1,
+        "empty": 0,
+        "nonempty_executed": 1,
+        "multiple_events": 0,
+        "observed_step_ge32": 1
+      }
+    },
+    "WRITE_revision_operation_counts": {
+      "train": {
+        "CORRECT": {
+          "2": 1
+        }
+      }
+    },
+    "physical_families": {
+      "train": 1,
+      "val": 0,
+      "test": 0
+    },
+    "source_episodes": {
+      "train": 1,
+      "val": 0,
+      "test": 0
+    }
+  },
+  "formal_protocol_summary": {
+    "stress_counts": {},
+    "WRITE_wrong_prebank_confirmed_goal_revision_cells": {
+      "train:false:left:2": 1
+    },
+    "runtime_input_guard_rejections": [],
+    "stress_actual_focus_operation_confirmed_goal_cells": {},
+    "active_WRITE_revision_operation_counts": {
+      "train": {
+        "CORRECT": {
+          "2": 1
+        }
+      }
+    },
+    "goal_template_counts": {
+      "train": {
+        "0": 3
+      }
+    },
+    "goal_side_counts": {
+      "train:READ": {
+        "left": 1
+      },
+      "train:WRITE": {
+        "left": 1
+      },
+      "train:SUBTASK": {
+        "left": 1
+      }
+    },
+    "unique_target_strings": {
+      "train:READ": 1,
+      "train:WRITE": 1,
+      "train:SUBTASK": 1
+    },
+    "distinct_protocol_base_contexts_by_split": {
+      "train": 1
+    },
+    "independence_limit": "Goal paraphrases and memory variants of the same physical observation remain correlated augmentations, even if their actual token prefixes are unique.",
+    "label_scope": "Formal goal-role / actual issued-control history / native memory protocol, not physical grounding or success."
+  },
+  "actual_effective_inputs": {
+    "unique_effective_inputs": 3,
+    "unique_physical_observation_anchors_by_split": {
+      "train": 1
+    },
+    "actual_token_lengths": {
+      "READ": {
+        "prefix_min": 317,
+        "prefix_max": 317,
+        "target_min": 14,
+        "target_max": 14
+      },
+      "WRITE": {
+        "prefix_min": 439,
+        "prefix_max": 439,
+        "target_min": 35,
+        "target_max": 35
+      },
+      "SUBTASK": {
+        "prefix_min": 452,
+        "prefix_max": 452,
+        "target_min": 12,
+        "target_max": 12
+      }
+    },
+    "MEM_history_coverage": {
+      "rows_without_mem_history": 3
+    },
+    "duplicate_groups": [],
+    "runtime_input_guard_rejections": [],
+    "per_sample_token_receipts": [
+      {
+        "sample_id": "rm65b_dynamic_history_protocol_3000_v1:7899c70bcea042e82c4dd2a02d98aeda6c19d5536ac8a5539ee5969e98fea7b9:READ:none:rNone:stress0",
+        "split": "train",
+        "actual_input_sha256": "2b45151e16e6e5f4927245c0c0e4345b7803818b4706e9cb6654c7e2d199bfaf",
+        "actual_prefix_token_sha256": "6ab8ce46578efd361e498d07cb5d8276d44ccb40a134ef4a017bba356546ba0d",
+        "prefix_tokens": 317,
+        "target_including_eos_tokens": 14
+      },
+      {
+        "sample_id": "rm65b_dynamic_history_protocol_3000_v1:7899c70bcea042e82c4dd2a02d98aeda6c19d5536ac8a5539ee5969e98fea7b9:WRITE:CORRECT:r2:stress0",
+        "split": "train",
+        "actual_input_sha256": "c3236e3664fe6b5bc1bf3c2bb065a7e5ddc50cd2341b94d3e4d801ccb6481e43",
+        "actual_prefix_token_sha256": "24a9f0828cf4fa18fcfa68d39c5033030d07643bcebf3aba98a1fa43b9eab73c",
+        "prefix_tokens": 439,
+        "target_including_eos_tokens": 35
+      },
+      {
+        "sample_id": "rm65b_dynamic_history_protocol_3000_v1:7899c70bcea042e82c4dd2a02d98aeda6c19d5536ac8a5539ee5969e98fea7b9:SUBTASK:CORRECT:r2:stress0",
+        "split": "train",
+        "actual_input_sha256": "e475a6ae81bfeeed9c033c55e9b01be5d00633c089052348a77ebb1d1c2b7ebe",
+        "actual_prefix_token_sha256": "da12f608d2db5c5975dd2c47550c22e470bd9504f2e59ff6b8f5b0802848ff33",
+        "prefix_tokens": 452,
+        "target_including_eos_tokens": 12
+      }
+    ]
+  },
+  "actual_controller_runtime_ID_contract": {
+    "status": "passed_CPU_controller_entry_stub_no_model_no_simulator",
+    "controller_source": {
+      "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py",
+      "sha256": "ced775fdf711b671fe5560572176b798d28bf6992de4d5f3670690ad977ea75e"
+    },
+    "cases": [
+      {
+        "control_step": 0,
+        "actual_decision_id": "h000000",
+        "expected": "h000000"
+      },
+      {
+        "control_step": 32,
+        "actual_decision_id": "h000032",
+        "expected": "h000032"
+      },
+      {
+        "control_step": 64,
+        "actual_decision_id": "h000064",
+        "expected": "h000064"
+      },
+      {
+        "control_step": 256,
+        "actual_decision_id": "h000256",
+        "expected": "h000256"
+      }
+    ]
+  },
+  "actual_training_loader_gate": {
+    "scope": "preview loader rejection only",
+    "rejected": [
+      {
+        "path": "/tmp/history3000_schema_preview_v2/schema_preview.jsonl",
+        "reason": "Held-out evaluation, diagnostic or excluded data cannot enter training"
+      }
+    ],
+    "training_started": false
+  },
+  "input_files": [
+    {
+      "path": "/tmp/history3000_schema_preview_v2/schema_preview.jsonl",
+      "sha256": "d023b755150b7ca56b4ec3dafe6c08b25655376d42b9032fd99c652785af58e3",
+      "bytes": 25842
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/configs/rm65b_history3000_validation.yaml",
+      "sha256": "feff8402dfdbaa0819b4c542ab5514f46f7231f64c5ff785dd80afdcd4245e7c",
+      "bytes": 7484
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/cache/openpi/big_vision/paligemma_tokenizer.model",
+      "sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6",
+      "bytes": 4264023
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi/realman_rgb50_full50/norm_stats.json",
+      "sha256": "34cbdd09c831e04549d6c4a4e2eb321fb975bdea13bb816ec8aa3a2332d1ccc5",
+      "bytes": 5262
+    }
+  ],
+  "checks": {
+    "preview_source_episode_exists": 1,
+    "preview_source_episode_sha256": 1,
+    "preview_source_episode_completed": 1,
+    "preview_actual_NPZ_exists": 1,
+    "preview_actual_NPZ_sha256": 1,
+    "split_mode": 3,
+    "context_mode_matches": 3,
+    "catalogue_schema": 3,
+    "catalogue_unique_ids": 3,
+    "read_no_hidden_memory": 1,
+    "new_data_explicit_history_version": 12,
+    "new_data_explicit_runtime_history_ID_encoding": 12,
+    "observed_step_integer": 12,
+    "label_history_matches_runtime_control_step_ID": 12,
+    "actual_loader_sample_history_matches": 12,
+    "history_stored_canonical_list": 12,
+    "target_nonempty": 3,
+    "read_target_schema": 1,
+    "write_selected_list": 1,
+    "memory_slot_object": 5,
+    "memory_public_exact_fields": 5,
+    "memory_slot_id": 5,
+    "memory_confirmed_bool": 5,
+    "memory_revision_integer": 5,
+    "memory_active_invariant": 5,
+    "memory_known_slot": 5,
+    "write_target_schema": 1,
+    "subtask_native_nested_memory": 1,
+    "actor_memory_list_values": 1,
+    "subtask_natural_text": 1,
+    "sample_ids_unique": 1,
+    "family_split_disjoint": 1,
+    "episode_split_disjoint": 1,
+    "goal_two_ordered_initial_roles": 3,
+    "goal_metadata_role_agrees": 3,
+    "actual_history_spans_cover_observed_controls": 3,
+    "training_eligibility_and_preview_scope": 3,
+    "formal_protocol_only_no_video_or_motor_claim": 3,
+    "provenance_explicit_capability_limits": 3,
+    "facts_independently_from_explicit_goal_and_actual_history": 3,
+    "label_evidence_matches_actual_source_receipts": 3,
+    "base_and_physical_context_ids_recomputed": 3,
+    "READ_rule_history_requires_progress_slot": 1,
+    "private_trace_native_strict": 2,
+    "native_memory_source_visible_and_causal": 8,
+    "seed_native_tool_response_exact": 6,
+    "actual_trace_READ_ids": 2,
+    "native_selected_pre_write_exact": 2,
+    "controlled_slot_fact_visible": 2,
+    "operation_label_from_actual_visible_slot": 2,
+    "actual_focus_revision_matches_declared_control": 2,
+    "nonfocused_memory_truth_unchanged": 2,
+    "stress_metadata_trace_agree": 2,
+    "normal_writer_operations_follow_formal_truth": 2,
+    "native_operation_response_count": 2,
+    "actual_native_operation_response_exact": 2,
+    "native_actor_view_latest_exact": 2,
+    "WRITE_label_and_visible_prebank_match_independent_rule": 1,
+    "SUBTASK_visible_real_native_actor_view": 1,
+    "SUBTASK_goal_bound_limited_action_capability": 1,
+    "label_actual_capture_observation": 3,
+    "label_source_ownership_and_cutoff": 3,
+    "source_unique_control_steps": 3,
+    "source_history_controls_exist": 3,
+    "source_history_control_decision_match": 3,
+    "label_provenance_raw_snapshot_matches_raw_issued_log": 3,
+    "label_ID_map_exact_raw_source_event_to_runtime_control_step": 3,
+    "history_exact_actual_source_prefix": 3,
+    "actual_prefix_one_bos": 3,
+    "actual_target_one_eos_no_bos": 3,
+    "actual_tokens_no_unk": 3,
+    "actual_target_token_roundtrip": 3,
+    "actual_effective_input_split_disjoint": 3,
+    "actual_identical_input_no_conflicting_target": 3,
+    "actual_effective_input_unique_after_dedup": 3,
+    "immutable_input_file_SHA_before_after": 4
+  },
+  "issues": [],
+  "warnings": [],
+  "scope": "Independent CPU protocol-supervision dataset validation; no model inference, optimizer, SR or physical grounding claim.",
+  "validator_script": {
+    "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/scripts/validate_history3000.py",
+    "sha256_at_start": "a7a5d3c5322f5cb252a717128a13bb2962dbe5e91b3edc25a09bcc9b4cfd1175",
+    "sha256_at_end": "a7a5d3c5322f5cb252a717128a13bb2962dbe5e91b3edc25a09bcc9b4cfd1175"
+  }
+}

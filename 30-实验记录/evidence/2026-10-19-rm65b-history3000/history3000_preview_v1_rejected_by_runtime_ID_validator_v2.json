@@ -1,0 +1,572 @@
+{
+  "version": "rm65b_history3000_independent_acceptance_v2_runtime_ids",
+  "status": "protocol_dataset_acceptance_failed",
+  "GPU_loaded": false,
+  "training_started": false,
+  "protocol_dataset_ready": false,
+  "MEM_ready": false,
+  "video_history_rows": 0,
+  "physical_source_groups_disjoint_verified": false,
+  "physical_grounding_verified": false,
+  "motor_skill_retention_verified": false,
+  "source_summary": {
+    "scope": "Preview referenced completed source only; no growing manifest read or complete source acceptance claim.",
+    "episodes": 1,
+    "observations": 1
+  },
+  "row_summary": {
+    "counts": {
+      "train": {
+        "READ": 1,
+        "WRITE": 1,
+        "SUBTASK": 1
+      }
+    },
+    "history_coverage": {
+      "train:READ": {
+        "rows": 1,
+        "empty": 1,
+        "nonempty_executed": 0,
+        "multiple_events": 0,
+        "observed_step_ge32": 1
+      },
+      "train:WRITE": {
+        "rows": 1,
+        "empty": 1,
+        "nonempty_executed": 0,
+        "multiple_events": 0,
+        "observed_step_ge32": 1
+      },
+      "train:SUBTASK": {
+        "rows": 1,
+        "empty": 1,
+        "nonempty_executed": 0,
+        "multiple_events": 0,
+        "observed_step_ge32": 1
+      }
+    },
+    "WRITE_revision_operation_counts": {
+      "train": {
+        "CORRECT": {
+          "2": 1
+        }
+      }
+    },
+    "physical_families": {
+      "train": 1,
+      "val": 0,
+      "test": 0
+    },
+    "source_episodes": {
+      "train": 1,
+      "val": 0,
+      "test": 0
+    }
+  },
+  "formal_protocol_summary": {
+    "stress_counts": {},
+    "WRITE_wrong_prebank_confirmed_goal_revision_cells": {},
+    "runtime_input_guard_rejections": [
+      {
+        "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+        "reasons": [
+          {
+            "code": "strict_history",
+            "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+            "detail": "Declared model history requires canonical control decision IDs"
+          }
+        ]
+      },
+      {
+        "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+        "reasons": [
+          {
+            "code": "strict_history",
+            "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+            "detail": "Declared model history requires canonical control decision IDs"
+          }
+        ]
+      },
+      {
+        "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+        "reasons": [
+          {
+            "code": "strict_history",
+            "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+            "detail": "Declared model history requires canonical control decision IDs"
+          }
+        ]
+      }
+    ],
+    "stress_actual_focus_operation_confirmed_goal_cells": {},
+    "active_WRITE_revision_operation_counts": {},
+    "goal_template_counts": {},
+    "goal_side_counts": {},
+    "unique_target_strings": {},
+    "distinct_protocol_base_contexts_by_split": {},
+    "independence_limit": "Goal paraphrases and memory variants of the same physical observation remain correlated augmentations, even if their actual token prefixes are unique.",
+    "label_scope": "Formal goal-role / actual issued-control history / native memory protocol, not physical grounding or success."
+  },
+  "actual_effective_inputs": {
+    "unique_effective_inputs": 0,
+    "unique_physical_observation_anchors_by_split": {},
+    "actual_token_lengths": {},
+    "MEM_history_coverage": {},
+    "duplicate_groups": [],
+    "runtime_input_guard_rejections": [
+      {
+        "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+        "reasons": [
+          {
+            "code": "strict_history",
+            "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+            "detail": "Declared model history requires canonical control decision IDs"
+          }
+        ],
+        "prefix_token_audit": "not_applicable_actual_input_guard_rejects_before_generation"
+      },
+      {
+        "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+        "reasons": [
+          {
+            "code": "strict_history",
+            "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+            "detail": "Declared model history requires canonical control decision IDs"
+          }
+        ],
+        "prefix_token_audit": "not_applicable_actual_input_guard_rejects_before_generation"
+      },
+      {
+        "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+        "reasons": [
+          {
+            "code": "strict_history",
+            "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+            "detail": "Declared model history requires canonical control decision IDs"
+          }
+        ],
+        "prefix_token_audit": "not_applicable_actual_input_guard_rejects_before_generation"
+      }
+    ],
+    "per_sample_token_receipts": []
+  },
+  "actual_controller_runtime_ID_contract": {
+    "status": "passed_CPU_controller_entry_stub_no_model_no_simulator",
+    "controller_source": {
+      "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py",
+      "sha256": "ced775fdf711b671fe5560572176b798d28bf6992de4d5f3670690ad977ea75e"
+    },
+    "cases": [
+      {
+        "control_step": 0,
+        "actual_decision_id": "h000000",
+        "expected": "h000000"
+      },
+      {
+        "control_step": 32,
+        "actual_decision_id": "h000032",
+        "expected": "h000032"
+      },
+      {
+        "control_step": 64,
+        "actual_decision_id": "h000064",
+        "expected": "h000064"
+      },
+      {
+        "control_step": 256,
+        "actual_decision_id": "h000256",
+        "expected": "h000256"
+      }
+    ]
+  },
+  "actual_training_loader_gate": {
+    "scope": "preview loader rejection only",
+    "rejected": [
+      {
+        "path": "/tmp/history3000_schema_preview_v1/schema_preview.jsonl",
+        "reason": "Held-out evaluation, diagnostic or excluded data cannot enter training"
+      }
+    ],
+    "training_started": false
+  },
+  "input_files": [
+    {
+      "path": "/tmp/history3000_schema_preview_v1/schema_preview.jsonl",
+      "sha256": "d46e95b9948cfcfdb70b07ef60415dc295efac703dcb7fe216738ac54eab387f",
+      "bytes": 25453
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/configs/rm65b_history3000_validation.yaml",
+      "sha256": "feff8402dfdbaa0819b4c542ab5514f46f7231f64c5ff785dd80afdcd4245e7c",
+      "bytes": 7484
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/cache/openpi/big_vision/paligemma_tokenizer.model",
+      "sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6",
+      "bytes": 4264023
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi/realman_rgb50_full50/norm_stats.json",
+      "sha256": "34cbdd09c831e04549d6c4a4e2eb321fb975bdea13bb816ec8aa3a2332d1ccc5",
+      "bytes": 5262
+    }
+  ],
+  "checks": {
+    "preview_source_episode_exists": 1,
+    "preview_source_episode_sha256": 1,
+    "preview_source_episode_completed": 1,
+    "preview_actual_NPZ_exists": 1,
+    "preview_actual_NPZ_sha256": 1,
+    "split_mode": 3,
+    "context_mode_matches": 3,
+    "catalogue_schema": 3,
+    "catalogue_unique_ids": 3,
+    "read_no_hidden_memory": 1,
+    "new_data_explicit_history_version": 12,
+    "new_data_explicit_runtime_history_ID_encoding": 12,
+    "observed_step_integer": 12,
+    "label_history_matches_runtime_control_step_ID": 12,
+    "strict_history": 12,
+    "target_nonempty": 3,
+    "read_target_schema": 1,
+    "write_selected_list": 1,
+    "memory_slot_object": 5,
+    "memory_public_exact_fields": 5,
+    "memory_slot_id": 5,
+    "memory_confirmed_bool": 5,
+    "memory_revision_integer": 5,
+    "memory_active_invariant": 5,
+    "memory_known_slot": 5,
+    "write_target_schema": 1,
+    "subtask_native_nested_memory": 1,
+    "actor_memory_list_values": 1,
+    "subtask_natural_text": 1,
+    "sample_ids_unique": 1,
+    "family_split_disjoint": 1,
+    "episode_split_disjoint": 1,
+    "label_actual_capture_observation": 3,
+    "label_source_ownership_and_cutoff": 3,
+    "source_unique_control_steps": 3,
+    "source_history_controls_exist": 3,
+    "source_history_control_decision_match": 3,
+    "label_provenance_raw_snapshot_matches_raw_issued_log": 3,
+    "label_ID_map_exact_raw_source_event_to_runtime_control_step": 3,
+    "history_exact_actual_source_prefix": 3,
+    "immutable_input_file_SHA_before_after": 4
+  },
+  "issues": [
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    },
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    },
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    },
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    },
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    },
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    },
+    {
+      "code": "label_ID_map_exact_raw_source_event_to_runtime_control_step",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": {
+        "expected": [
+          {
+            "source_event_id": "issued_0000",
+            "decision_id": "h000000",
+            "issued_at_step": 0
+          }
+        ],
+        "actual": null
+      }
+    },
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    },
+    {
+      "code": "history_exact_actual_source_prefix",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": {
+        "expected": [
+          {
+            "type": "issued_subtask",
+            "decision_id": "h000000",
+            "text": "Pick up and hold the sample initially on the left.",
+            "issued_at_step": 0,
+            "executed_until_step": 32
+          }
+        ],
+        "actual": []
+      }
+    },
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:READ:none:rNone:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    },
+    {
+      "code": "label_ID_map_exact_raw_source_event_to_runtime_control_step",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": {
+        "expected": [
+          {
+            "source_event_id": "issued_0000",
+            "decision_id": "h000000",
+            "issued_at_step": 0
+          }
+        ],
+        "actual": null
+      }
+    },
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    },
+    {
+      "code": "history_exact_actual_source_prefix",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": {
+        "expected": [
+          {
+            "type": "issued_subtask",
+            "decision_id": "h000000",
+            "text": "Pick up and hold the sample initially on the left.",
+            "issued_at_step": 0,
+            "executed_until_step": 32
+          }
+        ],
+        "actual": []
+      }
+    },
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:WRITE:CORRECT:r2:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    },
+    {
+      "code": "label_ID_map_exact_raw_source_event_to_runtime_control_step",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": {
+        "expected": [
+          {
+            "source_event_id": "issued_0000",
+            "decision_id": "h000000",
+            "issued_at_step": 0
+          }
+        ],
+        "actual": null
+      }
+    },
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    },
+    {
+      "code": "history_exact_actual_source_prefix",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": {
+        "expected": [
+          {
+            "type": "issued_subtask",
+            "decision_id": "h000000",
+            "text": "Pick up and hold the sample initially on the left.",
+            "issued_at_step": 0,
+            "executed_until_step": 32
+          }
+        ],
+        "actual": []
+      }
+    },
+    {
+      "code": "new_data_explicit_runtime_history_ID_encoding",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": null
+    },
+    {
+      "code": "label_history_matches_runtime_control_step_ID",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": {
+        "actual": "issued_0000",
+        "expected": "h000000"
+      }
+    },
+    {
+      "code": "strict_history",
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:45057de7b2788b6c818319304108cea3141dedcf32dda88fca226dc56a6ab8e5:SUBTASK:CORRECT:r2:stress0",
+      "detail": "Declared model history requires canonical control decision IDs"
+    }
+  ],
+  "warnings": [],
+  "scope": "Independent CPU protocol-supervision dataset validation; no model inference, optimizer, SR or physical grounding claim.",
+  "validator_script": {
+    "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/scripts/validate_history3000.py",
+    "sha256_at_start": "a7a5d3c5322f5cb252a717128a13bb2962dbe5e91b3edc25a09bcc9b4cfd1175",
+    "sha256_at_end": "a7a5d3c5322f5cb252a717128a13bb2962dbe5e91b3edc25a09bcc9b4cfd1175"
+  }
+}

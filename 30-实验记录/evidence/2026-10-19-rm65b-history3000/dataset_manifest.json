@@ -1,0 +1,114 @@
+{
+  "schema": "rm65b_dynamic_history_protocol_3000_v1",
+  "status": "generated_waiting_independent_acceptance",
+  "builder_script_sha256": "1d05f44546bf23611b3ea016ef511289124faeaf70e281d1d9212025cecde8b8",
+  "prompt_version": "rm65b_recap_prompt_v3_history_events",
+  "history_version": "rm65b_history_events_v1",
+  "capture_manifest": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/dynamic_capture_v2/manifest.json",
+  "capture_manifest_sha256": "eec2b4a469c50a97ffaa6fffa34ab47dcba1fb031a11d51683f2a0dc9020163e",
+  "source_physical_context_counts": {
+    "train": 288,
+    "val": 204,
+    "test": 204
+  },
+  "summary": {
+    "train": {
+      "rows": 3000,
+      "by_mode": {
+        "READ": 1000,
+        "WRITE": 1000,
+        "SUBTASK": 1000
+      },
+      "write_conditions": {
+        "WRITE": 250,
+        "KEEP": 250,
+        "CORRECT": 250,
+        "EMPTY": 250
+      },
+      "distinct_actual_inputs": 3000,
+      "distinct_base_contexts": 1000,
+      "selected_physical_contexts": 288,
+      "nonempty_history_rows": 2694,
+      "subtask_without_writer_repair": 200,
+      "unique_target_strings": 49,
+      "max_prefix_tokens": 845,
+      "max_target_tokens": 54
+    },
+    "val": {
+      "rows": 600,
+      "by_mode": {
+        "READ": 200,
+        "WRITE": 200,
+        "SUBTASK": 200
+      },
+      "write_conditions": {
+        "WRITE": 50,
+        "KEEP": 50,
+        "CORRECT": 50,
+        "EMPTY": 50
+      },
+      "distinct_actual_inputs": 600,
+      "distinct_base_contexts": 200,
+      "selected_physical_contexts": 200,
+      "nonempty_history_rows": 570,
+      "subtask_without_writer_repair": 40,
+      "unique_target_strings": 53,
+      "max_prefix_tokens": 841,
+      "max_target_tokens": 54
+    },
+    "test": {
+      "rows": 600,
+      "by_mode": {
+        "READ": 200,
+        "WRITE": 200,
+        "SUBTASK": 200
+      },
+      "write_conditions": {
+        "WRITE": 50,
+        "KEEP": 50,
+        "CORRECT": 50,
+        "EMPTY": 50
+      },
+      "distinct_actual_inputs": 600,
+      "distinct_base_contexts": 200,
+      "selected_physical_contexts": 200,
+      "nonempty_history_rows": 568,
+      "subtask_without_writer_repair": 40,
+      "unique_target_strings": 53,
+      "max_prefix_tokens": 848,
+      "max_target_tokens": 54
+    }
+  },
+  "labels": {
+    "train": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/train.jsonl",
+      "sha256": "3adeffbd18d7890405c399659a2029baea84f24701743ee3af0db55d151dd8f1",
+      "bytes": 34495522
+    },
+    "val": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/val.jsonl",
+      "sha256": "7b67548f34e323451436447858e75d722ed46d4e905e919a96b368540aed7773",
+      "bytes": 6972236
+    },
+    "test": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/test.jsonl",
+      "sha256": "a6d49e3df7fed02c380c5a086772a9cc1e69cd93a3b11205969dc5041728de01",
+      "bytes": 7021531
+    }
+  },
+  "training_enabled": false,
+  "optimizer_updates": 0,
+  "norm_stats": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi/realman_rgb50_full50/norm_stats.json",
+    "sha256": "34cbdd09c831e04549d6c4a4e2eb321fb975bdea13bb816ec8aa3a2332d1ccc5"
+  },
+  "tokenizer": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/cache/openpi/big_vision/paligemma_tokenizer.model",
+    "sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6"
+  },
+  "physical_skill_success_claimed": false,
+  "visual_grounding_verified": false,
+  "MEM_ready": false,
+  "video_history_rows": 0,
+  "count_scope": "Rows are correlated protocol contexts; reference execution is not policy rollout or motor supervision."
+}

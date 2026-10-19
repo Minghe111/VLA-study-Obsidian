@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-19",
+  "method": "GitHub plugin official-source read-only review plus local SentencePiece target count",
+  "training_performed": false,
+  "production_code_modified": false,
+  "installed_dependencies": false,
+  "reproduced_author_metrics": false,
+  "scope": "Downstream fine-tuning examples, not pretraining or statistical industry sample",
+  "repair_budget": {
+    "diagnostic_train_rows": [
+      9,
+      96
+    ],
+    "diagnostic_updates_for_96": [
+      100,
+      300
+    ],
+    "warmup_train_rows": 3000,
+    "warmup_val_rows": 600,
+    "warmup_test_rows": 600,
+    "effective_batch": 4,
+    "initial_epochs": 3,
+    "default_epochs": 5,
+    "max_epochs": 10,
+    "initial_optimizer_steps": 2250,
+    "default_optimizer_steps": 3750,
+    "max_optimizer_steps": 7500,
+    "stage": "new language_warmup; all language attention LoRA trial; vision MEM and expert frozen",
+    "status": "proposed only; requires fit/retention/memory gates"
+  },
+  "limits": [
+    "Examples differ in domain and starting language capability",
+    "Donut scores are tree/field metrics, not native JSON or EOS",
+    "SmolVLM and Qwen examples are recipes, not evidence of completed JSON success",
+    "Dataset sizes and thresholds for RM65-B are local budgets, not paper-proven minima",
+    "KI-FM does not anchor VLM gradients; use explicit KV anchor for language retention"
+  ],
+  "metric_denominators": {
+    "nonempty_and_eos": 600,
+    "json_and_schema_read_write_only": 400,
+    "subtask_text_only": 200
+  },
+  "retention_policy": "Full-layer updates need pre-calibrated tolerances and paired old-task evaluation; no exact-equality requirement."
+}

@@ -1,0 +1,60 @@
+{
+  "status": "completed_readonly_cpu_review",
+  "source_script_sha256": "14f606674c81f8d5081ff150da8429fd40157942321819508988123fd6f24b1f",
+  "source_report_sha256": "639be453f137a4bd73dc94e267931170f72527c3d5e6d7070730b6a5ae3a1e73",
+  "reviewer_gpu_calls": 0,
+  "reviewer_backward_calls": 0,
+  "reviewer_optimizer_steps": 0,
+  "reviewer_project_edits": 0,
+  "groups": {
+    "bf16_default": {
+      "cases": 3,
+      "gold_tokens": 57,
+      "eos_tokens": 3,
+      "same_top1": 55,
+      "correct_top1": 0,
+      "max_abs_logit_difference": 1.5,
+      "max_ce_reconstruction_difference": 1.9073486328125e-06,
+      "free16_eos": 0
+    },
+    "bf16_base_adapter_off": {
+      "cases": 3,
+      "gold_tokens": 57,
+      "eos_tokens": 3,
+      "same_top1": 38,
+      "correct_top1": 0,
+      "max_abs_logit_difference": 0.875,
+      "max_ce_reconstruction_difference": 0.0,
+      "free16_eos": 0
+    },
+    "bf16_tf32_off": {
+      "cases": 3,
+      "gold_tokens": 57,
+      "eos_tokens": 3,
+      "same_top1": 54,
+      "correct_top1": 0,
+      "max_abs_logit_difference": 1.375,
+      "max_ce_reconstruction_difference": 1.9073486328125e-06,
+      "free16_eos": 0
+    },
+    "fp32_tf32_off": {
+      "cases": 3,
+      "gold_tokens": 57,
+      "eos_tokens": 3,
+      "same_top1": 57,
+      "correct_top1": 0,
+      "max_abs_logit_difference": 0.00011444091796875,
+      "max_ce_reconstruction_difference": 0.0,
+      "free16_eos": 0
+    }
+  },
+  "verdict": "The probe directly checks production text_loss logits against cached gold-history decoding, including EOS, with a valid CE reconstruction. Tested FP32 arithmetic agrees within declared tolerance; learned target likelihood remains poor. No decisive decoder/shift mismatch in these cases.",
+  "answer_leakage_assessment": "Gold targets deliberately condition diagnostic teacher forcing only. They are not fed to free generation, whose observation contains only the high prefix; free16 is diagnostic and not official success.",
+  "fp32_assessment": "model.float plus model/llm embed_dtype and img.dtype_mm cover inspected dtype controls. This tests FP32 arithmetic on the saved BF16-rounded base and FP32 adapters, not original full precision source weights.",
+  "limits": [
+    "Three selected records only, batch size one, protocol stage MEM bypass.",
+    "BF16 shape-dependent differences can change near-tied top1; precision agreement does not prove checkpoint provenance or original LM readout suitability.",
+    "No proof for all contexts, padding batches, MEM, FAST, motor, or closed-loop success.",
+    "Base adapter-off free decoding remains abnormal; poor language decoding pre-existed this protocol fine-tune for tested records."
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "status": "passed_evidence_integrity_but_autonomous_second_cycle_failed",
+  "scope": "CPU-only source/JSON/NPZ/tokenizer audit; no model load, GPU, simulator, oracle or training",
+  "issues": [],
+  "outer_runner_status": "completed",
+  "case_results": [
+    {
+      "case_id": "case00_left_first",
+      "status": "failed_protocol_at_second_READ",
+      "first_side": "left",
+      "first_cycle": {
+        "actual_READ": "{\"read_ids\":[\"sample_identity\"]}",
+        "READ_response_empty_slot": [
+          {
+            "slot_id": "sample_identity",
+            "status": "empty",
+            "value": null,
+            "confirmed": false,
+            "revision": 0
+          }
+        ],
+        "actual_WRITE": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+        "strict_tool_replay_matches_real_record": true,
+        "memory_revision": [
+          0,
+          1
+        ],
+        "autonomous_SUBTASK": "Pick up and hold the sample initially on the left.",
+        "first_role_matches": true,
+        "all_three_actual_EOS": true
+      },
+      "executed_motor_queries": 32,
+      "executed_K1_control_targets": 32,
+      "actual_physics_ticks": 480,
+      "actual_sim_seconds": 1.92,
+      "stored_actual_observations": 33,
+      "everySDKtarget_matches_generated_H16_first_action": true,
+      "every_normal_control_15ticks": true,
+      "next_cycle_READ": {
+        "text": "Sub right right",
+        "token_ids": [
+          2,
+          3351,
+          1833,
+          1833,
+          1
+        ],
+        "actual_EOS": true,
+        "valid_JSON": false,
+        "history_now_contains_prior_subtask": true,
+        "no_repair_or_later_WRITE_or_actions": true
+      },
+      "env_terminated": false,
+      "env_truncated": false,
+      "stop_cause": "strict READ JSON parser exception; saved as failed_episode",
+      "task_verified_count": 0,
+      "task_returned_count": 0,
+      "workers_closed": true,
+      "worker_exit_receipts": [
+        {
+          "pid": 669118,
+          "exitcode": 0,
+          "alive": false
+        }
+      ],
+      "version_string": "fit_language_warmup_96_initial",
+      "motor_noise_seeds": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "noise_byte_hash_persisted": false
+    },
+    {
+      "case_id": "case01_right_first",
+      "status": "failed_protocol_at_second_READ",
+      "first_side": "right",
+      "first_cycle": {
+        "actual_READ": "{\"read_ids\":[\"sample_identity\"]}",
+        "READ_response_empty_slot": [
+          {
+            "slot_id": "sample_identity",
+            "status": "empty",
+            "value": null,
+            "confirmed": false,
+            "revision": 0
+          }
+        ],
+        "actual_WRITE": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+        "strict_tool_replay_matches_real_record": true,
+        "memory_revision": [
+          0,
+          1
+        ],
+        "autonomous_SUBTASK": "Pick up and hold the sample initially on the right.",
+        "first_role_matches": true,
+        "all_three_actual_EOS": true
+      },
+      "executed_motor_queries": 32,
+      "executed_K1_control_targets": 32,
+      "actual_physics_ticks": 480,
+      "actual_sim_seconds": 1.92,
+      "stored_actual_observations": 33,
+      "everySDKtarget_matches_generated_H16_first_action": true,
+      "every_normal_control_15ticks": true,
+      "next_cycle_READ": {
+        "text": "Sub right right",
+        "token_ids": [
+          2,
+          3351,
+          1833,
+          1833,
+          1
+        ],
+        "actual_EOS": true,
+        "valid_JSON": false,
+        "history_now_contains_prior_subtask": true,
+        "no_repair_or_later_WRITE_or_actions": true
+      },
+      "env_terminated": false,
+      "env_truncated": false,
+      "stop_cause": "strict READ JSON parser exception; saved as failed_episode",
+      "task_verified_count": 0,
+      "task_returned_count": 0,
+      "workers_closed": true,
+      "worker_exit_receipts": [
+        {
+          "pid": 670795,
+          "exitcode": 0,
+          "alive": false
+        }
+      ],
+      "version_string": "fit_language_warmup_96_initial",
+      "motor_noise_seeds": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "noise_byte_hash_persisted": false
+    }
+  ],
+  "files": {
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/postfit_validation_20261019_v1/highlevel_closedloop/case00_left_first/policy_trace.jsonl": "0c8a4bbdb8dd8c657ce424bfcf4d701e702e61a698a2c68052c955bc8a52726e",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/postfit_validation_20261019_v1/highlevel_closedloop/case00_left_first/environment_info.jsonl": "fdd997a614daf4f014f77af2b6f8ddaabd7213b406e536067751227f1f7e4f91",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/postfit_validation_20261019_v1/highlevel_closedloop/case00_left_first/episode/failed_episode.json": "987dd9b82860cbdff8264c7e8dfc0dd3db6915eb1246ee7068cdd2c9eb1ebe32",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/postfit_validation_20261019_v1/highlevel_closedloop/case00_left_first/case_report.json": "c9c261cc01aa19527dab0ae274578a2a79ace6cec75f4d02ca351b422b0f5ebc",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/postfit_validation_20261019_v1/highlevel_closedloop/case01_right_first/policy_trace.jsonl": "7e0cc80c9ef745ffac0e1d291656a66e015f563edbf9b495b127d0447c72579f",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/postfit_validation_20261019_v1/highlevel_closedloop/case01_right_first/environment_info.jsonl": "a9213abd35c9e5ee4640a27b0c2e7d0d141a8f225ec52ad1462583fcb2367898",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/postfit_validation_20261019_v1/highlevel_closedloop/case01_right_first/episode/failed_episode.json": "a9990c14c009b225d79f2bd6e9eecf80982928fc6bd8f07cf78357293450b2b1",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/postfit_validation_20261019_v1/highlevel_closedloop/case01_right_first/case_report.json": "39520f5004cfee94858ae9d7722db73ebdfcc308c2f2bc3b1db082d6635d8a82"
+  },
+  "version_label_findings": [
+    "policy_version is a generic non-content-addressed alias fit_language_warmup_96_initial; selected checkpoint/version SHA and exact-loaded144 values establish actualC2200 source. The alias alone must not identify model state."
+  ],
+  "actual_first_motor_visual_state_exact_between_cases": true,
+  "goals_intentionally_differ_between_cases": true,
+  "strict_first_role_subtasks_correct": "2/2",
+  "complete_autonomous_cases": "0/2",
+  "actual_total_controls": 64,
+  "actual_total_physics_ticks": 960,
+  "load_receipt": {
+    "strict_recap_full_load": true,
+    "all144_loaded_adapters_exact": true,
+    "nonzero_language_B_matrices": 72,
+    "enabled_language_attention_adapters": 72,
+    "source_global_step": 2200,
+    "full_state_key_count": 1131,
+    "version_sha256": "4653b02a41dc8f44ff8482bfe21e2e5d7ea33611cbc3a5764cd85c10710344bb"
+  },
+  "parameters_unchanged": true,
+  "no_gradients": true,
+  "source_files_unchanged": true,
+  "noise_scope": {
+    "actual_seed_lists_equal": true,
+    "source": "NativePi05Actor.actions -> _predict_eval(noise=None,rng=None) -> Pi0.sample_actions globaltorch.randn; CPU/CUDAmanual_seed7+query before each call",
+    "direct_actual_noise_tensor_or_SHA_logged": false,
+    "claim_limit": "seed protocol verified; no direct byte-level noise-equality audit, no identical later observations or prompts claim"
+  },
+  "limits": [
+    "Outer completed means diagnostic runner finished and preserved failures; both autonomous cases failed.",
+    "Only first static requested-side binding and one memory-tool cycle succeeded; no phase-dependent verify/return or long-horizon semantic success was demonstrated.",
+    "Memory confirmed=true is an actor-authored role fact, not measured physical verification. Environment verified/returned/events stayed0/0/empty.",
+    "No oracle was executed; no manual/fixed-library answer repaired the failed READ.",
+    "Actualinitial RGB/state was identical while goals differed; later action histories and observations need not match.",
+    "This audit loaded only tokenizer/NPZ and pure CPU memory tooling; model/source parameter protection is supported by live execution receipts."
+  ]
+}

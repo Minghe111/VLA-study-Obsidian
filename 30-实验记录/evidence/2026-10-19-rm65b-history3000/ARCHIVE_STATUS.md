@@ -1,0 +1,5 @@
+# history3000最终取证归档
+
+数据与接口已通过，真实模型训练更新0。summary.json为入口；quality/interface/legacy报告对应不同门槛，均保留SHA。source为最终源码，source_pre_canonical_id_v1保留ID修补前历史；两份schema preview均为不可训练candidate，旧ID版本被新验收器拒绝。
+
+原始NPZ、完整控制日志、失败和中断attempt保留在工程目录；此处不复制权重、NPZ或轨迹树。3000条是相关协议样本，不是3000个独立场景或成功机器人轨迹。视频MEM、模型自由生成、物理任务与技能保留未在本轮验证。

@@ -1,0 +1,1240 @@
+{
+  "status": "planned",
+  "arm": "lr5e5_kv1",
+  "formal_3000_training": false,
+  "primary_completed_and_source_ready": false,
+  "conditional_trigger": "Execute only after primary C2000 is fully completed and strict full96 fitting still fails",
+  "primary_status": "running",
+  "source_report_status": "running",
+  "source_checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2000/checkpoint",
+  "source_checkpoint_global_step": 2000,
+  "branch_global_step_start": 0,
+  "branch_eval_steps": [
+    400
+  ],
+  "optional_confirmation": "Best passing arm may later be exactly resumed400->600 in a separately authorized single run",
+  "branch_optimizer_update_budget": 400,
+  "diagnostic_window_not_convergence_limit": true,
+  "seed": 20261019,
+  "optimizer": "AdamW",
+  "optimizer_reset": true,
+  "sampler_reset": true,
+  "rng_reset": true,
+  "learning_rate": 5e-05,
+  "kv_anchor_weight": 1.0,
+  "max_grad_norm": 1.0,
+  "weight_decay": 0.0,
+  "batch_size": 1,
+  "gradient_accumulation": 4,
+  "sequential_objectives": true,
+  "loss_weights": {
+    "high_ce": 1.0,
+    "fast_ce": 0.0,
+    "fm": 0.0,
+    "kv_anchor": 1.0
+  },
+  "parameter_ledger": {
+    "stage": "language_warmup",
+    "trainable_numel": 3686400,
+    "trainable_tensors": 144,
+    "trainable_parameters": [
+      {
+        "name": "llm.layers.0.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.0.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.0.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.0.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.0.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.0.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.0.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.0.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.1.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.1.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.2.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.2.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.3.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.3.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.4.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.4.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.5.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.5.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.6.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.6.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.7.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.7.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.8.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.8.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.9.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.9.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.10.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.10.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.11.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.11.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.12.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.12.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.13.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.13.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.14.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.14.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.15.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.15.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.16.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.16.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.17.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.17.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      }
+    ],
+    "vision_frozen": true,
+    "MEM_bypassed": true,
+    "action_expert_frozen": true,
+    "MLP_norm_embedding_frozen": true
+  },
+  "contract": {
+    "physical_action_dim": 24,
+    "camera_count": 3,
+    "period_s": 0.06,
+    "H": 16,
+    "execute": 1
+  },
+  "evaluations": "All96 unrestricted greedy+realEOS and anchor8/holdout8 local action/KV at branch400 only; per-update metrics and full sample traces retained",
+  "all_arms": {
+    "lr5e5_kv1": {
+      "learning_rate": 5e-05,
+      "kv_anchor_weight": 1.0
+    },
+    "lr1e4_kv1": {
+      "learning_rate": 0.0001,
+      "kv_anchor_weight": 1.0
+    },
+    "lr5e5_kv0": {
+      "learning_rate": 5e-05,
+      "kv_anchor_weight": 0.0
+    },
+    "lr1e4_kv0": {
+      "learning_rate": 0.0001,
+      "kv_anchor_weight": 0.0
+    }
+  },
+  "disk_ledger": {
+    "free_bytes": 88751910912,
+    "reference_segment_bytes": 7284469007,
+    "grid_written_bytes": 0,
+    "pending_primary_estimate_bytes": 7284381623,
+    "remaining_four_arms_plus_optional_confirmation_estimate_bytes": 36422345035,
+    "planned_saved_segments": 5,
+    "reserve_bytes": 21474836480,
+    "required_bytes": 65181563138,
+    "projected_margin_above_reserve_bytes": 23570347774,
+    "passes": true,
+    "estimate_includes_full_weights_optimizer_and_two_retention_snapshots": true
+  },
+  "output": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/lr_kv_from_C2000_v1/lr5e5_kv1",
+  "optimizer_updates_executed": 0
+}

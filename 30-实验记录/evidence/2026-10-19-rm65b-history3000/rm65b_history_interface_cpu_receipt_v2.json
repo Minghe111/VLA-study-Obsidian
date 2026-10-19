@@ -1,0 +1,110 @@
+{
+  "status": "CPU_acceptance_passed_no_checkpoint_training",
+  "created_at_utc": "2026-10-19T10:25:41.361321+00:00",
+  "supersedes": "/tmp/rm65b_history_interface_cpu_receipt.json",
+  "staging_root": "/tmp/rm65b_protocol_history_3000_20261019_v1",
+  "source_root_read_only": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2",
+  "changed_files": [
+    {
+      "relative_path": "code/RLinf/rlinf/data/schema/history_events.py",
+      "staging_sha256": "c2080a64bf76ec8eae2ede1454ccd063d05670cdf7fc5f4dd1561b5a0f919d7b",
+      "source_sha256": null
+    },
+    {
+      "relative_path": "code/RLinf/rlinf/models/embodiment/openpi/recap_tokenizer.py",
+      "staging_sha256": "317d152a2644d8552f7d507f42c1bf43fc672020b169747a7b1d1ef034e43ffa",
+      "source_sha256": "337db5b03211915dfee31345fbaeeac1632c252d7cd4b62734e124d8344d2eec"
+    },
+    {
+      "relative_path": "code/RLinf/rlinf/data/datasets/recap/hierarchical_collator.py",
+      "staging_sha256": "9a09ec03cf5e25c70177c962575cf471831fe66c894a55a7397dc8f13df0c3f9",
+      "source_sha256": "bb631f0097b2e779e714075b2cb48d5b475798012e5b61c9ebd9b23880f90679"
+    },
+    {
+      "relative_path": "code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py",
+      "staging_sha256": "151b7d9934b9fa647beeb048d0e9b6f7bfea8feac99feb2d4025c33a4cb89c0a",
+      "source_sha256": "7e5b1aa881ec649ebf6e32a8ab83931cd6252fb30aff0623b6912e2b65c7069d"
+    },
+    {
+      "relative_path": "code/RLinf/rlinf/data/datasets/recap/hierarchical_dataset.py",
+      "staging_sha256": "53fa50ee935814224d279b278cce4a1a43b0c4e071eab559d4b4544ae1351300",
+      "source_sha256": "626346a2a89ee165d48d2f4696be69544dab011223595228fe83cd0e60310714"
+    },
+    {
+      "relative_path": "code/RLinf/rlinf/data/datasets/recap/hierarchical_value.py",
+      "staging_sha256": "24bd89307943b10ba5e7dd4efffb970c5e9bb614d6fb3cdd615b3eab714fd5b3",
+      "source_sha256": "05b872540d1be046301d646fc96045cc907acfc83dc5ebfaf19e606e6d884daa"
+    },
+    {
+      "relative_path": "code/RLinf/tests/unit_tests/test_recap_history_events.py",
+      "staging_sha256": "e89382bbcd11a750bad11260350c167e417c441878465fa13ddf008c920d8118",
+      "source_sha256": null
+    },
+    {
+      "relative_path": "code/RLinf/tests/unit_tests/test_hierarchical_recap_pipeline.py",
+      "staging_sha256": "48cd1c092f1fae4e5b9bfe6cc1a69d76ab3fbdbf54a37a417f70bc28994963b3",
+      "source_sha256": "9e13175f86c9a55ca9639ff051a959b69fc389339cb4d6c4ae78d47e8761a71e"
+    },
+    {
+      "relative_path": "code/RLinf/rlinf/runners/hierarchical_recap_runner.py",
+      "staging_sha256": "8df84531335425002e4420792923c57186191ba0979d2edf41018bff82eb911a",
+      "source_sha256": "c457d09f59ec20e2e449431f276db128505e2d69d10e32a1c526715adf3340ae"
+    },
+    {
+      "relative_path": "scripts/check_history3000_interface.py",
+      "staging_sha256": "40d429b206a73b7afeacf1e893d8dca78ef8fedbe62932b1dbcb5aeee4cd5035",
+      "source_sha256": null
+    },
+    {
+      "relative_path": "code/RLinf/tests/unit_tests/test_check_history3000_interface.py",
+      "staging_sha256": "18a907e4b59aab38f5e696498b3a52b6523274e3a68288af9b7da63257ba2393",
+      "source_sha256": null
+    }
+  ],
+  "cpu_tests": {
+    "passed": 125,
+    "failed": 0,
+    "duration_s": 7.86,
+    "suites": {
+      "test_recap_history_events.py": 51,
+      "test_check_history3000_interface.py": 6,
+      "test_hierarchical_recap_pipeline.py": 11,
+      "test_hierarchical_memory.py": 8,
+      "test_mem_training.py": 32,
+      "test_openpi_recap.py": 17
+    },
+    "scope": "CPU synthetic unit/network fixtures and real local asset transport only; no real checkpoint trained, no GPU kernels or simulator",
+    "warnings": [
+      "Existing numpydantic attempted site-package stub write was denied; no package files changed.",
+      "Expected non-exact resume warning in negative unit fixture."
+    ]
+  },
+  "new_guards": [
+    "history_from_sample: declared history_version strict rejects legacy, future, absent/contradictory clock, unknown version and alias conflicts; leaves record bytes/contents unmodified.",
+    "load_verified_high_samples and NativeJointCollator both invoke strict validation.",
+    "NativePi05Actor requires a real observed control-step bound for nonempty issued_subtask history and checks it before observation preprocessing."
+  ],
+  "data_level_tool": {
+    "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/scripts/check_history3000_interface.py",
+    "sha256": "40d429b206a73b7afeacf1e893d8dca78ef8fedbe62932b1dbcb5aeee4cd5035",
+    "quick12_report": "/tmp/history3000_interface_fit96_quick12.json",
+    "full96_report": "/tmp/history3000_interface_fit96_full.json",
+    "target_dataset_4200": "not yet checked by this worker; root builder pending",
+    "default": "all rows; --limit N explicitly marks partial coverage",
+    "execution_example": "<existing venv python> scripts/check_history3000_interface.py --labels <train3000.jsonl> <val600.jsonl> <test600.jsonl> --config <config.yaml> --output <report.json>",
+    "critical_scope": "Real NativeCollator/NativeActor entry, local SP, real NPZ and original SDK24 state transforms. Image embedding/base image-token preprocessing and model generation use declared CPU transport stubs; synthetic EOS is not scored as a prediction."
+  },
+  "prior_semantics": [
+    "Canonical list[typed events], no completion/outcome field.",
+    "Causal boundary is actual observed control-step index, not future chunk tail or physics tick.",
+    "Full prior decision windows accumulate; new episode resets to [].",
+    "Legacy text marked undated; strict3000 must call allow_legacy=False.",
+    "Both actor aliases resolve identically or reject conflicts.",
+    "Prompt budget rejects overlength; no silent history dropping/truncation.",
+    "New history-version episode samples and value targets validate exact issued text and start/end against prior actual decisions."
+  ],
+  "versions": {
+    "history": "rm65b_history_events_v1",
+    "prompt": "rm65b_recap_prompt_v3_history_events"
+  }
+}

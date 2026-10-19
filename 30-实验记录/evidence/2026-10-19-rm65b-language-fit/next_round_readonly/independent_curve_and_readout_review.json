@@ -1,0 +1,86 @@
+{
+  "scope": "read-only source and completed logs; no model load, GPU, backward or optimizer this turn",
+  "same_subset_curves": [
+    {
+      "run": "language_warmup_96_100",
+      "same_quick12_mean_ce": 10.618432998657227,
+      "training_25update_ce_blocks": [
+        16.36147912979126,
+        15.426632738113403,
+        13.561529083251953,
+        11.107234926223756
+      ],
+      "report_training": {
+        "loss": 14.118689247819347,
+        "high_ce": 14.114218969345092,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.004470278474254883,
+        "grad_norm": 2.6186818933486937,
+        "updates": 100,
+        "global_step": 100,
+        "anchor_micro_batches": 0
+      }
+    },
+    {
+      "run": "language_warmup_96_200",
+      "same_quick12_mean_ce": 6.667239665985107,
+      "training_25update_ce_blocks": [
+        10.226251525878906,
+        9.35692268371582,
+        8.53798726081848,
+        7.46439193725586
+      ],
+      "report_training": {
+        "loss": 8.920325618833303,
+        "high_ce": 8.896388351917267,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.023937266916036606,
+        "grad_norm": 5.791542019844055,
+        "updates": 100,
+        "global_step": 200,
+        "anchor_micro_batches": 0
+      }
+    },
+    {
+      "run": "language_warmup_96_300",
+      "same_quick12_mean_ce": 2.5764739910761514,
+      "training_25update_ce_blocks": [
+        6.038812961578369,
+        4.810663962364197,
+        3.698591375350952,
+        3.026247560977936
+      ],
+      "report_training": {
+        "loss": 4.412911088881083,
+        "high_ce": 4.393578965067864,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.01933212381321937,
+        "grad_norm": 9.748432893753051,
+        "updates": 100,
+        "global_step": 300,
+        "anchor_micro_batches": 0
+      }
+    }
+  ],
+  "language_readout": {
+    "trainable": "18 language attention q/k/v/o LoRA rank16, 3686400 parameters,144 tensors",
+    "frozen": [
+      "MLP",
+      "final language norm",
+      "shared input/output embedding",
+      "vision",
+      "MEM",
+      "action expert"
+    ],
+    "native_projection": "F.linear(hidden, embedding.weight)",
+    "frozen_projection_still_backpropagates_to_hidden": true,
+    "dtype": "FP32 adapter masters, BF16 casts in forward and native projection before CE float conversion",
+    "precision_root_cause_confirmed": false,
+    "next_conditional_parameters": "native final language norm scale 2048 first; later last4 MLP LoRA rank8 subject to manifest test"
+  },
+  "actual_next_training_executed": false,
+  "formal_3000_training": false
+}

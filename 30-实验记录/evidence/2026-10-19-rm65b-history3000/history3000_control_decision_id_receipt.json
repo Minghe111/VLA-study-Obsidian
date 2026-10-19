@@ -1,0 +1,57 @@
+{
+  "status": "passed_CPU_only_not_published",
+  "created_at_utc": "2026-10-19T11:16:08.664430+00:00",
+  "scope": "Canonical model/controller IDs only; raw capture logs/builder/validator/NEW untouched.",
+  "staging_root": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf",
+  "api": {
+    "module": "rlinf.data.schema.history_events",
+    "function": "control_decision_id(step)",
+    "format": "h%06d",
+    "input": "strict native Python int >=0; rejects bool,float,str,None,numpy integer"
+  },
+  "changed_files": [
+    {
+      "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf/rlinf/data/schema/history_events.py",
+      "relative_path": "rlinf/data/schema/history_events.py",
+      "sha256": "818ed1eec35e490474d0cb953252da3cd73e7e8df6c2dd434839a255d45cb2e7"
+    },
+    {
+      "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py",
+      "relative_path": "rlinf/workers/rollout/hf/hierarchical_recap_worker.py",
+      "sha256": "ced775fdf711b671fe5560572176b798d28bf6992de4d5f3670690ad977ea75e"
+    },
+    {
+      "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf/tests/unit_tests/test_recap_history_events.py",
+      "relative_path": "tests/unit_tests/test_recap_history_events.py",
+      "sha256": "8a79de3a4d683d27bb2cd09d878041384639865523ddaf828070e6f7576ed093"
+    },
+    {
+      "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf/tests/unit_tests/test_hierarchical_recap_pipeline.py",
+      "relative_path": "tests/unit_tests/test_hierarchical_recap_pipeline.py",
+      "sha256": "db8fb4928800141d1cb98f1a1741538c616c852978ba7f926a6621fd4002657c"
+    }
+  ],
+  "guards": [
+    "Actual HierarchicalReCapRolloutWorker creates HighLevelDecision using shared helper.",
+    "Declared new history-version samples reject noncanonical IDs via history_from_sample, so loader/collator cannot accept issued_* as model history.",
+    "General normalize_history preserves raw source event IDs for provenance validation; no silent raw-log rewriting."
+  ],
+  "tests": {
+    "passed": 81,
+    "failed": 0,
+    "duration_s": 3.68,
+    "suites": {
+      "test_recap_history_events.py": 64,
+      "test_hierarchical_recap_pipeline.py": 11,
+      "test_check_history3000_interface.py": 6
+    },
+    "new_direct_id_guard_cases": 13,
+    "controller_evidence": "Actual scripted-controller collect_episode: literal IDs h000000/h000002, runtime second-round three-mode history equals independently constructed canonical model-record history; prefix UTF8 equality checked for every READ/WRITE/SUBTASK. Existing real-SP CPU native/collator parity cases also pass."
+  },
+  "not_run": [
+    "No GPU, checkpoint model, simulator, optimizer or training",
+    "No NEW publish",
+    "No raw source log modification",
+    "No builder/validator changes by this worker"
+  ]
+}

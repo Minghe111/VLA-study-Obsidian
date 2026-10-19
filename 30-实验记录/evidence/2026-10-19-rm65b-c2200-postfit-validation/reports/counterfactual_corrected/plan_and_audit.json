@@ -1,0 +1,262 @@
+{
+  "status": "planned",
+  "stage": "counterfactual",
+  "checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint",
+  "script_sha256": "2ca4febfbca78cad2a26eacc24cd178d3d054acd87bdf989314c7950c4667b4d",
+  "evaluation_count": 88,
+  "audit": {
+    "status": "CPU_audit_passed_no_model_loaded",
+    "splits": {
+      "fit96": {
+        "rows": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "families": [
+          "protocol_layout_00",
+          "protocol_layout_01",
+          "protocol_layout_02",
+          "protocol_layout_03",
+          "protocol_layout_04",
+          "protocol_layout_05"
+        ],
+        "episode_count": 12,
+        "observation_files": 52,
+        "unique_actor_input_digests": 96,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "EMPTY": 8,
+          "CORRECT": 8,
+          "WRITE": 8,
+          "KEEP": 8
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "sha256": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true
+      },
+      "train": {
+        "rows": 360,
+        "modes": {
+          "READ": 120,
+          "WRITE": 120,
+          "SUBTASK": 120
+        },
+        "families": [
+          "protocol_layout_00",
+          "protocol_layout_01",
+          "protocol_layout_02",
+          "protocol_layout_03",
+          "protocol_layout_04",
+          "protocol_layout_05"
+        ],
+        "episode_count": 24,
+        "observation_files": 120,
+        "unique_actor_input_digests": 168,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 24,
+          "EMPTY": 48,
+          "KEEP": 24,
+          "CORRECT": 24
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/train.reviewed.jsonl",
+        "sha256": "c80260d0d34d84628038172ac8485837ad6153d8d023d960ff5e2f1c9af76140",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true
+      },
+      "val": {
+        "rows": 60,
+        "modes": {
+          "READ": 20,
+          "WRITE": 20,
+          "SUBTASK": 20
+        },
+        "families": [
+          "protocol_layout_06"
+        ],
+        "episode_count": 4,
+        "observation_files": 20,
+        "unique_actor_input_digests": 28,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 4,
+          "EMPTY": 8,
+          "KEEP": 4,
+          "CORRECT": 4
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/val.reviewed.jsonl",
+        "sha256": "f277e275effda6370e06658ef51c199e56e79ea6ca6d206fb333865d50a3e9aa",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true,
+        "historically_inferred_rows": 16,
+        "no_historical_inference_found_rows": 44,
+        "historically_inferred_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          12,
+          13,
+          15,
+          16,
+          32,
+          35
+        ],
+        "historically_inferred_unique_actor_inputs": 13,
+        "fresh_actor_input_rows_in_searched_history": 32,
+        "fresh_unique_actor_inputs_in_searched_history": 15,
+        "not_inferred_rows_with_already_seen_actor_input": 12
+      },
+      "test": {
+        "rows": 60,
+        "modes": {
+          "READ": 20,
+          "WRITE": 20,
+          "SUBTASK": 20
+        },
+        "families": [
+          "protocol_layout_07"
+        ],
+        "episode_count": 4,
+        "observation_files": 20,
+        "unique_actor_input_digests": 28,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 4,
+          "EMPTY": 8,
+          "KEEP": 4,
+          "CORRECT": 4
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/test.reviewed.jsonl",
+        "sha256": "080c774d2f53a810dd4aff4e0da23e87409290038672724c97cd97cd94a76264",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true,
+        "historically_inferred_rows": 0,
+        "no_historical_inference_found_rows": 60,
+        "historically_inferred_indices": [],
+        "historically_inferred_unique_actor_inputs": 0,
+        "fresh_actor_input_rows_in_searched_history": 60,
+        "fresh_unique_actor_inputs_in_searched_history": 28,
+        "not_inferred_rows_with_already_seen_actor_input": 0
+      }
+    },
+    "overlaps": {
+      "fit96_vs_val": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "fit96_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "train_vs_val": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "train_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "val_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      }
+    },
+    "historical_report_search_scope": "SOURCE/reports/protocol_sft_sequence_v1/*/report.json; absence is bounded to this search",
+    "historical_inference_reports": [
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/02_eval_baseline/report.json",
+        "case_count": 32,
+        "status": "completed"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/04_eval32/report.json",
+        "case_count": 32,
+        "status": "completed"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/06_eval128/report.json",
+        "case_count": 32,
+        "status": "completed"
+      }
+    ],
+    "test_read_for_source_exclusion_and_label_integrity_only": true,
+    "semantic_limit": "All labels are static role/memory rules from authored contexts; nine target strings, not visual grounding or robot task success",
+    "test_policy": "Use val for interface decisions; no test inference until a frozen validation report for the same C2200 and evaluator hash",
+    "counterfactual": {
+      "rows": 88,
+      "modes": {
+        "READ": 8,
+        "WRITE": 40,
+        "SUBTASK": 40
+      },
+      "families": [
+        "protocol_layout_06"
+      ],
+      "episode_count": 1,
+      "observation_files": 4,
+      "unique_actor_input_digests": 88,
+      "unique_target_strings": 9,
+      "write_operations": {
+        "WRITE": 8,
+        "EMPTY": 8,
+        "KEEP": 8,
+        "CORRECT": 16
+      },
+      "target_basis": "Formal visible-context rule only, no fabricated physical event",
+      "actual_visible_memory_schema_validated": true,
+      "memory_tool": "EpisodeMemory(strict_protocol=True).read/actor_view; current_writes empty in seeded fresh round",
+      "subtask_scope": "Stale/empty/unconfirmed selected-memory pressure, not a claimed post-correct-WRITE natural trajectory",
+      "v2_erratum": "Prior v2 SUBTASK inputs were list-shaped, so their40 failures do not establish model generalization failure; prior WRITE16/40 remains a valid failure result",
+      "source_observation_paths": 20,
+      "available_unique_image_and_state_inputs": 4,
+      "selection": "Deduplicate actual image+normalized-state-prefix before choosing observations",
+      "unique_goal_pairs": 44,
+      "unique_memory_groups": 16,
+      "original_val_actor_input_overlap": 14,
+      "fit96_input_digest_overlap": 0
+    }
+  },
+  "optimizer_updates": 0,
+  "simulation_rollouts": 0,
+  "decoding": "NativePi05Actor unrestricted greedy, max96, real EOS; no repair/grammar constraints"
+}

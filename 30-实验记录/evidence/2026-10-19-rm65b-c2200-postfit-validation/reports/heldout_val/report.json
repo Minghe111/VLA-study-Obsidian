@@ -1,0 +1,3147 @@
+{
+  "status": "completed",
+  "stage": "val",
+  "checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint",
+  "script_sha256": "c115912d6a5f8b0eb67bc65e5bd70276bd1a43955dfa09f4877fc4ef69d7e428",
+  "evaluation_count": 60,
+  "audit": {
+    "status": "CPU_audit_passed_no_model_loaded",
+    "splits": {
+      "fit96": {
+        "rows": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "families": [
+          "protocol_layout_00",
+          "protocol_layout_01",
+          "protocol_layout_02",
+          "protocol_layout_03",
+          "protocol_layout_04",
+          "protocol_layout_05"
+        ],
+        "episode_count": 12,
+        "observation_files": 52,
+        "unique_actor_input_digests": 96,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "EMPTY": 8,
+          "CORRECT": 8,
+          "WRITE": 8,
+          "KEEP": 8
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "sha256": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true
+      },
+      "train": {
+        "rows": 360,
+        "modes": {
+          "READ": 120,
+          "WRITE": 120,
+          "SUBTASK": 120
+        },
+        "families": [
+          "protocol_layout_00",
+          "protocol_layout_01",
+          "protocol_layout_02",
+          "protocol_layout_03",
+          "protocol_layout_04",
+          "protocol_layout_05"
+        ],
+        "episode_count": 24,
+        "observation_files": 120,
+        "unique_actor_input_digests": 168,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 24,
+          "EMPTY": 48,
+          "KEEP": 24,
+          "CORRECT": 24
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/train.reviewed.jsonl",
+        "sha256": "c80260d0d34d84628038172ac8485837ad6153d8d023d960ff5e2f1c9af76140",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true
+      },
+      "val": {
+        "rows": 60,
+        "modes": {
+          "READ": 20,
+          "WRITE": 20,
+          "SUBTASK": 20
+        },
+        "families": [
+          "protocol_layout_06"
+        ],
+        "episode_count": 4,
+        "observation_files": 20,
+        "unique_actor_input_digests": 28,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 4,
+          "EMPTY": 8,
+          "KEEP": 4,
+          "CORRECT": 4
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/val.reviewed.jsonl",
+        "sha256": "f277e275effda6370e06658ef51c199e56e79ea6ca6d206fb333865d50a3e9aa",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true,
+        "historically_inferred_rows": 16,
+        "no_historical_inference_found_rows": 44,
+        "historically_inferred_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          12,
+          13,
+          15,
+          16,
+          32,
+          35
+        ],
+        "historically_inferred_unique_actor_inputs": 13,
+        "fresh_actor_input_rows_in_searched_history": 32,
+        "fresh_unique_actor_inputs_in_searched_history": 15,
+        "not_inferred_rows_with_already_seen_actor_input": 12
+      },
+      "test": {
+        "rows": 60,
+        "modes": {
+          "READ": 20,
+          "WRITE": 20,
+          "SUBTASK": 20
+        },
+        "families": [
+          "protocol_layout_07"
+        ],
+        "episode_count": 4,
+        "observation_files": 20,
+        "unique_actor_input_digests": 28,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 4,
+          "EMPTY": 8,
+          "KEEP": 4,
+          "CORRECT": 4
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/test.reviewed.jsonl",
+        "sha256": "080c774d2f53a810dd4aff4e0da23e87409290038672724c97cd97cd94a76264",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true,
+        "historically_inferred_rows": 0,
+        "no_historical_inference_found_rows": 60,
+        "historically_inferred_indices": [],
+        "historically_inferred_unique_actor_inputs": 0,
+        "fresh_actor_input_rows_in_searched_history": 60,
+        "fresh_unique_actor_inputs_in_searched_history": 28,
+        "not_inferred_rows_with_already_seen_actor_input": 0
+      }
+    },
+    "overlaps": {
+      "fit96_vs_val": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "fit96_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "train_vs_val": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "train_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "val_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      }
+    },
+    "historical_report_search_scope": "SOURCE/reports/protocol_sft_sequence_v1/*/report.json; absence is bounded to this search",
+    "historical_inference_reports": [
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/02_eval_baseline/report.json",
+        "case_count": 32,
+        "status": "completed"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/04_eval32/report.json",
+        "case_count": 32,
+        "status": "completed"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/06_eval128/report.json",
+        "case_count": 32,
+        "status": "completed"
+      }
+    ],
+    "test_read_for_source_exclusion_and_label_integrity_only": true,
+    "semantic_limit": "All labels are static role/memory rules from authored contexts; nine target strings, not visual grounding or robot task success",
+    "test_policy": "Use val for interface decisions; no test inference until a frozen validation report for the same C2200 and evaluator hash"
+  },
+  "optimizer_updates": 0,
+  "simulation_rollouts": 0,
+  "decoding": "NativePi05Actor unrestricted greedy, max96, real EOS; no repair/grammar constraints",
+  "finished_utc": "2026-10-19T07:55:45.085028+00:00",
+  "cases": [
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d0:static_hold_protocol:READ",
+      "actor_input_digest": "d892289a6a92a2096ebc6a4d89bc888773787bd53724354098e2bd31333f7be1",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d0:static_hold_protocol:WRITE",
+      "actor_input_digest": "17b592e8e945814f7e98cb9784a8716495c8131dd0a5dcb98e7f13bce0f1cfee",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d0:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "dfc60d80c2ae9429561e9cab195238f3038b1ba3b546b86d07771282056a814b",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d8:static_hold_protocol:READ",
+      "actor_input_digest": "f9d2b1cc21bc08950d18ab7ea5fb84710d34b6f717402008837b356e29da5377",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d8:static_hold_protocol:WRITE",
+      "actor_input_digest": "51bc2a59703f83bad4dbd1d50f71bd257200fb20e5e288607906a996ae94af6c",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d8:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "821e3ff3f95db8547282fc0db3ae7caafad9834a2bbf0047fa1cc29f64325190",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d16:counterfactual_memory_confidence:READ",
+      "actor_input_digest": "b7f2e85a5546e2feb670ba2f6f7c8fb886a14cdf17595a0e817e8b89a20e22c5",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d16:counterfactual_memory_confidence:WRITE",
+      "actor_input_digest": "028392da3aa56779243b21e6bfaed644babd07d067a2e1012deb72f3abe2314c",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d16:counterfactual_memory_confidence:SUBTASK",
+      "actor_input_digest": "847e2d6e338143c2af09d6bb955d4e344f79a8c86083359325d7391144561040",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d24:static_hold_protocol:READ",
+      "actor_input_digest": "36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d24:static_hold_protocol:WRITE",
+      "actor_input_digest": "24be0f83cb361a5f35a10372ff5d898a45e70916d1d31b70f036d4b5becb39de",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d24:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "b6610dd207258561c5289d446cdb7742d4ed3e6f6400466135e6f9319af50b8b",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d32:counterfactual_memory_corruption:READ",
+      "actor_input_digest": "36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d32:counterfactual_memory_corruption:WRITE",
+      "actor_input_digest": "0fd7af5d850fdfdfe5948cc27613de6cf8e02791773750b4ca159ea2faae7ea3",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31600:d32:counterfactual_memory_corruption:SUBTASK",
+      "actor_input_digest": "129122eb0764fa58d13ff36c3f644e437c1242a281bcf0a4ac5bf21a853771b5",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d0:static_hold_protocol:READ",
+      "actor_input_digest": "d892289a6a92a2096ebc6a4d89bc888773787bd53724354098e2bd31333f7be1",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d0:static_hold_protocol:WRITE",
+      "actor_input_digest": "17b592e8e945814f7e98cb9784a8716495c8131dd0a5dcb98e7f13bce0f1cfee",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d0:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "dfc60d80c2ae9429561e9cab195238f3038b1ba3b546b86d07771282056a814b",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d8:static_hold_protocol:READ",
+      "actor_input_digest": "f9d2b1cc21bc08950d18ab7ea5fb84710d34b6f717402008837b356e29da5377",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d8:static_hold_protocol:WRITE",
+      "actor_input_digest": "51bc2a59703f83bad4dbd1d50f71bd257200fb20e5e288607906a996ae94af6c",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d8:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "821e3ff3f95db8547282fc0db3ae7caafad9834a2bbf0047fa1cc29f64325190",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d16:counterfactual_memory_confidence:READ",
+      "actor_input_digest": "b7f2e85a5546e2feb670ba2f6f7c8fb886a14cdf17595a0e817e8b89a20e22c5",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d16:counterfactual_memory_confidence:WRITE",
+      "actor_input_digest": "028392da3aa56779243b21e6bfaed644babd07d067a2e1012deb72f3abe2314c",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d16:counterfactual_memory_confidence:SUBTASK",
+      "actor_input_digest": "847e2d6e338143c2af09d6bb955d4e344f79a8c86083359325d7391144561040",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d24:static_hold_protocol:READ",
+      "actor_input_digest": "36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d24:static_hold_protocol:WRITE",
+      "actor_input_digest": "24be0f83cb361a5f35a10372ff5d898a45e70916d1d31b70f036d4b5becb39de",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d24:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "b6610dd207258561c5289d446cdb7742d4ed3e6f6400466135e6f9319af50b8b",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d32:counterfactual_memory_corruption:READ",
+      "actor_input_digest": "36b41ef57fd55c302cdb7c3d57f98185ad2cb2a30e00700a4a6949951d95b739",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d32:counterfactual_memory_corruption:WRITE",
+      "actor_input_digest": "0fd7af5d850fdfdfe5948cc27613de6cf8e02791773750b4ca159ea2faae7ea3",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_left_31601:d32:counterfactual_memory_corruption:SUBTASK",
+      "actor_input_digest": "129122eb0764fa58d13ff36c3f644e437c1242a281bcf0a4ac5bf21a853771b5",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the left.",
+      "text": "Pick up and hold the sample initially on the left.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        2731,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d0:static_hold_protocol:READ",
+      "actor_input_digest": "e63cba75482c499068f484d8ea1150e5493b90bb44f050d549046971bc0f9cfc",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d0:static_hold_protocol:WRITE",
+      "actor_input_digest": "92621f8900da2d15d48330859ec68f6db0e53ac0dd46b3d8a88b3318b5b3e44b",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d0:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "89f3fa2a96de7afa74116c6f0c018864dbd6966df227005912bdac8f4307fa43",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d8:static_hold_protocol:READ",
+      "actor_input_digest": "1df8cad35c11ab5663435956eea209c2264c2a9d6e5710a85f3aef784e1370ff",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d8:static_hold_protocol:WRITE",
+      "actor_input_digest": "6530709e16e4d3a2e8d439dd5521671fe09f009af32b07b281bc186afb7cb90e",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d8:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "677fb339c925cfc64171549dc30acd272dcc0c5da6491562d6589ab53cef5238",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d16:counterfactual_memory_confidence:READ",
+      "actor_input_digest": "237331fd737def0b389e993d1609a46d9a232616c646c472fe3f4d08bf60299b",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d16:counterfactual_memory_confidence:WRITE",
+      "actor_input_digest": "fd6a25f1875f7e81b4a58933e4be20e9f984c705b076d5c81ac59cdecda82822",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d16:counterfactual_memory_confidence:SUBTASK",
+      "actor_input_digest": "4a7b4507cefcb0279017c0c350703849106e5c121b2bd4958adbf4380f84c625",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d24:static_hold_protocol:READ",
+      "actor_input_digest": "2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d24:static_hold_protocol:WRITE",
+      "actor_input_digest": "40489e7135afc1705b67bc7347aaad21be2cdec087c4127725c4332f4e648bd9",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d24:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "bda5fc279c4be96314f0dce5a72a1f0035307279ee7c3628a0dfd3153c1246ed",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d32:counterfactual_memory_corruption:READ",
+      "actor_input_digest": "2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d32:counterfactual_memory_corruption:WRITE",
+      "actor_input_digest": "ae9c9ab88379adb570110773f868999199fe4fb93f5f4092549a6e9161a2eaba",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31610:d32:counterfactual_memory_corruption:SUBTASK",
+      "actor_input_digest": "adc1054409c2d17c2965b8b3a4ef759959730d8ca81cae4bfa5b9d0c24ed1850",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d0:static_hold_protocol:READ",
+      "actor_input_digest": "e63cba75482c499068f484d8ea1150e5493b90bb44f050d549046971bc0f9cfc",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d0:static_hold_protocol:WRITE",
+      "actor_input_digest": "92621f8900da2d15d48330859ec68f6db0e53ac0dd46b3d8a88b3318b5b3e44b",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        34038,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d0:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "89f3fa2a96de7afa74116c6f0c018864dbd6966df227005912bdac8f4307fa43",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d8:static_hold_protocol:READ",
+      "actor_input_digest": "1df8cad35c11ab5663435956eea209c2264c2a9d6e5710a85f3aef784e1370ff",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d8:static_hold_protocol:WRITE",
+      "actor_input_digest": "6530709e16e4d3a2e8d439dd5521671fe09f009af32b07b281bc186afb7cb90e",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d8:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "677fb339c925cfc64171549dc30acd272dcc0c5da6491562d6589ab53cef5238",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d16:counterfactual_memory_confidence:READ",
+      "actor_input_digest": "237331fd737def0b389e993d1609a46d9a232616c646c472fe3f4d08bf60299b",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d16:counterfactual_memory_confidence:WRITE",
+      "actor_input_digest": "fd6a25f1875f7e81b4a58933e4be20e9f984c705b076d5c81ac59cdecda82822",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d16:counterfactual_memory_confidence:SUBTASK",
+      "actor_input_digest": "4a7b4507cefcb0279017c0c350703849106e5c121b2bd4958adbf4380f84c625",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d24:static_hold_protocol:READ",
+      "actor_input_digest": "2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d24:static_hold_protocol:WRITE",
+      "actor_input_digest": "40489e7135afc1705b67bc7347aaad21be2cdec087c4127725c4332f4e648bd9",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d24:static_hold_protocol:SUBTASK",
+      "actor_input_digest": "bda5fc279c4be96314f0dce5a72a1f0035307279ee7c3628a0dfd3153c1246ed",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d32:counterfactual_memory_corruption:READ",
+      "actor_input_digest": "2a7de77b88ed7eacafa9076985b0ad8a1a4e2add29a5aea56f219460bf80118d",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d32:counterfactual_memory_corruption:WRITE",
+      "actor_input_digest": "ae9c9ab88379adb570110773f868999199fe4fb93f5f4092549a6e9161a2eaba",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    },
+    {
+      "sample_id": "fresh_protocol_layout_06_right_31611:d32:counterfactual_memory_corruption:SUBTASK",
+      "actor_input_digest": "adc1054409c2d17c2965b8b3a4ef759959730d8ca81cae4bfa5b9d0c24ed1850",
+      "mode": "SUBTASK",
+      "target_text": "Pick up and hold the sample initially on the right.",
+      "text": "Pick up and hold the sample initially on the right.",
+      "token_ids": [
+        21585,
+        908,
+        578,
+        3385,
+        573,
+        6453,
+        21166,
+        611,
+        573,
+        1833,
+        235265,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "SUBTASK",
+        "side_binding_lexical": true,
+        "required_terms": true,
+        "exact_target": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null
+    }
+  ],
+  "summary": {
+    "count": 60,
+    "eos": {
+      "passed": 60,
+      "eligible": 60
+    },
+    "nonempty": {
+      "passed": 60,
+      "eligible": 60
+    },
+    "json": {
+      "passed": 40,
+      "eligible": 40
+    },
+    "schema_legal": {
+      "passed": 40,
+      "eligible": 40
+    },
+    "target_match": {
+      "passed": 40,
+      "eligible": 40
+    },
+    "side_binding_lexical": {
+      "passed": 20,
+      "eligible": 20
+    },
+    "text_exact": {
+      "passed": 60,
+      "eligible": 60
+    },
+    "semantic_passed": {
+      "passed": 60,
+      "eligible": 60
+    },
+    "strict_passed": {
+      "passed": 60,
+      "eligible": 60
+    },
+    "strict_text_exact": {
+      "passed": 60,
+      "eligible": 60
+    },
+    "all_strict_passed": true
+  },
+  "by_mode": {
+    "READ": {
+      "count": 20,
+      "eos": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "nonempty": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "json": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "schema_legal": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "target_match": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "text_exact": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "semantic_passed": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "strict_passed": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "strict_text_exact": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "all_strict_passed": true
+    },
+    "WRITE": {
+      "count": 20,
+      "eos": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "nonempty": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "json": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "schema_legal": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "target_match": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "text_exact": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "semantic_passed": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "strict_passed": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "strict_text_exact": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "all_strict_passed": true
+    },
+    "SUBTASK": {
+      "count": 20,
+      "eos": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "nonempty": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "side_binding_lexical": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "text_exact": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "semantic_passed": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "strict_passed": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "strict_text_exact": {
+        "passed": 20,
+        "eligible": 20
+      },
+      "all_strict_passed": true
+    }
+  },
+  "scope": "Heldout validation or controlled evaluation-only protocol conditions; not a training fitting report, visual grounding or task SR result",
+  "parameter_protection": {
+    "before": {
+      "False": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652",
+      "True": "0df6dfae511ab582e0325478d98d0836a9748c4a69a9a143f2a835efb0b44353"
+    },
+    "after": {
+      "False": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652",
+      "True": "0df6dfae511ab582e0325478d98d0836a9748c4a69a9a143f2a835efb0b44353"
+    },
+    "all_parameters_exact": true,
+    "checkpoint_weights_sha_before": "5e16c2c36ba8c99351d4b0f9af66b6600d94250e1a07bea4f227b8bd5e2e4531",
+    "checkpoint_weights_sha_after": "5e16c2c36ba8c99351d4b0f9af66b6600d94250e1a07bea4f227b8bd5e2e4531",
+    "checkpoint_version_sha256": "4653b02a41dc8f44ff8482bfe21e2e5d7ea33611cbc3a5764cd85c10710344bb",
+    "checkpoint_unchanged": true,
+    "optimizer_created": false,
+    "parameters_with_grad": 0
+  },
+  "unique_actual_actor_inputs": {
+    "count": 28,
+    "summary": {
+      "count": 28,
+      "eos": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "nonempty": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "json": {
+        "passed": 18,
+        "eligible": 18
+      },
+      "schema_legal": {
+        "passed": 18,
+        "eligible": 18
+      },
+      "target_match": {
+        "passed": 18,
+        "eligible": 18
+      },
+      "side_binding_lexical": {
+        "passed": 10,
+        "eligible": 10
+      },
+      "text_exact": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "semantic_passed": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "strict_passed": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "strict_text_exact": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "all_strict_passed": true
+    },
+    "by_mode": {
+      "READ": {
+        "count": 8,
+        "eos": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "semantic_passed": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "strict_passed": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "strict_text_exact": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "all_strict_passed": true
+      },
+      "WRITE": {
+        "count": 10,
+        "eos": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "nonempty": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "json": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "schema_legal": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "target_match": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "semantic_passed": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "strict_passed": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "strict_text_exact": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "all_strict_passed": true
+      },
+      "SUBTASK": {
+        "count": 10,
+        "eos": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "nonempty": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "side_binding_lexical": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "text_exact": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "semantic_passed": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "strict_passed": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "strict_text_exact": {
+          "passed": 10,
+          "eligible": 10
+        },
+        "all_strict_passed": true
+      }
+    }
+  },
+  "historically_seen": {
+    "count": 16,
+    "eos": {
+      "passed": 16,
+      "eligible": 16
+    },
+    "nonempty": {
+      "passed": 16,
+      "eligible": 16
+    },
+    "json": {
+      "passed": 11,
+      "eligible": 11
+    },
+    "schema_legal": {
+      "passed": 11,
+      "eligible": 11
+    },
+    "target_match": {
+      "passed": 11,
+      "eligible": 11
+    },
+    "side_binding_lexical": {
+      "passed": 5,
+      "eligible": 5
+    },
+    "text_exact": {
+      "passed": 16,
+      "eligible": 16
+    },
+    "semantic_passed": {
+      "passed": 16,
+      "eligible": 16
+    },
+    "strict_passed": {
+      "passed": 16,
+      "eligible": 16
+    },
+    "strict_text_exact": {
+      "passed": 16,
+      "eligible": 16
+    },
+    "all_strict_passed": true
+  },
+  "not_previously_inferred_in_searched_reports": {
+    "count": 44,
+    "eos": {
+      "passed": 44,
+      "eligible": 44
+    },
+    "nonempty": {
+      "passed": 44,
+      "eligible": 44
+    },
+    "json": {
+      "passed": 29,
+      "eligible": 29
+    },
+    "schema_legal": {
+      "passed": 29,
+      "eligible": 29
+    },
+    "target_match": {
+      "passed": 29,
+      "eligible": 29
+    },
+    "side_binding_lexical": {
+      "passed": 15,
+      "eligible": 15
+    },
+    "text_exact": {
+      "passed": 44,
+      "eligible": 44
+    },
+    "semantic_passed": {
+      "passed": 44,
+      "eligible": 44
+    },
+    "strict_passed": {
+      "passed": 44,
+      "eligible": 44
+    },
+    "strict_text_exact": {
+      "passed": 44,
+      "eligible": 44
+    },
+    "all_strict_passed": true
+  },
+  "history_by_actual_actor_input": {
+    "historically_seen_unique_inputs": {
+      "count": 13,
+      "eos": {
+        "passed": 13,
+        "eligible": 13
+      },
+      "nonempty": {
+        "passed": 13,
+        "eligible": 13
+      },
+      "json": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "schema_legal": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "target_match": {
+        "passed": 8,
+        "eligible": 8
+      },
+      "side_binding_lexical": {
+        "passed": 5,
+        "eligible": 5
+      },
+      "text_exact": {
+        "passed": 13,
+        "eligible": 13
+      },
+      "semantic_passed": {
+        "passed": 13,
+        "eligible": 13
+      },
+      "strict_passed": {
+        "passed": 13,
+        "eligible": 13
+      },
+      "strict_text_exact": {
+        "passed": 13,
+        "eligible": 13
+      },
+      "all_strict_passed": true
+    },
+    "fresh_unique_inputs_in_searched_history": {
+      "count": 15,
+      "eos": {
+        "passed": 15,
+        "eligible": 15
+      },
+      "nonempty": {
+        "passed": 15,
+        "eligible": 15
+      },
+      "json": {
+        "passed": 10,
+        "eligible": 10
+      },
+      "schema_legal": {
+        "passed": 10,
+        "eligible": 10
+      },
+      "target_match": {
+        "passed": 10,
+        "eligible": 10
+      },
+      "side_binding_lexical": {
+        "passed": 5,
+        "eligible": 5
+      },
+      "text_exact": {
+        "passed": 15,
+        "eligible": 15
+      },
+      "semantic_passed": {
+        "passed": 15,
+        "eligible": 15
+      },
+      "strict_passed": {
+        "passed": 15,
+        "eligible": 15
+      },
+      "strict_text_exact": {
+        "passed": 15,
+        "eligible": 15
+      },
+      "all_strict_passed": true
+    },
+    "historically_seen_input_rows": {
+      "count": 28,
+      "eos": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "nonempty": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "json": {
+        "passed": 18,
+        "eligible": 18
+      },
+      "schema_legal": {
+        "passed": 18,
+        "eligible": 18
+      },
+      "target_match": {
+        "passed": 18,
+        "eligible": 18
+      },
+      "side_binding_lexical": {
+        "passed": 10,
+        "eligible": 10
+      },
+      "text_exact": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "semantic_passed": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "strict_passed": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "strict_text_exact": {
+        "passed": 28,
+        "eligible": 28
+      },
+      "all_strict_passed": true
+    },
+    "fresh_input_rows_in_searched_history": {
+      "count": 32,
+      "eos": {
+        "passed": 32,
+        "eligible": 32
+      },
+      "nonempty": {
+        "passed": 32,
+        "eligible": 32
+      },
+      "json": {
+        "passed": 22,
+        "eligible": 22
+      },
+      "schema_legal": {
+        "passed": 22,
+        "eligible": 22
+      },
+      "target_match": {
+        "passed": 22,
+        "eligible": 22
+      },
+      "side_binding_lexical": {
+        "passed": 10,
+        "eligible": 10
+      },
+      "text_exact": {
+        "passed": 32,
+        "eligible": 32
+      },
+      "semantic_passed": {
+        "passed": 32,
+        "eligible": 32
+      },
+      "strict_passed": {
+        "passed": 32,
+        "eligible": 32
+      },
+      "strict_text_exact": {
+        "passed": 32,
+        "eligible": 32
+      },
+      "all_strict_passed": true
+    }
+  }
+}

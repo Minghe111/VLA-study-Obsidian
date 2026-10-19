@@ -1,0 +1,2749 @@
+{
+  "status": "completed",
+  "stage": "revision",
+  "checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint",
+  "script_sha256": "6736f004c1a551b58afae12521589b772b7f9a7594e22361fea2f09c94b4d338",
+  "evaluation_count": 24,
+  "audit": {
+    "status": "CPU_audit_passed_no_model_loaded",
+    "splits": {
+      "fit96": {
+        "rows": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "families": [
+          "protocol_layout_00",
+          "protocol_layout_01",
+          "protocol_layout_02",
+          "protocol_layout_03",
+          "protocol_layout_04",
+          "protocol_layout_05"
+        ],
+        "episode_count": 12,
+        "observation_files": 52,
+        "unique_actor_input_digests": 96,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "EMPTY": 8,
+          "CORRECT": 8,
+          "WRITE": 8,
+          "KEEP": 8
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "sha256": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true
+      },
+      "train": {
+        "rows": 360,
+        "modes": {
+          "READ": 120,
+          "WRITE": 120,
+          "SUBTASK": 120
+        },
+        "families": [
+          "protocol_layout_00",
+          "protocol_layout_01",
+          "protocol_layout_02",
+          "protocol_layout_03",
+          "protocol_layout_04",
+          "protocol_layout_05"
+        ],
+        "episode_count": 24,
+        "observation_files": 120,
+        "unique_actor_input_digests": 168,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 24,
+          "EMPTY": 48,
+          "KEEP": 24,
+          "CORRECT": 24
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/train.reviewed.jsonl",
+        "sha256": "c80260d0d34d84628038172ac8485837ad6153d8d023d960ff5e2f1c9af76140",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true
+      },
+      "val": {
+        "rows": 60,
+        "modes": {
+          "READ": 20,
+          "WRITE": 20,
+          "SUBTASK": 20
+        },
+        "families": [
+          "protocol_layout_06"
+        ],
+        "episode_count": 4,
+        "observation_files": 20,
+        "unique_actor_input_digests": 28,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 4,
+          "EMPTY": 8,
+          "KEEP": 4,
+          "CORRECT": 4
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/val.reviewed.jsonl",
+        "sha256": "f277e275effda6370e06658ef51c199e56e79ea6ca6d206fb333865d50a3e9aa",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true,
+        "historically_inferred_rows": 16,
+        "no_historical_inference_found_rows": 44,
+        "historically_inferred_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          12,
+          13,
+          15,
+          16,
+          32,
+          35
+        ],
+        "historically_inferred_unique_actor_inputs": 13,
+        "fresh_actor_input_rows_in_searched_history": 32,
+        "fresh_unique_actor_inputs_in_searched_history": 15,
+        "not_inferred_rows_with_already_seen_actor_input": 12
+      },
+      "test": {
+        "rows": 60,
+        "modes": {
+          "READ": 20,
+          "WRITE": 20,
+          "SUBTASK": 20
+        },
+        "families": [
+          "protocol_layout_07"
+        ],
+        "episode_count": 4,
+        "observation_files": 20,
+        "unique_actor_input_digests": 28,
+        "unique_target_strings": 9,
+        "write_operations": {
+          "WRITE": 4,
+          "EMPTY": 8,
+          "KEEP": 4,
+          "CORRECT": 4
+        },
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/protocol_labels_reviewed_v1/test.reviewed.jsonl",
+        "sha256": "080c774d2f53a810dd4aff4e0da23e87409290038672724c97cd97cd94a76264",
+        "targets_rule_validated": true,
+        "actual_input_digest_recomputed": true,
+        "historically_inferred_rows": 0,
+        "no_historical_inference_found_rows": 60,
+        "historically_inferred_indices": [],
+        "historically_inferred_unique_actor_inputs": 0,
+        "fresh_actor_input_rows_in_searched_history": 60,
+        "fresh_unique_actor_inputs_in_searched_history": 28,
+        "not_inferred_rows_with_already_seen_actor_input": 0
+      }
+    },
+    "overlaps": {
+      "fit96_vs_val": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "fit96_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "train_vs_val": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "train_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      },
+      "val_vs_test": {
+        "sample_id": 0,
+        "family_id": 0,
+        "episode_id": 0,
+        "seed": 0,
+        "actor_input_digest": 0,
+        "observation_paths": 0,
+        "unique_target_strings": 9,
+        "actual_three_camera_pixel_triplets": 0
+      }
+    },
+    "historical_report_search_scope": "SOURCE/reports/protocol_sft_sequence_v1/*/report.json; absence is bounded to this search",
+    "historical_inference_reports": [
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/02_eval_baseline/report.json",
+        "case_count": 32,
+        "status": "completed"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/04_eval32/report.json",
+        "case_count": 32,
+        "status": "completed"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/06_eval128/report.json",
+        "case_count": 32,
+        "status": "completed"
+      }
+    ],
+    "test_read_for_source_exclusion_and_label_integrity_only": true,
+    "semantic_limit": "All labels are static role/memory rules from authored contexts; nine target strings, not visual grounding or robot task success",
+    "test_policy": "Use val for interface decisions; no test inference until a frozen validation report for the same C2200 and evaluator hash",
+    "revision": {
+      "rows": 24,
+      "modes": {
+        "WRITE": 24
+      },
+      "families": [
+        "protocol_layout_06"
+      ],
+      "episode_count": 1,
+      "observation_files": 1,
+      "unique_actor_input_digests": 24,
+      "unique_target_strings": 4,
+      "write_operations": {
+        "EMPTY": 6,
+        "KEEP": 6,
+        "CORRECT": 12
+      },
+      "unique_revision_triples": 8,
+      "revisions": [
+        1,
+        2,
+        4
+      ],
+      "fit96_actor_input_overlap": 0,
+      "actual_visible_memory_schema_validated": true,
+      "only_modified_actor_field_within_each_triple": "selected_memory[0].revision",
+      "targets_invariant_within_each_triple": true,
+      "seed_method": "Native initial WRITE plus idempotent same-value/same-confirmed CORRECT; active slots cannot accept repeated WRITE",
+      "scope": "One real heldout observation; formal selected-slot revision intervention, not new physical events or robot task SR"
+    }
+  },
+  "optimizer_updates": 0,
+  "simulation_rollouts": 0,
+  "decoding": "NativePi05Actor unrestricted greedy, max96, real EOS; no repair/grammar constraints",
+  "finished_utc": "2026-10-19T08:23:19.360333+00:00",
+  "cases": [
+    {
+      "sample_id": "revision_only:goal_left:value_left:confirmed_true:revision_1",
+      "actor_input_digest": "0f697832ec188be6f6e66b0ffdb826806840589713575909c2a0fcbf9ea0e46d",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_left:confirmed_true",
+        "revision": 1,
+        "goal_side": "left",
+        "value_side": "left",
+        "confirmed": true,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_left:value_left:confirmed_true:revision_2",
+      "actor_input_digest": "0fe1d633f827f1141bac32f299dd5aeaf7ddeb06280330fe867c54e93baa974f",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_left:confirmed_true",
+        "revision": 2,
+        "goal_side": "left",
+        "value_side": "left",
+        "confirmed": true,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_left:value_left:confirmed_true:revision_4",
+      "actor_input_digest": "63566a4a589ecf7b85753cf166a2eb05e17d7943d4118a3e5aedd9a531fd682c",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_left:confirmed_true",
+        "revision": 4,
+        "goal_side": "left",
+        "value_side": "left",
+        "confirmed": true,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_left:value_left:confirmed_false:revision_1",
+      "actor_input_digest": "6a7e28350dd62ef3350cb4459a1005e68f9c28ec31800d8bc059ff1ce66caae9",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_left:confirmed_false",
+        "revision": 1,
+        "goal_side": "left",
+        "value_side": "left",
+        "confirmed": false,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_left:value_left:confirmed_false:revision_2",
+      "actor_input_digest": "e399fe79fc93fbad5610d8f4bb3f4d3a044fc690c2acf10953cc0099df9e0cea",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_left:confirmed_false",
+        "revision": 2,
+        "goal_side": "left",
+        "value_side": "left",
+        "confirmed": false,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_left:value_left:confirmed_false:revision_4",
+      "actor_input_digest": "9c40aea83ca4783fc5a8d569fb9a8ff9b2ef8c50488f0ebf4daa1b181e7d12a2",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_left:confirmed_false",
+        "revision": 4,
+        "goal_side": "left",
+        "value_side": "left",
+        "confirmed": false,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_left:value_right:confirmed_true:revision_1",
+      "actor_input_digest": "2c27dd4fc020a207b39dec38c1ae31c28a2bb0a42d87433bfb3c071afe05014b",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_right:confirmed_true",
+        "revision": 1,
+        "goal_side": "left",
+        "value_side": "right",
+        "confirmed": true,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_left:value_right:confirmed_true:revision_2",
+      "actor_input_digest": "aadbe8db7512c4a2959b5d9575e5c32ea3ea2f5368286870366aa03099694b00",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_right:confirmed_true",
+        "revision": 2,
+        "goal_side": "left",
+        "value_side": "right",
+        "confirmed": true,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_left:value_right:confirmed_true:revision_4",
+      "actor_input_digest": "928d395113719d7404f0bab42bd6356bdb3d8b7a737c2504c92d6b27b16dc91b",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_right:confirmed_true",
+        "revision": 4,
+        "goal_side": "left",
+        "value_side": "right",
+        "confirmed": true,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_left:value_right:confirmed_false:revision_1",
+      "actor_input_digest": "f930e7718887aa0fb7fbc296a8606a7aea76121b2d1d3c2ef5897323feee0c89",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_right:confirmed_false",
+        "revision": 1,
+        "goal_side": "left",
+        "value_side": "right",
+        "confirmed": false,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_left:value_right:confirmed_false:revision_2",
+      "actor_input_digest": "9cef79f923404382a4313356a3626d58bf78ed86ccf6df6654279428a8506027",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_right:confirmed_false",
+        "revision": 2,
+        "goal_side": "left",
+        "value_side": "right",
+        "confirmed": false,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_left:value_right:confirmed_false:revision_4",
+      "actor_input_digest": "0d42053a073e26ccf9fc7049d5300aeee154ff6b0bd5928a6730191071e45f13",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        2731,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_left:value_right:confirmed_false",
+        "revision": 4,
+        "goal_side": "left",
+        "value_side": "right",
+        "confirmed": false,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_left:confirmed_true:revision_1",
+      "actor_input_digest": "74e1dddeffbaa7c951f992446aefc9c4f9d076ebc98e3033833cae583958f17d",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_left:confirmed_true",
+        "revision": 1,
+        "goal_side": "right",
+        "value_side": "left",
+        "confirmed": true,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_left:confirmed_true:revision_2",
+      "actor_input_digest": "58366781194a2558084adf03b6adb5008802d0eefc875d3164f3ef4bcc97579a",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_left:confirmed_true",
+        "revision": 2,
+        "goal_side": "right",
+        "value_side": "left",
+        "confirmed": true,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_left:confirmed_true:revision_4",
+      "actor_input_digest": "458d3fcee9731ab61eb56934826d181aa7ca2f4beaea98bf8288eb21f40f4810",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_left:confirmed_true",
+        "revision": 4,
+        "goal_side": "right",
+        "value_side": "left",
+        "confirmed": true,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_left:confirmed_false:revision_1",
+      "actor_input_digest": "86a8a60511ca7796d324f34e1cabdd2dd947571c8ddae5e09a3ef4e381b7c6e9",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_left:confirmed_false",
+        "revision": 1,
+        "goal_side": "right",
+        "value_side": "left",
+        "confirmed": false,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_left:confirmed_false:revision_2",
+      "actor_input_digest": "f8595f8e368bbe85401a766b2a0337cdc79fc0c8eda39f301c7f7a45c5b23ae3",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_left:confirmed_false",
+        "revision": 2,
+        "goal_side": "right",
+        "value_side": "left",
+        "confirmed": false,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_left:confirmed_false:revision_4",
+      "actor_input_digest": "d507f09c3e8363561a7c021c4c8b23b5def5017f098b1e089255cadfd3903df5",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_left:confirmed_false",
+        "revision": 4,
+        "goal_side": "right",
+        "value_side": "left",
+        "confirmed": false,
+        "value_correct": false,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_right:confirmed_true:revision_1",
+      "actor_input_digest": "d76610a111bfe2757a036cba4abdb610567f627e5b4cca5a9a36264103463762",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_right:confirmed_true",
+        "revision": 1,
+        "goal_side": "right",
+        "value_side": "right",
+        "confirmed": true,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_right:confirmed_true:revision_2",
+      "actor_input_digest": "e6638c9efd85da0a0abfec2b7fedf9c4bd558189f2aed92497b5e022342c099a",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_right:confirmed_true",
+        "revision": 2,
+        "goal_side": "right",
+        "value_side": "right",
+        "confirmed": true,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_right:confirmed_true:revision_4",
+      "actor_input_digest": "43b43028522db477a7683403e6fab3b0def74186d2d3b5e835e82aa1f1550773",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_right:confirmed_true",
+        "revision": 4,
+        "goal_side": "right",
+        "value_side": "right",
+        "confirmed": true,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_right:confirmed_false:revision_1",
+      "actor_input_digest": "fbe3a061ae29ff8dc0aa834eed4ade1533dfd2e86f501bf8efc6064e752b59b1",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[]}",
+      "token_ids": [
+        9766,
+        27575,
+        1192,
+        141217,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_right:confirmed_false",
+        "revision": 1,
+        "goal_side": "right",
+        "value_side": "right",
+        "confirmed": false,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_right:confirmed_false:revision_2",
+      "actor_input_digest": "fe14fbde9fb7231baad28ccf613447db0340e5d2510f9660ce15eb9b50e60530",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        77016,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        235281,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": true,
+        "target_match": true,
+        "passed": true,
+        "text_exact": true,
+        "semantic_passed": true,
+        "strict_passed": true,
+        "strict_text_exact": true
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_right:confirmed_false",
+        "revision": 2,
+        "goal_side": "right",
+        "value_side": "right",
+        "confirmed": false,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    },
+    {
+      "sample_id": "revision_only:goal_right:value_right:confirmed_false:revision_4",
+      "actor_input_digest": "c962a5cea118198e3b2158c590ede5569dcc1af828356b52bf02c144de748192",
+      "mode": "WRITE",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+      "token_ids": [
+        9766,
+        27575,
+        87309,
+        9766,
+        55606,
+        1192,
+        3271,
+        1985,
+        715,
+        9330,
+        209163,
+        8332,
+        26930,
+        235298,
+        539,
+        9330,
+        14394,
+        235298,
+        34837,
+        8332,
+        1869,
+        9330,
+        651,
+        1370,
+        16350,
+        6453,
+        603,
+        21166,
+        611,
+        573,
+        1833,
+        1464,
+        12765,
+        235270,
+        1
+      ],
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "WRITE",
+        "json": true,
+        "schema_legal": true,
+        "operations_match": false,
+        "target_match": false,
+        "passed": false,
+        "text_exact": false,
+        "semantic_passed": false,
+        "strict_passed": false,
+        "strict_text_exact": false
+      },
+      "counterfactual_group": null,
+      "revision_intervention": {
+        "group": "goal_right:value_right:confirmed_false",
+        "revision": 4,
+        "goal_side": "right",
+        "value_side": "right",
+        "confirmed": false,
+        "value_correct": true,
+        "only_modified_actor_field_within_group": "selected_memory[0].revision",
+        "target_invariant_across_revision": true,
+        "original_observation": {
+          "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_06_left_31600/obs_0000.npz"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "count": 24,
+    "eos": {
+      "passed": 24,
+      "eligible": 24
+    },
+    "nonempty": {
+      "passed": 24,
+      "eligible": 24
+    },
+    "json": {
+      "passed": 24,
+      "eligible": 24
+    },
+    "schema_legal": {
+      "passed": 24,
+      "eligible": 24
+    },
+    "target_match": {
+      "passed": 8,
+      "eligible": 24
+    },
+    "side_binding_lexical": {
+      "passed": 0,
+      "eligible": 0
+    },
+    "text_exact": {
+      "passed": 8,
+      "eligible": 24
+    },
+    "semantic_passed": {
+      "passed": 8,
+      "eligible": 24
+    },
+    "strict_passed": {
+      "passed": 8,
+      "eligible": 24
+    },
+    "strict_text_exact": {
+      "passed": 8,
+      "eligible": 24
+    },
+    "all_strict_passed": false
+  },
+  "by_mode": {
+    "READ": {
+      "count": 0,
+      "eos": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "nonempty": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "text_exact": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "semantic_passed": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "strict_passed": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "strict_text_exact": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "all_strict_passed": false
+    },
+    "WRITE": {
+      "count": 24,
+      "eos": {
+        "passed": 24,
+        "eligible": 24
+      },
+      "nonempty": {
+        "passed": 24,
+        "eligible": 24
+      },
+      "json": {
+        "passed": 24,
+        "eligible": 24
+      },
+      "schema_legal": {
+        "passed": 24,
+        "eligible": 24
+      },
+      "target_match": {
+        "passed": 8,
+        "eligible": 24
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "text_exact": {
+        "passed": 8,
+        "eligible": 24
+      },
+      "semantic_passed": {
+        "passed": 8,
+        "eligible": 24
+      },
+      "strict_passed": {
+        "passed": 8,
+        "eligible": 24
+      },
+      "strict_text_exact": {
+        "passed": 8,
+        "eligible": 24
+      },
+      "all_strict_passed": false
+    },
+    "SUBTASK": {
+      "count": 0,
+      "eos": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "nonempty": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "json": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "schema_legal": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "target_match": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "text_exact": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "semantic_passed": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "strict_passed": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "strict_text_exact": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "all_strict_passed": false
+    }
+  },
+  "scope": "Heldout validation or controlled evaluation-only protocol conditions; not a training fitting report, visual grounding or task SR result",
+  "parameter_protection": {
+    "before": {
+      "False": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652",
+      "True": "0df6dfae511ab582e0325478d98d0836a9748c4a69a9a143f2a835efb0b44353"
+    },
+    "after": {
+      "False": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652",
+      "True": "0df6dfae511ab582e0325478d98d0836a9748c4a69a9a143f2a835efb0b44353"
+    },
+    "all_parameters_exact": true,
+    "checkpoint_weights_sha_before": "5e16c2c36ba8c99351d4b0f9af66b6600d94250e1a07bea4f227b8bd5e2e4531",
+    "checkpoint_weights_sha_after": "5e16c2c36ba8c99351d4b0f9af66b6600d94250e1a07bea4f227b8bd5e2e4531",
+    "checkpoint_version_sha256": "4653b02a41dc8f44ff8482bfe21e2e5d7ea33611cbc3a5764cd85c10710344bb",
+    "checkpoint_unchanged": true,
+    "optimizer_created": false,
+    "parameters_with_grad": 0
+  },
+  "unique_actual_actor_inputs": {
+    "count": 24,
+    "summary": {
+      "count": 24,
+      "eos": {
+        "passed": 24,
+        "eligible": 24
+      },
+      "nonempty": {
+        "passed": 24,
+        "eligible": 24
+      },
+      "json": {
+        "passed": 24,
+        "eligible": 24
+      },
+      "schema_legal": {
+        "passed": 24,
+        "eligible": 24
+      },
+      "target_match": {
+        "passed": 8,
+        "eligible": 24
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "text_exact": {
+        "passed": 8,
+        "eligible": 24
+      },
+      "semantic_passed": {
+        "passed": 8,
+        "eligible": 24
+      },
+      "strict_passed": {
+        "passed": 8,
+        "eligible": 24
+      },
+      "strict_text_exact": {
+        "passed": 8,
+        "eligible": 24
+      },
+      "all_strict_passed": false
+    },
+    "by_mode": {
+      "READ": {
+        "count": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "nonempty": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic_passed": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_text_exact": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "all_strict_passed": false
+      },
+      "WRITE": {
+        "count": 24,
+        "eos": {
+          "passed": 24,
+          "eligible": 24
+        },
+        "nonempty": {
+          "passed": 24,
+          "eligible": 24
+        },
+        "json": {
+          "passed": 24,
+          "eligible": 24
+        },
+        "schema_legal": {
+          "passed": 24,
+          "eligible": 24
+        },
+        "target_match": {
+          "passed": 8,
+          "eligible": 24
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 8,
+          "eligible": 24
+        },
+        "semantic_passed": {
+          "passed": 8,
+          "eligible": 24
+        },
+        "strict_passed": {
+          "passed": 8,
+          "eligible": 24
+        },
+        "strict_text_exact": {
+          "passed": 8,
+          "eligible": 24
+        },
+        "all_strict_passed": false
+      },
+      "SUBTASK": {
+        "count": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "nonempty": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic_passed": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_text_exact": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "all_strict_passed": false
+      }
+    }
+  },
+  "revision_causal_diagnostic": {
+    "triples": [
+      {
+        "group": "goal_left:value_left:confirmed_false",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "expected_distinct_targets": 1,
+        "semantic_output_invariant": false,
+        "raw_text_output_invariant": false,
+        "all_targets_correct": false,
+        "all_strict_passed": false,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": true,
+              "target_match": true,
+              "passed": true,
+              "text_exact": true,
+              "semantic_passed": true,
+              "strict_passed": true,
+              "strict_text_exact": true
+            }
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          }
+        ]
+      },
+      {
+        "group": "goal_left:value_left:confirmed_true",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "expected_distinct_targets": 1,
+        "semantic_output_invariant": false,
+        "raw_text_output_invariant": false,
+        "all_targets_correct": false,
+        "all_strict_passed": false,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "target_text": "{\"operations\":[]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": true,
+              "target_match": true,
+              "passed": true,
+              "text_exact": true,
+              "semantic_passed": true,
+              "strict_passed": true,
+              "strict_text_exact": true
+            }
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "target_text": "{\"operations\":[]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "target_text": "{\"operations\":[]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          }
+        ]
+      },
+      {
+        "group": "goal_left:value_right:confirmed_false",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "expected_distinct_targets": 1,
+        "semantic_output_invariant": false,
+        "raw_text_output_invariant": false,
+        "all_targets_correct": false,
+        "all_strict_passed": false,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": true,
+              "target_match": true,
+              "passed": true,
+              "text_exact": true,
+              "semantic_passed": true,
+              "strict_passed": true,
+              "strict_text_exact": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "goal_left:value_right:confirmed_true",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "expected_distinct_targets": 1,
+        "semantic_output_invariant": false,
+        "raw_text_output_invariant": false,
+        "all_targets_correct": false,
+        "all_strict_passed": false,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": true,
+              "target_match": true,
+              "passed": true,
+              "text_exact": true,
+              "semantic_passed": true,
+              "strict_passed": true,
+              "strict_text_exact": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "goal_right:value_left:confirmed_false",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "expected_distinct_targets": 1,
+        "semantic_output_invariant": false,
+        "raw_text_output_invariant": false,
+        "all_targets_correct": false,
+        "all_strict_passed": false,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": true,
+              "target_match": true,
+              "passed": true,
+              "text_exact": true,
+              "semantic_passed": true,
+              "strict_passed": true,
+              "strict_text_exact": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "goal_right:value_left:confirmed_true",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "expected_distinct_targets": 1,
+        "semantic_output_invariant": false,
+        "raw_text_output_invariant": false,
+        "all_targets_correct": false,
+        "all_strict_passed": false,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": true,
+              "target_match": true,
+              "passed": true,
+              "text_exact": true,
+              "semantic_passed": true,
+              "strict_passed": true,
+              "strict_text_exact": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "goal_right:value_right:confirmed_false",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "expected_distinct_targets": 1,
+        "semantic_output_invariant": false,
+        "raw_text_output_invariant": false,
+        "all_targets_correct": false,
+        "all_strict_passed": false,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": true,
+              "target_match": true,
+              "passed": true,
+              "text_exact": true,
+              "semantic_passed": true,
+              "strict_passed": true,
+              "strict_text_exact": true
+            }
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          }
+        ]
+      },
+      {
+        "group": "goal_right:value_right:confirmed_true",
+        "revisions": [
+          1,
+          2,
+          4
+        ],
+        "expected_distinct_targets": 1,
+        "semantic_output_invariant": false,
+        "raw_text_output_invariant": false,
+        "all_targets_correct": false,
+        "all_strict_passed": false,
+        "outputs": [
+          {
+            "revision": 1,
+            "text": "{\"operations\":[]}",
+            "target_text": "{\"operations\":[]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": true,
+              "target_match": true,
+              "passed": true,
+              "text_exact": true,
+              "semantic_passed": true,
+              "strict_passed": true,
+              "strict_text_exact": true
+            }
+          },
+          {
+            "revision": 2,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+            "target_text": "{\"operations\":[]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          },
+          {
+            "revision": 4,
+            "text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the right.\"}]}",
+            "target_text": "{\"operations\":[]}",
+            "checks": {
+              "eos": true,
+              "nonempty": true,
+              "mode": "WRITE",
+              "json": true,
+              "schema_legal": true,
+              "operations_match": false,
+              "target_match": false,
+              "passed": false,
+              "text_exact": false,
+              "semantic_passed": false,
+              "strict_passed": false,
+              "strict_text_exact": false
+            }
+          }
+        ]
+      }
+    ],
+    "count": 8,
+    "semantic_invariant_triples": 0,
+    "all_targets_correct_triples": 0,
+    "by_revision": {
+      "1": {
+        "count": 8,
+        "eos": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 8
+        },
+        "semantic_passed": {
+          "passed": 2,
+          "eligible": 8
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 8
+        },
+        "strict_text_exact": {
+          "passed": 2,
+          "eligible": 8
+        },
+        "all_strict_passed": false
+      },
+      "2": {
+        "count": 8,
+        "eos": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 8
+        },
+        "semantic_passed": {
+          "passed": 2,
+          "eligible": 8
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 8
+        },
+        "strict_text_exact": {
+          "passed": 2,
+          "eligible": 8
+        },
+        "all_strict_passed": false
+      },
+      "4": {
+        "count": 8,
+        "eos": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 4,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "text_exact": {
+          "passed": 4,
+          "eligible": 8
+        },
+        "semantic_passed": {
+          "passed": 4,
+          "eligible": 8
+        },
+        "strict_passed": {
+          "passed": 4,
+          "eligible": 8
+        },
+        "strict_text_exact": {
+          "passed": 4,
+          "eligible": 8
+        },
+        "all_strict_passed": false
+      }
+    },
+    "interpretation": "A controlled revision effect is evidence for these fixed contexts, not a blanket proof of all dataset shortcuts"
+  }
+}

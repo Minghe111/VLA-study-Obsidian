@@ -1,0 +1,196 @@
+{
+  "status": "read_only_static_compatibility_review_passed_actual_dataset_pending",
+  "created_at_utc": "2026-10-19T10:50:31.097317+00:00",
+  "GPU_or_model_or_simulator_loaded": false,
+  "growing_capture_manifest_read": false,
+  "full_dataset_validation_run": false,
+  "builder_sha256": "99938c5d3c865903da01c44658b04fd2f4f34255aa8f7995ab821a2e708fda15",
+  "validator_sha256": "24317ad596ad036a07ebffcdc58410ce85b015a54c3eee026f5a77ca0e941153",
+  "synthetic_text_budget_only": {
+    "cases": 1440,
+    "max_prefix_tokens": 851,
+    "max_target_with_EOS_tokens": 53,
+    "mode_max_prefix": {
+      "READ": 695,
+      "WRITE": 819,
+      "SUBTASK": 851
+    },
+    "scope": "In-memory8-event/256step/2slot/6goal/2side/4condition/5revision budget fixtures, not new training rows or physical events."
+  },
+  "planned_family_goal_compatibility": {
+    "train": {
+      "episodes": 32,
+      "first_sides": {
+        "left": 16,
+        "right": 16
+      },
+      "left_home_x_range": [
+        -0.1065,
+        -0.087
+      ],
+      "right_home_x_range": [
+        0.092,
+        0.1085
+      ],
+      "model_id_pairs": {
+        "[4, 13]": 16,
+        "[13, 4]": 16
+      }
+    },
+    "val": {
+      "episodes": 12,
+      "first_sides": {
+        "left": 6,
+        "right": 6
+      },
+      "left_home_x_range": [
+        -0.11429999999999998,
+        -0.10779999999999999
+      ],
+      "right_home_x_range": [
+        0.1096,
+        0.11510000000000001
+      ],
+      "model_id_pairs": {
+        "[4, 13]": 6,
+        "[13, 4]": 6
+      }
+    },
+    "test": {
+      "episodes": 12,
+      "first_sides": {
+        "left": 6,
+        "right": 6
+      },
+      "left_home_x_range": [
+        -0.12209999999999999,
+        -0.1156
+      ],
+      "right_home_x_range": [
+        0.1162,
+        0.1217
+      ],
+      "model_id_pairs": {
+        "[4, 13]": 6,
+        "[13, 4]": 6
+      }
+    }
+  },
+  "stress_scheduler_compatibility": {
+    "train": {
+      "ideal_nonempty_history_grid_cells": {
+        "sample_identity:WRITE:false:left": 17,
+        "sample_identity:WRITE:false:right": 17,
+        "sample_identity:KEEP:false:left": 17,
+        "sample_identity:KEEP:false:right": 17,
+        "sample_identity:CORRECT:false:left": 9,
+        "sample_identity:CORRECT:false:right": 9,
+        "current_progress:WRITE:false:left": 17,
+        "current_progress:WRITE:false:right": 17,
+        "current_progress:KEEP:false:left": 16,
+        "current_progress:KEEP:false:right": 16,
+        "current_progress:CORRECT:false:left": 8,
+        "current_progress:CORRECT:false:right": 8,
+        "sample_identity:CORRECT:true:left": 8,
+        "sample_identity:CORRECT:true:right": 8,
+        "current_progress:CORRECT:true:left": 8,
+        "current_progress:CORRECT:true:right": 8
+      },
+      "matched_WRITE_active_revision_each_op": {
+        "1": 50,
+        "2": 50,
+        "4": 50,
+        "7": 50,
+        "10": 50
+      },
+      "note": "Pure scheduler arithmetic. Actual selected rows/history/source remain to be independently checked."
+    },
+    "val": {
+      "ideal_nonempty_history_grid_cells": {
+        "sample_identity:WRITE:false:left": 4,
+        "sample_identity:WRITE:false:right": 4,
+        "sample_identity:KEEP:false:left": 4,
+        "sample_identity:KEEP:false:right": 4,
+        "sample_identity:CORRECT:false:left": 2,
+        "sample_identity:CORRECT:false:right": 2,
+        "current_progress:WRITE:false:left": 3,
+        "current_progress:WRITE:false:right": 3,
+        "current_progress:KEEP:false:left": 3,
+        "current_progress:KEEP:false:right": 3,
+        "current_progress:CORRECT:false:left": 2,
+        "current_progress:CORRECT:false:right": 2,
+        "sample_identity:CORRECT:true:left": 1,
+        "sample_identity:CORRECT:true:right": 1,
+        "current_progress:CORRECT:true:left": 1,
+        "current_progress:CORRECT:true:right": 1
+      },
+      "matched_WRITE_active_revision_each_op": {
+        "1": 10,
+        "2": 10,
+        "4": 10,
+        "7": 10,
+        "10": 10
+      },
+      "note": "Pure scheduler arithmetic. Actual selected rows/history/source remain to be independently checked."
+    },
+    "test": {
+      "ideal_nonempty_history_grid_cells": {
+        "sample_identity:WRITE:false:left": 4,
+        "sample_identity:WRITE:false:right": 4,
+        "sample_identity:KEEP:false:left": 4,
+        "sample_identity:KEEP:false:right": 4,
+        "sample_identity:CORRECT:false:left": 2,
+        "sample_identity:CORRECT:false:right": 2,
+        "current_progress:WRITE:false:left": 3,
+        "current_progress:WRITE:false:right": 3,
+        "current_progress:KEEP:false:left": 3,
+        "current_progress:KEEP:false:right": 3,
+        "current_progress:CORRECT:false:left": 2,
+        "current_progress:CORRECT:false:right": 2,
+        "sample_identity:CORRECT:true:left": 1,
+        "sample_identity:CORRECT:true:right": 1,
+        "current_progress:CORRECT:true:left": 1,
+        "current_progress:CORRECT:true:right": 1
+      },
+      "matched_WRITE_active_revision_each_op": {
+        "1": 10,
+        "2": 10,
+        "4": 10,
+        "7": 10,
+        "10": 10
+      },
+      "note": "Pure scheduler arithmetic. Actual selected rows/history/source remain to be independently checked."
+    }
+  },
+  "publication_comparison": {
+    "scripts/build_history3000.py": {
+      "stage_sha256": "99938c5d3c865903da01c44658b04fd2f4f34255aa8f7995ab821a2e708fda15",
+      "published_sha256": "99938c5d3c865903da01c44658b04fd2f4f34255aa8f7995ab821a2e708fda15",
+      "published_matches_stage": true
+    },
+    "scripts/validate_history3000.py": {
+      "stage_sha256": "24317ad596ad036a07ebffcdc58410ce85b015a54c3eee026f5a77ca0e941153",
+      "published_sha256": "24317ad596ad036a07ebffcdc58410ce85b015a54c3eee026f5a77ca0e941153",
+      "published_matches_stage": true
+    },
+    "code/RLinf/rlinf/data/schema/history_events.py": {
+      "stage_sha256": "c2080a64bf76ec8eae2ede1454ccd063d05670cdf7fc5f4dd1561b5a0f919d7b",
+      "published_sha256": "c2080a64bf76ec8eae2ede1454ccd063d05670cdf7fc5f4dd1561b5a0f919d7b",
+      "published_matches_stage": true
+    },
+    "configs/rm65b_mem_protocol.yaml": {
+      "stage_sha256": "7eb88d9236d947214312565b938ac1db3e198f698c90e992d4f8c55b1df684ea",
+      "published_sha256": "7eb88d9236d947214312565b938ac1db3e198f698c90e992d4f8c55b1df684ea",
+      "published_matches_stage": true
+    }
+  },
+  "execution_prerequisite": "Published builder/validator/history API/config currently match the reviewed staging SHAs. Keep this matching version for final4200 acceptance; active frozenv2 capture is unaffected. Actual source/data remain unvalidated until stable final audit.",
+  "inference_limits": [
+    "Train/val/test physical families are grouped before goal variants. create_sample_actors uses actual home_xy/model_ids and canonical_instruction uses home x ordering; paired goals do not change physical identity/layout.",
+    "The planned split changes x position monotonically across splits, uses only the same two object assets4/13, and couples unseen goal/subtask paraphrase templates with held-out layouts. It is not object-identity generalization or an isolated single-factor semantic test.",
+    "Train observations use full32-step history windows. Val/test additionally contain16-step partial windows and count tokens unseen as partial windows in training; evaluate full-window and partial-window slices separately.",
+    "In this dataset explicit first goal side, issued-command side, and active reference arm agree. Correctly responding under wrong memory does not by itself establish goal-over-history priority or visual grounding. A later matched goal-only counterfactual requires separately handling actual past command side; do not rewrite past history to match a new goal.",
+    "Reference attempts may fail physically and labels intentionally remain role/history/tool protocol. No completion/verify/return success/motor policy supervision is manufactured.",
+    "Actual raw/resized image duplication across families/splits cannot be established from parameter IDs; full source image hashes and real effective inputs remain mandatory final gates."
+  ]
+}

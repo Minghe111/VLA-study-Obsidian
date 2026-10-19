@@ -1,0 +1,134 @@
+{
+  "schema": "history3000_capture_performance_audit_v1",
+  "checked_at": "2026-10-19",
+  "scope": "read-only static call-path analysis; no GPU/profiler/simulator execution; active frozen v2 unchanged",
+  "decision": "keep all56 current episodes on frozen v2; do not implement or switch v3 during this collection",
+  "current_path": [
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/code/RoboTwin/integrations/realman_rm65b_gen4/rl_contract.py",
+      "line": 291,
+      "operation": "ChunkDriver.step calls session.apply for each target, even when RPC holds16 targets"
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/code/RoboTwin/integrations/realman_rm65b_gen4/rl_factory.py",
+      "line": 560,
+      "operation": "SingleEnvSession.apply delegates to clock.take_action"
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/code/RoboTwin/integrations/realman_rm65b_gen4/action_clock.py",
+      "line": 205,
+      "operation": "take_action ends with self.observer.capture(); observer is SingleEnvSession"
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/code/RoboTwin/integrations/realman_rm65b_gen4/rl_contract.py",
+      "line": 294,
+      "operation": "ChunkDriver immediately calls session.capture again at same physics step"
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/code/RoboTwin/integrations/realman_rm65b_gen4/rl_factory.py",
+      "line": 538,
+      "operation": "Every capture calls task.get_obs(), validates/copies three actual RGB arrays, reads measured SDK24"
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/code/RoboTwin/envs/_base_task.py",
+      "line": 462,
+      "operation": "get_obs unconditionally updates render, update_picture, then get_rgb; not gated by render_freq"
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/code/RoboTwin/envs/camera/camera.py",
+      "line": 273,
+      "operation": "update_picture calls take_picture on left/right wrists and each static camera"
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/code/RoboTwin/integrations/realman_rm65b_gen4/three_camera_rgb.py",
+      "line": 43,
+      "operation": "mounted profile contains exactly one static head plus the two wrists"
+    }
+  ],
+  "count_model": {
+    "classification": "static normal-success call count, not measured render profiler counters",
+    "rpc_chunk_targets": 16,
+    "normal_targets_per_episode": 256,
+    "normal_capture_calls_per_target": 2,
+    "three_camera_render_batches_per_episode_excluding_reset": 512,
+    "individual_camera_take_picture_calls_per_episode_excluding_reset": 1536,
+    "normal_physics_ticks_per_episode": 3840,
+    "normal_sim_time_s_per_episode": 15.36,
+    "train_saved_three_camera_snapshots_per_episode": 9,
+    "val_test_saved_three_camera_snapshots_per_episode": 17,
+    "all56_expected_individual_camera_takes_excluding_reset": 86016,
+    "all56_saved_three_camera_snapshots": 696,
+    "all56_saved_individual_camera_frames": 2088,
+    "reset_or_fault_capture_overhead": "additional, not included in counts",
+    "render_configuration": {
+      "shader": "rt",
+      "samples_per_pixel": 32,
+      "path_depth": 8,
+      "denoiser": "optix"
+    }
+  },
+  "existing_controls": {
+    "render_freq": {
+      "current": 0,
+      "scope": "viewer/optional task rendering only; get_obs still forces render"
+    },
+    "save_freq": {
+      "current": null,
+      "scope": "disables task disk-recording cadence, not get_obs rendering"
+    },
+    "outer_snapshot_stride": {
+      "train": 32,
+      "eval": 16,
+      "scope": "NPZ saving only; does not change native per-target capture"
+    },
+    "K16": {
+      "scope": "reduces RPC count and returns only last observation; per-target captures still occur internally"
+    },
+    "renderer_denoiser_none": "existing option but changes RGB distribution; cannot claim identical snapshot pixels",
+    "camera_flags_or_lower_resolution": "would violate retained three-camera640x480 contract",
+    "existing_safe_config_only_optimization_found": false
+  },
+  "physics_independence": {
+    "per_tick_monitor_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/code/RoboTwin/integrations/realman_rm65b_gen4/rl_factory.py:438-449",
+    "advance": "native scene.step once, count tick, _update_metrics every4ms",
+    "sample_monitor_dwell_or_contact_sampling_may_not_be_reduced": true,
+    "render_is_not_used_as_reward_source": true,
+    "state_evidence_boundary": "v2 reads measured SDK24 at every capture but saves only post-K16 measured state in outer transitions. Per-target SDK clock receipts contain commanded drive endpoints, not measured qpos. Existing output alone cannot prove per-target qpos equivalence for a future v3."
+  },
+  "future_v3_candidates_not_implemented": [
+    {
+      "name": "remove duplicate capture at the same physics step",
+      "effect": "reduce normal rendering from2 batches to1 per control target",
+      "scope": "isolated collector/session cache or explicit state-only action observer; preserve default policy environment behavior",
+      "caveat": "first versus second render may differ due ray-tracing state; do not promise bitwise same pixels"
+    },
+    {
+      "name": "state-only intermediate targets plus full RGB at RPC/snapshot boundaries",
+      "effect": "keep measured SDK24 and all target/tick/endpoint traces for every target; render all3 cameras only at final required observation boundary",
+      "scope": "explicit capture-only API/driver, no stale RGB presented as a fresh observation; normal RL env.step remains unchanged",
+      "upper_count_example": "one full capture at every16-target RPC endpoint plus initial gives17 three-camera batches/episode, versus512 target-path batches in v2, excluding reset",
+      "caveat": "this is a render-call reduction estimate, not a measured speedup; physics/contact monitoring, scene construction and disk compression remain"
+    }
+  ],
+  "future_equivalence_gates": [
+    "New isolated code/version and output directory; preserve frozen v2 and finish present56-source batch unchanged.",
+    "Same fresh scene config, seed, goal, execution_order, robot assets, source action SHA, mapping and all256 issued SDK24 values; no clipping, rescaling, action skipping or new noise.",
+    "Each native action receipt: same raw/start/final drive values, requested15ticks, actual counts, valid mask, termination point and endpoint precision check. Full episode3840ticks and15.36 simulated seconds.",
+    "Native physics/contact/dwell monitor continues every4ms; compare all recorded task events, rewards and terminal/failure flags at the same tick.",
+    "Record every-target actual measured SDK24 in a dedicated isolated A/B witness. Original v2 outer logs only every16th measured state, so do not infer missing per-target equality.",
+    "At each saved step0,32,...256(train) or0,16,...256(eval), images are actual current all3 uint8[480,640,3] frames with image_physics_step exactly15*step, no stale/interpolated/relabelled frame and no extra physics steps for rendering.",
+    "Run same-seed v2/v2 A/A first to determine whether RT/OptiX pixel output is reproducible. If reproducible, require bitwise pixel hashes for A/B. If not, predefine pixel error/SSIM envelope from independent A/A repeats; mark pixel identity unproven if changed render-call counts exceed that envelope.",
+    "Renderer RNG/accumulation/denoiser effects are not established by local Python source. Skipping take_picture may change later sampling state even when physics and image timestamp match.",
+    "CPU fake-session tests prove clock/state/render cadence and no future/stale-frame labels; a real paired2-seed A/B then checks current RGB/physical equivalence, shutdown and source hashes.",
+    "Measure actual wall time and resource use only after the equivalence gate; never translate rendering-call reduction directly into an asserted training/capture speedup."
+  ],
+  "not_performed": [
+    "v3 implementation",
+    "active-file modification",
+    "process interruption",
+    "GPU work",
+    "new simulator episodes",
+    "profiling",
+    "training"
+  ]
+}

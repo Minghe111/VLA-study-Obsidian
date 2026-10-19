@@ -1,0 +1,1394 @@
+{
+  "status": "completed",
+  "scope": "bounded 9-to-96 fitting comparison only",
+  "formal_3000_training": false,
+  "automatic_promotion": false,
+  "independent_from_same_base": true,
+  "max_updates_per_9_run": 200,
+  "max_updates_per_96_run": 300,
+  "steps": [
+    {
+      "name": "00_baseline",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "baseline",
+        "--stage",
+        "protocol",
+        "--size",
+        "9",
+        "--output",
+        "reports/comparison_v1/00_baseline",
+        "--execute"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/00_baseline.log",
+      "started_unix": 1792387473.789126,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 16.664328151279026,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6921.8671875,
+        "peak_reserved_mib": 7036.0,
+        "host_peak_rss_mib": 22925.5
+      },
+      "sampled_card_peak_mib": 8426.0,
+      "retention_summary": null,
+      "elapsed_s": 58.127461689000484
+    },
+    {
+      "name": "protocol_9_001",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "protocol",
+        "--size",
+        "9",
+        "--output",
+        "reports/comparison_v1/protocol_9_001",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "1",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/protocol_9_001.log",
+      "started_unix": 1792387531.9222202,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 16.66384580400255,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6965.9189453125,
+        "peak_reserved_mib": 7146.0,
+        "host_peak_rss_mib": 25071.13671875
+      },
+      "sampled_card_peak_mib": 8556.0,
+      "training": {
+        "loss": 16.174227237701416,
+        "high_ce": 16.174227237701416,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 1.0509454011917114,
+        "updates": 1,
+        "global_step": 1,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0,
+        "max_case_masked_all_layer_kv_relative_rms": 0.0,
+        "all_sdk_actions_exact": true,
+        "all_kv_positions_exact": true
+      },
+      "elapsed_s": 57.28183651400104
+    },
+    {
+      "name": "language_warmup_9_001",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "9",
+        "--output",
+        "reports/comparison_v1/language_warmup_9_001",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "1",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/language_warmup_9_001.log",
+      "started_unix": 1792387589.2056117,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 16.664168463812935,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7098.55810546875,
+        "peak_reserved_mib": 7324.0,
+        "host_peak_rss_mib": 25057.23828125
+      },
+      "sampled_card_peak_mib": 8754.0,
+      "training": {
+        "loss": 16.174227237701416,
+        "high_ce": 16.174227237701416,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 1.5977951288223267,
+        "updates": 1,
+        "global_step": 1,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0006570291589014232,
+        "max_case_masked_all_layer_kv_relative_rms": 0.005565026019602456,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "elapsed_s": 56.66387435199795
+    },
+    {
+      "name": "protocol_9_100",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "protocol",
+        "--size",
+        "9",
+        "--output",
+        "reports/comparison_v1/protocol_9_100",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "100",
+        "--resume",
+        "reports/comparison_v1/protocol_9_001/checkpoint",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/protocol_9_100.log",
+      "started_unix": 1792387645.8708866,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 15.336394098069933,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6967.435546875,
+        "peak_reserved_mib": 7146.0,
+        "host_peak_rss_mib": 20464.83984375
+      },
+      "sampled_card_peak_mib": 8540.0,
+      "training": {
+        "loss": 16.0993708721315,
+        "high_ce": 16.0993708721315,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 1.9944792624675867,
+        "updates": 99,
+        "global_step": 100,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0,
+        "max_case_masked_all_layer_kv_relative_rms": 0.0,
+        "all_sdk_actions_exact": true,
+        "all_kv_positions_exact": true
+      },
+      "elapsed_s": 81.85282287700102
+    },
+    {
+      "name": "language_warmup_9_100",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "9",
+        "--output",
+        "reports/comparison_v1/language_warmup_9_100",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "100",
+        "--resume",
+        "reports/comparison_v1/language_warmup_9_001/checkpoint",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/language_warmup_9_100.log",
+      "started_unix": 1792387727.725169,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 10.58705997467041,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7129.9267578125,
+        "peak_reserved_mib": 7354.0,
+        "host_peak_rss_mib": 20560.28125
+      },
+      "sampled_card_peak_mib": 8774.0,
+      "training": {
+        "loss": 14.048774108334328,
+        "high_ce": 14.044175174501207,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0045989338331209086,
+        "grad_norm": 2.7012807347557763,
+        "updates": 99,
+        "global_step": 100,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0012918991269543767,
+        "max_case_masked_all_layer_kv_relative_rms": 0.04950269068853484,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "elapsed_s": 186.15569047700046
+    },
+    {
+      "name": "protocol_9_200",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "protocol",
+        "--size",
+        "9",
+        "--output",
+        "reports/comparison_v1/protocol_9_200",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "200",
+        "--resume",
+        "reports/comparison_v1/protocol_9_100/checkpoint",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/protocol_9_200.log",
+      "started_unix": 1792387913.8821714,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 12.250402662489149,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6968.462890625,
+        "peak_reserved_mib": 7418.0,
+        "host_peak_rss_mib": 20562.78125
+      },
+      "sampled_card_peak_mib": 8848.0,
+      "training": {
+        "loss": 13.913418107032776,
+        "high_ce": 13.913418107032776,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 4.020433926582337,
+        "updates": 100,
+        "global_step": 200,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0,
+        "max_case_masked_all_layer_kv_relative_rms": 0.0,
+        "all_sdk_actions_exact": true,
+        "all_kv_positions_exact": true
+      },
+      "elapsed_s": 82.72225809899828
+    },
+    {
+      "name": "language_warmup_9_200",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "9",
+        "--output",
+        "reports/comparison_v1/language_warmup_9_200",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "200",
+        "--resume",
+        "reports/comparison_v1/language_warmup_9_100/checkpoint",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/language_warmup_9_200.log",
+      "started_unix": 1792387996.6057887,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 8.110366980234781,
+        "gold_tokens": 159,
+        "gold_correct": 15,
+        "eos": {
+          "passed": 7,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7128.9033203125,
+        "peak_reserved_mib": 7600.0,
+        "host_peak_rss_mib": 20563.0859375
+      },
+      "sampled_card_peak_mib": 9033.0,
+      "training": {
+        "loss": 9.177149690303485,
+        "high_ce": 9.152346678972243,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.02480301133124158,
+        "grad_norm": 12.195453379154205,
+        "updates": 100,
+        "global_step": 200,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 0,
+        "max_case_normalized_physical24_rms": 0.002359270816668868,
+        "max_case_masked_all_layer_kv_relative_rms": 0.061400505155376615,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "elapsed_s": 176.029021473998
+    },
+    {
+      "name": "protocol_96_100",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "protocol",
+        "--size",
+        "96",
+        "--output",
+        "reports/comparison_v1/protocol_96_100",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "100",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/protocol_96_100.log",
+      "started_unix": 1792388172.63678,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 12,
+        "modes": {
+          "SUBTASK": 4,
+          "WRITE": 4,
+          "READ": 4
+        },
+        "teacher_forced_ce": 15.351948897043863,
+        "gold_tokens": 186,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "nonempty": {
+          "passed": 12,
+          "eligible": 12
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6967.451171875,
+        "peak_reserved_mib": 7148.0,
+        "host_peak_rss_mib": 24179.65234375
+      },
+      "sampled_card_peak_mib": 8545.0,
+      "training": {
+        "loss": 16.114059631824492,
+        "high_ce": 16.114059631824492,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 1.8871939632296562,
+        "updates": 100,
+        "global_step": 100,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0,
+        "max_case_masked_all_layer_kv_relative_rms": 0.0,
+        "all_sdk_actions_exact": true,
+        "all_kv_positions_exact": true
+      },
+      "elapsed_s": 104.99707753199982
+    },
+    {
+      "name": "language_warmup_96_100",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "96",
+        "--output",
+        "reports/comparison_v1/language_warmup_96_100",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "100",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/language_warmup_96_100.log",
+      "started_unix": 1792388277.6369834,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 12,
+        "modes": {
+          "SUBTASK": 4,
+          "WRITE": 4,
+          "READ": 4
+        },
+        "teacher_forced_ce": 10.618432998657227,
+        "gold_tokens": 186,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "nonempty": {
+          "passed": 12,
+          "eligible": 12
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7129.9267578125,
+        "peak_reserved_mib": 7354.0,
+        "host_peak_rss_mib": 24500.43359375
+      },
+      "sampled_card_peak_mib": 8789.0,
+      "training": {
+        "loss": 14.118689247819347,
+        "high_ce": 14.114218969345092,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.004470278474254883,
+        "grad_norm": 2.6186818933486937,
+        "updates": 100,
+        "global_step": 100,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0015639762859791517,
+        "max_case_masked_all_layer_kv_relative_rms": 0.04882937120798141,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "elapsed_s": 200.08820500599904
+    },
+    {
+      "name": "protocol_96_200",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "protocol",
+        "--size",
+        "96",
+        "--output",
+        "reports/comparison_v1/protocol_96_200",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "200",
+        "--resume",
+        "reports/comparison_v1/protocol_96_100/checkpoint",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/protocol_96_200.log",
+      "started_unix": 1792388477.728999,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 12,
+        "modes": {
+          "SUBTASK": 4,
+          "WRITE": 4,
+          "READ": 4
+        },
+        "teacher_forced_ce": 12.284276564915976,
+        "gold_tokens": 186,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "nonempty": {
+          "passed": 12,
+          "eligible": 12
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6968.462890625,
+        "peak_reserved_mib": 7608.0,
+        "host_peak_rss_mib": 20528.94921875
+      },
+      "sampled_card_peak_mib": 9029.0,
+      "training": {
+        "loss": 13.959981651306153,
+        "high_ce": 13.959981651306153,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 3.978388886451721,
+        "updates": 100,
+        "global_step": 200,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0,
+        "max_case_masked_all_layer_kv_relative_rms": 0.0,
+        "all_sdk_actions_exact": true,
+        "all_kv_positions_exact": true
+      },
+      "elapsed_s": 151.78770988500037
+    },
+    {
+      "name": "language_warmup_96_200",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "96",
+        "--output",
+        "reports/comparison_v1/language_warmup_96_200",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "200",
+        "--resume",
+        "reports/comparison_v1/language_warmup_96_100/checkpoint",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/language_warmup_96_200.log",
+      "started_unix": 1792388629.5214555,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 12,
+        "modes": {
+          "SUBTASK": 4,
+          "WRITE": 4,
+          "READ": 4
+        },
+        "teacher_forced_ce": 6.667239665985107,
+        "gold_tokens": 186,
+        "gold_correct": 26,
+        "eos": {
+          "passed": 10,
+          "eligible": 12
+        },
+        "nonempty": {
+          "passed": 12,
+          "eligible": 12
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7128.9033203125,
+        "peak_reserved_mib": 7790.0,
+        "host_peak_rss_mib": 20564.0390625
+      },
+      "sampled_card_peak_mib": 9204.0,
+      "training": {
+        "loss": 8.920325618833303,
+        "high_ce": 8.896388351917267,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.023937266916036606,
+        "grad_norm": 5.791542019844055,
+        "updates": 100,
+        "global_step": 200,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 0,
+        "max_case_normalized_physical24_rms": 0.0020500561222434044,
+        "max_case_masked_all_layer_kv_relative_rms": 0.05828153586704764,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "elapsed_s": 202.91298904599898
+    },
+    {
+      "name": "protocol_96_300",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "protocol",
+        "--size",
+        "96",
+        "--output",
+        "reports/comparison_v1/protocol_96_300",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "300",
+        "--resume",
+        "reports/comparison_v1/protocol_96_200/checkpoint",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt",
+        "--eval-all"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/protocol_96_300.log",
+      "started_unix": 1792388832.8767526,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 10.35107829173406,
+        "gold_tokens": 1488,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6967.451171875,
+        "peak_reserved_mib": 7148.0,
+        "host_peak_rss_mib": 20417.49609375
+      },
+      "sampled_card_peak_mib": 8531.0,
+      "training": {
+        "loss": 11.214428391456604,
+        "high_ce": 11.214428391456604,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 2.761510192155838,
+        "updates": 100,
+        "global_step": 300,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 8,
+        "max_case_normalized_physical24_rms": 0.0,
+        "max_case_masked_all_layer_kv_relative_rms": 0.0,
+        "all_sdk_actions_exact": true,
+        "all_kv_positions_exact": true
+      },
+      "elapsed_s": 230.31987544499862
+    },
+    {
+      "name": "language_warmup_96_300",
+      "argv": [
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+        "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/scripts/fit_comparison.py",
+        "fit",
+        "--stage",
+        "language_warmup",
+        "--size",
+        "96",
+        "--output",
+        "reports/comparison_v1/language_warmup_96_300",
+        "--execute",
+        "--enable-training",
+        "--total-updates",
+        "300",
+        "--resume",
+        "reports/comparison_v1/language_warmup_96_200/checkpoint",
+        "--baseline",
+        "reports/comparison_v1/00_baseline/retention/snapshot.pt",
+        "--eval-all"
+      ],
+      "status": "completed",
+      "log": "reports/comparison_v1/logs/language_warmup_96_300.log",
+      "started_unix": 1792389063.4377847,
+      "exit_code": 0,
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 2.582778215408325,
+        "gold_tokens": 1488,
+        "gold_correct": 788,
+        "eos": {
+          "passed": 89,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 56,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 5,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 3,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 12,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 1,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7129.9267578125,
+        "peak_reserved_mib": 7354.0,
+        "host_peak_rss_mib": 20366.77734375
+      },
+      "sampled_card_peak_mib": 8777.0,
+      "training": {
+        "loss": 4.412911088881083,
+        "high_ce": 4.393578965067864,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.01933212381321937,
+        "grad_norm": 9.748432893753051,
+        "updates": 100,
+        "global_step": 300,
+        "anchor_micro_batches": 0
+      },
+      "retention_summary": {
+        "count": 8,
+        "passed": 4,
+        "max_case_normalized_physical24_rms": 0.0015066646737977862,
+        "max_case_masked_all_layer_kv_relative_rms": 0.05319148468830894,
+        "all_sdk_actions_exact": false,
+        "all_kv_positions_exact": false
+      },
+      "elapsed_s": 217.9256835669985
+    }
+  ],
+  "started_unix": 1792387473.7891119,
+  "final_checkpoints": {
+    "protocol_9": "reports/comparison_v1/protocol_9_200/checkpoint",
+    "language_warmup_9": "reports/comparison_v1/language_warmup_9_200/checkpoint",
+    "protocol_96": "reports/comparison_v1/protocol_96_300/checkpoint",
+    "language_warmup_96": "reports/comparison_v1/language_warmup_96_300/checkpoint"
+  },
+  "total_optimizer_updates": 1000,
+  "observed_metrics_only": true,
+  "finished_unix": 1792389281.3674614
+}

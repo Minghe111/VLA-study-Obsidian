@@ -1,0 +1,34 @@
+--- /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/code/RLinf/rlinf/workers/sft/fsdp_hierarchical_recap_worker.py
++++ /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/code/RLinf/rlinf/workers/sft/fsdp_hierarchical_recap_worker.py
+@@ -100,6 +100,7 @@
+         self.enable_training = enable_training
+         self.sequential_objectives = sequential_objectives
+         self.global_step = 0
++        self.update_metrics = []
+         self.sampler, self.strict_resume = sampler, strict_resume
+         self.resume_status = {"restored": False, "exact_resume": None}
+         self._checkpoint_poisoned = False
+@@ -151,6 +152,7 @@
+                     break
+             if not group:
+                 break
++            before_totals = totals.copy()
+             self.optimizer.zero_grad(set_to_none=True)
+             try:
+                 for index, batch in enumerate(group):
+@@ -217,6 +219,15 @@
+                 totals["grad_norm"] += float(norm)
+                 updates += 1
+                 self.global_step += 1
++                norm_value = float(norm)
++                self.update_metrics.append({
++                    "global_step": self.global_step,
++                    "grad_norm_before_clip": norm_value,
++                    "exceeds_clip_threshold": norm_value > self.max_grad_norm,
++                    "clip_scale_estimate": min(1.0, self.max_grad_norm / (norm_value + 1e-6)),
++                    **{name: totals[name] - before_totals[name]
++                       for name in ("loss", "high_ce", "fast_ce", "fm", "kv_anchor")},
++                })
+             except Exception:
+                 self.optimizer.zero_grad(set_to_none=True)
+                 raise

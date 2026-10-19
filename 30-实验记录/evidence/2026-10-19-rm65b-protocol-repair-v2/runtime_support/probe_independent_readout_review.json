@@ -1,0 +1,224 @@
+{
+  "status": "completed",
+  "review": "Independent read-only interpretation; no model loads, GPU work, or optimizer updates by reviewer",
+  "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/c300_preflight_probe/report.json",
+  "source_sha256": "e5c013f7d5fbd58cc886c240c7a718d9cec73699edaa08dede3c67a66adf8f84",
+  "checkpoint": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/checkpoint",
+  "optimizer_updates": 0,
+  "parameters_unchanged": true,
+  "precision": {
+    "cases": 12,
+    "target_tokens": 186,
+    "native_fp32_top1_agreement": 186,
+    "native_cache_top1_agreement": 184,
+    "native_gold_correct": 98,
+    "max_full_cache_hidden_abs": 2.59375,
+    "interpretation": "FP32 readout arithmetic does not change any of 186 greedy top1 predictions on this quick12 diagnostic. It does not test training a final norm/MLP or unfreezing readout weights. Cache top1 differs at 2/186 positions, so no exact full/cache equivalence claim."
+  },
+  "kv_gradients": {
+    "ce_samples": 12,
+    "kv_samples": 8,
+    "objective_mean_losses": {
+      "high_ce": 2.5763883193333945,
+      "kv_anchor": 0.018256638664752245
+    },
+    "all": {
+      "ce_grad_norm": 6.798014579354669,
+      "kv_grad_norm": 0.06758615424002905,
+      "weighted_kv_grad_norm": 0.06758615424002905,
+      "weighted_kv_over_ce_norm": 0.009942043143785807,
+      "cosine": -0.00689304132579775,
+      "dot": -0.0031670192925882445,
+      "numel": 3686400,
+      "weighted_combined_grad_norm": 6.797884676189971
+    },
+    "max_per_layer_weighted_kv_over_ce_norm": 0.038134306222729494,
+    "interpretation": "At C300, mean native KV gradient is about 0.99 percent of mean CE norm and nearly orthogonal (cos -0.00689); this fixed-set measurement does not support strong current global suppression by KV lambda1. Earlier steps and per-microbatch conflict are not ruled out."
+  },
+  "lora_rounding": {
+    "modules": 72,
+    "calls_per_module": [
+      3.0
+    ],
+    "sampled_delta_over_base_rms": 0.10499578643529087,
+    "nonzero_delta_lost_to_add_fraction": 0.04619551583721119,
+    "max_module_nonzero_delta_lost_fraction": 0.324462890625,
+    "interpretation": "Sampled adapter delta is substantial overall (10.5 percent RMS of base); 4.62 percent of nonzero delta elements lost on native addition, with some modules up to 32.45 percent. This is sampled activation arithmetic, not an optimizer update or proof of universal irrelevance."
+  },
+  "readout_summary": {
+    "READ/all": {
+      "tokens": 40,
+      "native_correct": 33,
+      "fp32_correct": 33,
+      "cache_correct": 33,
+      "native_ce_sum": 44.73318463563919,
+      "fp32_ce_sum": 44.701504588127136,
+      "native_fp32_top1_agreement": 40,
+      "native_cache_top1_agreement": 40,
+      "native_ce_mean": 1.1183296158909797,
+      "fp32_ce_mean": 1.1175376147031784
+    },
+    "READ/body_or_syntax": {
+      "tokens": 16,
+      "native_correct": 16,
+      "fp32_correct": 16,
+      "cache_correct": 16,
+      "native_ce_sum": 10.442641913890839,
+      "fp32_ce_sum": 10.446499109268188,
+      "native_fp32_top1_agreement": 16,
+      "native_cache_top1_agreement": 16,
+      "native_ce_mean": 0.6526651196181774,
+      "fp32_ce_mean": 0.6529061943292618
+    },
+    "READ/eos": {
+      "tokens": 4,
+      "native_correct": 4,
+      "fp32_correct": 4,
+      "cache_correct": 4,
+      "native_ce_sum": 0.21800446510314941,
+      "fp32_ce_sum": 0.216688871383667,
+      "native_fp32_top1_agreement": 4,
+      "native_cache_top1_agreement": 4,
+      "native_ce_mean": 0.054501116275787354,
+      "fp32_ce_mean": 0.05417221784591675
+    },
+    "READ/field_key": {
+      "tokens": 20,
+      "native_correct": 13,
+      "fp32_correct": 13,
+      "cache_correct": 13,
+      "native_ce_sum": 34.0725382566452,
+      "fp32_ce_sum": 34.03831660747528,
+      "native_fp32_top1_agreement": 20,
+      "native_cache_top1_agreement": 20,
+      "native_ce_mean": 1.70362691283226,
+      "fp32_ce_mean": 1.701915830373764
+    },
+    "READ/first": {
+      "tokens": 4,
+      "native_correct": 2,
+      "fp32_correct": 2,
+      "cache_correct": 2,
+      "native_ce_sum": 8.937655448913574,
+      "fp32_ce_sum": 8.906797647476196,
+      "native_fp32_top1_agreement": 4,
+      "native_cache_top1_agreement": 4,
+      "native_ce_mean": 2.2344138622283936,
+      "fp32_ce_mean": 2.226699411869049
+    },
+    "SUBTASK/all": {
+      "tokens": 48,
+      "native_correct": 38,
+      "fp32_correct": 38,
+      "cache_correct": 38,
+      "native_ce_sum": 93.50505504012108,
+      "fp32_ce_sum": 93.52568870782852,
+      "native_fp32_top1_agreement": 48,
+      "native_cache_top1_agreement": 48,
+      "native_ce_mean": 1.9480219800025225,
+      "fp32_ce_mean": 1.9484518480797608
+    },
+    "SUBTASK/body_or_syntax": {
+      "tokens": 44,
+      "native_correct": 34,
+      "fp32_correct": 34,
+      "cache_correct": 34,
+      "native_ce_sum": 93.16239008307457,
+      "fp32_ce_sum": 93.18465739488602,
+      "native_fp32_top1_agreement": 44,
+      "native_cache_top1_agreement": 44,
+      "native_ce_mean": 2.117327047342604,
+      "fp32_ce_mean": 2.117833122611046
+    },
+    "SUBTASK/eos": {
+      "tokens": 4,
+      "native_correct": 4,
+      "fp32_correct": 4,
+      "cache_correct": 4,
+      "native_ce_sum": 0.3426649570465088,
+      "fp32_ce_sum": 0.3410313129425049,
+      "native_fp32_top1_agreement": 4,
+      "native_cache_top1_agreement": 4,
+      "native_ce_mean": 0.0856662392616272,
+      "fp32_ce_mean": 0.08525782823562622
+    },
+    "SUBTASK/first": {
+      "tokens": 4,
+      "native_correct": 0,
+      "fp32_correct": 0,
+      "cache_correct": 0,
+      "native_ce_sum": 36.30544090270996,
+      "fp32_ce_sum": 36.30137348175049,
+      "native_fp32_top1_agreement": 4,
+      "native_cache_top1_agreement": 4,
+      "native_ce_mean": 9.07636022567749,
+      "fp32_ce_mean": 9.075343370437622
+    },
+    "WRITE/all": {
+      "tokens": 98,
+      "native_correct": 27,
+      "fp32_correct": 27,
+      "cache_correct": 27,
+      "native_ce_sum": 493.69477728009224,
+      "fp32_ce_sum": 493.7157759666443,
+      "native_fp32_top1_agreement": 98,
+      "native_cache_top1_agreement": 96,
+      "native_ce_mean": 5.037701808980533,
+      "fp32_ce_mean": 5.0379160812922885
+    },
+    "WRITE/body_or_syntax": {
+      "tokens": 43,
+      "native_correct": 13,
+      "fp32_correct": 13,
+      "cache_correct": 13,
+      "native_ce_sum": 219.7940318286419,
+      "fp32_ce_sum": 219.81728774309158,
+      "native_fp32_top1_agreement": 43,
+      "native_cache_top1_agreement": 42,
+      "native_ce_mean": 5.111489112293998,
+      "fp32_ce_mean": 5.112029947513758
+    },
+    "WRITE/eos": {
+      "tokens": 4,
+      "native_correct": 4,
+      "fp32_correct": 4,
+      "cache_correct": 4,
+      "native_ce_sum": 2.192782461643219,
+      "fp32_ce_sum": 2.1923370957374573,
+      "native_fp32_top1_agreement": 4,
+      "native_cache_top1_agreement": 4,
+      "native_ce_mean": 0.5481956154108047,
+      "fp32_ce_mean": 0.5480842739343643
+    },
+    "WRITE/field_key": {
+      "tokens": 51,
+      "native_correct": 10,
+      "fp32_correct": 10,
+      "cache_correct": 10,
+      "native_ce_sum": 271.70796298980713,
+      "fp32_ce_sum": 271.70615112781525,
+      "native_fp32_top1_agreement": 51,
+      "native_cache_top1_agreement": 50,
+      "native_ce_mean": 5.327607117447198,
+      "fp32_ce_mean": 5.327571590741475
+    },
+    "WRITE/first": {
+      "tokens": 4,
+      "native_correct": 4,
+      "fp32_correct": 4,
+      "cache_correct": 4,
+      "native_ce_sum": 8.541563749313354,
+      "fp32_ce_sum": 8.551087856292725,
+      "native_fp32_top1_agreement": 4,
+      "native_cache_top1_agreement": 4,
+      "native_ce_mean": 2.1353909373283386,
+      "fp32_ce_mean": 2.137771964073181
+    }
+  },
+  "limits": [
+    "Quick12 is a training diagnostic, not independent holdout or task success.",
+    "Token offsets classify JSON field keys separately; body_or_syntax includes punctuation.",
+    "All diagnostic parameter hashes before/after match; no optimizer constructed.",
+    "No CUDA model or GPU was loaded by independent reviewer."
+  ]
+}

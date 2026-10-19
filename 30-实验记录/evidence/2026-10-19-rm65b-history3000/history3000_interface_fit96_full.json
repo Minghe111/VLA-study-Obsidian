@@ -1,0 +1,3685 @@
+{
+  "status": "passed",
+  "scope": "CPU actual native/collator prefix interface; no learned generation or visual embedding",
+  "created_at_utc": "2026-10-19T10:25:24.603431+00:00",
+  "elapsed_s": 4.915649545000633,
+  "total_dataset_rows": 96,
+  "checked_rows": 96,
+  "coverage": "full_dataset",
+  "unique_npz_audited": 52,
+  "mode_counts": {
+    "READ": 32,
+    "SUBTASK": 32,
+    "WRITE": 32
+  },
+  "WRITE_counts": {
+    "EMPTY": 8,
+    "CORRECT": 8,
+    "WRITE": 8,
+    "KEEP": 8
+  },
+  "history_event_count_distribution": {
+    "0": 96
+  },
+  "versions": {
+    "prompt": "rm65b_recap_prompt_v3_history_events",
+    "history": "rm65b_history_events_v1"
+  },
+  "read_only_source_sha_before": {
+    "config": "f7138a3820b7a41973e0f5c17c11a44f5795c4d2e8a4b3d0594a753253871b0e",
+    "norm": "34cbdd09c831e04549d6c4a4e2eb321fb975bdea13bb816ec8aa3a2332d1ccc5",
+    "tokenizer": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6",
+    "labels_0": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8"
+  },
+  "read_only_source_sha_after": {
+    "config": "f7138a3820b7a41973e0f5c17c11a44f5795c4d2e8a4b3d0594a753253871b0e",
+    "norm": "34cbdd09c831e04549d6c4a4e2eb321fb975bdea13bb816ec8aa3a2332d1ccc5",
+    "tokenizer": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6",
+    "labels_0": "680ef0751d097647dffbfacf2068d2d4ad0ba2e7c7ccd3e908dd4c653dc4c5c8"
+  },
+  "sources_unchanged": true,
+  "actual_implementation_files": {
+    "NativeJointCollator": {
+      "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf/rlinf/data/datasets/recap/hierarchical_collator.py",
+      "sha256": "9a09ec03cf5e25c70177c962575cf471831fe66c894a55a7397dc8f13df0c3f9"
+    },
+    "NativePi05Actor": {
+      "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py",
+      "sha256": "151b7d9934b9fa647beeb048d0e9b6f7bfea8feac99feb2d4025c33a4cb89c0a"
+    },
+    "EnvIO": {
+      "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/env_io.py",
+      "sha256": "ba36371be49982fc921cb4bd1a1ec1e7a32f2c3f5eef084be59385f0155b86dc"
+    },
+    "RealManInputs": {
+      "path": "/tmp/rm65b_protocol_history_3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/policies/realman_policy.py",
+      "sha256": "91e8517808700135953e931de9d89fac35a89b52602ab0b80a553d1ae2c5c070"
+    },
+    "Normalize": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/lib/python3.11/site-packages/openpi/transforms.py",
+      "sha256": "a1b94e9e72849a18834778f229c6bb389a495eb7fbe0aa800edea728b9424ff4"
+    }
+  },
+  "model_and_image_stub": {
+    "parameters_loaded": 0,
+    "optimizer_created": false,
+    "device": "cpu",
+    "synthetic_EOS_is_model_prediction": false,
+    "image_embeddings_computed": false,
+    "real_RGB_checked_before_stub": true,
+    "post_validation_transport_image_shape": [
+      1,
+      1,
+      3
+    ],
+    "actual_state_chain": "RealManInputs -> DeltaActions(no actions present) -> original quantile Normalize -> PadStatesAndActions(32) -> native float32 state",
+    "base_text_tokenization_stubbed": "Base empty prompt only; actual high prefix uses real local SentencePiece",
+    "video_MEM_scope": "Not evaluated; text-history prefix interface only",
+    "raw_NPZ_cache": "Up to8 actual observations; source loader restored in finally"
+  },
+  "label_isolation": "Every row: changing only target_text leaves actual prefix bytes and ids unchanged; no loss/label fields accepted in context. A legal earlier issued text may equal the current label, so substring equality alone is not called leakage.",
+  "observation_audit": [
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0008.npz",
+      "npz_sha256": "a6a2db8b4988158321142c358b38c3e7ad6c1c29f52a3cefd13b833cfd017ada",
+      "bytes": 646603,
+      "mtime_ns": 1792329248937748007,
+      "state_sha256": "c93d8fa133cfcb78fba8a17b4fe083a6a8fd87bc8fa472152122337e15dd74f1",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "cad3280deb98a07a49c8ecaf56e7d16ced5f24c0567a0abe740b0cd4b77792f1"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "102049bd2eec24b00098f6014ff3e038b8fba900623f8c7bfaeba7e368d280b9"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "5260bc9106ea38da9690cc4a77588ae99ce7fda280452e7079198ab1c9931d34"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0000.npz",
+      "npz_sha256": "b35d48a370d7bbbb729ebc15c37327e676db58b9ac7692c0286df5ff98dfd042",
+      "bytes": 646761,
+      "mtime_ns": 1792329445830586840,
+      "state_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "2bd735d261845fd129448ff2d02faebbc0fd85314c11dd10864542f8089b75a8"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "889cafe1cb34ff3a4a869f6410cc27293671a0ee72e9b74c9eb49c234edfc7cf"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "d69a939b13563f9e8a979620dea17fffe9a27fdbb6a851ee220175287aff1baf"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0024.npz",
+      "npz_sha256": "206dd877234a5bf3bb2729bdd913ee70f19c61cc55930d1fb819bb4cad55f79d",
+      "bytes": 652151,
+      "mtime_ns": 1792329571884483659,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "c438f9c2cec887eb27470cb423d278be291e2cc1bd652b4f15ad256996530414"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "545a3e002fa11692f0c9146bb5b4b12e7b1aa4ad800cb650f8628c1ee3879a27"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "31eb0a16457a4b480e2c50060d3ac0d16309a3b074504cecf464f79a035b6441"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0008.npz",
+      "npz_sha256": "f0e63f71f7d27583a2e51e9b010064273530a4e4878a934bffefac1ed4bc88af",
+      "bytes": 652173,
+      "mtime_ns": 1792329607927454156,
+      "state_sha256": "c93d8fa133cfcb78fba8a17b4fe083a6a8fd87bc8fa472152122337e15dd74f1",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "47b6da5c0d5a01c451e645f8e83f5e8ccddea726f84401dbe81b570607ac555e"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "fb2db49c10d5e23b7864ad95ba38c49bda28b8667a459205337c4a689783efa6"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "4903595a10467ef958101a3bfdb6c263ae13f723e8ee95428fbd50a14cf51f37"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_left_31000/obs_0016.npz",
+      "npz_sha256": "c9113850d4b6cd07235d0e95e1b765d02f4a542be053efd59dbdf02f9346fcf4",
+      "bytes": 638172,
+      "mtime_ns": 1792329172276810757,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "0da8cfe2a976d898c318a0b64bcf44bdfb9a01dc7faab1dd2303d36bc8a93d62"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "14e17dc7292d8d95d18b0e6a27f509734a9173fb8c6c3d014c1a919420568334"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "f7375237d5cee91929409214e569ac2cb051ac10447fdc96ccea00c177df456e"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0008.npz",
+      "npz_sha256": "ef0a52d52c4ddeb6ae865e966711422ad2b9e5e9c7cf9b7e1aadcd5bae8849f7",
+      "bytes": 639745,
+      "mtime_ns": 1792329328955682508,
+      "state_sha256": "c93d8fa133cfcb78fba8a17b4fe083a6a8fd87bc8fa472152122337e15dd74f1",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "9fd4ea11608108718db90c47bc0ca172b2f35231d1d2f481ed0609755fea4ed0"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "612fb8fffdbf10641ecaeda97da983c8af5d9dd2a94bdba3ead9dc67f9cecfd9"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "a799dfa1433a30b33ee92a4e39dc7ba6a01ac399ed6bba05018d4b4bcc51be91"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0032.npz",
+      "npz_sha256": "206dd877234a5bf3bb2729bdd913ee70f19c61cc55930d1fb819bb4cad55f79d",
+      "bytes": 652151,
+      "mtime_ns": 1792329574163481794,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "c438f9c2cec887eb27470cb423d278be291e2cc1bd652b4f15ad256996530414"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "545a3e002fa11692f0c9146bb5b4b12e7b1aa4ad800cb650f8628c1ee3879a27"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "31eb0a16457a4b480e2c50060d3ac0d16309a3b074504cecf464f79a035b6441"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0008.npz",
+      "npz_sha256": "fceaa0c46478cae8bfed6a6139d403faa4d8f177c63f61a981d80d4473b65170",
+      "bytes": 646498,
+      "mtime_ns": 1792329448066585010,
+      "state_sha256": "c93d8fa133cfcb78fba8a17b4fe083a6a8fd87bc8fa472152122337e15dd74f1",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "748c56246671c7f881a4c507113e6606f4257a951345af9f36d069c4d72af16d"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "5bfbd936dcca014b235f76d0a866ccf0db1c9e72110b7cecb163e034ac656b14"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "d94d5d06842fadab9da357d7e7a4af305c28953ba0f9a29538ae443be0d9767f"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz",
+      "npz_sha256": "75076fbc651f0f69b1ba8f80ffa1ffb0c87b69136ce87d773d7ef745ee64076f",
+      "bytes": 646695,
+      "mtime_ns": 1792329246716749824,
+      "state_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "5c4955ff643e8d0bd2e4c965a25e8ea7a9fe8aec0f33c37c347c1dc2aa648123"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "db0ed4b4a31e6394eea972b1ce2ec7e23a4343276b53b15e804c9327628f8565"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "dd858dc80aeac7d5f904ffd4189d7472be93f6f1c00a40c63807b4fb8fa81492"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0016.npz",
+      "npz_sha256": "704d6480f9a14979361ab59e7c6f330da22f12d966c0d63fbb323ad6e46214e3",
+      "bytes": 652113,
+      "mtime_ns": 1792329610196452299,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "03bc822447ca1a5d240bdc05b04e794abed4e65d7f0fc46377b5329ea7086e61"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "cc60e443ac8160dc1e2d4fd103a816b394b57dd5b064eb460ed48dbe91e84a28"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "e861743c145f6396e08facf0313f5ba8a990e58449c750e96bb3c0fcdabd67c1"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0000.npz",
+      "npz_sha256": "e777aae5a402e95e85d0147a5f65aae4901766ad0377a5e966e1626c46266808",
+      "bytes": 651845,
+      "mtime_ns": 1792329565045489257,
+      "state_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "edc9be84709aface3c3e878c6c0b28970a25e0f4039bd4efd49ce0b751129236"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "b5c48d6d334f514099b9f8be8108c17f67b44a60618878ba1edb9c6052b7ce2e"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "b7b4984cf57e549a4beaccac075f4f0c6d329099eec6674407f95f17f6237c58"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0008.npz",
+      "npz_sha256": "14bf2cda55017ad8cdebffbfa3009a42d407a9d7c779732785db612514e96a73",
+      "bytes": 639743,
+      "mtime_ns": 1792329368657650010,
+      "state_sha256": "c93d8fa133cfcb78fba8a17b4fe083a6a8fd87bc8fa472152122337e15dd74f1",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "9fd4ea11608108718db90c47bc0ca172b2f35231d1d2f481ed0609755fea4ed0"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "612fb8fffdbf10641ecaeda97da983c8af5d9dd2a94bdba3ead9dc67f9cecfd9"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "a799dfa1433a30b33ee92a4e39dc7ba6a01ac399ed6bba05018d4b4bcc51be91"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0016.npz",
+      "npz_sha256": "8eeeae8a3196260e6b2984980dbe2f1a2876050c4fa431bd0a1191e8901b412f",
+      "bytes": 646242,
+      "mtime_ns": 1792329251172746177,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "bc925babb6c8848cda2d4647295d52af6a172100a9493251050a2c565359e2a2"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "53b631c761970e90a567d67bc5693c2ec1f5f9ce1e3cb5d6e8b8e7f1fda61c12"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "53e988b0e5f257efebeae97a5c824c13244c660a1d3aba0bee90ac2716234dc2"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0016.npz",
+      "npz_sha256": "ab7968f39591d00d93325f65b021c82ce948347082fc6308878bff06594ffee3",
+      "bytes": 641852,
+      "mtime_ns": 1792329529783518121,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "cef3175489573ba4dd926263c5654e40e2edf2218a79f8797836db48250bb7eb"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "351fdd9e1897bcbb8bd362272f231b8f6bc7a7983a809180a86ed4f204f16356"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "7afd6793708b596f3dc25d38b8e84de78d53fb94f33949fb51507d1dd4b19e4b"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0032.npz",
+      "npz_sha256": "40c25694b1ad4749979e5a19fc2cb161050df79b79b3c86def22e444df5b42d3",
+      "bytes": 642141,
+      "mtime_ns": 1792329494424547064,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "da48a3a2b31f885790504803c940f05300e02336a44a70ce7af4a7c1131d908c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "9aed9e219ff94b7fb4fb1e4786384261426cff27d8b8a65548221d8e5546e404"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "008173d9d3e56cd752ceec197d92c3145b76a56f259d43bb46e873fcafb0f0e3"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0024.npz",
+      "npz_sha256": "40c25694b1ad4749979e5a19fc2cb161050df79b79b3c86def22e444df5b42d3",
+      "bytes": 642141,
+      "mtime_ns": 1792329492208548878,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "da48a3a2b31f885790504803c940f05300e02336a44a70ce7af4a7c1131d908c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "9aed9e219ff94b7fb4fb1e4786384261426cff27d8b8a65548221d8e5546e404"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "008173d9d3e56cd752ceec197d92c3145b76a56f259d43bb46e873fcafb0f0e3"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0016.npz",
+      "npz_sha256": "77a74523dc5e2cb09c34a9eb589beb489a06064d3ee3e0e5557f81ebdfd0cb2a",
+      "bytes": 639832,
+      "mtime_ns": 1792329331180680687,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "e1b64f5a741f7d135cae43ded3729dc8d68e0b13286227acb470e1c262ac514c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "7357663db9f00a1008ea2e87ee61fc32a3aea499c1f66d1305b57cee8b67f1d9"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "5444c8b835d16befcc7f9814aab728e44fb1b39597e80c121b5774ab7092d5d2"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0008.npz",
+      "npz_sha256": "77218af63f1fbb551ce00ea175bc45b1d9d572a2ae1cdb348ea6adb17a0a2ee7",
+      "bytes": 652175,
+      "mtime_ns": 1792329567345487375,
+      "state_sha256": "c93d8fa133cfcb78fba8a17b4fe083a6a8fd87bc8fa472152122337e15dd74f1",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "47b6da5c0d5a01c451e645f8e83f5e8ccddea726f84401dbe81b570607ac555e"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "fb2db49c10d5e23b7864ad95ba38c49bda28b8667a459205337c4a689783efa6"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "4903595a10467ef958101a3bfdb6c263ae13f723e8ee95428fbd50a14cf51f37"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0016.npz",
+      "npz_sha256": "3955d0da515ede987f13d11cd2d4783dcb65f4f3a93e6614b14c962158611d2b",
+      "bytes": 638170,
+      "mtime_ns": 1792329211805778401,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "0da8cfe2a976d898c318a0b64bcf44bdfb9a01dc7faab1dd2303d36bc8a93d62"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "14e17dc7292d8d95d18b0e6a27f509734a9173fb8c6c3d014c1a919420568334"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "f7375237d5cee91929409214e569ac2cb051ac10447fdc96ccea00c177df456e"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0000.npz",
+      "npz_sha256": "c3be0a6c3930a7f9b7e94b197995438ea1ec0b274d86f28d74bfe8fe759b6871",
+      "bytes": 646763,
+      "mtime_ns": 1792329406110619353,
+      "state_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "2bd735d261845fd129448ff2d02faebbc0fd85314c11dd10864542f8089b75a8"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "889cafe1cb34ff3a4a869f6410cc27293671a0ee72e9b74c9eb49c234edfc7cf"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "d69a939b13563f9e8a979620dea17fffe9a27fdbb6a851ee220175287aff1baf"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0000.npz",
+      "npz_sha256": "7c005842846d723457d68bccf79fc034f237b8e911710cc403dfe44910288c67",
+      "bytes": 642430,
+      "mtime_ns": 1792329485532554342,
+      "state_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "d5c83bc912131e7b4ce5f074d7bde89d41d08e289a55507c36b82232463e479c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "56da7c7d8591fa6637d102ec1fdcc9f19140fd92d1158f9e614a49b3b28be85f"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "212b6fff13aa86334af2df4b2d2a3b61f02893852ce953392ad4e22d197060c4"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0016.npz",
+      "npz_sha256": "8df00481b56299475a0a6cace864982476f409e54babc19de62c628568e5cf26",
+      "bytes": 652115,
+      "mtime_ns": 1792329569601485528,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "03bc822447ca1a5d240bdc05b04e794abed4e65d7f0fc46377b5329ea7086e61"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "cc60e443ac8160dc1e2d4fd103a816b394b57dd5b064eb460ed48dbe91e84a28"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "e861743c145f6396e08facf0313f5ba8a990e58449c750e96bb3c0fcdabd67c1"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0032.npz",
+      "npz_sha256": "3a714c027d557fd7c48415dac8251058ba6d9848d2b956dba75b334932df8156",
+      "bytes": 646274,
+      "mtime_ns": 1792329415048612037,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "d979a7daf2e699addcc59621d96942cb5a081a2d09500da24fe68771c3d8305c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "72f09ed46604d6ffc7cca0bd9faa558a4d10aaade8273d5c8045438ad7ab11b6"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "367ad9e636b648d9153f7d544bbfb91d727571e5ce35a824fe8b67bfed3f9c31"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0024.npz",
+      "npz_sha256": "3a714c027d557fd7c48415dac8251058ba6d9848d2b956dba75b334932df8156",
+      "bytes": 646274,
+      "mtime_ns": 1792329412792613884,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "d979a7daf2e699addcc59621d96942cb5a081a2d09500da24fe68771c3d8305c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "72f09ed46604d6ffc7cca0bd9faa558a4d10aaade8273d5c8045438ad7ab11b6"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "367ad9e636b648d9153f7d544bbfb91d727571e5ce35a824fe8b67bfed3f9c31"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_left_31000/obs_0000.npz",
+      "npz_sha256": "89059c997837b389dab4a895d0764657cb9701c0e16586d736faec587c483dbf",
+      "bytes": 641904,
+      "mtime_ns": 1792329167770814445,
+      "state_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "2d5cc62b24c8bd97d13d8da2fed7e318e4887690b0d7c2ad6296cff6eee4ef4e"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "ec2b08ffb98f1482d1007bdc1da5f10d41de56bff9f3c845f11983e7b8d87ad7"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "831711d5496688a877e3f423a7ad026cb0d7c33eb10d7ddec0a21dca0183a463"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_right_31110/obs_0000.npz",
+      "npz_sha256": "d6ca6ad75c2ae66ab79cba0d2094ac4926f922718ed9523b1cf54cfc946e3856",
+      "bytes": 646693,
+      "mtime_ns": 1792329286820716998,
+      "state_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "5c4955ff643e8d0bd2e4c965a25e8ea7a9fe8aec0f33c37c347c1dc2aa648123"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "db0ed4b4a31e6394eea972b1ce2ec7e23a4343276b53b15e804c9327628f8565"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "dd858dc80aeac7d5f904ffd4189d7472be93f6f1c00a40c63807b4fb8fa81492"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0032.npz",
+      "npz_sha256": "7a828f18821699f82fd355e68a0ac64f68fb77611c678a2b3cb1a7aa9da72bb5",
+      "bytes": 642139,
+      "mtime_ns": 1792329534213514495,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "da48a3a2b31f885790504803c940f05300e02336a44a70ce7af4a7c1131d908c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "9aed9e219ff94b7fb4fb1e4786384261426cff27d8b8a65548221d8e5546e404"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "008173d9d3e56cd752ceec197d92c3145b76a56f259d43bb46e873fcafb0f0e3"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0016.npz",
+      "npz_sha256": "175a6141c26b213c6493367d5d7c3cf7cda89b31d348d316cea8235526ecb89a",
+      "bytes": 646166,
+      "mtime_ns": 1792329410530615735,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "2fe68de005cfb0ad0daf8a05ca96ce8f446a1f3687e0818bed78b72e12ffea7e"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "7c6843dc9d9b60695a507da471ced2a3f14ca5049904ca910397a78dcc1e4dd3"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "33fa3965f7ae9dccb4e3951ed8bff1a2fa41703f3eb0226f5a01c8d51fe8c700"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0032.npz",
+      "npz_sha256": "e145518c83f54731c513dc6085cea229534bcb79ad0a24a6f7081517877e248c",
+      "bytes": 652149,
+      "mtime_ns": 1792329614594448699,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "c438f9c2cec887eb27470cb423d278be291e2cc1bd652b4f15ad256996530414"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "545a3e002fa11692f0c9146bb5b4b12e7b1aa4ad800cb650f8628c1ee3879a27"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "31eb0a16457a4b480e2c50060d3ac0d16309a3b074504cecf464f79a035b6441"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0008.npz",
+      "npz_sha256": "73fe16e1d2b65835b925e420b3d78565a705df25f78a98e6ba77dc320a0afc2c",
+      "bytes": 637999,
+      "mtime_ns": 1792329209575780226,
+      "state_sha256": "c93d8fa133cfcb78fba8a17b4fe083a6a8fd87bc8fa472152122337e15dd74f1",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "9577068966d01234058293cfc7601c5768efd432f6429194ebc6d55de32484d6"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "05217d2819a4efa54f6307078e72cec27fb12a247fe1537d86aeb72219487d6e"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "cdc2389c974a954257301d6446a7d69bbe8083c6e94100cba3c2d13480f476a7"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0032.npz",
+      "npz_sha256": "9bd56083eeac33c6b5629890ca9087aaa28d90a032c1ccd822269c677e466ab1",
+      "bytes": 639779,
+      "mtime_ns": 1792329375366644518,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "f3d4d813c62b5740f2ac86b580efe7fd07e5a57e85ce6536ff50c7bb30c504af"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "3f6a7e3d1f09b18d1932df17c5fb908a8d41005031846cdd3742c2d092c9fecb"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "0243c9d9d9428d19fc7d7a5857b28553d4fe59d5526944944ead72d897dcb118"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_right_31110/obs_0024.npz",
+      "npz_sha256": "00e32a7d93937e8abc9ac11fddb7352c074b922c169c06d32fc09df0654c1e41",
+      "bytes": 646284,
+      "mtime_ns": 1792329293670711390,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "c9049e17e5a2779dcb17b8c941d4d3935f48b1f4a12a74b03b176f8c0420e225"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "cc0861eb55b3ab05dd27ac463a095b702e848ad87d11995e837a250674246976"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "f3f4a69779aece8729d2c1f96fbe14eb47ce90e25211cbb9815e5467f8dd2888"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0016.npz",
+      "npz_sha256": "702142f6454819c5113518955a75f850308e0dac12f99ae286025e344bc57916",
+      "bytes": 646164,
+      "mtime_ns": 1792329450286583193,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "2fe68de005cfb0ad0daf8a05ca96ce8f446a1f3687e0818bed78b72e12ffea7e"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "7c6843dc9d9b60695a507da471ced2a3f14ca5049904ca910397a78dcc1e4dd3"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "33fa3965f7ae9dccb4e3951ed8bff1a2fa41703f3eb0226f5a01c8d51fe8c700"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0032.npz",
+      "npz_sha256": "5a2aa934d2814f9a3fc674aba4f4f12cd90c0f5c376b5b65b5409d6e4c2d363d",
+      "bytes": 637913,
+      "mtime_ns": 1792329216155774840,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "2aab9308e46630db577d26eefca208cbe52bffea06e0a08f8470ad5088455842"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "610462b97c2d97c94bb6c0eddc7d19fb93999df6200ad29546619c5dbf7c37e1"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "04fe45ca3bcada4d52f453f5784b9cbc9d0ac53def6b073a054471af3b5e54e2"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0016.npz",
+      "npz_sha256": "b2d22547b0851e7d3edd4c56497c03e7ce33386032e454eb8d1f2d143e6e8812",
+      "bytes": 639830,
+      "mtime_ns": 1792329370903648172,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "e1b64f5a741f7d135cae43ded3729dc8d68e0b13286227acb470e1c262ac514c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "7357663db9f00a1008ea2e87ee61fc32a3aea499c1f66d1305b57cee8b67f1d9"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "5444c8b835d16befcc7f9814aab728e44fb1b39597e80c121b5774ab7092d5d2"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0024.npz",
+      "npz_sha256": "5a2aa934d2814f9a3fc674aba4f4f12cd90c0f5c376b5b65b5409d6e4c2d363d",
+      "bytes": 637913,
+      "mtime_ns": 1792329213989776613,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "2aab9308e46630db577d26eefca208cbe52bffea06e0a08f8470ad5088455842"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "610462b97c2d97c94bb6c0eddc7d19fb93999df6200ad29546619c5dbf7c37e1"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "04fe45ca3bcada4d52f453f5784b9cbc9d0ac53def6b073a054471af3b5e54e2"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0000.npz",
+      "npz_sha256": "38e40304b87be62d11177de92366c69072fd4f5df37261ca2118faeb87c67c5d",
+      "bytes": 651843,
+      "mtime_ns": 1792329605697455982,
+      "state_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "edc9be84709aface3c3e878c6c0b28970a25e0f4039bd4efd49ce0b751129236"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "b5c48d6d334f514099b9f8be8108c17f67b44a60618878ba1edb9c6052b7ce2e"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "b7b4984cf57e549a4beaccac075f4f0c6d329099eec6674407f95f17f6237c58"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0000.npz",
+      "npz_sha256": "c13b88f75d1fede2f3cf490beffbbe03769b69ab613e751051b1f503c15057ce",
+      "bytes": 638228,
+      "mtime_ns": 1792329366419651842,
+      "state_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "25c8c3f1afd43f5d45b05891f896b83855706cecc9642585a5f8d6cd611fb2e8"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "c0369d2d34fdc5ebbebe503ba0b7cd1179117e7b64fd849ba0cf72504e691032"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "eb29bb2feaba8663c46dab355982f482248ff194db12db592167cb87835c5d91"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0032.npz",
+      "npz_sha256": "cef64ee95e8716a2ed870c4e4d3f09ba3f58f9acafc275997899cb5f09ea04e6",
+      "bytes": 639781,
+      "mtime_ns": 1792329335608677062,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "f3d4d813c62b5740f2ac86b580efe7fd07e5a57e85ce6536ff50c7bb30c504af"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "3f6a7e3d1f09b18d1932df17c5fb908a8d41005031846cdd3742c2d092c9fecb"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "0243c9d9d9428d19fc7d7a5857b28553d4fe59d5526944944ead72d897dcb118"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_right_31110/obs_0016.npz",
+      "npz_sha256": "e08ad896cad0a62f1f00b3cd6c55549053b76edaa565e4517f9e8656bfd05c1f",
+      "bytes": 646240,
+      "mtime_ns": 1792329291425713228,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "bc925babb6c8848cda2d4647295d52af6a172100a9493251050a2c565359e2a2"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "53b631c761970e90a567d67bc5693c2ec1f5f9ce1e3cb5d6e8b8e7f1fda61c12"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "53e988b0e5f257efebeae97a5c824c13244c660a1d3aba0bee90ac2716234dc2"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0032.npz",
+      "npz_sha256": "b38ec5d5c454ca24fc7aa64ac76a9842d937f9f024b12767edb5e4cda108b4d3",
+      "bytes": 646272,
+      "mtime_ns": 1792329454803579496,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "d979a7daf2e699addcc59621d96942cb5a081a2d09500da24fe68771c3d8305c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "72f09ed46604d6ffc7cca0bd9faa558a4d10aaade8273d5c8045438ad7ab11b6"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "367ad9e636b648d9153f7d544bbfb91d727571e5ce35a824fe8b67bfed3f9c31"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0008.npz",
+      "npz_sha256": "9e3809ddf52aa13f6922ac648511d441f04217e62901c2af999c55ddd3281007",
+      "bytes": 641905,
+      "mtime_ns": 1792329487736552538,
+      "state_sha256": "c93d8fa133cfcb78fba8a17b4fe083a6a8fd87bc8fa472152122337e15dd74f1",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "bda592c52f74a02773b4d7aa8915915929c65a14a5ceab4e577448e755c35775"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "76fbb5a8c1455d8a84ed69fba059a6e39d295e8926bdb5fcc97304da4a54f9f2"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "ac2a90c390594c1f57c76315a7b0ffd2df95cc9822d7d8971fba7e1274e43017"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0024.npz",
+      "npz_sha256": "7a828f18821699f82fd355e68a0ac64f68fb77611c678a2b3cb1a7aa9da72bb5",
+      "bytes": 642139,
+      "mtime_ns": 1792329532033516279,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "da48a3a2b31f885790504803c940f05300e02336a44a70ce7af4a7c1131d908c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "9aed9e219ff94b7fb4fb1e4786384261426cff27d8b8a65548221d8e5546e404"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "008173d9d3e56cd752ceec197d92c3145b76a56f259d43bb46e873fcafb0f0e3"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0016.npz",
+      "npz_sha256": "a9f9c77072dd92634a96a9d030638397ffe2120fbc978c87231f88434412bdb6",
+      "bytes": 641854,
+      "mtime_ns": 1792329489955550722,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "cef3175489573ba4dd926263c5654e40e2edf2218a79f8797836db48250bb7eb"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "351fdd9e1897bcbb8bd362272f231b8f6bc7a7983a809180a86ed4f204f16356"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "7afd6793708b596f3dc25d38b8e84de78d53fb94f33949fb51507d1dd4b19e4b"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0024.npz",
+      "npz_sha256": "cef64ee95e8716a2ed870c4e4d3f09ba3f58f9acafc275997899cb5f09ea04e6",
+      "bytes": 639781,
+      "mtime_ns": 1792329333380678886,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "f3d4d813c62b5740f2ac86b580efe7fd07e5a57e85ce6536ff50c7bb30c504af"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "3f6a7e3d1f09b18d1932df17c5fb908a8d41005031846cdd3742c2d092c9fecb"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "0243c9d9d9428d19fc7d7a5857b28553d4fe59d5526944944ead72d897dcb118"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_left_31000/obs_0024.npz",
+      "npz_sha256": "43a6e8fcc258fcd1e19d5806a6aca9b2dfb7502be3819b3b6dfd5c5d0da6ad9b",
+      "bytes": 637915,
+      "mtime_ns": 1792329174462808968,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "2aab9308e46630db577d26eefca208cbe52bffea06e0a08f8470ad5088455842"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "610462b97c2d97c94bb6c0eddc7d19fb93999df6200ad29546619c5dbf7c37e1"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "04fe45ca3bcada4d52f453f5784b9cbc9d0ac53def6b073a054471af3b5e54e2"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0032.npz",
+      "npz_sha256": "dcf632d1c789466058fb07db09210ee710dfcc4cda64d29a877d8fe3c9d9328a",
+      "bytes": 646286,
+      "mtime_ns": 1792329255701742470,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "c9049e17e5a2779dcb17b8c941d4d3935f48b1f4a12a74b03b176f8c0420e225"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "cc0861eb55b3ab05dd27ac463a095b702e848ad87d11995e837a250674246976"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "f3f4a69779aece8729d2c1f96fbe14eb47ce90e25211cbb9815e5467f8dd2888"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0008.npz",
+      "npz_sha256": "dbfaa61d992ff350ec049fc9d8cc474d42651bf8ad7d6ce07085a7c2df690be5",
+      "bytes": 641903,
+      "mtime_ns": 1792329527578519926,
+      "state_sha256": "c93d8fa133cfcb78fba8a17b4fe083a6a8fd87bc8fa472152122337e15dd74f1",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "bda592c52f74a02773b4d7aa8915915929c65a14a5ceab4e577448e755c35775"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "76fbb5a8c1455d8a84ed69fba059a6e39d295e8926bdb5fcc97304da4a54f9f2"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "ac2a90c390594c1f57c76315a7b0ffd2df95cc9822d7d8971fba7e1274e43017"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0000.npz",
+      "npz_sha256": "a42d576e6d6856aa9739f2fe4998a76955d7f5c71eead1f1cd236b4c1189bcdd",
+      "bytes": 641902,
+      "mtime_ns": 1792329207455781961,
+      "state_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "2d5cc62b24c8bd97d13d8da2fed7e318e4887690b0d7c2ad6296cff6eee4ef4e"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "ec2b08ffb98f1482d1007bdc1da5f10d41de56bff9f3c845f11983e7b8d87ad7"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "831711d5496688a877e3f423a7ad026cb0d7c33eb10d7ddec0a21dca0183a463"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0024.npz",
+      "npz_sha256": "e145518c83f54731c513dc6085cea229534bcb79ad0a24a6f7081517877e248c",
+      "bytes": 652149,
+      "mtime_ns": 1792329612398450497,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "c438f9c2cec887eb27470cb423d278be291e2cc1bd652b4f15ad256996530414"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "545a3e002fa11692f0c9146bb5b4b12e7b1aa4ad800cb650f8628c1ee3879a27"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "31eb0a16457a4b480e2c50060d3ac0d16309a3b074504cecf464f79a035b6441"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0024.npz",
+      "npz_sha256": "b38ec5d5c454ca24fc7aa64ac76a9842d937f9f024b12767edb5e4cda108b4d3",
+      "bytes": 646272,
+      "mtime_ns": 1792329452557581334,
+      "state_sha256": "5fd8c1c3dc7ebab98d3323c98595758a5ef53b85b6d45bcfcc8733fbe1b5e172",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "d979a7daf2e699addcc59621d96942cb5a081a2d09500da24fe68771c3d8305c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "72f09ed46604d6ffc7cca0bd9faa558a4d10aaade8273d5c8045438ad7ab11b6"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "367ad9e636b648d9153f7d544bbfb91d727571e5ce35a824fe8b67bfed3f9c31"
+        }
+      }
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0000.npz",
+      "npz_sha256": "04d13bd320d788b4e4003237a6f2251bbc14a96b64730963bfb69a414fbef831",
+      "bytes": 642428,
+      "mtime_ns": 1792329525381521724,
+      "state_sha256": "a79b2580e49c2cda56e247f927db28d82b22a8c372a43b44d5bb2200221ef4d5",
+      "cameras": {
+        "full_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "d5c83bc912131e7b4ce5f074d7bde89d41d08e289a55507c36b82232463e479c"
+        },
+        "left_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "56da7c7d8591fa6637d102ec1fdcc9f19140fd92d1158f9e614a49b3b28be85f"
+        },
+        "right_wrist_image": {
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "pixel_sha256": "212b6fff13aa86334af2df4b2d2a3b61f02893852ce953392ad4e22d197060c4"
+        }
+      }
+    }
+  ],
+  "row_receipts": [
+    {
+      "sample_id": "fresh_protocol_layout_01_left_31100:d8:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 1
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_right_31310:d0:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 2
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "097ddbce8401f257f5468af7170215302ce72d5431291b68c8752707cc06db07",
+      "prefix_int64_sha256": "f7668d35a82db5c43a827173d353df082d2a9ce2d83adf3a5ce91d79cada1c14",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d24:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 3
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 313,
+      "prefix_utf8_sha256": "334a4e1cb2c9083ecfb5e8dcd04690151b103d064a9d92fd88f5c517daaa9f75",
+      "prefix_int64_sha256": "63513fe6fd69d6bd2f18480bddb525e51bcddfe2be05da60e0d63de41731557e",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_right_31510:d8:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 4
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_left_31000:d16:counterfactual_memory_confidence:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 5
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "a216a075dae36faf250b4c532c63f2cc49e326663ed05344b9d57b02638063ad",
+      "prefix_int64_sha256": "b7cb3e5b844b159be1bb0936b3022ba12d3fe97fa43299dd9f9ed97874559f1f",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_left_31000/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_left_31200:d8:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 6
+      },
+      "mode": "WRITE",
+      "write_branch": "EMPTY",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "a9392a8499199b85b503369181f48754d6dd7dfe562f1bb2b833f78f4df8d7cd",
+      "prefix_int64_sha256": "f03f17fa25da520221d6ba6c96eaa7ea2b67953eb7e45bbbfa156a3e8a9b0cf7",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d32:counterfactual_memory_corruption:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 7
+      },
+      "mode": "WRITE",
+      "write_branch": "CORRECT",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "fb077bffc24a8a82be38ac2897a716433b4e2a758f8ceb3bfad6463137e0cc80",
+      "prefix_int64_sha256": "b2b4b1aed80d095b6806390d336437f6d499b76065ed2e300c55ba361d388c30",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_left_31000:d16:counterfactual_memory_confidence:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 8
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_left_31000/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_right_31310:d8:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 9
+      },
+      "mode": "WRITE",
+      "write_branch": "EMPTY",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "1ed321485120df954111eb50037b3c5d26ad045c2e55ac7338cbb18528eb5936",
+      "prefix_int64_sha256": "2f512a06a4d2fcdf8cfa6d2425e2cd329ab8879d1d333d62a765e5657564b0db",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_left_31100:d0:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 10
+      },
+      "mode": "WRITE",
+      "write_branch": "WRITE",
+      "history_events": 0,
+      "prefix_tokens": 324,
+      "prefix_utf8_sha256": "6d312bf7b07cbd98d7caa4dc9b0dab74e50b1b910e40d39a9c095c2bb1748dd7",
+      "prefix_int64_sha256": "8b2f0f0d3f65d7c88fd3e9331fd0490d8b508eb2b89c08a554f529c90bebeab0",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_right_31510:d16:counterfactual_memory_confidence:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 11
+      },
+      "mode": "WRITE",
+      "write_branch": "KEEP",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "0fd1035e246678bcac5b88955754d3015b16cc7555d10f897e621d7cb7d244bf",
+      "prefix_int64_sha256": "f03ea036a005ea11e3879cf5f42972af6dad982e9a3c9e90ec2c8404602f470e",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_right_31310:d0:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 12
+      },
+      "mode": "WRITE",
+      "write_branch": "WRITE",
+      "history_events": 0,
+      "prefix_tokens": 324,
+      "prefix_utf8_sha256": "93d47dfdec18020cafc98c4710f8d61825bab8dde6812dd9302c49da11e42760",
+      "prefix_int64_sha256": "3d07546b87ac1d77ade4e9092e31c48c0df70b6579933d1729038caa9f408933",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d0:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 13
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "74bc90c07bb747a1e1ea46c9d14e5daa815a5f55ba4aec3d11c657c73df6447f",
+      "prefix_int64_sha256": "215c54513daad021a51cf3e66fea44a40dba1eb33022c8e66ec8cbc83ea814ec",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_right_31210:d8:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 14
+      },
+      "mode": "WRITE",
+      "write_branch": "EMPTY",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "1ed321485120df954111eb50037b3c5d26ad045c2e55ac7338cbb18528eb5936",
+      "prefix_int64_sha256": "2f512a06a4d2fcdf8cfa6d2425e2cd329ab8879d1d333d62a765e5657564b0db",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_left_31100:d0:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 15
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "74bc90c07bb747a1e1ea46c9d14e5daa815a5f55ba4aec3d11c657c73df6447f",
+      "prefix_int64_sha256": "215c54513daad021a51cf3e66fea44a40dba1eb33022c8e66ec8cbc83ea814ec",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_left_31100:d16:counterfactual_memory_confidence:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 16
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_right_31410:d16:counterfactual_memory_confidence:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 17
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_left_31400:d32:counterfactual_memory_corruption:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 18
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "76d6de1a5409abdb107dbe0c906b5109ec2ace8d4e747466eaff4345d2e3de7a",
+      "prefix_int64_sha256": "eeac4a3e6ec8d22fb862f267b8932492a3857f826ca71586287a7f457a188745",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_left_31400:d24:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 19
+      },
+      "mode": "WRITE",
+      "write_branch": "EMPTY",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "a17e3fceb784509c8eac9fa8eda3fc068a11328fa9801e5fe8d51a75d32cd6ad",
+      "prefix_int64_sha256": "3b0696a84980ac5766bb0dde5e91d85bbbf709ebaa73ee6b778342e019c1d4db",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_left_31200:d16:counterfactual_memory_confidence:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 20
+      },
+      "mode": "WRITE",
+      "write_branch": "KEEP",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "cc931e3c0fbef3e072d56bb8e00b71c8d7112e84e52b8e8839b366bea9fb89ff",
+      "prefix_int64_sha256": "2bac1cec065042dec1bb73808137bc073ce4773491bec581c828491a709a410d",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_right_31210:d8:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 21
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_left_31100:d0:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 22
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d8:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 23
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 313,
+      "prefix_utf8_sha256": "719e5e5ffb91d4a87e10e549d2e27a642c3683039732c60b1a9a9b2f0036bcf2",
+      "prefix_int64_sha256": "416e1a83b9b5c9c89ecf8aa67f00bc7ddf5aca42e802e55c34215761700ed29e",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_right_31010:d16:counterfactual_memory_confidence:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 24
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "ca466c2d555d6c99a7783f1a810ce1373ccb27e11b08f298108ae826530de8be",
+      "prefix_int64_sha256": "5386f78fc33b2a3092044e26800eb60e1b690724c44330a31ca499598a0d5853",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_right_31010:d16:counterfactual_memory_confidence:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 25
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_left_31300:d0:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 26
+      },
+      "mode": "WRITE",
+      "write_branch": "WRITE",
+      "history_events": 0,
+      "prefix_tokens": 324,
+      "prefix_utf8_sha256": "6d312bf7b07cbd98d7caa4dc9b0dab74e50b1b910e40d39a9c095c2bb1748dd7",
+      "prefix_int64_sha256": "8b2f0f0d3f65d7c88fd3e9331fd0490d8b508eb2b89c08a554f529c90bebeab0",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_left_31400:d0:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 27
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d16:counterfactual_memory_confidence:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 28
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_left_31300:d32:counterfactual_memory_corruption:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 29
+      },
+      "mode": "WRITE",
+      "write_branch": "CORRECT",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "fb077bffc24a8a82be38ac2897a716433b4e2a758f8ceb3bfad6463137e0cc80",
+      "prefix_int64_sha256": "b2b4b1aed80d095b6806390d336437f6d499b76065ed2e300c55ba361d388c30",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_left_31300:d24:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 30
+      },
+      "mode": "WRITE",
+      "write_branch": "EMPTY",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "a17e3fceb784509c8eac9fa8eda3fc068a11328fa9801e5fe8d51a75d32cd6ad",
+      "prefix_int64_sha256": "3b0696a84980ac5766bb0dde5e91d85bbbf709ebaa73ee6b778342e019c1d4db",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_left_31000:d0:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 31
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_left_31000/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_right_31110:d0:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 32
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_right_31110/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_right_31410:d32:counterfactual_memory_corruption:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 33
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "44b6f32c465287fedc424d192fb620e905f0c9041901aeb3c3bd51adaa964521",
+      "prefix_int64_sha256": "466ef67eb2f0290d751d14e871de81ff6253824bd5cc317d83d4e15bd93705a5",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_left_31300:d16:counterfactual_memory_confidence:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 34
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_right_31510:d32:counterfactual_memory_corruption:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 35
+      },
+      "mode": "WRITE",
+      "write_branch": "CORRECT",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "0637d5f3ed8cac2714c4152034d6c4a546476eaa1c769e2b0dd17d0f16d3eb52",
+      "prefix_int64_sha256": "1f05221dee3733613f276020c44a58b47ba997a3c7ff43c82a0317ca39642def",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_right_31010:d8:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 36
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_left_31300:d24:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 37
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_right_31210:d32:counterfactual_memory_corruption:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 38
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "44b6f32c465287fedc424d192fb620e905f0c9041901aeb3c3bd51adaa964521",
+      "prefix_int64_sha256": "466ef67eb2f0290d751d14e871de81ff6253824bd5cc317d83d4e15bd93705a5",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_right_31110:d24:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 39
+      },
+      "mode": "WRITE",
+      "write_branch": "EMPTY",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "debc725f0b8f4abe22b7c05b34ff320dd948db06bbc33a0b3cda41bd080292f3",
+      "prefix_int64_sha256": "376bc65e92d762da3aaf7372491f0fca535204949c82e3bdbaf141f393a8bb9f",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_right_31110/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_left_31300:d16:counterfactual_memory_confidence:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 40
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "a216a075dae36faf250b4c532c63f2cc49e326663ed05344b9d57b02638063ad",
+      "prefix_int64_sha256": "b7cb3e5b844b159be1bb0936b3022ba12d3fe97fa43299dd9f9ed97874559f1f",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_right_31310:d16:counterfactual_memory_confidence:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 41
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_right_31010:d32:counterfactual_memory_corruption:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 42
+      },
+      "mode": "WRITE",
+      "write_branch": "CORRECT",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "0637d5f3ed8cac2714c4152034d6c4a546476eaa1c769e2b0dd17d0f16d3eb52",
+      "prefix_int64_sha256": "1f05221dee3733613f276020c44a58b47ba997a3c7ff43c82a0317ca39642def",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_right_31210:d16:counterfactual_memory_confidence:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 43
+      },
+      "mode": "WRITE",
+      "write_branch": "KEEP",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "0fd1035e246678bcac5b88955754d3015b16cc7555d10f897e621d7cb7d244bf",
+      "prefix_int64_sha256": "f03ea036a005ea11e3879cf5f42972af6dad982e9a3c9e90ec2c8404602f470e",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_right_31310:d8:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 44
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 313,
+      "prefix_utf8_sha256": "a9a52c305a86cb075a1edf8857bfc90be4c6bdb609911a4e3e7746303590cf29",
+      "prefix_int64_sha256": "2c87027e128f40b84d55fa059d64b171123a0197981743c180f1f64c4ec77011",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_right_31010:d8:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 45
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 313,
+      "prefix_utf8_sha256": "a9a52c305a86cb075a1edf8857bfc90be4c6bdb609911a4e3e7746303590cf29",
+      "prefix_int64_sha256": "2c87027e128f40b84d55fa059d64b171123a0197981743c180f1f64c4ec77011",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d32:counterfactual_memory_corruption:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 46
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "76d6de1a5409abdb107dbe0c906b5109ec2ace8d4e747466eaff4345d2e3de7a",
+      "prefix_int64_sha256": "eeac4a3e6ec8d22fb862f267b8932492a3857f826ca71586287a7f457a188745",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_right_31110:d24:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 47
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_right_31110/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_right_31010:d24:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 48
+      },
+      "mode": "WRITE",
+      "write_branch": "EMPTY",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "debc725f0b8f4abe22b7c05b34ff320dd948db06bbc33a0b3cda41bd080292f3",
+      "prefix_int64_sha256": "376bc65e92d762da3aaf7372491f0fca535204949c82e3bdbaf141f393a8bb9f",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_right_31510:d0:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 49
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d0:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 50
+      },
+      "mode": "WRITE",
+      "write_branch": "WRITE",
+      "history_events": 0,
+      "prefix_tokens": 324,
+      "prefix_utf8_sha256": "6d312bf7b07cbd98d7caa4dc9b0dab74e50b1b910e40d39a9c095c2bb1748dd7",
+      "prefix_int64_sha256": "8b2f0f0d3f65d7c88fd3e9331fd0490d8b508eb2b89c08a554f529c90bebeab0",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_right_31210:d16:counterfactual_memory_confidence:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 51
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "ca466c2d555d6c99a7783f1a810ce1373ccb27e11b08f298108ae826530de8be",
+      "prefix_int64_sha256": "5386f78fc33b2a3092044e26800eb60e1b690724c44330a31ca499598a0d5853",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_right_31210:d0:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 52
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_left_31400:d0:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 53
+      },
+      "mode": "WRITE",
+      "write_branch": "WRITE",
+      "history_events": 0,
+      "prefix_tokens": 324,
+      "prefix_utf8_sha256": "6d312bf7b07cbd98d7caa4dc9b0dab74e50b1b910e40d39a9c095c2bb1748dd7",
+      "prefix_int64_sha256": "8b2f0f0d3f65d7c88fd3e9331fd0490d8b508eb2b89c08a554f529c90bebeab0",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d24:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 54
+      },
+      "mode": "WRITE",
+      "write_branch": "EMPTY",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "a17e3fceb784509c8eac9fa8eda3fc068a11328fa9801e5fe8d51a75d32cd6ad",
+      "prefix_int64_sha256": "3b0696a84980ac5766bb0dde5e91d85bbbf709ebaa73ee6b778342e019c1d4db",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d24:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 55
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_left_31200:d32:counterfactual_memory_corruption:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 56
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "76d6de1a5409abdb107dbe0c906b5109ec2ace8d4e747466eaff4345d2e3de7a",
+      "prefix_int64_sha256": "eeac4a3e6ec8d22fb862f267b8932492a3857f826ca71586287a7f457a188745",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_right_31110:d16:counterfactual_memory_confidence:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 57
+      },
+      "mode": "WRITE",
+      "write_branch": "KEEP",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "0fd1035e246678bcac5b88955754d3015b16cc7555d10f897e621d7cb7d244bf",
+      "prefix_int64_sha256": "f03ea036a005ea11e3879cf5f42972af6dad982e9a3c9e90ec2c8404602f470e",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_right_31110/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_left_31000:d0:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 58
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "74bc90c07bb747a1e1ea46c9d14e5daa815a5f55ba4aec3d11c657c73df6447f",
+      "prefix_int64_sha256": "215c54513daad021a51cf3e66fea44a40dba1eb33022c8e66ec8cbc83ea814ec",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_left_31000/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_right_31310:d32:counterfactual_memory_corruption:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 59
+      },
+      "mode": "WRITE",
+      "write_branch": "CORRECT",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "0637d5f3ed8cac2714c4152034d6c4a546476eaa1c769e2b0dd17d0f16d3eb52",
+      "prefix_int64_sha256": "1f05221dee3733613f276020c44a58b47ba997a3c7ff43c82a0317ca39642def",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_left_31400:d32:counterfactual_memory_corruption:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 60
+      },
+      "mode": "WRITE",
+      "write_branch": "CORRECT",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "fb077bffc24a8a82be38ac2897a716433b4e2a758f8ceb3bfad6463137e0cc80",
+      "prefix_int64_sha256": "b2b4b1aed80d095b6806390d336437f6d499b76065ed2e300c55ba361d388c30",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_left_31400:d8:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 61
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 313,
+      "prefix_utf8_sha256": "719e5e5ffb91d4a87e10e549d2e27a642c3683039732c60b1a9a9b2f0036bcf2",
+      "prefix_int64_sha256": "416e1a83b9b5c9c89ecf8aa67f00bc7ddf5aca42e802e55c34215761700ed29e",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_left_31200:d8:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 62
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 313,
+      "prefix_utf8_sha256": "719e5e5ffb91d4a87e10e549d2e27a642c3683039732c60b1a9a9b2f0036bcf2",
+      "prefix_int64_sha256": "416e1a83b9b5c9c89ecf8aa67f00bc7ddf5aca42e802e55c34215761700ed29e",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_right_31510:d0:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 63
+      },
+      "mode": "WRITE",
+      "write_branch": "WRITE",
+      "history_events": 0,
+      "prefix_tokens": 324,
+      "prefix_utf8_sha256": "93d47dfdec18020cafc98c4710f8d61825bab8dde6812dd9302c49da11e42760",
+      "prefix_int64_sha256": "3d07546b87ac1d77ade4e9092e31c48c0df70b6579933d1729038caa9f408933",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_right_31410:d24:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 64
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 313,
+      "prefix_utf8_sha256": "7897d0ed89eec292e140859165cc5974db4920041568ae2e7e95480bd2a123d2",
+      "prefix_int64_sha256": "d426ad5760ebfd48f3e650f345d3b9d2e38ffa014e4a7ea5a98d2c294721495f",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_left_31400:d16:counterfactual_memory_confidence:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 65
+      },
+      "mode": "WRITE",
+      "write_branch": "KEEP",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "cc931e3c0fbef3e072d56bb8e00b71c8d7112e84e52b8e8839b366bea9fb89ff",
+      "prefix_int64_sha256": "2bac1cec065042dec1bb73808137bc073ce4773491bec581c828491a709a410d",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_right_31510:d16:counterfactual_memory_confidence:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 66
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_left_31200:d24:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 67
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 313,
+      "prefix_utf8_sha256": "334a4e1cb2c9083ecfb5e8dcd04690151b103d064a9d92fd88f5c517daaa9f75",
+      "prefix_int64_sha256": "63513fe6fd69d6bd2f18480bddb525e51bcddfe2be05da60e0d63de41731557e",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_right_31510:d32:counterfactual_memory_corruption:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 68
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "44b6f32c465287fedc424d192fb620e905f0c9041901aeb3c3bd51adaa964521",
+      "prefix_int64_sha256": "466ef67eb2f0290d751d14e871de81ff6253824bd5cc317d83d4e15bd93705a5",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_right_31210:d16:counterfactual_memory_confidence:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 69
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d8:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 70
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_left_31000:d24:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 71
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_left_31000/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_left_31300:d16:counterfactual_memory_confidence:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 72
+      },
+      "mode": "WRITE",
+      "write_branch": "KEEP",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "cc931e3c0fbef3e072d56bb8e00b71c8d7112e84e52b8e8839b366bea9fb89ff",
+      "prefix_int64_sha256": "2bac1cec065042dec1bb73808137bc073ce4773491bec581c828491a709a410d",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_left_31200:d16:counterfactual_memory_confidence:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 73
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "a216a075dae36faf250b4c532c63f2cc49e326663ed05344b9d57b02638063ad",
+      "prefix_int64_sha256": "b7cb3e5b844b159be1bb0936b3022ba12d3fe97fa43299dd9f9ed97874559f1f",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_left_31400:d8:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 74
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_left_31400/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_right_31110:d0:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 75
+      },
+      "mode": "WRITE",
+      "write_branch": "WRITE",
+      "history_events": 0,
+      "prefix_tokens": 324,
+      "prefix_utf8_sha256": "93d47dfdec18020cafc98c4710f8d61825bab8dde6812dd9302c49da11e42760",
+      "prefix_int64_sha256": "3d07546b87ac1d77ade4e9092e31c48c0df70b6579933d1729038caa9f408933",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_right_31110/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_left_31100:d32:counterfactual_memory_corruption:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 76
+      },
+      "mode": "WRITE",
+      "write_branch": "CORRECT",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "fb077bffc24a8a82be38ac2897a716433b4e2a758f8ceb3bfad6463137e0cc80",
+      "prefix_int64_sha256": "b2b4b1aed80d095b6806390d336437f6d499b76065ed2e300c55ba361d388c30",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_left_31100/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_right_31310:d8:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 77
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_right_31210:d32:counterfactual_memory_corruption:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 78
+      },
+      "mode": "WRITE",
+      "write_branch": "CORRECT",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "0637d5f3ed8cac2714c4152034d6c4a546476eaa1c769e2b0dd17d0f16d3eb52",
+      "prefix_int64_sha256": "1f05221dee3733613f276020c44a58b47ba997a3c7ff43c82a0317ca39642def",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_left_31300:d0:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 79
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_01_right_31110:d24:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 80
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 313,
+      "prefix_utf8_sha256": "7897d0ed89eec292e140859165cc5974db4920041568ae2e7e95480bd2a123d2",
+      "prefix_int64_sha256": "d426ad5760ebfd48f3e650f345d3b9d2e38ffa014e4a7ea5a98d2c294721495f",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_01_right_31110/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_right_31410:d8:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 81
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_right_31010:d0:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 82
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "097ddbce8401f257f5468af7170215302ce72d5431291b68c8752707cc06db07",
+      "prefix_int64_sha256": "f7668d35a82db5c43a827173d353df082d2a9ce2d83adf3a5ce91d79cada1c14",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_right_31510:d24:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 83
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_right_31210:d8:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 84
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 313,
+      "prefix_utf8_sha256": "a9a52c305a86cb075a1edf8857bfc90be4c6bdb609911a4e3e7746303590cf29",
+      "prefix_int64_sha256": "2c87027e128f40b84d55fa059d64b171123a0197981743c180f1f64c4ec77011",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_left_31300:d32:counterfactual_memory_corruption:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 85
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "76d6de1a5409abdb107dbe0c906b5109ec2ace8d4e747466eaff4345d2e3de7a",
+      "prefix_int64_sha256": "eeac4a3e6ec8d22fb862f267b8932492a3857f826ca71586287a7f457a188745",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_left_31300/obs_0032.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_right_31410:d16:counterfactual_memory_confidence:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 86
+      },
+      "mode": "WRITE",
+      "write_branch": "KEEP",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "0fd1035e246678bcac5b88955754d3015b16cc7555d10f897e621d7cb7d244bf",
+      "prefix_int64_sha256": "f03ea036a005ea11e3879cf5f42972af6dad982e9a3c9e90ec2c8404602f470e",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_left_31200:d8:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 87
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "89d4c29e4d47f888d57875825f0ca916874bf511f1ef8b2915c8b50acca00064",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_left_31200/obs_0008.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d0:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 88
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "912d1fa9b36a0bd9f6e8f77c62a2bd0891a2e41ea17a491cdb4b4148909b650c",
+      "prefix_int64_sha256": "4bcd9388465d7c2171a5144ce17138003c51a64bbfefcba583db06498378b33d",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_right_31510:d16:counterfactual_memory_confidence:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 89
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "ca466c2d555d6c99a7783f1a810ce1373ccb27e11b08f298108ae826530de8be",
+      "prefix_int64_sha256": "5386f78fc33b2a3092044e26800eb60e1b690724c44330a31ca499598a0d5853",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_right_31510/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_02_right_31210:d0:static_hold_protocol:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 90
+      },
+      "mode": "WRITE",
+      "write_branch": "WRITE",
+      "history_events": 0,
+      "prefix_tokens": 324,
+      "prefix_utf8_sha256": "93d47dfdec18020cafc98c4710f8d61825bab8dde6812dd9302c49da11e42760",
+      "prefix_int64_sha256": "3d07546b87ac1d77ade4e9092e31c48c0df70b6579933d1729038caa9f408933",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_02_right_31210/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_03_right_31310:d24:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 91
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 313,
+      "prefix_utf8_sha256": "7897d0ed89eec292e140859165cc5974db4920041568ae2e7e95480bd2a123d2",
+      "prefix_int64_sha256": "d426ad5760ebfd48f3e650f345d3b9d2e38ffa014e4a7ea5a98d2c294721495f",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_03_right_31310/obs_0024.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_right_31410:d0:static_hold_protocol:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 92
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "097ddbce8401f257f5468af7170215302ce72d5431291b68c8752707cc06db07",
+      "prefix_int64_sha256": "f7668d35a82db5c43a827173d353df082d2a9ce2d83adf3a5ce91d79cada1c14",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_04_right_31410:d0:static_hold_protocol:READ",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 93
+      },
+      "mode": "READ",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 263,
+      "prefix_utf8_sha256": "3aca2c3c84d8d3ad1106c93e5d04f6bf49b15567c44956084510cdcbbfed2905",
+      "prefix_int64_sha256": "e5997f19109bcc2cb14f5e54ea8e70008b6ad78fcd8e138a56a758aa14a24424",
+      "normalized_state32_sha256": "c7761f1713dbdc4dc42dfd6046dc22c3a0d1a701a640fb308dc933b5b4936c56",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_04_right_31410/obs_0000.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_05_left_31500:d16:counterfactual_memory_confidence:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 94
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "a216a075dae36faf250b4c532c63f2cc49e326663ed05344b9d57b02638063ad",
+      "prefix_int64_sha256": "b7cb3e5b844b159be1bb0936b3022ba12d3fe97fa43299dd9f9ed97874559f1f",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_05_left_31500/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_left_31000:d16:counterfactual_memory_confidence:WRITE",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 95
+      },
+      "mode": "WRITE",
+      "write_branch": "KEEP",
+      "history_events": 0,
+      "prefix_tokens": 333,
+      "prefix_utf8_sha256": "cc931e3c0fbef3e072d56bb8e00b71c8d7112e84e52b8e8839b366bea9fb89ff",
+      "prefix_int64_sha256": "2bac1cec065042dec1bb73808137bc073ce4773491bec581c828491a709a410d",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_left_31000/obs_0016.npz"
+    },
+    {
+      "sample_id": "fresh_protocol_layout_00_right_31010:d32:counterfactual_memory_corruption:SUBTASK",
+      "source": {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/fit_subsets_v1/fit96.train.jsonl",
+        "line_1based": 96
+      },
+      "mode": "SUBTASK",
+      "write_branch": null,
+      "history_events": 0,
+      "prefix_tokens": 346,
+      "prefix_utf8_sha256": "44b6f32c465287fedc424d192fb620e905f0c9041901aeb3c3bd51adaa964521",
+      "prefix_int64_sha256": "466ef67eb2f0290d751d14e871de81ff6253824bd5cc317d83d4e15bd93705a5",
+      "normalized_state32_sha256": "e0ee58c619adf37ad75a86488edae6d9e9fd1d9c739aaf7bd4cde4ebb825e346",
+      "actual_prefix_bytes_equal": true,
+      "actual_prefix_ids_equal": true,
+      "target_mutation_prefix_invariant": true,
+      "source_npz": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/fresh_capture_v2/episodes/fresh_protocol_layout_00_right_31010/obs_0032.npz"
+    }
+  ]
+}

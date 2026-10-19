@@ -1,0 +1,2457 @@
+{
+  "sequence_status": "completed",
+  "formal_3000_training": false,
+  "task_SR_measured": false,
+  "runs": [
+    {
+      "name": "00_baseline",
+      "stage": "protocol",
+      "size": 9,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/00_baseline/report.json",
+      "source_sha256": "bb08c9d70eb92862fdc4219a8f935025d8e9b3393ec7cee2a24154224a4b2c75",
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 16.664328151279026,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6921.8671875,
+        "peak_reserved_mib": 7036.0,
+        "host_peak_rss_mib": 22925.5
+      },
+      "sampled_card_peak_mib": 8426.0,
+      "elapsed_s": 54.605045440999675,
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 0,
+      "max_trainable_delta": 0.0,
+      "trainable_numel": 131072,
+      "trainable_tensors": 4
+    },
+    {
+      "name": "protocol_9_001",
+      "stage": "protocol",
+      "size": 9,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_001/report.json",
+      "source_sha256": "61ca38215dffe242864a59dc8ec828379ab58e8628c826dbdc9959db6d6a921b",
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 16.66384580400255,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6965.9189453125,
+        "peak_reserved_mib": 7146.0,
+        "host_peak_rss_mib": 25071.13671875
+      },
+      "sampled_card_peak_mib": 8556.0,
+      "elapsed_s": 55.66714727400176,
+      "training": {
+        "loss": 16.174227237701416,
+        "high_ce": 16.174227237701416,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 1.0509454011917114,
+        "updates": 1,
+        "global_step": 1,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": false,
+        "exact_resume": false,
+        "reason": "independent original-SFT initialization"
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 4,
+        "trainable_finite_grad": 4,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 2,
+      "max_trainable_delta": 4.999999873689376e-05,
+      "trainable_numel": 131072,
+      "trainable_tensors": 4,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 0,
+          "data_fingerprint": "4f9177bb0090bd092762e11249c14d0411f2b7b113e5cc53b223214c3d10042c"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 4,
+          "data_fingerprint": "4f9177bb0090bd092762e11249c14d0411f2b7b113e5cc53b223214c3d10042c"
+        }
+      }
+    },
+    {
+      "name": "language_warmup_9_001",
+      "stage": "language_warmup",
+      "size": 9,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_001/report.json",
+      "source_sha256": "41b8dde45cdde8422d45149dcff09cba23413c37e38ed61bca5b3d5d7547a7e4",
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 16.664168463812935,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7098.55810546875,
+        "peak_reserved_mib": 7324.0,
+        "host_peak_rss_mib": 25057.23828125
+      },
+      "sampled_card_peak_mib": 8754.0,
+      "elapsed_s": 55.336423849999846,
+      "training": {
+        "loss": 16.174227237701416,
+        "high_ce": 16.174227237701416,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 1.5977951288223267,
+        "updates": 1,
+        "global_step": 1,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": false,
+        "exact_resume": false,
+        "reason": "independent original-SFT initialization"
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 144,
+        "trainable_finite_grad": 144,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 72,
+      "max_trainable_delta": 5.0000002374872565e-05,
+      "trainable_numel": 3686400,
+      "trainable_tensors": 144,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0006570291589014232,
+          "max_case_masked_all_layer_kv_relative_rms": 0.005565026019602456,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.001635909080505371,
+        "max_sdk_hand_units": 0.39923095703125
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 0,
+          "data_fingerprint": "1539c673d11d69acb923ac7e78152a2fa8c558db85392bd6334958aa963dffdb"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 4,
+          "data_fingerprint": "1539c673d11d69acb923ac7e78152a2fa8c558db85392bd6334958aa963dffdb"
+        }
+      }
+    },
+    {
+      "name": "protocol_9_100",
+      "stage": "protocol",
+      "size": 9,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_100/report.json",
+      "source_sha256": "d3bbee6e5ba14a5809fd71b16963327932c26617ebe2147ce8af4aedb229e65d",
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 15.336394098069933,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6967.435546875,
+        "peak_reserved_mib": 7146.0,
+        "host_peak_rss_mib": 20464.83984375
+      },
+      "sampled_card_peak_mib": 8540.0,
+      "elapsed_s": 80.43106083499879,
+      "training": {
+        "loss": 16.0993708721315,
+        "high_ce": 16.0993708721315,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 1.9944792624675867,
+        "updates": 99,
+        "global_step": 100,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 1,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 4,
+        "trainable_finite_grad": 4,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 4,
+      "max_trainable_delta": 0.0074579715728759766,
+      "trainable_numel": 131072,
+      "trainable_tensors": 4,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 4,
+          "data_fingerprint": "4f9177bb0090bd092762e11249c14d0411f2b7b113e5cc53b223214c3d10042c"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 400,
+          "data_fingerprint": "4f9177bb0090bd092762e11249c14d0411f2b7b113e5cc53b223214c3d10042c"
+        }
+      }
+    },
+    {
+      "name": "language_warmup_9_100",
+      "stage": "language_warmup",
+      "size": 9,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_100/report.json",
+      "source_sha256": "7e25935a55d0b541e9c74e8aae00d23accc4e4e6057dbe2ed55cd3166789ad7a",
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 10.58705997467041,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7129.9267578125,
+        "peak_reserved_mib": 7354.0,
+        "host_peak_rss_mib": 20560.28125
+      },
+      "sampled_card_peak_mib": 8774.0,
+      "elapsed_s": 184.8414139589986,
+      "training": {
+        "loss": 14.048774108334328,
+        "high_ce": 14.044175174501207,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0045989338331209086,
+        "grad_norm": 2.7012807347557763,
+        "updates": 99,
+        "global_step": 100,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 1,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 144,
+        "trainable_finite_grad": 144,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 144,
+      "max_trainable_delta": 0.006890427321195602,
+      "trainable_numel": 3686400,
+      "trainable_tensors": 144,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0012918991269543767,
+          "max_case_masked_all_layer_kv_relative_rms": 0.04950269068853484,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.004169940948486328,
+        "max_sdk_hand_units": 1.2786865234375
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.00574108213186264,
+          "max_case_masked_all_layer_kv_relative_rms": 0.04847594260668063,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.02157771587371826,
+        "max_sdk_hand_units": 0.84747314453125
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 4,
+          "data_fingerprint": "1539c673d11d69acb923ac7e78152a2fa8c558db85392bd6334958aa963dffdb"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 400,
+          "data_fingerprint": "1539c673d11d69acb923ac7e78152a2fa8c558db85392bd6334958aa963dffdb"
+        }
+      }
+    },
+    {
+      "name": "protocol_9_200",
+      "stage": "protocol",
+      "size": 9,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_200/report.json",
+      "source_sha256": "874f45df40c002babe44abedb0140887e75d1f94557209557bac3c7b2733c0d1",
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 12.250402662489149,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6968.462890625,
+        "peak_reserved_mib": 7418.0,
+        "host_peak_rss_mib": 20562.78125
+      },
+      "sampled_card_peak_mib": 8848.0,
+      "elapsed_s": 81.4562331699999,
+      "training": {
+        "loss": 13.913418107032776,
+        "high_ce": 13.913418107032776,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 4.020433926582337,
+        "updates": 100,
+        "global_step": 200,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 100,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 4,
+        "trainable_finite_grad": 4,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 4,
+      "max_trainable_delta": 0.01059237215667963,
+      "trainable_numel": 131072,
+      "trainable_tensors": 4,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 400,
+          "data_fingerprint": "4f9177bb0090bd092762e11249c14d0411f2b7b113e5cc53b223214c3d10042c"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 800,
+          "data_fingerprint": "4f9177bb0090bd092762e11249c14d0411f2b7b113e5cc53b223214c3d10042c"
+        }
+      },
+      "total_sample_presentations": 800,
+      "per_sample_presentations_min_max": [
+        88,
+        89
+      ],
+      "observed_distinct_training_rows": 9,
+      "row_epoch_equivalent": 88.88888888888889,
+      "consecutive_microbatches": true,
+      "resume_boundary_sampler_exact": true
+    },
+    {
+      "name": "language_warmup_9_200",
+      "stage": "language_warmup",
+      "size": 9,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_200/report.json",
+      "source_sha256": "38c9b8deb031fe2bdcee0e09c6d5e671ec4d910b4908e8387b22a534705e010e",
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 8.110366980234781,
+        "gold_tokens": 159,
+        "gold_correct": 15,
+        "eos": {
+          "passed": 7,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7128.9033203125,
+        "peak_reserved_mib": 7600.0,
+        "host_peak_rss_mib": 20563.0859375
+      },
+      "sampled_card_peak_mib": 9033.0,
+      "elapsed_s": 174.7611839889978,
+      "training": {
+        "loss": 9.177149690303485,
+        "high_ce": 9.152346678972243,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.02480301133124158,
+        "grad_norm": 12.195453379154205,
+        "updates": 100,
+        "global_step": 200,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 100,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 144,
+        "trainable_finite_grad": 144,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 144,
+      "max_trainable_delta": 0.009090619161725044,
+      "trainable_numel": 3686400,
+      "trainable_tensors": 144,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 0,
+          "max_case_normalized_physical24_rms": 0.002359270816668868,
+          "max_case_masked_all_layer_kv_relative_rms": 0.061400505155376615,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": false,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 0,
+        "max_sdk_arm_rad": 0.005383014678955078,
+        "max_sdk_hand_units": 1.83441162109375
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 0,
+          "max_case_normalized_physical24_rms": 0.007699559908360243,
+          "max_case_masked_all_layer_kv_relative_rms": 0.06113925529844494,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": false,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 0,
+        "max_sdk_arm_rad": 0.025392353534698486,
+        "max_sdk_hand_units": 1.33074951171875
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 400,
+          "data_fingerprint": "1539c673d11d69acb923ac7e78152a2fa8c558db85392bd6334958aa963dffdb"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 800,
+          "data_fingerprint": "1539c673d11d69acb923ac7e78152a2fa8c558db85392bd6334958aa963dffdb"
+        }
+      },
+      "total_sample_presentations": 800,
+      "per_sample_presentations_min_max": [
+        88,
+        89
+      ],
+      "observed_distinct_training_rows": 9,
+      "row_epoch_equivalent": 88.88888888888889,
+      "consecutive_microbatches": true,
+      "resume_boundary_sampler_exact": true
+    },
+    {
+      "name": "protocol_96_100",
+      "stage": "protocol",
+      "size": 96,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_100/report.json",
+      "source_sha256": "89bcb92366dd348a1dd328bf257813b18ba5cc24c21662d4e5d7d2c1e03c1211",
+      "evaluation": {
+        "count": 12,
+        "modes": {
+          "SUBTASK": 4,
+          "WRITE": 4,
+          "READ": 4
+        },
+        "teacher_forced_ce": 15.351948897043863,
+        "gold_tokens": 186,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "nonempty": {
+          "passed": 12,
+          "eligible": 12
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6967.451171875,
+        "peak_reserved_mib": 7148.0,
+        "host_peak_rss_mib": 24179.65234375
+      },
+      "sampled_card_peak_mib": 8545.0,
+      "elapsed_s": 103.71571137000137,
+      "training": {
+        "loss": 16.114059631824492,
+        "high_ce": 16.114059631824492,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 1.8871939632296562,
+        "updates": 100,
+        "global_step": 100,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": false,
+        "exact_resume": false,
+        "reason": "independent original-SFT initialization"
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 4,
+        "trainable_finite_grad": 4,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 4,
+      "max_trainable_delta": 0.0073744431138038635,
+      "trainable_numel": 131072,
+      "trainable_tensors": 4,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 0,
+          "data_fingerprint": "53e1a4fadbb607093b7acc15b657d0d6cecb99ed2e2d3f9235db0c6cf7395669"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 400,
+          "data_fingerprint": "53e1a4fadbb607093b7acc15b657d0d6cecb99ed2e2d3f9235db0c6cf7395669"
+        }
+      }
+    },
+    {
+      "name": "language_warmup_96_100",
+      "stage": "language_warmup",
+      "size": 96,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_100/report.json",
+      "source_sha256": "b6b09e545b46422f771e3357a62be2c4add6db010bce52390c361d5f1e28ba1e",
+      "evaluation": {
+        "count": 12,
+        "modes": {
+          "SUBTASK": 4,
+          "WRITE": 4,
+          "READ": 4
+        },
+        "teacher_forced_ce": 10.618432998657227,
+        "gold_tokens": 186,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "nonempty": {
+          "passed": 12,
+          "eligible": 12
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7129.9267578125,
+        "peak_reserved_mib": 7354.0,
+        "host_peak_rss_mib": 24500.43359375
+      },
+      "sampled_card_peak_mib": 8789.0,
+      "elapsed_s": 196.70220004099974,
+      "training": {
+        "loss": 14.118689247819347,
+        "high_ce": 14.114218969345092,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.004470278474254883,
+        "grad_norm": 2.6186818933486937,
+        "updates": 100,
+        "global_step": 100,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": false,
+        "exact_resume": false,
+        "reason": "independent original-SFT initialization"
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 144,
+        "trainable_finite_grad": 144,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 144,
+      "max_trainable_delta": 0.006993113085627556,
+      "trainable_numel": 3686400,
+      "trainable_tensors": 144,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0015639762859791517,
+          "max_case_masked_all_layer_kv_relative_rms": 0.04882937120798141,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0033707618713378906,
+        "max_sdk_hand_units": 1.1429443359375
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0033568968065083027,
+          "max_case_masked_all_layer_kv_relative_rms": 0.047924729112847085,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.012018799781799316,
+        "max_sdk_hand_units": 0.94366455078125
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 0,
+          "data_fingerprint": "7c137c5950704b7300d303464f20486157dcb2bb66d2349ce0a849375776ca45"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 400,
+          "data_fingerprint": "7c137c5950704b7300d303464f20486157dcb2bb66d2349ce0a849375776ca45"
+        }
+      }
+    },
+    {
+      "name": "protocol_96_200",
+      "stage": "protocol",
+      "size": 96,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_200/report.json",
+      "source_sha256": "f0cbb6e4038c30e8c0c1db663671653ddfa12d58078f4fb017c1dbe73e38a7e9",
+      "evaluation": {
+        "count": 12,
+        "modes": {
+          "SUBTASK": 4,
+          "WRITE": 4,
+          "READ": 4
+        },
+        "teacher_forced_ce": 12.284276564915976,
+        "gold_tokens": 186,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "nonempty": {
+          "passed": 12,
+          "eligible": 12
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6968.462890625,
+        "peak_reserved_mib": 7608.0,
+        "host_peak_rss_mib": 20528.94921875
+      },
+      "sampled_card_peak_mib": 9029.0,
+      "elapsed_s": 148.0799208110002,
+      "training": {
+        "loss": 13.959981651306153,
+        "high_ce": 13.959981651306153,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 3.978388886451721,
+        "updates": 100,
+        "global_step": 200,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 100,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 4,
+        "trainable_finite_grad": 4,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 4,
+      "max_trainable_delta": 0.010371739976108074,
+      "trainable_numel": 131072,
+      "trainable_tensors": 4,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 400,
+          "data_fingerprint": "53e1a4fadbb607093b7acc15b657d0d6cecb99ed2e2d3f9235db0c6cf7395669"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 800,
+          "data_fingerprint": "53e1a4fadbb607093b7acc15b657d0d6cecb99ed2e2d3f9235db0c6cf7395669"
+        }
+      }
+    },
+    {
+      "name": "language_warmup_96_200",
+      "stage": "language_warmup",
+      "size": 96,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_200/report.json",
+      "source_sha256": "b36e8884a4d203381f5d386d4bfce96afbce3df45cd40dcc350190d2cc104aeb",
+      "evaluation": {
+        "count": 12,
+        "modes": {
+          "SUBTASK": 4,
+          "WRITE": 4,
+          "READ": 4
+        },
+        "teacher_forced_ce": 6.667239665985107,
+        "gold_tokens": 186,
+        "gold_correct": 26,
+        "eos": {
+          "passed": 10,
+          "eligible": 12
+        },
+        "nonempty": {
+          "passed": 12,
+          "eligible": 12
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 8
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 4
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 12
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7128.9033203125,
+        "peak_reserved_mib": 7790.0,
+        "host_peak_rss_mib": 20564.0390625
+      },
+      "sampled_card_peak_mib": 9204.0,
+      "elapsed_s": 200.13416682599927,
+      "training": {
+        "loss": 8.920325618833303,
+        "high_ce": 8.896388351917267,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.023937266916036606,
+        "grad_norm": 5.791542019844055,
+        "updates": 100,
+        "global_step": 200,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 100,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 144,
+        "trainable_finite_grad": 144,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 144,
+      "max_trainable_delta": 0.009430734440684319,
+      "trainable_numel": 3686400,
+      "trainable_tensors": 144,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 0,
+          "max_case_normalized_physical24_rms": 0.0020500561222434044,
+          "max_case_masked_all_layer_kv_relative_rms": 0.05828153586704764,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": false,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 0,
+        "max_sdk_arm_rad": 0.005173087120056152,
+        "max_sdk_hand_units": 1.71417236328125
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 0,
+          "max_case_normalized_physical24_rms": 0.006029854062944651,
+          "max_case_masked_all_layer_kv_relative_rms": 0.05774013105442692,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": false,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 0,
+        "max_sdk_arm_rad": 0.021185457706451416,
+        "max_sdk_hand_units": 1.24774169921875
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 400,
+          "data_fingerprint": "7c137c5950704b7300d303464f20486157dcb2bb66d2349ce0a849375776ca45"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 800,
+          "data_fingerprint": "7c137c5950704b7300d303464f20486157dcb2bb66d2349ce0a849375776ca45"
+        }
+      }
+    },
+    {
+      "name": "protocol_96_300",
+      "stage": "protocol",
+      "size": 96,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_300/report.json",
+      "source_sha256": "9e3665f55ea032ac4a3d0605d77a99334103cdfb88a587732ac88a23177a11cd",
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 10.35107829173406,
+        "gold_tokens": 1488,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6967.451171875,
+        "peak_reserved_mib": 7148.0,
+        "host_peak_rss_mib": 20417.49609375
+      },
+      "sampled_card_peak_mib": 8531.0,
+      "elapsed_s": 228.28553081300197,
+      "training": {
+        "loss": 11.214428391456604,
+        "high_ce": 11.214428391456604,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 2.761510192155838,
+        "updates": 100,
+        "global_step": 300,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 200,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 4,
+        "trainable_finite_grad": 4,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 4,
+      "max_trainable_delta": 0.011893484741449356,
+      "trainable_numel": 131072,
+      "trainable_tensors": 4,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 800,
+          "data_fingerprint": "53e1a4fadbb607093b7acc15b657d0d6cecb99ed2e2d3f9235db0c6cf7395669"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 1200,
+          "data_fingerprint": "53e1a4fadbb607093b7acc15b657d0d6cecb99ed2e2d3f9235db0c6cf7395669"
+        }
+      },
+      "total_sample_presentations": 1200,
+      "per_sample_presentations_min_max": [
+        12,
+        13
+      ],
+      "observed_distinct_training_rows": 96,
+      "row_epoch_equivalent": 12.5,
+      "consecutive_microbatches": true,
+      "resume_boundary_sampler_exact": true
+    },
+    {
+      "name": "language_warmup_96_300",
+      "stage": "language_warmup",
+      "size": 96,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/report.json",
+      "source_sha256": "80496558e73174f58d98f70c1f56fd59e7708d0a42efd85efcafc1f978731bf2",
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 2.582778215408325,
+        "gold_tokens": 1488,
+        "gold_correct": 788,
+        "eos": {
+          "passed": 89,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 56,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 5,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 3,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 12,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 1,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7129.9267578125,
+        "peak_reserved_mib": 7354.0,
+        "host_peak_rss_mib": 20366.77734375
+      },
+      "sampled_card_peak_mib": 8777.0,
+      "elapsed_s": 215.14632867399996,
+      "training": {
+        "loss": 4.412911088881083,
+        "high_ce": 4.393578965067864,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.01933212381321937,
+        "grad_norm": 9.748432893753051,
+        "updates": 100,
+        "global_step": 300,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 200,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 144,
+        "trainable_finite_grad": 144,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 144,
+      "max_trainable_delta": 0.010501985438168049,
+      "trainable_numel": 3686400,
+      "trainable_tensors": 144,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 4,
+          "max_case_normalized_physical24_rms": 0.0015066646737977862,
+          "max_case_masked_all_layer_kv_relative_rms": 0.05319148468830894,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": false,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 4,
+        "max_sdk_arm_rad": 0.006387948989868164,
+        "max_sdk_hand_units": 1.3817138671875
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 5,
+          "max_case_normalized_physical24_rms": 0.007730783894658089,
+          "max_case_masked_all_layer_kv_relative_rms": 0.052548494999560116,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": false,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 5,
+        "max_sdk_arm_rad": 0.028193891048431396,
+        "max_sdk_hand_units": 1.03411865234375
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 800,
+          "data_fingerprint": "7c137c5950704b7300d303464f20486157dcb2bb66d2349ce0a849375776ca45"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 1200,
+          "data_fingerprint": "7c137c5950704b7300d303464f20486157dcb2bb66d2349ce0a849375776ca45"
+        }
+      },
+      "total_sample_presentations": 1200,
+      "per_sample_presentations_min_max": [
+        12,
+        13
+      ],
+      "observed_distinct_training_rows": 96,
+      "row_epoch_equivalent": 12.5,
+      "consecutive_microbatches": true,
+      "resume_boundary_sampler_exact": true
+    }
+  ],
+  "final_arms": {
+    "protocol_9": {
+      "name": "protocol_9_200",
+      "stage": "protocol",
+      "size": 9,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_200/report.json",
+      "source_sha256": "874f45df40c002babe44abedb0140887e75d1f94557209557bac3c7b2733c0d1",
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 12.250402662489149,
+        "gold_tokens": 159,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6968.462890625,
+        "peak_reserved_mib": 7418.0,
+        "host_peak_rss_mib": 20562.78125
+      },
+      "sampled_card_peak_mib": 8848.0,
+      "elapsed_s": 81.4562331699999,
+      "training": {
+        "loss": 13.913418107032776,
+        "high_ce": 13.913418107032776,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 4.020433926582337,
+        "updates": 100,
+        "global_step": 200,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 100,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 4,
+        "trainable_finite_grad": 4,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 4,
+      "max_trainable_delta": 0.01059237215667963,
+      "trainable_numel": 131072,
+      "trainable_tensors": 4,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 400,
+          "data_fingerprint": "4f9177bb0090bd092762e11249c14d0411f2b7b113e5cc53b223214c3d10042c"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 800,
+          "data_fingerprint": "4f9177bb0090bd092762e11249c14d0411f2b7b113e5cc53b223214c3d10042c"
+        }
+      },
+      "total_sample_presentations": 800,
+      "per_sample_presentations_min_max": [
+        88,
+        89
+      ],
+      "observed_distinct_training_rows": 9,
+      "row_epoch_equivalent": 88.88888888888889,
+      "consecutive_microbatches": true,
+      "resume_boundary_sampler_exact": true
+    },
+    "language_warmup_9": {
+      "name": "language_warmup_9_200",
+      "stage": "language_warmup",
+      "size": 9,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_200/report.json",
+      "source_sha256": "38c9b8deb031fe2bdcee0e09c6d5e671ec4d910b4908e8387b22a534705e010e",
+      "evaluation": {
+        "count": 9,
+        "modes": {
+          "SUBTASK": 3,
+          "READ": 3,
+          "WRITE": 3
+        },
+        "teacher_forced_ce": 8.110366980234781,
+        "gold_tokens": 159,
+        "gold_correct": 15,
+        "eos": {
+          "passed": 7,
+          "eligible": 9
+        },
+        "nonempty": {
+          "passed": 9,
+          "eligible": 9
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 6
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 3
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 9
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7128.9033203125,
+        "peak_reserved_mib": 7600.0,
+        "host_peak_rss_mib": 20563.0859375
+      },
+      "sampled_card_peak_mib": 9033.0,
+      "elapsed_s": 174.7611839889978,
+      "training": {
+        "loss": 9.177149690303485,
+        "high_ce": 9.152346678972243,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.02480301133124158,
+        "grad_norm": 12.195453379154205,
+        "updates": 100,
+        "global_step": 200,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 100,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 144,
+        "trainable_finite_grad": 144,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 144,
+      "max_trainable_delta": 0.009090619161725044,
+      "trainable_numel": 3686400,
+      "trainable_tensors": 144,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 0,
+          "max_case_normalized_physical24_rms": 0.002359270816668868,
+          "max_case_masked_all_layer_kv_relative_rms": 0.061400505155376615,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": false,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 0,
+        "max_sdk_arm_rad": 0.005383014678955078,
+        "max_sdk_hand_units": 1.83441162109375
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 0,
+          "max_case_normalized_physical24_rms": 0.007699559908360243,
+          "max_case_masked_all_layer_kv_relative_rms": 0.06113925529844494,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": false,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 0,
+        "max_sdk_arm_rad": 0.025392353534698486,
+        "max_sdk_hand_units": 1.33074951171875
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 400,
+          "data_fingerprint": "1539c673d11d69acb923ac7e78152a2fa8c558db85392bd6334958aa963dffdb"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 800,
+          "data_fingerprint": "1539c673d11d69acb923ac7e78152a2fa8c558db85392bd6334958aa963dffdb"
+        }
+      },
+      "total_sample_presentations": 800,
+      "per_sample_presentations_min_max": [
+        88,
+        89
+      ],
+      "observed_distinct_training_rows": 9,
+      "row_epoch_equivalent": 88.88888888888889,
+      "consecutive_microbatches": true,
+      "resume_boundary_sampler_exact": true
+    },
+    "protocol_96": {
+      "name": "protocol_96_300",
+      "stage": "protocol",
+      "size": 96,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_300/report.json",
+      "source_sha256": "9e3665f55ea032ac4a3d0605d77a99334103cdfb88a587732ac88a23177a11cd",
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 10.35107829173406,
+        "gold_tokens": 1488,
+        "gold_correct": 0,
+        "eos": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 0,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 6967.451171875,
+        "peak_reserved_mib": 7148.0,
+        "host_peak_rss_mib": 20417.49609375
+      },
+      "sampled_card_peak_mib": 8531.0,
+      "elapsed_s": 228.28553081300197,
+      "training": {
+        "loss": 11.214428391456604,
+        "high_ce": 11.214428391456604,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.0,
+        "grad_norm": 2.761510192155838,
+        "updates": 100,
+        "global_step": 300,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 200,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 4,
+        "trainable_finite_grad": 4,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 4,
+      "max_trainable_delta": 0.011893484741449356,
+      "trainable_numel": 131072,
+      "trainable_tensors": 4,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 8,
+          "max_case_normalized_physical24_rms": 0.0,
+          "max_case_masked_all_layer_kv_relative_rms": 0.0,
+          "all_sdk_actions_exact": true,
+          "all_kv_positions_exact": true
+        },
+        "passed": true,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 8,
+        "max_sdk_arm_rad": 0.0,
+        "max_sdk_hand_units": 0.0
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 800,
+          "data_fingerprint": "53e1a4fadbb607093b7acc15b657d0d6cecb99ed2e2d3f9235db0c6cf7395669"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 1200,
+          "data_fingerprint": "53e1a4fadbb607093b7acc15b657d0d6cecb99ed2e2d3f9235db0c6cf7395669"
+        }
+      },
+      "total_sample_presentations": 1200,
+      "per_sample_presentations_min_max": [
+        12,
+        13
+      ],
+      "observed_distinct_training_rows": 96,
+      "row_epoch_equivalent": 12.5,
+      "consecutive_microbatches": true,
+      "resume_boundary_sampler_exact": true
+    },
+    "language_warmup_96": {
+      "name": "language_warmup_96_300",
+      "stage": "language_warmup",
+      "size": 96,
+      "source_report": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/report.json",
+      "source_sha256": "80496558e73174f58d98f70c1f56fd59e7708d0a42efd85efcafc1f978731bf2",
+      "evaluation": {
+        "count": 96,
+        "modes": {
+          "READ": 32,
+          "SUBTASK": 32,
+          "WRITE": 32
+        },
+        "teacher_forced_ce": 2.582778215408325,
+        "gold_tokens": 1488,
+        "gold_correct": 788,
+        "eos": {
+          "passed": 89,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "first_token_match": {
+          "passed": 56,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 5,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 0,
+          "eligible": 64
+        },
+        "required_terms": {
+          "passed": 3,
+          "eligible": 32
+        },
+        "side_binding_lexical": {
+          "passed": 12,
+          "eligible": 32
+        },
+        "text_exact": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "passed": {
+          "passed": 1,
+          "eligible": 96
+        },
+        "fit_passed": {
+          "passed": 0,
+          "eligible": 96
+        },
+        "all_fit_passed": false
+      },
+      "memory": {
+        "peak_allocated_mib": 7129.9267578125,
+        "peak_reserved_mib": 7354.0,
+        "host_peak_rss_mib": 20366.77734375
+      },
+      "sampled_card_peak_mib": 8777.0,
+      "elapsed_s": 215.14632867399996,
+      "training": {
+        "loss": 4.412911088881083,
+        "high_ce": 4.393578965067864,
+        "fast_ce": 0.0,
+        "fm": 0.0,
+        "kv_anchor": 0.01933212381321937,
+        "grad_norm": 9.748432893753051,
+        "updates": 100,
+        "global_step": 300,
+        "anchor_micro_batches": 0
+      },
+      "resume": {
+        "restored": true,
+        "exact_resume": true,
+        "missing": [],
+        "global_step": 200,
+        "resume_state_version": 1
+      },
+      "gradient_audit": {
+        "trainable_with_grad": 144,
+        "trainable_finite_grad": 144,
+        "frozen_with_grad": 0
+      },
+      "frozen_parameters_exact": true,
+      "changed_trainable_tensors": 144,
+      "max_trainable_delta": 0.010501985438168049,
+      "trainable_numel": 3686400,
+      "trainable_tensors": 144,
+      "retention": {
+        "summary": {
+          "count": 8,
+          "passed": 4,
+          "max_case_normalized_physical24_rms": 0.0015066646737977862,
+          "max_case_masked_all_layer_kv_relative_rms": 0.05319148468830894,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": false,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 4,
+        "max_sdk_arm_rad": 0.006387948989868164,
+        "max_sdk_hand_units": 1.3817138671875
+      },
+      "retention_holdout": {
+        "summary": {
+          "count": 8,
+          "passed": 5,
+          "max_case_normalized_physical24_rms": 0.007730783894658089,
+          "max_case_masked_all_layer_kv_relative_rms": 0.052548494999560116,
+          "all_sdk_actions_exact": false,
+          "all_kv_positions_exact": false
+        },
+        "passed": false,
+        "thresholds": {
+          "normalized_physical24_rms_max": 0.02,
+          "masked_all_layer_kv_relative_rms_max": 0.05,
+          "scope": "engineering local gates; not validated task-level safety or success thresholds"
+        },
+        "physical_action_gate_passed": 8,
+        "kv_gate_passed": 5,
+        "max_sdk_arm_rad": 0.028193891048431396,
+        "max_sdk_hand_units": 1.03411865234375
+      },
+      "sampler": {
+        "sampler_before": {
+          "microbatch_cursor": 800,
+          "data_fingerprint": "7c137c5950704b7300d303464f20486157dcb2bb66d2349ce0a849375776ca45"
+        },
+        "sampler_after": {
+          "microbatch_cursor": 1200,
+          "data_fingerprint": "7c137c5950704b7300d303464f20486157dcb2bb66d2349ce0a849375776ca45"
+        }
+      },
+      "total_sample_presentations": 1200,
+      "per_sample_presentations_min_max": [
+        12,
+        13
+      ],
+      "observed_distinct_training_rows": 96,
+      "row_epoch_equivalent": 12.5,
+      "consecutive_microbatches": true,
+      "resume_boundary_sampler_exact": true
+    }
+  },
+  "total_optimizer_updates": 1000
+}

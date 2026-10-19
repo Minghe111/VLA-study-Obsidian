@@ -1,0 +1,27 @@
+{
+  "schema": "rm65b_history3000_serial_supervisor_independent_source_audit_v1",
+  "status": "passed_readonly_source_review",
+  "script": "/tmp/rm65b_high_sft_history3000_20261019_v1/scripts/run_history3000_sft_supervisor.py",
+  "script_sha256": "3fe50f6e5b56ce97dcdd58b02f65cd4e02715c10cade7192d7c32f2dd1b82d77",
+  "checks": {
+    "source_SHA_matches_frozen": true,
+    "every_train_target_le500": true,
+    "child_finish_before_next_phase": true,
+    "owned_new_session_group_only_cleanup": true,
+    "trainingchild_requires_exactresume_and_frozenproof": true,
+    "no_failed_or_mutated_eval_selected": true,
+    "full600_counts_checked": true,
+    "both_pools_refs8case_gate": true,
+    "two_consecutive_complete_gates_required": true,
+    "fallback_does_not_claim_convergence": true,
+    "no_auto_test_export_closedloop": true,
+    "maxcap24k": true,
+    "legacy96_not_selection": true
+  },
+  "issues": [],
+  "GPU_used": false,
+  "children_or_model_or_optimizer_started_by_auditor": false,
+  "scope": "Static orchestration check, not proof of future child completion or convergence. No existing_CPU_tests repeated.",
+  "reference_seal_checker": "/tmp/check_history3000_reference_seal.py",
+  "live_runner_unmodified": true
+}

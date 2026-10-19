@@ -1,0 +1,40 @@
+{
+  "schema": "dynamic_parallel_capture_cpu_preflight_v1",
+  "checked_at": "2026-10-19",
+  "scope": "CPU-only fake subprocess scheduling and read-only exact v2 plan comparison; no actual simulator/GPU started",
+  "script": "/tmp/rm65b_protocol_history_3000_20261019_v1/scripts/capture_dynamic_protocol_parallel.py",
+  "script_sha256": "2b90110e1955f4544063152fc884c1921c8d40ed87ed33d6a99950183767b70c",
+  "frozen_v2_sha256": "4af8bdfe824a00e41b35408e27b2bb89f5f45977fa16928d0227329f168cf30b",
+  "self_test_argument": "--self-test",
+  "self_test_exit_code": 0,
+  "checks_passed": [
+    "3 CPU subprocesses maximum concurrently",
+    "parent only writes master manifest",
+    "resume verifies receipts and skips 3 completed episodes",
+    "unique per-episode runtime and preserved incomplete attempts",
+    "tampered observation fails receipt validation",
+    "worker failure stops new dispatch and drains existing worker",
+    "failed-before-episode-mkdir runtime reservation advances attempt number"
+  ],
+  "actual_v2_plan_identity_verified": "527182f5a4014f435e3969481a29443f9099039964ab0a8ee69ba9800854b215",
+  "snapshot_of_readonly_plan": {
+    "completed": 7,
+    "pending": 49,
+    "may_be_stale": true
+  },
+  "launch_gate": {
+    "required_flags": [
+      "--execute",
+      "--resume",
+      "--serial-stopped-confirmed"
+    ],
+    "recommended_serial_pid_flag": "--serial-parent-pid 809208",
+    "root_must_confirm": "precise previous serial launcher and its SAPIEN child have stopped before launch",
+    "proc_scan_limitation": "sandbox visibility may hide escalated processes; zero discovered is not shutdown proof"
+  },
+  "maximum_workers": 3,
+  "root_can_choose_workers": 2,
+  "manifest_identity_unchanged": true,
+  "v2_actions_clock_endpoint_validation_unchanged": true,
+  "original_assets_not_mutated": true
+}

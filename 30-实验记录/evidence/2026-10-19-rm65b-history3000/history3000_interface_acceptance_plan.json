@@ -1,0 +1,86 @@
+{
+  "status": "prepared_not_executed_on_new4200",
+  "created_at_utc": "2026-10-19T10:48:45.149951+00:00",
+  "draft_config": {
+    "path": "/tmp/history3000_validation_config_draft.yaml",
+    "sha256": "76a555476834a3ea5b54d5167df22b1fa811851cdc3605e1d0aede659aa1d5ab",
+    "source_config": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/effective_config.yaml",
+    "source_sha256": "f7138a3820b7a41973e0f5c17c11a44f5795c4d2e8a4b3d0594a753253871b0e",
+    "parsed_key_paths_exactly_same_as_source": true,
+    "new_config_keys": []
+  },
+  "builder_checker_static_compatibility": {
+    "builder": "/tmp/rm65b_protocol_history_3000_20261019_v1/scripts/build_history3000.py",
+    "builder_sha256": "99938c5d3c865903da01c44658b04fd2f4f34255aa8f7995ab821a2e708fda15",
+    "checker": "/tmp/rm65b_protocol_history_3000_20261019_v1/scripts/check_history3000_interface.py",
+    "checker_sha256": "40d429b206a73b7afeacf1e893d8dca78ef8fedbe62932b1dbcb5aeee4cd5035",
+    "fields": [
+      "sample_id",
+      "mode",
+      "context.goal/catalogue/visible_history/observed_until_step",
+      "WRITE context.read_ids/selected_memory",
+      "SUBTASK context.read_ids/actor_memory.selected/current_writes",
+      "target_text",
+      "supervision_kind=verified_high_sft",
+      "nonempty provenance",
+      "observation.npz_path",
+      "top and metadata history_version",
+      "decision_step=observed_until_step",
+      "metadata.MEM_ready=false"
+    ],
+    "notes": [
+      "Final build make_record emits verified_high_sft for every split; schema-preview emits protocol_candidate and is intentionally rejected by actual training collator.",
+      "Final sample shapes are compatible; compatibility has not yet been asserted on nonexistent final4200 files.",
+      "All bound/history fields exactly align with history_from_sample and actor current-step guard.",
+      "Validation collator transports val/test tokens without fitting or scoring model outputs; only train.jsonl goes to the training loader."
+    ]
+  },
+  "full4200_command_argv": [
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/scripts/check_history3000_interface.py",
+    "--labels",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/train.jsonl",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/val.jsonl",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/test.jsonl",
+    "--config",
+    "/tmp/history3000_validation_config_draft.yaml",
+    "--output",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/reports/history3000_interface_check/report.json",
+    "--batch-size",
+    "64"
+  ],
+  "full4200_command_shell": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/venv/bin/python /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/scripts/check_history3000_interface.py --labels /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/train.jsonl /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/val.jsonl /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/test.jsonl --config /tmp/history3000_validation_config_draft.yaml --output /home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/reports/history3000_interface_check/report.json --batch-size 64",
+  "acceptance": [
+    "Dataset files exist and independent validate_history3000.py passes before declaring final acceptance.",
+    "status=passed; total_dataset_rows=checked_rows=4200; coverage=full_dataset (no --limit).",
+    "mode_counts READ=WRITE=SUBTASK=1400; WRITE/KEEP/CORRECT/EMPTY each350 across train/val/test.",
+    "All4200 actual training/native prefix UTF8 bytes and SentencePiece IDs equal.",
+    "Every row target mutation leaves actual prefix unchanged; no loss/label fields enter actor context.",
+    "Real source RGB/state24 contract validated; original RealManInputs/quantile Normalize/Pad32 equals runtime and independent formula for every row.",
+    "History count distribution includes empty and nonempty multi-window cases; source timestamps/evidence remain independently audited, not inferred from schema alone.",
+    "Native SUBTASK actor_memory is the exact selected/current_writes envelope; strict history alias/future/legacy gates apply.",
+    "Config, JSONL, norm, tokenizer source SHAs unchanged before/after; source NPZ metadata unchanged; no model weights or optimizer created.",
+    "Synthetic EOS transport is explicitly not model generation; no JSON/EOS accuracy, success rate, visual grounding or video-MEM readiness claim."
+  ],
+  "runtime_budget_evidence": {
+    "fit96_all_report": "/tmp/history3000_interface_fit96_full.json",
+    "fit96_rows": 96,
+    "fit96_elapsed_s": 4.915649545000633,
+    "4200_time": "not measured; batching64 and explicit progress via parent allowed; CPU only"
+  },
+  "no_training": {
+    "actor_training.max_updates": 0,
+    "value.max_updates": 0,
+    "experiment.max_updates_per_run": 0,
+    "runtime.device": "cpu",
+    "model.openpi.mem_enabled": false,
+    "checkpoint_global_step": 2200,
+    "checkpoint_tensors_loaded": false
+  },
+  "unchanged_sources": [
+    "NEW existing files",
+    "STAGE existing files",
+    "source data",
+    "C2200 checkpoint"
+  ]
+}

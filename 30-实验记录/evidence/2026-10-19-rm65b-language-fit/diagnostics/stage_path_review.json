@@ -1,0 +1,24 @@
+{
+  "scope": "independent read-only source review and existing runtime receipts; no new GPU module flags hook",
+  "training_generation_same_model": true,
+  "high_ce_and_cached_generation_same_llm_qkvo": true,
+  "language_warmup_layers": 18,
+  "adapter_tensors": 144,
+  "eval_does_not_disable_adapter": true,
+  "teacher_context_restores_previous_flags_in_finally": true,
+  "relevant_source_files": [
+    "scripts/fit_comparison.py",
+    "code/RLinf/rlinf/models/embodiment/openpi/recap_lora.py",
+    "code/RLinf/rlinf/models/embodiment/openpi/tasks/recap_hier.py",
+    "code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py",
+    "code/RLinf/rlinf/models/embodiment/openpi/modules/gemma.py"
+  ],
+  "conclusion": "No stage-dependent training-generation adapter scope mismatch found; does not prove absence of every decoder issue.",
+  "file_sha256": {
+    "scripts/fit_comparison.py": "b8dd767d92b37c80d5bd73dc7f8215a771723c7c190ec5c1c6e4367dd3cf8453",
+    "code/RLinf/rlinf/models/embodiment/openpi/recap_lora.py": "0ca7b744ef98abe1a7bb2a10c9542305653bbc26f2820d38878bd7c061a0c474",
+    "code/RLinf/rlinf/models/embodiment/openpi/tasks/recap_hier.py": "abc5f096f3868f9fd703747c069a3081f2515d7972d5b24ace64801245bce356",
+    "code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py": "7e5b1aa881ec649ebf6e32a8ab83931cd6252fb30aff0623b6912e2b65c7069d",
+    "code/RLinf/rlinf/models/embodiment/openpi/modules/gemma.py": "8321b272f335e6bb5eedc7212575ca9e62b81ec8641b3d0f9dbaab181b3a4800"
+  }
+}
