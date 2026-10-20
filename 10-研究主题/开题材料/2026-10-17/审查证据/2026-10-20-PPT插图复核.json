@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-20",
+  "scope": "PPT七页文本、备注、结构及逐页兼容渲染审查；方法图与正文核对；附查当前Word嵌入图版本",
+  "basis": [
+    "图/图源与论证说明.md中的最新绘图要求",
+    "04-开题报告扩展稿-图文版.md",
+    "实际PPT与DOCX包内容"
+  ],
+  "source_sha256": {
+    "开题报告插图-可编辑版.pptx": "77138023340043a98c48c19c61856f4c7c22e775ba75dc6abec3b29e9d693d49",
+    "东北大学开题报告扩展稿-自身VLM记忆与子任务生成版.docx": "70ae3aba64078519ca572a29571933ba9372f699161fcbe1a35d47c4b3dcf01c"
+  },
+  "ppt_slide_count": 7,
+  "ppt_package_integrity": "pass",
+  "ppt_core_research_logic": "基本符合既定要求，未见明显科研逻辑冲突",
+  "ppt_visual_review": "逐页查看兼容渲染，未见明显截字、遮挡或错误连线；不是PowerPoint/WPS桌面验收",
+  "findings": [
+    {
+      "priority": "优先处理",
+      "item": "Word图3.1—3.3未同步当前PPT/PNG",
+      "evidence": "解包提取并目检Word实际媒体；图3.1为旧内部接口与AI场景，图3.2为旧六卡片版，图3.3为旧三分区长文版；图3.4与当前PNG一致",
+      "recommendation": "后续同步前三幅图并检查引出段、双语图题及替代说明；当前仅检查，未修改正式文件"
+    },
+    {
+      "priority": "独立展示时补充",
+      "slide": 1,
+      "item": "可见来源缺失",
+      "evidence": "仅1张图片及2个中英文图注文本对象；来源[2]/arXiv:2504.16054v1/Fig.2在备注中；备注声称存在可编辑来源对象与实际不一致",
+      "recommendation": "加可见原图出处和原作者结果归属，校正备注中的对象说明"
+    },
+    {
+      "priority": "可读性改进",
+      "slides": [
+        4,
+        5,
+        6
+      ],
+      "item": "缩至Word宽约447.8pt后辅助文字偏小",
+      "evidence": "PPT画布宽1200pt，18pt文字按等比换算约6.7pt；图3.3最小16.5pt约6.2pt。重点为图3.1底部方案声明、图3.2收缩条件、图3.3图例与FAST边界等",
+      "recommendation": "提高辅助文字字号与深度，按报告实际尺寸复查；未据此认定违反学校硬性字号要求"
+    }
+  ],
+  "word_figure_comparison": {
+    "3.1": {
+      "word_media": "word/media/image5.png",
+      "word_media_sha256": "0cd93922994d3511586e85933faa0bc8fb16e02f327b259534a0f281e366fece",
+      "current_png": "图/生成式高层/图3.1-研究内容与难题对应.png",
+      "current_png_sha256": "0fa272808648fd1cd4a1b35a9b6a16dbbc4d4dcfbfe3efbce33519b034d3e620",
+      "bytes_identical": false,
+      "visual_review": "实际图片已目检"
+    },
+    "3.2": {
+      "word_media": "word/media/image6.png",
+      "word_media_sha256": "778a53bb7f966f2d324e6a8d12e84ae1cf8c327281f121c1a78ecea931c8e46e",
+      "current_png": "图/图6-实验验证与否决路径.png",
+      "current_png_sha256": "4d8132a5e6cb3346419c3cb5ae733cccc67a49ae037ee762900576e2c9ad257d",
+      "bytes_identical": false,
+      "visual_review": "实际图片已目检"
+    },
+    "3.3": {
+      "word_media": "word/media/image10.png",
+      "word_media_sha256": "04781bef2c4dafef060b1b8c710a9b0903b186338cfa094fdee2cb15ae891379",
+      "current_png": "图/生成式高层/图4-生成式高层目标与梯度路由.png",
+      "current_png_sha256": "8386b59ac1fbef5bafdd1fe243065f80a8f566f5a33a94a8d26660eb9a970417",
+      "bytes_identical": false,
+      "visual_review": "实际图片已目检"
+    },
+    "3.4": {
+      "word_media": "word/media/image12.png",
+      "word_media_sha256": "cf5d980009e99b83c0cadf1288f2bb33b61706dcdd1662f446b51506271cfc15",
+      "current_png": "图/论文风格/图5-物理后果记忆信用估计-论文风格.png",
+      "current_png_sha256": "cf5d980009e99b83c0cadf1288f2bb33b61706dcdd1662f446b51506271cfc15",
+      "bytes_identical": true,
+      "visual_review": "实际图片已目检"
+    }
+  },
+  "unchanged_primary_files": [
+    "开题报告插图-可编辑版.pptx",
+    "东北大学开题报告扩展稿-自身VLM记忆与子任务生成版.docx"
+  ],
+  "new_experiments": false,
+  "desktop_office_validation": false,
+  "note_workflow": "沿用现有笔记格式增量归档；当前环境未提供obsidian-markdown技能，未声称使用该技能"
+}
