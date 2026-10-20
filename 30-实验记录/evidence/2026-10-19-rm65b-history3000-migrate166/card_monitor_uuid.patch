@@ -1,0 +1,48 @@
+--- a/scripts/fit_comparison.py
++++ b/scripts/fit_comparison.py
+@@ -24,18 +24,41 @@
+ 
+ 
+ class CardMonitor:
++    """Measure the single explicitly exposed physical GPU by its full UUID."""
+     def __init__(self):
++        visible = os.environ.get('CUDA_VISIBLE_DEVICES', '').strip()
++        if not visible.startswith('GPU-') or ',' in visible or any(c.isspace() for c in visible):
++            raise ValueError('CardMonitor requires CUDA_VISIBLE_DEVICES with exactly one full GPU UUID')
++        self.device_uuid = visible
+         self.stop = threading.Event()
+         self.samples = []
++        self.errors = []
+         self.thread = threading.Thread(target=self.run, daemon=True)
++
++    def sample_once(self):
++        import math
++        value = subprocess.check_output(
++            ['nvidia-smi', '--id=' + self.device_uuid,
++             '--query-gpu=uuid,memory.used', '--format=csv,noheader,nounits'],
++            text=True, timeout=5)
++        rows = [line.strip() for line in value.splitlines() if line.strip()]
++        if len(rows) != 1:
++            raise ValueError('Expected exactly one physical GPU query row')
++        cells = [cell.strip() for cell in rows[0].split(',')]
++        if len(cells) != 2 or cells[0] != self.device_uuid:
++            raise ValueError('nvidia-smi returned a different physical GPU UUID')
++        used_mib = float(cells[1])
++        if not math.isfinite(used_mib) or used_mib < 0:
++            raise ValueError('GPU memory use must be finite and nonnegative')
++        self.samples.append(used_mib)
++        return used_mib
+ 
+     def run(self):
+         while not self.stop.is_set():
+             try:
+-                value = subprocess.check_output(['nvidia-smi', '--query-gpu=memory.used', '--format=csv,noheader,nounits'], text=True, timeout=5)
+-                self.samples.append(float(value.strip().splitlines()[0]))
+-            except Exception:
+-                pass
++                self.sample_once()
++            except Exception as error:
++                self.errors.append(str(error))
+             self.stop.wait(2)
+ 
+     def __enter__(self):

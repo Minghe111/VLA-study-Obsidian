@@ -1,0 +1,72 @@
+{
+  "format": "rm65b_history3000_sft_supervisor_v1",
+  "status": "failed",
+  "root": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1",
+  "start_checkpoint": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/migrated_s002000/checkpoint",
+  "start_branch_step": 2000,
+  "historical_source_updates": 2200,
+  "max_branch_updates": 24000,
+  "max_updates_per_child": 500,
+  "evaluation_targets": [
+    2000,
+    4000,
+    6000,
+    8000,
+    10000,
+    12000,
+    14000,
+    16000,
+    18000,
+    20000,
+    22000,
+    24000
+  ],
+  "phases": [
+    {
+      "phase": "eval_s002000",
+      "kind": "eval",
+      "target_branch_step": 2000,
+      "checkpoint_input": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/migrated_s002000/checkpoint",
+      "argv": [
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/venv/bin/python",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/evaluate_history3000_checkpoint.py",
+        "--checkpoint",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/migrated_s002000/checkpoint",
+        "--config",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/configs/rm65b_history3000_sft.yaml",
+        "--evaluation-root",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/data/evaluation_v1",
+        "--baseline-report",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/c2200_baseline_v2/retention/baseline_report.json",
+        "--output",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/supervisor_166_v1/eval_s002000",
+        "--extended",
+        "--execute"
+      ],
+      "log": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/supervisor_166_v1/logs/eval_s002000.log",
+      "output": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/supervisor_166_v1/eval_s002000",
+      "status": "failed",
+      "pid": 1946203,
+      "owned_process_group": 1946203,
+      "started_unix": 1792417365.9119723,
+      "latest_progress": {
+        "status": "failed",
+        "branch_global_step": 2000
+      },
+      "elapsed_s": 62.01086924318224,
+      "returncode": 1,
+      "finished_unix": 1792417427.9220562
+    }
+  ],
+  "evaluations": [],
+  "started_unix": 1792417365.9105678,
+  "test_labels_opened": false,
+  "automatic_test": false,
+  "automatic_export": false,
+  "automatic_closedloop": false,
+  "stop_rule": "two consecutive fullval600+trainquick96+revision40+history16 strict and both8-case pools against original80000/C2200; legacy96 diagnostic only",
+  "stop_reason": "child_or_supervisor_failed_not_converged",
+  "error": "Traceback (most recent call last):\n  File \"/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/run_history3000_sft_supervisor.py\", line 257, in execute\n    phase(\"eval\", current, checkpoint)\n  File \"/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/run_history3000_sft_supervisor.py\", line 221, in phase\n    child_runner(argv, root=args.root, log_path=log, progress_path=progress, entry=entry, persist=persist)\n  File \"/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/run_history3000_sft_supervisor.py\", line 162, in run_child\n    raise RuntimeError(f\"Owned {entry['phase']} child exited{code}; retained log {log_path}\")\nRuntimeError: Owned eval_s002000 child exited1; retained log /bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/supervisor_166_v1/logs/eval_s002000.log\n",
+  "selection": null,
+  "finished_unix": 1792417427.927751
+}

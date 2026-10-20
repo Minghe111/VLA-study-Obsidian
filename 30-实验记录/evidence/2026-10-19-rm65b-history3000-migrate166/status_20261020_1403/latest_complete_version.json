@@ -1,0 +1,2413 @@
+{
+  "checkpoint_format": "rm65b_history3000_language_lora_compact_v1",
+  "version": "train_s015000/actor",
+  "global_step": 15000,
+  "historical_source_updates": 2200,
+  "base_checkpoint": {
+    "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint",
+    "full_weights_sha256": "5e16c2c36ba8c99351d4b0f9af66b6600d94250e1a07bea4f227b8bd5e2e4531",
+    "version_sha256": "4653b02a41dc8f44ff8482bfe21e2e5d7ea33611cbc3a5764cd85c10710344bb",
+    "effective_config_sha256": "1032224ff723e1d767d19b1a94ca44107e60f5a721acabb61b8e7e3768bec3d9",
+    "historical_source_updates": 2200
+  },
+  "training_manifest": {
+    "training_stage": "language_warmup",
+    "vlm_mode": "lora",
+    "runtime_mem_enabled": false,
+    "trainable_parameters": [
+      {
+        "name": "llm.layers.0.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.0.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.0.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.0.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.0.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.0.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.0.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.0.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.1.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.1.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.1.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.2.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.2.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.2.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.3.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.3.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.3.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.4.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.4.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.4.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.5.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.5.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.5.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.6.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.6.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.6.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.7.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.7.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.7.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.8.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.8.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.8.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.9.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.9.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.9.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.10.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.10.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.10.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.11.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.11.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.11.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.12.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.12.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.12.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.13.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.13.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.13.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.14.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.14.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.14.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.15.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.15.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.15.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.16.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.16.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.16.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.q_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.q_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.k_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.k_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.17.attn.v_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.v_proj.0.lora_B",
+        "shape": [
+          256,
+          16
+        ],
+        "numel": 4096
+      },
+      {
+        "name": "llm.layers.17.attn.o_proj.0.lora_A",
+        "shape": [
+          16,
+          2048
+        ],
+        "numel": 32768
+      },
+      {
+        "name": "llm.layers.17.attn.o_proj.0.lora_B",
+        "shape": [
+          2048,
+          16
+        ],
+        "numel": 32768
+      }
+    ],
+    "mem_config": {
+      "mem_enabled": true,
+      "mem_num_frames": 4,
+      "mem_temporal_interval": 4,
+      "mem_drop_after": 24,
+      "mem_vision_lora_rank": 8,
+      "mem_vision_lora_alpha": 8.0
+    }
+  },
+  "frozen_base_proof": {
+    "parameter_sha256": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652",
+    "buffer_sha256": "a94a7bc0119a24b4331430d3099dd37e98e92b4793e22e7d7972058df56bf672"
+  },
+  "run_contract": {
+    "dataset": {
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/train.jsonl",
+      "sha256": "2ebb49a55619b8058f4f45e839ebf313a67cc77abbb375623d8f8df6858926fa",
+      "rows": 3000,
+      "acceptance_path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/reports/history3000_final_summary.json",
+      "acceptance_sha256": "271414cbec24b24c2077f9cf97b18b2544229ac2c317e4d53c454271186d0403",
+      "manifest_path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/manifest.json",
+      "manifest_sha256": "c0cf60befbcbbfb12da274da897d49d56fb2e2b5a6e75e3d794b5f18b080d100",
+      "validation_rows_not_sampled": 600,
+      "test_rows_not_sampled": 600
+    },
+    "base_checkpoint": {
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint",
+      "full_weights_sha256": "5e16c2c36ba8c99351d4b0f9af66b6600d94250e1a07bea4f227b8bd5e2e4531",
+      "version_sha256": "4653b02a41dc8f44ff8482bfe21e2e5d7ea33611cbc3a5764cd85c10710344bb",
+      "effective_config_sha256": "1032224ff723e1d767d19b1a94ca44107e60f5a721acabb61b8e7e3768bec3d9",
+      "historical_source_updates": 2200
+    },
+    "anchor": {
+      "manifest_path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/retention_anchor/manifest.json",
+      "manifest_sha256": "9f027c50fc5a2d5d80d378f24f5e26dc560f0e1d4d838d3ec7accbbb8172d6f2",
+      "effective_interval_microbatches": 1,
+      "sample_count": 8,
+      "teacher": "same frozen original SFT shared base with all adapters disabled, no_grad"
+    },
+    "learning_rate": 5e-05,
+    "weight_decay": 0.0,
+    "kv_weight": 1.0,
+    "micro_batch_size": 1,
+    "gradient_accumulation": 4,
+    "effective_anchor_interval": 1,
+    "sampler_seed": 20261019,
+    "max_grad_norm": 1.0,
+    "scheduler": null,
+    "prompt_version": "rm65b_recap_prompt_v3_history_events",
+    "history_version": "rm65b_history_events_v1",
+    "contract": {
+      "action_horizon": 16,
+      "camera_keys": [
+        "full_image",
+        "left_wrist_image",
+        "right_wrist_image"
+      ],
+      "execute_actions": 1,
+      "model_action_dim": 32,
+      "native_rgb_shape": [
+        480,
+        640,
+        3
+      ],
+      "physical_action_dim": 24,
+      "physics_dt_s": 0.004,
+      "physics_steps_per_action": 15
+    },
+    "branch_update_cap": 24000
+  },
+  "metadata": {
+    "dataset_size": 3000,
+    "training_label_sha256": "2ebb49a55619b8058f4f45e839ebf313a67cc77abbb375623d8f8df6858926fa",
+    "source_c2200_historical_updates": 2200,
+    "branch_updates": 15000,
+    "training_mode": "verified_sft",
+    "effective_anchor_interval_microbatches": 1
+  },
+  "files": {
+    "adapter_weights.pt": {
+      "bytes": 14792079,
+      "sha256": "56620caa847cdd5ed126044321d043208abcf970e0b6353844f182f0780b78de"
+    },
+    "trainer_state.pt": {
+      "bytes": 29664875,
+      "sha256": "fa467184456fb483e19a5ea41c8542ca7e3a7f0f81c4a26f1cf1529edffe35a5"
+    }
+  },
+  "adapter_tensors": {
+    "llm.layers.0.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "79fac38f9377c5eb9d3f1c864610c289fba33ce39456035dcc8aa14185d002e4"
+    },
+    "llm.layers.0.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "081c7b8cbaa9e682d829fa0cebe229009b7d86a68833e70ab13655ec5260fcea"
+    },
+    "llm.layers.0.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "13e800e44c35e05f1deaeb4575af21c09b0bd2270b9598947673fca36e6c3e5c"
+    },
+    "llm.layers.0.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "67f4733399c8312390547ba500d14d98bf2f395b3e359ea2b0b78ef784452dd2"
+    },
+    "llm.layers.0.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "1fcede99a53a2606f52b728834518be203155e029bb67ff86735ca045014f2e8"
+    },
+    "llm.layers.0.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "35618541f1f5d7f14123c531a31c42e6960e20e9eac3aea4e0f91e84ff609f52"
+    },
+    "llm.layers.0.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "6b3a01ee1d04f855b9158b768f3ac9c37c02d2b2c2276be0a2ea253c46e415e8"
+    },
+    "llm.layers.0.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "789020e61245d0eaa9ce7afb8a48662957626279d0ab3b7505391e2ad1f49823"
+    },
+    "llm.layers.1.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "e490dae334d73a5ff9dce20f15844cab0c26f3d266a3c98ebb375bbb15ef18e9"
+    },
+    "llm.layers.1.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "eb98d4c8278a45921ed32c7bc6ef87156b41a67de294d8d0dcb8e143f6a7cf3e"
+    },
+    "llm.layers.1.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "79e250631a035ff1d1aed814f9fec9e20208d1273e53a22b9cd287b8149e8c59"
+    },
+    "llm.layers.1.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "adb1adb5663c4469d5da7acca0423c1f6dc7b1f691dec2448f752e50cf718268"
+    },
+    "llm.layers.1.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "a3683ec92fa8475605950cc9fad6f35b1b8744b95ef973a823a29eca31ccf59c"
+    },
+    "llm.layers.1.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "b640cc4ef3c3f78d050ee0152df31b6b6e3d14f9a22634f04937158c62843f8e"
+    },
+    "llm.layers.1.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "ada9e456d48f39d0ceea329b4915034db8b094ece347b7b0f3d9d2a5db43c758"
+    },
+    "llm.layers.1.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "d1f3727f56dddb55139bcfeac2a724c49fe70f2255feddbae9f5281be7b3d3d6"
+    },
+    "llm.layers.2.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "b0268935937c65e7041c90774d405528faae9e69b269dfd8f647a0865b5d3b2b"
+    },
+    "llm.layers.2.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "4f4092a3e7b3edc909983acddfc3d1530d6d87c6e3d432f274eb25f89e83b21f"
+    },
+    "llm.layers.2.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "89539d628b059411666cbd680cbc18e7eb41cdbdfe73018be28ad7a66f97fb2a"
+    },
+    "llm.layers.2.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "9792f78c2dced9f53d4f22289c6e5a53f0bad2e2abb3527ea1f50a209a8f74f0"
+    },
+    "llm.layers.2.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "b515b919787790f4f7179333711a06c49cc2b6189c35cfc8136a0a51c3f07061"
+    },
+    "llm.layers.2.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "a19289ac1f0f484c4df1d9ee16b629059cd8aeeb30797e5acdb2afe39962c8b0"
+    },
+    "llm.layers.2.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "f397d7237c9e00c4c35b48e820f525c5d92feb873dfaa34ac0fe527883890e3f"
+    },
+    "llm.layers.2.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "ca592b418d3a6dca3ffe1f6d8ec6dcfd533b534ec0e31f3f2b63322dc69c0491"
+    },
+    "llm.layers.3.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "3f8d261a875d920e931ee4b41046238fff41f6334d1952517e7a68e4f86ae9f7"
+    },
+    "llm.layers.3.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "948758e91677fbcd559beb2137627ab6f06ebd3a6ea009e25bc45e06b0083dde"
+    },
+    "llm.layers.3.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "79b5a4d327579898b1175ce02be987c8562833b634d452091bbc1b9bd8a2f618"
+    },
+    "llm.layers.3.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "ab2e64bcdb1aa5c6e43201f65e8f3929903d8a3b7dd35e292af24121aea8a342"
+    },
+    "llm.layers.3.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "714799b4259bcc200896f9cf4529532c8191877db69f17d18756ff49769f7691"
+    },
+    "llm.layers.3.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "0696be91eed2dec9771c21cfdbfbf5a1aa65ab3284d0aa35870e3af022ca6afe"
+    },
+    "llm.layers.3.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "7a09fafacab4499fa6f87395af544a2196cf8b9f528917934cf663c87f3066cb"
+    },
+    "llm.layers.3.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "2b2971318b5aadaa623d12152c45dec07a8fe0af194f65d8b05ce69ab8258a09"
+    },
+    "llm.layers.4.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "50534280e8481bfcc70dd9366f6bd68ddddcef1fa79b0350be42a95d1c11b1ea"
+    },
+    "llm.layers.4.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "f6bbcf88739930593b8c9f4d029c867a31285864e62f76cd7e0f4ebabcbfee85"
+    },
+    "llm.layers.4.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "6bb081062923abdc3839e0a46a5f5879c9b8ff375150349bd86d42f068ee77e4"
+    },
+    "llm.layers.4.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "590316abb933ccd0595e6a4c7b73ca368d4c2d0a33aa6ef3bb49f77f2a7b7428"
+    },
+    "llm.layers.4.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "926e273a9d0db5091fd325917bc99764660d029267c16718610a41a749d73fb5"
+    },
+    "llm.layers.4.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "a9a8a719befefa579e0227dc3b3ceb464a5ee992cfd055e501ccc058fd6a9299"
+    },
+    "llm.layers.4.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "8f459ad0bb728f2103616a7149a6f332b8e12cd4932daae9479c2455c0aea5ec"
+    },
+    "llm.layers.4.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "91ea23ba07e8d53fc82b889bede27a48b84e22d3556869b3b6cb8002c5530afa"
+    },
+    "llm.layers.5.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "1a7e7396e3461a828d6a908453a042566df2c19628c4100e114e30c13600a5b8"
+    },
+    "llm.layers.5.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "8ff12637525903f601f007f1fd9ddd6627b1106becb6a5f65e40323248de8007"
+    },
+    "llm.layers.5.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "521aba894046af2fbcc959b00382614fb851f798435dd13d413a21f22f7fdab0"
+    },
+    "llm.layers.5.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "88a0740a262fe5d30ba95b4dbe10d54b8210a77f0443630a61354a18f2cdf38f"
+    },
+    "llm.layers.5.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "933fcc14df82b5169e57659cb5b979a78889fa80a6c029ed0d09c0fd958a1178"
+    },
+    "llm.layers.5.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "b8bb57e2cb97d736651416f2c65e6c0305d1fdb6741d232504b989060ebaa26c"
+    },
+    "llm.layers.5.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "2d1b306e55b52ce0588d265433460f8522994acecbe422e1bb430b69195605e8"
+    },
+    "llm.layers.5.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "0bd88e27e3fd7564d8a885f64f414c5b99d169e235d05b5478714e62047962bf"
+    },
+    "llm.layers.6.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "c05106fa0f0f2ddaf3551cc23ffd2c876a77233ac6f3ad48ba335031874a7489"
+    },
+    "llm.layers.6.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "8351874904d5bdb708af7c5fcd52289e78766fd7b31b79cd1246afb65a5d6d5c"
+    },
+    "llm.layers.6.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "a1471cb59d20b3e7abcdff9156f796732d03cfad1fa9a7b0118d39acb3cbd61d"
+    },
+    "llm.layers.6.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "21a7e5690c84bc0862e8560357ed2d462c4627dd855ce25c31eb36dbf82bf5d0"
+    },
+    "llm.layers.6.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "7069b566f12621f781ccf5263d4005913660b1751b19b5541ac87e270c598e18"
+    },
+    "llm.layers.6.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "7900023ba543cc8a35f1db060ac68bc37cf98070c9b42b9abbfb570b22aea5db"
+    },
+    "llm.layers.6.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "77474f63c543a5e502c1b009f8a43ee993ee8a4b8afbba649a45b2ef727d6bbe"
+    },
+    "llm.layers.6.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "7734d22bc2993f2efaee006a15e2e8d5509d9914271e20ee82e17312c9d8f59b"
+    },
+    "llm.layers.7.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "e1e5b35cc7f9584752d75eea46bab91beb16cb194614a156f6a3e977b13d7a5f"
+    },
+    "llm.layers.7.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "ff7732160fd83dbe1b538bac98991caf702c202b7230ad96eb5c1cca5fa995aa"
+    },
+    "llm.layers.7.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "8833bda663b30752f352f82e2ee426848a23e02c9988edb5a4cb12732ff803d4"
+    },
+    "llm.layers.7.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "0f0b1bbf70fd9c808bc5e62bede7b33c999d22f171dc3d2b044da8c63b6a9c43"
+    },
+    "llm.layers.7.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "f4f422c30f10a5ae3410b160beccea845fa98cf88d44f5d885494f10b634aa90"
+    },
+    "llm.layers.7.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "d4cd36841353f5bc789b00fc76c8747b4ed036f01ba6c4067132f59b3b6c01cd"
+    },
+    "llm.layers.7.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "5a276a7f51c0ee1c37d4f2dc6c657bab3d9de0fd6ccd744b32d353f3ece4ae38"
+    },
+    "llm.layers.7.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "c52aae84d057fd68adbc357b0e5a3c1932c7ee59a8f213b8ef6f562d91904c1d"
+    },
+    "llm.layers.8.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "1f28a96e57a5ea99c2b2d21e5716f70bf867fe3e3f52e78da750e77138021f1f"
+    },
+    "llm.layers.8.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "bb067aeb5e9808eca5dcbfdf1c6f45b3d1238c991a68d702481f06c594cf21c4"
+    },
+    "llm.layers.8.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "3f52569131472243debf4086dbd5034bce16029556346eb9621f71563a9b645f"
+    },
+    "llm.layers.8.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "a55bcc0f7920917eb512bfde4259e89e5f8f3705355f366a462bc7b777110429"
+    },
+    "llm.layers.8.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "20a325b2d6063eb4f0cb48602b732ac6ebffda467902c4c7407a6148a96a193a"
+    },
+    "llm.layers.8.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "fa03dc44cff7ad3aeb6a0725c3df2d0906ea0a9a496ca5b71c5f49ec0ae8e5a0"
+    },
+    "llm.layers.8.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "6198f63f804d596c4203cbf5a2f82411db9701cdcce59c46466ad072c5103a49"
+    },
+    "llm.layers.8.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "57cb78a9ed418e1eed3267cc2c24eaa2426940ad283fc55450b875d91c7c0b5c"
+    },
+    "llm.layers.9.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "aaa9953bcd80f87379e75ec6806da5beffbb116545b636429ef6ca7db7cf8986"
+    },
+    "llm.layers.9.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "53429df0682073a5b0bfcd2d246c165429b7514fb0d2f7ca5dcc538552eb30cf"
+    },
+    "llm.layers.9.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "9a0c52e92aea6eb1d3e55210d7c4ba159d11ef64dc8236f07c0fe6a181fbbca2"
+    },
+    "llm.layers.9.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "7a98e75ac5dd1e7201e2b1e7e0761009d7f7e82309b3ed738a58b80a44320517"
+    },
+    "llm.layers.9.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "e82edea88eda14188e24cc9512e45da98515bd82e661781e2371f8c4fa89990d"
+    },
+    "llm.layers.9.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "1a746695b5086db359160e528f1f782a331d8d3b1c64c3133e26c81fb1bd8129"
+    },
+    "llm.layers.9.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "35045e454b4f9df85ad2bf2d6b28e1bcb293c94caad89b2c0b39d3a57025ad47"
+    },
+    "llm.layers.9.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "99e2af754e949d00a417ba02e6b1b60d88af2ee06494865a357abf000612b742"
+    },
+    "llm.layers.10.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "6fbb8f41c9d1986b6ed1cab7015b110a79c261f7a3d5e2261ea3ebb23de48e2f"
+    },
+    "llm.layers.10.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "c54a8d7bc1769f8764d59ee512d48c517a7d75b7b6f6519bb7ba34cb1adca915"
+    },
+    "llm.layers.10.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "2657e9e7c79c344551e79249d01627c23fdd37fbccd322801b5f7f3f5a3a370b"
+    },
+    "llm.layers.10.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "7e265fcace90aadd7a3b9117bcbf3db7ef08d00130ad1f16ae0801512aaf64e5"
+    },
+    "llm.layers.10.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "fbcb7abd7b8f7a3cd1a19700936037b29c194106cff325e620ecb1747d88b9a1"
+    },
+    "llm.layers.10.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "d2b4fcf382533780def977d881b1111b28c50c8d7cda84c13a79992a140a305e"
+    },
+    "llm.layers.10.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "852b6e11a49aa431dcf259cb6569cd88d2075cdffbc0e76670d6ed47588018fd"
+    },
+    "llm.layers.10.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "06b3be87ad54c3f7b5854fa9e3e4af68e6f74b80512cb4d29db677ba0508fb80"
+    },
+    "llm.layers.11.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "4bf7f7cd892ffc04d903856c91e0a933ea52c2956cab42fa97b92f078f7734ac"
+    },
+    "llm.layers.11.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "0ab8f77cfe213a0ca7ec7d1e9afef2b18935df325d1d5354a1a076fbb04f3c69"
+    },
+    "llm.layers.11.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "77ce220ebfa8bbcde547fb072720b8d30bd617be7bc329aa1fe05755db5c3de8"
+    },
+    "llm.layers.11.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "069788dc399b12b72c7058b36bb2b8fa939f68f77f002f5c325b9818c9d3fe2e"
+    },
+    "llm.layers.11.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "98b8f30ab2445cd5edbbf8c951d9bcbd8b91e5c6385a1b37b1355096dff12bd8"
+    },
+    "llm.layers.11.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "eb5619a556e8b50d0fc89c902ba164f09066fc34238bffc1517bc61eff4824cb"
+    },
+    "llm.layers.11.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "24f2a9d0848ccdc05fe596754f414fb421cd12b32bb5430f349e1a33afb313be"
+    },
+    "llm.layers.11.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "400b857b8836e04a7aae2d928f03d08cf43eedeecfbdf4f4617cad28e6739ee7"
+    },
+    "llm.layers.12.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "e66ce248c7e600904f915db0d0904e7f34810c80a588fca3163ac7807db5054c"
+    },
+    "llm.layers.12.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "9b72820eb2cce0b81fc3bee342efab988179f148795ee5bf6e078cca1c61403e"
+    },
+    "llm.layers.12.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "4237f4f6e8e961654ade0f03a9a94d25724707214ac9881445fa420ca8b36e01"
+    },
+    "llm.layers.12.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "0760fceaa93ee87ef301336cfcbc9014fc1be2e3fdfbb20f950facc95b262117"
+    },
+    "llm.layers.12.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "aaa5144f5122dba70efc64524f5e501bd3fba171890e71ca12655b980efb0332"
+    },
+    "llm.layers.12.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "6b0abc17640aeb2b246e99b7a39907dc90ed8524dda579cc263d35aa077d9674"
+    },
+    "llm.layers.12.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "3e5064f25619896309511eba4244a68bf2266af23cfe8c6ebc7da0f721858444"
+    },
+    "llm.layers.12.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "134fe2c5f5a275e8488f54b0ffc1f582e9d1f0ab2c504797490c6ffa59ea8eda"
+    },
+    "llm.layers.13.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "86ea2f3d5c1caf39b7060fd8cdd14ee665c438a85e3c44e1b30d97e89ee3c290"
+    },
+    "llm.layers.13.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "7de5eb1fd10ab058e2bfdc88469bbc4f4da13065a755bcf9d4488c45cbdcc8aa"
+    },
+    "llm.layers.13.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "52a1fee08e546ccbc78985b887c3cd6eced28fd8cea7a805ed41e7d0e9c5a761"
+    },
+    "llm.layers.13.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "29cf38fbf8e541303794001aecc2821fc78a18b377e7cf379d6e4a28e4214490"
+    },
+    "llm.layers.13.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "9995335a9739d9946e91f53f2652b1381ecc9f52dbc7624a5410fc1855ef8c84"
+    },
+    "llm.layers.13.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "587f780b048856852a5d6982c171516eec4cdcc27262885e31b7a2dbade61d92"
+    },
+    "llm.layers.13.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "2882ae43ed8fdf5c9e36d5c0c69c4f8b31ce6d872add44fe5982edf2dcb2b394"
+    },
+    "llm.layers.13.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "70697679135b013ad7ce1139c41ad6e3b9b5a661f0a12522928dc6d08708dcca"
+    },
+    "llm.layers.14.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "bbf665f694c6340bc3e00ef1b9e266b4eaadcb3aeb462e0233c88e5967cb8121"
+    },
+    "llm.layers.14.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "d1c39358d85a6860e9c03ef8c9789ef693da69853b880698b7095c8fcddd7510"
+    },
+    "llm.layers.14.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "69f54b0f988a1c7bbee0a8210ef78631d57114e9a8f42284af01606b0b8ffc2d"
+    },
+    "llm.layers.14.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "afc8747f0c1921eef0c1d77f7573ea51c81bb4ce702bab3de03ff8e5f4b8af6f"
+    },
+    "llm.layers.14.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "1e261b6d37820a554889b47835c6c5ae7f5ab19834f50d56e24a23681e2c67a4"
+    },
+    "llm.layers.14.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "92326ae617a6a6d8cce19047c68a31f51a7df715947ed235da956c78b065bf68"
+    },
+    "llm.layers.14.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "ccb72d83aef24435585fab9db5c5c49fd5cd3c8de2ce93f35f8508554ecc52b7"
+    },
+    "llm.layers.14.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "e78ffcf5328b9f507301f92df4aac84ae53f207cf39421eedd4ca35edb8e9750"
+    },
+    "llm.layers.15.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "e6c663b7c24d5f4f1ef276a05202de46b36e10d801415da9e0942c1307a10805"
+    },
+    "llm.layers.15.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "5f870830817e19fd918dd687f303f2e74c167cca93515b63d51e0dc59bd0bf6f"
+    },
+    "llm.layers.15.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "2f58c127e27f118ff616dafa91147610130293f6a9238ffd6d2e412074762c69"
+    },
+    "llm.layers.15.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "a77a1c31777e58593988c57fd97b1e48242627ceca3acf22be247b624a4f4282"
+    },
+    "llm.layers.15.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "a6feeb622c2c624dc45442cd91431f7dae34ff6aa58fd66098bd13618228ee23"
+    },
+    "llm.layers.15.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "01f62b7bb5d0b0b299de4476cc6b05ce6c6880523c187e06899ee1344fc635d2"
+    },
+    "llm.layers.15.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "cf21b193abd50ad2bae9384093fcb7032523de6875bc49694f7a3321d8dfab0b"
+    },
+    "llm.layers.15.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "867c4f39faaea4c2db86c9e220747850cda2b43dc21020c1893af3928cc6369b"
+    },
+    "llm.layers.16.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "c9254679ed5ca6c3aeadae7512304f8d79d3386e71ee67a21b77814903293343"
+    },
+    "llm.layers.16.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "17ea693e08386fc3c685452f4f8a1c9d299c9025d5604ea3733eea61fd91531a"
+    },
+    "llm.layers.16.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "a06d2fdd533d823b0801bc3d462e2f0b0cce1241f6bf5857278f1a445773b02e"
+    },
+    "llm.layers.16.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "7ad1e8cb1a09147f514dfafb3504530c7e3d4344f4bd1cdbb9f2841e328c2772"
+    },
+    "llm.layers.16.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "7380116675982954e8bd8f801459fe66401548e15279540c32f14d318635e6b5"
+    },
+    "llm.layers.16.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "892e6a8a822c499c5d4d78e9898adc7d36f5902bc45b0f7765c86bc55bbe7756"
+    },
+    "llm.layers.16.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "d60ce8d383cc1994fa6ecbacab507be889bbd92e86c93f39642170847ccd1415"
+    },
+    "llm.layers.16.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "6e86c881a3dd3f4497279498b2c948cbaf14b108cb0ab25db3b2bae8085e381d"
+    },
+    "llm.layers.17.attn.q_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "be08703d67a5539bf29e18dc0cbc18dbf766b659adc8997585e079bc95e40588"
+    },
+    "llm.layers.17.attn.q_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "b40ea29a18adaad36c5e339fb178c3c9326147c5ae7220d9b248fe21091abbe7"
+    },
+    "llm.layers.17.attn.k_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "0ea3ceb8158ed0dedb2f468bd86009a59b9c672b97012810745d1388059807fc"
+    },
+    "llm.layers.17.attn.k_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "729a4fa19b4816136297428f480ffb97b71c1c8d8c06b6965556b3f53c2a2dbd"
+    },
+    "llm.layers.17.attn.v_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "84f95546e5b6b02915c51ac1ae62814ab7ea34f209720490f46d86c9bea19881"
+    },
+    "llm.layers.17.attn.v_proj.0.lora_B": {
+      "shape": [
+        256,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "a86aa519fe7241fd5da129b9ebe954bd3e9b396178707447a7d54cf1333ea42e"
+    },
+    "llm.layers.17.attn.o_proj.0.lora_A": {
+      "shape": [
+        16,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "d0f3c6820bca17ffd93489e26036664e0eebf06d4e6347655b51ad250444055c"
+    },
+    "llm.layers.17.attn.o_proj.0.lora_B": {
+      "shape": [
+        2048,
+        16
+      ],
+      "dtype": "torch.float32",
+      "sha256": "53a446e1957999f4d3b31c2be0b76d08d637d9729ff8c637b4df87b2feb068c4"
+    }
+  }
+}

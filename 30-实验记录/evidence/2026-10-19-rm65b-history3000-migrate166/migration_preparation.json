@@ -1,0 +1,49 @@
+{
+  "status": "prepared_CPU_verified_pending_actual_policy_resume",
+  "start": 1792417188.3860195,
+  "source_checkpoint_preserved": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/migration_source/step2000_checkpoint",
+  "target_checkpoint": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/migrated_s002000/checkpoint",
+  "steps": [
+    {
+      "argv": [
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/venv/bin/python",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/migration_tools/relocate_history3000.py",
+        "structured",
+        "--manifest",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/migration_tools/relocate_spec.json",
+        "--output",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/reports/structured_relocation_v1"
+      ],
+      "log": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/reports/relocation_phase1.log",
+      "started": 1792417188.3861015,
+      "returncode": 0,
+      "finished": 1792417199.1787312
+    },
+    {
+      "argv": [
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/venv/bin/python",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/migration_tools/relocate_history3000.py",
+        "compact",
+        "--relocation-receipt",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/reports/structured_relocation_v1/receipt.json",
+        "--source-checkpoint",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/migration_source/step2000_checkpoint",
+        "--train-script",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/train_history3000.py",
+        "--output",
+        "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/migrated_s002000/checkpoint"
+      ],
+      "log": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/reports/relocation_phase2.log",
+      "started": 1792417199.1792636,
+      "returncode": 0,
+      "finished": 1792417232.486262
+    }
+  ],
+  "finished": 1792417232.5112453,
+  "monitor_patch": {
+    "before_sha256": "b0ed0ac34ed628e60aedeea7916b405e9a83ffd3548fad12708f0ffd45c20945",
+    "after_sha256": "6769f2f796daab0fdfccb4c14d1e7a31563e0fbbbfe6d611f352fa99b513235f",
+    "only_CardMonitor_AST_changed": true
+  },
+  "source_checkpoint_version_unchanged": true
+}

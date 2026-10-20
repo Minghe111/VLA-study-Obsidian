@@ -1,0 +1,442 @@
+{
+  "status": "passed_actual166_cpu_state_and_reference_binding_audit",
+  "evidence_scope": "actual remote166 physical task files; CPU read-only; no model/GPU/optimizer execution; not local fixture",
+  "host": "user-4U-GPU-Server",
+  "user": "liminghe",
+  "torch_version": "2.7.1+cu118",
+  "task_root": "/bigdata2/liminghe/rlinf_history3000_20261019_v1",
+  "source_checkpoint": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/migration_source/step2000_checkpoint",
+  "target_checkpoint": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/migrated_s002000/checkpoint",
+  "source_version_sha256": "ef422d92f68131b16f9a1734429bc84076223b5d56a0ab1bd67d031a0640a531",
+  "target_version_sha256": "0f4326eb7eb28aaa62e403dff43b202a7b5ac34597b6c1481f7615badc8f72d0",
+  "source_sampler_fingerprint": "20297b17a17a39fca7f2b545b01ee2801b64ca67c0ee0cfef868c1c29a3e3587",
+  "target_sampler_fingerprint": "4d63aa2611b62f3718c85a4940655b467386a1df6417e85372bf1ca2643c3915",
+  "checks": [
+    {
+      "name": "actual166_not_local_fixture",
+      "passed": true,
+      "hostname": "user-4U-GPU-Server",
+      "user": "liminghe",
+      "root": "/bigdata2/liminghe/rlinf_history3000_20261019_v1"
+    },
+    {
+      "name": "CUDA_hidden_and_not_initialized",
+      "passed": true,
+      "CUDA_VISIBLE_DEVICES": ""
+    },
+    {
+      "name": "source_version_known_seal",
+      "passed": true,
+      "sha256": "ef422d92f68131b16f9a1734429bc84076223b5d56a0ab1bd67d031a0640a531"
+    },
+    {
+      "name": "source_adapter_weights.pt_actual_file_seal",
+      "passed": true,
+      "sha256": "af306ce8f4a8902a39b35ef5ff4294689f9282251c95c96af400a46216fdc0b4",
+      "bytes": 14792079
+    },
+    {
+      "name": "target_adapter_weights.pt_actual_file_seal",
+      "passed": true,
+      "sha256": "af306ce8f4a8902a39b35ef5ff4294689f9282251c95c96af400a46216fdc0b4",
+      "bytes": 14792079
+    },
+    {
+      "name": "source_trainer_state.pt_actual_file_seal",
+      "passed": true,
+      "sha256": "5deaaa29e19d44c186156889c5bbf9e3fd9c063a92e061977e1436c110c9ec31",
+      "bytes": 29664939
+    },
+    {
+      "name": "target_trainer_state.pt_actual_file_seal",
+      "passed": true,
+      "sha256": "e7146c513aef333b6961f18591b079f5712aaa140b537405e4a71fd822f81878",
+      "bytes": 29660907
+    },
+    {
+      "name": "adapter_file_byte_exact",
+      "passed": true
+    },
+    {
+      "name": "trainer_only_physical_path_fingerprint_changed",
+      "passed": true,
+      "changed_fields": [
+        "root.sampler_state.data_fingerprint"
+      ]
+    },
+    {
+      "name": "trainer_optimizer_exact",
+      "passed": true
+    },
+    {
+      "name": "trainer_scheduler_exact",
+      "passed": true
+    },
+    {
+      "name": "trainer_global_step_exact",
+      "passed": true
+    },
+    {
+      "name": "trainer_training_manifest_exact",
+      "passed": true
+    },
+    {
+      "name": "trainer_rng_state_exact",
+      "passed": true
+    },
+    {
+      "name": "trainer_batch_contract_exact",
+      "passed": true
+    },
+    {
+      "name": "trainer_resume_state_version_exact",
+      "passed": true
+    },
+    {
+      "name": "sampler_contract_exact",
+      "passed": true
+    },
+    {
+      "name": "sampler_microbatch_cursor_exact",
+      "passed": true
+    },
+    {
+      "name": "sampler_streams_exact",
+      "passed": true
+    },
+    {
+      "name": "sampler_stream_rng_exact",
+      "passed": true
+    },
+    {
+      "name": "sampler_version_exact",
+      "passed": true
+    },
+    {
+      "name": "source_sampler_known_fingerprint",
+      "passed": true,
+      "fingerprint": "20297b17a17a39fca7f2b545b01ee2801b64ca67c0ee0cfef868c1c29a3e3587"
+    },
+    {
+      "name": "step2000_and_cursor8000",
+      "passed": true
+    },
+    {
+      "name": "all144_Adam_states_preserved_at2000",
+      "passed": true,
+      "optimizer_state_count": 144,
+      "step_values": [
+        2000
+      ]
+    },
+    {
+      "name": "all144_moment_tensors_finite",
+      "passed": true
+    },
+    {
+      "name": "saved_single_CUDA_rng_preserved",
+      "passed": true
+    },
+    {
+      "name": "training_manifest_identical",
+      "passed": true
+    },
+    {
+      "name": "frozen_base_parameter_buffer_proof_identical",
+      "passed": true,
+      "proof": {
+        "buffer_sha256": "a94a7bc0119a24b4331430d3099dd37e98e92b4793e22e7d7972058df56bf672",
+        "parameter_sha256": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652"
+      }
+    },
+    {
+      "name": "base_full_weight_expected_digest_same",
+      "passed": true,
+      "sha256_metadata": "5e16c2c36ba8c99351d4b0f9af66b6600d94250e1a07bea4f227b8bd5e2e4531",
+      "actual7GB_rehash": false
+    },
+    {
+      "name": "base_physical_path_task_local",
+      "passed": true,
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint",
+      "full_weights_bytes": 1852211200
+    },
+    {
+      "name": "base_actual_version_seal",
+      "passed": true
+    },
+    {
+      "name": "base_relocated_config_actual_seal",
+      "passed": true
+    },
+    {
+      "name": "dataset_path_actual_seal",
+      "passed": true,
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/train.jsonl",
+      "sha256": "2ebb49a55619b8058f4f45e839ebf313a67cc77abbb375623d8f8df6858926fa"
+    },
+    {
+      "name": "dataset_acceptance_path_actual_seal",
+      "passed": true,
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/reports/history3000_final_summary.json",
+      "sha256": "271414cbec24b24c2077f9cf97b18b2544229ac2c317e4d53c454271186d0403"
+    },
+    {
+      "name": "dataset_manifest_path_actual_seal",
+      "passed": true,
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/manifest.json",
+      "sha256": "c0cf60befbcbbfb12da274da897d49d56fb2e2b5a6e75e3d794b5f18b080d100"
+    },
+    {
+      "name": "training_anchor_manifest_original_bytes_preserved",
+      "passed": true
+    },
+    {
+      "name": "SDK24_three_RGB_60ms_contract",
+      "passed": true,
+      "contract": {
+        "action_horizon": 16,
+        "camera_keys": [
+          "full_image",
+          "left_wrist_image",
+          "right_wrist_image"
+        ],
+        "execute_actions": 1,
+        "model_action_dim": 32,
+        "native_rgb_shape": [
+          480,
+          640,
+          3
+        ],
+        "physical_action_dim": 24,
+        "physics_dt_s": 0.004,
+        "physics_steps_per_action": 15
+      }
+    },
+    {
+      "name": "baseline_identity_matches_actual_relocated_base",
+      "passed": true
+    },
+    {
+      "name": "anchor8_manifest_original_seal",
+      "passed": true,
+      "sha256": "9f027c50fc5a2d5d80d378f24f5e26dc560f0e1d4d838d3ec7accbbb8172d6f2",
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/data/retention_anchor/manifest.json"
+    },
+    {
+      "name": "anchor8_original80000_snapshot_manifest_binding",
+      "passed": true
+    },
+    {
+      "name": "anchor8_C2200_snapshot_manifest_binding",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000000_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000000_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000032_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000032_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000064_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000064_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000096_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000096_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000128_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000128_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000160_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000160_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000192_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000192_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000224_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_legacy_single_bottle_step_000224_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_manifest_original_seal",
+      "passed": true,
+      "sha256": "a747412f879c7d4cf9f032d1ead1bcafe3badaf615b07c8fdf766f638e9b5eaa",
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/data/retention_holdout/manifest.json"
+    },
+    {
+      "name": "holdout8_original80000_snapshot_manifest_binding",
+      "passed": true
+    },
+    {
+      "name": "holdout8_C2200_snapshot_manifest_binding",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000016_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000016_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000048_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000048_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000080_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000080_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000112_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000112_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000144_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000144_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000176_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000176_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000208_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000208_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000240_observation_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "holdout8_legacy_single_bottle_heldout_step_000240_noise_actual_bytes",
+      "passed": true
+    },
+    {
+      "name": "anchor8_original80000_source_vs_actual166_snapshot_SHA",
+      "passed": true
+    },
+    {
+      "name": "anchor8_C2200_source_vs_actual166_snapshot_SHA",
+      "passed": true
+    },
+    {
+      "name": "holdout8_original80000_source_vs_actual166_snapshot_SHA",
+      "passed": true
+    },
+    {
+      "name": "holdout8_C2200_source_vs_actual166_snapshot_SHA",
+      "passed": true
+    }
+  ],
+  "check_count": 80,
+  "issues": [],
+  "issue_count": 0,
+  "reference_snapshots": [
+    {
+      "pool": "anchor8",
+      "reference": "original80000",
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/c2200_baseline_v2/retention/anchor8/original80000/snapshot.pt",
+      "actual_file_sha256": "9e6c69c3f08ae097b119c640ee81bec79b917d0250898859b032f241b962e98d",
+      "manifest_sha256": "9f027c50fc5a2d5d80d378f24f5e26dc560f0e1d4d838d3ec7accbbb8172d6f2",
+      "local_source_actual_sha256": "9e6c69c3f08ae097b119c640ee81bec79b917d0250898859b032f241b962e98d",
+      "source_vs_actual166_byte_sha_exact": true
+    },
+    {
+      "pool": "anchor8",
+      "reference": "C2200",
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/c2200_baseline_v2/retention/anchor8/C2200/snapshot.pt",
+      "actual_file_sha256": "a78993676cbc4c34e195e3be1b5cfb060111a03fd541f9fa15845ee96db9f102",
+      "manifest_sha256": "9f027c50fc5a2d5d80d378f24f5e26dc560f0e1d4d838d3ec7accbbb8172d6f2",
+      "local_source_actual_sha256": "a78993676cbc4c34e195e3be1b5cfb060111a03fd541f9fa15845ee96db9f102",
+      "source_vs_actual166_byte_sha_exact": true
+    },
+    {
+      "pool": "holdout8",
+      "reference": "original80000",
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/c2200_baseline_v2/retention/holdout8/original80000/snapshot.pt",
+      "actual_file_sha256": "a6c02e7d3c6381a1aa76d9e6e2997f737e10c42a029cd02f350aef4f4cb7f4dd",
+      "manifest_sha256": "a747412f879c7d4cf9f032d1ead1bcafe3badaf615b07c8fdf766f638e9b5eaa",
+      "local_source_actual_sha256": "a6c02e7d3c6381a1aa76d9e6e2997f737e10c42a029cd02f350aef4f4cb7f4dd",
+      "source_vs_actual166_byte_sha_exact": true
+    },
+    {
+      "pool": "holdout8",
+      "reference": "C2200",
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/c2200_baseline_v2/retention/holdout8/C2200/snapshot.pt",
+      "actual_file_sha256": "8a743db5c745bceee03bd441bab0b2c5cbde05e753c26e22856595e7556ae44e",
+      "manifest_sha256": "a747412f879c7d4cf9f032d1ead1bcafe3badaf615b07c8fdf766f638e9b5eaa",
+      "local_source_actual_sha256": "8a743db5c745bceee03bd441bab0b2c5cbde05e753c26e22856595e7556ae44e",
+      "source_vs_actual166_byte_sha_exact": true
+    }
+  ],
+  "observation_noise_files_verified": 32,
+  "read_only": true,
+  "GPU_initialized": false,
+  "remote_jobs_started_stopped_or_signalled": false,
+  "full7GB_rehash_performed": false,
+  "launch_receipt_present": true,
+  "elapsed_seconds": 1.6095848083496094,
+  "local_source_snapshot_read_only_rehash_completed": true
+}

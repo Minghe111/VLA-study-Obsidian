@@ -1,0 +1,545 @@
+{
+  "format": "rm65b_intermediate_checkpoint_cleanup_plan_v1",
+  "created_unix": 1792414456.410859,
+  "user_authorization": "删除之前的中间权重，保留有用最新几个权重即可。",
+  "scope_root": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments",
+  "protected_original_SFT": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi",
+  "policy": "one-time file-level deletion of obsolete full weights and optimizer state; no automatic future pruning; keep C2200+C2000 and all three current compact checkpoints; do not remove any report/config/version/reference/data/cache",
+  "keep": [
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/train_s000500/checkpoint/trainer_state.pt",
+      "relative": "high_sft_history3000_20261019_v1/reports/train_s000500/checkpoint/trainer_state.pt",
+      "bytes": 29664875,
+      "mtime_ns": 1792412159925945399,
+      "device": 66306,
+      "inode": 55983618,
+      "nlink": 1,
+      "blocks": 57944,
+      "reason": "current branch latest three compact checkpoints; best validated1000 and active resume1500 protected"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/train_s000500/checkpoint/adapter_weights.pt",
+      "relative": "high_sft_history3000_20261019_v1/reports/train_s000500/checkpoint/adapter_weights.pt",
+      "bytes": 14792079,
+      "mtime_ns": 1792412159903946057,
+      "device": 66306,
+      "inode": 55983617,
+      "nlink": 1,
+      "blocks": 28896,
+      "reason": "current branch latest three compact checkpoints; best validated1000 and active resume1500 protected"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/supervisor_v1/train_s001500/checkpoint/trainer_state.pt",
+      "relative": "high_sft_history3000_20261019_v1/reports/supervisor_v1/train_s001500/checkpoint/trainer_state.pt",
+      "bytes": 29664811,
+      "mtime_ns": 1792414031583567546,
+      "device": 66306,
+      "inode": 55983694,
+      "nlink": 1,
+      "blocks": 57944,
+      "reason": "current branch latest three compact checkpoints; best validated1000 and active resume1500 protected"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/supervisor_v1/train_s001500/checkpoint/adapter_weights.pt",
+      "relative": "high_sft_history3000_20261019_v1/reports/supervisor_v1/train_s001500/checkpoint/adapter_weights.pt",
+      "bytes": 14792079,
+      "mtime_ns": 1792414031560568979,
+      "device": 66306,
+      "inode": 55983693,
+      "nlink": 1,
+      "blocks": 28896,
+      "reason": "current branch latest three compact checkpoints; best validated1000 and active resume1500 protected"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/supervisor_v1/train_s001000/checkpoint/trainer_state.pt",
+      "relative": "high_sft_history3000_20261019_v1/reports/supervisor_v1/train_s001000/checkpoint/trainer_state.pt",
+      "bytes": 29664811,
+      "mtime_ns": 1792413109439839121,
+      "device": 66306,
+      "inode": 55983662,
+      "nlink": 1,
+      "blocks": 57944,
+      "reason": "current branch latest three compact checkpoints; best validated1000 and active resume1500 protected"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/supervisor_v1/train_s001000/checkpoint/adapter_weights.pt",
+      "relative": "high_sft_history3000_20261019_v1/reports/supervisor_v1/train_s001000/checkpoint/adapter_weights.pt",
+      "bytes": 14792079,
+      "mtime_ns": 1792413109414840659,
+      "device": 66306,
+      "inode": 55983661,
+      "nlink": 1,
+      "blocks": 28896,
+      "reason": "current branch latest three compact checkpoints; best validated1000 and active resume1500 protected"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2000/checkpoint/trainer_state.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2000/checkpoint/trainer_state.pt",
+      "bytes": 29656363,
+      "mtime_ns": 1792394767688337131,
+      "device": 66306,
+      "inode": 55975585,
+      "nlink": 1,
+      "blocks": 57928,
+      "reason": "C2200 required immutable full base; C2000 full rollback checkpoint"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2000/checkpoint/full_weights.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2000/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792394767665341166,
+      "device": 66306,
+      "inode": 55975584,
+      "nlink": 1,
+      "blocks": 13609560,
+      "reason": "C2200 required immutable full base; C2000 full rollback checkpoint"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint/trainer_state.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint/trainer_state.pt",
+      "bytes": 29656363,
+      "mtime_ns": 1792395262689148268,
+      "device": 66306,
+      "inode": 55975607,
+      "nlink": 1,
+      "blocks": 57928,
+      "reason": "C2200 required immutable full base; C2000 full rollback checkpoint"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint/full_weights.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_2200/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792395262667142374,
+      "device": 66306,
+      "inode": 55975606,
+      "nlink": 1,
+      "blocks": 13609560,
+      "reason": "C2200 required immutable full base; C2000 full rollback checkpoint"
+    }
+  ],
+  "delete": [
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_100/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_100/checkpoint/trainer_state.pt",
+      "bytes": 1083377,
+      "mtime_ns": 1792388250194486185,
+      "device": 66306,
+      "inode": 55974981,
+      "nlink": 1,
+      "blocks": 2120
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_100/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_100/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792388250192486199,
+      "device": 66306,
+      "inode": 55974980,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_200/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_200/checkpoint/trainer_state.pt",
+      "bytes": 1083313,
+      "mtime_ns": 1792387974051474806,
+      "device": 66306,
+      "inode": 55974941,
+      "nlink": 1,
+      "blocks": 2120
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_200/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_200/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792387974049474820,
+      "device": 66306,
+      "inode": 55974940,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_001/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_001/checkpoint/trainer_state.pt",
+      "bytes": 1083249,
+      "mtime_ns": 1792387568543395036,
+      "device": 66306,
+      "inode": 55974869,
+      "nlink": 1,
+      "blocks": 2120
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_001/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_001/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792387568542395043,
+      "device": 66306,
+      "inode": 55974868,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/checkpoint/trainer_state.pt",
+      "bytes": 29656363,
+      "mtime_ns": 1792389232175414540,
+      "device": 66306,
+      "inode": 55975080,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_300/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792389232013415707,
+      "device": 66306,
+      "inode": 55975079,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_001/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_001/checkpoint/trainer_state.pt",
+      "bytes": 29656171,
+      "mtime_ns": 1792387625415985473,
+      "device": 66306,
+      "inode": 55974884,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_001/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_001/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792387625394985624,
+      "device": 66306,
+      "inode": 55974883,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_100/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_100/checkpoint/trainer_state.pt",
+      "bytes": 29656235,
+      "mtime_ns": 1792387888522090739,
+      "device": 66306,
+      "inode": 55974918,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_100/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_100/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792387888500090897,
+      "device": 66306,
+      "inode": 55974916,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_200/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_200/checkpoint/trainer_state.pt",
+      "bytes": 1083441,
+      "mtime_ns": 1792388577267130802,
+      "device": 66306,
+      "inode": 55975021,
+      "nlink": 1,
+      "blocks": 2120
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_200/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_200/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792388577012132638,
+      "device": 66306,
+      "inode": 55975020,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_300/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_300/checkpoint/trainer_state.pt",
+      "bytes": 1083441,
+      "mtime_ns": 1792388926152618338,
+      "device": 66306,
+      "inode": 55975059,
+      "nlink": 1,
+      "blocks": 2120
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_300/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_96_300/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792388926135618460,
+      "device": 66306,
+      "inode": 55975058,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_100/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_100/checkpoint/trainer_state.pt",
+      "bytes": 29656299,
+      "mtime_ns": 1792388447939062145,
+      "device": 66306,
+      "inode": 55975001,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_100/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_100/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792388447916062311,
+      "device": 66306,
+      "inode": 55975000,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_200/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_200/checkpoint/trainer_state.pt",
+      "bytes": 29656363,
+      "mtime_ns": 1792388803697500186,
+      "device": 66306,
+      "inode": 55975040,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_200/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_96_200/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792388803444502008,
+      "device": 66306,
+      "inode": 55975039,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_200/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_200/checkpoint/trainer_state.pt",
+      "bytes": 29656171,
+      "mtime_ns": 1792388157149156243,
+      "device": 66306,
+      "inode": 55974963,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_200/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/language_warmup_9_200/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792388157128156395,
+      "device": 66306,
+      "inode": 55974961,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_100/checkpoint/trainer_state.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_100/checkpoint/trainer_state.pt",
+      "bytes": 1083313,
+      "mtime_ns": 1792387708410387795,
+      "device": 66306,
+      "inode": 55974900,
+      "nlink": 1,
+      "blocks": 2120
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_100/checkpoint/full_weights.pt",
+      "relative": "protocol_fit_20261019_v1/reports/comparison_v1/protocol_9_100/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792387708408387810,
+      "device": 66306,
+      "inode": 55974899,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1800/checkpoint/trainer_state.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1800/checkpoint/trainer_state.pt",
+      "bytes": 29656427,
+      "mtime_ns": 1792394438735904909,
+      "device": 66306,
+      "inode": 55975564,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1800/checkpoint/full_weights.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1800/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792394438712908221,
+      "device": 66306,
+      "inode": 55975563,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1200/checkpoint/trainer_state.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1200/checkpoint/trainer_state.pt",
+      "bytes": 29656363,
+      "mtime_ns": 1792393233649208900,
+      "device": 66306,
+      "inode": 55975430,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1200/checkpoint/full_weights.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1200/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792393233622202309,
+      "device": 66306,
+      "inode": 55975425,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1400/checkpoint/trainer_state.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1400/checkpoint/trainer_state.pt",
+      "bytes": 29656363,
+      "mtime_ns": 1792393565704495383,
+      "device": 66306,
+      "inode": 55975495,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1400/checkpoint/full_weights.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1400/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792393565683472709,
+      "device": 66306,
+      "inode": 55975493,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1000/checkpoint/trainer_state.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1000/checkpoint/trainer_state.pt",
+      "bytes": 29656363,
+      "mtime_ns": 1792392905865419408,
+      "device": 66306,
+      "inode": 55975373,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1000/checkpoint/full_weights.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1000/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792392905844416623,
+      "device": 66306,
+      "inode": 55975372,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1600/checkpoint/trainer_state.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1600/checkpoint/trainer_state.pt",
+      "bytes": 29656363,
+      "mtime_ns": 1792394109203757199,
+      "device": 66306,
+      "inode": 55975544,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1600/checkpoint/full_weights.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_1600/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792394109182760854,
+      "device": 66306,
+      "inode": 55975543,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_0800/checkpoint/trainer_state.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_0800/checkpoint/trainer_state.pt",
+      "bytes": 29656427,
+      "mtime_ns": 1792392582457944552,
+      "device": 66306,
+      "inode": 55975349,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_0800/checkpoint/full_weights.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_0800/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792392582434953798,
+      "device": 66306,
+      "inode": 55975348,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_0600/checkpoint/trainer_state.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_0600/checkpoint/trainer_state.pt",
+      "bytes": 29656363,
+      "mtime_ns": 1792392257793517885,
+      "device": 66306,
+      "inode": 55975329,
+      "nlink": 1,
+      "blocks": 57928
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_0600/checkpoint/full_weights.pt",
+      "relative": "protocol_repair_20261019_v2/reports/continuation_v1/language_warmup_96_0600/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792392257770521848,
+      "device": 66306,
+      "inode": 55975328,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/05_fit128/checkpoint/trainer_state.pt",
+      "relative": "protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/05_fit128/checkpoint/trainer_state.pt",
+      "bytes": 1054059,
+      "mtime_ns": 1792330519024708366,
+      "device": 66306,
+      "inode": 55869254,
+      "nlink": 1,
+      "blocks": 2064
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/05_fit128/checkpoint/full_weights.pt",
+      "relative": "protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/05_fit128/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792330519023708367,
+      "device": 66306,
+      "inode": 55869248,
+      "nlink": 1,
+      "blocks": 13609560
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/03_fit32/checkpoint/trainer_state.pt",
+      "relative": "protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/03_fit32/checkpoint/trainer_state.pt",
+      "bytes": 1054059,
+      "mtime_ns": 1792330348191848201,
+      "device": 66306,
+      "inode": 55869241,
+      "nlink": 1,
+      "blocks": 2064
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/03_fit32/checkpoint/full_weights.pt",
+      "relative": "protocol_sft_20261018_v1/reports/protocol_sft_sequence_v1/03_fit32/checkpoint/full_weights.pt",
+      "bytes": 6968087357,
+      "mtime_ns": 1792330348181848210,
+      "device": 66306,
+      "inode": 55869235,
+      "nlink": 1,
+      "blocks": 13609560
+    }
+  ],
+  "delete_bytes": 146723975020,
+  "before_free_bytes": 71183036416,
+  "execution_started": false
+}

@@ -1,0 +1,198 @@
+{
+  "status": "no_C2200_weight_write_found_in_actual_migration_eval_launch_paths_root_cause_unconfirmed",
+  "scope": "read-only CPU static call-path audit, plus actual166 structured manifest and invocation receipts; no GPU or model initialized, no remote mutation, no7GB hash",
+  "source_files_reviewed": [
+    {
+      "file": "/tmp/hist3000_migrate166/relocate_history3000.py",
+      "sha256": "1663c3bb52f2bbcf05b80fe224b97f06587e2db871fb0da955bd54334083a918",
+      "write_or_rename_calls": [
+        {
+          "line": 26,
+          "call": "path.write_text(json.dumps(value, ensure_ascii=False, sort_keys=True, indent=2, allow_nan=False) + '\\n')"
+        },
+        {
+          "line": 185,
+          "call": "shutil.copy2(src / 'adapter_weights.pt', dest / 'adapter_weights.pt')"
+        },
+        {
+          "line": 186,
+          "call": "torch.save(changed, dest / 'trainer_state.pt')"
+        },
+        {
+          "line": 88,
+          "call": "shutil.copy2(p, backup)"
+        },
+        {
+          "line": 89,
+          "call": "p.write_bytes(encoded[row['target']])"
+        }
+      ]
+    },
+    {
+      "file": "/tmp/hist3000_migrate166/prepare_task.py",
+      "sha256": "5e6b34caa218b8e0ee6c1887ca31d0c3878f8a3b04eb481343b5b16e64aa0fd7",
+      "write_or_rename_calls": [
+        {
+          "line": 8,
+          "call": "shutil.copytree(source, original)"
+        },
+        {
+          "line": 12,
+          "call": "(ROOT / 'runtime_env.json').write_text(json.dumps(variables, indent=2) + '\\n')"
+        },
+        {
+          "line": 16,
+          "call": "path.write_text(json.dumps(state, indent=2) + '\\n')"
+        },
+        {
+          "line": 30,
+          "call": "shutil.copy2(old, ROOT / 'migration_source/fit_comparison_original.py')"
+        },
+        {
+          "line": 30,
+          "call": "shutil.copy2(patch, old)"
+        }
+      ]
+    },
+    {
+      "file": "/tmp/hist3000_migrate166/start_supervisor.py",
+      "sha256": "7911463461a75165d0804aaaec78c85e358b16b459c8d28507ab74e1138f13b5",
+      "write_or_rename_calls": [
+        {
+          "line": 22,
+          "call": "claim.write_text(json.dumps(report, indent=2) + '\\n')"
+        }
+      ]
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/train_history3000.py",
+      "sha256": "dd1574deefa1ceb40eb832ad5b3cbe5369daf08579b98593da0050252582b94d",
+      "write_or_rename_calls": [
+        {
+          "line": 255,
+          "call": "torch.save(adapters, temporary / 'adapter_weights.pt')"
+        },
+        {
+          "line": 256,
+          "call": "torch.save({'optimizer': worker.optimizer.state_dict(), 'scheduler': None if worker.scheduler is None else worker.scheduler.state_dict(), 'global_step': worker.global_step, 'training_manifest': manifest, 'rng_state': capture_training_rng(), 'sampler_state': worker.sampler.state_dict(), 'resume_state_version': 1, 'batch_contract'"
+        },
+        {
+          "line": 275,
+          "call": "temporary.rename(destination)"
+        },
+        {
+          "line": 340,
+          "call": "(args.output / 'effective_config.yaml').write_text(yaml.safe_dump(cfg, sort_keys=False))"
+        },
+        {
+          "line": 518,
+          "call": "torch.save(actor.model.state_dict(), args.output / 'full_weights.pt')"
+        },
+        {
+          "line": 521,
+          "call": "shutil.copy2(args.resume / 'trainer_state.pt', args.output / 'trainer_state.pt')"
+        },
+        {
+          "line": 528,
+          "call": "(args.output.parent / 'effective_config.yaml').write_text(yaml.safe_dump(cfg, sort_keys=False))"
+        }
+      ]
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/run_history3000_sft_supervisor.py",
+      "sha256": "3fe50f6e5b56ce97dcdd58b02f65cd4e02715c10cade7192d7c32f2dd1b82d77",
+      "write_or_rename_calls": [
+        {
+          "line": 23,
+          "call": "temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + '\\n')"
+        },
+        {
+          "line": 24,
+          "call": "temporary.replace(path)"
+        }
+      ]
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/evaluate_history3000_checkpoint.py",
+      "sha256": "e7ab02237a3e11b26f45670166bc3bd7adc54f1d38d7275f19e0f761b47b3ef5",
+      "write_or_rename_calls": []
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/validate_history3000_sft.py",
+      "sha256": "fc0d5b3a0a38f75018abea0dfd4b2f4fd4f8bb9e5ab36d0d7c240fe5b86a0e73",
+      "write_or_rename_calls": [
+        {
+          "line": 123,
+          "call": "path.write_text(''.join((stable({k: v for k, v in r.items() if k != '_source'}) + '\\n' for r in rows)))"
+        }
+      ]
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/checkpoint.py",
+      "sha256": "3aaeac4d086f86b4b8b0a993d3410a101e4c5303f4eddb8309aa55d5c6769910",
+      "write_or_rename_calls": []
+    },
+    {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/runners/hierarchical_recap_runner.py",
+      "sha256": "8df84531335425002e4420792923c57186191ba0979d2edf41018bff82eb911a",
+      "write_or_rename_calls": [
+        {
+          "line": 1049,
+          "call": "torch.save(model.state_dict(), path)"
+        }
+      ]
+    }
+  ],
+  "actual_remote_structured_receipt": {
+    "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/reports/structured_relocation_v1/receipt.json",
+    "file_count": 16,
+    "pt_entries": []
+  },
+  "actual_launch": {
+    "supervisor_output": "reports/supervisor_166_v1",
+    "first_phase": "eval_s002000",
+    "automatic_export": false,
+    "automatic_test": false,
+    "first_phase_failed_before_optimizer": true
+  },
+  "call_path_findings": [
+    "structured relocation writes only validated JSON/JSONL/YAML targets; actual16-entry list excludes all.pt",
+    "compact relocation writes new output adapter/trainer/version only; source C2200 fullweights consumed by SHA reader",
+    "prepare_task copytree source is compact2000, not C2200; CardMonitor patch only edits fit_comparison.py",
+    "supervisor start only validates/hashes C2200 then spawns eval; output directories are separate task reports",
+    "evaluation calls compact metadata/hash guards then NativeHierarchicalBackend._actor -> get_model -> load_full_weights -> torch.load read; official key conversion is in memory",
+    "train ordinary segments save only compact adapter/trainer/version under separate output directory",
+    "train.export contains a full_weights torch.save, but command export is absent from observed argv and automatic_export=false",
+    "NativeHierarchicalBackend.fit_value also saves a full_weights file in destination, but value/RL disabled and this function not on observed call path",
+    "no utime, truncate or destructive open of C2200 base found on invoked path"
+  ],
+  "remote_truncated_file_observed": {
+    "bytes": 1852211200,
+    "mtime": 0.6671423740000001,
+    "ctime": 1792417385.321238,
+    "symlink": false,
+    "nlink": 1,
+    "inode": 107226351
+  },
+  "known_timeline_unix": {
+    "transport_finished": 1792417058,
+    "migration_phase2_finished": 1792417232.486262,
+    "supervisor_started": 1792417357.8492508,
+    "first_eval_started": 1792417365.9119723,
+    "truncated_file_ctime": 1792417385.321238,
+    "first_eval_finished_failed": 1792417427.9220562
+  },
+  "timestamp_clue": {
+    "local_source_mtime_ns": 1792395262667142374,
+    "local_source_mtime_seconds": 1792395262.6671424,
+    "source_fractional_nanoseconds": 667142374,
+    "remote_mtime_equals_source_fractional_seconds": true,
+    "interpretation": "Metadata matches only the source subsecond component. This is a correlation suggesting a timestamp/transfer writer; the responsible writer/process is not proven."
+  },
+  "cause_confirmed": false,
+  "responsible_process_identified": false,
+  "late_receiver_race": "possible_not_confirmed",
+  "all_old_audits_temporal_boundary": "Prior80 checks did not rehash7GB base by explicit request; they certify trainer/sampler/adapter/reference binding, not subsequent immutable-file integrity.",
+  "safe_repair_boundary": "Parent exclusively manages independent retransfer/quarantine/atomic install and mandatory final full SHA validation. No changes by this audit.",
+  "generated_unix": 1792417986.5101814
+}

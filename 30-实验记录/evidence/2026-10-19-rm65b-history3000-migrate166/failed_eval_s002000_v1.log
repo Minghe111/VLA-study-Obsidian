@@ -1,0 +1,25 @@
+INFO:root:Loaded norm stats from /bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/rlinf_local_5090_minppo_20261013/models/pi05_80000_openpi/realman_rgb50_full50
+Traceback (most recent call last):
+  File "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/evaluate_history3000_checkpoint.py", line 298, in <module>
+    main()
+  File "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/evaluate_history3000_checkpoint.py", line 294, in main
+    return execute(args)
+           ^^^^^^^^^^^^^
+  File "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/evaluate_history3000_checkpoint.py", line 191, in execute
+    actor = NativeHierarchicalBackend(config)._actor()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/runners/hierarchical_recap_runner.py", line 880, in _actor
+    model = get_model(OmegaConf.create(model_cfg)).to(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/__init__.py", line 296, in get_model
+    load_full_weights(
+  File "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/checkpoint.py", line 150, in load_full_weights
+    loaded = torch.load(str(weights_path), map_location="cpu", weights_only=False)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bigdata2/liminghe/rlinf_history3000_20261019_v1/venv/lib/python3.11/site-packages/torch/serialization.py", line 1486, in load
+    with _open_zipfile_reader(opened_file) as opened_zipfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/bigdata2/liminghe/rlinf_history3000_20261019_v1/venv/lib/python3.11/site-packages/torch/serialization.py", line 771, in __init__
+    super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory

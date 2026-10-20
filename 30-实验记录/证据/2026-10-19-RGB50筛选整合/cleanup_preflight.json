@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "prepared_date_Asia_Shanghai": "2026-10-19",
+  "status": "COMPLETE_SELECTED43_INTEGRATED",
+  "data_files_deleted": false,
+  "integrated_dataset_materialized": true,
+  "remote_current_inventory_verified": true,
+  "source_manifest_sha256": "2339d5749b650761011e3975cbeb8d42ceb31dbff4f1f2aba6d71cac9a3edf80",
+  "source_bindings_checked": {
+    "index_and_audit_episode_count": 50,
+    "sha256_match_for_all_50": true,
+    "metadata_and_pair_count_match_for_all_50": true
+  },
+  "evidence_inputs": [
+    {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/证据/2026-10-13-RealManRGB50专家轨迹质量核查/full50_audit/all50_motion_audit.json",
+      "sha256": "b82775306084702cdef7281ac107c6874ee0092a73cdb78519e4f3b371b943d5"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/data50_v1/native_index.json",
+      "sha256": "9b21feef1c660900196e35ae3615ec47570d02a34990c3e17df94208b43038df"
+    }
+  ],
+  "historical_source_166": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_final_20261007/dataset",
+  "historical_training_copy_161": "/bigdata/liminghe/VLA-benchmark/deploy/realman_gen4/pi05_rgb50_full50_100k_b8_4gpu_161_20261007_v1/source_training_files",
+  "local_full_training_hdfs_present_in_training_source_dir": false,
+  "variants": [
+    {
+      "selection_id": "priority5",
+      "execution_authorized_for_exact_selection": false,
+      "excluded_original_indices": [
+        17,
+        18,
+        20,
+        29,
+        34
+      ],
+      "retained_original_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "retained_episode_count": 45,
+      "retained_state_action_pairs": 9852,
+      "retained_h16_full_windows": 9177,
+      "retained_hdf_bytes": 3805800636,
+      "retained_physical_steps": 147780,
+      "coverage": {
+        "arm": {
+          "left": 21,
+          "right": 24
+        },
+        "brand": {
+          "Sprite": 20,
+          "Coca-Cola": 18,
+          "Fanta": 7
+        },
+        "pose_class": {
+          "upright": 15,
+          "horizontal": 15,
+          "diagonal": 15
+        }
+      },
+      "unresolved_range_ge300_original_indices": [
+        1,
+        9,
+        16,
+        28,
+        35,
+        39,
+        44,
+        45,
+        46,
+        47
+      ],
+      "retained_items_have_new_global_motion_gate_pass": false
+    },
+    {
+      "selection_id": "explicit7",
+      "execution_authorized_for_exact_selection": true,
+      "excluded_original_indices": [
+        1,
+        17,
+        18,
+        20,
+        29,
+        34,
+        47
+      ],
+      "retained_original_indices": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        48,
+        49
+      ],
+      "retained_episode_count": 43,
+      "retained_state_action_pairs": 9255,
+      "retained_h16_full_windows": 8610,
+      "retained_hdf_bytes": 3573803695,
+      "retained_physical_steps": 138825,
+      "coverage": {
+        "arm": {
+          "left": 19,
+          "right": 24
+        },
+        "brand": {
+          "Sprite": 19,
+          "Coca-Cola": 17,
+          "Fanta": 7
+        },
+        "pose_class": {
+          "upright": 15,
+          "diagonal": 15,
+          "horizontal": 13
+        }
+      },
+      "unresolved_range_ge300_original_indices": [
+        9,
+        16,
+        28,
+        35,
+        39,
+        44,
+        45,
+        46
+      ],
+      "retained_items_have_new_global_motion_gate_pass": false
+    }
+  ],
+  "blocking_inputs": [],
+  "planned_integration": [
+    "Confirm target host, account, absolute path and symlinks; inventory current dataset and active readers.",
+    "Match source manifest and all 50 HDF hashes against historical source bindings before changing data.",
+    "Remove selected bad episodes from the active dataset using a reversible quarantine and retain original episode identity.",
+    "Build a new consistent manifest, instruction/metadata mapping and training index for the retained dataset.",
+    "Recompute normalization statistics using only retained episodes; do not reuse all50 statistics as clean-set statistics.",
+    "Read back all retained HDF structure, 24D fields, RGB decode, clocks and hashes; ensure excluded episodes cannot be selected by the clean training index.",
+    "Record actual removal/quarantine paths, retained counts, coverage changes and validation evidence."
+  ],
+  "quality_scope_note": "Retention by an exclusion list is not a fresh all-episode motion-quality pass. Additional large-range/detour candidates remain and must not be silently labeled globally qualified.",
+  "selected_variant": "explicit7",
+  "selection_confirmed_by_user": true,
+  "temporary_direct_connection_to_166_authorized": true,
+  "remote_verified_host": "user-4U-GPU-Server",
+  "remote_verified_account": "liminghe",
+  "remote_root": "/bigdata2/liminghe/VLA-benchmark/deploy/realman_gen4/rgb50_clean43_20261019_v1",
+  "excluded_from_clean_training_dataset": true,
+  "result_receipt": "remote_readback/evidence/final_validation.json",
+  "independent_readback": "independent_remote_readback.json",
+  "physical_deletion_scope_note": "Seven excluded episodes absent from clean43; original50 retained as historical source, no permanent source purge."
+}
