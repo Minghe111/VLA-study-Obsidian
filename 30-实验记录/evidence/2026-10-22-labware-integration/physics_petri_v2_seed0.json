@@ -1,0 +1,83 @@
+{
+  "spec_version": "lab-physics-v1",
+  "seed": 0,
+  "engine": "SAPIEN 3.0.0b1 PhysX CPU",
+  "physics_steps": 14600,
+  "dt_s": 0.001,
+  "elapsed_sim_s": 14.6,
+  "initial_tablets": 12,
+  "initial_inside": 12,
+  "closed_inverted_min_inside": 12,
+  "premature_release_refused": true,
+  "release_measured": {
+    "lift_m": 0.011754358530044556,
+    "rotation_rad": 15.705454090501428,
+    "xy_error_m": 3.577139567900473e-15,
+    "released": true
+  },
+  "final_receiver_count": 12,
+  "remaining_bottle_count": 0,
+  "tablets_finite": true,
+  "receiver_collision_geometry": {
+    "asset": "imported sample-data petri_dish lower CAD body; matched derived convex collision dimensions",
+    "inner_radius_m": 0.0425,
+    "outer_radius_m": 0.0435,
+    "height_m": 0.014,
+    "base_thickness_m": 0.001,
+    "wall_segments": 48
+  },
+  "fixture_trajectory_spec": {
+    "receiver_position_m": [
+      0.03,
+      0,
+      0
+    ],
+    "bottle_mouth_position_m": [
+      0,
+      0,
+      0.13
+    ],
+    "pour_tilt_deg": 155
+  },
+  "contact_pair_step_counts": {
+    "tablet_cap": 15604,
+    "tablet_body": 89160,
+    "tablet_receiver": 34747,
+    "tablet_floor": 0
+  },
+  "final_tablet_actor_count": 12,
+  "tablets_pose_writes_after_initialization": 0,
+  "tablet_pose_write_boundary": "Only ActorBuilder.initial_pose during construction; subsequent integration by PhysX",
+  "bottle_motion": "declared kinematic fixture, not RM65-B grasp/policy",
+  "cap_motion": "force/torque limited D6 guide then separate cap-holding fixture",
+  "true_thread_mesh_contact": false,
+  "hardware_io": false,
+  "events": [
+    {
+      "event": "closed_inverted_no_leak",
+      "step": 3300,
+      "minimum_inside": 12
+    },
+    {
+      "event": "cap_released",
+      "step": 9200,
+      "measured": {
+        "lift_m": 0.011754358530044556,
+        "rotation_rad": 15.705454090501428,
+        "xy_error_m": 3.577139567900473e-15,
+        "released": true
+      }
+    },
+    {
+      "event": "receiver_count",
+      "step": 14600,
+      "count": 12
+    }
+  ],
+  "passed": true,
+  "source_sha256": {
+    "lab_physics.py": "dbda8fa4cef81e707eb66dcda67a4dd43c5734a13534f38fddaf3fbb41d502bc",
+    "test_lab_physics.py": "086bca2711c05646e1ae53f6a765bd4aea67d32c01e30b02eba12524681ae7a7",
+    "physics_spec.json": "d19a0566066b9f3424073f43fc8758644d95e19f92129ff9f2fbca1cc1bb3d0f"
+  }
+}

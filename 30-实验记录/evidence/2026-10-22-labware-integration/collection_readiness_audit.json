@@ -1,0 +1,130 @@
+{
+  "scope": "read-only codegen metadata contract audit; isolated execution of current original enrich_actors AST, no robot/simulator collection",
+  "robotwin_head": "931ce21f4f0e63feab661f349634d5a25bd92681",
+  "source": "/home/admin123/liminghe/vla-benchmark/RoboTwin/code_gen/test_gen_code.py",
+  "source_lines": [
+    29,
+    82
+  ],
+  "assets": [
+    {
+      "asset": "beaker",
+      "model_data0": true,
+      "points_info_exists": false,
+      "official_alias_exists": false,
+      "agent_enrichment_result": {
+        "self.beaker": {
+          "name": "beaker",
+          "description": "beaker"
+        }
+      },
+      "warning": "Warning: File not found: /home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/beaker/points_info.json",
+      "functional_semantics": [
+        "Receive/pour opening centre (+Z outward)",
+        "Interior floor centre; a valid receiving region requires audited hollow collision",
+        "Candidate +X lip/spout target; nearest-surface evidence is stored separately"
+      ]
+    },
+    {
+      "asset": "erlenmeyer",
+      "model_data0": true,
+      "points_info_exists": false,
+      "official_alias_exists": false,
+      "agent_enrichment_result": {
+        "self.erlenmeyer": {
+          "name": "erlenmeyer",
+          "description": "erlenmeyer"
+        }
+      },
+      "warning": "Warning: File not found: /home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/erlenmeyer/points_info.json",
+      "functional_semantics": [
+        "Receive/pour opening centre (+Z outward)",
+        "Interior floor centre; a valid receiving region requires audited hollow collision",
+        "Candidate +X lip/spout target; nearest-surface evidence is stored separately"
+      ]
+    },
+    {
+      "asset": "graduated_cylinder",
+      "model_data0": true,
+      "points_info_exists": false,
+      "official_alias_exists": false,
+      "agent_enrichment_result": {
+        "self.graduated_cylinder": {
+          "name": "graduated_cylinder",
+          "description": "graduated_cylinder"
+        }
+      },
+      "warning": "Warning: File not found: /home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/graduated_cylinder/points_info.json",
+      "functional_semantics": [
+        "Receive/pour opening centre (+Z outward)",
+        "Interior floor centre; a valid receiving region requires audited hollow collision",
+        "Candidate +X lip/spout target; nearest-surface evidence is stored separately"
+      ]
+    },
+    {
+      "asset": "petri_dish",
+      "model_data0": true,
+      "points_info_exists": false,
+      "official_alias_exists": false,
+      "agent_enrichment_result": {
+        "self.petri_dish": {
+          "name": "petri_dish",
+          "description": "petri_dish"
+        }
+      },
+      "warning": "Warning: File not found: /home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/petri_dish/points_info.json",
+      "functional_semantics": [
+        "Receive/pour opening centre (+Z outward)",
+        "Interior floor centre; a valid receiving region requires audited hollow collision",
+        "Candidate +X lip/spout target; nearest-surface evidence is stored separately"
+      ]
+    },
+    {
+      "asset": "reagent_bottle_body",
+      "model_data0": true,
+      "points_info_exists": false,
+      "official_alias_exists": false,
+      "agent_enrichment_result": {
+        "self.reagent_bottle_body": {
+          "name": "reagent_bottle_body",
+          "description": "reagent_bottle_body"
+        }
+      },
+      "warning": "Warning: File not found: /home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_body/points_info.json",
+      "functional_semantics": [
+        "Receive/pour opening centre (+Z outward)",
+        "Interior floor centre; a valid receiving region requires audited hollow collision",
+        "Candidate +X lip/spout target; nearest-surface evidence is stored separately"
+      ]
+    },
+    {
+      "asset": "reagent_bottle_cap",
+      "model_data0": true,
+      "points_info_exists": false,
+      "official_alias_exists": false,
+      "agent_enrichment_result": {
+        "self.reagent_bottle_cap": {
+          "name": "reagent_bottle_cap",
+          "description": "reagent_bottle_cap"
+        }
+      },
+      "warning": "Warning: File not found: /home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_cap/points_info.json",
+      "functional_semantics": [
+        "Cap underside opening centre (-Z outward) for neck alignment; no thread dynamics implied",
+        "Cap twist-axis marker (+Z); removal must be supplied by physical mechanism"
+      ]
+    }
+  ],
+  "date": "2026-10-22",
+  "source_sha256": "173b46f8f332c98c059dccb428f0d29a203a2b0254a49128e66da1292f7a89d3",
+  "conclusion": "Geometry annotation/loading passed; direct original-Agent task collection is not ready. This audit does not change frozen assets or their previous component acceptance.",
+  "missing_layers": [
+    "points_info.json Agent semantic mapping for all six assets",
+    "explicit task actor/model registry and default object language descriptions",
+    "task setup/play_once/check_success plus robot-driven cap/pour expert",
+    "RM65 nominal 18cm TCP and physical grasp checks",
+    "SDK24 state/action with three RGB views and 60ms clock plus exported-file readback"
+  ],
+  "point_id_warning": "Imported functional0 is opening, functional1 is interior floor, functional2 is rim. Existing place_empty_cup uses functional0 as bottom support. Do not substitute models without adapting task point IDs; target_pose[0] is not an Agent functional point.",
+  "offset_chain_correction": "Base_Task -0.12m and Robot +(0.12-gripper_bias) cancel; RealMan effective bias is .18m, nominal_geometry_not_calibrated. The constant .12m alone is not evidence of a bug."
+}

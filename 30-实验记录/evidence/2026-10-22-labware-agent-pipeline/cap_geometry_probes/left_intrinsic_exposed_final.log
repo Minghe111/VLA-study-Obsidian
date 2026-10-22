@@ -1,0 +1,48 @@
+{
+  "scope": "intrinsic left-hand surface/FK construction only",
+  "right_hand_or_held_height_bound": false,
+  "arm_IK_tested": false,
+  "robot_rollout_tested": false,
+  "renderer_created": false,
+  "physics_steps": 0,
+  "cap_geometry": {
+    "outer_radius_m": 0.03,
+    "local_z_bounds_m": [
+      -0.012,
+      0.002
+    ],
+    "mid_height_m": -0.005
+  },
+  "joint_count": 36,
+  "link_count": 93,
+  "initial_FK_max_position_error_m": 7.10896279923711e-07,
+  "normal_method": "Actual convex sensor hull facet normals, selected near the thin PCA axis; faces occluded by the parent phalanx convex collision hull are rejected",
+  "surface_exposure_test": "Actual facet centroid is outside the real parent convex collision hull; no outward inflation or sensor-frame sign assumed",
+  "geometry_to_physics_boundary": "Facet means/normals are geometric candidate contact patches; actual contact location, forces, friction and force closure remain unverified",
+  "source_sha256": {
+    "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets/embodiments/realman-rm65b-inspire-gen4/robot_sapien.urdf": "4bf28c444af1a28401a975e5de6e138c1ec043536aa786ea541c30c359bd65bd",
+    "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets/embodiments/realman-rm65b-inspire-gen4/source_manifest.json": "6cac675e0f2228d3b233f82b7082b8df17860d2e18bfd7ba7dcc67ccf3c5d6e5",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/integrations/realman_rm65b_gen4/teacher_legacy/continuous_servo.py": "18716a2e0aca64425f1a2a3936bfa4e1f7886b3df7fa31f3b37284e779746c19",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/integrations/realman_rm65b_gen4/teacher_legacy/full_mesh_path_audit_bounded.py": "c9803dcc88a261d3b53535fe5fd748fef4bc5b6e0ef30d4e2d50efb175d59477",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_cap_intrinsic.py": "6208187bf431eb2c68b9fa8cfda563e77937850051caadb76ab7a99a31bedc80"
+  },
+  "index_surface_samples": 51,
+  "thumb_surface_samples": 2142,
+  "pairs_in58to66mm_band": 14472,
+  "strict_opposing_pairs": 4,
+  "max_min_facing_cosine_in_distance_band": 0.7614719716598659,
+  "selected_count": 2,
+  "elapsed_s": 0.7624192237854004,
+  "criteria": {
+    "precontact_surface_gap_m": [
+      0.06,
+      0.066
+    ],
+    "target_gap_m": 0.0608,
+    "minimum_facing_cosine": 0.7,
+    "maximum_normal_dot": -0.7
+  },
+  "pending": "Bind actual115 held q36/root/body/cap pose; enumerate canonical yaw/roll; full hand/body/cap/right-hand collision and arm IK; actual contact pinch and regrasp rollout.",
+  "opening_arc_boundary": "Each eventual 45-90degree opening arc must move the palm around measured body-Z and account for measured axial cap rise. A static endpoint is not a swept path, and grasp is not assumed permanently rigid.",
+  "minimum_selected_palm_orbit_m": 0.09190151132450317
+}

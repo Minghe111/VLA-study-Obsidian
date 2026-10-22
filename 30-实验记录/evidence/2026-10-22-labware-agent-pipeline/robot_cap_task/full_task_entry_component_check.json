@@ -1,0 +1,22 @@
+{
+  "scope": "CPU import and final-gate negative checks only; no simulator, physical result, RGB collection or stable-window acceptance; later polygon-wall and whole-cap bound implementation imported only, not runtime verified",
+  "source_sha256": "6205a476bf4db852c89e908504a806d6a95f8660cfd42668044e3fb0cea9bd20",
+  "physical_steps": 0,
+  "FULL_WORKFLOW_READY": false,
+  "checks": [
+    "valid instantaneous geometry/load/speed input accepted, not a physical success",
+    "reject body_hold_seen",
+    "reject released",
+    "reject cap_clear",
+    "reject complete_inside_count",
+    "reject capsule_count",
+    "reject names_unique",
+    "reject tablet_table_force_N",
+    "reject tablet_bottle_force_N",
+    "reject max_tablet_speed_m_s",
+    "reject receiver_speed_m_s",
+    "unimplemented full expert rejects rather than running body-hold fallback"
+  ],
+  "full_world_runtime_verified": false,
+  "initial_robot_and_dish_geometry_verified": false
+}

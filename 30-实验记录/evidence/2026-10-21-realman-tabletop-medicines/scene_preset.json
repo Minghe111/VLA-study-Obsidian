@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "scope": "Default pose and placements for this static tabletop visualization; no hardware commands or global task defaults.",
+  "robot_model": "assets/embodiments/realman-rm65b-inspire-gen4/robot_sapien.urdf",
+  "robot_urdf_sha256": "4bf28c444af1a28401a975e5de6e138c1ec043536aa786ea541c30c359bd65bd",
+  "root_pose_xyz_quaternion_wxyz": [
+    0,
+    -0.65,
+    0.09539821919202804,
+    0,
+    0,
+    0,
+    1
+  ],
+  "joint_positions_rad": {
+    "r_joint1": 1.1352381706237793,
+    "l_joint1": -1.1330026388168335,
+    "r_joint2": 0.3276335299015045,
+    "l_joint2": -0.3309967815876007,
+    "r_joint3": 1.2342201471328735,
+    "l_joint3": -1.2310532331466675,
+    "r_joint4": -0.34638315439224243,
+    "l_joint4": 0.3447459936141968,
+    "r_joint5": 0.32985207438468933,
+    "l_joint5": -0.32949697971343994,
+    "r_joint6": -1.3875336647033691,
+    "l_joint6": 1.3891642411523542,
+    "r_inspire_right_thumb_1_joint": 1.1641000509262085,
+    "r_inspire_right_index_1_joint": 0.0,
+    "r_inspire_right_middle_1_joint": 0.0,
+    "r_inspire_right_ring_1_joint": 0.0,
+    "r_inspire_right_little_1_joint": 0.0,
+    "l_inspire_left_thumb_1_joint": 1.1641000509262085,
+    "l_inspire_left_index_1_joint": 0.0,
+    "l_inspire_left_middle_1_joint": 0.0,
+    "l_inspire_left_ring_1_joint": 0.0,
+    "l_inspire_left_little_1_joint": 0.0,
+    "r_inspire_right_thumb_2_joint": 0.0,
+    "r_inspire_right_index_2_joint": 0.0,
+    "r_inspire_right_middle_2_joint": 0.0,
+    "r_inspire_right_ring_2_joint": 0.0,
+    "r_inspire_right_little_2_joint": 0.0,
+    "l_inspire_left_thumb_2_joint": 0.0,
+    "l_inspire_left_index_2_joint": 0.0,
+    "l_inspire_left_middle_2_joint": 0.0,
+    "l_inspire_left_ring_2_joint": 0.0,
+    "l_inspire_left_little_2_joint": 0.0,
+    "r_inspire_right_thumb_3_joint": 0.0,
+    "l_inspire_left_thumb_3_joint": 0.0,
+    "r_inspire_right_thumb_4_joint": 0.0,
+    "l_inspire_left_thumb_4_joint": 0.0
+  },
+  "pose_correction": {
+    "joint": "l_joint6",
+    "before_rad": -1.752428412437439,
+    "after_rad": 1.3891642411523542,
+    "delta_rad": 3.141592653589793,
+    "baseline_evidence": "30-实验记录/evidence/2026-10-21-official-small-plate/render_manifest.json"
+  },
+  "table": {
+    "top_m": 0.74,
+    "center_y_m": 0.08,
+    "half_size_xy_m": [
+      0.9,
+      0.47
+    ],
+    "visual_clearance_m": 0.001
+  },
+  "objects": [
+    {
+      "category": "072_electronicscale",
+      "model_id": 0,
+      "center_xy_m": [
+        -0.27,
+        0.27
+      ],
+      "label": "Original electronic scale"
+    },
+    {
+      "category": "objaverse/plate",
+      "model_id": 7,
+      "center_xy_m": [
+        0.02,
+        0.27
+      ],
+      "label": "Accepted official shallow plate 007"
+    },
+    {
+      "category": "021_cup",
+      "model_id": 5,
+      "center_xy_m": [
+        -0.4,
+        -0.01
+      ],
+      "label": "Handleless metal container"
+    },
+    {
+      "category": "062_plasticbox",
+      "model_id": 2,
+      "center_xy_m": [
+        0.38,
+        0.14
+      ],
+      "label": "Neutral open storage box"
+    },
+    {
+      "category": "080_pillbottle",
+      "model_id": 2,
+      "center_xy_m": [
+        -0.56,
+        0.27
+      ],
+      "label": "White medicinal container 1"
+    },
+    {
+      "category": "080_pillbottle",
+      "model_id": 2,
+      "center_xy_m": [
+        -0.46,
+        0.27
+      ],
+      "label": "White medicinal container 2"
+    },
+    {
+      "category": "080_pillbottle",
+      "model_id": 4,
+      "center_xy_m": [
+        0.21,
+        0.35
+      ],
+      "label": "Brown medicinal container 1"
+    },
+    {
+      "category": "080_pillbottle",
+      "model_id": 4,
+      "center_xy_m": [
+        0.32,
+        0.35
+      ],
+      "label": "Brown medicinal container 2"
+    }
+  ],
+  "external_object_assets": false,
+  "excluded_categories": [
+    "beverage bottles",
+    "external LabUtopia assets"
+  ],
+  "physics_steps": 0,
+  "hardware_io": false,
+  "revision": "Restore four previously selected medicinal containers after user clarified that they must stay.",
+  "derived_from": "30-实验记录/evidence/2026-10-21-realman-tabletop-final/scene_preset.json"
+}

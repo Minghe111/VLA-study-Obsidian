@@ -1,0 +1,14 @@
+No left camera link
+No right camera link
+Traceback (most recent call last):
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/closed_cap115_pick_probe.py", line 28, in <module>
+    task.setup_demo(seed=a.seed,runtime_path=out,capture_rgb=False,center_xy=[.10,-.11])
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/labware_cap115_task.py", line 111, in setup_demo
+    return super().setup_demo(**kwargs)
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/labware_cap_task.py", line 35, in setup_demo
+    result=super().setup_demo(**kwargs)
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/labware_task.py", line 128, in setup_demo
+    super()._init_task_env_(**args)
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/_base_task.py", line 143, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(0), unstable objects: derived115_closed_tablet_bottle_tablet_05, derived115_closed_tablet_bottle_tablet_10, derived115_closed_tablet_bottle_tablet_11

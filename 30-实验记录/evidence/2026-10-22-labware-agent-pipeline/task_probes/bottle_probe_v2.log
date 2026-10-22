@@ -1,0 +1,16 @@
+No left camera link
+No right camera link
+Traceback (most recent call last):
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/task_probes/run_probe.py", line 15, in <module>
+    t.setup_demo(seed=a.seed,runtime_path=out,center_xy=[a.x,a.y],asset_kind=a.kind)
+  File "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/labware_task.py", line 117, in setup_demo
+    super()._init_task_env_(**args)
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/_base_task.py", line 132, in _init_task_env_
+    self.together_open_gripper(save_freq=None)
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/_base_task.py", line 821, in together_open_gripper
+    left_result, right_result = self.set_gripper(left_pos=left_pos, right_pos=right_pos, set_tag="together")
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/_base_task.py", line 720, in set_gripper
+    left_result = self.robot.left_plan_grippers(self.robot.get_left_gripper_val(), left_pos)
+  File "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/robot/robot.py", line 396, in left_plan_grippers
+    return self.left_planner.plan_grippers(now_val, target_val)
+AttributeError: 'LabwareRobot' object has no attribute 'left_planner'. Did you mean: 'set_planner'?

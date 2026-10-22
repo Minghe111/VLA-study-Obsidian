@@ -1,0 +1,132 @@
+{
+  "contact_points": [
+    {
+      "id": 0,
+      "description": "Side grasp centre, candidate 0; contact-frame +Y points toward object-frame +X.",
+      "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+      "coordinate_in_this_local_mesh_m": [
+        0.0,
+        0.0,
+        0.045
+      ]
+    },
+    {
+      "id": 1,
+      "description": "Side grasp centre, candidate 1; contact-frame +Y points toward object-frame +Y.",
+      "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+      "coordinate_in_this_local_mesh_m": [
+        0.0,
+        0.0,
+        0.045
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Side grasp centre, candidate 2; contact-frame +Y points toward object-frame -X.",
+      "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+      "coordinate_in_this_local_mesh_m": [
+        0.0,
+        0.0,
+        0.045
+      ]
+    },
+    {
+      "id": 3,
+      "description": "Side grasp centre, candidate 3; contact-frame +Y points toward object-frame -Y.",
+      "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+      "coordinate_in_this_local_mesh_m": [
+        0.0,
+        0.0,
+        0.045
+      ]
+    }
+  ],
+  "functional_points": [
+    {
+      "id": 0,
+      "description": "Upper opening centre; local +Z points out of the vessel.",
+      "usage": "Receiving/pouring mouth alignment. Never use this point to place the bottom on a table. This115 profile is a separate asset; robot grasp remains unverified.",
+      "coordinate_in_this_local_mesh_m": [
+        0.0,
+        0.0,
+        0.115
+      ]
+    },
+    {
+      "id": 1,
+      "description": "Interior floor centre, inside the hollow receiving volume.",
+      "usage": "Define the receiving region for dry pellets. It is not the external support plane. This115 profile is a separate asset; robot grasp remains unverified.",
+      "coordinate_in_this_local_mesh_m": [
+        0.0,
+        0.0,
+        0.003
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Selected rim surface point stored in the local mesh frame.",
+      "usage": "Candidate pouring-edge alignment. It is not a calibrated spout or guaranteed pouring direction. This115 profile is a separate asset; robot grasp remains unverified.",
+      "coordinate_in_this_local_mesh_m": [
+        0.025,
+        0.0,
+        0.115
+      ]
+    },
+    {
+      "id": 3,
+      "description": "External lower support-plane centre, with local -Z outward.",
+      "usage": "Use this functional point for upright support placement. Do not substitute the opening or inner floor. This115 profile is a separate asset; robot grasp remains unverified.",
+      "coordinate_in_this_local_mesh_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "target_points": [
+    {
+      "id": 0,
+      "description": "External lower support-plane centre.",
+      "usage": "Support alignment; not a side grasp. This115 profile is a separate asset; robot grasp remains unverified.",
+      "coordinate_in_this_local_mesh_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": 1,
+      "description": "Upper opening centre.",
+      "usage": "Opening alignment. This115 profile is a separate asset; robot grasp remains unverified.",
+      "coordinate_in_this_local_mesh_m": [
+        0.0,
+        0.0,
+        0.115
+      ]
+    }
+  ],
+  "orientation_points": [
+    {
+      "id": 0,
+      "description": "Object Z-up frame, +Z along vessel/cap axis.",
+      "usage": "Upright orientation reference. This115 profile is a separate asset; robot grasp remains unverified.",
+      "coordinate_in_this_local_mesh_m": [
+        0.0,
+        0.0,
+        0.0575
+      ]
+    }
+  ],
+  "metadata_provenance": {
+    "date": "2026-10-22",
+    "authoring": "local metadata from actual115 profile matrices",
+    "not_official_original": true,
+    "all_existing_ids_and_meanings_preserved": true,
+    "frame": "local mesh coordinates; cap assembly origin .118m is NOT a local cap point",
+    "source_model_data": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/body_model_data0.json",
+    "source_model_data_sha256": "a6ea35a836a63a9f5aa7d2ca00fcd2bde3ea9c391a99e66471180f19ef3e268f",
+    "source_spec_sha256": "a52359200359389e27dc20aa4cc98673b5fff8bd6d2b319337cfe474c7b3294d",
+    "grasp_execution_verified": false,
+    "full_task_verified": false
+  }
+}

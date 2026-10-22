@@ -1,0 +1,539 @@
+{
+  "source_sha256": "0785eb4e2a487f4ec4a7c637011e163ceabcce18bbc990fc17980e86b95708d5",
+  "source_still_unchanged": true,
+  "scope": "CPU-only external-wrench mechanical bench. Cannot fulfill robot task acceptance.",
+  "trials": [
+    {
+      "dt_s": 0.004,
+      "contract_at_start": {
+        "component": "RobotCapAssembly",
+        "body_dynamic": true,
+        "cap_dynamic": true,
+        "tablet_count": 12,
+        "body_mass_readback_kg": 0.07999999821186066,
+        "cap_mass_readback_kg": 0.011999999172985554,
+        "tablet_mass_readback_kg": [
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775
+        ],
+        "physics_dt_s_actual": 0.004000000189989805,
+        "spec_sha256": "9d5ae8d89d60dd2d4e466a966c3862d7d160cc2e5ebe4d61bc8a1eac9a2d59ef",
+        "no_rotation_target_or_motor": true,
+        "drive_property_readback": {
+          "0": {
+            "x": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "y": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "z": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "twist": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "swing": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "slerp": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ]
+          },
+          "1": {
+            "x": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "y": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "z": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "twist": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "swing": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "slerp": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ]
+          }
+        },
+        "no_world_fixture_or_cap_holder": true,
+        "states_written_after_initialization": false,
+        "axial_model": "force-limited spring C=measured_lift-pitch*clipped_measured_spin/(2*pi), with paired reaction torque tau=-d(target_lift)/d(theta)*F",
+        "guide_radial_and_tilt_constraints": "two coaxial separated D6 radial bearings; all angular motions and axial translation free; every drive motor off",
+        "guide_bearing_count": 2,
+        "guide_bearing_separation_m": 0.012,
+        "passive_friction_and_seat_parameters": {
+          "friction_static": 0.3,
+          "friction_dynamic": 0.25,
+          "effective_radius_m": 0.025,
+          "bristle_stiffness_Nm_per_rad": 0.03,
+          "viscous_damping_Nms_per_rad": 0.003,
+          "seat_stiffness_Nm_per_rad": 0.03,
+          "seat_torque_limit_Nm": 0.02
+        },
+        "passive_parameter_status": "explicit engineering assignments requiring calibration; frozen mu/radius reused, former actuator stiffness/damping/limit assigned to passive microcontact/seat, no claim of measured threads",
+        "release": "measured positive turn plus measured lift from frozen thresholds; guide disabled without changing free cap state",
+        "frozen_inputs_unchanged": true,
+        "frozen_input_fingerprints": {
+          "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/physics_spec.json": "9d5ae8d89d60dd2d4e466a966c3862d7d160cc2e5ebe4d61bc8a1eac9a2d59ef",
+          "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/lab_physics.py": "3453db9b1319d9ad001e67d7f6043a949f6199a7bcacebf83a0609e76636123d",
+          "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_body/model_data0.json": "2080d5d2a7c88c2538c2d02ce145c4fcaf640ed8dfd4b7e29311adcc85f04794",
+          "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_cap/model_data0.json": "f900c27c17f3645f88c51d27e322a4bcc4ee82afa558b82539c1f77d1dfc77aa"
+        },
+        "boundary": "derived thread surrogate, not calibrated thread/friction, fluid, robot grasp, or complete unscrew/pour success"
+      },
+      "baseline_after_settle": {
+        "physics_step": 250,
+        "time_s": 1.0000000474974513,
+        "rotation_measured_rad": -1.3284681017466937e-06,
+        "turns_measured": -2.1143226513289327e-07,
+        "lift_measured_m": -0.00023778307437896662,
+        "radial_error_m": 4.263545179128414e-07,
+        "axis_tilt_rad": 3.616809894086587e-06,
+        "released": false,
+        "body_pose": [
+          2.0042167037104264e-08,
+          7.647164679269736e-09,
+          0.0,
+          1.0,
+          4.693438881986367e-08,
+          2.8267370666412717e-08,
+          -1.7023104703639547e-07
+        ],
+        "cap_pose": [
+          4.5160754780226853e-07,
+          -6.397899543486574e-09,
+          0.09276221692562103,
+          1.0,
+          -2.505098848359921e-07,
+          1.8120484810424387e-06,
+          -8.344650268554688e-07
+        ]
+      },
+      "external_pair_torque_Nm": 0.003,
+      "actual_torque_duration_s": 0.44000000000000034,
+      "finite_torque_budget_s": 1.0,
+      "release_tick": 360,
+      "release_receipt": {
+        "released": true,
+        "measured_before_release": {
+          "physics_step": 360,
+          "time_s": 1.4400000683963299,
+          "rotation_measured_rad": 15.89204479297237,
+          "turns_measured": 2.529297484639369,
+          "lift_measured_m": 0.01190068793296814,
+          "radial_error_m": 1.0943465440504951e-06,
+          "axis_tilt_rad": 3.817996504553424e-05,
+          "released": false,
+          "body_pose": [
+            9.045342608260398e-08,
+            3.5817880217337006e-08,
+            2.2351741790771484e-08,
+            1.0,
+            1.6757645937559573e-07,
+            1.1702711617544992e-06,
+            -4.772505803884997e-07
+          ],
+          "cap_pose": [
+            1.427467395842541e-06,
+            -7.836509041680984e-08,
+            0.10490071028470993,
+            -0.09191039204597473,
+            -1.786484062904492e-05,
+            1.4186539374350104e-06,
+            0.99576735496521
+          ]
+        },
+        "cap_pose_or_velocity_written": false,
+        "cap_holder_created": false,
+        "released_microcontact_energy_dissipated_J": 9.154818763844173e-06
+      },
+      "state_at_end_of_external_torque": {
+        "physics_step": 360,
+        "time_s": 1.4400000683963299,
+        "rotation_measured_rad": 15.89204479297237,
+        "turns_measured": 2.529297484639369,
+        "lift_measured_m": 0.01190068793296814,
+        "radial_error_m": 1.0943465440504951e-06,
+        "axis_tilt_rad": 3.817996504553424e-05,
+        "released": true,
+        "body_pose": [
+          9.045342608260398e-08,
+          3.5817880217337006e-08,
+          2.2351741790771484e-08,
+          1.0,
+          1.6757645937559573e-07,
+          1.1702711617544992e-06,
+          -4.772505803884997e-07
+        ],
+        "cap_pose": [
+          1.427467395842541e-06,
+          -7.836509041680984e-08,
+          0.10490071028470993,
+          -0.09191039204597473,
+          -1.786484062904492e-05,
+          1.4186539374350104e-06,
+          0.99576735496521
+        ]
+      },
+      "state_after_zero_wrench_followup": {
+        "physics_step": 548,
+        "time_s": 2.1920001041144133,
+        "rotation_measured_rad": 15.89204479297237,
+        "turns_measured": 2.529297484639369,
+        "lift_measured_m": -0.07957841235399246,
+        "radial_error_m": 0.01828521117568016,
+        "axis_tilt_rad": 0.04761272772697992,
+        "released": true,
+        "body_pose": [
+          -5.865228104084963e-06,
+          3.3582389278308256e-06,
+          0.0,
+          1.0,
+          -5.446509021567181e-09,
+          -1.8725177142187022e-07,
+          0.0001128233052440919
+        ],
+        "cap_pose": [
+          0.015278728678822517,
+          0.010039789602160454,
+          0.013421593233942986,
+          -0.956426739692688,
+          0.019718797877430916,
+          -0.013334264978766441,
+          -0.2910005450248718
+        ]
+      },
+      "total_external_rotation_work_J": 0.047676138364321434,
+      "diagnostics_while_guides_attached": {
+        "max_abs_theta_omega_increment_residual_rad": 0.00361218213311454,
+        "sum_theta_omega_increment_residual_rad": 0.2831029875760733
+      },
+      "physical_release_observed": true,
+      "states_written_after_initialization": false,
+      "robot_present": false,
+      "robot_success": false,
+      "usable_robot_demonstration": false,
+      "interpretation": "External-wrench mechanical component probe; not contact-driven robot opening, cap handling, or pouring.",
+      "trace_path": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/cap_component_probes/passive_full_release_v1/trace_dt_0p004.json.gz",
+      "trace_sha256": "2254a5d79883a0aae57e36b5ace84f9c3d209b9832dca5f0fe16043a04440b83"
+    },
+    {
+      "dt_s": 0.001,
+      "contract_at_start": {
+        "component": "RobotCapAssembly",
+        "body_dynamic": true,
+        "cap_dynamic": true,
+        "tablet_count": 12,
+        "body_mass_readback_kg": 0.07999999821186066,
+        "cap_mass_readback_kg": 0.011999999172985554,
+        "tablet_mass_readback_kg": [
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775,
+          0.0003499999875202775
+        ],
+        "physics_dt_s_actual": 0.0010000000474974513,
+        "spec_sha256": "9d5ae8d89d60dd2d4e466a966c3862d7d160cc2e5ebe4d61bc8a1eac9a2d59ef",
+        "no_rotation_target_or_motor": true,
+        "drive_property_readback": {
+          "0": {
+            "x": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "y": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "z": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "twist": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "swing": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "slerp": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ]
+          },
+          "1": {
+            "x": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "y": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "z": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "twist": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "swing": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ],
+            "slerp": [
+              0.0,
+              0.0,
+              0.0,
+              "force"
+            ]
+          }
+        },
+        "no_world_fixture_or_cap_holder": true,
+        "states_written_after_initialization": false,
+        "axial_model": "force-limited spring C=measured_lift-pitch*clipped_measured_spin/(2*pi), with paired reaction torque tau=-d(target_lift)/d(theta)*F",
+        "guide_radial_and_tilt_constraints": "two coaxial separated D6 radial bearings; all angular motions and axial translation free; every drive motor off",
+        "guide_bearing_count": 2,
+        "guide_bearing_separation_m": 0.012,
+        "passive_friction_and_seat_parameters": {
+          "friction_static": 0.3,
+          "friction_dynamic": 0.25,
+          "effective_radius_m": 0.025,
+          "bristle_stiffness_Nm_per_rad": 0.03,
+          "viscous_damping_Nms_per_rad": 0.003,
+          "seat_stiffness_Nm_per_rad": 0.03,
+          "seat_torque_limit_Nm": 0.02
+        },
+        "passive_parameter_status": "explicit engineering assignments requiring calibration; frozen mu/radius reused, former actuator stiffness/damping/limit assigned to passive microcontact/seat, no claim of measured threads",
+        "release": "measured positive turn plus measured lift from frozen thresholds; guide disabled without changing free cap state",
+        "frozen_inputs_unchanged": true,
+        "frozen_input_fingerprints": {
+          "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/physics_spec.json": "9d5ae8d89d60dd2d4e466a966c3862d7d160cc2e5ebe4d61bc8a1eac9a2d59ef",
+          "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/lab_physics.py": "3453db9b1319d9ad001e67d7f6043a949f6199a7bcacebf83a0609e76636123d",
+          "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_body/model_data0.json": "2080d5d2a7c88c2538c2d02ce145c4fcaf640ed8dfd4b7e29311adcc85f04794",
+          "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_cap/model_data0.json": "f900c27c17f3645f88c51d27e322a4bcc4ee82afa558b82539c1f77d1dfc77aa"
+        },
+        "boundary": "derived thread surrogate, not calibrated thread/friction, fluid, robot grasp, or complete unscrew/pour success"
+      },
+      "baseline_after_settle": {
+        "physics_step": 1000,
+        "time_s": 1.0000000474974513,
+        "rotation_measured_rad": -1.3876016964342597e-05,
+        "turns_measured": -2.2084366903021204e-06,
+        "lift_measured_m": -0.0002357788681983941,
+        "radial_error_m": 5.136182679166268e-08,
+        "axis_tilt_rad": 1.2984547297445527e-06,
+        "released": false,
+        "body_pose": [
+          -2.184491592061022e-07,
+          5.4263868065618226e-08,
+          2.2351741790771484e-08,
+          1.0,
+          -3.318857011436194e-08,
+          4.3648546466101834e-07,
+          -5.72176645619038e-07
+        ],
+        "cap_pose": [
+          -8.650354033079566e-08,
+          6.679234587636529e-08,
+          0.0927642434835434,
+          1.0,
+          -3.7336133118515136e-07,
+          -1.1646420716715511e-07,
+          -7.510185241699219e-06
+        ]
+      },
+      "external_pair_torque_Nm": 0.003,
+      "actual_torque_duration_s": 0.44000000000000034,
+      "finite_torque_budget_s": 1.0,
+      "release_tick": 1440,
+      "release_receipt": {
+        "released": true,
+        "measured_before_release": {
+          "physics_step": 1440,
+          "time_s": 1.4400000683963299,
+          "rotation_measured_rad": 15.67818114990829,
+          "turns_measured": 2.4952600286980804,
+          "lift_measured_m": 0.011738928377628327,
+          "radial_error_m": 6.167233124187987e-08,
+          "axis_tilt_rad": 2.068042827279588e-06,
+          "released": false,
+          "body_pose": [
+            -3.026695480912167e-07,
+            6.727357515501353e-08,
+            1.4901161193847656e-08,
+            1.0,
+            3.422169925215712e-08,
+            1.6395146928971371e-07,
+            -3.2315606404154096e-06
+          ],
+          "cap_pose": [
+            -2.071219000754354e-07,
+            6.7695239636123e-08,
+            0.10473894327878952,
+            0.01489374041557312,
+            -8.396876864935621e-07,
+            2.1503635139197286e-07,
+            0.9998891353607178
+          ]
+        },
+        "cap_pose_or_velocity_written": false,
+        "cap_holder_created": false,
+        "released_microcontact_energy_dissipated_J": 9.25118134112096e-06
+      },
+      "state_at_end_of_external_torque": {
+        "physics_step": 1440,
+        "time_s": 1.4400000683963299,
+        "rotation_measured_rad": 15.67818114990829,
+        "turns_measured": 2.4952600286980804,
+        "lift_measured_m": 0.011738928377628327,
+        "radial_error_m": 6.167233124187987e-08,
+        "axis_tilt_rad": 2.068042827279588e-06,
+        "released": true,
+        "body_pose": [
+          -3.026695480912167e-07,
+          6.727357515501353e-08,
+          1.4901161193847656e-08,
+          1.0,
+          3.422169925215712e-08,
+          1.6395146928971371e-07,
+          -3.2315606404154096e-06
+        ],
+        "cap_pose": [
+          -2.071219000754354e-07,
+          6.7695239636123e-08,
+          0.10473894327878952,
+          0.01489374041557312,
+          -8.396876864935621e-07,
+          2.1503635139197286e-07,
+          0.9998891353607178
+        ]
+      },
+      "state_after_zero_wrench_followup": {
+        "physics_step": 2190,
+        "time_s": 2.1900001040194184,
+        "rotation_measured_rad": 15.67818114990829,
+        "turns_measured": 2.4952600286980804,
+        "lift_measured_m": -0.07954523119330406,
+        "radial_error_m": 0.01948537491261959,
+        "axis_tilt_rad": 0.04879867806530101,
+        "released": true,
+        "body_pose": [
+          -1.1669050763885025e-05,
+          1.5677520423196256e-05,
+          1.862645149230957e-08,
+          0.9999997019767761,
+          -1.410831202974805e-07,
+          -4.908538286940711e-08,
+          0.0007678195834159851
+        ],
+        "cap_pose": [
+          0.018648432567715645,
+          0.005626418627798557,
+          0.01345478743314743,
+          -0.3000310957431793,
+          -0.003746247850358486,
+          -0.024107681587338448,
+          -0.9536174535751343
+        ]
+      },
+      "total_external_rotation_work_J": 0.04703458507777575,
+      "diagnostics_while_guides_attached": {
+        "max_abs_theta_omega_increment_residual_rad": 0.00022703744725964265,
+        "sum_theta_omega_increment_residual_rad": 0.07093784941747885
+      },
+      "physical_release_observed": true,
+      "states_written_after_initialization": false,
+      "robot_present": false,
+      "robot_success": false,
+      "usable_robot_demonstration": false,
+      "interpretation": "External-wrench mechanical component probe; not contact-driven robot opening, cap handling, or pouring.",
+      "trace_path": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/cap_component_probes/passive_full_release_v1/trace_dt_0p001.json.gz",
+      "trace_sha256": "b8a4f6e3448db67826ede62fcb3d164ee832b3744f89fba7c1a98bb9faccf62c"
+    }
+  ]
+}

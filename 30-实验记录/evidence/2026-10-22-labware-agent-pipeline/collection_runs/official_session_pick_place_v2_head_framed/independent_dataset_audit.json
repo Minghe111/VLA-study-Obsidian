@@ -1,0 +1,4491 @@
+{
+  "passed": true,
+  "collection": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v2_head_framed",
+  "auditor": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_audit.py",
+  "auditor_sha256": "19be1198bb65f7c1b8e26c39444ae268402814fb1c2b107a682f6042058b1fbe",
+  "gpu_or_simulator_used": false,
+  "episodes": [
+    {
+      "passed": true,
+      "hdf5": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v2_head_framed/data/episode_0000000.hdf5",
+      "sha256": "18ae2495bcb29049b67d59040444e10f3c3d15b6ddd6463cce47d702ab82e794",
+      "seed": 0,
+      "frames_per_camera": 389,
+      "state_shape": [
+        389,
+        24
+      ],
+      "action_shape": [
+        389,
+        24
+      ],
+      "duration_seconds": 23.34,
+      "state_chain_exact": true,
+      "actual_drive_readbacks_match": true,
+      "saved_requested_target_max_error": 4.522628137237916e-05,
+      "maximum_bottom_lift_m": 0.025201342922198222,
+      "airborne_opposing_observation_count": 13,
+      "target_next_measured_state_max_difference": 31.66192626953125,
+      "plan_physical_success": true,
+      "replay_physical_success": true,
+      "physical_final": {
+        "success": true,
+        "bottom_gap_m": 9.197295480767309e-09,
+        "upright_angle_deg": 0.0,
+        "thumb_contact_N": 0.0,
+        "finger_contact_N": 0.0,
+        "table_contact_N": 0.7847982807902554,
+        "opposed_contact": false,
+        "opposing_normals_dot": 1.0,
+        "hold_seconds": 0.0,
+        "max_hold_seconds": 0.812,
+        "lift_achieved": true,
+        "speed_m_s": 0.0,
+        "stable_place_seconds": 0.54,
+        "failure_reason": null
+      },
+      "language_counts": {
+        "seen": 12,
+        "unseen": 12
+      },
+      "all_camera_frames_decoded": {
+        "cam_head": {
+          "decoded_frames": 389,
+          "unique_decoded_frames": 389,
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "mean_range": [
+            234.44051215277779,
+            237.56845377604168
+          ],
+          "minimum_std": 27.55637296784892,
+          "decoded_frame_hash_chain_sha256": "36e6f28fa8faf29abb281e24106a3b626ef8db0f5d32b8b2469b7328c856d83b"
+        },
+        "cam_left_wrist": {
+          "decoded_frames": 389,
+          "unique_decoded_frames": 389,
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "mean_range": [
+            229.3714236111111,
+            233.23362196180557
+          ],
+          "minimum_std": 28.763996672143413,
+          "decoded_frame_hash_chain_sha256": "511135ee5ac8b4d6788cd729fe7e34497031f1eaeb5196da32e5cb81e1fbfd83"
+        },
+        "cam_right_wrist": {
+          "decoded_frames": 389,
+          "unique_decoded_frames": 389,
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "mean_range": [
+            211.2221267361111,
+            228.70195638020834
+          ],
+          "minimum_std": 36.508317306653574,
+          "decoded_frame_hash_chain_sha256": "33dd09a786025b2756283da9bed40c97532daee31474ca71cd97dc03086752d1"
+        }
+      },
+      "cross_camera_keyframe_identity_check": {
+        "all_views_distinct": true,
+        "keyframes": [
+          {
+            "title": "Prepare",
+            "frame": 21,
+            "decoded_sha256": {
+              "cam_head": "a11a63cc52da4ca404c24af8678d9fa9dda40c04c259e78f1c1a4b70dcceb46f",
+              "cam_left_wrist": "a222543d5d4b67c442f3ec96ec15ec6f8e7e1a699d27d978447bebdbd8e1be77",
+              "cam_right_wrist": "984b781692056525d7295c21bf23b3704ec167a910884bddc16b97a096afbba9"
+            },
+            "pair_mean_absolute_pixel_difference": {
+              "cam_head vs cam_left_wrist": 30.02183810763889,
+              "cam_head vs cam_right_wrist": 33.3242578125,
+              "cam_left_wrist vs cam_right_wrist": 31.306082899305554
+            }
+          },
+          {
+            "title": "Approach",
+            "frame": 191,
+            "decoded_sha256": {
+              "cam_head": "0c47c0d1ae12373038176b061f512b2c961ab3a23587b9feceff9194dc5d6255",
+              "cam_left_wrist": "ac75639f00e476c60733711b3f0a5bcbae1313c82db6e6231f3701cc878c601a",
+              "cam_right_wrist": "e028665b2e1a4fac9e7121175eef534a377fca49ef19fda37d94d563865cc9ae"
+            },
+            "pair_mean_absolute_pixel_difference": {
+              "cam_head vs cam_left_wrist": 26.134225260416667,
+              "cam_head vs cam_right_wrist": 31.706025390625,
+              "cam_left_wrist vs cam_right_wrist": 31.554731987847223
+            }
+          },
+          {
+            "title": "Airborne opposing grasp",
+            "frame": 266,
+            "decoded_sha256": {
+              "cam_head": "9ae56c19db1e7a1185a6954c79f656fdb1eb4b99bb34daaa9cf00b28a4f95937",
+              "cam_left_wrist": "150483f837988c90c5f0f1ac9d74c832114df03232e519080638a06df3b8d0a9",
+              "cam_right_wrist": "e2cd7329f8ee970fb88be8b9f6085ad836a47823bc5e4fcd9b21ae05b5c15f41"
+            },
+            "pair_mean_absolute_pixel_difference": {
+              "cam_head vs cam_left_wrist": 26.81466796875,
+              "cam_head vs cam_right_wrist": 37.623773871527774,
+              "cam_left_wrist vs cam_right_wrist": 36.75326388888889
+            }
+          },
+          {
+            "title": "Release",
+            "frame": 320,
+            "decoded_sha256": {
+              "cam_head": "f741c622c379791394b5bb48f938c3441acb2a7dd7ff1fb66697af635b5cc68c",
+              "cam_left_wrist": "75ddad7b10761747977fc66f260045af573edafbdff3905ad471b3b6cc1c8005",
+              "cam_right_wrist": "35e7cb38c864a103f8b1f9892443800efda5182ddab65e214b50138b467cea4e"
+            },
+            "pair_mean_absolute_pixel_difference": {
+              "cam_head vs cam_left_wrist": 27.897134331597222,
+              "cam_head vs cam_right_wrist": 39.948681640625,
+              "cam_left_wrist vs cam_right_wrist": 38.05115017361111
+            }
+          },
+          {
+            "title": "Final stored observation",
+            "frame": 388,
+            "decoded_sha256": {
+              "cam_head": "71bf048e5d3a37a8cb87a28816400d13f942f5fcf2b797fd3b75ca1e7b9dd8b9",
+              "cam_left_wrist": "be956658fadeb98170098a24e2c71082cf99051b1df1fe34ee0283d9c4d347f4",
+              "cam_right_wrist": "be6f0472f9483a4fada01e70c9323b57291d9e45892f2677f066e2652534b783"
+            },
+            "pair_mean_absolute_pixel_difference": {
+              "cam_head vs cam_left_wrist": 26.16573784722222,
+              "cam_head vs cam_right_wrist": 31.895462239583335,
+              "cam_left_wrist vs cam_right_wrist": 32.43404947916667
+            }
+          }
+        ]
+      },
+      "head_framing_geometry_check": {
+        "applied": true,
+        "preset": {
+          "preset_id": "head_extra_down_15_vfov37",
+          "head_extra_pitch_down_degrees": 15,
+          "head_vertical_fov_degrees": 37.0,
+          "scope": "runtime simulation optical frame only; nominal, not physical calibration",
+          "selection_rule": "largest worst-case projected margin over actual v1 trajectory; minimum40px",
+          "old_trace_projection_min_margin_pixels": 142.03937182706943,
+          "hardware_calibrated": false,
+          "probe_receipt": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/camera_framing_probes/reset_candidates_v1/candidate_receipts.json"
+        },
+        "source_sha256": "09bb4be1805018cc37958ed351a091ae22fb5cdebeeac4f42fdb927002b5578c",
+        "actual_runtime_fixed_head_world_pose": [
+          [
+            -6.079673767089844e-06,
+            -1.0000001192092896,
+            -4.5299530029296875e-06,
+            0.0004994918708689511
+          ],
+          [
+            0.777070164680481,
+            -7.62939453125e-06,
+            0.6294142007827759,
+            -0.6081629395484924
+          ],
+          [
+            -0.6294142603874207,
+            2.086162567138672e-07,
+            0.7770699858665466,
+            1.2353657484054565
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "actual_intrinsic_matrix": [
+          [
+            717.2843627929688,
+            0.0,
+            320.0
+          ],
+          [
+            0.0,
+            717.2843627929688,
+            240.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "target_collision_mesh": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/metadata/assets/objects/reagent_bottle_body/collision/base0.glb",
+        "target_collision_mesh_sha256": "b956c2c25ff5cdb8ea442b388f3961ea93c763e0b14981402d06cd846b36b00b",
+        "stored_observations_checked": 389,
+        "all_target_geometry_inside_with_at_least_40px_margin": true,
+        "minimum_margin_pixels": 142.03937182706943,
+        "projections": [
+          {
+            "tick": 0,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 15,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 30,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 45,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 60,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 75,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 90,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 105,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 120,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 135,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 150,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 165,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 180,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 195,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 210,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 225,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 240,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 255,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 270,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 285,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 300,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 315,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 330,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 345,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 360,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 375,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 390,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 405,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 420,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 435,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 450,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 465,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 480,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 495,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 510,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 525,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 540,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 555,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 570,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 585,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 600,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 615,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 630,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 645,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 660,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 675,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 690,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 705,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 720,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 735,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 750,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 765,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 780,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 795,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 810,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 825,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 840,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 855,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 870,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 885,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 900,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 915,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 930,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 945,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 960,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 975,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 990,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1005,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1020,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1035,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1050,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1065,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1080,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1095,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1110,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1125,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1140,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1155,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1170,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1185,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1200,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1215,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1230,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1245,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1260,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1275,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1290,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1305,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1320,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1335,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1350,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1365,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1380,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1395,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1410,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1425,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1440,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1455,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1470,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1485,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1500,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1515,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1530,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1545,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1560,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1575,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1590,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1605,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1620,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1635,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1650,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1665,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1680,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1695,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1710,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1725,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1740,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1755,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1770,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1785,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1800,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1815,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1830,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1845,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1860,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1875,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1890,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1905,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1920,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1935,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1950,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1965,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1980,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 1995,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2010,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2025,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2040,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2055,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2070,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2085,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2100,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2115,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2130,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2145,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2160,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2175,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2190,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2205,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2220,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2235,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2250,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2265,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2280,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2295,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2310,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2325,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2340,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2355,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2370,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2385,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2400,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2415,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2430,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2445,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2460,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2475,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2490,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2505,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2520,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2535,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2550,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2565,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2580,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2595,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2610,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2625,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2640,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2655,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2670,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2685,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2700,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2715,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2730,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2745,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2760,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2775,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2790,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2805,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2820,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2835,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2850,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2865,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2880,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2895,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2910,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2925,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2940,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2955,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2970,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 2985,
+            "bbox_xyxy_pixels": [
+              395.41362259296864,
+              221.92098034794157,
+              458.0051726423951,
+              328.9653492425207
+            ],
+            "minimum_margin_pixels": 150.0346507574793
+          },
+          {
+            "tick": 3000,
+            "bbox_xyxy_pixels": [
+              395.413630366053,
+              221.92109300845442,
+              458.0051763793632,
+              328.9654452933171
+            ],
+            "minimum_margin_pixels": 150.0345547066829
+          },
+          {
+            "tick": 3015,
+            "bbox_xyxy_pixels": [
+              395.4135909053445,
+              221.92097906364708,
+              458.00513589550474,
+              328.9653420127962
+            ],
+            "minimum_margin_pixels": 150.0346579872038
+          },
+          {
+            "tick": 3030,
+            "bbox_xyxy_pixels": [
+              395.41362336653367,
+              221.92109860800628,
+              458.00516730713036,
+              328.965451314556
+            ],
+            "minimum_margin_pixels": 150.034548685444
+          },
+          {
+            "tick": 3045,
+            "bbox_xyxy_pixels": [
+              395.4135915886454,
+              221.92098549560197,
+              458.0051404770969,
+              328.9653484381161
+            ],
+            "minimum_margin_pixels": 150.0346515618839
+          },
+          {
+            "tick": 3060,
+            "bbox_xyxy_pixels": [
+              395.41362785859155,
+              221.921073717566,
+              458.00517004891617,
+              328.96542271663213
+            ],
+            "minimum_margin_pixels": 150.03457728336787
+          },
+          {
+            "tick": 3075,
+            "bbox_xyxy_pixels": [
+              395.41359855435127,
+              221.92097841883196,
+              458.0051458509141,
+              328.96534169979634
+            ],
+            "minimum_margin_pixels": 150.03465830020366
+          },
+          {
+            "tick": 3090,
+            "bbox_xyxy_pixels": [
+              395.41362032440463,
+              221.92107330889996,
+              458.00516279568546,
+              328.96542251821126
+            ],
+            "minimum_margin_pixels": 150.03457748178874
+          },
+          {
+            "tick": 3105,
+            "bbox_xyxy_pixels": [
+              395.4135915322422,
+              221.92098365379834,
+              458.0051353974663,
+              328.9653475440599
+            ],
+            "minimum_margin_pixels": 150.0346524559401
+          },
+          {
+            "tick": 3120,
+            "bbox_xyxy_pixels": [
+              395.41362144139276,
+              221.92108337611884,
+              458.00516081219746,
+              328.9654340113255
+            ],
+            "minimum_margin_pixels": 150.0345659886745
+          },
+          {
+            "tick": 3135,
+            "bbox_xyxy_pixels": [
+              395.41359981042933,
+              221.92098869261997,
+              458.00514826034856,
+              328.9653532931452
+            ],
+            "minimum_margin_pixels": 150.0346467068548
+          },
+          {
+            "tick": 3150,
+            "bbox_xyxy_pixels": [
+              395.41362149333327,
+              221.92108336098954,
+              458.005163286162,
+              328.965434003972
+            ],
+            "minimum_margin_pixels": 150.034565996028
+          },
+          {
+            "tick": 3165,
+            "bbox_xyxy_pixels": [
+              395.41359852515404,
+              221.92097835178112,
+              458.0051458236707,
+              328.9653416672619
+            ],
+            "minimum_margin_pixels": 150.0346583327381
+          },
+          {
+            "tick": 3180,
+            "bbox_xyxy_pixels": [
+              395.4136233325767,
+              221.92109889379236,
+              458.00516548099887,
+              328.9654514532878
+            ],
+            "minimum_margin_pixels": 150.0345485467122
+          },
+          {
+            "tick": 3195,
+            "bbox_xyxy_pixels": [
+              395.4135972688712,
+              221.92096833308847,
+              458.0051416746927,
+              328.96533019773193
+            ],
+            "minimum_margin_pixels": 150.03466980226807
+          },
+          {
+            "tick": 3210,
+            "bbox_xyxy_pixels": [
+              395.4136285540785,
+              221.92108008571438,
+              458.00517451886697,
+              328.96542911097237
+            ],
+            "minimum_margin_pixels": 150.03457088902763
+          },
+          {
+            "tick": 3225,
+            "bbox_xyxy_pixels": [
+              395.4135915447832,
+              221.9209841270162,
+              458.00513710462155,
+              328.9653477737745
+            ],
+            "minimum_margin_pixels": 150.0346522262255
+          },
+          {
+            "tick": 3240,
+            "bbox_xyxy_pixels": [
+              395.41362790759814,
+              221.92107313438143,
+              458.0051723035397,
+              328.9654224335321
+            ],
+            "minimum_margin_pixels": 150.03457756646787
+          },
+          {
+            "tick": 3255,
+            "bbox_xyxy_pixels": [
+              395.41358967132317,
+              221.9209702095655,
+              458.00513361946247,
+              328.96533110859514
+            ],
+            "minimum_margin_pixels": 150.03466889140486
+          },
+          {
+            "tick": 3270,
+            "bbox_xyxy_pixels": [
+              395.4136278733597,
+              221.92107339990199,
+              458.00516997285433,
+              328.9654225624238
+            ],
+            "minimum_margin_pixels": 150.03457743757622
+          },
+          {
+            "tick": 3285,
+            "bbox_xyxy_pixels": [
+              395.4135896928153,
+              221.9209675934731,
+              458.0051310385036,
+              328.9653298386603
+            ],
+            "minimum_margin_pixels": 150.0346701613397
+          },
+          {
+            "tick": 3300,
+            "bbox_xyxy_pixels": [
+              394.73966352514657,
+              223.47369552255202,
+              456.89902323058175,
+              330.43600301107836
+            ],
+            "minimum_margin_pixels": 148.56399698892164
+          },
+          {
+            "tick": 3315,
+            "bbox_xyxy_pixels": [
+              393.6515726065463,
+              224.79333887524558,
+              455.84225733028194,
+              332.199191336574
+            ],
+            "minimum_margin_pixels": 146.80080866342598
+          },
+          {
+            "tick": 3330,
+            "bbox_xyxy_pixels": [
+              393.5081650170091,
+              224.84362300614973,
+              456.2434591742141,
+              332.3472705141456
+            ],
+            "minimum_margin_pixels": 146.65272948585442
+          },
+          {
+            "tick": 3345,
+            "bbox_xyxy_pixels": [
+              393.50662101616496,
+              224.82503451587414,
+              456.2079527697433,
+              332.3362287157656
+            ],
+            "minimum_margin_pixels": 146.66377128423437
+          },
+          {
+            "tick": 3360,
+            "bbox_xyxy_pixels": [
+              393.4363939523329,
+              224.86339158159583,
+              456.1300619591578,
+              332.38195723346206
+            ],
+            "minimum_margin_pixels": 146.61804276653794
+          },
+          {
+            "tick": 3375,
+            "bbox_xyxy_pixels": [
+              393.38087935930855,
+              224.87739023972406,
+              456.081657521039,
+              332.42190195108776
+            ],
+            "minimum_margin_pixels": 146.57809804891224
+          },
+          {
+            "tick": 3390,
+            "bbox_xyxy_pixels": [
+              393.3794480306241,
+              224.8750045008108,
+              456.0491779552277,
+              332.42168851364556
+            ],
+            "minimum_margin_pixels": 146.57831148635444
+          },
+          {
+            "tick": 3405,
+            "bbox_xyxy_pixels": [
+              393.37786074505493,
+              224.87677313281796,
+              456.01923235933634,
+              332.4237590123895
+            ],
+            "minimum_margin_pixels": 146.5762409876105
+          },
+          {
+            "tick": 3420,
+            "bbox_xyxy_pixels": [
+              393.3729327530935,
+              224.87100683503823,
+              456.01524293791255,
+              332.42013211850724
+            ],
+            "minimum_margin_pixels": 146.57986788149276
+          },
+          {
+            "tick": 3435,
+            "bbox_xyxy_pixels": [
+              393.3716839099126,
+              224.8739242962839,
+              456.0067036526624,
+              332.4232632158707
+            ],
+            "minimum_margin_pixels": 146.5767367841293
+          },
+          {
+            "tick": 3450,
+            "bbox_xyxy_pixels": [
+              393.36976917438335,
+              224.92472697252202,
+              456.07046685636,
+              332.4560751540704
+            ],
+            "minimum_margin_pixels": 146.5439248459296
+          },
+          {
+            "tick": 3465,
+            "bbox_xyxy_pixels": [
+              393.24773200835153,
+              225.05416781568462,
+              455.96605377996616,
+              332.5955628138571
+            ],
+            "minimum_margin_pixels": 146.4044371861429
+          },
+          {
+            "tick": 3480,
+            "bbox_xyxy_pixels": [
+              393.1888079499689,
+              225.1379329251671,
+              456.00649728771,
+              332.9435853155064
+            ],
+            "minimum_margin_pixels": 146.05641468449357
+          },
+          {
+            "tick": 3495,
+            "bbox_xyxy_pixels": [
+              393.1737624846503,
+              224.57719857221588,
+              456.0442857373153,
+              332.55985161180456
+            ],
+            "minimum_margin_pixels": 146.44014838819544
+          },
+          {
+            "tick": 3510,
+            "bbox_xyxy_pixels": [
+              393.16791334403723,
+              223.6205681493659,
+              456.17487766077346,
+              331.7987198404175
+            ],
+            "minimum_margin_pixels": 147.2012801595825
+          },
+          {
+            "tick": 3525,
+            "bbox_xyxy_pixels": [
+              393.27724148865775,
+              222.44609578515508,
+              456.3319129728121,
+              330.84204143523925
+            ],
+            "minimum_margin_pixels": 148.15795856476075
+          },
+          {
+            "tick": 3540,
+            "bbox_xyxy_pixels": [
+              393.29373793814926,
+              221.33534168334484,
+              456.52769015513803,
+              329.9351364353897
+            ],
+            "minimum_margin_pixels": 149.06486356461028
+          },
+          {
+            "tick": 3555,
+            "bbox_xyxy_pixels": [
+              393.33031155782146,
+              220.44751386901186,
+              456.71192371384143,
+              329.2234715700747
+            ],
+            "minimum_margin_pixels": 149.7765284299253
+          },
+          {
+            "tick": 3570,
+            "bbox_xyxy_pixels": [
+              393.30976363415255,
+              219.93222799495575,
+              456.8230250662332,
+              328.8487855854888
+            ],
+            "minimum_margin_pixels": 150.15121441451117
+          },
+          {
+            "tick": 3585,
+            "bbox_xyxy_pixels": [
+              393.23318341941115,
+              219.82182360202577,
+              456.869366649883,
+              328.81137689237073
+            ],
+            "minimum_margin_pixels": 150.18862310762927
+          },
+          {
+            "tick": 3600,
+            "bbox_xyxy_pixels": [
+              393.1140162154506,
+              219.9168560966514,
+              456.9410630869516,
+              328.95918778814973
+            ],
+            "minimum_margin_pixels": 150.04081221185027
+          },
+          {
+            "tick": 3615,
+            "bbox_xyxy_pixels": [
+              393.28801439565734,
+              221.3677036578202,
+              456.5179516204437,
+              330.3556805407576
+            ],
+            "minimum_margin_pixels": 148.6443194592424
+          },
+          {
+            "tick": 3630,
+            "bbox_xyxy_pixels": [
+              393.1753956988754,
+              221.4027553900713,
+              456.51931847343917,
+              330.4788152393041
+            ],
+            "minimum_margin_pixels": 148.52118476069592
+          },
+          {
+            "tick": 3645,
+            "bbox_xyxy_pixels": [
+              393.0980607110562,
+              220.81362020157985,
+              456.6231150335934,
+              330.0243567960982
+            ],
+            "minimum_margin_pixels": 148.97564320390183
+          },
+          {
+            "tick": 3660,
+            "bbox_xyxy_pixels": [
+              393.0541375172529,
+              219.6587955660438,
+              456.854836444345,
+              329.05730961826407
+            ],
+            "minimum_margin_pixels": 149.94269038173593
+          },
+          {
+            "tick": 3675,
+            "bbox_xyxy_pixels": [
+              393.04226554066116,
+              218.11557202436586,
+              457.1585826515004,
+              327.73570561177854
+            ],
+            "minimum_margin_pixels": 151.26429438822146
+          },
+          {
+            "tick": 3690,
+            "bbox_xyxy_pixels": [
+              393.1186851556518,
+              216.3674078007164,
+              457.5263067730063,
+              326.2102858469036
+            ],
+            "minimum_margin_pixels": 152.78971415309638
+          },
+          {
+            "tick": 3705,
+            "bbox_xyxy_pixels": [
+              393.1816972718898,
+              214.7318914950417,
+              457.87879880886305,
+              324.7999682165736
+            ],
+            "minimum_margin_pixels": 154.20003178342643
+          },
+          {
+            "tick": 3720,
+            "bbox_xyxy_pixels": [
+              393.2368014987563,
+              213.4430515087593,
+              458.2053887453841,
+              323.71916511615444
+            ],
+            "minimum_margin_pixels": 155.28083488384556
+          },
+          {
+            "tick": 3735,
+            "bbox_xyxy_pixels": [
+              393.20568648584225,
+              212.67095635923545,
+              458.43386641368,
+              323.12040913776025
+            ],
+            "minimum_margin_pixels": 155.87959086223975
+          },
+          {
+            "tick": 3750,
+            "bbox_xyxy_pixels": [
+              393.1289534502994,
+              212.3944329053833,
+              458.5171904010347,
+              322.9492814252159
+            ],
+            "minimum_margin_pixels": 156.05071857478413
+          },
+          {
+            "tick": 3765,
+            "bbox_xyxy_pixels": [
+              393.0074717991533,
+              212.4650408566859,
+              458.6057760934981,
+              323.1043550357564
+            ],
+            "minimum_margin_pixels": 155.89564496424362
+          },
+          {
+            "tick": 3780,
+            "bbox_xyxy_pixels": [
+              393.1331802010849,
+              213.98364275008055,
+              458.12117103137103,
+              324.5800178912164
+            ],
+            "minimum_margin_pixels": 154.41998210878359
+          },
+          {
+            "tick": 3795,
+            "bbox_xyxy_pixels": [
+              392.9378202970348,
+              214.0957270292869,
+              458.15819525287475,
+              324.81608782823736
+            ],
+            "minimum_margin_pixels": 154.18391217176264
+          },
+          {
+            "tick": 3810,
+            "bbox_xyxy_pixels": [
+              392.9033874567033,
+              213.47937492967944,
+              458.2774567524817,
+              324.3407999463434
+            ],
+            "minimum_margin_pixels": 154.6592000536566
+          },
+          {
+            "tick": 3825,
+            "bbox_xyxy_pixels": [
+              392.8570546204403,
+              212.28502226349755,
+              458.53071700909834,
+              323.34654693301474
+            ],
+            "minimum_margin_pixels": 155.65345306698526
+          },
+          {
+            "tick": 3840,
+            "bbox_xyxy_pixels": [
+              392.84762547644317,
+              210.6880673829332,
+              458.8748075286312,
+              321.9783256919469
+            ],
+            "minimum_margin_pixels": 157.0216743080531
+          },
+          {
+            "tick": 3855,
+            "bbox_xyxy_pixels": [
+              392.8679215893118,
+              208.9021833992055,
+              459.2991350193862,
+              320.44458314669026
+            ],
+            "minimum_margin_pixels": 158.55541685330974
+          },
+          {
+            "tick": 3870,
+            "bbox_xyxy_pixels": [
+              392.95443285606643,
+              207.20615675242757,
+              459.6693452191014,
+              318.97139918056126
+            ],
+            "minimum_margin_pixels": 160.02860081943874
+          },
+          {
+            "tick": 3885,
+            "bbox_xyxy_pixels": [
+              393.02132827301216,
+              205.8513499062624,
+              459.99865445408113,
+              317.812141781011
+            ],
+            "minimum_margin_pixels": 161.187858218989
+          },
+          {
+            "tick": 3900,
+            "bbox_xyxy_pixels": [
+              393.0526779606207,
+              204.99305123274596,
+              460.21210297405287,
+              317.081752595078
+            ],
+            "minimum_margin_pixels": 161.918247404922
+          },
+          {
+            "tick": 3915,
+            "bbox_xyxy_pixels": [
+              393.1078453946153,
+              204.76864675981477,
+              460.3248310356772,
+              316.89075239762064
+            ],
+            "minimum_margin_pixels": 162.10924760237936
+          },
+          {
+            "tick": 3930,
+            "bbox_xyxy_pixels": [
+              392.92605646560594,
+              204.85137334279338,
+              460.4162994674845,
+              317.0360355261307
+            ],
+            "minimum_margin_pixels": 161.96396447386928
+          },
+          {
+            "tick": 3945,
+            "bbox_xyxy_pixels": [
+              393.0933660579874,
+              206.41194903406173,
+              459.94566634397233,
+              318.5636641500038
+            ],
+            "minimum_margin_pixels": 160.43633584999623
+          },
+          {
+            "tick": 3960,
+            "bbox_xyxy_pixels": [
+              392.92360892217346,
+              206.34225437403992,
+              460.01176876701004,
+              318.57637041217805
+            ],
+            "minimum_margin_pixels": 160.42362958782195
+          },
+          {
+            "tick": 3975,
+            "bbox_xyxy_pixels": [
+              392.92904608053414,
+              205.43184759311336,
+              460.21934181044503,
+              317.82371411650513
+            ],
+            "minimum_margin_pixels": 161.17628588349487
+          },
+          {
+            "tick": 3990,
+            "bbox_xyxy_pixels": [
+              392.938472390251,
+              203.8767508351791,
+              460.5888047986842,
+              316.4782531825087
+            ],
+            "minimum_margin_pixels": 162.5217468174913
+          },
+          {
+            "tick": 4005,
+            "bbox_xyxy_pixels": [
+              393.1309189467757,
+              205.31497508764306,
+              460.203517891893,
+              317.8508289439965
+            ],
+            "minimum_margin_pixels": 161.14917105600352
+          },
+          {
+            "tick": 4020,
+            "bbox_xyxy_pixels": [
+              393.1151014995213,
+              205.52678632197708,
+              460.3949785360837,
+              318.03453954285
+            ],
+            "minimum_margin_pixels": 160.96546045715002
+          },
+          {
+            "tick": 4035,
+            "bbox_xyxy_pixels": [
+              393.0691507754233,
+              206.19294366882775,
+              460.5577846961453,
+              318.64045306078947
+            ],
+            "minimum_margin_pixels": 160.35954693921053
+          },
+          {
+            "tick": 4050,
+            "bbox_xyxy_pixels": [
+              392.8696458094446,
+              207.35928291549862,
+              460.74607140797787,
+              319.7079640608423
+            ],
+            "minimum_margin_pixels": 159.2920359391577
+          },
+          {
+            "tick": 4065,
+            "bbox_xyxy_pixels": [
+              392.77182619946933,
+              208.58785100548047,
+              460.8062098012132,
+              320.8541928033269
+            ],
+            "minimum_margin_pixels": 158.1458071966731
+          },
+          {
+            "tick": 4080,
+            "bbox_xyxy_pixels": [
+              392.59804049300305,
+              209.58042156001687,
+              460.8815501699961,
+              321.78303732309644
+            ],
+            "minimum_margin_pixels": 157.21696267690356
+          },
+          {
+            "tick": 4095,
+            "bbox_xyxy_pixels": [
+              392.5083894658119,
+              210.14869558498387,
+              461.0150619197376,
+              322.3236466508016
+            ],
+            "minimum_margin_pixels": 156.6763533491984
+          },
+          {
+            "tick": 4110,
+            "bbox_xyxy_pixels": [
+              392.41132630943827,
+              210.34966142349916,
+              461.03932659044415,
+              322.5452220380504
+            ],
+            "minimum_margin_pixels": 156.45477796194962
+          },
+          {
+            "tick": 4125,
+            "bbox_xyxy_pixels": [
+              392.80555223583536,
+              210.68924096628996,
+              461.01814932649717,
+              322.8687383708286
+            ],
+            "minimum_margin_pixels": 156.13126162917138
+          },
+          {
+            "tick": 4140,
+            "bbox_xyxy_pixels": [
+              392.8197260327876,
+              210.86112961782567,
+              461.0786559983213,
+              323.009733836807
+            ],
+            "minimum_margin_pixels": 155.99026616319298
+          },
+          {
+            "tick": 4155,
+            "bbox_xyxy_pixels": [
+              392.8208072331828,
+              211.57441398806748,
+              461.02010451614547,
+              323.6679112108705
+            ],
+            "minimum_margin_pixels": 155.3320887891295
+          },
+          {
+            "tick": 4170,
+            "bbox_xyxy_pixels": [
+              392.5848860715257,
+              212.67705341187082,
+              460.9809595667431,
+              324.7034700026866
+            ],
+            "minimum_margin_pixels": 154.29652999731343
+          },
+          {
+            "tick": 4185,
+            "bbox_xyxy_pixels": [
+              392.39331790639886,
+              213.92818405822032,
+              460.85651754025287,
+              325.8542061931196
+            ],
+            "minimum_margin_pixels": 153.14579380688042
+          },
+          {
+            "tick": 4200,
+            "bbox_xyxy_pixels": [
+              392.15817429421827,
+              215.16087734333632,
+              460.8587627973384,
+              326.9897408062328
+            ],
+            "minimum_margin_pixels": 152.01025919376718
+          },
+          {
+            "tick": 4215,
+            "bbox_xyxy_pixels": [
+              392.06818991681524,
+              215.93314344285344,
+              460.79529295484485,
+              327.6609731204771
+            ],
+            "minimum_margin_pixels": 151.33902687952292
+          },
+          {
+            "tick": 4230,
+            "bbox_xyxy_pixels": [
+              392.0322290633577,
+              216.41461578910554,
+              460.89759025208207,
+              328.09107396373287
+            ],
+            "minimum_margin_pixels": 150.90892603626713
+          },
+          {
+            "tick": 4245,
+            "bbox_xyxy_pixels": [
+              391.9181459409331,
+              216.73798157809532,
+              460.9385093405845,
+              328.4353639653333
+            ],
+            "minimum_margin_pixels": 150.5646360346667
+          },
+          {
+            "tick": 4260,
+            "bbox_xyxy_pixels": [
+              392.20681715429265,
+              217.02008106195166,
+              461.0197253442882,
+              328.71186557852957
+            ],
+            "minimum_margin_pixels": 150.28813442147043
+          },
+          {
+            "tick": 4275,
+            "bbox_xyxy_pixels": [
+              392.1278485750652,
+              217.30336431616004,
+              461.0995655962852,
+              328.99063134720365
+            ],
+            "minimum_margin_pixels": 150.00936865279635
+          },
+          {
+            "tick": 4290,
+            "bbox_xyxy_pixels": [
+              392.64147341861445,
+              227.34387434447146,
+              458.9880515636064,
+              335.5690565168417
+            ],
+            "minimum_margin_pixels": 143.43094348315827
+          },
+          {
+            "tick": 4305,
+            "bbox_xyxy_pixels": [
+              391.7188342861976,
+              228.42482437143656,
+              454.6672399227142,
+              336.4514148794117
+            ],
+            "minimum_margin_pixels": 142.5485851205883
+          },
+          {
+            "tick": 4320,
+            "bbox_xyxy_pixels": [
+              391.71879242234763,
+              228.42502028715512,
+              454.6671338295915,
+              336.451572123291
+            ],
+            "minimum_margin_pixels": 142.548427876709
+          },
+          {
+            "tick": 4335,
+            "bbox_xyxy_pixels": [
+              391.7188342855362,
+              228.42487233184042,
+              454.6671368907372,
+              336.45144173208297
+            ],
+            "minimum_margin_pixels": 142.54855826791703
+          },
+          {
+            "tick": 4350,
+            "bbox_xyxy_pixels": [
+              391.71830369484286,
+              228.4490696580945,
+              454.63823690292895,
+              336.4671109981934
+            ],
+            "minimum_margin_pixels": 142.5328890018066
+          },
+          {
+            "tick": 4365,
+            "bbox_xyxy_pixels": [
+              391.7141272938737,
+              228.66591002390896,
+              454.4355394539908,
+              336.52533502443504
+            ],
+            "minimum_margin_pixels": 142.47466497556496
+          },
+          {
+            "tick": 4380,
+            "bbox_xyxy_pixels": [
+              391.7206663933433,
+              228.8990905986496,
+              454.41715855743905,
+              336.55443232379207
+            ],
+            "minimum_margin_pixels": 142.44556767620793
+          },
+          {
+            "tick": 4395,
+            "bbox_xyxy_pixels": [
+              391.7309274667658,
+              229.07060083192928,
+              454.4001970383575,
+              336.55280869210634
+            ],
+            "minimum_margin_pixels": 142.44719130789366
+          },
+          {
+            "tick": 4410,
+            "bbox_xyxy_pixels": [
+              391.73111140511463,
+              229.2388850347383,
+              454.2658563531345,
+              336.55838570816576
+            ],
+            "minimum_margin_pixels": 142.44161429183424
+          },
+          {
+            "tick": 4425,
+            "bbox_xyxy_pixels": [
+              391.742362118723,
+              229.52787197433943,
+              454.1780047962143,
+              336.5789614002115
+            ],
+            "minimum_margin_pixels": 142.42103859978852
+          },
+          {
+            "tick": 4440,
+            "bbox_xyxy_pixels": [
+              391.73897480922847,
+              229.4810884528011,
+              454.361962612485,
+              336.59400423024687
+            ],
+            "minimum_margin_pixels": 142.40599576975313
+          },
+          {
+            "tick": 4455,
+            "bbox_xyxy_pixels": [
+              391.7359473875638,
+              229.42386040539768,
+              454.43092997496376,
+              336.5961627970459
+            ],
+            "minimum_margin_pixels": 142.4038372029541
+          },
+          {
+            "tick": 4470,
+            "bbox_xyxy_pixels": [
+              391.73100236357334,
+              229.41424025937854,
+              454.21682203035806,
+              336.58941283827556
+            ],
+            "minimum_margin_pixels": 142.41058716172444
+          },
+          {
+            "tick": 4485,
+            "bbox_xyxy_pixels": [
+              391.73080216752203,
+              229.41071300256675,
+              453.7247012380586,
+              336.543257314117
+            ],
+            "minimum_margin_pixels": 142.456742685883
+          },
+          {
+            "tick": 4500,
+            "bbox_xyxy_pixels": [
+              391.7325360413339,
+              229.43642713182427,
+              452.84007283956066,
+              336.4798264584687
+            ],
+            "minimum_margin_pixels": 142.52017354153128
+          },
+          {
+            "tick": 4515,
+            "bbox_xyxy_pixels": [
+              391.73544031907136,
+              229.49973638704475,
+              451.69754401628757,
+              336.39829275384767
+            ],
+            "minimum_margin_pixels": 142.60170724615233
+          },
+          {
+            "tick": 4530,
+            "bbox_xyxy_pixels": [
+              391.7331992107694,
+              229.5651648386555,
+              450.8575075368155,
+              336.3406413074033
+            ],
+            "minimum_margin_pixels": 142.6593586925967
+          },
+          {
+            "tick": 4545,
+            "bbox_xyxy_pixels": [
+              391.7340230446802,
+              229.59157796143475,
+              450.31258894739847,
+              336.2745967364735
+            ],
+            "minimum_margin_pixels": 142.72540326352652
+          },
+          {
+            "tick": 4560,
+            "bbox_xyxy_pixels": [
+              391.7312406618263,
+              229.65136743577915,
+              449.4852347222385,
+              336.1897851703792
+            ],
+            "minimum_margin_pixels": 142.8102148296208
+          },
+          {
+            "tick": 4575,
+            "bbox_xyxy_pixels": [
+              391.48389293149336,
+              229.70909597522507,
+              448.8218650983431,
+              336.1236394459592
+            ],
+            "minimum_margin_pixels": 142.8763605540408
+          },
+          {
+            "tick": 4590,
+            "bbox_xyxy_pixels": [
+              390.7660711038418,
+              229.78081299054534,
+              448.1413095959881,
+              336.06037183022744
+            ],
+            "minimum_margin_pixels": 142.93962816977256
+          },
+          {
+            "tick": 4605,
+            "bbox_xyxy_pixels": [
+              389.95898366024176,
+              229.87123681804215,
+              447.37237266420505,
+              335.9893433182547
+            ],
+            "minimum_margin_pixels": 143.01065668174527
+          },
+          {
+            "tick": 4620,
+            "bbox_xyxy_pixels": [
+              389.1131136639368,
+              229.97833809623492,
+              446.5623395100853,
+              335.91571797760423
+            ],
+            "minimum_margin_pixels": 143.08428202239577
+          },
+          {
+            "tick": 4635,
+            "bbox_xyxy_pixels": [
+              388.2595563633786,
+              230.10141913672567,
+              445.7420409359398,
+              335.84315132749566
+            ],
+            "minimum_margin_pixels": 143.15684867250434
+          },
+          {
+            "tick": 4650,
+            "bbox_xyxy_pixels": [
+              387.3902786198874,
+              230.24044039128057,
+              444.90332608336064,
+              335.7689909036148
+            ],
+            "minimum_margin_pixels": 143.2310090963852
+          },
+          {
+            "tick": 4665,
+            "bbox_xyxy_pixels": [
+              386.5194716076014,
+              230.39251655129357,
+              444.0585738448228,
+              335.6964146593169
+            ],
+            "minimum_margin_pixels": 143.30358534068313
+          },
+          {
+            "tick": 4680,
+            "bbox_xyxy_pixels": [
+              385.64755015841723,
+              230.54056679250542,
+              444.0186661624722,
+              335.6253223218731
+            ],
+            "minimum_margin_pixels": 143.3746776781269
+          },
+          {
+            "tick": 4695,
+            "bbox_xyxy_pixels": [
+              384.76260823721617,
+              230.70467060084155,
+              444.00638002751737,
+              335.54755348003494
+            ],
+            "minimum_margin_pixels": 143.45244651996506
+          },
+          {
+            "tick": 4710,
+            "bbox_xyxy_pixels": [
+              383.8908785607253,
+              230.8876602305812,
+              443.9951370888935,
+              335.49059338560176
+            ],
+            "minimum_margin_pixels": 143.50940661439824
+          },
+          {
+            "tick": 4725,
+            "bbox_xyxy_pixels": [
+              383.0269108044243,
+              231.0903554341334,
+              443.9764526239877,
+              335.43600899962604
+            ],
+            "minimum_margin_pixels": 143.56399100037396
+          },
+          {
+            "tick": 4740,
+            "bbox_xyxy_pixels": [
+              382.16833747981536,
+              231.31372461005105,
+              443.9575835088315,
+              335.3838963036003
+            ],
+            "minimum_margin_pixels": 143.6161036963997
+          },
+          {
+            "tick": 4755,
+            "bbox_xyxy_pixels": [
+              381.31571898046644,
+              231.55593777633945,
+              443.9339555278325,
+              335.33340375378896
+            ],
+            "minimum_margin_pixels": 143.66659624621104
+          },
+          {
+            "tick": 4770,
+            "bbox_xyxy_pixels": [
+              380.47927411609845,
+              231.81323597548985,
+              443.9164814803916,
+              335.2815656405037
+            ],
+            "minimum_margin_pixels": 143.7184343594963
+          },
+          {
+            "tick": 4785,
+            "bbox_xyxy_pixels": [
+              379.66657407304587,
+              232.08792314100572,
+              443.9006445138099,
+              335.240579364796
+            ],
+            "minimum_margin_pixels": 143.75942063520398
+          },
+          {
+            "tick": 4800,
+            "bbox_xyxy_pixels": [
+              378.87091553000477,
+              232.37120133562286,
+              443.88136875437846,
+              335.20009541099154
+            ],
+            "minimum_margin_pixels": 143.79990458900846
+          },
+          {
+            "tick": 4815,
+            "bbox_xyxy_pixels": [
+              378.072371645531,
+              232.67277779830005,
+              443.85827693467024,
+              335.1607363577195
+            ],
+            "minimum_margin_pixels": 143.8392636422805
+          },
+          {
+            "tick": 4830,
+            "bbox_xyxy_pixels": [
+              378.29407281304714,
+              232.76257685487334,
+              443.85561306677687,
+              335.18336596658685
+            ],
+            "minimum_margin_pixels": 143.81663403341315
+          },
+          {
+            "tick": 4845,
+            "bbox_xyxy_pixels": [
+              377.6018178389819,
+              233.0701386031815,
+              443.8360414935013,
+              335.1542262836009
+            ],
+            "minimum_margin_pixels": 143.8457737163991
+          },
+          {
+            "tick": 4860,
+            "bbox_xyxy_pixels": [
+              376.92013097499586,
+              233.38558566419297,
+              443.8159375185806,
+              335.12664558150897
+            ],
+            "minimum_margin_pixels": 143.87335441849103
+          },
+          {
+            "tick": 4875,
+            "bbox_xyxy_pixels": [
+              376.21502801839966,
+              233.72206150807517,
+              443.7933287121515,
+              335.09894492990645
+            ],
+            "minimum_margin_pixels": 143.90105507009355
+          },
+          {
+            "tick": 4890,
+            "bbox_xyxy_pixels": [
+              375.5181052598275,
+              234.07777284425393,
+              443.76512446685786,
+              335.0718224835663
+            ],
+            "minimum_margin_pixels": 143.92817751643372
+          },
+          {
+            "tick": 4905,
+            "bbox_xyxy_pixels": [
+              374.83145763731716,
+              234.4505459528201,
+              443.73658380993777,
+              335.04374870444326
+            ],
+            "minimum_margin_pixels": 143.95625129555674
+          },
+          {
+            "tick": 4920,
+            "bbox_xyxy_pixels": [
+              374.146271595167,
+              234.83322436157843,
+              443.68463764727943,
+              334.99782630544155
+            ],
+            "minimum_margin_pixels": 144.00217369455845
+          },
+          {
+            "tick": 4935,
+            "bbox_xyxy_pixels": [
+              373.4733450239777,
+              235.2309239356666,
+              443.6293805547032,
+              334.95360708901853
+            ],
+            "minimum_margin_pixels": 144.04639291098147
+          },
+          {
+            "tick": 4950,
+            "bbox_xyxy_pixels": [
+              372.81573381033525,
+              235.6416259266963,
+              443.5749973416795,
+              334.9123690297606
+            ],
+            "minimum_margin_pixels": 144.0876309702394
+          },
+          {
+            "tick": 4965,
+            "bbox_xyxy_pixels": [
+              372.1673883812446,
+              236.066102911208,
+              443.5170957511225,
+              334.87099433826864
+            ],
+            "minimum_margin_pixels": 144.12900566173136
+          },
+          {
+            "tick": 4980,
+            "bbox_xyxy_pixels": [
+              371.51040546894154,
+              236.50683577989847,
+              443.4447310541849,
+              334.8212178320325
+            ],
+            "minimum_margin_pixels": 144.17878216796748
+          },
+          {
+            "tick": 4995,
+            "bbox_xyxy_pixels": [
+              370.8640486993237,
+              236.9602188643473,
+              443.36977241306454,
+              334.77366920707266
+            ],
+            "minimum_margin_pixels": 144.22633079292734
+          },
+          {
+            "tick": 5010,
+            "bbox_xyxy_pixels": [
+              370.23274713092013,
+              237.42718470105507,
+              443.2971254692816,
+              334.7288581415472
+            ],
+            "minimum_margin_pixels": 144.27114185845278
+          },
+          {
+            "tick": 5025,
+            "bbox_xyxy_pixels": [
+              369.6194843326129,
+              237.90620800869985,
+              443.2278351484486,
+              334.6883680972094
+            ],
+            "minimum_margin_pixels": 144.31163190279062
+          },
+          {
+            "tick": 5040,
+            "bbox_xyxy_pixels": [
+              369.0287124893825,
+              238.39509163342308,
+              443.16084239500884,
+              334.6528496662066
+            ],
+            "minimum_margin_pixels": 144.34715033379342
+          },
+          {
+            "tick": 5055,
+            "bbox_xyxy_pixels": [
+              368.4595004123688,
+              238.8952808806532,
+              443.0978358597282,
+              334.6222521892536
+            ],
+            "minimum_margin_pixels": 144.37774781074643
+          },
+          {
+            "tick": 5070,
+            "bbox_xyxy_pixels": [
+              367.9129109816061,
+              239.4002843334291,
+              443.03723106417596,
+              334.5966634154502
+            ],
+            "minimum_margin_pixels": 144.40333658454978
+          },
+          {
+            "tick": 5085,
+            "bbox_xyxy_pixels": [
+              367.38754265742324,
+              239.91316935309675,
+              442.98005753837515,
+              334.57552804986295
+            ],
+            "minimum_margin_pixels": 144.42447195013705
+          },
+          {
+            "tick": 5100,
+            "bbox_xyxy_pixels": [
+              367.08981729139447,
+              240.22856133351027,
+              442.95090660821745,
+              334.56620769674475
+            ],
+            "minimum_margin_pixels": 144.43379230325525
+          },
+          {
+            "tick": 5115,
+            "bbox_xyxy_pixels": [
+              368.76134021727177,
+              239.27810273348322,
+              443.1162406526387,
+              334.64995445308375
+            ],
+            "minimum_margin_pixels": 144.35004554691625
+          },
+          {
+            "tick": 5130,
+            "bbox_xyxy_pixels": [
+              375.9514012476258,
+              236.32519914587456,
+              443.6760493592627,
+              335.08646611854493
+            ],
+            "minimum_margin_pixels": 143.91353388145507
+          },
+          {
+            "tick": 5145,
+            "bbox_xyxy_pixels": [
+              391.7106807628361,
+              231.4475316754096,
+              449.712140048062,
+              336.09195308676163
+            ],
+            "minimum_margin_pixels": 142.90804691323837
+          },
+          {
+            "tick": 5160,
+            "bbox_xyxy_pixels": [
+              392.26756604031334,
+              220.84229048682607,
+              458.68463918645926,
+              330.9224022792081
+            ],
+            "minimum_margin_pixels": 148.0775977207919
+          },
+          {
+            "tick": 5175,
+            "bbox_xyxy_pixels": [
+              392.35035074753273,
+              216.79312318938625,
+              456.9533023127874,
+              326.79775729716505
+            ],
+            "minimum_margin_pixels": 152.20224270283495
+          },
+          {
+            "tick": 5190,
+            "bbox_xyxy_pixels": [
+              392.12473479616074,
+              222.92075263266676,
+              457.50992389138855,
+              332.67652315911613
+            ],
+            "minimum_margin_pixels": 146.32347684088387
+          },
+          {
+            "tick": 5205,
+            "bbox_xyxy_pixels": [
+              391.72219951430344,
+              229.62430497986102,
+              451.00938670228686,
+              336.6801928758644
+            ],
+            "minimum_margin_pixels": 142.3198071241356
+          },
+          {
+            "tick": 5220,
+            "bbox_xyxy_pixels": [
+              391.46843652830216,
+              228.6936828821055,
+              455.0161641768674,
+              336.96062817293057
+            ],
+            "minimum_margin_pixels": 142.03937182706943
+          },
+          {
+            "tick": 5235,
+            "bbox_xyxy_pixels": [
+              391.83244270988325,
+              228.83286383219962,
+              454.8365458549755,
+              336.92741171380203
+            ],
+            "minimum_margin_pixels": 142.07258828619797
+          },
+          {
+            "tick": 5250,
+            "bbox_xyxy_pixels": [
+              391.832478595553,
+              228.83294642040906,
+              454.83657469218554,
+              336.9274763674395
+            ],
+            "minimum_margin_pixels": 142.0725236325605
+          },
+          {
+            "tick": 5265,
+            "bbox_xyxy_pixels": [
+              391.83245118442164,
+              228.8328692998483,
+              454.83655982507685,
+              336.92741761542055
+            ],
+            "minimum_margin_pixels": 142.07258238457945
+          },
+          {
+            "tick": 5280,
+            "bbox_xyxy_pixels": [
+              391.8324710192867,
+              228.8329467583307,
+              454.83656571752203,
+              336.9274763432265
+            ],
+            "minimum_margin_pixels": 142.0725236567735
+          },
+          {
+            "tick": 5295,
+            "bbox_xyxy_pixels": [
+              391.8324427810124,
+              228.83286275892976,
+              454.83654906935385,
+              336.9274112320156
+            ],
+            "minimum_margin_pixels": 142.07258876798443
+          },
+          {
+            "tick": 5310,
+            "bbox_xyxy_pixels": [
+              391.83247091319515,
+              228.83294644709974,
+              454.8365619435621,
+              336.9274762191907
+            ],
+            "minimum_margin_pixels": 142.07252378080932
+          },
+          {
+            "tick": 5325,
+            "bbox_xyxy_pixels": [
+              391.8324432114873,
+              228.83286887322313,
+              454.8365467125798,
+              336.92741766718854
+            ],
+            "minimum_margin_pixels": 142.07258233281146
+          },
+          {
+            "tick": 5340,
+            "bbox_xyxy_pixels": [
+              391.8324790699641,
+              228.83295239953932,
+              454.836573152745,
+              336.9274827059438
+            ],
+            "minimum_margin_pixels": 142.07251729405618
+          },
+          {
+            "tick": 5355,
+            "bbox_xyxy_pixels": [
+              391.8324429018228,
+              228.8328632877631,
+              454.8365501109804,
+              336.9274113371457
+            ],
+            "minimum_margin_pixels": 142.0725886628543
+          },
+          {
+            "tick": 5370,
+            "bbox_xyxy_pixels": [
+              391.8324709800164,
+              228.83294745652762,
+              454.8365652918418,
+              336.9274767059797
+            ],
+            "minimum_margin_pixels": 142.0725232940203
+          },
+          {
+            "tick": 5385,
+            "bbox_xyxy_pixels": [
+              391.83245104431506,
+              228.83286820618864,
+              454.8365556639262,
+              336.9274171671561
+            ],
+            "minimum_margin_pixels": 142.07258283284392
+          },
+          {
+            "tick": 5400,
+            "bbox_xyxy_pixels": [
+              391.8324714751428,
+              228.83295274091995,
+              454.8365630475113,
+              336.9274826698458
+            ],
+            "minimum_margin_pixels": 142.0725173301542
+          },
+          {
+            "tick": 5415,
+            "bbox_xyxy_pixels": [
+              391.83244318963875,
+              228.8328687170203,
+              454.836547186365,
+              336.9274176439847
+            ],
+            "minimum_margin_pixels": 142.0725823560153
+          },
+          {
+            "tick": 5430,
+            "bbox_xyxy_pixels": [
+              391.832471536713,
+              228.83295301498367,
+              454.8365622645121,
+              336.9274826785823
+            ],
+            "minimum_margin_pixels": 142.0725173214177
+          },
+          {
+            "tick": 5445,
+            "bbox_xyxy_pixels": [
+              391.832458541614,
+              228.8328671008898,
+              454.8365633491629,
+              336.92741690702877
+            ],
+            "minimum_margin_pixels": 142.07258309297123
+          },
+          {
+            "tick": 5460,
+            "bbox_xyxy_pixels": [
+              391.8324716513298,
+              228.83295308915586,
+              454.83656651309195,
+              336.92748269821726
+            ],
+            "minimum_margin_pixels": 142.07251730178274
+          },
+          {
+            "tick": 5475,
+            "bbox_xyxy_pixels": [
+              391.8324427043422,
+              228.83286343115907,
+              454.83654819414494,
+              336.9274116210144
+            ],
+            "minimum_margin_pixels": 142.07258837898559
+          },
+          {
+            "tick": 5490,
+            "bbox_xyxy_pixels": [
+              391.83247974921915,
+              228.8329573717126,
+              454.83657381463775,
+              336.92748836303053
+            ],
+            "minimum_margin_pixels": 142.07251163696947
+          },
+          {
+            "tick": 5505,
+            "bbox_xyxy_pixels": [
+              391.83244355819664,
+              228.83287021010477,
+              454.83655158476586,
+              336.9274179530327
+            ],
+            "minimum_margin_pixels": 142.07258204696728
+          },
+          {
+            "tick": 5520,
+            "bbox_xyxy_pixels": [
+              391.8324714304802,
+              228.83295238042345,
+              454.83656668040567,
+              336.92748269865274
+            ],
+            "minimum_margin_pixels": 142.07251730134726
+          },
+          {
+            "tick": 5535,
+            "bbox_xyxy_pixels": [
+              391.83245059408335,
+              228.83286437521204,
+              454.8365600042776,
+              336.92741188127553
+            ],
+            "minimum_margin_pixels": 142.07258811872447
+          },
+          {
+            "tick": 5550,
+            "bbox_xyxy_pixels": [
+              391.8324787942098,
+              228.8329473028114,
+              454.836575958253,
+              336.9274765302411
+            ],
+            "minimum_margin_pixels": 142.0725234697589
+          },
+          {
+            "tick": 5565,
+            "bbox_xyxy_pixels": [
+              391.83244288623365,
+              228.83286290983813,
+              454.83654908860825,
+              336.927411149479
+            ],
+            "minimum_margin_pixels": 142.07258885052102
+          },
+          {
+            "tick": 5580,
+            "bbox_xyxy_pixels": [
+              391.8324716756299,
+              228.83295351324364,
+              454.83656899311177,
+              336.9274829465437
+            ],
+            "minimum_margin_pixels": 142.0725170534563
+          },
+          {
+            "tick": 5595,
+            "bbox_xyxy_pixels": [
+              391.8324578395105,
+              228.83296723164983,
+              454.83655274779363,
+              336.9275000439458
+            ],
+            "minimum_margin_pixels": 142.07249995605417
+          },
+          {
+            "tick": 5610,
+            "bbox_xyxy_pixels": [
+              391.8324215705353,
+              228.83287771470802,
+              454.83652623495584,
+              336.9274285111138
+            ],
+            "minimum_margin_pixels": 142.07257148888618
+          },
+          {
+            "tick": 5625,
+            "bbox_xyxy_pixels": [
+              391.83244268415604,
+              228.8329690044729,
+              454.8365348353267,
+              336.927500505277
+            ],
+            "minimum_margin_pixels": 142.072499494723
+          },
+          {
+            "tick": 5640,
+            "bbox_xyxy_pixels": [
+              391.8324220042589,
+              228.83288307489082,
+              454.836528521573,
+              336.92743476073395
+            ],
+            "minimum_margin_pixels": 142.07256523926605
+          },
+          {
+            "tick": 5655,
+            "bbox_xyxy_pixels": [
+              391.83244964225116,
+              228.83296278508007,
+              454.8365439456704,
+              336.92749439424244
+            ],
+            "minimum_margin_pixels": 142.07250560575756
+          },
+          {
+            "tick": 5670,
+            "bbox_xyxy_pixels": [
+              391.83245766887046,
+              228.83296674933834,
+              454.8365505126426,
+              336.92749998983993
+            ],
+            "minimum_margin_pixels": 142.07250001016007
+          },
+          {
+            "tick": 5685,
+            "bbox_xyxy_pixels": [
+              391.8324497126745,
+              228.8329630167968,
+              454.83654277657513,
+              336.9274943568772
+            ],
+            "minimum_margin_pixels": 142.07250564312278
+          },
+          {
+            "tick": 5700,
+            "bbox_xyxy_pixels": [
+              391.8324497126745,
+              228.8329630167968,
+              454.83654277657513,
+              336.9274943568772
+            ],
+            "minimum_margin_pixels": 142.07250564312278
+          },
+          {
+            "tick": 5715,
+            "bbox_xyxy_pixels": [
+              391.8324497126745,
+              228.8329630167968,
+              454.83654277657513,
+              336.9274943568772
+            ],
+            "minimum_margin_pixels": 142.07250564312278
+          },
+          {
+            "tick": 5730,
+            "bbox_xyxy_pixels": [
+              391.8324497126745,
+              228.8329630167968,
+              454.83654277657513,
+              336.9274943568772
+            ],
+            "minimum_margin_pixels": 142.07250564312278
+          },
+          {
+            "tick": 5745,
+            "bbox_xyxy_pixels": [
+              391.8324497126745,
+              228.8329630167968,
+              454.83654277657513,
+              336.9274943568772
+            ],
+            "minimum_margin_pixels": 142.07250564312278
+          },
+          {
+            "tick": 5760,
+            "bbox_xyxy_pixels": [
+              391.8324497126745,
+              228.8329630167968,
+              454.83654277657513,
+              336.9274943568772
+            ],
+            "minimum_margin_pixels": 142.07250564312278
+          },
+          {
+            "tick": 5775,
+            "bbox_xyxy_pixels": [
+              391.8324497126745,
+              228.8329630167968,
+              454.83654277657513,
+              336.9274943568772
+            ],
+            "minimum_margin_pixels": 142.07250564312278
+          },
+          {
+            "tick": 5790,
+            "bbox_xyxy_pixels": [
+              391.8324497126745,
+              228.8329630167968,
+              454.83654277657513,
+              336.9274943568772
+            ],
+            "minimum_margin_pixels": 142.07250564312278
+          },
+          {
+            "tick": 5805,
+            "bbox_xyxy_pixels": [
+              391.8324497126745,
+              228.8329630167968,
+              454.83654277657513,
+              336.9274943568772
+            ],
+            "minimum_margin_pixels": 142.07250564312278
+          },
+          {
+            "tick": 5820,
+            "bbox_xyxy_pixels": [
+              391.8324497126745,
+              228.8329630167968,
+              454.83654277657513,
+              336.9274943568772
+            ],
+            "minimum_margin_pixels": 142.07250564312278
+          }
+        ],
+        "scope": "Geometric frustum cropping check on actual stored-observation times and fixed-head source; finger occlusion and physical calibration are separate"
+      },
+      "source_data_comparison": {
+        "numeric_trajectory_max_absolute_differences": {
+          "state/vector": 0.0,
+          "action/vector": 0.0,
+          "next_state/vector": 0.0
+        },
+        "camera_pixel_changes": {
+          "cam_head": {
+            "selected_frame_mean_absolute_pixel_differences": [
+              26.954661458333334,
+              24.916615668402777,
+              25.370847439236112,
+              25.061819661458333,
+              24.990041232638887
+            ],
+            "all_selected_frames_exactly_unchanged": false
+          },
+          "cam_left_wrist": {
+            "selected_frame_mean_absolute_pixel_differences": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "all_selected_frames_exactly_unchanged": true
+          },
+          "cam_right_wrist": {
+            "selected_frame_mean_absolute_pixel_differences": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "all_selected_frames_exactly_unchanged": true
+          }
+        },
+        "scope": "Observed new-versus-source camera/numeric comparison; no relabelling source RGB as new frames"
+      },
+      "visualization": {
+        "montage": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v2_head_framed/episode_0000000_keyframes.png",
+        "frames": [
+          {
+            "title": "Prepare",
+            "frame": 21,
+            "sim_time_seconds": 1.26,
+            "image_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v2_head_framed/episode_0000000_01_prepare.png",
+            "metrics_alignment": "preceding transition end / current pre-action observation",
+            "metrics": {
+              "success": false,
+              "bottom_gap_m": 1.2447097319512324e-07,
+              "upright_angle_deg": 0.0,
+              "thumb_contact_N": 0.0,
+              "finger_contact_N": 0.0,
+              "table_contact_N": 0.7847960041544866,
+              "opposed_contact": false,
+              "opposing_normals_dot": 1.0,
+              "hold_seconds": 0.0,
+              "max_hold_seconds": 0.0,
+              "lift_achieved": false,
+              "speed_m_s": 0.0,
+              "stable_place_seconds": 0.0,
+              "failure_reason": null
+            }
+          },
+          {
+            "title": "Approach",
+            "frame": 191,
+            "sim_time_seconds": 11.46,
+            "image_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v2_head_framed/episode_0000000_02_approach.png",
+            "metrics_alignment": "preceding transition end / current pre-action observation",
+            "metrics": {
+              "success": false,
+              "bottom_gap_m": 1.2447097319512324e-07,
+              "upright_angle_deg": 0.0,
+              "thumb_contact_N": 0.0,
+              "finger_contact_N": 0.0,
+              "table_contact_N": 0.7847960041544866,
+              "opposed_contact": false,
+              "opposing_normals_dot": 1.0,
+              "hold_seconds": 0.0,
+              "max_hold_seconds": 0.0,
+              "lift_achieved": false,
+              "speed_m_s": 0.0,
+              "stable_place_seconds": 0.0,
+              "failure_reason": null
+            }
+          },
+          {
+            "title": "Airborne opposing grasp",
+            "frame": 266,
+            "sim_time_seconds": 15.96,
+            "image_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v2_head_framed/episode_0000000_03_airborne_opposing_grasp.png",
+            "metrics_alignment": "preceding transition end / current pre-action observation",
+            "metrics": {
+              "success": false,
+              "bottom_gap_m": 0.025201342922198222,
+              "upright_angle_deg": 4.218258185424258,
+              "thumb_contact_N": 2.352142008021474,
+              "finger_contact_N": 2.401799545623362,
+              "table_contact_N": 0.0,
+              "opposed_contact": true,
+              "opposing_normals_dot": -0.9897114770231559,
+              "hold_seconds": 0.52,
+              "max_hold_seconds": 0.52,
+              "lift_achieved": true,
+              "speed_m_s": 0.0554254874587059,
+              "stable_place_seconds": 0.0,
+              "failure_reason": null
+            }
+          },
+          {
+            "title": "Release",
+            "frame": 320,
+            "sim_time_seconds": 19.2,
+            "image_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v2_head_framed/episode_0000000_04_release.png",
+            "metrics_alignment": "preceding transition end / current pre-action observation",
+            "metrics": {
+              "success": false,
+              "bottom_gap_m": 2.347239513866839e-09,
+              "upright_angle_deg": 15.026040870689105,
+              "thumb_contact_N": 6.547468714416027,
+              "finger_contact_N": 0.0,
+              "table_contact_N": 7.177459541708231,
+              "opposed_contact": false,
+              "opposing_normals_dot": 1.0,
+              "hold_seconds": 0.0,
+              "max_hold_seconds": 0.812,
+              "lift_achieved": true,
+              "speed_m_s": 0.008964098989963531,
+              "stable_place_seconds": 0.0,
+              "failure_reason": null
+            }
+          },
+          {
+            "title": "Final stored observation",
+            "frame": 388,
+            "sim_time_seconds": 23.28,
+            "image_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v2_head_framed/episode_0000000_05_final_stored_observation.png",
+            "metrics_alignment": "preceding transition end / current pre-action observation",
+            "metrics": {
+              "success": false,
+              "bottom_gap_m": 9.197295480767309e-09,
+              "upright_angle_deg": 0.0,
+              "thumb_contact_N": 0.0,
+              "finger_contact_N": 0.0,
+              "table_contact_N": 0.7847982807902554,
+              "opposed_contact": false,
+              "opposing_normals_dot": 1.0,
+              "hold_seconds": 0.0,
+              "max_hold_seconds": 0.812,
+              "lift_achieved": true,
+              "speed_m_s": 0.0,
+              "stable_place_seconds": 0.48,
+              "failure_reason": null
+            }
+          }
+        ],
+        "image_source": "decoded original HDF5 bytes only; no new render or state writes"
+      },
+      "plan_receipt_sha256": "2a0a6936e870fe8928c036b8bfa8380d404d49b5435fc54189626ebfc5e1e44c",
+      "planning_source_collection": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v1",
+      "replay_source_proof": {
+        "source_collection": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v1",
+        "source_collection_receipt_sha256": "9b3ead6600b7369bce0a147e3df4d2451fe70816a8376fad8d5a8bcbdccd18ea",
+        "copied_trajectory_sha256": "e098cf5f26b3550e8bc79f52631c2065f471bb264b7a188985b6dfbc52277707",
+        "new_planning_performed": false
+      },
+      "replay_receipt_sha256": "0f90a554bc63af8eb1837eeb3507df3c6f75165e905119b2961c9a307f662647",
+      "frozen_native_source_receipt_sha256": "61e8637007f3e5a9fb87cbdd5806251ef428e775e55207068d78047c9470eba8"
+    }
+  ],
+  "provenance": {
+    "verified": true,
+    "source_sha256": {
+      "/home/admin123/liminghe/vla-benchmark/RoboTwin/scripts/collect_data.py": "c0eaa8743f3a1c7375553606607e528a9c86bcd2c4e5373f263a45e92f31ba5e",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/labware_task.py": "22cd86c3d0836633ad7911e10f999fe366f99b66d9b883a626fe91d05711fa3e",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_expert.py": "44e5c44bc741d003ecd0dc8d93b9238de851ac1f80ad730f1a6059d03a29fc68",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collect_official.py": "617c97c3d68a9e0c3ce2131916057a67182e4eaa1505469a5344eb86cc63b823",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/sdk24_export.py": "c6cfdfa5c122f521a34eec3deaa3d71e48d793991ef7e71f06dbdbdeea1a2c24",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/camera_framing.py": "09bb4be1805018cc37958ed351a091ae22fb5cdebeeac4f42fdb927002b5578c",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/camera_framing_probes/selected_head_framing.json": "ed1cc9bf7a55cb8a71327e09d7659faccedf05540ba4f11b1506234113f38406",
+      "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/__init__.py": "7c4063c61bfe1789dcc933c43923889a3f9e576ddb4f59a3599745df27e3adfc",
+      "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/_base_task.py": "2d9168501186f2fe22852a41709b7a8c5b3577f9fb981d744cbc51e6b1ddb3c9",
+      "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/utils/__init__.py": "d3a670160e83b2467c232f5cbbfffcfc987e3bf0a03617fcf853989e4416d979",
+      "/home/admin123/liminghe/vla-benchmark/RoboTwin/code_gen/test_gen_code.py": "173b46f8f332c98c059dccb428f0d29a203a2b0254a49128e66da1292f7a89d3",
+      "/home/admin123/liminghe/vla-benchmark/RoboTwin/code_gen/task_generation.py": "9cf432fea2b9d7f886760a363bb1766cca0d28bd41a912856cd303aefb5dff46"
+    },
+    "source_verification_files": {
+      "/home/admin123/liminghe/vla-benchmark/RoboTwin/scripts/collect_data.py": {
+        "verified_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v2_head_framed/source_snapshot/00_collect_data.py",
+        "snapshot_used": true,
+        "live_file_still_matches": true
+      },
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/labware_task.py": {
+        "verified_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v2_head_framed/source_snapshot/01_labware_task.py",
+        "snapshot_used": true,
+        "live_file_still_matches": true
+      },
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_expert.py": {
+        "verified_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v2_head_framed/source_snapshot/02_robot_expert.py",
+        "snapshot_used": true,
+        "live_file_still_matches": true
+      },
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collect_official.py": {
+        "verified_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v2_head_framed/source_snapshot/03_collect_official.py",
+        "snapshot_used": true,
+        "live_file_still_matches": true
+      },
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/sdk24_export.py": {
+        "verified_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v2_head_framed/source_snapshot/04_sdk24_export.py",
+        "snapshot_used": true,
+        "live_file_still_matches": true
+      },
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/camera_framing.py": {
+        "verified_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v2_head_framed/source_snapshot/05_camera_framing.py",
+        "snapshot_used": true,
+        "live_file_still_matches": true
+      },
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/camera_framing_probes/selected_head_framing.json": {
+        "verified_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v2_head_framed/source_snapshot/06_selected_head_framing.json",
+        "snapshot_used": true,
+        "live_file_still_matches": true
+      }
+    },
+    "actual_collected_candidate_sha256": "e8cc7e693214d645fa5fed0dca91280e6c521f62457dbf12a8df14b2cb36224b",
+    "physically_tested_candidate_sha256": "085fc69513076cdc64560cccac891c267157147f90041bcbc4a2affc2b699168",
+    "byte_identity_to_tested_candidate": false,
+    "parser_proof": {
+      "receipt": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/agent_runs/20261022T052331_906084Z_session_file_bridge_postprocess/postprocess_receipt.json",
+      "sha256": "045f6c0e91763831785c7a6179351b7ff2e13f343bdd41654a8405edd2ea8d7b",
+      "actual_official_wrapper_AST_checked": true,
+      "method_ast_sha256": "e6be774c018aac455d8cd4f51a969fd2d76cf026fe17c1908ee2ed4c8989bb7a",
+      "method_matches_physically_tested_candidate": true,
+      "new_physical_trials": 0
+    },
+    "official_test_receipt": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/agent_runs/20261022T050753_025169Z_session_export/revision_01/session_receipt.json",
+    "official_test_receipt_sha256": "3cf3bf84951e5f7a392e84e6596d612b69e601227d1f3a51972c6d3c8e23e7fd",
+    "official_test_trials": 10,
+    "official_test_success_rate": 1.0,
+    "generation_transport": "current Codex session; user-authorized",
+    "remote_api_auto_loop": false,
+    "actual_llm_request_sent": false
+  },
+  "camera_mount_source_contract": {
+    "profile": {
+      "hardware_io": false,
+      "rgb_profile": {
+        "width": 640,
+        "height": 480,
+        "format": "RGB8",
+        "fps": 30,
+        "device_profile_source": "librealsense D435 USB3 default color stream",
+        "simulation_fovy_deg": 37,
+        "simulation_intrinsics_source": "RoboTwin Large_D435 nominal pinhole",
+        "physical_intrinsics_status": "read per-device RGB profile K before real collection",
+        "depth_enabled": false,
+        "infrared_enabled": false,
+        "exposure_white_balance_gain": "physical firmware defaults; not simulated"
+      },
+      "mounts": {
+        "head_camera": {
+          "link": "camera_link",
+          "position": [
+            0,
+            0.016,
+            0.0125
+          ],
+          "forward": [
+            0,
+            1,
+            0
+          ],
+          "left": [
+            -1,
+            0,
+            0
+          ],
+          "near": 0.005,
+          "far": 10,
+          "calibration_status": "existing housing estimate; vendor_zero_view"
+        },
+        "left_camera": {
+          "link": "l_link6",
+          "position": [
+            0,
+            -0.08,
+            -0.045
+          ],
+          "forward": [
+            0,
+            -0.18,
+            0.983666610188635
+          ],
+          "left": [
+            1,
+            0,
+            0
+          ],
+          "near": 0.005,
+          "far": 10,
+          "calibration_status": "nominal fixed flange mount; not measured"
+        },
+        "right_camera": {
+          "link": "r_link6",
+          "position": [
+            0,
+            -0.08,
+            -0.041
+          ],
+          "forward": [
+            0,
+            -0.18,
+            0.983666610188635
+          ],
+          "left": [
+            1,
+            0,
+            0
+          ],
+          "near": 0.005,
+          "far": 10,
+          "calibration_status": "nominal fixed flange mount; not measured"
+        }
+      },
+      "recording": {
+        "head_pose_rad": {
+          "yaw": 0,
+          "pitch": -0.419
+        },
+        "extra_optical_pitch_deg": 0,
+        "save_freq_physics_steps": 15,
+        "state_action_clock": "preserve recorded native timestamps; not 30Hz action labels",
+        "output_camera_names": [
+          "cam_head",
+          "cam_left_wrist",
+          "cam_right_wrist"
+        ],
+        "rgb_only": true
+      }
+    },
+    "profile_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/integrations/realman_rm65b_gen4/camera_profiles/three_d435_rgb_default.yml",
+    "profile_sha256": "22689c0ee5ca5679e3e899cc8664be6d32bd35bc45398ce5a66c7ba4256d59d6",
+    "camera_adapter_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/integrations/realman_rm65b_gen4/three_camera_rgb.py",
+    "camera_adapter_sha256": "156497f3720f25924f16c6a2535b798ba6bef812f253955a1b919b250c053386",
+    "Base_Task_update_render_calls_update_mount": true,
+    "configured_parent_links": {
+      "head_camera": "camera_link",
+      "left_camera": "l_link6",
+      "right_camera": "r_link6"
+    },
+    "generic_camera_link_warning_scope": "Generic fallback links are not the authoritative custom optical mounts",
+    "evidence_scope": "Current source/profile plus independently reviewed saved camera images; no runtime extrinsic readback or physical calibration claim"
+  },
+  "decoder": {
+    "path": "/home/admin123/liminghe/vla-benchmark/RoboTwin/data/decode_image_bit.py",
+    "sha256": "90df99c52d3f127a09f5960680113f17e8b3e25b2e3cb9117abdeb249d7a337e"
+  },
+  "scope": "Final saved HDF5, all camera buffers, physical plan/replay receipts and fixed source provenance; no SR or physical-robot claim"
+}

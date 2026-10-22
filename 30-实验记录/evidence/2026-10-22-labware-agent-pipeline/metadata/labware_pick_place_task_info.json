@@ -1,0 +1,12 @@
+{
+  "task_name": "labware_pick_place",
+  "task_description": "Operate only self.bottle: it is the empty, open reagent_bottle_body, without a cap or tablets. Use the right arm to make a real contact-driven grasp, lift it at least 0.02 m clear of the table, hold it upright continuously for at least 0.5 seconds, return it upright to its initial position, release it, withdraw the hand, and allow stable placement. This first baseline deliberately uses the explicitly provided LOCAL REALMAN SDK24 EXTENSION self.grasp_lift_place(self.bottle, ArmTag('right')). This helper is not an original RoboTwin API: it executes the native hand/arm control and physical checks. Do not invoke unlisted APIs, teleport/set an actor pose, attach a fixture, change physics or success labels, open a cap, pour pills, operate other actors, or replace the helper with a hand-authored joint trajectory. The actor's functional point 0 is the opening, 1 the interior floor, 2 a rim candidate, and 3 its external bottom. Use the listed helper for the entire pickup/hold/place/release/retreat sequence. Retain/record self.info['info'] = {'{A}': '/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/metadata/description/objects_description/reagent_bottle_body/base0', '{a}': 'right'} and return self.info at the end. The setup and physical check_success are already implemented by the task environment; only implement play_once.",
+  "current_code": "class gpt_labware_pick_place(labware_pick_place):\n    def play_once(self):\n        pass\n",
+  "actor_list": {
+    "self.bottle": {
+      "name": "empty open reagent bottle",
+      "description": "The only manipulated actor: an empty open cylindrical reagent bottle body. The right-hand native contact helper acts on this actor. No cap or pellets are loaded in this minimum task.",
+      "modelname": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/metadata/assets/objects/reagent_bottle_body"
+    }
+  }
+}

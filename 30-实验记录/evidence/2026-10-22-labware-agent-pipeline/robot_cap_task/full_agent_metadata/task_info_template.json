@@ -1,0 +1,32 @@
+{
+  "task_name": "labware_cap115_unscrew_pour",
+  "task_description": "PENDING FULL TASK IMPLEMENTATION. Intended task: right arm supports the115 bottle; left arm physically grasps, unscrews and clears its cap; right arm pours all12 original dynamic capsules into the Petri dish and the transfer settles. No pose/velocity writes, fixture, copied success flag or intermediate body-hold success. Implement and physically verify the full task and actual API before generating/running an expert.",
+  "current_code": "class gpt_labware_cap115_unscrew_pour(labware_cap115_unscrew_pour):\n    def play_once(self):\n        pass\n",
+  "actor_list": {
+    "self.bottle": {
+      "name": "115mm bottle body",
+      "description": "Right arm body support; actual local opening .115m. Candidate grasp not yet verified for full task.",
+      "modelname": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/full_agent_metadata/assets/objects/reagent_bottle_body115"
+    },
+    "self.cap": {
+      "name": "matching detachable cap",
+      "description": "Left arm cap operation; underside/opening and twist-axis are cap LOCAL points, not body assembly origin .118m.",
+      "modelname": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/full_agent_metadata/assets/objects/reagent_bottle_cap115"
+    },
+    "self.dish": {
+      "name": "existing Petri dish",
+      "description": "Receiver for12 original dynamic capsules. Reuse verified asset ID; full transfer not yet verified.",
+      "modelname": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/metadata/assets/objects/petri_dish"
+    }
+  },
+  "task_module_implemented_here": false,
+  "expert_generated_here": false,
+  "full_physical_task_verified": false,
+  "planned_language_bindings": {
+    "{A}": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/full_agent_metadata/description/objects_description/reagent_bottle_body115/base0",
+    "{B}": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/full_agent_metadata/description/objects_description/reagent_bottle_cap115/base0",
+    "{C}": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/full_agent_metadata/description/objects_description/petri_dish/base0",
+    "{a}": "right",
+    "{b}": "left"
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "success": false,
+  "error": {
+    "type": "UnStableError",
+    "message": "Objects is unstable in seed(0), unstable objects: derived115_closed_tablet_bottle_tablet_05, derived115_closed_tablet_bottle_tablet_10, derived115_closed_tablet_bottle_tablet_11",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/closed_cap115_pick_probe.py\", line 28, in <module>\n    task.setup_demo(seed=a.seed,runtime_path=out,capture_rgb=False,center_xy=[.10,-.11])\n  File \"/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/labware_cap115_task.py\", line 111, in setup_demo\n    return super().setup_demo(**kwargs)\n  File \"/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/labware_cap_task.py\", line 35, in setup_demo\n    result=super().setup_demo(**kwargs)\n  File \"/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/labware_task.py\", line 128, in setup_demo\n    super()._init_task_env_(**args)\n  File \"/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/_base_task.py\", line 143, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(0), unstable objects: derived115_closed_tablet_bottle_tablet_05, derived115_closed_tablet_bottle_tablet_10, derived115_closed_tablet_bottle_tablet_11\n"
+  },
+  "metrics": {},
+  "targets": 0,
+  "ticks": 0,
+  "early_stop": null,
+  "scope": "Independent115mm derived bottle actual body grasp/closed12tablet hold only; no unscrew/pour/dataset success",
+  "assembly_contract": {
+    "component": "Bottle115Assembly: frozen passive mechanism plus independent visual/metadata profile",
+    "body_dynamic": true,
+    "cap_dynamic": true,
+    "tablet_count": 12,
+    "body_mass_readback_kg": 0.07999999821186066,
+    "cap_mass_readback_kg": 0.011999999172985554,
+    "tablet_mass_readback_kg": [
+      0.0003499999875202775,
+      0.0003499999875202775,
+      0.0003499999875202775,
+      0.0003499999875202775,
+      0.0003499999875202775,
+      0.0003499999875202775,
+      0.0003499999875202775,
+      0.0003499999875202775,
+      0.0003499999875202775,
+      0.0003499999875202775,
+      0.0003499999875202775,
+      0.0003499999875202775
+    ],
+    "physics_dt_s_actual": 0.004000000189989805,
+    "spec_sha256": "a52359200359389e27dc20aa4cc98673b5fff8bd6d2b319337cfe474c7b3294d",
+    "no_rotation_target_or_motor": true,
+    "drive_property_readback": {
+      "0": {
+        "x": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ],
+        "y": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ],
+        "z": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ],
+        "twist": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ],
+        "swing": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ],
+        "slerp": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ]
+      },
+      "1": {
+        "x": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ],
+        "y": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ],
+        "z": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ],
+        "twist": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ],
+        "swing": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ],
+        "slerp": [
+          0.0,
+          0.0,
+          0.0,
+          "force"
+        ]
+      }
+    },
+    "no_world_fixture_or_cap_holder": true,
+    "states_written_after_initialization": false,
+    "axial_model": "force-limited spring C=measured_lift-pitch*clipped_measured_spin/(2*pi), with paired reaction torque tau=-d(target_lift)/d(theta)*F",
+    "guide_radial_and_tilt_constraints": "two coaxial separated D6 radial bearings; all angular motions and axial translation free; every drive motor off",
+    "guide_bearing_count": 2,
+    "guide_bearing_separation_m": 0.012,
+    "passive_friction_and_seat_parameters": {
+      "friction_static": 0.3,
+      "friction_dynamic": 0.25,
+      "effective_radius_m": 0.025,
+      "bristle_stiffness_Nm_per_rad": 0.03,
+      "viscous_damping_Nms_per_rad": 0.003,
+      "seat_stiffness_Nm_per_rad": 0.03,
+      "seat_torque_limit_Nm": 0.02
+    },
+    "passive_parameter_status": "explicit engineering assignments requiring calibration; frozen mu/radius reused, former actuator stiffness/damping/limit assigned to passive microcontact/seat, no claim of measured threads",
+    "release": "measured positive turn plus measured lift from frozen thresholds; guide disabled without changing free cap state",
+    "frozen_inputs_unchanged": true,
+    "frozen_input_fingerprints": {
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/physics_spec115.json": "a52359200359389e27dc20aa4cc98673b5fff8bd6d2b319337cfe474c7b3294d",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/lab_physics.py": "3453db9b1319d9ad001e67d7f6043a949f6199a7bcacebf83a0609e76636123d",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_body/model_data0.json": "2080d5d2a7c88c2538c2d02ce145c4fcaf640ed8dfd4b7e29311adcc85f04794",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_cap/model_data0.json": "f900c27c17f3645f88c51d27e322a4bcc4ee82afa558b82539c1f77d1dfc77aa",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/physics_spec.json": "9d5ae8d89d60dd2d4e466a966c3862d7d160cc2e5ebe4d61bc8a1eac9a2d59ef",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/labware_cap115_task.py": "67a41b80608215a17f361494bce3224cfdf6b4018ce8f2c599c01adba96f8358",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/profile_manifest.json": "7feb04a6f9e707034395eb50bd1dce68fd6ec360454a91581986491e86a11861",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/body115.glb": "8a221a146caa1446d06a174c4ca9764efca7d7ae945dce7d20719a1c2a046416",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/cap14.glb": "522980ef540733a4999608ebacb17f90053624ae8ac7912893f2c8e6ab51d811",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/body_model_data0.json": "a6ea35a836a63a9f5aa7d2ca00fcd2bde3ea9c391a99e66471180f19ef3e268f",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/cap_model_data0.json": "3b07a3bbaa09f9bae19ee30aa18b77c6a61692467ca447d2b20738981fed8cf5"
+    },
+    "boundary": "derived thread surrogate, not calibrated thread/friction, fluid, robot grasp, or complete unscrew/pour success",
+    "profile_manifest": {
+      "profile": "bottle115-v1",
+      "date": "2026-10-22",
+      "source_spec": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/physics_spec.json",
+      "source_spec_sha256": "9d5ae8d89d60dd2d4e466a966c3862d7d160cc2e5ebe4d61bc8a1eac9a2d59ef",
+      "new_spec": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/physics_spec115.json",
+      "new_spec_sha256": "a52359200359389e27dc20aa4cc98673b5fff8bd6d2b319337cfe474c7b3294d",
+      "body_height_m": 0.115,
+      "cap_closed_center_z_m": 0.118,
+      "body_grasp_anchor_z_m": 0.045,
+      "physical_dimension_changes": {
+        "body_height_m": [
+          0.09,
+          0.115
+        ],
+        "cap_closed_center_z_m": [
+          0.093,
+          0.118
+        ]
+      },
+      "selection_basis": "First clear height in finite5mm CPU grid with actual preclose q36; not global minimum or physical success",
+      "cpu_evidence": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/cap_geometry_probes/q36_height_extra_25mm/right_sweep.json",
+      "cpu_evidence_sha256": "ebdfbb7b94888bd20389d6cf2db3bce861dd8db942fc2e2e1e63d47dc52f443d",
+      "mass_kg": {
+        "body": 0.08,
+        "cap": 0.012,
+        "each_tablet": 0.00035
+      },
+      "mass_status": "Retained engineering assumption; not a density/mass measurement",
+      "visuals": {
+        "body": {
+          "path": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/body115.glb",
+          "sha256": "8a221a146caa1446d06a174c4ca9764efca7d7ae945dce7d20719a1c2a046416",
+          "bounds_m": [
+            [
+              -0.02500000037252903,
+              -0.02500000037252903,
+              0.0
+            ],
+            [
+              0.02500000037252903,
+              0.02500000037252903,
+              0.11500000208616257
+            ]
+          ],
+          "source": "new parametric visual geometry matching the collision dimensions; not scaled old 90-mm mesh"
+        },
+        "cap": {
+          "path": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/cap14.glb",
+          "sha256": "522980ef540733a4999608ebacb17f90053624ae8ac7912893f2c8e6ab51d811",
+          "bounds_m": [
+            [
+              -0.029999999329447746,
+              -0.029999999329447746,
+              -0.012000000104308128
+            ],
+            [
+              0.029999999329447746,
+              0.029999999329447746,
+              0.0020000000949949026
+            ]
+          ],
+          "source": "new parametric visual geometry matching the collision dimensions; not scaled old 90-mm mesh"
+        }
+      },
+      "frozen_assembly_sha256": "0785eb4e2a487f4ec4a7c637011e163ceabcce18bbc990fc17980e86b95708d5",
+      "new_metadata_sha256": {
+        "body": "a6ea35a836a63a9f5aa7d2ca00fcd2bde3ea9c391a99e66471180f19ef3e268f",
+        "cap": "3b07a3bbaa09f9bae19ee30aa18b77c6a61692467ca447d2b20738981fed8cf5"
+      },
+      "generator_sha256": "98a4c4b1f917a3f2f608952cf2e2fd34937e4fe8d438c7ee5bc9744bfeeb0f5d",
+      "physics_run": false,
+      "robot_grasp_verified": false
+    },
+    "visual_binding_receipt": [
+      {
+        "requested_file": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_body/visual/base0.glb",
+        "actual_file": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/body115.glb",
+        "sha256": "8a221a146caa1446d06a174c4ca9764efca7d7ae945dce7d20719a1c2a046416"
+      },
+      {
+        "requested_file": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_cap/visual/base0.glb",
+        "actual_file": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/cap14.glb",
+        "sha256": "522980ef540733a4999608ebacb17f90053624ae8ac7912893f2c8e6ab51d811"
+      }
+    ],
+    "actual_mass_inertia": {
+      "body": {
+        "mass_kg": 0.07999999821186066,
+        "principal_inertia_kg_m2": [
+          0.0001317356072831899,
+          0.0001317356072831899,
+          4.565593189909123e-05
+        ],
+        "cmass_local_pose_pq": [
+          -1.2824814543677121e-09,
+          7.876737595502448e-10,
+          0.05350203067064285,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "cap": {
+        "mass_kg": 0.011999999172985554,
+        "principal_inertia_kg_m2": [
+          6.9849047577008605e-06,
+          6.9849047577008605e-06,
+          1.328854250459699e-05
+        ],
+        "cmass_local_pose_pq": [
+          -7.773558463597396e-10,
+          8.857483496660379e-11,
+          -0.0029693576507270336,
+          0.9238795638084412,
+          0.0,
+          0.0,
+          0.3826834261417389
+        ]
+      }
+    },
+    "complete_world_kinematics_pre_post_each_actual_step": true,
+    "physical_success_claimed_by_profile": false
+  },
+  "source_sha256": {
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/closed_cap115_pick_probe.py": "8668835916806157df3b957c6d7215f49f875d8676e908f1856a9f4f1f7ddd07",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/labware_cap115_task.py": "67a41b80608215a17f361494bce3224cfdf6b4018ce8f2c599c01adba96f8358",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/labware_cap_task.py": "2abf5e1db944ba25acb2ea933f515d21fcb193e6ac45796e565086cd40166866",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/labware_task.py": "22cd86c3d0836633ad7911e10f999fe366f99b66d9b883a626fe91d05711fa3e",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_expert.py": "44e5c44bc741d003ecd0dc8d93b9238de851ac1f80ad730f1a6059d03a29fc68",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_assembly.py": "0785eb4e2a487f4ec4a7c637011e163ceabcce18bbc990fc17980e86b95708d5",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/body_model_data0.json": "a6ea35a836a63a9f5aa7d2ca00fcd2bde3ea9c391a99e66471180f19ef3e268f",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/body115.glb": "8a221a146caa1446d06a174c4ca9764efca7d7ae945dce7d20719a1c2a046416",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/profile_manifest.json": "7feb04a6f9e707034395eb50bd1dce68fd6ec360454a91581986491e86a11861",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/physics_spec115.json": "a52359200359389e27dc20aa4cc98673b5fff8bd6d2b319337cfe474c7b3294d",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/constructor_preflight_cpu.json": "353fca2ad42c1aba792b4be4e9d6bfc83e400a79733225e949305beab14fe218",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/cap_model_data0.json": "3b07a3bbaa09f9bae19ee30aa18b77c6a61692467ca447d2b20738981fed8cf5",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/cap14.glb": "522980ef540733a4999608ebacb17f90053624ae8ac7912893f2c8e6ab51d811"
+  },
+  "sources_unchanged_during_probe": true
+}

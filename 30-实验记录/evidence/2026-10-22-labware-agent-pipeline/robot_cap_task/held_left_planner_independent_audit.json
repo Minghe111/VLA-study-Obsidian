@@ -1,0 +1,877 @@
+{
+  "date": "2026-10-22",
+  "scope": "CPU independent source and negative-control audit; actual patchedaudit and RRTwrapper with testdouble collision/FK/world oracles; no physical or OMPL pathsuccess",
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "actual_contact_ID_and_sourcepart_only_allowlist",
+      "passed": true,
+      "detail": {
+        "allowed_exact": [
+          [
+            "bottle",
+            "r_inspire_right_index_2"
+          ],
+          [
+            "bottle",
+            "r_inspire_right_middle_2"
+          ],
+          [
+            "cap",
+            "r_inspire_right_index_2"
+          ]
+        ],
+        "right_same_name_wrong_ID_blocked": true,
+        "left_pill_ring_empty_unloadedcap_and_wrongobject_blocked": true,
+        "invalid_clock_contact_refused": true
+      }
+    },
+    {
+      "name": "actual_patched_mesh_audit_kernel_negative_controls",
+      "passed": true,
+      "detail": {
+        "negative_pairs": [
+          {
+            "pair": [
+              "r_inspire_right_ring_2",
+              "bottle"
+            ],
+            "blocked": true
+          },
+          {
+            "pair": [
+              "r_inspire_right_middle_2",
+              "cap"
+            ],
+            "blocked": true
+          },
+          {
+            "pair": [
+              "l_inspire_left_index_2",
+              "cap"
+            ],
+            "blocked": true
+          },
+          {
+            "pair": [
+              "l_inspire_left_index_2",
+              "bottle"
+            ],
+            "blocked": true
+          },
+          {
+            "pair": [
+              "l_inspire_left_index_2",
+              "table"
+            ],
+            "blocked": true
+          },
+          {
+            "pair": [
+              "r_inspire_right_index_2",
+              "pill_11"
+            ],
+            "blocked": true
+          },
+          {
+            "pair": [
+              "l_inspire_left_index_2",
+              "r_inspire_right_index_2"
+            ],
+            "blocked": true
+          }
+        ],
+        "moving_baseline_pair_not_exempt": true,
+        "interior_path_collision_blocked_despite_clear_endpoints": true,
+        "all15_static_categories_and_self_visited": true,
+        "patched_method_code": "<held-left-part-audit>"
+      }
+    },
+    {
+      "name": "actual_RRT_wrapper_ACM_names_and_unseen_pair_rejection",
+      "passed": true,
+      "detail": {
+        "teacher_category_names_equal_ACM_obstacles": true,
+        "baseline_only_frozen_link": true,
+        "unseen_right_leftcap_leftbody_leftright_table_pill_rejected": true,
+        "actual_OMPL_search_executed": false,
+        "scope": "actual wrapper with controlledPlanningWorld/OMPL test doubles, not a path feasibility proof"
+      }
+    },
+    {
+      "name": "private_namespaces_no_physical_writes",
+      "passed": true,
+      "detail": {
+        "root_planner_physical_writer_calls": [],
+        "compiled_audit_does_not_resolve_old_class_name": true,
+        "RRT_globals_use_current_private_fma_module": true,
+        "installation_idempotent": true
+      }
+    },
+    {
+      "name": "constructor_rebuilds_independent_body_and_keeps_cap_pills",
+      "passed": true,
+      "detail": {
+        "preexisting_body_cap_pill_union_replaced_by_body_only": true,
+        "all15_static_categories_retained": true,
+        "actualpart_identity_tags_retained": true,
+        "scope": "actual constructor with read-onlygeometry conversion test doubles; no actual mesh/physics claim"
+      }
+    },
+    {
+      "name": "archived_actual_static_terminal_contact_selection",
+      "passed": true,
+      "detail": {
+        "archived_actual_PhysX_contact_source": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/static_hold_probes/held115_static_reference_v1/world_kinematics_pre_post.json.gz",
+        "source_sha256": "949bca225240a0d7e4aed51f57b1ed435a093760f619b3b5038d29f6b83d8ada",
+        "physics_step": 9785,
+        "baseline_pairs": [
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_thumb_4",
+            "robot_actor_id": 38,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_thumb_4",
+            "robot_actor_id": 38,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_thumb_4",
+            "robot_actor_id": 38,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_thumb_4",
+            "robot_actor_id": 38,
+            "normal_force_N": 1.6146853752011736,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_thumb_4",
+            "robot_actor_id": 38,
+            "normal_force_N": 0.805111171577152,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_thumb_4",
+            "robot_actor_id": 38,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_thumb_4",
+            "robot_actor_id": 38,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_thumb_force_sensor_3",
+            "robot_actor_id": 39,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_thumb_force_sensor_3",
+            "robot_actor_id": 39,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_thumb_force_sensor_3",
+            "robot_actor_id": 39,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_thumb_force_sensor_3",
+            "robot_actor_id": 39,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_thumb_force_sensor_3",
+            "robot_actor_id": 39,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_thumb_force_sensor_4",
+            "robot_actor_id": 40,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_thumb_force_sensor_4",
+            "robot_actor_id": 40,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_thumb_force_sensor_4",
+            "robot_actor_id": 40,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_thumb_force_sensor_4",
+            "robot_actor_id": 40,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_thumb_force_sensor_4",
+            "robot_actor_id": 40,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_thumb_force_sensor_4",
+            "robot_actor_id": 40,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_index_2",
+            "robot_actor_id": 43,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_index_2",
+            "robot_actor_id": 43,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_index_2",
+            "robot_actor_id": 43,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_index_2",
+            "robot_actor_id": 43,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_index_2",
+            "robot_actor_id": 43,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_index_2",
+            "robot_actor_id": 43,
+            "normal_force_N": 0.3122435928418788,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_index_2",
+            "robot_actor_id": 43,
+            "normal_force_N": 1.0269420874764932,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_index_2",
+            "robot_actor_id": 43,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_index_2",
+            "robot_actor_id": 43,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "cap",
+            "sourcepart": "cap",
+            "actor_name": "derived115_closed_tablet_bottle_cap",
+            "actor_id": 104,
+            "robot_link": "r_inspire_right_index_2",
+            "robot_actor_id": 43,
+            "normal_force_N": 0.49937950365806316,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_index_force_sensor_2",
+            "robot_actor_id": 44,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_index_force_sensor_2",
+            "robot_actor_id": 44,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_index_force_sensor_2",
+            "robot_actor_id": 44,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_index_force_sensor_2",
+            "robot_actor_id": 44,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_index_force_sensor_2",
+            "robot_actor_id": 44,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_index_force_sensor_2",
+            "robot_actor_id": 44,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_index_force_sensor_2",
+            "robot_actor_id": 44,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_index_force_sensor_3",
+            "robot_actor_id": 45,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_index_force_sensor_3",
+            "robot_actor_id": 45,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_index_force_sensor_3",
+            "robot_actor_id": 45,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_index_force_sensor_3",
+            "robot_actor_id": 45,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_middle_2",
+            "robot_actor_id": 48,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_middle_2",
+            "robot_actor_id": 48,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_middle_2",
+            "robot_actor_id": 48,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_middle_2",
+            "robot_actor_id": 48,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_middle_2",
+            "robot_actor_id": 48,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_middle_2",
+            "robot_actor_id": 48,
+            "normal_force_N": 0.04245017926174143,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_middle_2",
+            "robot_actor_id": 48,
+            "normal_force_N": 0.9808000005143569,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_middle_2",
+            "robot_actor_id": 48,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_middle_2",
+            "robot_actor_id": 48,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_right_middle_2",
+            "robot_actor_id": 48,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_2",
+            "robot_actor_id": 49,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_2",
+            "robot_actor_id": 49,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_2",
+            "robot_actor_id": 49,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_2",
+            "robot_actor_id": 49,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_2",
+            "robot_actor_id": 49,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_2",
+            "robot_actor_id": 49,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_2",
+            "robot_actor_id": 49,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_2",
+            "robot_actor_id": 49,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_3",
+            "robot_actor_id": 50,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_3",
+            "robot_actor_id": 50,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_3",
+            "robot_actor_id": 50,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          },
+          {
+            "category": "bottle",
+            "sourcepart": "body",
+            "actor_name": "derived115_closed_tablet_bottle_body",
+            "actor_id": 103,
+            "robot_link": "r_inspire_middle_force_sensor_3",
+            "robot_actor_id": 50,
+            "normal_force_N": 0.0,
+            "source": "actual current PhysX manifold, not FCL predicate"
+          }
+        ],
+        "selection_derived_from_actual_contacts_not_FCL": true,
+        "scope": "offline reconstruction of recorded contact fields, no new scene/probe"
+      }
+    }
+  ],
+  "source_sha256": {
+    "held_left_planner": "07c2fae9779d1339719508f3f36372a959fd68143d03f8b32e6182195f542f23",
+    "native_bounded_fullmesh": "c9803dcc88a261d3b53535fe5fd748fef4bc5b6e0ef30d4e2d50efb175d59477",
+    "native_acob": "165933c047b0e2d4e08b1cc96cd27018d24ca7ba1ffd1da163cb265af73493d3"
+  },
+  "native_fma_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/integrations/realman_rm65b_gen4/teacher_legacy/full_mesh_path_audit_bounded.py",
+  "actual_snapshot_q36_used": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/static_hold_probes/held115_static_reference_v1/actual_terminal_snapshot.json",
+  "actual_current_physics_model_built_here": false,
+  "fullactualpath_verified": false,
+  "new_physical_trials": 0,
+  "source_files_modified_by_auditor": false,
+  "test_source_sha256": "c3014810779ec9dd9d7df32549ae7fb9197da4d9e99250c0c0e7232a9463a7f9",
+  "actual_terminal_unique_baseline_pairs": [
+    {
+      "category": "bottle",
+      "sourcepart": "body",
+      "robot_link": "r_inspire_right_thumb_4",
+      "actor_id": 103,
+      "robot_actor_id": 38,
+      "summed_normal_force_N": 2.4197965467783256,
+      "manifold_records": 7
+    },
+    {
+      "category": "bottle",
+      "sourcepart": "body",
+      "robot_link": "r_inspire_thumb_force_sensor_3",
+      "actor_id": 103,
+      "robot_actor_id": 39,
+      "summed_normal_force_N": 0.0,
+      "manifold_records": 5
+    },
+    {
+      "category": "bottle",
+      "sourcepart": "body",
+      "robot_link": "r_inspire_thumb_force_sensor_4",
+      "actor_id": 103,
+      "robot_actor_id": 40,
+      "summed_normal_force_N": 0.0,
+      "manifold_records": 6
+    },
+    {
+      "category": "bottle",
+      "sourcepart": "body",
+      "robot_link": "r_inspire_right_index_2",
+      "actor_id": 103,
+      "robot_actor_id": 43,
+      "summed_normal_force_N": 1.339185680318372,
+      "manifold_records": 9
+    },
+    {
+      "category": "cap",
+      "sourcepart": "cap",
+      "robot_link": "r_inspire_right_index_2",
+      "actor_id": 104,
+      "robot_actor_id": 43,
+      "summed_normal_force_N": 0.49937950365806316,
+      "manifold_records": 1
+    },
+    {
+      "category": "bottle",
+      "sourcepart": "body",
+      "robot_link": "r_inspire_index_force_sensor_2",
+      "actor_id": 103,
+      "robot_actor_id": 44,
+      "summed_normal_force_N": 0.0,
+      "manifold_records": 7
+    },
+    {
+      "category": "bottle",
+      "sourcepart": "body",
+      "robot_link": "r_inspire_index_force_sensor_3",
+      "actor_id": 103,
+      "robot_actor_id": 45,
+      "summed_normal_force_N": 0.0,
+      "manifold_records": 4
+    },
+    {
+      "category": "bottle",
+      "sourcepart": "body",
+      "robot_link": "r_inspire_right_middle_2",
+      "actor_id": 103,
+      "robot_actor_id": 48,
+      "summed_normal_force_N": 1.0232501797760982,
+      "manifold_records": 10
+    },
+    {
+      "category": "bottle",
+      "sourcepart": "body",
+      "robot_link": "r_inspire_middle_force_sensor_2",
+      "actor_id": 103,
+      "robot_actor_id": 49,
+      "summed_normal_force_N": 0.0,
+      "manifold_records": 8
+    },
+    {
+      "category": "bottle",
+      "sourcepart": "body",
+      "robot_link": "r_inspire_middle_force_sensor_3",
+      "actor_id": 103,
+      "robot_actor_id": 50,
+      "summed_normal_force_N": 0.0,
+      "manifold_records": 4
+    }
+  ],
+  "source_review": {
+    "dynamic_category_iteration": "categories=[*self.static,'self'];for category,obstacle in self.static.items();for link,obj in self.objects.items()",
+    "all_static_categories": [
+      "bottle",
+      "cap",
+      "pill_00",
+      "pill_01",
+      "pill_02",
+      "pill_03",
+      "pill_04",
+      "pill_05",
+      "pill_06",
+      "pill_07",
+      "pill_08",
+      "pill_09",
+      "pill_10",
+      "pill_11",
+      "table"
+    ],
+    "body_compound_protection": "constructor explicitly rebuildsbody from actualcomponent, discards inheritedclosedunion metadata",
+    "RRT_obstacle_names": "teacher_ + each identicalaudit.static key; same names used in ACM",
+    "exact_branch_model": "Copies every audit.objects collider plus originalself exemption SRDF into independentArticulatedModel; obstaclekeys preserved later by strict_RRT, not rebuilt as originalbottle/table only",
+    "namespace": "Compiledaudit globals contain oldclass symbol from dictcopy but code.co_names never resolvesFullMeshPathAuditor; RRTglobals fma is actualmodifiedprivate module",
+    "physical_modifications": "No collisionmask/pose/qpos/attachment/physicsstep writer in heldplanner; model/world qpos calls are independentCPU objects",
+    "caller_current_state_scope": "Installer accepts q0, does not fetch current q36/drive itself; actual leftprobe callsite must be separately bound/audited.",
+    "retained_NativeCPUArmPlanner_current_state": "acob_expert.py:solve snapshots physical art.get_qpos/qvel and command24 drive, builds current FullMeshPathAuditor, copies q0 from current art.get_qpos(), masks hands/otherarm frozen, finally _assert_snapshot verifies no physical state mutation; diagnostics record actual_start_full_qpos and actual_start_drive_sdk24.",
+    "retained_NativeCPUArmPlanner_path_gate": "Direct jointline or actual RRT polyline must pass bounded fullmesh audit at <=1mm displacement; RRT returning exactsolution or IKendpoint alone cannot return executable rows. Newcaller must pass approach=True and audit_approach=True to use this gate."
+  }
+}

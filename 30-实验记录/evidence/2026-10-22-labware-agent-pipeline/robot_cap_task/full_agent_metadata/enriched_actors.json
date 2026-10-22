@@ -1,0 +1,216 @@
+{
+  "self.bottle": {
+    "name": "115mm bottle body",
+    "description": "Right arm body support; actual local opening .115m. Candidate grasp not yet verified for full task.",
+    "functional_points": [
+      {
+        "id": 0,
+        "description": "Upper opening centre; local +Z points out of the vessel.",
+        "usage": "Receiving/pouring mouth alignment. Never use this point to place the bottom on a table. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          0.115
+        ]
+      },
+      {
+        "id": 1,
+        "description": "Interior floor centre, inside the hollow receiving volume.",
+        "usage": "Define the receiving region for dry pellets. It is not the external support plane. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          0.003
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Selected rim surface point stored in the local mesh frame.",
+        "usage": "Candidate pouring-edge alignment. It is not a calibrated spout or guaranteed pouring direction. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.025,
+          0.0,
+          0.115
+        ]
+      },
+      {
+        "id": 3,
+        "description": "External lower support-plane centre, with local -Z outward.",
+        "usage": "Use this functional point for upright support placement. Do not substitute the opening or inner floor. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "contact_points": [
+      {
+        "id": 0,
+        "description": "Side grasp centre, candidate 0; contact-frame +Y points toward object-frame +X.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          0.045
+        ]
+      },
+      {
+        "id": 1,
+        "description": "Side grasp centre, candidate 1; contact-frame +Y points toward object-frame +Y.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          0.045
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Side grasp centre, candidate 2; contact-frame +Y points toward object-frame -X.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          0.045
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Side grasp centre, candidate 3; contact-frame +Y points toward object-frame -Y.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          0.045
+        ]
+      }
+    ]
+  },
+  "self.cap": {
+    "name": "matching detachable cap",
+    "description": "Left arm cap operation; underside/opening and twist-axis are cap LOCAL points, not body assembly origin .118m.",
+    "functional_points": [
+      {
+        "id": 0,
+        "description": "Underside cap opening centre; local -Z points out of the opening.",
+        "usage": "Align the cap opening to the separate bottle neck. Physical release requires the task's screw mechanism. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          -0.012
+        ]
+      },
+      {
+        "id": 1,
+        "description": "Upper twist-axis marker.",
+        "usage": "Define the cap twist axis; this point alone does not actuate or unscrew the cap. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          0.002
+        ]
+      },
+      {
+        "id": 2,
+        "description": "External lower support-plane centre, with local -Z outward.",
+        "usage": "Use this functional point for upright support placement. Do not substitute the opening or inner floor. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          -0.012
+        ]
+      }
+    ],
+    "contact_points": [
+      {
+        "id": 0,
+        "description": "Side grasp centre, candidate 0; contact-frame +Y points toward object-frame +X.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          -0.006
+        ]
+      },
+      {
+        "id": 1,
+        "description": "Side grasp centre, candidate 1; contact-frame +Y points toward object-frame +Y.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          -0.006
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Side grasp centre, candidate 2; contact-frame +Y points toward object-frame -X.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          -0.006
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Side grasp centre, candidate 3; contact-frame +Y points toward object-frame -Y.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation. This115 profile is a separate asset; robot grasp remains unverified.",
+        "coordinate_in_this_local_mesh_m": [
+          0.0,
+          0.0,
+          -0.006
+        ]
+      }
+    ]
+  },
+  "self.dish": {
+    "name": "existing Petri dish",
+    "description": "Receiver for12 original dynamic capsules. Reuse verified asset ID; full transfer not yet verified.",
+    "functional_points": [
+      {
+        "id": 0,
+        "description": "Upper opening centre; local +Z points out of the vessel.",
+        "usage": "Receiving/pouring mouth alignment. Never use this point to place the bottom on a table."
+      },
+      {
+        "id": 1,
+        "description": "Interior floor centre, inside the hollow receiving volume.",
+        "usage": "Define the receiving region for dry pellets. It is not the external support plane."
+      },
+      {
+        "id": 2,
+        "description": "Selected rim surface point stored in the local mesh frame.",
+        "usage": "Candidate pouring-edge alignment. It is not a calibrated spout or guaranteed pouring direction."
+      },
+      {
+        "id": 3,
+        "description": "External lower support-plane centre, with local -Z outward.",
+        "usage": "Use this functional point for upright support placement. Do not substitute the opening or inner floor."
+      }
+    ],
+    "contact_points": [
+      {
+        "id": 0,
+        "description": "Side grasp centre, candidate 0; contact-frame +Y points toward object-frame +X.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+      },
+      {
+        "id": 1,
+        "description": "Side grasp centre, candidate 1; contact-frame +Y points toward object-frame +Y.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+      },
+      {
+        "id": 2,
+        "description": "Side grasp centre, candidate 2; contact-frame +Y points toward object-frame -X.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+      },
+      {
+        "id": 3,
+        "description": "Side grasp centre, candidate 3; contact-frame +Y points toward object-frame -Y.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+      }
+    ]
+  }
+}

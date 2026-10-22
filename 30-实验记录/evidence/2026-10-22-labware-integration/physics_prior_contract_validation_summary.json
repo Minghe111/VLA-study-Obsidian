@@ -1,0 +1,116 @@
+{
+  "verification_date": "2026-10-22",
+  "scope": "asset-level physical simulation with declared bottle/cap test fixtures; not robot autonomous task or learned policy SR",
+  "rigid_body_backend": "SAPIEN 3.0.0b1 PhysX CPU",
+  "final_runs": [
+    {
+      "report": "30-实验记录/evidence/2026-10-22-labware-integration/physics_final_seed0.json",
+      "report_sha256": "039182d3f0f2f1272dd11597358fe36ba84fcbda9ba8f17801a72bb1dc5b8b21",
+      "passed": true,
+      "seed": 0,
+      "steps": 14600,
+      "initial_tablets": 12,
+      "closed_inverted_checked_steps": 2500,
+      "closed_inverted_min_inside": 12,
+      "receiver_count": 12,
+      "floor_impulse_pair_steps": 0,
+      "trace_frames": 730,
+      "trace_phase_counts": {
+        "upright_settle": 40,
+        "closed_invert": 75,
+        "closed_inverted_hold": 50,
+        "return_upright": 75,
+        "upright_resettle": 40,
+        "unscrew_guide": 150,
+        "unscrew_hold": 30,
+        "cap_fixture_remove": 40,
+        "pour_fixture_tilt": 80,
+        "pour_settle": 150
+      },
+      "trace_sha256": "db5c58cdf3220604b008bc18d6922d8c55d9e97aada5e39ab01cb1ae07e22f07",
+      "source_hashes_match_current": true
+    },
+    {
+      "report": "30-实验记录/evidence/2026-10-22-labware-integration/physics_final_seed1.json",
+      "report_sha256": "2339e95e93b1c561862cd43e9751ecb8d6a61b3c56a2444f9540a5bc881c6408",
+      "passed": true,
+      "seed": 1,
+      "steps": 14600,
+      "initial_tablets": 12,
+      "closed_inverted_checked_steps": 2500,
+      "closed_inverted_min_inside": 12,
+      "receiver_count": 12,
+      "floor_impulse_pair_steps": 0,
+      "trace_frames": 730,
+      "trace_phase_counts": {
+        "upright_settle": 40,
+        "closed_invert": 75,
+        "closed_inverted_hold": 50,
+        "return_upright": 75,
+        "upright_resettle": 40,
+        "unscrew_guide": 150,
+        "unscrew_hold": 30,
+        "cap_fixture_remove": 40,
+        "pour_fixture_tilt": 80,
+        "pour_settle": 150
+      },
+      "trace_sha256": "70ccc1a8fd1e4ecb51ae4465851789883421e58674fce72554c6770f8706d4e3",
+      "source_hashes_match_current": true
+    },
+    {
+      "report": "30-实验记录/evidence/2026-10-22-labware-integration/physics_final_seed2.json",
+      "report_sha256": "57c9112d00576a99b949a2398ee4a0168a1f2a46e26020f10fcd43976507d4c2",
+      "passed": true,
+      "seed": 2,
+      "steps": 14600,
+      "initial_tablets": 12,
+      "closed_inverted_checked_steps": 2500,
+      "closed_inverted_min_inside": 12,
+      "receiver_count": 12,
+      "floor_impulse_pair_steps": 0,
+      "trace_frames": 730,
+      "trace_phase_counts": {
+        "upright_settle": 40,
+        "closed_invert": 75,
+        "closed_inverted_hold": 50,
+        "return_upright": 75,
+        "upright_resettle": 40,
+        "unscrew_guide": 150,
+        "unscrew_hold": 30,
+        "cap_fixture_remove": 40,
+        "pour_fixture_tilt": 80,
+        "pour_settle": 150
+      },
+      "trace_sha256": "b3b31622585f618a1401f3166b40ea98fdb62f6a76c97c64e6d13f59b10cf262",
+      "source_hashes_match_current": true
+    }
+  ],
+  "negative_control": {
+    "path": "30-实验记录/evidence/2026-10-22-labware-integration/physics_blocked_cap.json",
+    "passed": true,
+    "measured_rotation_rad": 0.0,
+    "guide_lift_target_m": 2.205371857355587e-09
+  },
+  "all_passed": true,
+  "render_trace_recommendation": "30-实验记录/evidence/2026-10-22-labware-integration/physics_final_seed0_trace.json",
+  "render_checkpoints_s": {
+    "closed_upright": 0.8,
+    "closed_inverted": 3.3,
+    "cap_cleared_guide": 9.2,
+    "cap_removed": 10.0,
+    "pour_in_progress": 11.2,
+    "tablets_in_petri_dish": 14.6
+  },
+  "source_sha256": {
+    "lab_physics.py": "dbda8fa4cef81e707eb66dcda67a4dd43c5734a13534f38fddaf3fbb41d502bc",
+    "test_lab_physics.py": "ad40c9e90617ee62dd3868b2073870dc68f263007a4cff1e217c90dbd496511f",
+    "physics_spec.json": "d19a0566066b9f3424073f43fc8758644d95e19f92129ff9f2fbca1cc1bb3d0f"
+  },
+  "boundaries": [
+    "D6 guide is a derived helical-constraint surrogate; not thread-surface contact/friction",
+    "No RM65-B grasp/controller used",
+    "Tablets are independently dynamic and receive no state writes after initialization",
+    "Source asset matching refers to receiver dimensions; collision proxies remain derived",
+    "Seeds change initial pill yaw only; not a statistically broad domain-randomization evaluation"
+  ]
+}

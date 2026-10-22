@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-22",
+  "seed": 0,
+  "initially_inverted": false,
+  "scope": "actual CPU PhysX no-actuation static/closed-container negative smoke; no robot or opening trial",
+  "passed": true,
+  "physics_steps": 6000,
+  "duration_s": 6.000000284984708,
+  "external_command_count": 0,
+  "rotation_motor_count": 0,
+  "tablet_center_outside_ticks": 0,
+  "tablet_local_center_radius_max_m": 0.018049899488687515,
+  "tablet_local_center_z_range_m": [
+    0.005985424853861332,
+    0.04899999871850014
+  ],
+  "rotation_abs_max_rad": 0.11385200497926906,
+  "lift_abs_max_m": 0.00027283805608749323,
+  "final": {
+    "physics_step": 6000,
+    "time_s": 6.000000284984708,
+    "rotation_measured_rad": -0.11385200497926906,
+    "turns_measured": -0.01812010937337375,
+    "lift_measured_m": -0.00023575651645660334,
+    "radial_error_m": 4.283566568119568e-08,
+    "axis_tilt_rad": 0.0005154121103559553,
+    "released": false,
+    "body_pose": [
+      -1.7478911331636482e-06,
+      4.850846835324774e-07,
+      1.1175870895385742e-08,
+      1.0,
+      9.067504436188756e-08,
+      1.1754386264328787e-07,
+      -5.564010621128546e-07
+    ],
+    "cap_pose": [
+      -1.6838799865581677e-06,
+      4.7559447580169945e-07,
+      0.09276425093412399,
+      0.998380184173584,
+      -9.730437159305438e-05,
+      -0.00023847329430282116,
+      -0.056895822286605835
+    ]
+  },
+  "contract": {
+    "component": "RobotCapAssembly",
+    "body_dynamic": true,
+    "cap_dynamic": true,
+    "tablet_count": 12,
+    "physics_dt_s_actual": 0.0010000000474974513,
+    "spec_sha256": "9d5ae8d89d60dd2d4e466a966c3862d7d160cc2e5ebe4d61bc8a1eac9a2d59ef",
+    "no_rotation_target_or_motor": true,
+    "no_world_fixture_or_cap_holder": true,
+    "states_written_after_initialization": false,
+    "axial_model": "force-limited spring C=measured_lift-pitch*clipped_measured_spin/(2*pi), with paired reaction torque tau=-d(target_lift)/d(theta)*F",
+    "guide_radial_and_tilt_constraints": "D6 radial/tilt locks, axial and twist free; all drive motor gains and force limits zero",
+    "release": "measured positive turn plus measured lift from frozen thresholds; guide disabled without changing free cap state",
+    "frozen_inputs_unchanged": true,
+    "frozen_input_fingerprints": {
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/physics_spec.json": "9d5ae8d89d60dd2d4e466a966c3862d7d160cc2e5ebe4d61bc8a1eac9a2d59ef",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/lab_physics.py": "3453db9b1319d9ad001e67d7f6043a949f6199a7bcacebf83a0609e76636123d",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_body/model_data0.json": "2080d5d2a7c88c2538c2d02ce145c4fcaf640ed8dfd4b7e29311adcc85f04794",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_cap/model_data0.json": "f900c27c17f3645f88c51d27e322a4bcc4ee82afa558b82539c1f77d1dfc77aa"
+    },
+    "boundary": "derived thread surrogate, not calibrated thread/friction, fluid, robot grasp, or complete unscrew/pour success"
+  },
+  "robot_unscrew_or_pour_verified": false
+}

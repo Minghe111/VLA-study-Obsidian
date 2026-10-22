@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-22",
+  "scope": "CPU read-only smoke using archived actual q36/drive and actual ContinuousHandMapping; no new scene, drive or state write",
+  "source_sha256": {
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/cap_contact_controller.py": "202dee28d41db8655b6bbaa02b3560f7a3439de949fe99790d5355ba351f727d",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/integrations/realman_rm65b_gen4/teacher_legacy/continuous_servo.py": "18716a2e0aca64425f1a2a3936bfa4e1f7886b3df7fa31f3b37284e779746c19",
+    "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets/embodiments/realman-rm65b-inspire-gen4/source_manifest.json": "6cac675e0f2228d3b233f82b7082b8df17860d2e18bfd7ba7dcc67ccf3c5d6e5",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/static_hold_probes/held115_static_reference_v1/actual_terminal_snapshot.json": "3fca91ff812d3a450eb6d364ea41125276c7007e06aecfce2a1a820cc00ae998",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/cap_geometry_probes/left115_static_rebind400/rebind.json": "da1b8eb269c7c1293379d860b756b7c03c6553d4b6af2e3b974c90b013819969"
+  },
+  "physics_tick": 4410,
+  "actual_primary_joint_positions_rad": [
+    -1.1897396490212486e-07,
+    -5.836860168528801e-07,
+    -6.889922588015907e-07,
+    -7.123171030798403e-07,
+    7.286636537173763e-05,
+    1.1640969514846802
+  ],
+  "actual_primary_sdk_unclipped": [
+    1000.0000827299666,
+    1000.0004058730387,
+    1000.0004790989909,
+    1000.0004953181998,
+    999.8757394860646,
+    0.0026187744349703834
+  ],
+  "actual_drive_sdk6_unclipped": [
+    1000.0,
+    1000.0,
+    1000.0,
+    1000.0,
+    1000.0,
+    -4.374728002076722e-05
+  ],
+  "actual_drive_joint_positions_rad": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.1641000509262085
+  ],
+  "actual_primary_max_joint_limit_excess_rad": 7.123171030798403e-07,
+  "actual_drive_max_joint_limit_excess_rad": 5.0926208583490506e-08,
+  "existing_actual_readback_tolerance_rad": 1e-06,
+  "actual_readback_primary_validation_passed": true,
+  "actual_readback_drive_validation_passed": true,
+  "actual_mimic_joint_observation_not_forced_to_command_coupling": true,
+  "screened_open_sdk6": [
+    0.0,
+    0.0,
+    0.0,
+    1000.0,
+    1000.0,
+    400.0
+  ],
+  "screened_close_sdk6": [
+    0.0,
+    0.0,
+    0.0,
+    560.09765625,
+    1000.0,
+    348.443359375
+  ],
+  "pair_actuator_indices": [
+    3,
+    5
+  ],
+  "actual_candidate_endpoint_mapping_passed": true,
+  "constructor_passed": false,
+  "proposal_returned": false,
+  "constructor_or_proposal_exception": {
+    "type": "ValueError",
+    "message": "Actual drive must start inside the screened posture interval"
+  },
+  "actual_q_not_clipped": true,
+  "actual_drive_not_changed": true,
+  "reason": "The actual static-reference left hand is still factory open. The candidate requires real little/ring/middle/opposition preparation first. The controller refuses an outside-screened start rather than pretending observed state is already prepared.",
+  "no_control_parameters_changed": true,
+  "new_physical_trials": 0,
+  "actual_grasp_or_turn_success": false,
+  "test_source_sha256": "8863283690d0362e9a1b48b28ed906355505f6956d0cb09f759d0b0175a3da57"
+}

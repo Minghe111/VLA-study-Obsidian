@@ -1,0 +1,352 @@
+{
+  "date": "2026-10-22",
+  "scope": "Offline CPU nominal endpoint full-pose IK on actual URDF, no simulator stepping or hardware commands",
+  "source_preset": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-realman-operation-zone/scene_preset.json",
+  "source_preset_sha256": "50ccb726a1041177d17a544ea2152952fb9335ca7c89e31193de81a04569364b",
+  "urdf": "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets/embodiments/realman-rm65b-inspire-gen4/robot_sapien.urdf",
+  "urdf_sha256": "4bf28c444af1a28401a975e5de6e138c1ec043536aa786ea541c30c359bd65bd",
+  "nominal_tcp_definition": "palm base link + 0.18m along palm local +Z; geometric assumption, uncalibrated",
+  "target_orientation": "retain full corresponding-arm palm-base rotation from saved default scene pose",
+  "position_tolerance_m": 0.003,
+  "rotation_tolerance_rad": 0.03,
+  "not_verified": [
+    "collision-free endpoint",
+    "continuous path",
+    "grasp/contact mechanics",
+    "real robot calibration",
+    "simultaneous dual-arm feasibility"
+  ],
+  "targets": [
+    {
+      "object": "scale",
+      "category": "072_electronicscale",
+      "model_id": 0,
+      "arm": "l",
+      "joint_names_in_solver_order": [
+        "l_joint1",
+        "l_joint2",
+        "l_joint3",
+        "l_joint4",
+        "l_joint5",
+        "l_joint6"
+      ],
+      "tcp_target_world_xyz_m": [
+        -0.2,
+        -0.04,
+        0.82
+      ],
+      "target_rotation_matrix_world": [
+        [
+          0.35355471389204435,
+          0.7071092438363955,
+          0.6123688280487781
+        ],
+        [
+          0.3535546363242058,
+          -0.7071043185250799,
+          0.6123745600993238
+        ],
+        [
+          0.866024354979912,
+          -2.074093616975327e-06,
+          -0.5000018165740249
+        ]
+      ],
+      "achieved_tcp_world_xyz_m": [
+        -0.2,
+        -0.040000000000000896,
+        0.8199999999999996
+      ],
+      "achieved_palm_quaternion_wxyz": [
+        -0.19134300274176508,
+        0.8001032509918874,
+        0.33141468893099013,
+        0.46193825021830887
+      ],
+      "palm_origin_world_m": [
+        -0.31022638904878,
+        -0.15022742081787938,
+        0.9100003269833238
+      ],
+      "palm_normal_world": [
+        0.707109243836396,
+        -0.7071043185250793,
+        -2.0740936179710583e-06
+      ],
+      "finger_axis_world": [
+        0.6123688280487779,
+        0.6123745600993249,
+        -0.5000018165740232
+      ],
+      "q_rad": {
+        "l_joint1": -1.1044120899435437,
+        "l_joint2": -0.4795773130801725,
+        "l_joint3": -0.8295575322218193,
+        "l_joint4": 0.15317602005889233,
+        "l_joint5": -0.5688014080487771,
+        "l_joint6": 1.595893327343924
+      },
+      "delta_from_default_deg": {
+        "l_joint1": 1.6381177844020178,
+        "l_joint2": -8.513037372334978,
+        "l_joint3": 23.004009155640546,
+        "l_joint4": -10.976150966151735,
+        "l_joint5": -13.711133762405687,
+        "l_joint6": 11.844704141373176
+      },
+      "joint_limits_rad": {
+        "l_joint1": [
+          -3.11,
+          3.11
+        ],
+        "l_joint2": [
+          -2.27,
+          2.27
+        ],
+        "l_joint3": [
+          -2.36,
+          2.36
+        ],
+        "l_joint4": [
+          -3.11,
+          3.11
+        ],
+        "l_joint5": [
+          -2.23,
+          2.23
+        ],
+        "l_joint6": [
+          -6.28,
+          6.28
+        ]
+      },
+      "joint_limits_pass": true,
+      "position_error_m": 9.550751645343966e-16,
+      "rotation_error_rad": 2.0219747127464405e-15,
+      "rotation_error_deg": 1.1585061732254802e-13,
+      "endpoint_success": true,
+      "seed_index": 0
+    },
+    {
+      "object": "plate",
+      "category": "objaverse/plate",
+      "model_id": 7,
+      "arm": "r",
+      "joint_names_in_solver_order": [
+        "r_joint1",
+        "r_joint2",
+        "r_joint3",
+        "r_joint4",
+        "r_joint5",
+        "r_joint6"
+      ],
+      "tcp_target_world_xyz_m": [
+        0.04,
+        -0.04,
+        0.79
+      ],
+      "target_rotation_matrix_world": [
+        [
+          0.3535469985386776,
+          -0.7071058814347198,
+          -0.6123771650418722
+        ],
+        [
+          -0.35354983825519554,
+          -0.7071076809306387,
+          0.6123734476923528
+        ],
+        [
+          -0.8660294635253566,
+          3.053235315851773e-06,
+          -0.4999929682472147
+        ]
+      ],
+      "achieved_tcp_world_xyz_m": [
+        0.039999999999999925,
+        -0.039999999999999925,
+        0.79
+      ],
+      "achieved_palm_quaternion_wxyz": [
+        -0.191341546299297,
+        0.8001011885562557,
+        -0.33141299340019015,
+        -0.4619436421644814
+      ],
+      "palm_origin_world_m": [
+        0.15022788970753687,
+        -0.15022722058462343,
+        0.8799987342844987
+      ],
+      "palm_normal_world": [
+        -0.7071058814347191,
+        -0.7071076809306385,
+        3.0532353155742173e-06
+      ],
+      "finger_axis_world": [
+        -0.6123771650418719,
+        0.6123734476923528,
+        -0.4999929682472148
+      ],
+      "q_rad": {
+        "r_joint1": 1.1151336361504383,
+        "r_joint2": 0.8214729412504131,
+        "r_joint3": 0.9300561285446088,
+        "r_joint4": -0.6462705624113039,
+        "r_joint5": 0.15146824898416802,
+        "r_joint6": -1.0818684868412636
+      },
+      "delta_from_default_deg": {
+        "r_joint1": -1.1519049743977108,
+        "r_joint2": 28.294914027517432,
+        "r_joint3": -17.427314544846286,
+        "r_joint4": -17.1822828086099,
+        "r_joint5": -10.220640328848443,
+        "r_joint6": 17.513324635614293
+      },
+      "joint_limits_rad": {
+        "r_joint1": [
+          -3.11,
+          3.11
+        ],
+        "r_joint2": [
+          -2.27,
+          2.27
+        ],
+        "r_joint3": [
+          -2.36,
+          2.36
+        ],
+        "r_joint4": [
+          -3.11,
+          3.11
+        ],
+        "r_joint5": [
+          -2.23,
+          2.23
+        ],
+        "r_joint6": [
+          -6.28,
+          6.28
+        ]
+      },
+      "joint_limits_pass": true,
+      "position_error_m": 1.0794385653450953e-16,
+      "rotation_error_rad": 4.5685008327448875e-16,
+      "rotation_error_deg": 2.6175581641828405e-14,
+      "endpoint_success": true,
+      "seed_index": 0
+    },
+    {
+      "object": "bottle",
+      "category": "080_pillbottle",
+      "model_id": 4,
+      "arm": "r",
+      "joint_names_in_solver_order": [
+        "r_joint1",
+        "r_joint2",
+        "r_joint3",
+        "r_joint4",
+        "r_joint5",
+        "r_joint6"
+      ],
+      "tcp_target_world_xyz_m": [
+        0.25,
+        -0.04,
+        0.84
+      ],
+      "target_rotation_matrix_world": [
+        [
+          0.3535469985386776,
+          -0.7071058814347198,
+          -0.6123771650418722
+        ],
+        [
+          -0.35354983825519554,
+          -0.7071076809306387,
+          0.6123734476923528
+        ],
+        [
+          -0.8660294635253566,
+          3.053235315851773e-06,
+          -0.4999929682472147
+        ]
+      ],
+      "achieved_tcp_world_xyz_m": [
+        0.249999999999209,
+        -0.040000000001642666,
+        0.840000000000892
+      ],
+      "achieved_palm_quaternion_wxyz": [
+        -0.19134154630231168,
+        0.800101188555475,
+        -0.33141299340185915,
+        -0.4619436421633877
+      ],
+      "palm_origin_world_m": [
+        0.3602278897058264,
+        -0.15022722058722773,
+        0.9299987342853391
+      ],
+      "palm_normal_world": [
+        -0.7071058814392387,
+        -0.7071076809261186,
+        3.0532316071668492e-06
+      ],
+      "finger_axis_world": [
+        -0.6123771650367635,
+        0.6123734476976949,
+        -0.49999296824692824
+      ],
+      "q_rad": {
+        "r_joint1": 1.1353180104555958,
+        "r_joint2": 0.4194876334684076,
+        "r_joint3": 0.6910359628147783,
+        "r_joint4": -0.15887065873914172,
+        "r_joint5": 0.7692055077948781,
+        "r_joint6": -1.6019632026979906
+      },
+      "delta_from_default_deg": {
+        "r_joint1": 0.004574485400118328,
+        "r_joint2": 5.262852465341108,
+        "r_joint3": -31.122161259683054,
+        "r_joint4": 10.743674606887867,
+        "r_joint5": 25.17309744898587,
+        "r_joint6": -12.285907530031942
+      },
+      "joint_limits_rad": {
+        "r_joint1": [
+          -3.11,
+          3.11
+        ],
+        "r_joint2": [
+          -2.27,
+          2.27
+        ],
+        "r_joint3": [
+          -2.36,
+          2.36
+        ],
+        "r_joint4": [
+          -3.11,
+          3.11
+        ],
+        "r_joint5": [
+          -2.23,
+          2.23
+        ],
+        "r_joint6": [
+          -6.28,
+          6.28
+        ]
+      },
+      "joint_limits_pass": true,
+      "position_error_m": 2.0297335116910372e-12,
+      "rotation_error_rad": 7.397091506917081e-12,
+      "rotation_error_deg": 4.2382212401841495e-10,
+      "endpoint_success": true,
+      "seed_index": 0
+    }
+  ],
+  "all_three_endpoint_full_pose_and_limits_pass": true
+}

@@ -1,0 +1,154 @@
+{
+  "checked_date": "2026-10-21",
+  "scope": "read existing manifests and first train record; no new capture/training/inference",
+  "capture_manifest": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/dynamic_capture_v2/manifest.json",
+    "sha256": "eec2b4a469c50a97ffaa6fffa34ab47dcba1fb031a11d51683f2a0dc9020163e"
+  },
+  "labels_manifest": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/manifest.json",
+    "sha256": "50a96273d941832dcb66d8672ab20fb2dc2d2085d9eedc77c3b3d9afd6afe402"
+  },
+  "capture_kind": "fresh_simulation_reference_replay",
+  "source_action_receipt": {
+    "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/data/expert_demo_v7/rows.jsonl",
+    "sha256": "f318ce11c03e1c1e0be3b8b2ac1a7440723cdd950e806cc7425202350dd25d9e",
+    "raw_rows": 245,
+    "full_clock_rows": 244,
+    "excluded_partial_final_rows": 1,
+    "source_task": "single_bottle_adjust_bottle_upright_hold",
+    "source_active_arm": "right",
+    "observations_imported": false,
+    "source_success_or_phase_reused_as_label": false,
+    "action_units": "absolute_SDK24_arm_rad_hand_SDK",
+    "scope": "reference_commands_only_not_dual_bottle_expert"
+  },
+  "capture_status": "completed",
+  "physical_skill_success_claimed": false,
+  "motor_supervision_eligible": false,
+  "policy_loaded": false,
+  "training_enabled": false,
+  "left_mapping": "mirror_reference_motion_not_validated_expert",
+  "contract": {
+    "physical_action_dim": 24,
+    "action_order": [
+      "left_arm6_rad",
+      "left_hand6_sdk",
+      "right_arm6_rad",
+      "right_hand6_sdk"
+    ],
+    "camera_keys": [
+      "full_image",
+      "left_wrist_image",
+      "right_wrist_image"
+    ],
+    "native_rgb_shape": [
+      480,
+      640,
+      3
+    ],
+    "physics_dt_s": 0.004,
+    "physics_steps_per_action": 15,
+    "nominal_control_seconds": 0.06,
+    "rpc_action_chunk": 16,
+    "high_level_window_targets": 32,
+    "policy_loaded": false,
+    "training_enabled": false,
+    "motor_supervision_eligible": false
+  },
+  "planned_episodes": 56,
+  "source_config": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/configs/rm65b_mem_protocol.yaml",
+  "label_summary": {
+    "train": {
+      "rows": 3000,
+      "by_mode": {
+        "READ": 1000,
+        "WRITE": 1000,
+        "SUBTASK": 1000
+      },
+      "write_conditions": {
+        "WRITE": 250,
+        "KEEP": 250,
+        "CORRECT": 250,
+        "EMPTY": 250
+      },
+      "distinct_actual_inputs": 3000,
+      "distinct_base_contexts": 1000,
+      "selected_physical_contexts": 288,
+      "nonempty_history_rows": 2694,
+      "subtask_without_writer_repair": 200,
+      "unique_target_strings": 49,
+      "max_prefix_tokens": 845,
+      "max_target_tokens": 54
+    },
+    "val": {
+      "rows": 600,
+      "by_mode": {
+        "READ": 200,
+        "WRITE": 200,
+        "SUBTASK": 200
+      },
+      "write_conditions": {
+        "WRITE": 50,
+        "KEEP": 50,
+        "CORRECT": 50,
+        "EMPTY": 50
+      },
+      "distinct_actual_inputs": 600,
+      "distinct_base_contexts": 200,
+      "selected_physical_contexts": 200,
+      "nonempty_history_rows": 570,
+      "subtask_without_writer_repair": 40,
+      "unique_target_strings": 53,
+      "max_prefix_tokens": 841,
+      "max_target_tokens": 54
+    },
+    "test": {
+      "rows": 600,
+      "by_mode": {
+        "READ": 200,
+        "WRITE": 200,
+        "SUBTASK": 200
+      },
+      "write_conditions": {
+        "WRITE": 50,
+        "KEEP": 50,
+        "CORRECT": 50,
+        "EMPTY": 50
+      },
+      "distinct_actual_inputs": 600,
+      "distinct_base_contexts": 200,
+      "selected_physical_contexts": 200,
+      "nonempty_history_rows": 568,
+      "subtask_without_writer_repair": 40,
+      "unique_target_strings": 53,
+      "max_prefix_tokens": 848,
+      "max_target_tokens": 54
+    }
+  },
+  "first_train_example": {
+    "sample_id": "rm65b_dynamic_history_protocol_3000_v1:95f4c410d4e3e27eedcd105e4bc4426cfff8ea911f48216b9d0d707b6179e1e0:WRITE:KEEP:r10:stress0",
+    "observation": {
+      "npz_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/dynamic_capture_v2/episodes/fresh_dynamic_reference_layout_15_right_42510/obs_0256.npz"
+    },
+    "goal": "First verify the sample initially on the right and put it back home; afterward verify the sample initially on the left and return it home.",
+    "mode": "WRITE",
+    "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"current_progress\"}]}",
+    "provenance": {
+      "builder_version": "rm65b_dynamic_history_protocol_3000_v1",
+      "capture_kind": "fresh_simulation_reference_replay",
+      "kind": "formally_verified_high_protocol_sft",
+      "not_verified": [
+        "visual_grounding",
+        "physical_skill_success",
+        "model_performance"
+      ],
+      "verification_scope": [
+        "goal_role",
+        "actual_issued_control_history",
+        "native_strict_memory_replay"
+      ]
+    }
+  },
+  "source_note": "Source expert observations and source success/phase were not imported; only commands were replayed in fresh scenes. Formal labels track requested role and issued controls, not measured task success."
+}

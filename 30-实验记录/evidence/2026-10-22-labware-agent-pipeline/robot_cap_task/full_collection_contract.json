@@ -1,0 +1,223 @@
+{
+  "date": "2026-10-22",
+  "status": "interface_contract_only; not full-task implementation or acceptance",
+  "proposed_task_name": "labware_cap115_unscrew_pour",
+  "full_goal": "right-hand body support + left-hand cap unscrew/clear + twelve real tablets poured into dish",
+  "input_sha256": {
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collect_official.py": "644a55f0f9ee45bab809c5e0f39d6f2dba2b1531e53e5f90c8c6280e50c028e2",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/agent_runtime.py": "a6e84782e08077a1da845ad1b92c224c587ded4b917350878522bc46bea2c06c",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/sdk24_export.py": "c6cfdfa5c122f521a34eec3deaa3d71e48d793991ef7e71f06dbdbdeea1a2c24",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/labware_task.py": "22cd86c3d0836633ad7911e10f999fe366f99b66d9b883a626fe91d05711fa3e",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/task_config.yml": "3d5c335c0e775ee40227adb27302a74bb7f6d63d6bccce41acfd1206d603a09f",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/agent_runtime_config.example.json": "09708eab55c645d3bc0561e762be8b4ff865b200ba952310c635674f7e37ae44",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/metadata/labware_pick_place_task_info.json": "bb0c9d151b623862f08b4e4d70a3d89db2614cc7815478a0875f1ad751444797",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/labware_cap_task.py": "2abf5e1db944ba25acb2ea933f515d21fcb193e6ac45796e565086cd40166866",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/labware_cap115_task.py": "fc719b0f5a82c5a56a60dc86c1e59eed8a904b0d00188b4b09c17e7eddd7527c",
+    "/home/admin123/liminghe/vla-benchmark/RoboTwin/scripts/collect_data.py": "c0eaa8743f3a1c7375553606607e528a9c86bcd2c4e5373f263a45e92f31ba5e",
+    "/home/admin123/liminghe/vla-benchmark/RoboTwin/description/utils/generate_episode_instructions.py": "f43e065022782581aa56161bd87a69f849bbbdc4ad1b78f174cc0c8d90d661b6"
+  },
+  "reusable_official_hooks": [
+    {
+      "hook": "setup_demo(now_ep_num,seed,**args)",
+      "reuse": "Official planning/capture orchestration; separate run dirs; deterministic reset",
+      "new_full_requirement": "Create115 assembly, twelve dynamic tablets, receiving dish, both robot hands and profile-specific annotations; identical initial-state fingerprint for plan/replay."
+    },
+    {
+      "hook": "play_once() -> info",
+      "reuse": "Original run calls it in both planning and replay",
+      "new_full_requirement": "Single central replay gate executes every saved SDK24 row once; otherwise actual stage expert; return multi-actor info; never stop after body-hold."
+    },
+    {
+      "hook": "plan_success / check_success()",
+      "reuse": "Original seed gate and post-merge assert",
+      "new_full_requirement": "Only final task return true. Preserve terminal metrics after close_env. Body-hold/open-cap are stage milestones, not final success."
+    },
+    {
+      "hook": "planned_joints_legal()",
+      "reuse": "Left6/right6 slices plus all12 hand channels bounds",
+      "new_full_requirement": "Check complete dual-arm sequence; no joint-limit or SDK-range weakening."
+    },
+    {
+      "hook": "save_traj_data / load_tran_data / set_path_lst",
+      "reuse": "Original plan→seed.txt→physical replay architecture",
+      "new_full_requirement": "Save actual full SDK24 rows/phases/command-intent fields; recompute cap release, containment and success during replay; never copy outcome flags."
+    },
+    {
+      "hook": "on_transition / capture_transition",
+      "reuse": "Actual measured before/next states and drive endpoint readback",
+      "new_full_requirement": "Every stage routes through same60ms action clock; carry phase and full physical metrics including tablet identities/events."
+    },
+    {
+      "hook": "merge_pkl_to_hdf5_video / remove_data_cache",
+      "reuse": "RGB codec,SDK24 export/readback,success-only cache cleanup",
+      "new_full_requirement": "Require final full-task receipt and full-language schema; retain failed/replay disagreement artifacts."
+    },
+    {
+      "hook": "close_env",
+      "reuse": "Original run cleanup order",
+      "new_full_requirement": "Original capture closes before merge and check_success; immutable final metrics/receipt must survive removal of actors/assembly."
+    }
+  ],
+  "hardcoded_differences": [
+    {
+      "source": "collect_official.py:29-43",
+      "current": "Exact AST template and class hardcoded to labware_pick_place",
+      "required": "New isolated full collector validates exact wrapper for declared new task and tested full candidate."
+    },
+    {
+      "source": "collect_official.py:54-59,66-102,137-140",
+      "current": "CLI only empty reagent_bottle_body/right; task module, generated class and receipt task_name fixed",
+      "required": "Newfull task_name/module/factory/both-hand role binding; never reinterpret empty10/10receipt as full-task acceptance."
+    },
+    {
+      "source": "collect_official.py:112-130",
+      "current": "Replay provenance checks only empty task/expert and asset/arm",
+      "required": "Bind profile115/spec/assembly/full expert/capsule geometry/seeded contents/dish/metadata/camera/clock/source hashes and initial-state fingerprint."
+    },
+    {
+      "source": "collect_official.py:229-235",
+      "current": "Language info must be exactly {A,a}",
+      "required": "New schema {A,B,C,a,b} for body/cap/dish/right/left; original language filter exact nonarm placeholder match."
+    },
+    {
+      "source": "collect_official.py:249-261",
+      "current": "source_snapshot only five base code files plus optional framing",
+      "required": "Extend full dependency closure; snapshot actual generated expert,receipts,full task/profile/spec/metadata/geometry/capsule predicate/native contracts."
+    },
+    {
+      "source": "agent_runtime.py:session_test,session_postprocess",
+      "current": "Most names dynamic, but task_implementation_sha256 uses fixed ROOT/labware_task.py androbot_expert.py;default config empty-only helper",
+      "required": "New isolated config/TaskInfo/full factory and explicit verified local APIs; configurable complete source manifest; no reference fallback."
+    },
+    {
+      "source": "task_config.yml / collect_official.py:137",
+      "current": "YAML describes empty success; collector constructs args inline and does not read this YAML",
+      "required": "New actual-consumed full config + resolved runtime args snapshot; do not claim changing YAML alone configures collection."
+    },
+    {
+      "source": "labware_cap_task.py:135-159;labware_cap115_task.py:136-158",
+      "current": "closed_fill_hold>=.5 sets metrics.success and check_success terminates teacher while-loop",
+      "required": "Keep in stage_success only; override final predicate/loop so no early stop when merely holding closed bottle."
+    },
+    {
+      "source": "labware_task.py:grasp_lift_place",
+      "current": "Each helper can consume all replay_commands for the entire empty task",
+      "required": "For multi-helper full play_once, one central replay_episode branch; never replay whole episode once per helper."
+    }
+  ],
+  "non_regression_invariants": {
+    "state_action_order": "left_arm6,left_hand6,right_arm6,right_hand6",
+    "dimension": 24,
+    "state_source": "measured get_state24(True) before action",
+    "action_source": "actual issued/readback SDK24 target, not next_state",
+    "control_dt_s": 0.06,
+    "physics_dt_s": 0.004,
+    "physics_steps_per_action": 15,
+    "rgb": [
+      "head",
+      "left_wrist",
+      "right_wrist"
+    ],
+    "rgb_shape": [
+      480,
+      640,
+      3
+    ],
+    "rgb_dtype": "uint8",
+    "calibration_status": "simulation mapping/camera remains not hardware calibrated",
+    "source_snapshot": "actual full dependencies and generated expert bytes plus receipts copied/hash bound; no path-only unversioned promise"
+  },
+  "minimal_task_interface": {
+    "constructor_factory": "create_full_task(task_name,runtime_config,run_dir)->(generated_task,args); strict expected generated subclass, no empty reference fallback",
+    "setup_fields": [
+      "seed,now_ep_num,runtime_path,capture_rgb,on_transition",
+      "need_plan/replay_commands,actual full config/profile/metadata registry",
+      "scene,robot,bottle,cap,dish,tablets,assembly,clock,_raw_step,_active",
+      "take_action_cnt,step_lim,plan_success,eval_success,ep_num",
+      "physics_step_count,transition_log,physics_trace,metrics,info",
+      "source_contract,initial_state_fingerprint,phase/phase_success/final_success"
+    ],
+    "required_methods": [
+      "setup_demo",
+      "play_once",
+      "apply_sdk24 / execute_command24",
+      "capture / get_state24 / observe_rgb",
+      "advance with one assembly before/raw/after pair",
+      "check_success with final-only pure metrics predicate",
+      "close_env preserving final metrics",
+      "on_transition callback support"
+    ],
+    "observation_keys": [
+      "state:24",
+      "instruction:string",
+      "physics_tick:int",
+      "full_image,left_wrist_image,right_wrist_image:480x640x3 uint8 when capture_rgb"
+    ],
+    "metrics_required": [
+      "success:final-only bool",
+      "stage and stage_success dict",
+      "body_held_actual / opposing_contacts / body_controlled",
+      "cap_released_actual / measured_relative_theta / measured_lift / release_event",
+      "cap_clear_of_mouth_actual / cap_safe_end_state",
+      "tablets_total=12 / tablets_in_dish_count / tablets_in_bottle_count / tablets_elsewhere_count",
+      "all_tablets_full_capsule_geometry_inside_receiver / settled_duration_s",
+      "unexpected_contact / guard / failure_reason",
+      "actual4ms physical timing and source-version identity"
+    ],
+    "language_info": {
+      "{A}": "115 body description path without .json",
+      "{B}": "115 cap description path without .json",
+      "{C}": "existing verified petri_dish description path without .json",
+      "{a}": "right",
+      "{b}": "left"
+    },
+    "phase_contract": "No intermediate stage writes metrics.success or eval_success true; exact final end condition/version stated before collecting."
+  },
+  "final_gate_design": [
+    "Actual right body support/grasp and intended left cap handling established; opening uses actual measured relative turn/lift and guide release; no pose/velocity teleport or cap holder.",
+    "Actual cap removed clear of mouth and ends in declared safe held-or-placed state; choose and freeze one end condition.",
+    "Twelve original dynamic capsule IDs accounted for:12 geometrically inside receiver,0 remaining in bottle,0 elsewhere/floor; actual capsule shape containment via capsule_geometry.py, not only center count.",
+    "Transfer/receiver settling sustained for declared real-time duration; no failure/guard; phase history and current physical predicates agree.",
+    "Final-only check_success and metrics.success persist for export after close_env; body hold is never enough."
+  ],
+  "profile_metadata_gap": {
+    "profile": "bottle115-v1: body .115m, cap closed origin .118m",
+    "current_profile_points_info_present": false,
+    "required": "Independent modelname aliases and points_info/object/task language from actual115 matrices/spec/visual hashes; local cap coordinates stay local; never claim90 geometry validation applies to115.",
+    "petri_reuse": "Reuse existing verified petri_dish asset and annotation ID, not a new scaled surrogate.",
+    "resolved_by_independent_overlay": true
+  },
+  "capture_replay_causality": [
+    "Scene reset recreates identical seeded body/cap/tablets/dish/robot/mechanism initial state.",
+    "All24D targets issued once per row; physical assembly hooks run per4ms during both plan and replay.",
+    "Physical cap release/pill counts/grasp/settling recomputed from actual replay, never copied from planning success flags.",
+    "Fresh physical replay must independently satisfy full final predicate before HDF5 export."
+  ],
+  "validation_gates_before_full_dataset": [
+    "Actual full robot sequence through twelve-tablet final transfer succeeds in fresh independent output.",
+    "New full Agent Prompt/real session or API candidate/original parser verified against that task, not empty task.",
+    "Full candidate tested by original test_gen_code.run with task-specific predicate and meaningful seed scope.",
+    "Original collect.run planning and capture replay both succeed under frozen full dependency snapshot.",
+    "Every HDF5 state/action/next_state/tick/threeRGB/phase/full physical final metrics is read back, not only written."
+  ],
+  "not_done_here": [
+    "No fakefull task/expert generated.",
+    "No GPU/simulation or rollout success claim.",
+    "No empty collector/task/metadata or active profiles modified."
+  ],
+  "independent_metadata_overlay": {
+    "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/full_agent_metadata",
+    "component_validation_passed": true,
+    "original_enrich_actors_passed": true,
+    "original_language_counts": [
+      12,
+      12
+    ],
+    "profile_sources_unchanged": true,
+    "geometry_loader_run": false,
+    "robot_full_task_verified": false,
+    "expert_generated": false,
+    "dataset_collected": false,
+    "binding": "Separate115 body/cap modelnames; existing petri ID; Bottle115Assembly physical factory required; no generic90 collision fallback"
+  }
+}

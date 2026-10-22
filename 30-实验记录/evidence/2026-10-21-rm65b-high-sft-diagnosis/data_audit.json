@@ -1,0 +1,1159 @@
+{
+  "format": "history3000_readonly_cpu_data_audit_v1",
+  "execution": {
+    "started_utc": "2026-10-21T13:25:49.605275+00:00",
+    "method": "consolidated_saved_script_reproducing_prior_temporary_python_calculations",
+    "scope": "CPU JSON/JSONL data and previously generated final checkpoint cases only",
+    "model_inference_executed": false,
+    "training_executed": false,
+    "npz_or_image_contents_read": false,
+    "tokenizer_executed": false,
+    "source_data_modified": false,
+    "limitations": [
+      "Image diversity uses camera SHA values already recorded in labels; image contents are not rehashed.",
+      "Token totals use recorded token_lengths, not a new SentencePiece run.",
+      "Case strict checks and EOS are inspected from preserved model-generation reports, not regenerated.",
+      "Visible-prefix oracle assumes the declared memory rules; it is not evidence of natural-language model understanding.",
+      "No causal attribution to dataset size, optimization, anchoring, or model capacity is established by this audit."
+    ],
+    "finished_utc": "2026-10-21T13:25:49.960249+00:00"
+  },
+  "sources": {
+    "labels_train": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/train.jsonl",
+      "sha256": "3adeffbd18d7890405c399659a2029baea84f24701743ee3af0db55d151dd8f1",
+      "bytes": 34495522
+    },
+    "labels_val": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/val.jsonl",
+      "sha256": "7b67548f34e323451436447858e75d722ed46d4e905e919a96b368540aed7773",
+      "bytes": 6972236
+    },
+    "labels_test": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/test.jsonl",
+      "sha256": "a6d49e3df7fed02c380c5a086772a9cc1e69cd93a3b11205969dc5041728de01",
+      "bytes": 7021531
+    },
+    "final_cases_val180": {
+      "path": "/tmp/166_failure_analysis_20261021/val180.json",
+      "sha256": "de229181bff25d03094f56e2e12cf0767560bfa9b510f3d5a5f50fb3c92439c8",
+      "bytes": 904619
+    },
+    "final_cases_train_quick96": {
+      "path": "/tmp/166_failure_analysis_20261021/train_quick96.json",
+      "sha256": "b39060b3815a9e864b8def180ee6de8a9111a891269acf9c5da8576cbb4f6a00",
+      "bytes": 548894
+    },
+    "final_cases_revision_only40": {
+      "path": "/tmp/166_failure_analysis_20261021/revision_only40.json",
+      "sha256": "0c2ef8cd492fee3ab8448b3423905921d400a4375db992288a390e9a62ee1c9f",
+      "bytes": 260713
+    },
+    "final_cases_history_ablation16": {
+      "path": "/tmp/166_failure_analysis_20261021/history_ablation16.json",
+      "sha256": "40f3d24dd92dfce8b1afcf7a9d5bf057cbbb8defb8514e8c4cf09423f2a41b97",
+      "bytes": 58571
+    },
+    "dataset_manifest": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/manifest.json",
+      "sha256": "50a96273d941832dcb66d8672ab20fb2dc2d2085d9eedc77c3b3d9afd6afe402",
+      "bytes": 4138
+    },
+    "capture_manifest": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/dynamic_capture_v2/manifest.json",
+      "sha256": "eec2b4a469c50a97ffaa6fffa34ab47dcba1fb031a11d51683f2a0dc9020163e",
+      "bytes": 3172993
+    },
+    "independent_acceptance": {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/reports/history3000_acceptance_v1/report.json",
+      "sha256": "5fee0563e6e2c8f75392b6bb0b3a8a2c794cc08cfd6807896855e49b8d1f09b1",
+      "bytes": 2144681
+    },
+    "final_eval_summary": {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-history3000-migrate166/status_20261021_final/eval_s024000_summary.json",
+      "sha256": "3a2c7dd05498a1d611f9439c95dfa6a04dddb492ec3512a1806da3522562ef4e",
+      "bytes": 1051202
+    },
+    "builder_snapshot_statically_reviewed": {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-history3000/source/scripts/build_history3000.py",
+      "sha256": "1d05f44546bf23611b3ea016ef511289124faeaf70e281d1d9212025cecde8b8",
+      "bytes": 24987
+    },
+    "this_method": {
+      "path": "/tmp/166_failure_analysis_20261021/data_audit_method.py",
+      "sha256": "8ceea8bae7599a931b798c11a85f546183d6ed4bc542bf34722ca4bd7ed2a334",
+      "bytes": 17738
+    }
+  },
+  "dataset_splits": {
+    "train": {
+      "rows": 3000,
+      "modes": {
+        "READ": 1000,
+        "SUBTASK": 1000,
+        "WRITE": 1000
+      },
+      "families": 16,
+      "episodes": 32,
+      "npz_paths": 288,
+      "physical_context_ids": 288,
+      "unique_recorded_raw_camera_hash_triplets": 272,
+      "base_contexts": 1000,
+      "actor_input_digests": 3000,
+      "conflicting_actor_input_digests": 0,
+      "unique_target_strings": 49,
+      "unique_target_strings_per_mode": {
+        "READ": 2,
+        "WRITE": 39,
+        "SUBTASK": 8
+      },
+      "goal_template_counts": {
+        "0": 750,
+        "1": 752,
+        "2": 754,
+        "3": 744
+      },
+      "side_counts": {
+        "left": 1500,
+        "right": 1500
+      },
+      "history_event_counts": {
+        "0": 306,
+        "1": 318,
+        "2": 358,
+        "3": 308,
+        "4": 346,
+        "5": 330,
+        "6": 340,
+        "7": 348,
+        "8": 346
+      },
+      "control_observation_steps": [
+        0,
+        32,
+        64,
+        96,
+        128,
+        160,
+        192,
+        224,
+        256
+      ],
+      "nonempty_history_rows": 2694,
+      "subtask_without_writer_repair_rows": 200,
+      "write_condition_counts": {
+        "CORRECT": 250,
+        "EMPTY": 250,
+        "KEEP": 250,
+        "WRITE": 250
+      },
+      "write_correct_controlled_slots": {
+        "current_progress": 152,
+        "sample_identity": 98
+      },
+      "identity_correct_rows": 98,
+      "identity_correct_side_revision_confirmed_cells": {
+        "side:left:revision:10:confirmed:False": 6,
+        "side:left:revision:10:confirmed:True": 4,
+        "side:left:revision:1:confirmed:False": 6,
+        "side:left:revision:1:confirmed:True": 5,
+        "side:left:revision:2:confirmed:False": 5,
+        "side:left:revision:2:confirmed:True": 6,
+        "side:left:revision:4:confirmed:False": 4,
+        "side:left:revision:4:confirmed:True": 6,
+        "side:left:revision:7:confirmed:False": 5,
+        "side:left:revision:7:confirmed:True": 5,
+        "side:right:revision:10:confirmed:False": 4,
+        "side:right:revision:10:confirmed:True": 6,
+        "side:right:revision:1:confirmed:False": 4,
+        "side:right:revision:1:confirmed:True": 4,
+        "side:right:revision:2:confirmed:False": 4,
+        "side:right:revision:2:confirmed:True": 4,
+        "side:right:revision:4:confirmed:False": 6,
+        "side:right:revision:4:confirmed:True": 5,
+        "side:right:revision:7:confirmed:False": 5,
+        "side:right:revision:7:confirmed:True": 4
+      },
+      "target_tokens_including_eos_recorded": 55707,
+      "target_tokens_by_mode_recorded": {
+        "READ": 13548,
+        "WRITE": 30168,
+        "SUBTASK": 11991
+      },
+      "goal_history_side_conflict_rows": [],
+      "rows_declaring_motor_labels_false": 3000
+    },
+    "val": {
+      "rows": 600,
+      "modes": {
+        "READ": 200,
+        "SUBTASK": 200,
+        "WRITE": 200
+      },
+      "families": 6,
+      "episodes": 12,
+      "npz_paths": 200,
+      "physical_context_ids": 200,
+      "unique_recorded_raw_camera_hash_triplets": 195,
+      "base_contexts": 200,
+      "actor_input_digests": 600,
+      "conflicting_actor_input_digests": 0,
+      "unique_target_strings": 53,
+      "unique_target_strings_per_mode": {
+        "READ": 2,
+        "WRITE": 49,
+        "SUBTASK": 2
+      },
+      "goal_template_counts": {
+        "4": 600
+      },
+      "side_counts": {
+        "left": 300,
+        "right": 300
+      },
+      "history_event_counts": {
+        "0": 30,
+        "1": 84,
+        "2": 60,
+        "3": 86,
+        "4": 70,
+        "5": 72,
+        "6": 68,
+        "7": 72,
+        "8": 58
+      },
+      "control_observation_steps": [
+        0,
+        16,
+        32,
+        48,
+        64,
+        80,
+        96,
+        112,
+        128,
+        144,
+        160,
+        176,
+        192,
+        208,
+        224,
+        240,
+        256
+      ],
+      "nonempty_history_rows": 570,
+      "subtask_without_writer_repair_rows": 40,
+      "write_condition_counts": {
+        "CORRECT": 50,
+        "EMPTY": 50,
+        "KEEP": 50,
+        "WRITE": 50
+      },
+      "write_correct_controlled_slots": {
+        "current_progress": 32,
+        "sample_identity": 18
+      },
+      "identity_correct_rows": 18,
+      "identity_correct_side_revision_confirmed_cells": {
+        "side:left:revision:10:confirmed:False": 1,
+        "side:left:revision:1:confirmed:False": 1,
+        "side:left:revision:1:confirmed:True": 1,
+        "side:left:revision:2:confirmed:False": 1,
+        "side:left:revision:2:confirmed:True": 1,
+        "side:left:revision:4:confirmed:False": 1,
+        "side:left:revision:4:confirmed:True": 1,
+        "side:left:revision:7:confirmed:False": 1,
+        "side:left:revision:7:confirmed:True": 1,
+        "side:right:revision:10:confirmed:False": 1,
+        "side:right:revision:10:confirmed:True": 1,
+        "side:right:revision:1:confirmed:False": 1,
+        "side:right:revision:1:confirmed:True": 2,
+        "side:right:revision:2:confirmed:True": 1,
+        "side:right:revision:4:confirmed:False": 1,
+        "side:right:revision:7:confirmed:False": 1,
+        "side:right:revision:7:confirmed:True": 1
+      },
+      "target_tokens_including_eos_recorded": 11442,
+      "target_tokens_by_mode_recorded": {
+        "READ": 2756,
+        "WRITE": 6086,
+        "SUBTASK": 2600
+      },
+      "goal_history_side_conflict_rows": [],
+      "rows_declaring_motor_labels_false": 600
+    },
+    "test": {
+      "rows": 600,
+      "modes": {
+        "READ": 200,
+        "SUBTASK": 200,
+        "WRITE": 200
+      },
+      "families": 6,
+      "episodes": 12,
+      "npz_paths": 200,
+      "physical_context_ids": 200,
+      "unique_recorded_raw_camera_hash_triplets": 194,
+      "base_contexts": 200,
+      "actor_input_digests": 600,
+      "conflicting_actor_input_digests": 0,
+      "unique_target_strings": 53,
+      "unique_target_strings_per_mode": {
+        "READ": 2,
+        "WRITE": 49,
+        "SUBTASK": 2
+      },
+      "goal_template_counts": {
+        "5": 600
+      },
+      "side_counts": {
+        "left": 300,
+        "right": 300
+      },
+      "history_event_counts": {
+        "0": 32,
+        "1": 54,
+        "2": 74,
+        "3": 70,
+        "4": 68,
+        "5": 70,
+        "6": 68,
+        "7": 84,
+        "8": 80
+      },
+      "control_observation_steps": [
+        0,
+        16,
+        32,
+        48,
+        64,
+        80,
+        96,
+        112,
+        128,
+        144,
+        160,
+        176,
+        192,
+        208,
+        224,
+        240,
+        256
+      ],
+      "nonempty_history_rows": 568,
+      "subtask_without_writer_repair_rows": 40,
+      "write_condition_counts": {
+        "CORRECT": 50,
+        "EMPTY": 50,
+        "KEEP": 50,
+        "WRITE": 50
+      },
+      "write_correct_controlled_slots": {
+        "current_progress": 32,
+        "sample_identity": 18
+      },
+      "identity_correct_rows": 18,
+      "identity_correct_side_revision_confirmed_cells": {
+        "side:left:revision:10:confirmed:False": 1,
+        "side:left:revision:1:confirmed:False": 1,
+        "side:left:revision:1:confirmed:True": 1,
+        "side:left:revision:2:confirmed:False": 1,
+        "side:left:revision:2:confirmed:True": 1,
+        "side:left:revision:4:confirmed:False": 1,
+        "side:left:revision:4:confirmed:True": 1,
+        "side:left:revision:7:confirmed:False": 1,
+        "side:left:revision:7:confirmed:True": 1,
+        "side:right:revision:10:confirmed:False": 1,
+        "side:right:revision:10:confirmed:True": 1,
+        "side:right:revision:1:confirmed:False": 1,
+        "side:right:revision:1:confirmed:True": 1,
+        "side:right:revision:2:confirmed:True": 2,
+        "side:right:revision:4:confirmed:False": 1,
+        "side:right:revision:7:confirmed:False": 1,
+        "side:right:revision:7:confirmed:True": 1
+      },
+      "target_tokens_including_eos_recorded": 11448,
+      "target_tokens_by_mode_recorded": {
+        "READ": 2752,
+        "WRITE": 6096,
+        "SUBTASK": 2600
+      },
+      "goal_history_side_conflict_rows": [],
+      "rows_declaring_motor_labels_false": 600
+    }
+  },
+  "cross_split_overlap": {
+    "train:val": {
+      "family_ids": 0,
+      "episode_ids": 0,
+      "npz_paths": 0,
+      "recorded_raw_camera_hash_triplets": 0,
+      "base_context_ids": 0,
+      "actor_input_digests": 0
+    },
+    "train:test": {
+      "family_ids": 0,
+      "episode_ids": 0,
+      "npz_paths": 0,
+      "recorded_raw_camera_hash_triplets": 0,
+      "base_context_ids": 0,
+      "actor_input_digests": 0
+    },
+    "val:test": {
+      "family_ids": 0,
+      "episode_ids": 0,
+      "npz_paths": 0,
+      "recorded_raw_camera_hash_triplets": 0,
+      "base_context_ids": 0,
+      "actor_input_digests": 0
+    }
+  },
+  "final_checkpoint_suites": {
+    "val180": {
+      "rows": 180,
+      "strict_by_mode": {
+        "READ": {
+          "passed": 60,
+          "eligible": 60
+        },
+        "WRITE": {
+          "passed": 30,
+          "eligible": 60
+        },
+        "SUBTASK": {
+          "passed": 58,
+          "eligible": 60
+        }
+      },
+      "overall_strict": {
+        "passed": 148,
+        "eligible": 180
+      },
+      "reported_overall_metrics": {
+        "rows": 180,
+        "actual_eos_token": {
+          "passed": 179,
+          "eligible": 180
+        },
+        "nonempty": {
+          "passed": 180,
+          "eligible": 180
+        },
+        "json": {
+          "passed": 119,
+          "eligible": 120
+        },
+        "schema_legal": {
+          "passed": 115,
+          "eligible": 120
+        },
+        "target_match": {
+          "passed": 90,
+          "eligible": 120
+        },
+        "text_exact": {
+          "passed": 90,
+          "eligible": 180
+        },
+        "side_binding_lexical": {
+          "passed": 58,
+          "eligible": 60
+        },
+        "semantic6": {
+          "passed": 58,
+          "eligible": 60
+        },
+        "strict_passed": {
+          "passed": 148,
+          "eligible": 180
+        }
+      },
+      "conflicting_memory_cases": {
+        "sample_identity": {
+          "strict": {
+            "passed": 0,
+            "eligible": 10
+          },
+          "predicted_op_slot_counts": {
+            "CORRECT:current_progress": 3,
+            "EMPTY": 3,
+            "KEEP:current_progress": 3,
+            "KEEP:sample_identity": 1
+          },
+          "actual_eos": {
+            "passed": 10,
+            "eligible": 10
+          }
+        },
+        "current_progress": {
+          "strict": {
+            "passed": 7,
+            "eligible": 10
+          },
+          "predicted_op_slot_counts": {
+            "CORRECT:current_progress": 7,
+            "EMPTY": 3
+          },
+          "actual_eos": {
+            "passed": 10,
+            "eligible": 10
+          }
+        }
+      },
+      "write_op_slot_confusion": {
+        "CORRECT:current_progress": {
+          "CORRECT:current_progress": 7,
+          "EMPTY": 3
+        },
+        "CORRECT:sample_identity": {
+          "EMPTY": 3,
+          "CORRECT:current_progress": 3,
+          "KEEP:current_progress": 3,
+          "KEEP:sample_identity": 1
+        },
+        "WRITE:sample_identity": {
+          "WRITE:sample_identity": 5,
+          "WRITE:current_progress": 2
+        },
+        "KEEP:current_progress": {
+          "CORRECT:current_progress": 2,
+          "WRITE:current_progress": 2,
+          "KEEP:current_progress": 4,
+          "INVALID_JSON_OR_KEY": 1
+        },
+        "EMPTY": {
+          "EMPTY": 8,
+          "CORRECT:current_progress": 4
+        },
+        "KEEP:sample_identity": {
+          "KEEP:sample_identity": 2,
+          "CORRECT:sample_identity": 2
+        },
+        "WRITE:current_progress": {
+          "WRITE:current_progress": 8
+        }
+      }
+    },
+    "train_quick96": {
+      "rows": 96,
+      "strict_by_mode": {
+        "READ": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "WRITE": {
+          "passed": 23,
+          "eligible": 32
+        },
+        "SUBTASK": {
+          "passed": 32,
+          "eligible": 32
+        }
+      },
+      "overall_strict": {
+        "passed": 87,
+        "eligible": 96
+      },
+      "reported_overall_metrics": {
+        "rows": 96,
+        "actual_eos_token": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "nonempty": {
+          "passed": 96,
+          "eligible": 96
+        },
+        "json": {
+          "passed": 63,
+          "eligible": 64
+        },
+        "schema_legal": {
+          "passed": 63,
+          "eligible": 64
+        },
+        "target_match": {
+          "passed": 55,
+          "eligible": 64
+        },
+        "text_exact": {
+          "passed": 87,
+          "eligible": 96
+        },
+        "side_binding_lexical": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "semantic6": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "strict_passed": {
+          "passed": 87,
+          "eligible": 96
+        }
+      },
+      "conflicting_memory_cases": {
+        "sample_identity": {
+          "strict": {
+            "passed": 0,
+            "eligible": 5
+          },
+          "predicted_op_slot_counts": {
+            "EMPTY": 3,
+            "KEEP:sample_identity": 2
+          },
+          "actual_eos": {
+            "passed": 5,
+            "eligible": 5
+          }
+        },
+        "current_progress": {
+          "strict": {
+            "passed": 5,
+            "eligible": 5
+          },
+          "predicted_op_slot_counts": {
+            "CORRECT:current_progress": 5
+          },
+          "actual_eos": {
+            "passed": 5,
+            "eligible": 5
+          }
+        }
+      },
+      "write_op_slot_confusion": {
+        "CORRECT:sample_identity": {
+          "EMPTY": 3,
+          "KEEP:sample_identity": 2
+        },
+        "CORRECT:current_progress": {
+          "CORRECT:current_progress": 5
+        },
+        "WRITE:current_progress": {
+          "INVALID_JSON_OR_KEY": 1,
+          "WRITE:current_progress": 3
+        },
+        "KEEP:sample_identity": {
+          "KEEP:current_progress": 2,
+          "KEEP:sample_identity": 2,
+          "EMPTY": 1
+        },
+        "EMPTY": {
+          "EMPTY": 7
+        },
+        "WRITE:sample_identity": {
+          "WRITE:sample_identity": 4
+        },
+        "KEEP:current_progress": {
+          "KEEP:current_progress": 2
+        }
+      }
+    },
+    "revision_only40": {
+      "rows": 40,
+      "strict_by_mode": {
+        "WRITE": {
+          "passed": 20,
+          "eligible": 40
+        }
+      },
+      "overall_strict": {
+        "passed": 20,
+        "eligible": 40
+      },
+      "reported_overall_metrics": {
+        "rows": 40,
+        "actual_eos_token": {
+          "passed": 36,
+          "eligible": 40
+        },
+        "nonempty": {
+          "passed": 40,
+          "eligible": 40
+        },
+        "json": {
+          "passed": 36,
+          "eligible": 40
+        },
+        "schema_legal": {
+          "passed": 36,
+          "eligible": 40
+        },
+        "target_match": {
+          "passed": 20,
+          "eligible": 40
+        },
+        "text_exact": {
+          "passed": 20,
+          "eligible": 40
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 20,
+          "eligible": 40
+        }
+      },
+      "conflicting_memory_cases": {
+        "sample_identity": {
+          "strict": {
+            "passed": 0,
+            "eligible": 10
+          },
+          "predicted_op_slot_counts": {
+            "EMPTY": 5,
+            "KEEP:sample_identity": 5
+          },
+          "actual_eos": {
+            "passed": 10,
+            "eligible": 10
+          }
+        },
+        "current_progress": {
+          "strict": {
+            "passed": 0,
+            "eligible": 0
+          },
+          "predicted_op_slot_counts": {},
+          "actual_eos": {
+            "passed": 0,
+            "eligible": 0
+          }
+        }
+      },
+      "write_op_slot_confusion": {
+        "WRITE:current_progress": {
+          "WRITE:current_progress": 10
+        },
+        "KEEP:current_progress": {
+          "KEEP:current_progress": 5,
+          "INVALID_JSON_OR_KEY": 4,
+          "CORRECT:current_progress": 1
+        },
+        "CORRECT:sample_identity": {
+          "KEEP:sample_identity": 5,
+          "EMPTY": 5
+        },
+        "EMPTY": {
+          "EMPTY": 10
+        }
+      }
+    },
+    "history_ablation16": {
+      "rows": 16,
+      "strict_by_mode": {
+        "READ": {
+          "passed": 15,
+          "eligible": 16
+        }
+      },
+      "overall_strict": {
+        "passed": 15,
+        "eligible": 16
+      },
+      "reported_overall_metrics": {
+        "rows": 16,
+        "actual_eos_token": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "nonempty": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "json": {
+          "passed": 15,
+          "eligible": 16
+        },
+        "schema_legal": {
+          "passed": 15,
+          "eligible": 16
+        },
+        "target_match": {
+          "passed": 15,
+          "eligible": 16
+        },
+        "text_exact": {
+          "passed": 15,
+          "eligible": 16
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 15,
+          "eligible": 16
+        }
+      },
+      "conflicting_memory_cases": {
+        "sample_identity": {
+          "strict": {
+            "passed": 0,
+            "eligible": 0
+          },
+          "predicted_op_slot_counts": {},
+          "actual_eos": {
+            "passed": 0,
+            "eligible": 0
+          }
+        },
+        "current_progress": {
+          "strict": {
+            "passed": 0,
+            "eligible": 0
+          },
+          "predicted_op_slot_counts": {},
+          "actual_eos": {
+            "passed": 0,
+            "eligible": 0
+          }
+        }
+      },
+      "write_op_slot_confusion": {}
+    }
+  },
+  "target_distribution_shift_relative_to_train": {
+    "val": {
+      "READ": {
+        "unseen_target_strings": 0,
+        "unseen_target_rows": 0,
+        "unseen_by_condition": {},
+        "examples": []
+      },
+      "WRITE": {
+        "unseen_target_strings": 22,
+        "unseen_target_rows": 32,
+        "unseen_by_condition": {
+          "CORRECT": 16,
+          "WRITE": 16
+        },
+        "examples": [
+          "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"current_progress\",\"value\":\"Last issued h000000 for initial-left; executed_control_steps=16; physical completion unverified.\"}]}",
+          "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"current_progress\",\"value\":\"Last issued h000032 for initial-left; executed_control_steps=48; physical completion unverified.\"}]}",
+          "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"current_progress\",\"value\":\"Last issued h000064 for initial-left; executed_control_steps=80; physical completion unverified.\"}]}"
+        ]
+      },
+      "SUBTASK": {
+        "unseen_target_strings": 2,
+        "unseen_target_rows": 200,
+        "unseen_by_condition": {
+          "CORRECT": 52,
+          "EMPTY": 40,
+          "KEEP": 54,
+          "WRITE": 54
+        },
+        "examples": [
+          "Pick up and keep holding the sample initially on the left.",
+          "Pick up and keep holding the sample initially on the right."
+        ]
+      }
+    },
+    "test": {
+      "READ": {
+        "unseen_target_strings": 0,
+        "unseen_target_rows": 0,
+        "unseen_by_condition": {},
+        "examples": []
+      },
+      "WRITE": {
+        "unseen_target_strings": 24,
+        "unseen_target_rows": 36,
+        "unseen_by_condition": {
+          "CORRECT": 18,
+          "WRITE": 18
+        },
+        "examples": [
+          "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"current_progress\",\"value\":\"Last issued h000000 for initial-right; executed_control_steps=16; physical completion unverified.\"}]}",
+          "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"current_progress\",\"value\":\"Last issued h000032 for initial-right; executed_control_steps=48; physical completion unverified.\"}]}",
+          "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"current_progress\",\"value\":\"Last issued h000064 for initial-left; executed_control_steps=80; physical completion unverified.\"}]}"
+        ]
+      },
+      "SUBTASK": {
+        "unseen_target_strings": 2,
+        "unseen_target_rows": 200,
+        "unseen_by_condition": {
+          "CORRECT": 52,
+          "EMPTY": 40,
+          "KEEP": 54,
+          "WRITE": 54
+        },
+        "examples": [
+          "Grasp the sample initially on the left and hold it.",
+          "Grasp the sample initially on the right and hold it."
+        ]
+      }
+    }
+  },
+  "visible_prefix_write_gold_oracle": {
+    "combined": {
+      "passed": 132,
+      "eligible": 132
+    },
+    "suites": {
+      "val180": {
+        "passed": 60,
+        "eligible": 60,
+        "mismatch_sample_ids": []
+      },
+      "train_quick96": {
+        "passed": 32,
+        "eligible": 32,
+        "mismatch_sample_ids": []
+      },
+      "revision_only40": {
+        "passed": 40,
+        "eligible": 40,
+        "mismatch_sample_ids": []
+      }
+    }
+  },
+  "revision_only_structure": {
+    "distinct_base_case_ids": 8,
+    "variants_per_base_case": {
+      "5": 8
+    },
+    "identity_correct_groups": [
+      {
+        "base_sample_id": "rm65b_dynamic_history_protocol_3000_v1:a9ed0e01ad6069fcac678e9595797e920b080b532ce420314d93e50e7d0a3f51:WRITE:CORRECT:r10:stress0",
+        "variants": 5,
+        "predictions": {
+          "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}": 5
+        },
+        "all_have_eos": true
+      },
+      {
+        "base_sample_id": "rm65b_dynamic_history_protocol_3000_v1:1ec21d6474df31b22951d3850823a2772b0fd06d55855e322b330ae268bab572:WRITE:CORRECT:r7:stress0",
+        "variants": 5,
+        "predictions": {
+          "{\"operations\":[]}": 5
+        },
+        "all_have_eos": true
+      }
+    ],
+    "warning": "40 rows are 8 fixed base cases times 5 revision substitutions, not 40 independent scenarios."
+  },
+  "examples": [
+    {
+      "description": "Goal/history left, confirmed wrong identity right; generated EMPTY.",
+      "suite": "val180",
+      "case_index_zero_based": 61,
+      "source_path": "/tmp/166_failure_analysis_20261021/val180.json",
+      "source_sample_id_line": 3017,
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:2aa725ad48e9ea16fea414b640b0d004796c82c1ecfd4d51381702d4a2233f3e:WRITE:CORRECT:r2:stress0",
+      "mode": "WRITE",
+      "actual_prefix": "Task: Please verify and return home the sample initially on the left first, followed by the sample initially on the right., State: 16 121 48 185 110 162 255 255 255 255 255 0 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: [{\"confirmed\":true,\"revision\":2,\"slot_id\":\"sample_identity\",\"status\":\"active\",\"value\":\"The first requested sample is initially on the right.\"},{\"confirmed\":true,\"revision\":3,\"slot_id\":\"current_progress\",\"status\":\"active\",\"value\":\"Last issued h000000 for initial-left; executed_control_steps=32; physical completion unverified.\"}]\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"}]\nMode: WRITE\nReturn JSON {\"operations\":[{\"op\":\"WRITE|KEEP|CORRECT|REVOKE\",\"slot_id\":\"id\",\"value\":\"observed_fact\",\"confirmed\":false}]}. WRITE/CORRECT require value. Use an empty operations list for no write.\nResponse: ",
+      "actual_prefix_sha256": "d1aee06b2da3d2033012e22cdb78edb9db59c2f8166a1cab3fac8e77a8c11720",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "raw_text": "{\"operations\":[]}",
+      "ended_with_eos": true,
+      "strata": [
+        "WRITE:condition:CORRECT",
+        "WRITE:condition:CORRECT:revision:2",
+        "WRITE:condition:CORRECT:revision:2:side:left",
+        "WRITE:condition:CORRECT:target_confirmed:True",
+        "WRITE:history:1-2",
+        "WRITE:input_conflict:sample_identity:confirmed:True",
+        "WRITE:input_conflict:sample_identity:confirmed:True:side:left",
+        "WRITE:side:left",
+        "condition:CORRECT",
+        "events:1",
+        "history:1-2",
+        "input_conflict:sample_identity",
+        "mode:WRITE",
+        "revision:2",
+        "selected_confirmed:True",
+        "selected_status:active",
+        "side:left",
+        "stress:False",
+        "target_slot:sample_identity"
+      ],
+      "generated_tokens_including_eos_if_present": 5,
+      "oracle_target": {
+        "operations": [
+          {
+            "op": "CORRECT",
+            "slot_id": "sample_identity",
+            "value": "The first requested sample is initially on the left.",
+            "confirmed": true
+          }
+        ]
+      }
+    },
+    {
+      "description": "Training case: goal/history left, unconfirmed wrong identity right; generated KEEP.",
+      "suite": "train_quick96",
+      "case_index_zero_based": 44,
+      "source_path": "/tmp/166_failure_analysis_20261021/train_quick96.json",
+      "source_sample_id_line": 2774,
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:49168d476215c165ffe127b72d1c1ac04bf96892a5915ae4657d5c33ffde25cd:WRITE:CORRECT:r1:stress0",
+      "mode": "WRITE",
+      "actual_prefix": "Task: Process the sample initially on the left before the sample initially on the right; verify each sample and return each one home., State: 33 114 41 188 150 161 255 255 255 255 255 0 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: [{\"confirmed\":false,\"revision\":1,\"slot_id\":\"sample_identity\",\"status\":\"active\",\"value\":\"The first requested sample is initially on the right.\"},{\"confirmed\":true,\"revision\":2,\"slot_id\":\"current_progress\",\"status\":\"active\",\"value\":\"Last issued h000032 for initial-left; executed_control_steps=64; physical completion unverified.\"}]\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000032\",\"executed_until_step\":64,\"issued_at_step\":32,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"}]\nMode: WRITE\nReturn JSON {\"operations\":[{\"op\":\"WRITE|KEEP|CORRECT|REVOKE\",\"slot_id\":\"id\",\"value\":\"observed_fact\",\"confirmed\":false}]}. WRITE/CORRECT require value. Use an empty operations list for no write.\nResponse: ",
+      "actual_prefix_sha256": "22ed27227af1659953629d6c588946c9baca30faaa3e803dc8c1c7bfab750fd5",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "raw_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"KEEP\",\"slot_id\":\"sample_identity\"}]}",
+      "ended_with_eos": true,
+      "strata": [
+        "WRITE:condition:CORRECT",
+        "WRITE:condition:CORRECT:revision:1",
+        "WRITE:condition:CORRECT:revision:1:side:left",
+        "WRITE:condition:CORRECT:target_confirmed:False",
+        "WRITE:history:1-2",
+        "WRITE:input_conflict:sample_identity:confirmed:False",
+        "WRITE:input_conflict:sample_identity:confirmed:False:side:left",
+        "WRITE:side:left",
+        "condition:CORRECT",
+        "events:2",
+        "history:1-2",
+        "input_conflict:sample_identity",
+        "mode:WRITE",
+        "revision:1",
+        "selected_confirmed:False",
+        "selected_confirmed:True",
+        "selected_status:active",
+        "side:left",
+        "stress:False",
+        "target_slot:sample_identity"
+      ],
+      "generated_tokens_including_eos_if_present": 23,
+      "oracle_target": {
+        "operations": [
+          {
+            "op": "CORRECT",
+            "slot_id": "sample_identity",
+            "value": "The first requested sample is initially on the left.",
+            "confirmed": true
+          }
+        ]
+      }
+    },
+    {
+      "description": "Wrong identity slot ignored; correct progress 80 replaced by progress 96.",
+      "suite": "val180",
+      "case_index_zero_based": 66,
+      "source_path": "/tmp/166_failure_analysis_20261021/val180.json",
+      "source_sample_id_line": 3570,
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:86b0c66a52fbc18abd1fbd8915022b85411348b113c2097da3b0725895933915:WRITE:CORRECT:r4:stress0",
+      "mode": "WRITE",
+      "actual_prefix": "Task: Please verify and return home the sample initially on the left first, followed by the sample initially on the right., State: 34 113 41 188 152 161 255 255 255 255 255 0 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: [{\"confirmed\":false,\"revision\":4,\"slot_id\":\"sample_identity\",\"status\":\"active\",\"value\":\"The first requested sample is initially on the right.\"},{\"confirmed\":true,\"revision\":5,\"slot_id\":\"current_progress\",\"status\":\"active\",\"value\":\"Last issued h000064 for initial-left; executed_control_steps=80; physical completion unverified.\"}]\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000032\",\"executed_until_step\":64,\"issued_at_step\":32,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000064\",\"executed_until_step\":80,\"issued_at_step\":64,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"}]\nMode: WRITE\nReturn JSON {\"operations\":[{\"op\":\"WRITE|KEEP|CORRECT|REVOKE\",\"slot_id\":\"id\",\"value\":\"observed_fact\",\"confirmed\":false}]}. WRITE/CORRECT require value. Use an empty operations list for no write.\nResponse: ",
+      "actual_prefix_sha256": "623e5cb65801cb4fc1a9e79f36a61b0e3623900b941877c154484ccc8adf803c",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"sample_identity\",\"value\":\"The first requested sample is initially on the left.\"}]}",
+      "raw_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"CORRECT\",\"slot_id\":\"current_progress\",\"value\":\"Last issued h000064 for initial-left; executed_control_steps=96; physical completion unverified.\"}]}",
+      "ended_with_eos": true,
+      "strata": [
+        "WRITE:condition:CORRECT",
+        "WRITE:condition:CORRECT:revision:4",
+        "WRITE:condition:CORRECT:revision:4:side:left",
+        "WRITE:condition:CORRECT:target_confirmed:False",
+        "WRITE:history:3-4",
+        "WRITE:input_conflict:sample_identity:confirmed:False",
+        "WRITE:input_conflict:sample_identity:confirmed:False:side:left",
+        "WRITE:side:left",
+        "condition:CORRECT",
+        "events:3",
+        "history:3-4",
+        "input_conflict:sample_identity",
+        "mode:WRITE",
+        "revision:4",
+        "selected_confirmed:False",
+        "selected_confirmed:True",
+        "selected_status:active",
+        "side:left",
+        "stress:False",
+        "target_slot:sample_identity"
+      ],
+      "generated_tokens_including_eos_if_present": 53,
+      "oracle_target": {
+        "operations": [
+          {
+            "op": "CORRECT",
+            "slot_id": "sample_identity",
+            "value": "The first requested sample is initially on the left.",
+            "confirmed": true
+          }
+        ]
+      }
+    },
+    {
+      "description": "Midwindow progress 80 replaced by 96, invariant over all five revision variants.",
+      "suite": "revision_only40",
+      "case_index_zero_based": 0,
+      "source_path": "/tmp/166_failure_analysis_20261021/revision_only40.json",
+      "source_sample_id_line": 27,
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:c96896b3f6c62044669b86358019753e1f62e1658f8d46c8bd0fa0258574f6a7:WRITE:WRITE:r4:stress0:revision_only:1",
+      "mode": "WRITE",
+      "actual_prefix": "Task: Please verify and return home the sample initially on the left first, followed by the sample initially on the right., State: 34 113 41 188 152 161 255 255 255 255 255 0 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: [{\"confirmed\":true,\"revision\":1,\"slot_id\":\"sample_identity\",\"status\":\"active\",\"value\":\"The first requested sample is initially on the left.\"},{\"confirmed\":false,\"revision\":0,\"slot_id\":\"current_progress\",\"status\":\"empty\",\"value\":null}]\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000032\",\"executed_until_step\":64,\"issued_at_step\":32,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000064\",\"executed_until_step\":80,\"issued_at_step\":64,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"}]\nMode: WRITE\nReturn JSON {\"operations\":[{\"op\":\"WRITE|KEEP|CORRECT|REVOKE\",\"slot_id\":\"id\",\"value\":\"observed_fact\",\"confirmed\":false}]}. WRITE/CORRECT require value. Use an empty operations list for no write.\nResponse: ",
+      "actual_prefix_sha256": "2bb562b4aa5c5017b2a7773f82488dfdf7f77413f5db1da94a3fb05c0f83de59",
+      "target_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"current_progress\",\"value\":\"Last issued h000064 for initial-left; executed_control_steps=80; physical completion unverified.\"}]}",
+      "raw_text": "{\"operations\":[{\"confirmed\":true,\"op\":\"WRITE\",\"slot_id\":\"current_progress\",\"value\":\"Last issued h000064 for initial-left; executed_control_steps=96; physical completion unverified.\"}]}",
+      "ended_with_eos": true,
+      "strata": [
+        "WRITE:condition:WRITE",
+        "WRITE:condition:WRITE:revision:4",
+        "WRITE:condition:WRITE:revision:4:side:left",
+        "WRITE:condition:WRITE:target_confirmed:False",
+        "WRITE:history:3-4",
+        "WRITE:side:left",
+        "challenge_revision_repetitions:1",
+        "condition:WRITE",
+        "events:3",
+        "history:3-4",
+        "mode:WRITE",
+        "revision:4",
+        "selected_confirmed:False",
+        "selected_confirmed:True",
+        "selected_status:active",
+        "selected_status:empty",
+        "side:left",
+        "stress:False",
+        "target_slot:current_progress"
+      ],
+      "generated_tokens_including_eos_if_present": 53,
+      "oracle_target": {
+        "operations": [
+          {
+            "op": "WRITE",
+            "slot_id": "current_progress",
+            "value": "Last issued h000064 for initial-left; executed_control_steps=80; physical completion unverified.",
+            "confirmed": true
+          }
+        ]
+      }
+    }
+  ],
+  "static_review_observations": [
+    {
+      "claim": "Builder truth_facts are goal-role and issued-control facts; no physical completion is supervised.",
+      "basis": "Previously inspected CodeGraph current source; not automatically re-proven by this script.",
+      "source_key": "builder_snapshot_statically_reviewed",
+      "lines": [
+        95,
+        108
+      ]
+    },
+    {
+      "claim": "Builder uses GOALS[0:4] for train, GOALS[4] for val, GOALS[5] for test; rows remain correlated augmentations.",
+      "basis": "Previously inspected CodeGraph source; template distributions and physical reuse are independently recomputed above.",
+      "source_key": "builder_snapshot_statically_reviewed",
+      "lines": [
+        176,
+        216
+      ]
+    },
+    {
+      "claim": "Gold WRITE operations are reconstructable from visible Task/Memory/History under the declared rules; this audit found no hidden-truth requirement in the 132 final WRITE cases.",
+      "basis": "CPU script recomputation above, not model inference."
+    }
+  ]
+}

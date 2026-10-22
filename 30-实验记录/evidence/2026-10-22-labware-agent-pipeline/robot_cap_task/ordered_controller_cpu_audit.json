@@ -1,0 +1,102 @@
+{
+  "scope": "Finite actual native mapping / archived real v5 state-drive CPU API smoke. Transport/contact doubles are interface tests, not simulator stepping, physical contact, grip or task success.",
+  "source_sha256": {
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/cap_contact_controller.py": "cf7ee158a0d19ea6edaf38e03b09e4af13401f9fda9374dbfaca7042264b4abd",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_contact_probes/left115_first_contact_v5_true_surface/actual_terminal_snapshot.json": "9de7ee86a9e2afbdbb661234882e25e5229bb613ba88454a2d646a72abda96d2",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/cap_geometry_probes/true_surface_closure_v4_v2/candidate.json": "e6a6499750113d9747e9f21b3e6b188998a6197da56755f499a12fdaa7da6166",
+    "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/integrations/realman_rm65b_gen4/teacher_legacy/continuous_servo.py": "18716a2e0aca64425f1a2a3936bfa4e1f7886b3df7fa31f3b37284e779746c19",
+    "/home/admin123/liminghe/vla-benchmark/RoboTwin/assets/embodiments/realman-rm65b-inspire-gen4/source_manifest.json": "6cac675e0f2228d3b233f82b7082b8df17860d2e18bfd7ba7dcc67ccf3c5d6e5"
+  },
+  "all_passed": true,
+  "check_count": 10,
+  "checks": [
+    {
+      "case": "index_actual_mapping_ordered_stage",
+      "passed": true,
+      "actual_v5_drive_first_stage": true,
+      "second_stage_endpoint_fixture_only": false,
+      "strict_default_rejection": "Each feedback actuator needs a nonzero screened closure interval",
+      "fixed_index": 5,
+      "fixed_drive_preserved_exact": true,
+      "commands_to_endpoint_in_transport_fixture": 8,
+      "max_command_primary_or_mimic_speed_rad_s": 0.0800000000000009,
+      "measured_q_not_clamped": true
+    },
+    {
+      "case": "index_fixed_actual_drive_offset_with_contact",
+      "passed": true,
+      "offset_rad": 3e-07,
+      "fixed_force_observed_N": 0.2,
+      "fixed_drive_preserved_exact": true
+    },
+    {
+      "case": "index_fixed_outside_screened_start_rejected",
+      "passed": true,
+      "message": "Actual drive must start inside the screened posture interval"
+    },
+    {
+      "case": "thumb_actual_mapping_ordered_stage",
+      "passed": true,
+      "actual_v5_drive_first_stage": false,
+      "second_stage_endpoint_fixture_only": true,
+      "strict_default_rejection": "Each feedback actuator needs a nonzero screened closure interval",
+      "fixed_index": 3,
+      "fixed_drive_preserved_exact": true,
+      "commands_to_endpoint_in_transport_fixture": 39,
+      "max_command_primary_or_mimic_speed_rad_s": 0.08000000000000045,
+      "measured_q_not_clamped": true
+    },
+    {
+      "case": "thumb_fixed_actual_drive_offset_with_contact",
+      "passed": true,
+      "offset_rad": 3e-07,
+      "fixed_force_observed_N": 0.2,
+      "fixed_drive_preserved_exact": true
+    },
+    {
+      "case": "thumb_fixed_outside_screened_start_rejected",
+      "passed": true,
+      "message": "Actual drive must start inside the screened posture interval"
+    },
+    {
+      "case": "both_feedback_actuators_fixed_rejected",
+      "passed": true,
+      "message": "Each feedback actuator needs a nonzero screened closure interval"
+    },
+    {
+      "case": "non_boolean_optin_rejected",
+      "passed": true,
+      "message": "Explicit boolean required for fixed feedback channel"
+    },
+    {
+      "case": "strict_sdk_interval_rejected",
+      "passed": true,
+      "endpoint": [
+        0,
+        0,
+        0,
+        -0.01,
+        1000,
+        348
+      ],
+      "message": "Continuous SDK6 must be in [0,1000]; -1 is not a waypoint"
+    },
+    {
+      "case": "strict_sdk_interval_rejected",
+      "passed": true,
+      "endpoint": [
+        0,
+        0,
+        0,
+        560,
+        1000,
+        1000.01
+      ],
+      "message": "Continuous SDK6 must be in [0,1000]; -1 is not a waypoint"
+    }
+  ],
+  "auditor_source_modified": false,
+  "new_physical_trials": 0,
+  "original_v5_failure_preserved": true,
+  "audit_source_sha256": "93b35926d8450ece50dcb4da046ee27ad92e848dd76189899996e1b6bbba2472"
+}

@@ -1,0 +1,1627 @@
+{
+  "format": "rm65b_history3000_sft_validation_v2",
+  "metric_version": "semantic6_casefold_v2",
+  "validator_sha256": "fc0d5b3a0a38f75018abea0dfd4b2f4fd4f8bb9e5ab36d0d7c240fe5b86a0e73",
+  "status": "completed",
+  "suite": "history_ablation16",
+  "checkpoint_identity": {
+    "checkpoint": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/supervisor_166_v2/train_s024000/checkpoint",
+    "checkpoint_version_sha256": "2e75522386ab8703089f62de240974127c457ef8856bf71daf28cacff5be1b30",
+    "branch_global_step": 24000,
+    "labels": {
+      "path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/data/evaluation_v1/history_ablation16.jsonl",
+      "sha256": "7eec5f0cd8e1ce6bf03d00b276f1efe693cc03cd04598f617c3ee90e77d162fc",
+      "rows": 16
+    }
+  },
+  "teacher_forcing": false,
+  "decoding": {
+    "method": "native_unrestricted_greedy",
+    "max_new_tokens": 96,
+    "actual_eos_required": true,
+    "json_repair": false
+  },
+  "task_SR_measured": false,
+  "cases": [
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:2aa725ad48e9ea16fea414b640b0d004796c82c1ecfd4d51381702d4a2233f3e:READ:none:rNone:stress0:history_full",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        8332,
+        3589,
+        235298,
+        17011,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the left first, followed by the sample initially on the right., State: 16 121 48 185 110 162 255 255 255 255 255 0 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"}]\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "6b51b610f9acd53ac599951c5c2be5ce59972bb4caaea5db6f7078a0f7559151",
+      "actual_context_sha256": "f3f1ac58be6d218691d7411cec2a517d52036f11d9a2ab08c73005e1b3d2efc4",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:1-2",
+        "READ:side:left",
+        "events:1",
+        "history:1-2",
+        "mode:READ",
+        "side:left"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:2aa725ad48e9ea16fea414b640b0d004796c82c1ecfd4d51381702d4a2233f3e:READ:none:rNone:stress0:history_withheld",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the left first, followed by the sample initially on the right., State: 16 121 48 185 110 162 255 255 255 255 255 0 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: []\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "057e4b9d0035807a762513b04f0efc4f6afa63b1af84cff857384f09dca4bc6f",
+      "actual_context_sha256": "c1d0b65b9c64b2c03bf7b63bc3204755ef197d61c683e55a54bdcc0bd60a8b75",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:empty",
+        "READ:side:left",
+        "events:0",
+        "history:empty",
+        "mode:READ",
+        "side:left"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:6c6b20c72167298879a7e9b85fdb9960aa07a387cddd19ebc522152930e18cd8:READ:none:rNone:stress0:history_full",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        8332,
+        3589,
+        235298,
+        17011,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the left first, followed by the sample initially on the right., State: 41 109 37 189 167 161 255 255 255 255 255 0 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000032\",\"executed_until_step\":64,\"issued_at_step\":32,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000064\",\"executed_until_step\":96,\"issued_at_step\":64,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"}]\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "b4162d3fc40af472e2d8a518da6a80a8b57a8948b786bf09fb3635bf2083f942",
+      "actual_context_sha256": "c64cfbab31258574d3c3e71919039b4a937930386f1fb3cd3c5a74f11a566dec",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:3-4",
+        "READ:side:left",
+        "events:3",
+        "history:3-4",
+        "mode:READ",
+        "side:left"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:6c6b20c72167298879a7e9b85fdb9960aa07a387cddd19ebc522152930e18cd8:READ:none:rNone:stress0:history_withheld",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the left first, followed by the sample initially on the right., State: 41 109 37 189 167 161 255 255 255 255 255 0 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: []\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "20ac80192a21b4abbe34d85ac9d8442f984076cd086b12d8157570e2ce4c8667",
+      "actual_context_sha256": "9098f712003d84312b9174fac24861a481fdb251fde6379daaeb529a2afa762a",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:empty",
+        "READ:side:left",
+        "events:0",
+        "history:empty",
+        "mode:READ",
+        "side:left"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:b5a8bf9d28ee6635b75b900d8fa43e36f6671ea8bdf5d5d0f1a45115979bd67a:READ:none:rNone:stress0:history_full",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        8332,
+        3589,
+        235298,
+        17011,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the left first, followed by the sample initially on the right., State: 64 96 25 193 221 161 255 255 255 255 255 0 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000032\",\"executed_until_step\":64,\"issued_at_step\":32,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000064\",\"executed_until_step\":96,\"issued_at_step\":64,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000096\",\"executed_until_step\":128,\"issued_at_step\":96,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000128\",\"executed_until_step\":144,\"issued_at_step\":128,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"}]\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "ac5dd60ce89f3f1ff2f0ab2935eadb75a7b101a6e655eb5388436e087b90e4d5",
+      "actual_context_sha256": "33b257cab6a76fe8125d6f049f6017debd600fe308c9d272072dd0c3e8be0a18",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:5-6",
+        "READ:side:left",
+        "events:5",
+        "history:5-6",
+        "mode:READ",
+        "side:left"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:b5a8bf9d28ee6635b75b900d8fa43e36f6671ea8bdf5d5d0f1a45115979bd67a:READ:none:rNone:stress0:history_withheld",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the left first, followed by the sample initially on the right., State: 64 96 25 193 221 161 255 255 255 255 255 0 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: []\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "d689a71a0cf5cb1a79190936a9b7e256fe333fa9c036728b1171c64d927292c1",
+      "actual_context_sha256": "dd13421d1c345934bdff650210a4e53aed17e5f07dd90186ade01854dae4eddf",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:empty",
+        "READ:side:left",
+        "events:0",
+        "history:empty",
+        "mode:READ",
+        "side:left"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:d24fb6fb1077a8fbb59c18ab810e7034b46586cfa2e77179374186569d395c46:READ:none:rNone:stress0:history_full",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        8332,
+        3589,
+        235298,
+        17011,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the left first, followed by the sample initially on the right., State: 54 65 27 183 231 169 182 178 49 57 48 1 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000032\",\"executed_until_step\":64,\"issued_at_step\":32,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000064\",\"executed_until_step\":96,\"issued_at_step\":64,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000096\",\"executed_until_step\":128,\"issued_at_step\":96,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000128\",\"executed_until_step\":160,\"issued_at_step\":128,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000160\",\"executed_until_step\":192,\"issued_at_step\":160,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000192\",\"executed_until_step\":224,\"issued_at_step\":192,\"text\":\"Pick up and hold the sample initially on the left.\",\"type\":\"issued_subtask\"}]\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "a0079e7f9e2eefa600923a17d8aea6d78e1ef7bd834edb3feb3e77e892340c67",
+      "actual_context_sha256": "eab5e65ec504365d594a8bb7e20bbef42a2cd50b381b724d57a9fabeef7d0b32",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:7-8",
+        "READ:side:left",
+        "events:7",
+        "history:7-8",
+        "mode:READ",
+        "side:left"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:d24fb6fb1077a8fbb59c18ab810e7034b46586cfa2e77179374186569d395c46:READ:none:rNone:stress0:history_withheld",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the left first, followed by the sample initially on the right., State: 54 65 27 183 231 169 182 178 49 57 48 1 251 97 212 63 188 89 255 255 255 255 255 0 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: []\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "b04e6c15ae05a673acb892436ef5a7fa3762047ee0de5327f8fe4a3b77e31317",
+      "actual_context_sha256": "30d881b2d5f094b42b77dd1d259cf3fc8dd3579804a19beaec43f78c207662c7",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:empty",
+        "READ:side:left",
+        "events:0",
+        "history:empty",
+        "mode:READ",
+        "side:left"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:b765ca89605f1dab9ee59458d686047faa7f79008d469165d8af4f9f3863117f:READ:none:rNone:stress0:history_full",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        8332,
+        3589,
+        235298,
+        17011,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the right first, followed by the sample initially on the left., State: 4 126 53 183 82 162 255 255 255 255 255 0 228 109 221 60 130 90 255 255 255 255 255 1 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000032\",\"executed_until_step\":48,\"issued_at_step\":32,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"}]\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "0a001ac0eb95d32ee037123db9d692ade15ef30bfbba1156594dba9991d7aeb1",
+      "actual_context_sha256": "da25948056ce24cd23699087452e2f773816ee7e9944e13656c2874b2999952a",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:1-2",
+        "READ:side:right",
+        "events:2",
+        "history:1-2",
+        "mode:READ",
+        "side:right"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:b765ca89605f1dab9ee59458d686047faa7f79008d469165d8af4f9f3863117f:READ:none:rNone:stress0:history_withheld",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "raw_text": "{\"媄\":[\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        255180,
+        87309,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the right first, followed by the sample initially on the left., State: 4 126 53 183 82 162 255 255 255 255 255 0 228 109 221 60 130 90 255 255 255 255 255 1 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: []\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "2481204ae495bdfda72f4d58e686a4b8fb98964e70542b79d12fa42a404ca257",
+      "actual_context_sha256": "3a3ad46b5bf77c83d3ebebf3da6319749377b0ab13b789f829a5d59e21ba8359",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": false,
+        "schema_legal": false,
+        "target_match": false,
+        "error": "Expecting ',' delimiter: line 1 column 11 (char 10)",
+        "passed": false,
+        "actual_eos_token": true,
+        "text_exact": false,
+        "formal_semantic_passed": false,
+        "strict_json_error": "Expecting ',' delimiter: line 1 column 11 (char 10)",
+        "strict_passed": false
+      },
+      "strata": [
+        "READ:history:empty",
+        "READ:side:right",
+        "events:0",
+        "history:empty",
+        "mode:READ",
+        "side:right"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:e09e29b5696103dd495383ca005676e633101edc95ce9ad443323e769c61b228:READ:none:rNone:stress0:history_full",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        8332,
+        3589,
+        235298,
+        17011,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the right first, followed by the sample initially on the left., State: 4 126 53 183 82 162 255 255 255 255 255 0 222 113 223 60 115 90 255 255 255 255 255 1 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000032\",\"executed_until_step\":64,\"issued_at_step\":32,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000064\",\"executed_until_step\":80,\"issued_at_step\":64,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"}]\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "0325bd76904edc50320a6f4a6fbd7bacc72b5630f57785bcb805c5b9d5099eff",
+      "actual_context_sha256": "0ae3d8cfcb3e9c1011809a23ad53a7e3a889eb662690e6c0437825a2a7d682ff",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:3-4",
+        "READ:side:right",
+        "events:3",
+        "history:3-4",
+        "mode:READ",
+        "side:right"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:e09e29b5696103dd495383ca005676e633101edc95ce9ad443323e769c61b228:READ:none:rNone:stress0:history_withheld",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the right first, followed by the sample initially on the left., State: 4 126 53 183 82 162 255 255 255 255 255 0 222 113 223 60 115 90 255 255 255 255 255 1 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: []\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "40b227cb7298101687b088a3a7f4010f61a4dfb3a6607e0166edef7b11d2f6d1",
+      "actual_context_sha256": "c29b46be655ba3502c4f6e5ae62f6d1d35ad5b34db10c16b720220b5623ba28a",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:empty",
+        "READ:side:right",
+        "events:0",
+        "history:empty",
+        "mode:READ",
+        "side:right"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:ee13703a107317fc8b5e16c4961700b01a3dc47d5bc42d714f14b1822f1018b1:READ:none:rNone:stress0:history_full",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        8332,
+        3589,
+        235298,
+        17011,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the right first, followed by the sample initially on the left., State: 4 126 53 183 82 162 255 255 255 255 255 0 199 159 234 60 36 85 255 255 255 255 255 6 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000032\",\"executed_until_step\":64,\"issued_at_step\":32,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000064\",\"executed_until_step\":96,\"issued_at_step\":64,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000096\",\"executed_until_step\":128,\"issued_at_step\":96,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000128\",\"executed_until_step\":160,\"issued_at_step\":128,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"}]\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "ffc97849f78fbac235a25b4ed363d5f2af36e6c66c2345ba4f3278e862d9b108",
+      "actual_context_sha256": "30e7dae6aa20dfb82d8ec65bc45c354538d0606e48c96b04434930e0b8c59d8b",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:5-6",
+        "READ:side:right",
+        "events:5",
+        "history:5-6",
+        "mode:READ",
+        "side:right"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:ee13703a107317fc8b5e16c4961700b01a3dc47d5bc42d714f14b1822f1018b1:READ:none:rNone:stress0:history_withheld",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the right first, followed by the sample initially on the left., State: 4 126 53 183 82 162 255 255 255 255 255 0 199 159 234 60 36 85 255 255 255 255 255 6 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: []\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "c7616aa955736fbe9a625907ef49fa28cf5fcc3808d18ab860f2ab24412fbfc0",
+      "actual_context_sha256": "5cabb9d7b854b86bf8675228894939f2399d48e1333854fa5920d599d05beac0",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:empty",
+        "READ:side:right",
+        "events:0",
+        "history:empty",
+        "mode:READ",
+        "side:right"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:6f7a398f70cf200decc7502afa557f436e27656ec5918bcc9f7fcd9465debf1f:READ:none:rNone:stress0:history_full",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\",\"current_progress\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        8332,
+        3589,
+        235298,
+        17011,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the right first, followed by the sample initially on the left., State: 4 126 53 183 82 162 255 255 255 255 255 0 203 168 235 63 33 82 182 178 54 58 31 1 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: [{\"decision_id\":\"h000000\",\"executed_until_step\":32,\"issued_at_step\":0,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000032\",\"executed_until_step\":64,\"issued_at_step\":32,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000064\",\"executed_until_step\":96,\"issued_at_step\":64,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000096\",\"executed_until_step\":128,\"issued_at_step\":96,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000128\",\"executed_until_step\":160,\"issued_at_step\":128,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000160\",\"executed_until_step\":192,\"issued_at_step\":160,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"},{\"decision_id\":\"h000192\",\"executed_until_step\":224,\"issued_at_step\":192,\"text\":\"Pick up and hold the sample initially on the right.\",\"type\":\"issued_subtask\"}]\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "87e794c76c3bbb82915647819ac60b6106aa437f25c5ee9ec9615dc4be9b5135",
+      "actual_context_sha256": "32d2483ff9262d8cbbd8121b9ab28a36b8c51308eddba6ace65150a250b9ce41",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:7-8",
+        "READ:side:right",
+        "events:7",
+        "history:7-8",
+        "mode:READ",
+        "side:right"
+      ]
+    },
+    {
+      "sample_id": "rm65b_dynamic_history_protocol_3000_v1:6f7a398f70cf200decc7502afa557f436e27656ec5918bcc9f7fcd9465debf1f:READ:none:rNone:stress0:history_withheld",
+      "mode": "READ",
+      "target_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "raw_text": "{\"read_ids\":[\"sample_identity\"]}",
+      "token_ids": [
+        9766,
+        1229,
+        235298,
+        2689,
+        199831,
+        14394,
+        235298,
+        34837,
+        193101,
+        1
+      ],
+      "ended_with_eos": true,
+      "actual_prefix": "Task: Please verify and return home the sample initially on the right first, followed by the sample initially on the left., State: 4 126 53 183 82 162 255 255 255 255 255 0 203 168 235 63 33 82 182 178 54 58 31 1 128 128 128 128 128 128 128 128;\nMemory index: [{\"description\":\"Last confirmed progress and unresolved requirements.\",\"slot_id\":\"current_progress\"},{\"description\":\"Observed original side and location of the sample.\",\"slot_id\":\"original_location\"},{\"description\":\"Observed identity and role of the requested sample.\",\"slot_id\":\"sample_identity\"},{\"description\":\"Observed verification status and evidence.\",\"slot_id\":\"verification_result\"}]\nMemory: {}\nHistory: []\nMode: READ\nReturn JSON {\"read_ids\":[\"slot_id\",...]}.\nResponse: ",
+      "actual_prefix_sha256": "decf4a7d8b384b5ac400cea3d2abd85c901fedac14bb44aa7f7656e14a1b09c8",
+      "actual_context_sha256": "13646bcf6a443ad2837edddad6bcd0ee04086f3f5f808214fa833588b7433b14",
+      "checks": {
+        "eos": true,
+        "nonempty": true,
+        "mode": "READ",
+        "json": true,
+        "schema_legal": true,
+        "read_set_match": true,
+        "target_match": true,
+        "passed": true,
+        "actual_eos_token": true,
+        "text_exact": true,
+        "formal_semantic_passed": true,
+        "strict_passed": true
+      },
+      "strata": [
+        "READ:history:empty",
+        "READ:side:right",
+        "events:0",
+        "history:empty",
+        "mode:READ",
+        "side:right"
+      ]
+    }
+  ],
+  "elapsed_seconds": 8.144836142193526,
+  "summary": {
+    "overall": {
+      "rows": 16,
+      "actual_eos_token": {
+        "passed": 16,
+        "eligible": 16
+      },
+      "nonempty": {
+        "passed": 16,
+        "eligible": 16
+      },
+      "json": {
+        "passed": 15,
+        "eligible": 16
+      },
+      "schema_legal": {
+        "passed": 15,
+        "eligible": 16
+      },
+      "target_match": {
+        "passed": 15,
+        "eligible": 16
+      },
+      "text_exact": {
+        "passed": 15,
+        "eligible": 16
+      },
+      "side_binding_lexical": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "semantic6": {
+        "passed": 0,
+        "eligible": 0
+      },
+      "strict_passed": {
+        "passed": 15,
+        "eligible": 16
+      }
+    },
+    "strata": {
+      "READ:history:1-2": {
+        "rows": 2,
+        "actual_eos_token": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "nonempty": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "json": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "schema_legal": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 2
+        }
+      },
+      "READ:history:3-4": {
+        "rows": 2,
+        "actual_eos_token": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "nonempty": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "json": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "schema_legal": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 2
+        }
+      },
+      "READ:history:5-6": {
+        "rows": 2,
+        "actual_eos_token": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "nonempty": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "json": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "schema_legal": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 2
+        }
+      },
+      "READ:history:7-8": {
+        "rows": 2,
+        "actual_eos_token": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "nonempty": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "json": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "schema_legal": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 2
+        }
+      },
+      "READ:history:empty": {
+        "rows": 8,
+        "actual_eos_token": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "text_exact": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 7,
+          "eligible": 8
+        }
+      },
+      "READ:side:left": {
+        "rows": 8,
+        "actual_eos_token": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "text_exact": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 8,
+          "eligible": 8
+        }
+      },
+      "READ:side:right": {
+        "rows": 8,
+        "actual_eos_token": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "text_exact": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 7,
+          "eligible": 8
+        }
+      },
+      "events:0": {
+        "rows": 8,
+        "actual_eos_token": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "text_exact": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 7,
+          "eligible": 8
+        }
+      },
+      "events:1": {
+        "rows": 1,
+        "actual_eos_token": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "nonempty": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "json": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "schema_legal": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "target_match": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "text_exact": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 1,
+          "eligible": 1
+        }
+      },
+      "events:2": {
+        "rows": 1,
+        "actual_eos_token": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "nonempty": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "json": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "schema_legal": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "target_match": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "text_exact": {
+          "passed": 1,
+          "eligible": 1
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 1,
+          "eligible": 1
+        }
+      },
+      "events:3": {
+        "rows": 2,
+        "actual_eos_token": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "nonempty": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "json": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "schema_legal": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 2
+        }
+      },
+      "events:5": {
+        "rows": 2,
+        "actual_eos_token": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "nonempty": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "json": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "schema_legal": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 2
+        }
+      },
+      "events:7": {
+        "rows": 2,
+        "actual_eos_token": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "nonempty": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "json": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "schema_legal": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 2
+        }
+      },
+      "history:1-2": {
+        "rows": 2,
+        "actual_eos_token": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "nonempty": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "json": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "schema_legal": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 2
+        }
+      },
+      "history:3-4": {
+        "rows": 2,
+        "actual_eos_token": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "nonempty": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "json": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "schema_legal": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 2
+        }
+      },
+      "history:5-6": {
+        "rows": 2,
+        "actual_eos_token": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "nonempty": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "json": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "schema_legal": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 2
+        }
+      },
+      "history:7-8": {
+        "rows": 2,
+        "actual_eos_token": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "nonempty": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "json": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "schema_legal": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "target_match": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "text_exact": {
+          "passed": 2,
+          "eligible": 2
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 2,
+          "eligible": 2
+        }
+      },
+      "history:empty": {
+        "rows": 8,
+        "actual_eos_token": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "text_exact": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 7,
+          "eligible": 8
+        }
+      },
+      "mode:READ": {
+        "rows": 16,
+        "actual_eos_token": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "nonempty": {
+          "passed": 16,
+          "eligible": 16
+        },
+        "json": {
+          "passed": 15,
+          "eligible": 16
+        },
+        "schema_legal": {
+          "passed": 15,
+          "eligible": 16
+        },
+        "target_match": {
+          "passed": 15,
+          "eligible": 16
+        },
+        "text_exact": {
+          "passed": 15,
+          "eligible": 16
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 15,
+          "eligible": 16
+        }
+      },
+      "side:left": {
+        "rows": 8,
+        "actual_eos_token": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "text_exact": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 8,
+          "eligible": 8
+        }
+      },
+      "side:right": {
+        "rows": 8,
+        "actual_eos_token": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "nonempty": {
+          "passed": 8,
+          "eligible": 8
+        },
+        "json": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "schema_legal": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "target_match": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "text_exact": {
+          "passed": 7,
+          "eligible": 8
+        },
+        "side_binding_lexical": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "semantic6": {
+          "passed": 0,
+          "eligible": 0
+        },
+        "strict_passed": {
+          "passed": 7,
+          "eligible": 8
+        }
+      }
+    },
+    "all_strict_passed": false
+  }
+}

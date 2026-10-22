@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-22",
+  "scope": "meaningful CPU/mocks and actualContinuousHandMapping interface only; no SAPIEN scene, actual contact or grasp/turn validation",
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "contact_entity_id_normal_impulse_side_and_orientation",
+      "passed": true,
+      "detail": {
+        "normal_only": true,
+        "entity_ID_exact": true,
+        "side_and_actual_inspire_prefix": true,
+        "order_reversal": true
+      }
+    },
+    {
+      "name": "no_write_and_same_tick_idempotence",
+      "passed": true,
+      "detail": {
+        "no_mock_state_or_drive_write": true,
+        "cache_defensive_copy": true,
+        "same_tick_no_double_filter_streak": true
+      }
+    },
+    {
+      "name": "wrong_clock_and_invalid_tick_rejection",
+      "passed": true,
+      "detail": {
+        "bad_type_fraction_negative_stale_and_skipped_ticks_rejected": true,
+        "runtime_dt_and_driver_revalidated": true,
+        "unexecuted_prior_proposal_rejected": true
+      }
+    },
+    {
+      "name": "first_contact_latch_and_drive_origin",
+      "passed": true,
+      "detail": {
+        "first_contact_latch_actual_q_slew_rad": 0.0048,
+        "first_segment_from_actual_drive_despite_pd_error": true
+      }
+    },
+    {
+      "name": "independent_force_feedback_pair_mapping_and_closure_sign",
+      "passed": true,
+      "detail": {
+        "independent_index_thumb_force_signs": true,
+        "opposition_channel5_supported": true,
+        "reverse_closure_sign_supported": true
+      }
+    },
+    {
+      "name": "sdk_primary_nested_mimic_speed_and_screened_bounds",
+      "passed": true,
+      "detail": {
+        "max_primary_rad_s": 0.08000000000000045,
+        "max_nested_follower_rad_s": 0.029999999999996696,
+        "nested_negative_mimic_limits_obeyed": true,
+        "screened_close_not_exceeded": true
+      }
+    },
+    {
+      "name": "invalid_actual_readback_contact_and_atomic_failure",
+      "passed": true,
+      "detail": {
+        "nonfinite_extreme_actual_and_drive_rejected": true,
+        "invalid_contacts_rejected": "no partial filter/latch/target state commit",
+        "pair_validation": true
+      }
+    },
+    {
+      "name": "three_boundary_diagnostic_readiness_only",
+      "passed": true,
+      "detail": {
+        "requires_three_distinct_opposed_boundaries": true,
+        "contact_loss_resets": true,
+        "never_grasp_turn_success": true
+      }
+    },
+    {
+      "name": "actual_retained_manifest_and_continuous_mapping_interface",
+      "passed": true,
+      "detail": {
+        "actual_manifest_mapping_loaded": true,
+        "primary6": [
+          "l_inspire_left_little_1_joint",
+          "l_inspire_left_ring_1_joint",
+          "l_inspire_left_middle_1_joint",
+          "l_inspire_left_index_1_joint",
+          "l_inspire_left_thumb_2_joint",
+          "l_inspire_left_thumb_1_joint"
+        ],
+        "mapped_joint_count": 12,
+        "actual_metadata_constructor_and_proposal_passed": true
+      }
+    },
+    {
+      "name": "static_no_simulator_or_drive_writer_calls",
+      "passed": true,
+      "detail": {
+        "forbidden_simulator_actuator_call_sites": []
+      }
+    },
+    {
+      "name": "raw_sdk_types_and_complete_mimic_position_endpoints",
+      "passed": true,
+      "detail": {
+        "raw_bool_string_nonfinite_range_shape_rejected": true,
+        "mimic_endpoint_position_limits_checked": true
+      }
+    }
+  ],
+  "source_sha256": {
+    "controller": "202dee28d41db8655b6bbaa02b3560f7a3439de949fe99790d5355ba351f727d",
+    "actual_continuous_mapping": "18716a2e0aca64425f1a2a3936bfa4e1f7886b3df7fa31f3b37284e779746c19",
+    "retained_source_manifest": "6cac675e0f2228d3b233f82b7082b8df17860d2e18bfd7ba7dcc67ccf3c5d6e5"
+  },
+  "controller_source_changed_by_audit": true,
+  "external_mapping_or_manifest_modified": false,
+  "actual_physical_trials": 0,
+  "actual_cap_contact_validated": false,
+  "grasp_or_turn_success": false,
+  "original_empty_task_or_frozen_assembly_modified": false,
+  "test_source_sha256": "fb7d26eb20992c73c590edf510bf31e3b8d2bf41ac01d26414bee704db926dc3",
+  "behavioral_fixes": [
+    "strict at most0.08rad/s for all primary and inducedmimic joint rates",
+    "initial slew origin is actual drive, not measuredPD offset",
+    "explicit force groupindex/thumb to actuator(3,4) or(3,5) mapping",
+    "actualtick and15step/4ms clock revalidation; refuse skipped/stale/unexecuted windows",
+    "feedback closure direction and screenedopenclose interval enforced",
+    "completeprimary/mimic endpoint and velocity validation through originalContinuousHandMapping",
+    "invalid measured/drive/contact data rejected before controllerstate commit",
+    "defensive cache, no simulator/drive writer calls"
+  ]
+}

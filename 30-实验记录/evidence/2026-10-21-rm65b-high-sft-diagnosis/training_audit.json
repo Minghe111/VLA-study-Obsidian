@@ -1,0 +1,596 @@
+{
+  "format": "rm65b_history3000_training_readonly_audit_v1",
+  "created_date_local": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "scope": "Read-only analysis of saved s024000 evidence and local source; the only new write is this /tmp diagnostic artifact. No source, notes, model, labels or configs changed.",
+  "evidence_inputs": [
+    {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-history3000-migrate166/status_20261021_final/train_s024000_report.json",
+      "sha256": "912c54955c602a907007a8977e8f8ce8e07b6f4b142c08d7727080b4f5245b4e"
+    },
+    {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-history3000-migrate166/status_20261021_final/eval_s024000_summary.json",
+      "sha256": "3a2c7dd05498a1d611f9439c95dfa6a04dddb492ec3512a1806da3522562ef4e"
+    },
+    {
+      "path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-19-rm65b-history3000-migrate166/status_20261021_final/supervisor_final_summary.json",
+      "sha256": "9eee88ab87b1fd41f7085aa357b4c4db997bb8c542ae486fb2ee8d7c4533b30e"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/train.jsonl",
+      "sha256": "3adeffbd18d7890405c399659a2029baea84f24701743ee3af0db55d151dd8f1"
+    },
+    {
+      "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/protocol_history_3000_20261019_v1/data/history3000_labels_v1/val.jsonl",
+      "sha256": "7b67548f34e323451436447858e75d722ed46d4e905e919a96b368540aed7773"
+    }
+  ],
+  "source_provenance": {
+    "training_entrypoint_local_sha256": "dd1574deefa1ceb40eb832ad5b3cbe5369daf08579b98593da0050252582b94d",
+    "training_report_entrypoint_sha256": "dd1574deefa1ceb40eb832ad5b3cbe5369daf08579b98593da0050252582b94d",
+    "training_entrypoint_matches_saved_report": true,
+    "scope_limit": "Other local source files were inspected statically; per-file identity to every remote runtime module was not independently re-proven by this audit."
+  },
+  "measured_saved_evidence": {
+    "branch_updates": 24000,
+    "historical_source_updates_separate": 2200,
+    "presentations_branch": 96000,
+    "epochs_branch": 32.0,
+    "mode_rows_each": 1000,
+    "sampler": {
+      "microbatch_cursor_before": 94000,
+      "microbatch_cursor_after": 96000,
+      "high_draws_after": 96000,
+      "high_epoch_counter_zero_based_after": 31,
+      "high_cursor_after": 3000,
+      "shuffle": true,
+      "seed": 20261019,
+      "interpretation": "96000 presentations = 32 full epochs of balanced train3000; epoch31/cursor3000 is its zero-based boundary representation."
+    },
+    "last_saved_training_segment": {
+      "additional_updates": 500,
+      "branch_step_start": 23500,
+      "branch_step_end": 24000,
+      "metric_aggregation": "Weighted mean of each reported chunk metric by chunk updates; final 500 updates only, not all 24000.",
+      "weighted_metrics": {
+        "loss": 0.015484864751993883,
+        "high_ce": 0.014974480415952712,
+        "kv_anchor": 0.0005103843360411702,
+        "grad_norm": 0.3300853617042303
+      }
+    },
+    "gradient_receipt": {
+      "at_branch_step": 23501,
+      "all144_received_finite_grad": true,
+      "changed_tensors": 144
+    },
+    "gradient_audit": {
+      "trainable_tensor_count": 144,
+      "trainable_finite_grad": 144,
+      "frozen_with_grad": 0,
+      "changed_trainable_tensors": 144
+    },
+    "freeze_exact": {
+      "parameters": true,
+      "buffers": true,
+      "parameter_sha256_before": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652",
+      "parameter_sha256_after": "1a695a0cb9531191c466d22f5e68f85aedee9b7f7b0048d4b3f4f3ab75200652",
+      "buffer_sha256_before": "a94a7bc0119a24b4331430d3099dd37e98e92b4793e22e7d7972058df56bf672",
+      "buffer_sha256_after": "a94a7bc0119a24b4331430d3099dd37e98e92b4793e22e7d7972058df56bf672"
+    },
+    "gradient_interpretation": "Finite gradients and changed adapters establish that updates occurred; they do not establish correct WRITE decision learning or semantic convergence.",
+    "strict_generation_by_mode": {
+      "val180": {
+        "mode:READ": {
+          "passed": 60,
+          "eligible": 60
+        },
+        "mode:SUBTASK": {
+          "passed": 58,
+          "eligible": 60
+        },
+        "mode:WRITE": {
+          "passed": 30,
+          "eligible": 60
+        }
+      },
+      "train_quick96": {
+        "mode:READ": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "mode:SUBTASK": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "mode:WRITE": {
+          "passed": 23,
+          "eligible": 32
+        }
+      },
+      "revision_only40": {
+        "mode:WRITE": {
+          "passed": 20,
+          "eligible": 40
+        }
+      },
+      "history_ablation16": {
+        "mode:READ": {
+          "passed": 15,
+          "eligible": 16
+        }
+      },
+      "legacy_regression96": {
+        "mode:READ": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "mode:SUBTASK": {
+          "passed": 32,
+          "eligible": 32
+        },
+        "mode:WRITE": {
+          "passed": 24,
+          "eligible": 32
+        }
+      }
+    },
+    "write_failure_first_difference": {
+      "train_quick96": {
+        "method": "First differing operation field after JSON parse, in order op/empty then slot_id then value; invalid JSON classified syntax. Not an independent semantic scorer.",
+        "input_path": "/tmp/166_failure_analysis_20261021/train_quick96.json",
+        "input_sha256": "b39060b3815a9e864b8def180ee6de8a9111a891269acf9c5da8576cbb4f6a00",
+        "failure_count": 9,
+        "groups": [
+          {
+            "target_op": "CORRECT",
+            "predicted_op": "EMPTY",
+            "first_differing_field": "op_or_empty",
+            "count": 3
+          },
+          {
+            "target_op": "CORRECT",
+            "predicted_op": "KEEP",
+            "first_differing_field": "op_or_empty",
+            "count": 2
+          },
+          {
+            "target_op": "KEEP",
+            "predicted_op": "EMPTY",
+            "first_differing_field": "op_or_empty",
+            "count": 1
+          },
+          {
+            "target_op": "KEEP",
+            "predicted_op": "KEEP",
+            "first_differing_field": "slot_id",
+            "count": 2
+          },
+          {
+            "target_op": "WRITE",
+            "predicted_op": "INVALID_JSON",
+            "first_differing_field": "syntax",
+            "count": 1
+          }
+        ]
+      },
+      "val180": {
+        "method": "First differing operation field after JSON parse, in order op/empty then slot_id then value; invalid JSON classified syntax. Not an independent semantic scorer.",
+        "input_path": "/tmp/166_failure_analysis_20261021/val180.json",
+        "input_sha256": "de229181bff25d03094f56e2e12cf0767560bfa9b510f3d5a5f50fb3c92439c8",
+        "failure_count": 30,
+        "groups": [
+          {
+            "target_op": "CORRECT",
+            "predicted_op": "CORRECT",
+            "first_differing_field": "slot_id",
+            "count": 3
+          },
+          {
+            "target_op": "CORRECT",
+            "predicted_op": "EMPTY",
+            "first_differing_field": "op_or_empty",
+            "count": 6
+          },
+          {
+            "target_op": "CORRECT",
+            "predicted_op": "KEEP",
+            "first_differing_field": "op_or_empty",
+            "count": 4
+          },
+          {
+            "target_op": "EMPTY",
+            "predicted_op": "CORRECT",
+            "first_differing_field": "op_or_empty",
+            "count": 4
+          },
+          {
+            "target_op": "KEEP",
+            "predicted_op": "CORRECT",
+            "first_differing_field": "op_or_empty",
+            "count": 4
+          },
+          {
+            "target_op": "KEEP",
+            "predicted_op": "INVALID_JSON",
+            "first_differing_field": "syntax",
+            "count": 1
+          },
+          {
+            "target_op": "KEEP",
+            "predicted_op": "WRITE",
+            "first_differing_field": "op_or_empty",
+            "count": 2
+          },
+          {
+            "target_op": "WRITE",
+            "predicted_op": "WRITE",
+            "first_differing_field": "slot_id",
+            "count": 2
+          },
+          {
+            "target_op": "WRITE",
+            "predicted_op": "WRITE",
+            "first_differing_field": "value",
+            "count": 4
+          }
+        ]
+      },
+      "revision_only40": {
+        "method": "First differing operation field after JSON parse, in order op/empty then slot_id then value; invalid JSON classified syntax. Not an independent semantic scorer.",
+        "input_path": "/tmp/166_failure_analysis_20261021/revision_only40.json",
+        "input_sha256": "0c2ef8cd492fee3ab8448b3423905921d400a4375db992288a390e9a62ee1c9f",
+        "failure_count": 20,
+        "groups": [
+          {
+            "target_op": "CORRECT",
+            "predicted_op": "EMPTY",
+            "first_differing_field": "op_or_empty",
+            "count": 5
+          },
+          {
+            "target_op": "CORRECT",
+            "predicted_op": "KEEP",
+            "first_differing_field": "op_or_empty",
+            "count": 5
+          },
+          {
+            "target_op": "KEEP",
+            "predicted_op": "CORRECT",
+            "first_differing_field": "op_or_empty",
+            "count": 1
+          },
+          {
+            "target_op": "KEEP",
+            "predicted_op": "INVALID_JSON",
+            "first_differing_field": "syntax",
+            "count": 4
+          },
+          {
+            "target_op": "WRITE",
+            "predicted_op": "WRITE",
+            "first_differing_field": "value",
+            "count": 5
+          }
+        ]
+      }
+    },
+    "training_loss_by_mode_available": false,
+    "training_loss_by_mode_limit": "Current worker/report aggregate high CE across all modes; no saved per-sample or per-field CE was used here."
+  },
+  "static_ce_and_inference_audit": {
+    "evidence_level": "Static source consistency plus saved CPU interface acceptance; no new numerical forward or inference comparison.",
+    "target_mask_and_shift": {
+      "finding": "All valid target tokens including EOS are supervised. Final valid prefix hidden predicts target[0]; previous target hidden predicts next target. Padding excluded.",
+      "sources": [
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/data/datasets/recap/hierarchical_collator.py",
+          "start_line": 159,
+          "end_line": 178,
+          "sha256": "9a09ec03cf5e25c70177c962575cf471831fe66c894a55a7397dc8f13df0c3f9"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/tasks/recap_hier.py",
+          "start_line": 45,
+          "end_line": 123,
+          "sha256": "abc5f096f3868f9fd703747c069a3081f2515d7972d5b24ace64801245bce356"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/recap_tokenizer.py",
+          "start_line": 178,
+          "end_line": 192,
+          "sha256": "317d152a2644d8552f7d507f42c1bf43fc672020b169747a7b1d1ef034e43ffa"
+        }
+      ]
+    },
+    "readout": {
+      "finding": "CE and native autoregressive generation both call the same llm.embedder.decode. Decode is F.linear with tied embedding.weight; no separate new random LM head exists in this implementation. Constructor normal initialization is overridden by strict full-checkpoint loading and cannot by itself establish a random runtime readout.",
+      "sources": [
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/modules/gemma.py",
+          "start_line": 184,
+          "end_line": 203,
+          "sha256": "8321b272f335e6bb5eedc7212575ca9e62b81ec8641b3d0f9dbaab181b3a4800"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/tasks/recap_hier.py",
+          "start_line": 107,
+          "end_line": 109,
+          "sha256": "abc5f096f3868f9fd703747c069a3081f2515d7972d5b24ace64801245bce356"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/tasks/recap_hier.py",
+          "start_line": 292,
+          "end_line": 329,
+          "sha256": "abc5f096f3868f9fd703747c069a3081f2515d7972d5b24ace64801245bce356"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/__init__.py",
+          "start_line": 295,
+          "end_line": 302,
+          "sha256": "a78e99ef7f9e368459b1de41c88973ab2ded2a048a58aed1d60ed10917098d93"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/checkpoint.py",
+          "start_line": 161,
+          "end_line": 166,
+          "sha256": "3aaeac4d086f86b4b8b0a993d3410a101e4c5303f4eddb8309aa55d5c6769910"
+        }
+      ]
+    },
+    "prompt_history": {
+      "finding": "Training and generation use build_high_prefix and typed history. Verified SFT omits advantage conditioning on both paths. Separate truth_facts remain evidence-only; actual prefixes contain task, memory and history from which sample_identity contradiction is directly inferable. Absence of a standalone visible_facts field is not evidence of missing information.",
+      "sources": [
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/data/datasets/recap/hierarchical_collator.py",
+          "start_line": 203,
+          "end_line": 222,
+          "sha256": "9a09ec03cf5e25c70177c962575cf471831fe66c894a55a7397dc8f13df0c3f9"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/data/datasets/recap/hierarchical_collator.py",
+          "start_line": 42,
+          "end_line": 60,
+          "sha256": "9a09ec03cf5e25c70177c962575cf471831fe66c894a55a7397dc8f13df0c3f9"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py",
+          "start_line": 470,
+          "end_line": 483,
+          "sha256": "ced775fdf711b671fe5560572176b798d28bf6992de4d5f3670690ad977ea75e"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/validate_history3000_sft.py",
+          "start_line": 311,
+          "end_line": 321,
+          "sha256": "fc0d5b3a0a38f75018abea0dfd4b2f4fd4f8bb9e5ab36d0d7c240fe5b86a0e73"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/build_history3000.py",
+          "start_line": 242,
+          "end_line": 265,
+          "sha256": "1d05f44546bf23611b3ea016ef511289124faeaf70e281d1d9212025cecde8b8"
+        }
+      ]
+    },
+    "no_silent_truncation": {
+      "finding": "Prefix and target encoders fail on overflow; collator and runtime enforce text budget. Stored dataset length metadata are well below configured limits; failure is mainly operation/slot selection, not an exhausted target budget.",
+      "configured_limits": {
+        "prefix": 1400,
+        "target": 96,
+        "model_text_budget": 2048
+      },
+      "dataset_token_lengths": {
+        "train": {
+          "READ": {
+            "rows": 1000,
+            "target_min": 10,
+            "target_median": 14.0,
+            "target_max": 14,
+            "target_mean": 13.548,
+            "prefix_min": 262,
+            "prefix_max": 690,
+            "text_prefix_plus_target_max": 704
+          },
+          "WRITE": {
+            "rows": 1000,
+            "target_min": 5,
+            "target_median": 29.0,
+            "target_max": 54,
+            "target_mean": 30.168,
+            "prefix_min": 323,
+            "prefix_max": 813,
+            "text_prefix_plus_target_max": 867
+          },
+          "SUBTASK": {
+            "rows": 1000,
+            "target_min": 11,
+            "target_median": 12.0,
+            "target_max": 13,
+            "target_mean": 11.991,
+            "prefix_min": 303,
+            "prefix_max": 845,
+            "text_prefix_plus_target_max": 858
+          }
+        },
+        "val": {
+          "READ": {
+            "rows": 200,
+            "target_min": 10,
+            "target_median": 14.0,
+            "target_max": 14,
+            "target_mean": 13.78,
+            "prefix_min": 260,
+            "prefix_max": 683,
+            "text_prefix_plus_target_max": 697
+          },
+          "WRITE": {
+            "rows": 200,
+            "target_min": 5,
+            "target_median": 29.0,
+            "target_max": 54,
+            "target_mean": 30.43,
+            "prefix_min": 321,
+            "prefix_max": 806,
+            "text_prefix_plus_target_max": 860
+          },
+          "SUBTASK": {
+            "rows": 200,
+            "target_min": 13,
+            "target_median": 13.0,
+            "target_max": 13,
+            "target_mean": 13,
+            "prefix_min": 310,
+            "prefix_max": 841,
+            "text_prefix_plus_target_max": 854
+          }
+        }
+      },
+      "sources": [
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/recap_tokenizer.py",
+          "start_line": 178,
+          "end_line": 191,
+          "sha256": "317d152a2644d8552f7d507f42c1bf43fc672020b169747a7b1d1ef034e43ffa"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/data/datasets/recap/hierarchical_collator.py",
+          "start_line": 109,
+          "end_line": 115,
+          "sha256": "9a09ec03cf5e25c70177c962575cf471831fe66c894a55a7397dc8f13df0c3f9"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/workers/rollout/hf/hierarchical_recap_worker.py",
+          "start_line": 484,
+          "end_line": 489,
+          "sha256": "ced775fdf711b671fe5560572176b798d28bf6992de4d5f3670690ad977ea75e"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/configs/rm65b_history3000_sft.yaml",
+          "start_line": 175,
+          "end_line": 181,
+          "sha256": "604c3c26324844cc3435e1c3ab3f546cd65ec4ae32f696c2a5999dbc171717d6"
+        }
+      ]
+    },
+    "numerical_alignment_limit": "No new cached-vs-full logits equality test was run. The historical verify_protocol_logit_alignment.py probe targets an older isolated protocol stage and does not prove numerical equality for this final language_warmup checkpoint."
+  },
+  "kv_anchor_scope": {
+    "evidence_level": "Static source and saved run contract",
+    "cadence": "Every microbatch receives a separate one-of-eight fixed original-task anchor; not merely every fourth microbatch.",
+    "teacher": "Same frozen original SFT shared base with all adapters disabled, no_grad; MEM history fields stripped.",
+    "positions": "All valid prefix positions (image tokens and original instruction/state text) across all language layers K and V, masked raw mean squared error.",
+    "not_constrained": "The history3000 target output sequence is not teacher-forced to match original teacher K/V. No FM/action-expert/value/RL objective is enabled.",
+    "retention_interpretation": "Anchor/holdout local preservation passes, but this cannot establish zero CE/KV gradient interference or robot success.",
+    "sources": [
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/train_history3000.py",
+        "start_line": 402,
+        "end_line": 418,
+        "sha256": "dd1574deefa1ceb40eb832ad5b3cbe5369daf08579b98593da0050252582b94d"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/tasks/recap_hier.py",
+        "start_line": 143,
+        "end_line": 191,
+        "sha256": "abc5f096f3868f9fd703747c069a3081f2515d7972d5b24ace64801245bce356"
+      },
+      {
+        "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/tasks/recap_hier.py",
+        "start_line": 229,
+        "end_line": 258,
+        "sha256": "abc5f096f3868f9fd703747c069a3081f2515d7972d5b24ace64801245bce356"
+      }
+    ]
+  },
+  "candidate_causes_ranked": [
+    {
+      "rank": 1,
+      "candidate": "WRITE semantic branch/slot learning remains inadequate on training samples and worsens on held-out families",
+      "evidence_level": "Observed failure localization; root cause requires dataset-rule audit",
+      "support": "train_quick96 READ32/32 SUBTASK32/32 WRITE23/32; val180 READ60/60 SUBTASK58/60 WRITE30/60. Training failure op/slot decisions dominate; sample_identity contradiction is visible in actual prefixes.",
+      "causality_limit": "Does not separate supervision-rule ambiguity, optimization, representation or objective weighting."
+    },
+    {
+      "rank": 2,
+      "candidate": "Token-average CE underweights critical decisions in long WRITE answers and hides errors in template tokens",
+      "evidence_level": "Confirmed objective mechanism; causal contribution is a hypothesis",
+      "support": "text_loss averages all target tokens. EMPTY5, KEEP23, WRITE/CORRECT35-54 tokens; equal sample weight gives a one-token error coefficient up to 54/5=10.8 times lower in long answers. Last500 mean high CE~0.01497 coexists with nine train generation failures.",
+      "causality_limit": "No fieldwise CE, first-error probability or gradient attribution measured; cannot declare this the sole or leading cause before dataset-rule audit.",
+      "sources": [
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/tasks/recap_hier.py",
+          "start_line": 99,
+          "end_line": 123,
+          "sha256": "abc5f096f3868f9fd703747c069a3081f2515d7972d5b24ace64801245bce356"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/tasks/recap_hier.py",
+          "start_line": 241,
+          "end_line": 257,
+          "sha256": "abc5f096f3868f9fd703747c069a3081f2515d7972d5b24ace64801245bce356"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "candidate": "KV retention may compete with CE through shared LoRA parameters",
+      "evidence_level": "Plausible, untested ablation hypothesis",
+      "support": "Both losses update shared language attention LoRA every microbatch.",
+      "causality_limit": "Scalar CE~0.01497 versus KV~0.000510 is not a comparison of gradient influence. No gradient cosine or lower-KV control exists in this audit."
+    },
+    {
+      "rank": 4,
+      "candidate": "Restricted attention-only LoRA and fixed LR may limit adaptation or precise convergence",
+      "evidence_level": "Plausible, untested optimization/capacity hypothesis",
+      "support": "18 layers q/k/v/o rank16 alpha16; 3,686,400 trainable parameters. MLP/norm/embedding/vision/action frozen. AdamW5e-5 weight_decay0 no scheduler, micro1 accum4 clip1.",
+      "causality_limit": "No rank, module-unfreeze, LR-decay or no-KV comparator; 32 epochs alone do not identify a capacity ceiling.",
+      "sources": [
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/train_history3000.py",
+          "start_line": 57,
+          "end_line": 71,
+          "sha256": "dd1574deefa1ceb40eb832ad5b3cbe5369daf08579b98593da0050252582b94d"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/train_history3000.py",
+          "start_line": 127,
+          "end_line": 139,
+          "sha256": "dd1574deefa1ceb40eb832ad5b3cbe5369daf08579b98593da0050252582b94d"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/scripts/train_history3000.py",
+          "start_line": 359,
+          "end_line": 365,
+          "sha256": "dd1574deefa1ceb40eb832ad5b3cbe5369daf08579b98593da0050252582b94d"
+        },
+        {
+          "path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/code/RLinf/rlinf/models/embodiment/openpi/recap_lora.py",
+          "start_line": 183,
+          "end_line": 223,
+          "sha256": "0ca7b744ef98abe1a7bb2a10c9542305653bbc26f2820d38878bd7c061a0c474"
+        }
+      ]
+    }
+  ],
+  "not_supported_as_current_explanation": [
+    "No training update occurred",
+    "All three high-level modes collapsed",
+    "A newly random separate LM head caused failure",
+    "Obvious target shift or loss mask omission",
+    "Silent text truncation",
+    "Training sampler omitted a mode",
+    "KV teacher directly constrains all new generated-answer tokens"
+  ],
+  "not_performed": [
+    "Any training or optimizer update",
+    "Any model reload or new inference",
+    "Any install",
+    "Any SSH by this training audit agent",
+    "Any code, config, label, note or Git modification",
+    "Gradient cosine or per-objective gradient norm measurement",
+    "KV ablation",
+    "Fieldwise or per-token numerical CE/logit diagnostic"
+  ],
+  "recommended_diagnostic_order": "First settle WRITE label determinacy and visible-context rules, then inspect fieldwise/first-error token diagnostics, then CE-KV gradient conflict, finally LR/capacity controls. No model experiment was run for this artifact."
+}

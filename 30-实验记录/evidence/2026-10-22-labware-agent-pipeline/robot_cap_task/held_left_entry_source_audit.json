@@ -1,0 +1,106 @@
+{
+  "source_sha256": {
+    "held_left_planner.py": "07c2fae9779d1339719508f3f36372a959fd68143d03f8b32e6182195f542f23",
+    "left_cap_contact_probe.py": "a075af8dd6ab38f9ba6fbcb5120383c725ae34db38ab7635c888efbe2f28c100",
+    "left_cap_contact_task.py": "38bbfea9850a3329b9f556ba6012ca28015157309a56dff240319ff2a477db85"
+  },
+  "scope": "Read-only source and actual helper CPU negativecontrol; no scene/physics/actualpathvalidation",
+  "new_entry_control_scope": {
+    "actual_q36_from_live_art": true,
+    "every_new_action_from_actual_drive24": true,
+    "rightarmdrive_fixed_with_originalrightfeedback": true,
+    "metadata_rightactions_not_used": true,
+    "partial_command_not_exported_as_complete_transition": true,
+    "controller_created_after_actualleftprepare_andapproach": true
+  },
+  "moving_scope_negative_controls": [
+    {
+      "collision_pair": [
+        "r_inspire_right_ring_2",
+        "bottle"
+      ],
+      "complete_held_audit_passed": false,
+      "moving_left_scoped_passed": true,
+      "expected_frozen_pair_outside_scopedcheck": true
+    },
+    {
+      "collision_pair": [
+        "l_inspire_left_index_2",
+        "cap"
+      ],
+      "complete_held_audit_passed": false,
+      "moving_left_scoped_passed": false,
+      "expected_frozen_pair_outside_scopedcheck": false
+    },
+    {
+      "collision_pair": [
+        "l_inspire_left_index_2",
+        "bottle"
+      ],
+      "complete_held_audit_passed": false,
+      "moving_left_scoped_passed": false,
+      "expected_frozen_pair_outside_scopedcheck": false
+    },
+    {
+      "collision_pair": [
+        "l_inspire_left_index_2",
+        "r_inspire_right_index_2"
+      ],
+      "complete_held_audit_passed": false,
+      "moving_left_scoped_passed": false,
+      "expected_frozen_pair_outside_scopedcheck": false
+    },
+    {
+      "collision_pair": [
+        "l_inspire_left_index_2",
+        "table"
+      ],
+      "complete_held_audit_passed": false,
+      "moving_left_scoped_passed": false,
+      "expected_frozen_pair_outside_scopedcheck": false
+    },
+    {
+      "collision_pair": [
+        "l_inspire_left_index_2",
+        "pill_11"
+      ],
+      "complete_held_audit_passed": false,
+      "moving_left_scoped_passed": false,
+      "expected_frozen_pair_outside_scopedcheck": false
+    }
+  ],
+  "actualdynamichelper_exec_valid_clear_nonempty_path_passed": true,
+  "actualdynamichelper_empty_path_rejected": true,
+  "measured_vs_drive_start_discrepancy_example": {
+    "actual_static_snapshot": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/static_hold_probes/held115_static_reference_v1/actual_terminal_snapshot.json",
+    "measured_leftarm6": [
+      -1.4337589740753174,
+      -0.17371128499507904,
+      -1.284809947013855,
+      0.7787038683891296,
+      -0.5827764868736267,
+      0.9314514398574829
+    ],
+    "actual_drive_leftarm6": [
+      -1.4338856935501099,
+      -0.17370359599590302,
+      -1.2848105430603027,
+      0.7786584496498108,
+      -0.5827611684799194,
+      0.9314123392105103
+    ],
+    "max_abs_difference_rad": 0.00012671947479248047,
+    "source_at_review": "Revisedactualentrycapturesactualdrive_leftonce, auditsnp.vstack([actualdrive_left,endpoint])withautomaticmeasuredstart, andbuildsquinticfromthesamecapture; executedlineiscovered",
+    "action": "Earlierfailurepreserved; sourceownerrevisedauditpathanddynamicindentation; auditoronlyrechecks"
+  },
+  "new_physical_trials": 0,
+  "physical_collision_masks_changed": false,
+  "caller_source_modified_by_auditor": false,
+  "interpretation": "Moving-left sampled scope is explicitly narrower than complete heldbaseline-only audit; it cannot inherit that audit acceptance or be described as checking allright collisions.",
+  "test_sources_sha256": {
+    "held_left_entry_source_audit.py": "60f13db404b526bc88a7b522c7f2f36b700e3ba9a78e274435bbf2f0e8d53e39",
+    "held_left_planner_independent_audit.py": "c3014810779ec9dd9d7df32549ae7fb9197da4d9e99250c0c0e7232a9463a7f9"
+  },
+  "prior_failure_evidence": "held_left_entry_source_audit/entry_40cf66_dynamic_compile_failure.json",
+  "runtime_test_process_exit_code": 0
+}

@@ -1,0 +1,39 @@
+{
+  "reviewer": "current assistant, actual visual inspection; not human or physical calibration",
+  "montage": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v2_head_framed/episode_0000000_keyframes.png",
+  "source_hdf5": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v2_head_framed/data/episode_0000000.hdf5",
+  "source_hdf5_sha256": "18ae2495bcb29049b67d59040444e10f3c3d15b6ddd6463cce47d702ab82e794",
+  "reviewed_stages": [
+    "prepare",
+    "approach",
+    "airborne opposing grasp",
+    "release",
+    "final stored observation"
+  ],
+  "head_crop_problem_fixed": true,
+  "findings": [
+    "The head image now contains the full bottle from its top opening to its bottom in all five inspected stages.",
+    "During grasp and release, fingers naturally occlude parts of the vessel; these occlusions are present in stored RGB and were not filled or edited.",
+    "Head, left-wrist and right-wrist views are distinct; the right-wrist view follows the active right hand, and the left-wrist view remains consistent with the inactive left side.",
+    "Both wrist images at all five selected frames are pixel-identical to the earlier v1 capture; head RGB changes as expected from the new runtime optical pitch."
+  ],
+  "whole_dataset_geometry_framing_check": {
+    "frames": 389,
+    "minimum_margin_pixels": 142.03937182706943,
+    "all_projected_target_geometry_inside": true,
+    "threshold_pixels": 40
+  },
+  "numeric_replay_max_differences_from_v1": {
+    "state/vector": 0.0,
+    "action/vector": 0.0,
+    "next_state/vector": 0.0
+  },
+  "limitations": [
+    "Camera transforms remain simulation runtime presets, not measured physical D435 calibration.",
+    "Geometric field-of-view inclusion does not imply the object is unoccluded by fingers.",
+    "Only the minimum empty-bottle task and its actual SDK24 replay are validated; this is not an autonomous screw-cap or tablet-pouring demonstration.",
+    "Visual quality review concerns these five stored stages; all 1167 RGB frames were separately decoded and all389 head-frame target projections checked."
+  ],
+  "new_render_or_image_fill_in_auditor": false,
+  "v1_crop_evidence_preserved": true
+}

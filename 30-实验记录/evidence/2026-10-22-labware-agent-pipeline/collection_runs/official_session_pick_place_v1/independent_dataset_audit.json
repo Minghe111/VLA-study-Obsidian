@@ -1,0 +1,450 @@
+{
+  "passed": true,
+  "collection": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v1",
+  "auditor": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_audit.py",
+  "auditor_sha256": "ffa309a9cfc9364315ed291eecdac753be4ef0cf2edf183ff9f07af2d4417640",
+  "gpu_or_simulator_used": false,
+  "episodes": [
+    {
+      "passed": true,
+      "hdf5": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v1/data/episode_0000000.hdf5",
+      "sha256": "52dce32bc080ff6a151d346ad87abcfe49595649924affb393a56994c08bf4fc",
+      "seed": 0,
+      "frames_per_camera": 389,
+      "state_shape": [
+        389,
+        24
+      ],
+      "action_shape": [
+        389,
+        24
+      ],
+      "duration_seconds": 23.34,
+      "state_chain_exact": true,
+      "actual_drive_readbacks_match": true,
+      "saved_requested_target_max_error": 4.522628137237916e-05,
+      "maximum_bottom_lift_m": 0.025201342922198222,
+      "airborne_opposing_observation_count": 13,
+      "target_next_measured_state_max_difference": 31.66192626953125,
+      "plan_physical_success": true,
+      "replay_physical_success": true,
+      "physical_final": {
+        "success": true,
+        "bottom_gap_m": 9.197295480767309e-09,
+        "upright_angle_deg": 0.0,
+        "thumb_contact_N": 0.0,
+        "finger_contact_N": 0.0,
+        "table_contact_N": 0.7847982807902554,
+        "opposed_contact": false,
+        "opposing_normals_dot": 1.0,
+        "hold_seconds": 0.0,
+        "max_hold_seconds": 0.812,
+        "lift_achieved": true,
+        "speed_m_s": 0.0,
+        "stable_place_seconds": 0.54,
+        "failure_reason": null
+      },
+      "language_counts": {
+        "seen": 12,
+        "unseen": 12
+      },
+      "all_camera_frames_decoded": {
+        "cam_head": {
+          "decoded_frames": 389,
+          "unique_decoded_frames": 389,
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "mean_range": [
+            230.54145833333334,
+            233.79720920138888
+          ],
+          "minimum_std": 24.269990296611624,
+          "decoded_frame_hash_chain_sha256": "2e047d35856d3682ce0dc32f54cd05658dcdaca2f583dda3ce0df7db5325ef96"
+        },
+        "cam_left_wrist": {
+          "decoded_frames": 389,
+          "unique_decoded_frames": 389,
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "mean_range": [
+            229.3714236111111,
+            233.23362196180557
+          ],
+          "minimum_std": 28.763996672143413,
+          "decoded_frame_hash_chain_sha256": "511135ee5ac8b4d6788cd729fe7e34497031f1eaeb5196da32e5cb81e1fbfd83"
+        },
+        "cam_right_wrist": {
+          "decoded_frames": 389,
+          "unique_decoded_frames": 389,
+          "shape": [
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8",
+          "mean_range": [
+            211.2221267361111,
+            228.70195638020834
+          ],
+          "minimum_std": 36.508317306653574,
+          "decoded_frame_hash_chain_sha256": "33dd09a786025b2756283da9bed40c97532daee31474ca71cd97dc03086752d1"
+        }
+      },
+      "cross_camera_keyframe_identity_check": {
+        "all_views_distinct": true,
+        "keyframes": [
+          {
+            "title": "Prepare",
+            "frame": 21,
+            "decoded_sha256": {
+              "cam_head": "2a7fb35ef72048c92f7d2a443340749b9bc1af08893440e6de5b4c0b793e755a",
+              "cam_left_wrist": "a222543d5d4b67c442f3ec96ec15ec6f8e7e1a699d27d978447bebdbd8e1be77",
+              "cam_right_wrist": "984b781692056525d7295c21bf23b3704ec167a910884bddc16b97a096afbba9"
+            },
+            "pair_mean_absolute_pixel_difference": {
+              "cam_head vs cam_left_wrist": 28.08493923611111,
+              "cam_head vs cam_right_wrist": 31.85435546875,
+              "cam_left_wrist vs cam_right_wrist": 31.306082899305554
+            }
+          },
+          {
+            "title": "Approach",
+            "frame": 191,
+            "decoded_sha256": {
+              "cam_head": "66438181a1fe6e5b544348e656af853d72d980bead2b78c41533ada8dfcc5a91",
+              "cam_left_wrist": "ac75639f00e476c60733711b3f0a5bcbae1313c82db6e6231f3701cc878c601a",
+              "cam_right_wrist": "e028665b2e1a4fac9e7121175eef534a377fca49ef19fda37d94d563865cc9ae"
+            },
+            "pair_mean_absolute_pixel_difference": {
+              "cam_head vs cam_left_wrist": 27.385487196180556,
+              "cam_head vs cam_right_wrist": 29.62163628472222,
+              "cam_left_wrist vs cam_right_wrist": 31.554731987847223
+            }
+          },
+          {
+            "title": "Airborne opposing grasp",
+            "frame": 266,
+            "decoded_sha256": {
+              "cam_head": "df1b6b930c4f5798ef82450f36474b5be94d287ad613189a6f406cba7e3606a3",
+              "cam_left_wrist": "150483f837988c90c5f0f1ac9d74c832114df03232e519080638a06df3b8d0a9",
+              "cam_right_wrist": "e2cd7329f8ee970fb88be8b9f6085ad836a47823bc5e4fcd9b21ae05b5c15f41"
+            },
+            "pair_mean_absolute_pixel_difference": {
+              "cam_head vs cam_left_wrist": 28.752466362847223,
+              "cam_head vs cam_right_wrist": 32.057208116319444,
+              "cam_left_wrist vs cam_right_wrist": 36.75326388888889
+            }
+          },
+          {
+            "title": "Release",
+            "frame": 320,
+            "decoded_sha256": {
+              "cam_head": "6f82015350f9063cda744c54aaf4eafdadfd37a2796f8f1b86d41694ae8ef7a9",
+              "cam_left_wrist": "75ddad7b10761747977fc66f260045af573edafbdff3905ad471b3b6cc1c8005",
+              "cam_right_wrist": "35e7cb38c864a103f8b1f9892443800efda5182ddab65e214b50138b467cea4e"
+            },
+            "pair_mean_absolute_pixel_difference": {
+              "cam_head vs cam_left_wrist": 29.20144748263889,
+              "cam_head vs cam_right_wrist": 33.68072699652778,
+              "cam_left_wrist vs cam_right_wrist": 38.05115017361111
+            }
+          },
+          {
+            "title": "Final stored observation",
+            "frame": 388,
+            "decoded_sha256": {
+              "cam_head": "703d4888bc23d7dc9cbfc281ac42116ccb4991be6164fc0a3e5afe994707046d",
+              "cam_left_wrist": "be956658fadeb98170098a24e2c71082cf99051b1df1fe34ee0283d9c4d347f4",
+              "cam_right_wrist": "be6f0472f9483a4fada01e70c9323b57291d9e45892f2677f066e2652534b783"
+            },
+            "pair_mean_absolute_pixel_difference": {
+              "cam_head vs cam_left_wrist": 27.247259114583333,
+              "cam_head vs cam_right_wrist": 31.061731770833333,
+              "cam_left_wrist vs cam_right_wrist": 32.43404947916667
+            }
+          }
+        ]
+      },
+      "visualization": {
+        "montage": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v1_v2/episode_0000000_keyframes.png",
+        "frames": [
+          {
+            "title": "Prepare",
+            "frame": 21,
+            "sim_time_seconds": 1.26,
+            "image_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v1_v2/episode_0000000_01_prepare.png",
+            "metrics_alignment": "preceding transition end / current pre-action observation",
+            "metrics": {
+              "success": false,
+              "bottom_gap_m": 1.2447097319512324e-07,
+              "upright_angle_deg": 0.0,
+              "thumb_contact_N": 0.0,
+              "finger_contact_N": 0.0,
+              "table_contact_N": 0.7847960041544866,
+              "opposed_contact": false,
+              "opposing_normals_dot": 1.0,
+              "hold_seconds": 0.0,
+              "max_hold_seconds": 0.0,
+              "lift_achieved": false,
+              "speed_m_s": 0.0,
+              "stable_place_seconds": 0.0,
+              "failure_reason": null
+            }
+          },
+          {
+            "title": "Approach",
+            "frame": 191,
+            "sim_time_seconds": 11.46,
+            "image_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v1_v2/episode_0000000_02_approach.png",
+            "metrics_alignment": "preceding transition end / current pre-action observation",
+            "metrics": {
+              "success": false,
+              "bottom_gap_m": 1.2447097319512324e-07,
+              "upright_angle_deg": 0.0,
+              "thumb_contact_N": 0.0,
+              "finger_contact_N": 0.0,
+              "table_contact_N": 0.7847960041544866,
+              "opposed_contact": false,
+              "opposing_normals_dot": 1.0,
+              "hold_seconds": 0.0,
+              "max_hold_seconds": 0.0,
+              "lift_achieved": false,
+              "speed_m_s": 0.0,
+              "stable_place_seconds": 0.0,
+              "failure_reason": null
+            }
+          },
+          {
+            "title": "Airborne opposing grasp",
+            "frame": 266,
+            "sim_time_seconds": 15.96,
+            "image_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v1_v2/episode_0000000_03_airborne_opposing_grasp.png",
+            "metrics_alignment": "preceding transition end / current pre-action observation",
+            "metrics": {
+              "success": false,
+              "bottom_gap_m": 0.025201342922198222,
+              "upright_angle_deg": 4.218258185424258,
+              "thumb_contact_N": 2.352142008021474,
+              "finger_contact_N": 2.401799545623362,
+              "table_contact_N": 0.0,
+              "opposed_contact": true,
+              "opposing_normals_dot": -0.9897114770231559,
+              "hold_seconds": 0.52,
+              "max_hold_seconds": 0.52,
+              "lift_achieved": true,
+              "speed_m_s": 0.0554254874587059,
+              "stable_place_seconds": 0.0,
+              "failure_reason": null
+            }
+          },
+          {
+            "title": "Release",
+            "frame": 320,
+            "sim_time_seconds": 19.2,
+            "image_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v1_v2/episode_0000000_04_release.png",
+            "metrics_alignment": "preceding transition end / current pre-action observation",
+            "metrics": {
+              "success": false,
+              "bottom_gap_m": 2.347239513866839e-09,
+              "upright_angle_deg": 15.026040870689105,
+              "thumb_contact_N": 6.547468714416027,
+              "finger_contact_N": 0.0,
+              "table_contact_N": 7.177459541708231,
+              "opposed_contact": false,
+              "opposing_normals_dot": 1.0,
+              "hold_seconds": 0.0,
+              "max_hold_seconds": 0.812,
+              "lift_achieved": true,
+              "speed_m_s": 0.008964098989963531,
+              "stable_place_seconds": 0.0,
+              "failure_reason": null
+            }
+          },
+          {
+            "title": "Final stored observation",
+            "frame": 388,
+            "sim_time_seconds": 23.28,
+            "image_path": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v1_v2/episode_0000000_05_final_stored_observation.png",
+            "metrics_alignment": "preceding transition end / current pre-action observation",
+            "metrics": {
+              "success": false,
+              "bottom_gap_m": 9.197295480767309e-09,
+              "upright_angle_deg": 0.0,
+              "thumb_contact_N": 0.0,
+              "finger_contact_N": 0.0,
+              "table_contact_N": 0.7847982807902554,
+              "opposed_contact": false,
+              "opposing_normals_dot": 1.0,
+              "hold_seconds": 0.0,
+              "max_hold_seconds": 0.812,
+              "lift_achieved": true,
+              "speed_m_s": 0.0,
+              "stable_place_seconds": 0.48,
+              "failure_reason": null
+            }
+          }
+        ],
+        "image_source": "decoded original HDF5 bytes only; no new render or state writes"
+      },
+      "plan_receipt_sha256": "2a0a6936e870fe8928c036b8bfa8380d404d49b5435fc54189626ebfc5e1e44c",
+      "replay_receipt_sha256": "122dc1a72aaf8d4ee463cb5e2d62c95f948277fce90904f7808654773d4554a2",
+      "frozen_native_source_receipt_sha256": "61e8637007f3e5a9fb87cbdd5806251ef428e775e55207068d78047c9470eba8"
+    }
+  ],
+  "provenance": {
+    "verified": true,
+    "source_sha256": {
+      "/home/admin123/liminghe/vla-benchmark/RoboTwin/scripts/collect_data.py": "c0eaa8743f3a1c7375553606607e528a9c86bcd2c4e5373f263a45e92f31ba5e",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/labware_task.py": "22cd86c3d0836633ad7911e10f999fe366f99b66d9b883a626fe91d05711fa3e",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_expert.py": "44e5c44bc741d003ecd0dc8d93b9238de851ac1f80ad730f1a6059d03a29fc68",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collect_official.py": "ea019397a63fd589ed4f9eca97649d6c644d0bbb84fe646376dac1bf79242b59",
+      "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/sdk24_export.py": "c6cfdfa5c122f521a34eec3deaa3d71e48d793991ef7e71f06dbdbdeea1a2c24",
+      "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/__init__.py": "7c4063c61bfe1789dcc933c43923889a3f9e576ddb4f59a3599745df27e3adfc",
+      "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/_base_task.py": "2d9168501186f2fe22852a41709b7a8c5b3577f9fb981d744cbc51e6b1ddb3c9",
+      "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/utils/__init__.py": "d3a670160e83b2467c232f5cbbfffcfc987e3bf0a03617fcf853989e4416d979",
+      "/home/admin123/liminghe/vla-benchmark/RoboTwin/code_gen/test_gen_code.py": "173b46f8f332c98c059dccb428f0d29a203a2b0254a49128e66da1292f7a89d3",
+      "/home/admin123/liminghe/vla-benchmark/RoboTwin/code_gen/task_generation.py": "9cf432fea2b9d7f886760a363bb1766cca0d28bd41a912856cd303aefb5dff46"
+    },
+    "actual_collected_candidate_sha256": "e8cc7e693214d645fa5fed0dca91280e6c521f62457dbf12a8df14b2cb36224b",
+    "physically_tested_candidate_sha256": "085fc69513076cdc64560cccac891c267157147f90041bcbc4a2affc2b699168",
+    "byte_identity_to_tested_candidate": false,
+    "parser_proof": {
+      "receipt": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/agent_runs/20261022T052331_906084Z_session_file_bridge_postprocess/postprocess_receipt.json",
+      "sha256": "045f6c0e91763831785c7a6179351b7ff2e13f343bdd41654a8405edd2ea8d7b",
+      "actual_official_wrapper_AST_checked": true,
+      "method_ast_sha256": "e6be774c018aac455d8cd4f51a969fd2d76cf026fe17c1908ee2ed4c8989bb7a",
+      "method_matches_physically_tested_candidate": true,
+      "new_physical_trials": 0
+    },
+    "official_test_receipt": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/agent_runs/20261022T050753_025169Z_session_export/revision_01/session_receipt.json",
+    "official_test_receipt_sha256": "3cf3bf84951e5f7a392e84e6596d612b69e601227d1f3a51972c6d3c8e23e7fd",
+    "official_test_trials": 10,
+    "official_test_success_rate": 1.0,
+    "generation_transport": "current Codex session; user-authorized",
+    "remote_api_auto_loop": false,
+    "actual_llm_request_sent": false
+  },
+  "camera_mount_source_contract": {
+    "profile": {
+      "hardware_io": false,
+      "rgb_profile": {
+        "width": 640,
+        "height": 480,
+        "format": "RGB8",
+        "fps": 30,
+        "device_profile_source": "librealsense D435 USB3 default color stream",
+        "simulation_fovy_deg": 37,
+        "simulation_intrinsics_source": "RoboTwin Large_D435 nominal pinhole",
+        "physical_intrinsics_status": "read per-device RGB profile K before real collection",
+        "depth_enabled": false,
+        "infrared_enabled": false,
+        "exposure_white_balance_gain": "physical firmware defaults; not simulated"
+      },
+      "mounts": {
+        "head_camera": {
+          "link": "camera_link",
+          "position": [
+            0,
+            0.016,
+            0.0125
+          ],
+          "forward": [
+            0,
+            1,
+            0
+          ],
+          "left": [
+            -1,
+            0,
+            0
+          ],
+          "near": 0.005,
+          "far": 10,
+          "calibration_status": "existing housing estimate; vendor_zero_view"
+        },
+        "left_camera": {
+          "link": "l_link6",
+          "position": [
+            0,
+            -0.08,
+            -0.045
+          ],
+          "forward": [
+            0,
+            -0.18,
+            0.983666610188635
+          ],
+          "left": [
+            1,
+            0,
+            0
+          ],
+          "near": 0.005,
+          "far": 10,
+          "calibration_status": "nominal fixed flange mount; not measured"
+        },
+        "right_camera": {
+          "link": "r_link6",
+          "position": [
+            0,
+            -0.08,
+            -0.041
+          ],
+          "forward": [
+            0,
+            -0.18,
+            0.983666610188635
+          ],
+          "left": [
+            1,
+            0,
+            0
+          ],
+          "near": 0.005,
+          "far": 10,
+          "calibration_status": "nominal fixed flange mount; not measured"
+        }
+      },
+      "recording": {
+        "head_pose_rad": {
+          "yaw": 0,
+          "pitch": -0.419
+        },
+        "extra_optical_pitch_deg": 0,
+        "save_freq_physics_steps": 15,
+        "state_action_clock": "preserve recorded native timestamps; not 30Hz action labels",
+        "output_camera_names": [
+          "cam_head",
+          "cam_left_wrist",
+          "cam_right_wrist"
+        ],
+        "rgb_only": true
+      }
+    },
+    "profile_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/integrations/realman_rm65b_gen4/camera_profiles/three_d435_rgb_default.yml",
+    "profile_sha256": "22689c0ee5ca5679e3e899cc8664be6d32bd35bc45398ce5a66c7ba4256d59d6",
+    "camera_adapter_path": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/integrations/realman_rm65b_gen4/three_camera_rgb.py",
+    "camera_adapter_sha256": "156497f3720f25924f16c6a2535b798ba6bef812f253955a1b919b250c053386",
+    "Base_Task_update_render_calls_update_mount": true,
+    "configured_parent_links": {
+      "head_camera": "camera_link",
+      "left_camera": "l_link6",
+      "right_camera": "r_link6"
+    },
+    "generic_camera_link_warning_scope": "Generic fallback links are not the authoritative custom optical mounts",
+    "evidence_scope": "Current source/profile plus independently reviewed saved camera images; no runtime extrinsic readback or physical calibration claim"
+  },
+  "decoder": {
+    "path": "/home/admin123/liminghe/vla-benchmark/RoboTwin/data/decode_image_bit.py",
+    "sha256": "90df99c52d3f127a09f5960680113f17e8b3e25b2e3cb9117abdeb249d7a337e"
+  },
+  "scope": "Final saved HDF5, all camera buffers, physical plan/replay receipts and fixed source provenance; no SR or physical-robot claim"
+}

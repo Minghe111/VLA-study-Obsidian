@@ -1,0 +1,30 @@
+{
+  "reviewer": "current assistant visual inspection; not human or physical-camera calibration",
+  "source_montage": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/dataset_visualization/official_session_pick_place_v1_v2/episode_0000000_keyframes.png",
+  "source_hdf5": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/collection_runs/official_session_pick_place_v1/data/episode_0000000.hdf5",
+  "reviewed_stages": [
+    "prepare",
+    "approach",
+    "airborne opposing grasp",
+    "release",
+    "final stored observation"
+  ],
+  "camera_views_are_not_duplicates": true,
+  "wrist_source_bindings": {
+    "left": "l_link6",
+    "right": "r_link6"
+  },
+  "visual_consistency_findings": [
+    "Left-wrist camera retains its own nearby finger and an oblique scene view while the inactive left arm remains stationary.",
+    "Right-wrist view changes substantially during approach; the bottle becomes large and remains near the visible right fingertips during physical holding.",
+    "Head, left and right images contain distinct viewpoints consistent with the source mapping; no obvious swapped or duplicated views are observed.",
+    "The cylindrical bottle looks horizontal in the wrist images because of their optical-frame roll and perspective; measured world upright angle remains 0 degrees in the final trace."
+  ],
+  "limitations": [
+    "The head view puts the small bottle near the lower edge and cuts off part of the body at several stages.",
+    "Nominal wrist mounts are simulation presets rather than measured physical D435 extrinsics.",
+    "Source-bound mapping plus saved-image consistency is not a direct runtime extrinsic readback or a proof of optimal camera placement.",
+    "Images show the minimum one-bottle collection scene, not the earlier full tabletop presentation scene."
+  ],
+  "data_or_simulator_mutated": false
+}

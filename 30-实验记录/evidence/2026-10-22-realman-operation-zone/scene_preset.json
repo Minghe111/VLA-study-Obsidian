@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "scope": "Default pose and placements for this static tabletop visualization; no hardware commands or global task defaults.",
+  "robot_model": "assets/embodiments/realman-rm65b-inspire-gen4/robot_sapien.urdf",
+  "robot_urdf_sha256": "4bf28c444af1a28401a975e5de6e138c1ec043536aa786ea541c30c359bd65bd",
+  "root_pose_xyz_quaternion_wxyz": [
+    0,
+    -0.65,
+    0.09539821919202804,
+    0,
+    0,
+    0,
+    1
+  ],
+  "joint_positions_rad": {
+    "r_joint1": 1.1352381706237793,
+    "l_joint1": -1.1330026388168335,
+    "r_joint2": 0.3276335299015045,
+    "l_joint2": -0.3309967815876007,
+    "r_joint3": 1.2342201471328735,
+    "l_joint3": -1.2310532331466675,
+    "r_joint4": -0.34638315439224243,
+    "l_joint4": 0.3447459936141968,
+    "r_joint5": 0.32985207438468933,
+    "l_joint5": -0.32949697971343994,
+    "r_joint6": -1.3875336647033691,
+    "l_joint6": 1.3891642411523542,
+    "r_inspire_right_thumb_1_joint": 1.1641000509262085,
+    "r_inspire_right_index_1_joint": 0.0,
+    "r_inspire_right_middle_1_joint": 0.0,
+    "r_inspire_right_ring_1_joint": 0.0,
+    "r_inspire_right_little_1_joint": 0.0,
+    "l_inspire_left_thumb_1_joint": 1.1641000509262085,
+    "l_inspire_left_index_1_joint": 0.0,
+    "l_inspire_left_middle_1_joint": 0.0,
+    "l_inspire_left_ring_1_joint": 0.0,
+    "l_inspire_left_little_1_joint": 0.0,
+    "r_inspire_right_thumb_2_joint": 0.0,
+    "r_inspire_right_index_2_joint": 0.0,
+    "r_inspire_right_middle_2_joint": 0.0,
+    "r_inspire_right_ring_2_joint": 0.0,
+    "r_inspire_right_little_2_joint": 0.0,
+    "l_inspire_left_thumb_2_joint": 0.0,
+    "l_inspire_left_index_2_joint": 0.0,
+    "l_inspire_left_middle_2_joint": 0.0,
+    "l_inspire_left_ring_2_joint": 0.0,
+    "l_inspire_left_little_2_joint": 0.0,
+    "r_inspire_right_thumb_3_joint": 0.0,
+    "l_inspire_left_thumb_3_joint": 0.0,
+    "r_inspire_right_thumb_4_joint": 0.0,
+    "l_inspire_left_thumb_4_joint": 0.0
+  },
+  "pose_correction": {
+    "joint": "l_joint6",
+    "before_rad": -1.752428412437439,
+    "after_rad": 1.3891642411523542,
+    "delta_rad": 3.141592653589793,
+    "baseline_evidence": "30-实验记录/evidence/2026-10-21-official-small-plate/render_manifest.json"
+  },
+  "table": {
+    "top_m": 0.74,
+    "center_y_m": 0.08,
+    "half_size_xy_m": [
+      0.9,
+      0.47
+    ],
+    "visual_clearance_m": 0.001
+  },
+  "objects": [
+    {
+      "category": "072_electronicscale",
+      "model_id": 0,
+      "center_xy_m": [
+        -0.2,
+        -0.04
+      ],
+      "label": "Original electronic scale",
+      "layout_role": "primary_operation_zone"
+    },
+    {
+      "category": "objaverse/plate",
+      "model_id": 7,
+      "center_xy_m": [
+        0.04,
+        -0.04
+      ],
+      "label": "Accepted official shallow plate 007",
+      "layout_role": "primary_operation_zone"
+    },
+    {
+      "category": "021_cup",
+      "model_id": 5,
+      "center_xy_m": [
+        -0.62,
+        0.03
+      ],
+      "label": "Handleless metal container",
+      "layout_role": "peripheral"
+    },
+    {
+      "category": "062_plasticbox",
+      "model_id": 2,
+      "center_xy_m": [
+        0.6,
+        0.15
+      ],
+      "label": "Neutral open storage box",
+      "layout_role": "peripheral"
+    },
+    {
+      "category": "080_pillbottle",
+      "model_id": 2,
+      "center_xy_m": [
+        -0.43,
+        0.36
+      ],
+      "label": "White medicinal container 1",
+      "layout_role": "peripheral"
+    },
+    {
+      "category": "080_pillbottle",
+      "model_id": 2,
+      "center_xy_m": [
+        0.43,
+        0.36
+      ],
+      "label": "White medicinal container 2",
+      "layout_role": "peripheral"
+    },
+    {
+      "category": "080_pillbottle",
+      "model_id": 4,
+      "center_xy_m": [
+        0.25,
+        -0.04
+      ],
+      "label": "Brown medicinal container 1",
+      "layout_role": "primary_operation_zone"
+    },
+    {
+      "category": "080_pillbottle",
+      "model_id": 4,
+      "center_xy_m": [
+        0,
+        0.42
+      ],
+      "label": "Brown medicinal container 2",
+      "layout_role": "peripheral"
+    }
+  ],
+  "external_object_assets": false,
+  "excluded_categories": [
+    "beverage bottles",
+    "external LabUtopia assets"
+  ],
+  "physics_steps": 0,
+  "hardware_io": false,
+  "revision": "Place scale, shallow plate, and one brown medicinal container close to the robot; distribute the other five objects around the perimeter.",
+  "derived_from": "30-实验记录/evidence/2026-10-21-realman-tabletop-medicines/scene_preset.json",
+  "operation_zone": {
+    "primary_object_numbers": [
+      1,
+      2,
+      7
+    ],
+    "primary_object_categories": [
+      "072_electronicscale/0",
+      "objaverse/plate/007",
+      "080_pillbottle/4"
+    ],
+    "robot_near_table_edge_y_m": -0.39,
+    "note": "Three representative approach TCP poses have numerical full-pose IK solutions preserving each arm default wrist orientation. No full collision or grasp validation.",
+    "primary_row_y_m": -0.04
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "spec_version": "lab-physics-v1",
+  "seed": 0,
+  "engine": "SAPIEN 3.0.0b1 PhysX CPU",
+  "physics_steps": 14600,
+  "dt_s": 0.001,
+  "elapsed_sim_s": 14.6,
+  "initial_tablets": 12,
+  "initial_inside": 12,
+  "closed_inverted_min_inside": 12,
+  "premature_release_refused": true,
+  "release_measured": {
+    "lift_m": 0.011754358530044556,
+    "rotation_rad": 15.705454090501439,
+    "xy_error_m": 3.577139567900473e-15,
+    "released": true
+  },
+  "final_receiver_count": 12,
+  "remaining_bottle_count": 0,
+  "tablets_finite": true,
+  "contact_pair_step_counts": {
+    "tablet_cap": 13841,
+    "tablet_body": 71077,
+    "tablet_receiver": 27418,
+    "tablet_floor": 0
+  },
+  "final_tablet_actor_count": 12,
+  "tablets_pose_writes_after_initialization": 0,
+  "tablet_pose_write_boundary": "Only ActorBuilder.initial_pose during construction; subsequent integration by PhysX",
+  "bottle_motion": "declared kinematic fixture, not RM65-B grasp/policy",
+  "cap_motion": "force/torque limited D6 guide then separate cap-holding fixture",
+  "true_thread_mesh_contact": false,
+  "hardware_io": false,
+  "events": [
+    {
+      "event": "closed_inverted_no_leak",
+      "step": 3300,
+      "minimum_inside": 12
+    },
+    {
+      "event": "cap_released",
+      "step": 9200,
+      "measured": {
+        "lift_m": 0.011754358530044556,
+        "rotation_rad": 15.705454090501439,
+        "xy_error_m": 3.577139567900473e-15,
+        "released": true
+      }
+    },
+    {
+      "event": "receiver_count",
+      "step": 14600,
+      "count": 12
+    }
+  ],
+  "passed": true,
+  "source_sha256": {
+    "lab_physics.py": "dbda8fa4cef81e707eb66dcda67a4dd43c5734a13534f38fddaf3fbb41d502bc",
+    "test_lab_physics.py": "d0cee579bf221f9f2c94f92ee62aa93d94f5c2e4ebc7da950ecd147f4f487e33",
+    "physics_spec.json": "b7e3a58cfee9ec113e50f7f4ef846afced2f628ad2e18e42b1b9b9eba6f6875e"
+  }
+}

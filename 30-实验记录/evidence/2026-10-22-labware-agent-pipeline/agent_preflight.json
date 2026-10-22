@@ -1,0 +1,80 @@
+{
+  "observed_utc": "2026-10-22T05:08:24.041666+00:00",
+  "source_root": "/home/admin123/liminghe/vla-benchmark/RoboTwin",
+  "source": {
+    "files": {
+      "code_gen/task_generation.py": "9cf432fea2b9d7f886760a363bb1766cca0d28bd41a912856cd303aefb5dff46",
+      "code_gen/test_gen_code.py": "173b46f8f332c98c059dccb428f0d29a203a2b0254a49128e66da1292f7a89d3",
+      "code_gen/gpt_agent.py": "1b3ebbceeb372b6ebe996e7973ff195eef4a304d8fa89c991f1e1fdaa19d690f",
+      "code_gen/prompt.py": "6b7b38de8575ec77d1ffed948b67190b612fda1ac2c0b64c2e5acacc08c49197"
+    },
+    "official_key_placeholders": {
+      "kimi_api": {
+        "is_placeholder": true
+      },
+      "openai_api": {
+        "is_placeholder": true
+      },
+      "deep_seek_api": {
+        "is_placeholder": true
+      }
+    }
+  },
+  "actual_imported_runtime_modules": {
+    "envs": {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/__init__.py",
+      "sha256": "7c4063c61bfe1789dcc933c43923889a3f9e576ddb4f59a3599745df27e3adfc"
+    },
+    "envs._base_task": {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/_base_task.py",
+      "sha256": "2d9168501186f2fe22852a41709b7a8c5b3577f9fb981d744cbc51e6b1ddb3c9"
+    },
+    "envs.utils": {
+      "file": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin/envs/utils/__init__.py",
+      "sha256": "d3a670160e83b2467c232f5cbbfffcfc987e3bf0a03617fcf853989e4416d979"
+    },
+    "test_gen_code": {
+      "file": "/home/admin123/liminghe/vla-benchmark/RoboTwin/code_gen/test_gen_code.py",
+      "sha256": "173b46f8f332c98c059dccb428f0d29a203a2b0254a49128e66da1292f7a89d3"
+    },
+    "task_generation": {
+      "file": "/home/admin123/liminghe/vla-benchmark/RoboTwin/code_gen/task_generation.py",
+      "sha256": "9cf432fea2b9d7f886760a363bb1766cca0d28bd41a912856cd303aefb5dff46"
+    }
+  },
+  "llm": {
+    "api_key_env": "OPENAI_API_KEY",
+    "api_key_present": false,
+    "model": null,
+    "base_url_hostname": null,
+    "ready": false,
+    "credentials_read_scope": "named environment variable only"
+  },
+  "official_import_passed": true,
+  "official_functions": [
+    "task_generation.main",
+    "task_generation.generate_code",
+    "test_gen_code.enrich_actors",
+    "test_gen_code.run"
+  ],
+  "overlay_changes": [
+    "LLM transport only",
+    "OBJECTS_PATH",
+    "generated-output cwd",
+    "optional task setup factory",
+    "check_num",
+    "explicitly labelled local embodiment API extensions"
+  ],
+  "additional_available_env_functions": [
+    "grasp_lift_place"
+  ],
+  "check_num": 10,
+  "feedback_attempts": 5,
+  "official_success_threshold": 0.5,
+  "actual_llm_request_sent": false,
+  "generated_expert_executed": false,
+  "api_auto_loop_status": "missing_llm_configuration",
+  "session_bridge_available": true,
+  "session_bridge_authorization": "User explicitly authorized using the current Codex session on 2026-10-22.",
+  "status": "session_bridge_available"
+}

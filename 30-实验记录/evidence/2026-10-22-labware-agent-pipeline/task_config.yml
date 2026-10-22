@@ -1,0 +1,19 @@
+task_name: labware_pick_place
+embodiment: [realman-rm65b-inspire-gen4]
+asset_kind: reagent_bottle_body
+arm: right
+seed: 0
+capture_rgb: true
+simulation_only: true
+physical_action_schema: realman_sdk24
+control_period_seconds: 0.060
+physics_dt_seconds: 0.004
+physics_steps_per_action: 15
+success_contract:
+  minimum_lift_m: 0.02
+  minimum_opposed_hold_seconds: 0.5
+  release: true
+  hand_retreat: true
+  stable_on_table_seconds: 0.5
+  maximum_placement_xy_error_m: 0.025
+  maximum_final_tilt_degrees: 10

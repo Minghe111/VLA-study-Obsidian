@@ -1,0 +1,319 @@
+{
+  "scope": "Independent read-only arithmetic/source/transition audit of actual failed v2; no simulator execution, no new gate, no proof of corrected candidate path",
+  "input_sha256": {
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_contact_probes/left115_first_contact_v2/result.json": "575b1475ef651abdc6fc17cacb07bccd6e156242eaa581a575b0c46235d96d06",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_contact_probes/left115_first_contact_v2/rejected_path.json": "d31a7c9f822888c7ea340014a916dfde73a0a3d6d036d6fb4111784a1b2b00e3",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_contact_probes/left115_first_contact_v2/actual_preleft_snapshot.json": "f2f3d0ad3f45062e32562e5a46a9fce20e17036ddc06f64ada8617d099d65933",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_contact_probes/left115_first_contact_v2/actual_preapproach_snapshot.json": "4396ac6ceab96597016af21ec3d47236e64d837bf4c9e8aac1eac7687857c88b",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_contact_probes/left115_first_contact_v2/actual_terminal_snapshot.json": "9d37a107032ea8aa0d84a93c5034ab143131eb11e573f119f1f705b4658a4134",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_contact_probes/left115_first_contact_v2/actual_cap_rebindings.json": "e72e9ba10fecfcd99e6b81e1e60e67cb2b43e105960bb7b8721fa2a69379a7e8",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_contact_probes/left115_first_contact_v2/snapshot_manifest.json": "354b92d8f5cd3370ac28eb1ed5f23e21300e6285717000611ae31f8c408d6bdf",
+    "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_contact_probes/left115_first_contact_v2/transitions.json": "b8af0bb885bd683774408caaf907818cb170bd87073e3d4cc151dd91971e9521"
+  },
+  "frozen_sources_all_sha256_match": true,
+  "frozen_source_count": 22,
+  "entry_source_sha256": "a075af8dd6ab38f9ba6fbcb5120383c725ae34db38ab7635c888efbe2f28c100",
+  "actual_execution": {
+    "complete_targets": 343,
+    "prefix294_exact_action_state_next_state_tick": true,
+    "left_preparation_targets": 49,
+    "phase_counts": {
+      "prepare_prebent_three_finger_grasp": 44,
+      "approach_pre": 137,
+      "approach_grasp": 24,
+      "close": 19,
+      "lift_plan": 1,
+      "lift": 44,
+      "right_fixed_arm_same_grip_feedback": 25,
+      "left_prepare_open400": 49
+    },
+    "left_approach_complete_targets": 0,
+    "first_contact_observed": false,
+    "controller_proposal_count": 0,
+    "partial_command": null,
+    "preparation_arm_drive_unchanged": true,
+    "transition_next_state_chain_exact": true,
+    "all_complete_transitions_are_15_ticks": true,
+    "last_physical_tick": 5145,
+    "preapproach_and_terminal_physical_fields_exact": {
+      "physics_tick": true,
+      "assembly_physics_step": true,
+      "q36": true,
+      "qvel36": true,
+      "state24": true,
+      "actual_drive_target24": true,
+      "root_matrix": true,
+      "left_palm_matrix": true,
+      "right_palm_matrix": true,
+      "body_matrix": true,
+      "cap_matrix": true,
+      "tablet_world_pose_pq": true
+    },
+    "last_transition_next_state_matches_terminal": true
+  },
+  "rejection": {
+    "kind": "Future CPU mesh path sample; not actual simulated approach contact",
+    "collision": {
+      "sample_index": 1933,
+      "path_index": 1,
+      "interval_fraction": 0.9191246431969553,
+      "link": "l_inspire_left_index_2",
+      "other": "table",
+      "category": "table"
+    },
+    "samples_evaluated": 1934,
+    "samples_planned": 2104,
+    "path_rows": 2,
+    "sample_gap_m": 0.0,
+    "joint_limit_audit_passed": true,
+    "exception_before_execute": true,
+    "actual_last_left_table_force_N": 0.0,
+    "actual_last_left_cap_force_N": 0.0
+  },
+  "reference_to_actual_prepared": {
+    "cap": {
+      "reference_to_prepared_matrix": [
+        [
+          0.9994082273752243,
+          -0.02055028005896141,
+          -0.027583980734891655,
+          -0.0004355665996265551
+        ],
+        [
+          0.02114661787413184,
+          0.9995450618132241,
+          0.0215044680186957,
+          0.00031250067302568407
+        ],
+        [
+          0.027129510817530247,
+          -0.022075053274754314,
+          0.9993881706010952,
+          -0.00017432133372774494
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_translation_delta_m": [
+        -0.0004507973790168762,
+        0.00028067082166671753,
+        -0.00018912553787231445
+      ],
+      "reference_frame_translation_delta_m": [
+        -0.0004355665996265551,
+        0.00031250067302568407,
+        -0.00017432133372774494
+      ],
+      "translation_norm_m": 0.0005637045823292975,
+      "rotation_rad": 0.04072799394516224,
+      "rotation_deg": 2.3335421610921676
+    },
+    "body": {
+      "reference_to_prepared_matrix": [
+        [
+          0.9996010965503357,
+          -0.004587772986540201,
+          -0.02786820868047097,
+          0.0028669300382981183
+        ],
+        [
+          0.005172477264671432,
+          0.999767211018684,
+          0.020945336131352396,
+          -0.0021827142734983096
+        ],
+        [
+          0.02776563256261374,
+          -0.021081132535897103,
+          0.9993921539477728,
+          -0.00015452362992507407
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_translation_delta_m": [
+        0.0029528141021728516,
+        -0.0020701810717582703,
+        -5.143880844116211e-05
+      ],
+      "reference_frame_translation_delta_m": [
+        0.0028669300382981183,
+        -0.0021827142734983096,
+        -0.00015452362992507407
+      ],
+      "translation_norm_m": 0.003606578259634876,
+      "rotation_rad": 0.03520889862440425,
+      "rotation_deg": 2.0173212924823334
+    }
+  },
+  "via0_binding": {
+    "source_lines": "frozen entry 155-178 converts ALL transition world palms into reference-cap-relative poses, then multiplies ALL by actual cap; only final relative overridden by screened endpoint",
+    "cap_world_transform_delta": [
+      [
+        0.9993793749216634,
+        -0.021141000947052884,
+        -0.02817655722257524,
+        0.02210476278119028
+      ],
+      [
+        0.021712223656345158,
+        0.9995616881755731,
+        0.02012368194142885,
+        -0.019772492520394855
+      ],
+      [
+        0.027738775221596866,
+        -0.02072296871703312,
+        0.9994003966923072,
+        -0.00485530129154621
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "reconstructed_original_world_palm": [
+      [
+        0.8528276765808314,
+        0.5209723535599545,
+        0.03567577446879756,
+        -0.11267008015536059
+      ],
+      [
+        0.42975285542529035,
+        -0.7390287862848175,
+        0.5187956594808789,
+        -0.12562959789957054
+      ],
+      [
+        0.29664362004188805,
+        -0.4271115309478222,
+        -0.8541535592736568,
+        0.9502053854715584
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "actual_rebound_goal_world_palm": [
+      [
+        0.8348545888788786,
+        0.5483073658151347,
+        0.048752880299801446,
+        -0.11461297246561353
+      ],
+      [
+        0.45405083678109737,
+        -0.7359884495722413,
+        0.5021541510472844,
+        -0.12867171250515708
+      ],
+      [
+        0.3112163917905033,
+        -0.397089428029879,
+        -0.8634027899073471,
+        0.9442584260874732
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "world_palm_translation_delta_m": [
+      -0.001942892310252936,
+      -0.003042114605586538,
+      -0.005946959384085182
+    ],
+    "world_palm_translation_delta_norm_m": 0.006956695890918456,
+    "world_palm_z_delta_m": -0.005946959384085182,
+    "left_original_seed6": [
+      -1.4483609389013283,
+      -1.198978592976954,
+      -0.609927917325907,
+      1.955404629155965,
+      -1.0191100612159523,
+      0.23548818125591264
+    ],
+    "left_rebound_result6": [
+      -1.437360299678612,
+      -1.18337969263045,
+      -0.6281498901662729,
+      1.9352408528414577,
+      -1.0143568668889111,
+      0.2085240922875054
+    ],
+    "left_arm_delta_rad": [
+      0.011000639222716435,
+      0.015598900346504019,
+      -0.018221972840365863,
+      -0.020163776314507276,
+      0.0047531943270411325,
+      -0.02696408896840724
+    ],
+    "IK_position_error_m": 1.638283226889584e-08,
+    "IK_rotation_error_rad": 9.185692672385244e-08
+  },
+  "start_binding": {
+    "measured_left_arm6": [
+      -1.4337589740753174,
+      -0.17369870841503143,
+      -1.284859299659729,
+      0.7786797881126404,
+      -0.5827404856681824,
+      0.9314422607421875
+    ],
+    "actual_drive_left_arm6": [
+      -1.4338856935501099,
+      -0.17370359599590302,
+      -1.2848105430603027,
+      0.7786584496498108,
+      -0.5827611684799194,
+      0.9314123392105103
+    ],
+    "drive_minus_measured_rad": [
+      -0.00012671947479248047,
+      -4.887580871582031e-06,
+      4.875659942626953e-05,
+      -2.1338462829589844e-05,
+      -2.0682811737060547e-05,
+      -2.9921531677246094e-05
+    ],
+    "drive_minus_measured_max_abs_rad": 0.00012671947479248047,
+    "drive_minus_original_plan_start_rad": [
+      -0.00012671947479248047,
+      7.68899917602539e-06,
+      -5.960464477539062e-07,
+      -4.5418739318847656e-05,
+      1.531839370727539e-05,
+      -3.910064697265625e-05
+    ],
+    "measured_minus_original_plan_start_rad": [
+      0.0,
+      1.2576580047607422e-05,
+      -4.935264587402344e-05,
+      -2.4080276489257812e-05,
+      3.600120544433594e-05,
+      -9.179115295410156e-06
+    ],
+    "frozen_source_lines": "179-186 same actual drive capture in audit [drive, endpoint] and quintic; audit prepends measured q automatically"
+  },
+  "conclusion": "v2 correctly rejected an unexecuted cap-follow-transformed transit path. Source binding applies cap frame motion to a table/world transit corridor; geometry changed, while IK solved that changed goal accurately. The 2.33deg cap delta creates a larger far-away palm displacement than cap-origin translation. Keeping world transit nodes and retargeting only final cap endpoint is a specific coordinate-frame correction, whose actual-source CPU comparison/physical run is separate evidence.",
+  "new_physical_trials": 0,
+  "old_result_modified": false,
+  "audit_source_sha256": "53a3d97443f99785b42fae6f123e15713ab011f44d56e237b09d3a59db82ab0f"
+}

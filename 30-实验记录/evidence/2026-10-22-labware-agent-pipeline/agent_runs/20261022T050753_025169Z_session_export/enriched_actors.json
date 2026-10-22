@@ -1,0 +1,50 @@
+{
+  "self.bottle": {
+    "name": "empty open reagent bottle",
+    "description": "The only manipulated actor: an empty open cylindrical reagent bottle body. The right-hand native contact helper acts on this actor. No cap or pellets are loaded in this minimum task.",
+    "functional_points": [
+      {
+        "id": 0,
+        "description": "Upper opening centre; local +Z points out of the vessel.",
+        "usage": "Receiving/pouring mouth alignment. Never use this point to place the bottom on a table."
+      },
+      {
+        "id": 1,
+        "description": "Interior floor centre, inside the hollow receiving volume.",
+        "usage": "Define the receiving region for dry pellets. It is not the external support plane."
+      },
+      {
+        "id": 2,
+        "description": "Selected rim surface point stored in the local mesh frame.",
+        "usage": "Candidate pouring-edge alignment. It is not a calibrated spout or guaranteed pouring direction."
+      },
+      {
+        "id": 3,
+        "description": "External lower support-plane centre, with local -Z outward.",
+        "usage": "Use this functional point for upright support placement. Do not substitute the opening or inner floor."
+      }
+    ],
+    "contact_points": [
+      {
+        "id": 0,
+        "description": "Side grasp centre, candidate 0; contact-frame +Y points toward object-frame +X.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+      },
+      {
+        "id": 1,
+        "description": "Side grasp centre, candidate 1; contact-frame +Y points toward object-frame +Y.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+      },
+      {
+        "id": 2,
+        "description": "Side grasp centre, candidate 2; contact-frame +Y points toward object-frame -X.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+      },
+      {
+        "id": 3,
+        "description": "Side grasp centre, candidate 3; contact-frame +Y points toward object-frame -Y.",
+        "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+      }
+    ]
+  }
+}

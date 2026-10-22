@@ -1,0 +1,331 @@
+{
+  "date": "2026-10-22",
+  "scope": "Independent readback/static CPU audit of a non-robot external-wrench component bench. No new simulation or source/result edits.",
+  "passed_recorded_component_scope": true,
+  "source_sha256": {
+    "frozen_assembly": "0785eb4e2a487f4ec4a7c637011e163ceabcce18bbc990fc17980e86b95708d5",
+    "bench": "f0b3cb8b1740beede1eed0a1c7c6670fdef386b09de5a31caf4a6fa5bcd9f9a8"
+  },
+  "source_matches_frozen_receipt": true,
+  "input_sha256": {
+    "receipt.json": "6813a149dfb70b3d476196685ff1ca0b25c484def5be082aecf408b216eee199",
+    "trace_dt_0p001.json.gz": "b8a4f6e3448db67826ede62fcb3d164ee832b3744f89fba7c1a98bb9faccf62c",
+    "trace_dt_0p004.json.gz": "2254a5d79883a0aae57e36b5ace84f9c3d209b9832dca5f0fe16043a04440b83"
+  },
+  "source_setter_call_audit": {
+    "probe_passive_full_release.py": [],
+    "robot_cap_assembly.py": []
+  },
+  "static_write_boundary": "Bench has no pose/velocity setter calls. Component writes initial builder poses during _build only; after initialization before_step applies paired forces/torques, after_step measures, and try_release disables the guide without writing body state. Motor zeros are actual contract readbacks; no postinitialization motor-enable path is present.",
+  "tablet_evidence_boundary": "Actual contract has12 masses read through separate PhysxRigidDynamicComponents and12 local position vectors each step; source creates12 distinct builder.build dynamic actors. Contract does not separately enumerate a per-tablet kinematic flag, so nonkinematic interpretation also relies on audited default dynamic build source.",
+  "trials": [
+    {
+      "dt_nominal_s": 0.004,
+      "dt_actual_s": 0.004000000189989805,
+      "passed_recorded_contract_and_release_checks": true,
+      "checks": {
+        "trace_sha_matches_receipt": true,
+        "steps_contiguous": true,
+        "time_equals_step_dt": true,
+        "release_tick_matches": true,
+        "release_meets_both_thresholds": true,
+        "previous_step_not_eligible": true,
+        "released_never_reverts": true,
+        "postrelease_external_torque_zero": true,
+        "tablets_12_positions_every_step": true,
+        "positions_finite": true,
+        "body_cap_dynamic": true,
+        "tablets_12_actual_masses": true,
+        "all_drive_motors_zero_at_readback": true,
+        "no_holder_reported": true,
+        "no_pose_or_velocity_write_reported": true,
+        "explicitly_not_robot_or_dataset": true
+      },
+      "steps": 548,
+      "release_step": 360,
+      "release_time_s": 1.4400000683963299,
+      "torque_steps": 110,
+      "nominal_torque_duration_s": 0.44,
+      "actual_torque_duration_s": 0.4400000208988786,
+      "external_pair_torque_Nm": 0.003,
+      "first_release": {
+        "physics_step": 360,
+        "time_s": 1.4400000683963299,
+        "rotation_measured_rad": 15.89204479297237,
+        "turns_measured": 2.529297484639369,
+        "lift_measured_m": 0.01190068793296814,
+        "radial_error_m": 1.0943465440504951e-06,
+        "axis_tilt_rad": 3.817996504553424e-05,
+        "released": true,
+        "body_pose": [
+          9.045342608260398e-08,
+          3.5817880217337006e-08,
+          2.2351741790771484e-08,
+          1.0,
+          1.6757645937559573e-07,
+          1.1702711617544992e-06,
+          -4.772505803884997e-07
+        ],
+        "cap_pose": [
+          1.427467395842541e-06,
+          -7.836509041680984e-08,
+          0.10490071028470993,
+          -0.09191039204597473,
+          -1.786484062904492e-05,
+          1.4186539374350104e-06,
+          0.99576735496521
+        ]
+      },
+      "prior_to_release": {
+        "physics_step": 359,
+        "time_s": 1.43600006820634,
+        "rotation_measured_rad": 15.606425459487308,
+        "turns_measured": 2.483839755872609,
+        "lift_measured_m": 0.01168299686908722,
+        "radial_error_m": 1.140480208050576e-06,
+        "axis_tilt_rad": 3.7621814253920045e-05,
+        "released": false,
+        "body_pose": [
+          9.728326944014043e-08,
+          4.853926682812926e-08,
+          3.3527612686157227e-08,
+          1.0,
+          5.963422609056579e-07,
+          1.2684972716670018e-06,
+          -6.516660846500599e-07
+        ],
+        "cap_pose": [
+          1.4948772104617092e-06,
+          -2.1502205527212936e-07,
+          0.1046830341219902,
+          0.05074775218963623,
+          -1.7215976185980253e-05,
+          -3.865167400363134e-06,
+          0.9987115263938904
+        ]
+      },
+      "postrelease_followup_steps": 188,
+      "postrelease_actual_followup_s": 0.7520000357180834,
+      "cap_world_z_at_release_m": 0.10490071028470993,
+      "cap_world_z_after_followup_m": 0.013421593233942986,
+      "postrelease_theta_state_frozen": true,
+      "pre_omega_matches_previous_post_max_rad_s": 3.383283910807222e-06,
+      "velocity_integral_windows": [
+        {
+          "name": "settle_no_torque",
+          "steps": 250,
+          "pose_twist_increment_rad": -1.3284681017466937e-06,
+          "pre_left_rectangle_integral_rad": 6.654172206055356e-05,
+          "post_right_rectangle_integral_rad": 6.603705749563743e-05,
+          "trapezoid_integral_rad": 6.628938977809554e-05,
+          "pre_left_residual_rad": -6.787019016230025e-05,
+          "post_right_residual_rad": -6.736552559738413e-05,
+          "trapezoid_residual_rad": -6.761785787984224e-05,
+          "trapezoid_full_twist_derivative_residual_rad": -6.756702654348216e-05,
+          "max_abs_pre_left_increment_residual_rad": 0.0006300808647033411,
+          "max_abs_trapezoid_increment_residual_rad": 0.00031542312043854277,
+          "sampling_endpoint_term_rad": -5.046116161059506e-07
+        },
+        {
+          "name": "torque_through_first_release",
+          "steps": 110,
+          "pose_twist_increment_rad": 15.892046121440472,
+          "pre_left_rectangle_integral_rad": 15.606287554926745,
+          "post_right_rectangle_integral_rad": 15.89190914396497,
+          "trapezoid_integral_rad": 15.749098349445857,
+          "pre_left_residual_rad": 0.2857585665137279,
+          "post_right_residual_rad": 0.00013697747550267536,
+          "trapezoid_residual_rad": 0.14294777199461528,
+          "trapezoid_full_twist_derivative_residual_rad": 0.1429478461606024,
+          "max_abs_pre_left_increment_residual_rad": 0.003612182133138508,
+          "max_abs_trapezoid_increment_residual_rad": 0.00180643135320461,
+          "sampling_endpoint_term_rad": 0.2856216265280088
+        },
+        {
+          "name": "all_through_first_release",
+          "steps": 360,
+          "pose_twist_increment_rad": 15.89204479297237,
+          "pre_left_rectangle_integral_rad": 15.606354096648806,
+          "post_right_rectangle_integral_rad": 15.891975181022465,
+          "trapezoid_integral_rad": 15.749164638835637,
+          "pre_left_residual_rad": 0.2856906963235648,
+          "post_right_residual_rad": 6.96119499057346e-05,
+          "trapezoid_residual_rad": 0.1428801541367335,
+          "trapezoid_full_twist_derivative_residual_rad": 0.14288027913405976,
+          "max_abs_pre_left_increment_residual_rad": 0.003612182133138508,
+          "max_abs_trapezoid_increment_residual_rad": 0.00180643135320461,
+          "sampling_endpoint_term_rad": 0.2856211219163673
+        }
+      ],
+      "external_rotation_work_J_recomputed": 0.047676138364321434,
+      "external_rotation_work_matches": true
+    },
+    {
+      "dt_nominal_s": 0.001,
+      "dt_actual_s": 0.0010000000474974513,
+      "passed_recorded_contract_and_release_checks": true,
+      "checks": {
+        "trace_sha_matches_receipt": true,
+        "steps_contiguous": true,
+        "time_equals_step_dt": true,
+        "release_tick_matches": true,
+        "release_meets_both_thresholds": true,
+        "previous_step_not_eligible": true,
+        "released_never_reverts": true,
+        "postrelease_external_torque_zero": true,
+        "tablets_12_positions_every_step": true,
+        "positions_finite": true,
+        "body_cap_dynamic": true,
+        "tablets_12_actual_masses": true,
+        "all_drive_motors_zero_at_readback": true,
+        "no_holder_reported": true,
+        "no_pose_or_velocity_write_reported": true,
+        "explicitly_not_robot_or_dataset": true
+      },
+      "steps": 2190,
+      "release_step": 1440,
+      "release_time_s": 1.4400000683963299,
+      "torque_steps": 440,
+      "nominal_torque_duration_s": 0.44,
+      "actual_torque_duration_s": 0.4400000208988786,
+      "external_pair_torque_Nm": 0.003,
+      "first_release": {
+        "physics_step": 1440,
+        "time_s": 1.4400000683963299,
+        "rotation_measured_rad": 15.67818114990829,
+        "turns_measured": 2.4952600286980804,
+        "lift_measured_m": 0.011738928377628327,
+        "radial_error_m": 6.167233124187987e-08,
+        "axis_tilt_rad": 2.068042827279588e-06,
+        "released": true,
+        "body_pose": [
+          -3.026695480912167e-07,
+          6.727357515501353e-08,
+          1.4901161193847656e-08,
+          1.0,
+          3.422169925215712e-08,
+          1.6395146928971371e-07,
+          -3.2315606404154096e-06
+        ],
+        "cap_pose": [
+          -2.071219000754354e-07,
+          6.7695239636123e-08,
+          0.10473894327878952,
+          0.01489374041557312,
+          -8.396876864935621e-07,
+          2.1503635139197286e-07,
+          0.9998891353607178
+        ]
+      },
+      "prior_to_release": {
+        "physics_step": 1439,
+        "time_s": 1.4390000683488324,
+        "rotation_measured_rad": 15.607018974920585,
+        "turns_measured": 2.4839342167876164,
+        "lift_measured_m": 0.011684554040431977,
+        "radial_error_m": 5.550324289060882e-08,
+        "axis_tilt_rad": 1.788139343261957e-06,
+        "released": false,
+        "body_pose": [
+          -3.005841904268891e-07,
+          6.70562059212898e-08,
+          2.2351741790771484e-08,
+          1.0,
+          1.8101714260865265e-07,
+          3.196821012352302e-07,
+          -3.2136301797436317e-06
+        ],
+        "cap_pose": [
+          -1.7830876686275587e-07,
+          2.4954855959435918e-08,
+          0.10468457639217377,
+          0.05045393109321594,
+          -5.654692358803004e-07,
+          -1.4578409945897874e-07,
+          0.9987263679504395
+        ]
+      },
+      "postrelease_followup_steps": 750,
+      "postrelease_actual_followup_s": 0.7500000356230885,
+      "cap_world_z_at_release_m": 0.10473894327878952,
+      "cap_world_z_after_followup_m": 0.01345478743314743,
+      "postrelease_theta_state_frozen": true,
+      "pre_omega_matches_previous_post_max_rad_s": 3.8000289350748062e-06,
+      "velocity_integral_windows": [
+        {
+          "name": "settle_no_torque",
+          "steps": 1000,
+          "pose_twist_increment_rad": -1.3876016964342597e-05,
+          "pre_left_rectangle_integral_rad": 9.80954385682107e-05,
+          "post_right_rectangle_integral_rad": 9.706565724583697e-05,
+          "trapezoid_integral_rad": 9.758054790702384e-05,
+          "pre_left_residual_rad": -0.00011197145553255329,
+          "post_right_residual_rad": -0.00011094167421017957,
+          "trapezoid_residual_rad": -0.00011145656487136644,
+          "trapezoid_full_twist_derivative_residual_rad": -0.00011145701299289082,
+          "max_abs_pre_left_increment_residual_rad": 7.733289450186156e-06,
+          "max_abs_trapezoid_increment_residual_rad": 4.05131299795331e-06,
+          "sampling_endpoint_term_rad": -1.0297809525006465e-06
+        },
+        {
+          "name": "torque_through_first_release",
+          "steps": 440,
+          "pose_twist_increment_rad": 15.678195025925255,
+          "pre_left_rectangle_integral_rad": 15.606986235650664,
+          "post_right_rectangle_integral_rad": 15.678148589503788,
+          "trapezoid_integral_rad": 15.642567412577227,
+          "pre_left_residual_rad": 0.07120879027459104,
+          "post_right_residual_rad": 4.6436421467177524e-05,
+          "trapezoid_residual_rad": 0.03562761334802822,
+          "trapezoid_full_twist_derivative_residual_rad": 0.035627615360944276,
+          "max_abs_pre_left_increment_residual_rad": 0.00022703744730855462,
+          "max_abs_trapezoid_increment_residual_rad": 0.00011402047192462409,
+          "sampling_endpoint_term_rad": 0.07116235786213954
+        },
+        {
+          "name": "all_through_first_release",
+          "steps": 1440,
+          "pose_twist_increment_rad": 15.67818114990829,
+          "pre_left_rectangle_integral_rad": 15.607084331089233,
+          "post_right_rectangle_integral_rad": 15.678245655161033,
+          "trapezoid_integral_rad": 15.642664993125134,
+          "pre_left_residual_rad": 0.07109681881905772,
+          "post_right_residual_rad": -6.450525274281915e-05,
+          "trapezoid_residual_rad": 0.03551615678315656,
+          "trapezoid_full_twist_derivative_residual_rad": 0.0355161583479493,
+          "max_abs_pre_left_increment_residual_rad": 0.00022703744730855462,
+          "max_abs_trapezoid_increment_residual_rad": 0.00011402047192462409,
+          "sampling_endpoint_term_rad": 0.07116132808118703
+        }
+      ],
+      "external_rotation_work_J_recomputed": 0.04703458507777575,
+      "external_rotation_work_matches": true
+    }
+  ],
+  "dt_comparison": {
+    "pre_left_residual_coarse_fine_ratio": 4.012967576219213,
+    "trapezoid_residual_coarse_fine_ratio": 4.0122747094572535,
+    "release_angle_coarse_minus_fine_rad": 0.21386364306408012,
+    "release_lift_coarse_minus_fine_m": 0.00016175955533981323,
+    "interpretation": "Consistent with first-order endpoint sampling/semi-implicit position updates under smooth torque: post-step right rectangle nearly removes cumulative torque-phase residual, trapezoid halves pre-left residual. Only two dt values; no general convergence or energy proof."
+  },
+  "old_robot_failure_not_resolved": "Old strong-contact failure has about+15.615rad pose twist versus−9.784rad stored pre-omega integral; an endpoint sampling shift of roughly0.06rad cannot explain a25.4rad discrepancy. This smooth torque bench validates neither the old hand-contact event nor future robot unscrewing.",
+  "logging_contract_for_115profile": {
+    "each_4ms_tick": [
+      "global/active tick and actual dt; phase and SDK24 action index",
+      "pre/post body+cap world pose (wxyz), cmass local/world pose",
+      "pre/post full world linear_velocity and angular_velocity for both actors",
+      "pre/post relative pose and wrapped/unwrapped theta, projected omega_z, exact full swing-twist derivative",
+      "cap/body contact other-link names, world point, normal, normal/tangent impulse, moment arm and summed torque",
+      "applied external/helix/friction/seat torque and force; release-eligibility thresholds and exact event",
+      "robot measured q36 and commanded SDK24 where possible, plus cap-contact guard state"
+    ],
+    "integrator_comparison": "Keep pre-left, post-right and trapezoid diagnostics separately; exclude postrelease frozen threaded theta from physical free-spin integration comparisons.",
+    "no_acceptance_shortcut": "Do not make robot_success true from this component probe; no world fixture, no pose reset, no threshold weakening."
+  },
+  "original_inputs_unchanged_after_audit": {
+    "receipt.json": true,
+    "trace_dt_0p001.json.gz": true,
+    "trace_dt_0p004.json.gz": true
+  }
+}

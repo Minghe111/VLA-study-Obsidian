@@ -1,0 +1,13 @@
+{
+  "version": "lab-physics-v1",
+  "units": "SI",
+  "source_status": "derived parametric collision/guide mechanism; not claimed native functionality of any imported mesh",
+  "bottle": {"inner_radius_m": 0.021, "outer_radius_m": 0.025, "height_m": 0.09, "base_thickness_m": 0.003, "wall_segments": 32},
+  "cap": {"inner_radius_m": 0.0258, "outer_radius_m": 0.03, "top_thickness_m": 0.004, "skirt_depth_m": 0.012, "closed_center_z_m": 0.093, "mass_kg": 0.012},
+  "thread_guide": {"model": "actuated D6 helical guide approximation, not threaded mesh contact", "axial_target": "closed_z + pitch * accumulated_MEASURED_relative_rotation / (2*pi), clipped to engagement range", "pitch_m_per_turn": 0.0048, "opening_turns": 2.5, "release_axial_m": 0.0115, "release_angle_tolerance_rad": 0.1, "linear_stiffness_N_per_m": 500, "linear_damping_Ns_per_m": 4, "linear_force_limit_N": 5, "angular_stiffness_Nm_per_rad": 0.03, "angular_damping_Nms_per_rad": 0.003, "angular_torque_limit_Nm": 0.02},
+  "tablets": {"count": 12, "radius_m": 0.003, "half_length_m": 0.002, "mass_kg": 0.00035, "geometry": "capsule, local X axis", "friction": 0.35, "restitution": 0.02},
+  "receiver": {"asset": "imported sample-data petri_dish lower CAD body; matched derived convex collision dimensions", "inner_radius_m": 0.0425, "outer_radius_m": 0.0435, "height_m": 0.014, "base_thickness_m": 0.001, "wall_segments": 48},
+  "fixture": {"receiver_position_m": [0.030,0,0], "bottle_mouth_position_m": [0,0,0.130], "pour_tilt_deg": 155},
+  "physics": {"dt_s": 0.001, "gravity_m_s2": [0,0,-9.81], "solver_position_iterations": 16, "solver_velocity_iterations": 4, "contact_offset_m": 0.0004, "rest_offset_m": 0.0},
+  "boundary": ["No RM65-B controller or grasp involved", "Bottle is driven by a declared kinematic test fixture", "Cap is dynamic, guided by a force/torque limited constraint until release", "After release a separate declared test gripper holds/removes the cap", "Tablets are initialized once, then moved only by physics", "No liquid simulation or chemical/material calibration", "No real helical thread friction, cross-threading or human push-and-turn safety cap"]
+}

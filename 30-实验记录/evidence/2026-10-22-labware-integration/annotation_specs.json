@@ -1,0 +1,569 @@
+{
+  "date": "2026-10-22",
+  "scope": "External lab assets; annotation and actual official-loader compatibility; robot grasp unverified",
+  "robotwin_commit": "931ce21f4f0e63feab661f349634d5a25bd92681",
+  "sources": [
+    {
+      "url": "https://robotwin-platform.github.io/doc/usage/object-annotation.html",
+      "kind": "official_guidance"
+    },
+    {
+      "url": "https://github.com/RoboTwin-Platform/RoboTwin/blob/main/scripts/create_object_data.py",
+      "kind": "official_annotation_tool",
+      "local_path": "/home/admin123/liminghe/vla-benchmark/RoboTwin/scripts/create_object_data.py",
+      "sha256": "8b2dd2f62392812349b0e3025fcb416c1ea6962338f9f792fceaf517e427ef9f"
+    },
+    {
+      "local_path": "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/utils/create_actor.py",
+      "sha256": "6bababee8e70da2460b2bbf47d3b5fbb20ccf73368782a7be596a63c962dce6d"
+    },
+    {
+      "local_path": "/home/admin123/liminghe/vla-benchmark/RoboTwin/envs/utils/actor_utils.py",
+      "sha256": "252d43c526b23adcf4ba549fec64a49f037fc4a24e9edd1998e5f60d3e13d5d9"
+    }
+  ],
+  "input_contract": {
+    "mesh_axis": "Z-up",
+    "dimensions": "metres after scale",
+    "preferred_scale": [
+      1,
+      1,
+      1
+    ],
+    "bottom_z_m": "0 except bottle_cap, whose top-disc-centred frame has z=-.012..+.002m",
+    "geometry_optional_keys": [
+      "inner_radius_m",
+      "floor_z_m",
+      "opening_z_m",
+      "grasp_z_m",
+      "pour_rim_m",
+      "axis_center_xy_m"
+    ],
+    "kinds": [
+      "beaker",
+      "erlenmeyer",
+      "graduated_cylinder",
+      "shallow_dish",
+      "bottle_body",
+      "bottle_cap"
+    ],
+    "collision": "multiple disconnected convex mesh nodes; call official create_actor(convex=True)"
+  },
+  "schema": {
+    "rigid": {
+      "contact": "contact_points_pose",
+      "target": "target_pose",
+      "functional": "functional_matrix",
+      "orientation": "orientation_point"
+    },
+    "articulated": {
+      "contact": "contact_points",
+      "target": "target_points",
+      "functional": "functional_points",
+      "orientation": "orientation_point"
+    },
+    "point_encoding": "finite right-handed homogeneous 4x4; translation in unscaled mesh coordinates",
+    "rigid_world_transform": "T_world_actor @ [R_local, scale*translation_local; 0 0 0 1]",
+    "articulated_world_transform": "T_world_link @ [R_local, scalar_scale*translation_local; 0 0 0 1]",
+    "contact_axis": "contact +Y is pregrasp-outward; -Y is approach direction from official get_grasp_pose",
+    "transform_matrix_caveat": "rigid create_actor does not apply this field; prepare coordinates then identity",
+    "mass_caveat": "official Actor default resets dynamic mass to .01kg; explicit postload set_mass required",
+    "contact_groups": "identical grasp centre with alternative approach directions; one Boolean mask per group"
+  },
+  "generator_validation": {
+    "passed": true,
+    "cases": [
+      {
+        "kind": "beaker",
+        "rigid": {
+          "schema": "rigid",
+          "counts": {
+            "contact": 4,
+            "target": 2,
+            "functional": 3,
+            "orientation": 1
+          },
+          "scale": [
+            0.001,
+            0.002,
+            0.003
+          ],
+          "passed": true
+        },
+        "articulated_conversion": true
+      },
+      {
+        "kind": "erlenmeyer",
+        "rigid": {
+          "schema": "rigid",
+          "counts": {
+            "contact": 4,
+            "target": 2,
+            "functional": 3,
+            "orientation": 1
+          },
+          "scale": [
+            0.001,
+            0.002,
+            0.003
+          ],
+          "passed": true
+        },
+        "articulated_conversion": true
+      },
+      {
+        "kind": "graduated_cylinder",
+        "rigid": {
+          "schema": "rigid",
+          "counts": {
+            "contact": 4,
+            "target": 2,
+            "functional": 3,
+            "orientation": 1
+          },
+          "scale": [
+            0.001,
+            0.002,
+            0.003
+          ],
+          "passed": true
+        },
+        "articulated_conversion": true
+      },
+      {
+        "kind": "shallow_dish",
+        "rigid": {
+          "schema": "rigid",
+          "counts": {
+            "contact": 4,
+            "target": 2,
+            "functional": 3,
+            "orientation": 1
+          },
+          "scale": [
+            0.001,
+            0.002,
+            0.003
+          ],
+          "passed": true
+        },
+        "articulated_conversion": true
+      },
+      {
+        "kind": "bottle_body",
+        "rigid": {
+          "schema": "rigid",
+          "counts": {
+            "contact": 4,
+            "target": 2,
+            "functional": 3,
+            "orientation": 1
+          },
+          "scale": [
+            0.001,
+            0.002,
+            0.003
+          ],
+          "passed": true
+        },
+        "articulated_conversion": true
+      },
+      {
+        "kind": "bottle_cap",
+        "rigid": {
+          "schema": "rigid",
+          "counts": {
+            "contact": 4,
+            "target": 2,
+            "functional": 2,
+            "orientation": 1
+          },
+          "scale": [
+            0.001,
+            0.002,
+            0.003
+          ],
+          "passed": true
+        },
+        "articulated_conversion": true
+      }
+    ],
+    "scope": "CPU schema/scale/frame checks only"
+  },
+  "official_loader_fixture_validation": {
+    "status": "passed_on_actual_SAPIEN_3_0_0b1",
+    "asset_kind": "temporary generated collision fixture, not a final imported visual",
+    "convex_true": {
+      "shapes": 17,
+      "type": "PhysxCollisionShapeConvexMesh",
+      "source_nodes": 17,
+      "world_keypoint_checks": "all contact/target/functional/orientation passed",
+      "explicit_mass_kg": 0.1,
+      "mass_readback_kg": 0.10000000149011612
+    },
+    "convex_false": {
+      "shapes": 1,
+      "type": "PhysxCollisionShapeTriangleMesh",
+      "recommendation": "do not use for these dynamic hollow labware assets"
+    },
+    "aperture_drop": {
+      "passed": true,
+      "steps": 500,
+      "dt_s": 0.004,
+      "probe_radius_m": 0.004,
+      "body_position_m": [
+        -5.333985697575372e-09,
+        7.331339424432315e-10,
+        0
+      ],
+      "probe_position_m": [
+        -2.7548217929052043e-08,
+        2.629295003941934e-09,
+        0.007999991066753864
+      ],
+      "probe_height_above_bottom_m": 0.007999991066753864,
+      "opening_height_m": 0.08,
+      "meaning": "probe passed through open aperture and rested on physical interior bottom"
+    }
+  },
+  "prepared_asset_validation": [
+    {
+      "id": "beaker",
+      "annotation_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/beaker/model_data0.json",
+      "validation": {
+        "schema": "rigid",
+        "counts": {
+          "contact": 4,
+          "target": 2,
+          "functional": 3,
+          "orientation": 1
+        },
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passed": true
+      },
+      "mesh_sha256": "a0ad9d6ee2ea1ec78df8476fb150cd03950badaa21f08df4a244d548203642f1",
+      "official_loader": {
+        "passed": true,
+        "loader": "original RoboTwin envs.utils.create_actor.create_actor",
+        "convex": true,
+        "collision_shapes": 49,
+        "expected_convex_parts": 49,
+        "collision_type": "PhysxCollisionShapeConvexMesh",
+        "all_keypoint_world_transforms": "passed with nonzero yaw/translation",
+        "mass_readback_kg": 0.07999999821186066,
+        "visual_glb_sha256": "768296b59f3b88c8800c3f5e04c55863d3e3aaa4bffeb8b594b7f0a6a87c1a68",
+        "collision_glb_sha256": "5bf1ed1187da8824ef5ba2e18f8d96d1bac1397b7b079161ed5fec2e72b7da36"
+      },
+      "aperture_drop": {
+        "passed": true,
+        "physics_steps": 1000,
+        "dt_s": 0.001,
+        "probe_radius_m": 0.003,
+        "probe_mass_kg": 0.00035,
+        "probe_start_z_m": 0.11232034000000002,
+        "body_position_m": [
+          7.260254619723128e-09,
+          2.713099522821949e-09,
+          -7.450580596923828e-09
+        ],
+        "probe_position_m": [
+          6.903038141103934e-09,
+          1.510284786121474e-09,
+          0.0044999984093010426
+        ],
+        "probe_local_position_m": [
+          -3.5721647861919337e-10,
+          -1.2028147367004749e-09,
+          0.0045000058598816395
+        ],
+        "expected_floor_plus_probe_radius_m": 0.0045000000000000005,
+        "opening_z_m": 0.07232034000000001,
+        "scope": "physical test of prepared segmented convex container; no robot/grasp"
+      },
+      "annotation_sha256": "5063194f4505779368ebf876e593b1948d3cb7e9eaf2b3c0fe630cdc2e5910ad"
+    },
+    {
+      "id": "erlenmeyer",
+      "annotation_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/erlenmeyer/model_data0.json",
+      "validation": {
+        "schema": "rigid",
+        "counts": {
+          "contact": 4,
+          "target": 2,
+          "functional": 3,
+          "orientation": 1
+        },
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passed": true
+      },
+      "mesh_sha256": "869b249c907e2faa92582a6a6dbef4b45e74ef61177b195e38796d4229adc65e",
+      "official_loader": {
+        "passed": true,
+        "loader": "original RoboTwin envs.utils.create_actor.create_actor",
+        "convex": true,
+        "collision_shapes": 193,
+        "expected_convex_parts": 193,
+        "collision_type": "PhysxCollisionShapeConvexMesh",
+        "all_keypoint_world_transforms": "passed with nonzero yaw/translation",
+        "mass_readback_kg": 0.11999998986721039,
+        "visual_glb_sha256": "68adc2d9164db5770f9df92d0edc91846dc0a64a0762458b635d3fa421514c18",
+        "collision_glb_sha256": "add6d97f3a6f84f6cfc3ed0f39f194adfd40e4946be9523ff9f60cd4d34cab1c"
+      },
+      "aperture_drop": {
+        "passed": true,
+        "physics_steps": 1000,
+        "dt_s": 0.001,
+        "probe_radius_m": 0.003,
+        "probe_mass_kg": 0.00035,
+        "probe_start_z_m": 0.17371188,
+        "body_position_m": [
+          3.3684033340364294e-09,
+          3.909667034562858e-10,
+          -3.725290298461914e-09
+        ],
+        "probe_position_m": [
+          3.6937162217753894e-09,
+          1.4686923899276394e-10,
+          0.0051999990828335285
+        ],
+        "probe_local_position_m": [
+          3.2531288773895994e-10,
+          -2.4409746446352187e-10,
+          0.005200002808123827
+        ],
+        "expected_floor_plus_probe_radius_m": 0.0052,
+        "opening_z_m": 0.13371188,
+        "scope": "physical test of prepared segmented convex container; no robot/grasp"
+      },
+      "annotation_sha256": "b1abfd7de72089b7c300b7e3fae3a43da49b303721c33d28a8b72c4f57a0ef36"
+    },
+    {
+      "id": "graduated_cylinder",
+      "annotation_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/graduated_cylinder/model_data0.json",
+      "validation": {
+        "schema": "rigid",
+        "counts": {
+          "contact": 4,
+          "target": 2,
+          "functional": 3,
+          "orientation": 1
+        },
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passed": true
+      },
+      "mesh_sha256": "2a3a2ff8e10e35f9ef84b8155156bca4b5d195ffa836381aa24d098a698baa02",
+      "official_loader": {
+        "passed": true,
+        "loader": "original RoboTwin envs.utils.create_actor.create_actor",
+        "convex": true,
+        "collision_shapes": 193,
+        "expected_convex_parts": 193,
+        "collision_type": "PhysxCollisionShapeConvexMesh",
+        "all_keypoint_world_transforms": "passed with nonzero yaw/translation",
+        "mass_readback_kg": 0.15000000596046448,
+        "visual_glb_sha256": "f10d13e9cedb170cf20d472be872622f82c8a58e2bb96fef1c6f83569f8127ca",
+        "collision_glb_sha256": "00bb095f9f8ce6cc7ccce2fb28989a4ac374af7b3ceb1116eb67051b0962131e"
+      },
+      "aperture_drop": {
+        "passed": true,
+        "physics_steps": 1000,
+        "dt_s": 0.001,
+        "probe_radius_m": 0.003,
+        "probe_mass_kg": 0.00035,
+        "probe_start_z_m": 0.29,
+        "body_position_m": [
+          9.76056568902095e-09,
+          -2.601980497729528e-08,
+          1.4901161193847656e-08
+        ],
+        "probe_position_m": [
+          5.409421191870933e-06,
+          1.0407045010651927e-05,
+          0.004800013732165098
+        ],
+        "probe_local_position_m": [
+          5.399660494731506e-06,
+          1.0433064744574949e-05,
+          0.004799998831003904
+        ],
+        "expected_floor_plus_probe_radius_m": 0.0048000000000000004,
+        "opening_z_m": 0.25,
+        "scope": "physical test of prepared segmented convex container; no robot/grasp"
+      },
+      "annotation_sha256": "93d6b55d631f49c7399ec49a555c3a278365fd7c8e4d2ce9fc8d7292bbd5a019"
+    },
+    {
+      "id": "petri_dish",
+      "annotation_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/petri_dish/model_data0.json",
+      "validation": {
+        "schema": "rigid",
+        "counts": {
+          "contact": 4,
+          "target": 2,
+          "functional": 3,
+          "orientation": 1
+        },
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passed": true
+      },
+      "mesh_sha256": "dd923b15af4a03f950649cfe8144288400f3ade09957f2041ca5d13c265be2cb",
+      "official_loader": {
+        "passed": true,
+        "loader": "original RoboTwin envs.utils.create_actor.create_actor",
+        "convex": true,
+        "collision_shapes": 49,
+        "expected_convex_parts": 49,
+        "collision_type": "PhysxCollisionShapeConvexMesh",
+        "all_keypoint_world_transforms": "passed with nonzero yaw/translation",
+        "mass_readback_kg": 0.029999997466802597,
+        "visual_glb_sha256": "35febad2408ceb5e626c2207d7de81b691d6a3be3b9b9c0846ed94e661f1ee15",
+        "collision_glb_sha256": "a248803023f3c1a392b349f53049476f60a4ef4b63ce0d250b4dac439fdf6119"
+      },
+      "aperture_drop": {
+        "passed": true,
+        "physics_steps": 1000,
+        "dt_s": 0.001,
+        "probe_radius_m": 0.003,
+        "probe_mass_kg": 0.00035,
+        "probe_start_z_m": 0.054,
+        "body_position_m": [
+          -2.3090212408760635e-08,
+          -1.7560807918926002e-08,
+          9.313225746154785e-10
+        ],
+        "probe_position_m": [
+          -2.7386906076287687e-09,
+          -8.024686692920113e-09,
+          0.004000001586973667
+        ],
+        "probe_local_position_m": [
+          2.0351521357042657e-08,
+          9.53612122600589e-09,
+          0.0040000006556510925
+        ],
+        "expected_floor_plus_probe_radius_m": 0.004,
+        "opening_z_m": 0.014,
+        "scope": "physical test of prepared segmented convex container; no robot/grasp"
+      },
+      "annotation_sha256": "032b3e3c241be96e8b6d885f196094440a971a2cf31ed2970cccd2633278ab5f"
+    },
+    {
+      "id": "reagent_bottle_body",
+      "annotation_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_body/model_data0.json",
+      "validation": {
+        "schema": "rigid",
+        "counts": {
+          "contact": 4,
+          "target": 2,
+          "functional": 3,
+          "orientation": 1
+        },
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passed": true
+      },
+      "mesh_sha256": "f0b7ea14c874dcf109a72eb274290006eb1dc3c6262c1d4b761a0220a695f694",
+      "official_loader": {
+        "passed": true,
+        "loader": "original RoboTwin envs.utils.create_actor.create_actor",
+        "convex": true,
+        "collision_shapes": 49,
+        "expected_convex_parts": 49,
+        "collision_type": "PhysxCollisionShapeConvexMesh",
+        "all_keypoint_world_transforms": "passed with nonzero yaw/translation",
+        "mass_readback_kg": 0.07999999821186066,
+        "visual_glb_sha256": "37b2cedeca674c9314c88a6766fd7d2f1d502d77016dfe9d18aef22fe0d34864",
+        "collision_glb_sha256": "b956c2c25ff5cdb8ea442b388f3961ea93c763e0b14981402d06cd846b36b00b"
+      },
+      "aperture_drop": {
+        "passed": true,
+        "physics_steps": 1000,
+        "dt_s": 0.001,
+        "probe_radius_m": 0.003,
+        "probe_mass_kg": 0.00035,
+        "probe_start_z_m": 0.13,
+        "body_position_m": [
+          -1.0979321896087413e-09,
+          -6.662408402746678e-10,
+          3.725290298461914e-09
+        ],
+        "probe_position_m": [
+          -1.4979928408820342e-09,
+          -1.7768932991657493e-09,
+          0.006000000052154064
+        ],
+        "probe_local_position_m": [
+          -4.0006065127329293e-10,
+          -1.1106524588910816e-09,
+          0.005999996326863766
+        ],
+        "expected_floor_plus_probe_radius_m": 0.006,
+        "opening_z_m": 0.09,
+        "scope": "physical test of prepared segmented convex container; no robot/grasp"
+      },
+      "annotation_sha256": "2080d5d2a7c88c2538c2d02ce145c4fcaf640ed8dfd4b7e29311adcc85f04794"
+    },
+    {
+      "id": "reagent_bottle_cap",
+      "annotation_file": "/home/admin123/liminghe/VLA-WAM-RL/30-实验记录/evidence/2026-10-22-labware-integration/prepared/reagent_bottle_cap/model_data0.json",
+      "validation": {
+        "schema": "rigid",
+        "counts": {
+          "contact": 4,
+          "target": 2,
+          "functional": 2,
+          "orientation": 1
+        },
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passed": true
+      },
+      "mesh_sha256": "19765ed11eb84cc83864bcb051cfe4d89bdb87261af1224c3aa5af878a08e7b6",
+      "official_loader": {
+        "passed": true,
+        "loader": "original RoboTwin envs.utils.create_actor.create_actor",
+        "convex": true,
+        "collision_shapes": 33,
+        "expected_convex_parts": 33,
+        "collision_type": "PhysxCollisionShapeConvexMesh",
+        "all_keypoint_world_transforms": "passed with nonzero yaw/translation",
+        "mass_readback_kg": 0.011999999172985554,
+        "visual_glb_sha256": "a92350c5eb91cde07c909263a686e74c26672304cc1aab0c53a30a3d70dedb63",
+        "collision_glb_sha256": "7acd21fe0ca17909d4cfca133a9bdd6426f8bf38dcc8e8353eabc589f818ab06",
+        "mass_readback_before_alignment_kg": 0.00800000037997961,
+        "mass_alignment": "2026-10-22 aligned to LabBottle dynamic cap mass 0.012 kg; reloaded original official create_actor",
+        "mass_requested_kg": 0.012
+      },
+      "annotation_sha256": "f900c27c17f3645f88c51d27e322a4bcc4ee82afa558b82539c1f77d1dfc77aa"
+    }
+  ],
+  "audit_freeze": {
+    "date": "2026-10-22",
+    "physics_spec_sha256": "9d5ae8d89d60dd2d4e466a966c3862d7d160cc2e5ebe4d61bc8a1eac9a2d59ef",
+    "lab_physics_sha256": "3453db9b1319d9ad001e67d7f6043a949f6199a7bcacebf83a0609e76636123d",
+    "annotation_sha256s_final": true,
+    "cap_mass_unified_kg": 0.012
+  }
+}

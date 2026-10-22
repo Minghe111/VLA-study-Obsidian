@@ -1,0 +1,135 @@
+{
+  "scope": "One bounded actual first-touch diagnostic; no cap grasp, unscrew or pour claim",
+  "error": {
+    "type": "PathRejected",
+    "message": "Actual-scene moving-left path check rejected",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_cap_contact_probe.py\", line 182, in main\n    report=moving_path_audit(audit,np.vstack([actual_drive_left,endpoint]),native);planning.append(report)\n  File \"/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/left_cap_contact_probe.py\", line 67, in moving_path_audit\n    if not report['scoped_left_sampled_path_passed']:raise PathRejected(report)\nPathRejected: Actual-scene moving-left path check rejected\n"
+  },
+  "first_contact_observed": false,
+  "first_contact": null,
+  "guard_failure": null,
+  "full_task_success": false,
+  "prefix294_action_state_exact": true,
+  "shadow_feedback_max_abs_diff": 0.0,
+  "complete60ms_targets": 343,
+  "partial_ticks": 0,
+  "right_arm_drive_held_constant": true,
+  "sources_unchanged": true,
+  "final_metrics": {
+    "success": false,
+    "bottom_gap_m": 0.025174854063044427,
+    "upright_angle_deg": 3.7547326346343555,
+    "thumb_contact_N": 2.2730344790033996,
+    "finger_contact_N": 2.1685259125661105,
+    "table_contact_N": 0.0,
+    "opposed_contact": true,
+    "opposing_normals_dot": -0.9993819672131634,
+    "hold_seconds": 4.948,
+    "max_hold_seconds": 4.948,
+    "lift_achieved": true,
+    "speed_m_s": 0.018189461901783943,
+    "stable_place_seconds": 0.0,
+    "failure_reason": null,
+    "stage": "left_prepare",
+    "tablet_centers_inside": 12,
+    "tablet_total": 12,
+    "closed_fill_hold_seconds": 4.948,
+    "max_closed_fill_hold_seconds": 4.948,
+    "cap_closed_observed": true,
+    "cap_state": {
+      "physics_step": 10520,
+      "time_s": 42.08000199869275,
+      "rotation_measured_rad": 0.035462951241616913,
+      "turns_measured": 0.005644103986730199,
+      "lift_measured_m": 0.0007189221382141175,
+      "radial_error_m": 1.4901161193847656e-08,
+      "axis_tilt_rad": 0.0003380505268326852,
+      "released": false,
+      "body_pose": [
+        0.10515717417001724,
+        -0.12181969732046127,
+        0.7668200135231018,
+        0.999211311340332,
+        -0.02536585181951523,
+        -0.0207319688051939,
+        0.02244221605360508
+      ],
+      "cap_pose": [
+        0.10010333359241486,
+        -0.11591213941574097,
+        0.8852840662002563,
+        0.9986525774002075,
+        -0.02589687705039978,
+        -0.020256424322724342,
+        0.040151119232177734
+      ]
+    },
+    "cap_robot_contact_N": 0.5132707883603871,
+    "cap_robot_contact_links": [
+      "r_inspire_right_index_2"
+    ],
+    "unscrew_verified": false,
+    "pour_verified": false,
+    "legacy_substring_table_contact_N": 0.038540224878147455,
+    "support_actor_identity": {
+      "name": "table",
+      "per_scene_id": 6
+    },
+    "stage_body_hold_success": true,
+    "stage_success": true,
+    "full_unscrew_pour_success": false,
+    "left_cap_contact": {
+      "actor_id": 104,
+      "actor_name": "derived115_closed_tablet_bottle_cap",
+      "forces_N": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "index_thumb_normals_dot": 1.0,
+      "opposed": false,
+      "contacts": [],
+      "measured_physics_dt_s": 0.004000000189989805
+    },
+    "right_cap_contact": {
+      "actor_id": 104,
+      "actor_name": "derived115_closed_tablet_bottle_cap",
+      "forces_N": [
+        0.0,
+        0.0,
+        0.0,
+        0.5132707854397909,
+        0.0
+      ],
+      "index_thumb_normals_dot": 1.0,
+      "opposed": false,
+      "contacts": [
+        {
+          "hand_link": "r_inspire_right_index_2",
+          "channel": "index",
+          "normal_force_N": 0.5132707854397909,
+          "position_world_m": [
+            0.12055042386054993,
+            -0.09416648000478745,
+            0.8730336427688599
+          ],
+          "weighted_normal_world": [
+            -0.04814416147306329,
+            0.005362625643206196,
+            0.5109797432722925
+          ]
+        }
+      ],
+      "measured_physics_dt_s": 0.004000000189989805
+    },
+    "left_cap_force_N": 0.0,
+    "right_cap_force_N": 0.5132707854397909,
+    "forbidden_left_contact_N": {
+      "left_body": 0.0,
+      "left_table": 0.0,
+      "left_right": 0.0
+    }
+  }
+}

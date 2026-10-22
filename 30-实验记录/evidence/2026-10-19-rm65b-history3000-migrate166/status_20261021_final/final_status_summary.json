@@ -1,0 +1,79 @@
+{
+  "checked_beijing": "2026-10-21T21:11:53.224958+08:00",
+  "finished_beijing": "2026-10-21T00:59:02.819340+08:00",
+  "supervisor_status": "completed",
+  "stop_reason": "budget_exhausted_not_converged",
+  "checkpoint_step": 24000,
+  "evaluation_step": 24000,
+  "checkpoint_version_sha256": "2e75522386ab8703089f62de240974127c457ef8856bf71daf28cacff5be1b30",
+  "training_status": "completed_training_segment_pending_independent_validation",
+  "exact_resume": true,
+  "frozen_parameters_exact": true,
+  "frozen_buffers_exact": true,
+  "gradient_audit": {
+    "trainable_tensor_count": 144,
+    "trainable_finite_grad": 144,
+    "frozen_with_grad": 0,
+    "changed_trainable_tensors": 144
+  },
+  "readonly_eval": {
+    "parameters_and_buffers_exact": true,
+    "parameter_versions_exact": true,
+    "gradients_none": true,
+    "actor_version_before": "train_s024000/actor",
+    "actor_version_after": "train_s024000/actor",
+    "actor_version_exact": true,
+    "before_path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/supervisor_166_v2/eval_s024000/model_readonly_before.json",
+    "after_path": "/bigdata2/liminghe/rlinf_history3000_20261019_v1/source_tree/deploy/realman_gen4/recap_memory_20261017/experiments/high_sft_history3000_20261019_v1/reports/supervisor_166_v2/eval_s024000/model_readonly_after.json"
+  },
+  "suites": {
+    "val180": {
+      "status": "completed",
+      "strict": {
+        "passed": 148,
+        "eligible": 180
+      }
+    },
+    "train_quick96": {
+      "status": "completed",
+      "strict": {
+        "passed": 87,
+        "eligible": 96
+      }
+    },
+    "full_val600": {
+      "status": "not_run",
+      "strict": null
+    },
+    "revision_only40": {
+      "status": "completed",
+      "strict": {
+        "passed": 20,
+        "eligible": 40
+      }
+    },
+    "history_ablation16": {
+      "status": "completed",
+      "strict": {
+        "passed": 15,
+        "eligible": 16
+      }
+    },
+    "legacy_regression96": {
+      "status": "completed",
+      "strict": {
+        "passed": 88,
+        "eligible": 96
+      }
+    }
+  },
+  "retention": {
+    "anchor8": true,
+    "holdout8": true
+  },
+  "fullval_review_required": true,
+  "processes": [],
+  "GPU": "GPU-b8006bad-7fb4-41be-9016-7822db997854, 13, 0",
+  "source_report_SHA_matches_selection": true,
+  "no_new_training_or_eval": true
+}

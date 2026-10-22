@@ -1,0 +1,69 @@
+{
+  "version": "independent-contact-bottle115-v1",
+  "units": "SI",
+  "source_status": "derived parametric collision/guide mechanism; not claimed native functionality of any imported mesh",
+  "bottle": {
+    "inner_radius_m": 0.021,
+    "outer_radius_m": 0.025,
+    "height_m": 0.115,
+    "base_thickness_m": 0.003,
+    "wall_segments": 32
+  },
+  "cap": {
+    "inner_radius_m": 0.0258,
+    "outer_radius_m": 0.03,
+    "top_thickness_m": 0.004,
+    "skirt_depth_m": 0.012,
+    "closed_center_z_m": 0.118,
+    "mass_kg": 0.012
+  },
+  "thread_guide": {
+    "model": "passive spring/friction helical surrogate inherited from frozen RobotCapAssembly",
+    "axial_target": "closed_z + pitch * clipped measured relative spin/(2*pi); paired passive reaction, no angular actuator",
+    "pitch_m_per_turn": 0.0048,
+    "opening_turns": 2.5,
+    "release_axial_m": 0.0115,
+    "release_angle_tolerance_rad": 0.1,
+    "linear_stiffness_N_per_m": 500,
+    "linear_damping_Ns_per_m": 4,
+    "linear_force_limit_N": 5,
+    "angular_stiffness_Nm_per_rad": 0.03,
+    "angular_damping_Nms_per_rad": 0.003,
+    "angular_torque_limit_Nm": 0.02
+  },
+  "tablets": {
+    "count": 12,
+    "radius_m": 0.003,
+    "half_length_m": 0.002,
+    "mass_kg": 0.00035,
+    "geometry": "capsule, local X axis",
+    "friction": 0.35,
+    "restitution": 0.02
+  },
+  "receiver": {
+    "asset": "imported sample-data petri_dish lower CAD body; matched derived convex collision dimensions",
+    "inner_radius_m": 0.0425,
+    "outer_radius_m": 0.0435,
+    "height_m": 0.014,
+    "base_thickness_m": 0.001,
+    "wall_segments": 48
+  },
+  "physics": {
+    "dt_s": 0.001,
+    "gravity_m_s2": [
+      0,
+      0,
+      -9.81
+    ],
+    "solver_position_iterations": 16,
+    "solver_velocity_iterations": 4,
+    "contact_offset_m": 0.0004,
+    "rest_offset_m": 0.0
+  },
+  "boundary": [
+    "Independent derived 115-mm bottle; original90-mm inputs unchanged",
+    "No actuator, world fixture, cap holder or object pose command after initialization",
+    "Body80g, cap12g and tablet0.35g are engineering mass assumptions, not measurements",
+    "No hardware thread/friction calibration; robot grasp/unscrew/pour require separate actual validation"
+  ]
+}

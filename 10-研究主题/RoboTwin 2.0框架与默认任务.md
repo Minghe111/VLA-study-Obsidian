@@ -1,7 +1,7 @@
 ---
 title: RoboTwin 2.0框架与默认任务
 tags: [框架, 仿真, RoboTwin]
-updated: 2026-10-14
+updated: 2026-10-22
 status: 当前源码核对
 ---
 
@@ -203,3 +203,231 @@ RoboTwin 的 `domain_randomization` 配置在环境初始化、场景构建及�
 - [LeRobot v0.4.4 图像增强实现](https://github.com/huggingface/lerobot/blob/v0.4.4/src/lerobot/datasets/transforms.py)
 - [LeRobot v0.4.4 数据集配置](https://github.com/huggingface/lerobot/blob/v0.4.4/src/lerobot/configs/default.py)
 - 本地静态核查：`envs/_base_task.py`、`envs/camera/camera.py`、`envs/pick_dual_bottles.py`、`envs/pick_diverse_bottles.py`；对应上述本地 HEAD，未证明与官方 main 所有代码一致。
+
+## 化学实验室桌面物体资产核查（2026-10-21）
+
+> [!summary] 当前结论
+> 当前安装包中未识别到明确标注的烧杯、量筒、试管、试管架、锥形瓶或移液器。已有普通瓶、药瓶、杯、托盘、塑料盒和电子秤，可用于干式容器取放流程的原型；这些通用资产不能直接认作化学器具或已验证的实验功能。
+
+本次核查本机 `/home/admin123/liminghe/vla-benchmark/RoboTwin`，HEAD `931ce21f4f0e63feab661f349634d5a25bd92681`，实际资产根目录为 `assets/objects`；同时在线核对官方 RoboTwin-OD 图鉴与任务文档。没有连接161/166服务器、渲染场景、执行抓取或新采集。资产未被Git版本号覆盖，HEAD仅标识加载器和任务源码版本。
+
+### 已有的相关资产
+
+下表数量为本机实际找到非空 `visual/base<ID>.glb`、`collision/base<ID>.glb` 和对应 `model_data<ID>.json` 的文件组数，表示文件存在，不代表加载、碰撞几何或RM65-B灵巧手抓取验收通过。
+
+| 物体 | 目录 | 本机文件组数 | 与实验室任务的关系 |
+| --- | --- | --- | --- |
+| 普通瓶 | `001_bottle`、`114_bottle` | 23、4 | 可用于瓶体操作原型；不是已确认的试剂瓶模型。 |
+| 药瓶 | `080_pillbottle` | 5 | 可作为样品容器取放原型；不表示瓶盖能独立开合。 |
+| 普通杯 | `021_cup` | 13 | 可用于容器取放；未标注为带刻度烧杯。 |
+| 带液体外观的杯 | `022_cup-with-liquid` | 1 | 描述为蓝色饮用杯、黄色液体；当前刚体加载不提供液体流动证据。 |
+| 托盘 | `008_tray` | 4 | 可用于器具集配与转运场景。 |
+| 普通电子秤 | `072_electronicscale` | 5 | 可用于向秤台放物；没有据此确认真实称重读数或分析天平精度。 |
+| 塑料盒 | `062_plasticbox` | 11 | 可用于容器收纳和归位。 |
+| 双杆支架 | `040_rack` | 1 | 语言描述为带直杆、斜杆的支架，不是试管架。 |
+
+官方入口：[RoboTwin-OD](https://robotwin-platform.github.io/doc/objects/index.html) · [药瓶](https://robotwin-platform.github.io/doc/objects/080_pillbottle.html) · [普通杯](https://robotwin-platform.github.io/doc/objects/021_cup.html) · [带液体杯](https://robotwin-platform.github.io/doc/objects/022_cup-with-liquid.html) · [电子秤](https://robotwin-platform.github.io/doc/objects/072_electronicscale.html) · [支架](https://robotwin-platform.github.io/doc/objects/040_rack.html)。
+
+### 搜索范围与不能由名称推出的功能
+
+检查了120个编号物体目录、附带Objaverse目录、1068个JSON文件，以及本地 `assets/objects.zip` 的10070个归档条目名称；对烧杯、量筒、试管、锥形瓶、移液器等中英文关键词检索，没有找到明确命中。并核对了 `description/objects_description`、任务脚本和资产加载器。没有逐个目视检查全部网格，故结论限定为“当前包未发现明确对应资产”，不声称整个Objaverse或所有第三方扩展均不存在化学器具。
+
+官网写RoboTwin-OD为147类、731件，其中Objaverse部分27类、153件，且不列入编号图鉴；本地 `objaverse/list.json` 与注释文件则为26类、152件。保留这一差异，不将官网总数当成本机资产完整性证明。本地下载器 `assets/_download.py` 指向 [TianxingChen/RoboTwin2.0](https://huggingface.co/datasets/TianxingChen/RoboTwin2.0/tree/main) 的 `objects.zip`；本次未更新资产包。
+
+`envs/utils/create_actor.py:create_actor` 分别读取视觉/碰撞网格与元数据并建立PhysX刚体。即使网格显示液面，也不能据此推出液体倾倒、混合、体积读数或化学反应仿真。`022_cup-with-liquid` 的本地 `model_data0.json` 未包含常规资产的 `scale`，也不能仅凭三类文件存在就称其默认加载配置完善。
+
+### 对当前课题的复用方式
+
+- `move_pillbottle_pad` 已有药瓶抓取、移动到垫上的任务模板；可参考其物体创建、目标点和成功判据，但RM65-B六通道灵巧手抓取需要单独适配验证。
+- `place_object_scale` 当前将鼠标、订书机或铃放到电子秤；成功判断检查位置、高度与夹爪状态，没有读取称重数值。它是放置任务，不是现成化学称量任务。
+- 若下一步需要烧杯、量筒、试管及试管架，须补充专用网格、正确尺度、质量/摩擦与碰撞几何、抓取/放置功能点及任务成功条件。试管插架尤其需要保留孔洞和容器内腔的有效碰撞几何，不能只更换外观。此为适配建议，尚未实施。
+
+对本课题，可先复用药瓶、托盘、盒子构造干式样品取放、交接、归位与扰动恢复，再补充专用实验器具。液体操作需要另行明确模拟精度与实现成本；当前资产核查没有证明相关功能已可用。关联 [[RM65-B接入RoboTwin仿真]] · [[RM65-B灵巧手仿真数据采集-RoboTwin2自动生成路线]]。
+
+任务来源：[Move Pillbottle Pad](https://robotwin-platform.github.io/doc/tasks/move_pillbottle_pad.html) · [Place Object Scale](https://robotwin-platform.github.io/doc/tasks/place_object_scale.html)；本地对应 `envs/move_pillbottle_pad.py`、`envs/place_object_scale.py`、`envs/utils/create_actor.py`，核查日期2026-10-21，证据类型为文件存在性与静态源码核查。
+
+### RealMan桌面资产多视角渲染（2026-10-21）
+
+> [!info] 此节保留原包通用资产展示
+> 本节保留2026-10-21只用官方素材时的初期展示；药品容器需要保留，不能将对普通瓶的否定扩展为移除药品。2026-10-22用户已允许导入外部器皿，当前功能资产见 [[2026-10-22-RoboTwin实验室器皿导入与功能点标注]]。
+
+本机RTX 5090使用SAPIEN 3实际加载厂家RM65-B双臂四代灵巧手URDF和7件代表物体，按规则网格置于高度0.74米的桌面。导出正面、左前、右前、俯视、机器人侧高位和桌面近景六张1920×1440 PNG，并生成总览。双臂使用既有端点IK预览的静态关节姿态；每组资产各一件，没有摆出全部型号。原URDF、GLB和资产JSON未改，展示脚本和文件哈希保存在同目录清单。
+
+同日用户纠正：可乐不应出现在化学实验室场景。已从初版9件中移除 `001_bottle/13` 可乐瓶及 `114_bottle/1` 另一只饮料瓶，重新渲染并替换全部六张图片、总览与清单；当前保留药瓶、普通杯、带液体外观杯、挂杯支架、托盘、电子秤和塑料盒。实验室布景不再使用饮料瓶代替实验器具；通用杯、支架仍不冒称烧杯或试管架。
+
+![[30-实验记录/evidence/2026-10-21-realman-tabletop-assets/multiview_overview.png|1000]]
+
+高清图：[[30-实验记录/evidence/2026-10-21-realman-tabletop-assets/01_front.png|正面]] · [[30-实验记录/evidence/2026-10-21-realman-tabletop-assets/02_front_left.png|左前]] · [[30-实验记录/evidence/2026-10-21-realman-tabletop-assets/03_front_right.png|右前]] · [[30-实验记录/evidence/2026-10-21-realman-tabletop-assets/04_top.png|俯视]] · [[30-实验记录/evidence/2026-10-21-realman-tabletop-assets/05_robot_overhead.png|机器人侧高位]] · [[30-实验记录/evidence/2026-10-21-realman-tabletop-assets/06_table_detail.png|桌面近景]]。
+
+六张PNG解码与尺寸检查通过，当前清单确认7件且不含两只饮料瓶；保留物体的位置沿用已检查的网格布局，其可见包围盒均位于桌面范围，二维占地互不重叠，网格底部统一高于桌面1毫米。已目视检查修订后六视角总览，确认饮料瓶移除。此为真实渲染运行证据，物体采用静态视觉网格，物理步数为0，不包含碰撞/抓取验收、轨迹执行、策略推理、数据采集或实体机器人操作。`022_cup-with-liquid` 因缺官方scale，显式取0.06展示缩放，杯高约11.4厘米；这不是官方尺度或液体仿真验证。所有画面均为外置展示相机，不冒称标定后的头部或腕部D435观测。
+
+复现脚本：[[30-实验记录/evidence/2026-10-21-realman-tabletop-assets/render_tabletop.py]]；资产、位姿和相机清单：[[30-实验记录/evidence/2026-10-21-realman-tabletop-assets/render_manifest.json]]。本次使用现有本机 `robotwin` 环境，与161/166服务器状态无关。
+
+### LabUtopia专用器具导入与渲染（2026-10-21）
+
+> [!info] 历史外部导入测试，未采用
+> 用户于2026-10-21曾限定仅使用官方素材，本节保留当时未采用的静态导入测试。2026-10-22用户已允许重新使用外部现成模型，其中烧杯、锥形瓶在新功能资产包中复用，详见 [[2026-10-22-RoboTwin实验室器皿导入与功能点标注]]；本节旧渲染仍不是功能验证证据。
+
+用户要求更接近化学实验室，普通杯、生活托盘不再作为主要布景。本轮改用 [LabUtopia作者资产库](https://huggingface.co/datasets/Ruinwalker/LabUtopia-Dataset) 的8种实验室专用几何：烧杯、锥形瓶、容量瓶、带塞试管组、独立试管架、移液器与支架、实验室电子天平、加热板；烧杯显示两个尺寸，共9个物体或组合。源 `TestTube_01` 本身包含5支带塞试管和支架；源 `Pipette` 是多支移液器与支架，不按单根器具计数。本轮未找到明确量筒资产，不把容量瓶误称量筒。
+
+![[30-实验记录/evidence/2026-10-21-realman-lab-specific/06_table_detail.png|1000]]
+
+六视角总览：[[30-实验记录/evidence/2026-10-21-realman-lab-specific/multiview_overview.png]]；高清 [[30-实验记录/evidence/2026-10-21-realman-lab-specific/01_front.png|正面]]、[[30-实验记录/evidence/2026-10-21-realman-lab-specific/04_top.png|俯视]]。已完成实际SAPIEN渲染与目视检查，6张1920×1440 PNG解码通过，9个摆放位置均在桌面内、占地不重叠、几何底部高于台面1毫米。
+
+这是外部专用资产的网格导入，不是RoboTwin原包已有这些器具，也不表示已经迁移LabUtopia整套任务或Isaac Sim环境。固定来源revision为 `e622f0ec8123c9098d913ea56a4116fd83a29662`，数据资产CC BY-NC 4.0；9个原始USD文件约7.45MB，包含试管架的相对依赖子文件。使用独立临时目录的 `usd-core 26.8` 将单位、节点变换和材质分组展开为OBJ，并在现有SAPIEN中渲染；未改动现有Conda包、原机器人模型或原RoboTwin资产。
+
+Omni MDL采用近似SAPIEN材质，玻璃可透射，但不声称复现原纹理、刻度和光学属性。模型尺寸为显式选择的展示尺寸，不是实机标定。当前仅静态视觉网格，物理步数0；碰撞体、抓取点、质量/摩擦、液体、称重/加热反馈、任务脚本和成功判据均未移植，不能据图像称为可采集训练数据。
+
+完整署名、许可、文件路径、适配范围与复现入口见 [[30-实验记录/evidence/2026-10-21-realman-lab-specific/来源与适配说明]]。本试验仅作为历史外部导入记录保留，当前选择以下官方版本。
+
+### 仅官方素材的实验室近似实例筛选与渲染（2026-10-21）
+
+> [!info] 历史筛选版本
+> 本节7件物品包含4只药品容器。后续曾误把对普通瓶的否定扩展为排除药品，现已按用户纠正补回；当前8件桌面和修正后的默认姿态见“近处主要操作区与周边摆放”。
+
+用户最终约束：**只使用RoboTwin官方素材库中相近的实例，不采用外部资产；保留原 `072_electronicscale/model 0` 电子秤。** 因此本次回到本机官方 `assets/objects`，按具体实例而非只按物体类别筛选。原饮料瓶、餐盘、蓝色饮用杯、黄色液体杯、挂杯支架和外部LabUtopia器具均未进入此场景。
+
+| 所选官方实例 | 数量 | 外观与定位 |
+| --- | --- | --- |
+| `080_pillbottle/base2` | 2 | 白色旋盖瓶，作为样品容器外观近似；仍保留原标签纹理。 |
+| `080_pillbottle/base4` | 2 | 棕色瓶身、白盖、宽白标签，外观接近试剂瓶；不宣称原类别就是试剂瓶。 |
+| `021_cup/base5` | 1 | 无柄金属圆筒容器，避免原蓝色餐饮杯；不是专业烧杯。 |
+| `062_plasticbox/base2` | 1 | 中性开口收纳容器，替换餐盘与蓝色生活收纳盒。 |
+| `072_electronicscale/base0` | 1 | 沿用用户认可的原电子秤，文件SHA、型号与scale `[0.08,0.08,0.08]` 均与首版一致。 |
+
+`021_cup/base6` 虽是银色金属杯，但官方描述明确有弯柄，故不选；`001_bottle/base17` 的内嵌纹理有醒目成品商标，`base20` 有花卉与提环，也未选。瓶子采用官方原模型多实例摆放，没有改颜色、去标签、重建器具或引入新的物体资产。
+
+![[30-实验记录/evidence/2026-10-21-realman-official-lab-selection/06_table_detail.png|1000]]
+
+完整六视角：[[30-实验记录/evidence/2026-10-21-realman-official-lab-selection/multiview_overview.png]]；高清 [[30-实验记录/evidence/2026-10-21-realman-official-lab-selection/01_front.png|正面]]、[[30-实验记录/evidence/2026-10-21-realman-official-lab-selection/04_top.png|俯视]]。
+
+复现脚本 [[30-实验记录/evidence/2026-10-21-realman-official-lab-selection/render_official_selection.py]]；实际资产SHA、ID、尺度、位置和相机见 [[30-实验记录/evidence/2026-10-21-realman-official-lab-selection/render_manifest.json]]。物体网格全部位于本机官方 `RoboTwin/assets/objects`，六张1920×1440 PNG已解码、目视检查，7个物体均在台面内且占地分离，电子秤与原版本的网格SHA和缩放一致。当前仍为静态外观展示，未运行物理步、抓取或数据采集；不以相近外观证明真实化学器具功能。
+
+### 烧杯、量筒与培养皿专项复查（2026-10-21）
+
+用户进一步询问培养皿是否也可用。本轮重查官方图鉴、本机 `description/objects_description` 和 `assets/objects` 的JSON，检索 `beaker`、`graduated`、`measuring cylinder`、`petri`、`culture dish` 及中文名称，没有找到明确对应的专用资产。另检查 `003_plate`、`019_coaster` 和未列入编号图鉴的 `objaverse/plate` 全5个实例的原纹理与材质，未找到可确认的培养皿。
+
+| 候选 | 实际核对结果 |
+| --- | --- |
+| `objaverse/plate/003`、`004` | 带花边图案的圆餐盘。 |
+| `objaverse/plate/007` | 白色放射纹浅圆餐盘，是这些候选中最接近浅皿的形状；仍为陶瓷餐盘外观。 |
+| `objaverse/plate/008` | 带花边图案的矩形餐盘。 |
+| `objaverse/plate/009` | 浅绿色六边形盘，底部有商品标签。 |
+| `003_plate/base0` | 普通餐盘，官方语言描述明确为 `food plate`。 |
+| `019_coaster/base0` | 木纹杯垫，不是有容积的培养皿。 |
+
+5个Objaverse盘子的MTL均为普通贴图材质，JPG不含alpha，未声明透明/玻璃透射；`003_plate` 与 `019_coaster` 的GLB材料未声明透明模式或透射扩展。此处结合原纹理和形状判断为餐盘/杯垫，不仅靠材质排除“培养皿”语义；也不以不透明本身认定所有培养皿都应透明。
+
+因此结论限定为：**在当前下载的官方包及已复查实例里，未发现可确认的烧杯、量筒或培养皿专用模型；现有金属容器和浅盘只是近似候选。** 不把餐盘重命名为培养皿，不改动当前场景。若以后允许本地程序建模，可由SAPIEN原生几何构建这些简单器皿，但这属于自建模型，不是官方现成素材，且碰撞、抓取和物理功能须另外验证。
+
+来源：[官方RoboTwin-OD](https://robotwin-platform.github.io/doc/objects/index.html)、[003_Plate](https://robotwin-platform.github.io/doc/objects/003_plate.html)、[021_Cup](https://robotwin-platform.github.io/doc/objects/021_cup.html)；本机实际文件 `assets/objects/objaverse/plate/*/textured.obj`、`*.obj.mtl`、`*.jpg`、`003_plate/visual/base0.glb`、`019_coaster/visual/base0.glb` 及对应语言描述。源码HEAD仍为 `931ce21f4f0e63feab661f349634d5a25bd92681`；静态资产与原纹理核查，没有新增仿真运行或采集。
+
+### 电子秤称量纸专项复查（2026-10-21）
+
+用户询问可放在电子秤秤盘上的纸，通常称为称量纸。本机官方包没有检索到独立 `weighing paper`、`weighing boat`、`filter paper` 或称量纸、称量舟、滤纸资产。`023_tissue-box` 为纸巾盒，7个GLB实例均是单一整体网格；`028_roll-paper` 为卷纸，不是可独立铺放的纸片；纸牌类别为整盒纸牌，也不适合直接替代。
+
+特别检查了官方包附带的 `objaverse/tissue/004` 与 `005` 原纹理和URDF：前者明确为整包湿巾（包装含 `WET WIPES / 40片装`），后者为整包抽纸（含 `80抽` 等字样），两者都是单刚体、原配置质量0.1kg，不是独立称量纸。
+
+若仅服务当前静态可视化，可使用RoboTwin已有的 `create_box` 原生几何接口创建极薄白色方片，按原电子秤秤盘的实际尺寸定位。这不需要外部模型，但属于程序新建纸片外观，不能说官方库已经提供称量纸，也不自动具备纸张形变、折叠或称重反馈。本轮只核查资产，没有创建纸片或修改渲染场景。
+
+### 官方包透明物体与透明材质复查（2026-10-21）
+
+> [!important] 专用实验器具缺失，不代表没有透明物体
+> 本轮直接扫描原材质并实际渲染，确认官方包中存在半透明瓶体。此前筛选未单独列出这一类；“未找到烧杯、量筒、培养皿”不能扩展为“官方包没有透明物体”。
+
+扫描了本机官方物体目录中572个 `visual/*.glb` 的材质，零解析错误；在 `114_bottle` 3个实例的共10个材质中发现 `alphaMode=BLEND` 与alpha小于1：
+
+| 官方实例 | 瓶身部分材质alpha | 外观与适用边界 |
+| --- | --- | --- |
+| `114_bottle/base1.glb` | 约0.11 | 黄色瓶体；原贴图未见文字，不是专用实验器皿。 |
+| `114_bottle/base2.glb` | 约0.41 | 无纹理图、无品牌文字，主要为纯色瓶身、瓶盖与色带；可作为中性透明容器候选，瓶型仍是普通瓶。 |
+| `114_bottle/base4.glb` | 0.50 | 蓝盖透明瓶，有矿泉水文字包装；不用于当前实验室布景。 |
+
+这些参数仅作用于部分材质，瓶盖、标签等其他部分可保持不透明；alpha不是经标定的光学透过率，不能当作折射率或物理玻璃模型。另扫描2114个MTL文件，部分烤箱、微波炉、厨房锅等部件以及辅助 `cube` 也含 `d<1` 的透明设置，故上述3瓶不代表全库只有这3件带透明部件的资产。
+
+使用原GLB、原尺度和原材质，在SAPIEN RT中独立渲染3瓶与背后的棋盘格，确认瓶身部分区域可见后方棋盘格。未覆写材质，画面存在明显三角面/透明显示伪影，不声称高质量或物理准确玻璃渲染。图中从左到右为4、2、1号：
+
+![[30-实验记录/evidence/2026-10-21-robotwin-transparency/transparent_candidates.png|1000]]
+
+`088_wineglass` 的5个实例虽在语言描述中含transparent/clear，但当前GLB材质均缺省OPAQUE，贴图为RGB且没有alpha，也未声明玻璃透射扩展；因此语言里的“玻璃/透明外观”不能自动算作已验证的透光材质。这一类未在本轮执行透光渲染。
+
+证据：[[30-实验记录/evidence/2026-10-21-robotwin-transparency/material_audit.json|原材质扫描与范围]]、[[30-实验记录/evidence/2026-10-21-robotwin-transparency/render_transparent_candidates.py|复现脚本]]、[[30-实验记录/evidence/2026-10-21-robotwin-transparency/render_receipt.json|实际渲染记录]]。这次只做透明性对比，没有把饮料瓶加入当前RealMan桌面，没有修改原模型或验证抓取/采集。
+
+### 官方小盘子实际尺寸复查（2026-10-21）
+
+用户询问小一点的盘子。本轮直接读取原视觉网格，并应用各自URDF的mesh scale（Objaverse为0.001）或GLB模型JSON的scale，计算外包尺寸，没有用注释中的 `object_size` 代替实际几何。
+
+| 官方实例 | 当前网格外包尺寸 | 外观 |
+| --- | --- | --- |
+| `objaverse/plate/007` | 156.7 × 156.4 × 14.3 mm | 白色浅圆盘，边缘放射纹，是这5款Objaverse盘里最小、最浅的一款。 |
+| `003_plate/base0` | 约190.3 × 189.7 × 25.0 mm（平面两轴与高度） | 常规圆盘。 |
+| `objaverse/plate/003` | 192.2 × 191.7 × 38.6 mm | 带花边的圆盘。 |
+
+推荐小盘候选为 `objaverse/plate/007`：原始尺寸约直径15.7厘米、整体高度1.43厘米；高度是外包高度，不等于盘内深度。若后续希望8～10厘米量级，可显式等比缩小这个官方原模型，模型来源不变，但那是人为缩放后的尺寸，并不是官方默认尺寸。本轮没有修改场景或缩放任何资产。
+
+同日按用户随后要求执行实际渲染：新建独立预览，仅将原尺寸 `objaverse/plate/007` 与原电子秤 `072_electronicscale/base0` 放在RealMan桌面上作尺寸对照。盘子按原URDF的0.001缩放、identity姿态加载，未缩小或换材质；OBJ、MTL、JPG从官方原目录直接读取。4张1920×1440 PNG均解码通过、来源网格SHA及底面对齐核对通过，已目视检查近景与俯视。源盘面有扫描纹理和几何起伏，图像按官方默认姿态展示，不将其当作理想培养皿几何。静态渲染、物理步数0，没有抓取或采集。
+
+![[30-实验记录/evidence/2026-10-21-official-small-plate/02_plate_and_scale.png|1000]]
+
+查看 [[30-实验记录/evidence/2026-10-21-official-small-plate/03_top.png|俯视]]、[[30-实验记录/evidence/2026-10-21-official-small-plate/04_plate_close.png|盘子近景]]、[[30-实验记录/evidence/2026-10-21-official-small-plate/multiview_overview.png|四视角总览]]。复现脚本 [[30-实验记录/evidence/2026-10-21-official-small-plate/render_small_plate.py]]；资产、尺度和相机清单 [[30-实验记录/evidence/2026-10-21-official-small-plate/render_manifest.json]]。
+
+### 完整桌面与左腕默认姿态修正（2026-10-21）
+
+> [!info] 漏放药品的中间场景，已更正
+> 用户接受官方小盘007，要求将物品一起摆上桌并修正左手外翻。本版当时只摆放4件官方物体：原电子秤、小盘007、无柄金属容器、开口收纳盒。将药品容器一并排除是对用户意图的误读；用户随后指出“药品呢？怎么没有了”，补回后的当前场景见下一节。
+
+本机现有 `robotwin` 环境通过SAPIEN 3实际渲染厂家RM65-B双臂四代灵巧手URDF。4件物品按两排错位摆放在0.74米高的桌面上：原电子秤中心 `(-0.27, 0.27)` 米，小盘中心 `(0.02, 0.27)` 米，金属容器中心 `(-0.40, -0.01)` 米，收纳盒中心 `(0.38, 0.14)` 米。小盘保留官方0.001缩放，外包尺寸约156.7×156.4×14.3毫米；电子秤的源网格SHA及scale `[0.08, 0.08, 0.08]` 与原预览一致。所有物体可见包围盒均在台面内，水平足迹互不重叠，几何底面高于台面1毫米；这不是动态稳定性或可达性验证。
+
+![[30-实验记录/evidence/2026-10-21-realman-tabletop-final/01_front.png|1000]]
+
+**左手外翻修正**：原预览中 `l_joint6=-1.7524284124 rad`，本轮仅将该关节增加π，保存为 `+1.3891642412 rad`，位于原URDF的 `[-6.28, 6.28] rad` 限位内。关节按名称映射，不依赖36维活动关节向量的交错顺序。左右手掌面均对应各自手底座局部+Y；经实际SAPIEN正运动学核对，左掌世界法向由约 `[-0.7071, +0.7071, 0]` 翻为 `[+0.7071, -0.7071, 0]`，右掌保持 `[-0.7071, -0.7071, 0]`，双掌朝内。左手底座位置和手指长轴保持不变，其他关节未调整；目视检查正面、俯视、桌面近景及修正前后对比通过。
+
+![[30-实验记录/evidence/2026-10-21-realman-tabletop-final/left_wrist_comparison.png|1000]]
+
+默认姿态和物体位置已持久保存到 [[30-实验记录/evidence/2026-10-21-realman-tabletop-final/scene_preset.json|场景预设]]，[[30-实验记录/evidence/2026-10-21-realman-tabletop-final/render_scene.py|渲染脚本]]默认读取该文件，按关节名载入姿态并检查限位。它是**当前展示场景的默认值**；没有修改厂家URDF、RoboTwin所有任务的全局home配置，也没有下发真机动作。源URDF的SHA保持 `4bf28c444af1a28401a975e5de6e138c1ec043536aa786ea541c30c359bd65bd`。
+
+高清 [[30-实验记录/evidence/2026-10-21-realman-tabletop-final/04_top.png|俯视]]、[[30-实验记录/evidence/2026-10-21-realman-tabletop-final/06_table_detail.png|桌面近景]]、[[30-实验记录/evidence/2026-10-21-realman-tabletop-final/07_hands_detail.png|双手近景]]、[[30-实验记录/evidence/2026-10-21-realman-tabletop-final/multiview_overview.png|六视角总览]]；完整位姿、掌面法向、限位及相机记录见 [[30-实验记录/evidence/2026-10-21-realman-tabletop-final/render_manifest.json|渲染清单]]。7张新姿态1920×1440 PNG及1张旧姿态对照已实际生成，均为外置展示相机，不是标定后的D435观测。
+
+证据范围：2026-10-21本机实际静态渲染、几何位置与关节限位检查；RoboTwin源码HEAD `931ce21f4f0e63feab661f349634d5a25bd92681`，资产另以清单SHA标识。物理步数0，未验证全机器人碰撞、动态抓取、轨迹规划或数据采集，未运行策略推理或实体机器人控制。
+
+### 药品补回与当前完整桌面（2026-10-21）
+
+> [!info] 药品补回版本：8件物品，后续进一步调整摆放
+> 按用户纠正，补回此前选定的4只药品容器：官方 `080_pillbottle/base2` 白色药瓶2只、`base4` 棕色药瓶2只。对普通饮料瓶的排除不应扩大为移除药品；当前保留药品容器，不加入可乐、矿泉水等饮料瓶。
+
+原电子秤、小盘007、金属容器、收纳盒的位置与官方尺度保持不变；白色药瓶中心放在 `(-0.56, 0.27)`、`(-0.46, 0.27)` 米，棕色药瓶放在 `(0.21, 0.35)`、`(0.32, 0.35)` 米。4只药瓶沿用先前筛选的原GLB、原纹理和官方scale `[0.08, 0.08, 0.08]`，高度约15.2厘米。这里展示的是药品容器网格，不表示已有可分离药片、可开合瓶盖或真实化学功能。
+
+![[30-实验记录/evidence/2026-10-21-realman-tabletop-medicines/01_front.png|1000]]
+
+本机SAPIEN实际重新生成7个新姿态视角及旧腕姿态对照，正面和俯视目视检查通过。8件物体的二维包围盒均位于桌面内、互不重叠；已修正的 `l_joint6=+1.3891642412 rad` 与其余全部机器人关节值保持上一版不变。当前默认摆放及姿态已另存为 [[30-实验记录/evidence/2026-10-21-realman-tabletop-medicines/scene_preset.json|含药品的场景预设]]，渲染脚本默认读取该文件。
+
+查看 [[30-实验记录/evidence/2026-10-21-realman-tabletop-medicines/04_top.png|俯视]]、[[30-实验记录/evidence/2026-10-21-realman-tabletop-medicines/06_table_detail.png|桌面近景]]、[[30-实验记录/evidence/2026-10-21-realman-tabletop-medicines/multiview_overview.png|六视角总览]]；[[30-实验记录/evidence/2026-10-21-realman-tabletop-medicines/render_scene.py|复现脚本]]与[[30-实验记录/evidence/2026-10-21-realman-tabletop-medicines/render_manifest.json|源文件SHA及位姿清单]]保留在同目录。来源仍为上述RoboTwin本机官方资产及未改动的厂家URDF；当前仅静态渲染，物理步数0，没有新增抓取、碰撞、策略或真机运行验证。
+
+### 近处主要操作区与周边摆放（2026-10-22）
+
+> [!info] 官方原包的近处摆放版本
+> 按用户当时要求，把电子秤、小盘007和1只棕色药瓶移到双手前方近处；其余5件物品均匀分散在两侧及外圈。后续已授权导入专用器皿，最新功能场景见文末“外部器皿与功能药瓶”。
+
+主要操作区三件物品的中心分别为：电子秤 `(-0.20, -0.04)` 米、小盘 `(0.04, -0.04)` 米、棕色药瓶 `(0.25, -0.04)` 米。相较10月21日药品补回版，它们沿桌面前后方向分别向机器人靠近31、31、39厘米。外围为金属容器 `(-0.62, 0.03)` 米、收纳盒 `(0.60, 0.15)` 米、两只白色药瓶 `(-0.43, 0.36)` 和 `(0.43, 0.36)` 米，以及另一只棕色药瓶 `(0, 0.42)` 米。全部沿用原网格、材质和尺度，机器人关节姿态与上一版相同。
+
+![[30-实验记录/evidence/2026-10-22-realman-operation-zone/01_front.png|1000]]
+
+**运动学核验与边界**：独立CPU脚本直接读取实际厂家URDF，对左臂接近电子秤 `(-0.20, -0.04, 0.82)` 米、右臂接近小盘 `(0.04, -0.04, 0.79)` 米、右臂接近药瓶 `(0.25, -0.04, 0.84)` 米分别求解完整位姿IK。三点均保持各自默认手腕朝向，满足原关节限位，数值位置残差均小于 `1e-8` 米。名义TCP取手底座局部+Z偏移0.18米，是未标定的几何参考点；本轮仅证明这3个接近端点在此运动学模型下有解，不代表无碰撞轨迹、真实接触抓取、三件物体同时操作或实机可达性已验收。记录见 [[30-实验记录/evidence/2026-10-22-realman-operation-zone/reach_check.json|最终三点IK结果]]，独立复核入口为 [[30-实验记录/evidence/2026-10-22-realman-operation-zone/check_reach.py|CPU运动学脚本]]。
+
+本机 `robotwin` 环境实际SAPIEN渲染8张1920×1440 PNG，已检查正面、俯视和操作区近景；8件物体的可见包围盒均位于桌面内，水平足迹互不重叠。[[30-实验记录/evidence/2026-10-22-realman-operation-zone/04_top.png|俯视]] · [[30-实验记录/evidence/2026-10-22-realman-operation-zone/08_operation_close.png|主要操作区近景]] · [[30-实验记录/evidence/2026-10-22-realman-operation-zone/multiview_overview.png|六视角总览]]。当前摆放已保存为 [[30-实验记录/evidence/2026-10-22-realman-operation-zone/scene_preset.json|场景预设]]，[[30-实验记录/evidence/2026-10-22-realman-operation-zone/render_scene.py|渲染脚本]]默认读取它；完整源文件SHA、物体位姿及相机见 [[30-实验记录/evidence/2026-10-22-realman-operation-zone/render_manifest.json|渲染清单]]。源码HEAD仍为上述 `931ce21f4f0e63feab661f349634d5a25bd92681`，源URDF未改，物理步数0，未执行策略、抓取、数据采集或真机控制。
+
+**同日药瓶内容物核查**：用户询问瓶内是否有药片。本机官方 `080_pillbottle/visual/base4.glb` 棕瓶及 `base2.glb` 白瓶均仅有1个节点、1个mesh、1个primitive和1个不透明材质；合并UV／法线接缝顶点后为单一封闭连通网格，未发现独立内含药片模型。原始接缝拆出的网格片段不能当成药片。当前场景也只创建整瓶静态视觉actor，没有单独药片刚体、可独立开合的瓶盖或内容物反馈。封闭网格不能证明具备可装物的有效中空内腔；倒药、数药、逐片称量任务需另加药片刚体并适配瓶口、内腔、瓶盖及碰撞体。本次为原GLB结构、几何与现有场景源码静态核查，没有更改场景或执行物理测试。
+
+**同日官方拧盖标注核查**：需区分外观语言和可执行机构。`description/objects_description/080_pillbottle/base4.json:18` 确实含 `bottle with white screw-on cap`（带白色螺旋盖的瓶子）的外观描述，不能笼统说官方没有提到螺旋盖；但 `points_info.json` 只标瓶身／顶部抓持点和底面放置点，没有可拧开的盖子关节或开盖功能点。`envs/move_pillbottle_pad.py` 通过 `create_actor` 加载整瓶单刚体，只抓起、搬运和放到垫子，成功条件检查整瓶位置与夹爪状态；`envs/utils/create_actor.py:541–559` 对应单actor构建，而非瓶身与瓶盖的关节机构。资产目录没有该药瓶的URDF或独立瓶盖关节文件，当前本机任务中未发现针对该类药瓶的拧盖实现。[官方物体页](https://robotwin-platform.github.io/doc/objects/080_pillbottle.html)展示5种外观，[官方任务页](https://robotwin-platform.github.io/doc/tasks/move_pillbottle_pad.html)也将任务定义为把药瓶放到垫子。结论：语义描述为带旋盖的药瓶，现成仿真资产仍不能直接执行拧盖任务。核查日期2026-10-22，源码HEAD同上；网页与本机文件静态核查，未改场景或运行开盖实验。
+
+**同日官方全包旋盖药瓶复查**：进一步检查当前本机官方 `assets/objects`（含Objaverse），没有找到可直接拧开瓶盖的药瓶。`080_pillbottle/base1–base5` 全5款均为单节点、单mesh的整瓶GLB，没有独立瓶盖或药瓶关节配置。共解析196个URDF、零解析错误，其中44个有非fixed关节，分布在笔、电脑、微波炉、水壶、柜、盒、锅、开关、烤箱，未发现瓶罐螺旋盖机构；Objaverse的152个URDF均为单link、无joint，其7个bottle及3个thermos也没有活动瓶盖。另扩查129个瓶罐及相关容器视觉GLB，未找到现成的瓶身—瓶盖分离旋盖配置。锅盖、水壶盖或盒盖的铰链／直线活动机构不能当作药瓶螺纹旋盖。清单见 [[30-实验记录/evidence/2026-10-22-realman-operation-zone/official_cap_asset_audit.json|官方包旋盖资产审计]]；同时在线核对官方物体图鉴和公开任务，未找到现成药瓶拧盖条目。结论范围为本次检查的本机官方包与公开入口，不对未检查的远端资产版本作绝对否定。若后续坚持不引入外部模型，可改造官方药瓶，但需要自行拆分瓶盖、建立运动／接触约束和成功判据，属于自建可操作资产；本轮未实施。
+
+### 外部器皿与功能药瓶（2026-10-22）
+
+用户已授权导入已有外部烧杯、器皿和透明量器，要求按官方流程标注，并优先支持瓶内药品、旋盖与倾倒。这一要求取代前期只用官方原包的限制。当前完成烧杯、锥形瓶、真正量筒、培养皿的现成模型导入，以及明确标为本地派生的分体药瓶／瓶盖；原电子秤与修正左手姿态保留。
+
+六件资产的功能点通过原始RoboTwin加载器读取和世界坐标核对，五个开口容器通过实际落球内腔检查。药瓶与12颗独立药片完成3种子夹具驱动的闭盖倒置、导向旋盖释放及重力倒药入皿验证，卡盖负控也通过；药片初始化后没有pose写入。螺旋机构是按实测转角耦合抬升的D6约束近似，不是真实螺纹接触，也没有验证RM65-B自主抓持／拧盖或VLA/RL训练。
+
+完整来源、许可、标注、视频、复现与后续机器人接入边界见 [[2026-10-22-RoboTwin实验室器皿导入与功能点标注]]；[[30-实验记录/evidence/2026-10-22-labware-integration/README.md|资产包使用入口]]和[[30-实验记录/evidence/2026-10-22-labware-integration/acceptance_report.json|最终验收记录]]。此次新增资产位于独立任务目录，通过绝对模型目录接入官方加载器，未覆盖官方assets或修改原加载器。
+
+**同日后续官方Agent采集接入：**六件物体已补独立points_info、外底面功能点、模型映射与seen/unseen描述；原Agent enrichment和65个Actor点矩阵实测通过。用户授权使用当前Codex会话生成代码，原生成器解析与官方物理测试函数已实际执行，右臂空开口药瓶在声明的近位1cm×1cm XY区域10/10成功。沿用原 `collect_data.run` 的规划保存、独立reset重放、语言和合并主循环，通过任务局部SDK24 hooks完成一条389窗口／23.34秒的真实仿真示范；三路1167帧、实测state24、实际驱动target24、60ms及12＋12指令均独立读回通过。最终v2只修正头相机俯视，逐帧目标完整入画，原v1裁切证据保留。入口为 [[30-实验记录/evidence/2026-10-22-labware-agent-pipeline/README|实际采集命令与验收]]；旋盖新组件已移除夹具和位置电机，但机器人开盖／倒药与其他器皿任务仍未验收，不将空瓶单任务外推为全场景能力。

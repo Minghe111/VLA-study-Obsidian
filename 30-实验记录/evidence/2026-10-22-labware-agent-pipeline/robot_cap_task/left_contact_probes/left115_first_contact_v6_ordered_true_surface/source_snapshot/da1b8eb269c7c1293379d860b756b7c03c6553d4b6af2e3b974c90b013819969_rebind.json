@@ -1,0 +1,2704 @@
+{
+  "kind": "CPU static geometric clone, no physics rollout",
+  "renderer_created": false,
+  "physics_steps": 0,
+  "visual_elements_removed_only": 93,
+  "active_joints": 36,
+  "collision_links": 93,
+  "reference_episode": "30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/static_hold_probes/held115_static_reference_v1/actual_terminal_snapshot.json",
+  "reference_row": 266,
+  "reference_tick": 4410,
+  "reference_metrics": {
+    "success": false,
+    "bottom_gap_m": 0.02604477786527226,
+    "upright_angle_deg": 1.893515600581295,
+    "thumb_contact_N": 2.419796714093536,
+    "finger_contact_N": 2.362435936028362,
+    "table_contact_N": 0.0,
+    "opposed_contact": true,
+    "opposing_normals_dot": -0.9886580640452207,
+    "hold_seconds": 2.008,
+    "max_hold_seconds": 2.008,
+    "lift_achieved": true,
+    "speed_m_s": 0.021582046523690224,
+    "stable_place_seconds": 0.0,
+    "failure_reason": null,
+    "stage": "right_static_hold",
+    "tablet_centers_inside": 12,
+    "tablet_total": 12,
+    "closed_fill_hold_seconds": 2.008,
+    "max_closed_fill_hold_seconds": 2.008,
+    "cap_closed_observed": true,
+    "cap_state": {
+      "physics_step": 9785,
+      "time_s": 39.140001859050244,
+      "rotation_measured_rad": 0.019476821532677047,
+      "turns_measured": 0.003099832422644217,
+      "lift_measured_m": 0.0006666488647461,
+      "radial_error_m": 5.372690026206328e-08,
+      "axis_tilt_rad": 0.000362183590433511,
+      "released": false,
+      "body_pose": [
+        0.10220436006784439,
+        -0.119749516248703,
+        0.766871452331543,
+        0.999666154384613,
+        -0.01512355450540781,
+        -0.006655190140008926,
+        0.01986522413790226
+      ],
+      "cap_pose": [
+        0.10055413097143173,
+        -0.11619281023740768,
+        0.8854731917381287,
+        0.9994235038757324,
+        -0.015347165055572987,
+        -0.006421928759664297,
+        0.02959689497947693
+      ]
+    },
+    "cap_robot_contact_N": 0.4993795300833881,
+    "cap_robot_contact_links": [
+      "r_inspire_right_index_2"
+    ],
+    "unscrew_verified": false,
+    "pour_verified": false,
+    "legacy_substring_table_contact_N": 0.03741429972592414,
+    "support_actor_identity": {
+      "name": "table",
+      "per_scene_id": 6
+    },
+    "stage_body_hold_success": true,
+    "stage_success": true,
+    "full_unscrew_pour_success": false
+  },
+  "reference_bottle_matrix": [
+    [
+      0.999122142791748,
+      -0.03951588645577431,
+      -0.013906802982091904,
+      0.10220436006784439
+    ],
+    [
+      0.03991848602890968,
+      0.9987533092498779,
+      0.02997259795665741,
+      -0.119749516248703
+    ],
+    [
+      0.012705070897936821,
+      -0.03050142526626587,
+      0.9994539618492126,
+      0.766871452331543
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "primary_arm_hand_state_source": "measured snapshot state24; actual named q36 takes precedence when present",
+  "mimic_state_boundary": "all 36 actual joint positions measured in deterministic preclose replay; later proposed closes use vendor coupling",
+  "cap_added_geometry_only": "cap pose taken directly from the actual snapshot",
+  "max_fk_position_error_m": 6.8432708808948e-07,
+  "source_sha256": "b7daf1048f6bf8cc5d2cd597b1e52bb7dc0d8964ba9f9b2f6eecbcd330a350f4",
+  "spec": {
+    "bottle_height_m": 0.115,
+    "bottle_radius_m": 0.025,
+    "cap_outer_radius_m": 0.03,
+    "cap_skirt_depth_m": 0.012,
+    "cap_top_thickness_m": 0.004,
+    "opening_turns": 2.5
+  },
+  "reference_snapshot": "30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/static_hold_probes/held115_static_reference_v1/actual_terminal_snapshot.json",
+  "reference_snapshot_sha256": "3fca91ff812d3a450eb6d364ea41125276c7007e06aecfce2a1a820cc00ae998",
+  "actual_snapshot_palm_position_error_m": 4.457254039766074e-07,
+  "actual_snapshot_palm_rotation_error_rad": 9.072750183917232e-07,
+  "actual_collision_spec_path": "/home/admin123/liminghe/VLA-WAM-RL/30-\u5b9e\u9a8c\u8bb0\u5f55/evidence/2026-10-22-labware-agent-pipeline/robot_cap_task/profiles/bottle115/physics_spec115.json",
+  "actual_collision_spec_sha256": "a52359200359389e27dc20aa4cc98673b5fff8bd6d2b319337cfe474c7b3294d",
+  "scope": "Static CPU rebind plus discrete approach/first-contact audit; no physical execution",
+  "snapshot_scope": "Actual finite post-lift reference; no cap/pour success",
+  "proposal_sha256": "6fc1ee4850ea7c2fdbc9b1f19094b4c8eb34150834807219eac258f2acf9e33e",
+  "palm_target_world_matrix": [
+    [
+      0.9661017182045393,
+      0.11163422963506105,
+      -0.23277722102499038,
+      0.08500490294356265
+    ],
+    [
+      0.25764442393905895,
+      -0.3598765656964332,
+      0.8967208181924354,
+      -0.23139132451248104
+    ],
+    [
+      0.016333671436275225,
+      -0.9262972888409291,
+      -0.3764393096607536,
+      1.0172963268220045
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "T_cap_from_palm": [
+    [
+      0.979817256416697,
+      0.07901945943232894,
+      -0.1836139130324258,
+      -0.020786131708616713
+    ],
+    [
+      0.1996005805969563,
+      -0.33689098226976066,
+      0.9201435074436345,
+      -0.11811960334165154
+    ],
+    [
+      0.010851371038474833,
+      -0.9382219306200097,
+      -0.3458639279402334,
+      0.12847377474173652
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "open_sdk6": [
+    0.0,
+    0.0,
+    0.0,
+    1000.0,
+    1000.0,
+    400.0
+  ],
+  "ik": {
+    "solver_success": true,
+    "arm_limits_valid": true,
+    "error_norm": 9.00226488166271e-07
+  },
+  "open_sdk24_geometric_target": [
+    -1.431224635269078,
+    -2.0188419125727637,
+    -0.20084256564888184,
+    2.8541469174991208,
+    -1.31963587772881,
+    -0.03551633620921006,
+    0.0,
+    0.0,
+    0.0,
+    1000.0,
+    1000.0,
+    400.0,
+    0.6183452010154724,
+    0.9435983300209045,
+    1.4380160570144653,
+    -0.8298065662384033,
+    -1.5119315385818481,
+    -1.0782101154327393,
+    -0.00031791354371257796,
+    0.000511022479776635,
+    640.2205450048566,
+    647.9025023693617,
+    646.022433026263,
+    0.015214550240116864
+  ],
+  "open_q36": [
+    0.6183452010154724,
+    -1.431224635269078,
+    0.9435983300209045,
+    -2.0188419125727637,
+    1.4380160570144653,
+    -0.20084256564888184,
+    -0.8298065662384033,
+    2.8541469174991208,
+    -1.5119315385818481,
+    -1.31963587772881,
+    -1.0782101154327393,
+    -0.03551633620921006,
+    1.1640822887420654,
+    0.5063514113426208,
+    0.5173988342285156,
+    1.4380992650985718,
+    1.4381004571914673,
+    0.69846,
+    0.0,
+    1.4381,
+    1.4381,
+    1.4381,
+    0.20757244527339935,
+    0.5475062131881714,
+    0.5598901510238647,
+    1.559352159500122,
+    1.5593653917312622,
+    0.0,
+    0.0,
+    1.55933183,
+    1.55933183,
+    1.55933183,
+    0.16247636079788208,
+    0.0,
+    0.1570708304643631,
+    0.0
+  ],
+  "open_audit": {
+    "collision": {
+      "collision_free_except_intended_cap_contact": true,
+      "collisions": [],
+      "minimum_gaps_m": {
+        "left_body": 0.012438641861081123,
+        "left_right": 0.011480453424155712,
+        "left_table": 0.13878774642944336,
+        "left_cap_noncontact": 0.03125236555933952
+      },
+      "cap_nearest": {
+        "thumb": {
+          "gap_m": 0.006700396072119474,
+          "link": "l_inspire_left_thumb_4",
+          "collision": false
+        },
+        "index": {
+          "gap_m": 0.056640625,
+          "link": "l_inspire_index_force_sensor_1",
+          "collision": false
+        }
+      }
+    },
+    "cap_contacts": {
+      "groups": {
+        "thumb": [],
+        "index": []
+      },
+      "max_depth_m": 0.0,
+      "most_opposed_normal_dot": 1.0
+    },
+    "cap_free": true,
+    "clear": true
+  },
+  "prepare_at_home_samples": [
+    {
+      "fraction": 0.0,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.025,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.05,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.07500000000000001,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.1,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.125,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.15000000000000002,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.17500000000000002,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.225,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.25,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.275,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.30000000000000004,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.325,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.35000000000000003,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.375,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.42500000000000004,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.45,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.47500000000000003,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.5,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.525,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.55,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.5750000000000001,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.6000000000000001,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.625,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.65,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.675,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.7000000000000001,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.7250000000000001,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.75,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.775,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.8,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.8250000000000001,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.8500000000000001,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.875,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.9,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.925,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.9500000000000001,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.9750000000000001,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 1.0,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    }
+  ],
+  "joint_line_approach_samples": [
+    {
+      "fraction": 0.0,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.0038461538461538464,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.007692307692307693,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.011538461538461539,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.015384615384615385,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.019230769230769232,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.023076923076923078,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.026923076923076925,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.03076923076923077,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.03461538461538462,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.038461538461538464,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.04230769230769231,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.046153846153846156,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.05,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.05384615384615385,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.057692307692307696,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.06153846153846154,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.06538461538461539,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.06923076923076923,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.07307692307692308,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.07692307692307693,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.08076923076923077,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.08461538461538462,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.08846153846153847,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.09230769230769231,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.09615384615384616,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.1,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.10384615384615385,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.1076923076923077,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.11153846153846154,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.11538461538461539,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.11923076923076924,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.12307692307692308,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.12692307692307692,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.13076923076923078,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.13461538461538464,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.13846153846153847,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.1423076923076923,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.14615384615384616,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.15000000000000002,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.15384615384615385,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.1576923076923077,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.16153846153846155,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.1653846153846154,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.16923076923076924,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.17307692307692307,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.17692307692307693,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.1807692307692308,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.18461538461538463,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.18846153846153846,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.19230769230769232,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.19615384615384618,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.20384615384615384,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2076923076923077,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.21153846153846156,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2153846153846154,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.21923076923076923,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2230769230769231,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.22692307692307695,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.23076923076923078,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.23461538461538461,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.23846153846153847,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.24230769230769234,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.24615384615384617,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.25,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.25384615384615383,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2576923076923077,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.26153846153846155,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2653846153846154,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2692307692307693,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2730769230769231,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.27692307692307694,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.28076923076923077,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2846153846153846,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2884615384615385,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.2923076923076923,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.29615384615384616,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.30000000000000004,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3038461538461539,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3076923076923077,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.31153846153846154,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3153846153846154,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.31923076923076926,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3230769230769231,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3269230769230769,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3307692307692308,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.33461538461538465,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3384615384615385,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3423076923076923,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.34615384615384615,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.35000000000000003,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.35384615384615387,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3576923076923077,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3615384615384616,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3653846153846154,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.36923076923076925,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3730769230769231,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3769230769230769,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3807692307692308,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.38461538461538464,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.38846153846153847,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.39230769230769236,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.3961538461538462,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.40384615384615385,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4076923076923077,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4115384615384616,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4153846153846154,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.41923076923076924,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.42307692307692313,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.42692307692307696,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4307692307692308,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4346153846153846,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.43846153846153846,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.44230769230769235,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4461538461538462,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.45,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4538461538461539,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.45769230769230773,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.46153846153846156,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4653846153846154,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.46923076923076923,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4730769230769231,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.47692307692307695,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4807692307692308,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.48461538461538467,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.4884615384615385,
+      "clear": true,
+      "collisions": [],
+      "cap_free": true
+    },
+    {
+      "fraction": 0.49230769230769234,
+      "clear": false,
+      "collisions": [
+        [
+          "l_inspire_left_index_2",
+          "left_table"
+        ],
+        [
+          "l_inspire_index_force_sensor_3",
+          "left_table"
+        ]
+      ],
+      "cap_free": true
+    }
+  ],
+  "joint_line_approach_discrete_clear": false,
+  "approach_continuously_certified": false,
+  "closing_trace": [
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        990.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        980.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        970.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        960.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        950.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        940.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        930.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        920.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        910.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        900.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        890.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        880.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        870.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        860.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        850.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        840.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        830.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        820.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        810.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        800.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        790.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        780.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        770.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        760.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        750.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        740.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        730.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        720.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        710.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        700.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        690.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        680.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        670.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        660.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        650.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        640.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        630.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        620.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        610.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        600.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        590.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        580.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "index",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        570.0,
+        1000.0,
+        400.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        399.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        398.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        397.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        396.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        395.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        394.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        393.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        392.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        391.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        390.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        389.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        388.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        387.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        386.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        385.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        384.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        383.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        382.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        381.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        380.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        379.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        378.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        377.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        376.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        375.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        374.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        373.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        372.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        371.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        370.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        369.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        368.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        367.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        366.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        365.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        364.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        363.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        362.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        361.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        360.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        359.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        358.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        357.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        356.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        355.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        354.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        353.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        352.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        351.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        350.0
+      ],
+      "clear": true,
+      "collisions": []
+    },
+    {
+      "moved_group": "thumb",
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        349.0
+      ],
+      "clear": true,
+      "collisions": []
+    }
+  ],
+  "first_contacts": {
+    "index": {
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        400.0
+      ],
+      "first_contact_bracket": {
+        "free_sdk": 560.107421875,
+        "contact_sdk": 560.09765625,
+        "channel_index": 3,
+        "maximum_moving_group_vertex_displacement_m": 1.955874596437131e-06,
+        "basis": "previous bracket endpoint has no contact for this finger; cap held fixed in geometric clone",
+        "FCL_EPA_depth_not_used_as_penetration_measure": true,
+        "predicate_boundary_not_PhysX_validation": true
+      },
+      "contacts": [
+        {
+          "link": "l_inspire_left_index_2",
+          "depth_m": 0.01032510120421648,
+          "world_normal": [
+            0.23269179463386536,
+            0.7943373918533325,
+            -0.5611440539360046
+          ],
+          "cap_local_position_m": [
+            -0.012884288186292087,
+            0.030662563677084226,
+            -0.0027875835271657934
+          ]
+        }
+      ],
+      "forbidden_geometry_gaps_m": {
+        "left_body": 0.009692992083728313,
+        "left_right": 0.011480453424155712,
+        "left_table": 0.13642168045043945,
+        "left_cap_noncontact": 0.03125236555933952
+      }
+    },
+    "thumb": {
+      "sdk6": [
+        0.0,
+        0.0,
+        0.0,
+        560.09765625,
+        1000.0,
+        348.443359375
+      ],
+      "first_contact_bracket": {
+        "free_sdk": 348.4443359375,
+        "contact_sdk": 348.443359375,
+        "channel_index": 5,
+        "maximum_moving_group_vertex_displacement_m": 1.1060993281931098e-07,
+        "basis": "previous bracket endpoint has no contact for this finger; cap held fixed in geometric clone",
+        "FCL_EPA_depth_not_used_as_penetration_measure": true,
+        "predicate_boundary_not_PhysX_validation": true
+      },
+      "contacts": [
+        {
+          "link": "l_inspire_left_thumb_4",
+          "depth_m": 0.010855169035494328,
+          "world_normal": [
+            0.6928032636642456,
+            -0.1368977427482605,
+            -0.7080130577087402
+          ],
+          "cap_local_position_m": [
+            0.026916687006511508,
+            -0.020041344047444926,
+            -0.003914854066943918
+          ]
+        }
+      ],
+      "forbidden_geometry_gaps_m": {
+        "left_body": 0.009661134332418442,
+        "left_right": 0.013018876314163208,
+        "left_table": 0.13609850406646729,
+        "left_cap_noncontact": 0.03125236555933952
+      }
+    }
+  },
+  "first_contact_probe_proposal": true,
+  "first_contact_sdk6": [
+    0.0,
+    0.0,
+    0.0,
+    560.09765625,
+    1000.0,
+    348.443359375
+  ],
+  "first_contact_sdk24": [
+    -1.431224635269078,
+    -2.0188419125727637,
+    -0.20084256564888184,
+    2.8541469174991208,
+    -1.31963587772881,
+    -0.03551633620921006,
+    0.0,
+    0.0,
+    0.0,
+    560.09765625,
+    1000.0,
+    348.44335937500006,
+    0.6183452010154724,
+    0.9435983300209045,
+    1.4380160570144653,
+    -0.8298065662384033,
+    -1.5119315385818481,
+    -1.0782101154327393,
+    -0.00031791354371257796,
+    0.000511022479776635,
+    640.2205450048566,
+    647.9025023693617,
+    646.022433026263,
+    0.015214550240116864
+  ],
+  "first_contact_q36": [
+    0.6183452010154724,
+    -1.431224635269078,
+    0.9435983300209045,
+    -2.0188419125727637,
+    1.4380160570144653,
+    -0.20084256564888184,
+    -0.8298065662384033,
+    2.8541469174991208,
+    -1.5119315385818481,
+    -1.31963587772881,
+    -1.0782101154327393,
+    -0.03551633620921006,
+    1.1640822887420654,
+    0.5063514113426208,
+    0.5173988342285156,
+    1.4380992650985718,
+    1.4381004571914673,
+    0.7584770853515624,
+    0.6326235605468751,
+    1.4381,
+    1.4381,
+    1.4381,
+    0.20757244527339935,
+    0.5475062131881714,
+    0.5598901510238647,
+    1.559352159500122,
+    1.5593653917312622,
+    0.0,
+    0.6859537267009767,
+    1.55933183,
+    1.55933183,
+    1.55933183,
+    0.16247636079788208,
+    0.0,
+    0.1570708304643631,
+    0.0
+  ],
+  "elapsed_s": 3.5730488300323486,
+  "physical_grasp_or_force_closure_verified": false
+}

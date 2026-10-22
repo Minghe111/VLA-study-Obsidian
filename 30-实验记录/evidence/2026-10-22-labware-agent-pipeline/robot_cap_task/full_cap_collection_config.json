@@ -1,0 +1,22 @@
+{
+  "schema": "realman_full_cap_collection_v1",
+  "task_name": "labware_cap115_unscrew_pour",
+  "task_module": "labware_cap115_unscrew_pour_task.py",
+  "task_class": "labware_cap115_unscrew_pour",
+  "source_root": "/home/admin123/liminghe/vla-benchmark/RoboTwin",
+  "native_root": "/home/admin123/liminghe/vla-benchmark/deploy/realman_gen4/acob_fullsim_5090_rm65b_v1/code/RoboTwin",
+  "metadata_root": "full_agent_metadata",
+  "language_num": 12,
+  "episode_num": 1,
+  "max_seed_attempts": 1,
+  "control_dt_s": 0.06,
+  "physics_dt_s": 0.004,
+  "physics_ticks_per_action": 15,
+  "required_true_final_metrics": ["success", "full_unscrew_pour_success", "unscrew_verified", "cap_physically_clear", "pour_verified"],
+  "required_exact_final_metrics": {"tablet_total": 12, "receiver_complete_capsules": 12},
+  "minimum_final_metrics": {"receiver_stable_seconds": 0.5},
+  "maximum_exclusive_final_metrics": {"tablet_table_force_N": 0.00001, "tablet_bottle_force_N": 0.00001, "max_tablet_speed_m_s": 0.015, "receiver_speed_m_s": 0.015},
+  "required_clear_errors": ["failure_reason"],
+  "runtime_task_args": {},
+  "status": "entry_wiring_only_missing_full_physical_task"
+}

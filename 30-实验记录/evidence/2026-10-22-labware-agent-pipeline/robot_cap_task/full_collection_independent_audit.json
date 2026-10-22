@@ -1,0 +1,58 @@
+{
+  "scope": "Independent minimal read-only collector/full-task interface audit; actual pure final_gate/preflight functions invoked, no task import/GPU/physics/HDF5",
+  "source_sha256": {
+    "full_cap_collection.py": "563d495c74ea425060bd523f63d455a7aed2d0df998f8a77a2d1156b3d90cb43",
+    "full_cap_collection_config.json": "25f6583a669899e3f301431d0d2b82f09c688b1ce60e92a11948f9ffa5c4d759",
+    "full_collection_entry_checks.py": "f1e7df99ba2924901e419d7e5b47e81a423dbd364c6c4bdbedc40d63781a4c3a",
+    "labware_cap115_unscrew_pour_task.py": "6205a476bf4db852c89e908504a806d6a95f8660cfd42668044e3fb0cea9bd20"
+  },
+  "confirmed_static_wiring": {
+    "original_collect_run_invoked": "main384,400-401 uses unchanged source-root scripts/collect_data.py run",
+    "single_central_replay": "central_replay231-240 owns one traversal and duplicate flag; capture play_once305-307 does not call expert stage helpers",
+    "actual_action": "bind_actual_transition220-229 uses clock.actions[-1].actual_final_drive_command24,15tick and endpoint flags; action not nextstate",
+    "capture_vs_plan": "setup281 forcesRGB onlycapture mode; hooks export SDK24 state/action/nextstate and3RGB through existing sdk24_export",
+    "close_safe_normal_path": "close_env339-345 freezes final verdict, metrics,info before originalrunclose→merge; merge348-350 validates frozenfinal/language/source",
+    "factory_no_stage_fallback": "186-199 requires exactfulltaskname/generatedclass/officialAST wrapper andfullbase inheritance",
+    "source_seed_reset": "load_tran_data validatestask/seed/source; exactinitialsignature coversqpos/qvel/root/body/cap/12pill/dish/passiveassemblysnapshot; source_manifest includesnewnative/profile/assetsclosure",
+    "receipt_boundary": "verify_agent_evidence259-262 demandscompletefull_task_source_sha256; oldemptytwofiletestreceipt cannot certifyfulltask",
+    "false_ready": "actualpreflight says full_workflow_not_declared_ready_in_source; taskFULL_WORKFLOW_READY=False and play_once hardrejects unverifiedfullworkflow"
+  },
+  "actual_finite_checks": {
+    "all_declared_full_metrics_true_without_cap_end_state": {
+      "passed": false,
+      "reasons": [
+        "unsafe_or_unknown_cap_end_state"
+      ]
+    },
+    "full_task_has_cap_end_state_field": false,
+    "actual_preflight_ready": false,
+    "actual_preflight_reason": "full_workflow_not_declared_ready_in_source"
+  },
+  "minimal_corrections": [
+    {
+      "priority": 1,
+      "file": "full_cap_collection.py",
+      "lines": "63",
+      "issue": "Requires cap_end_state strings absent from actual full task; makes physicalsuccess permanentlyunexportable andadds artificial label",
+      "recommendation": "Remove this extra stringgate; existing released +cap_physically_clear/wholegeometry are sufficient contract fields"
+    },
+    {
+      "priority": 2,
+      "file": "full_cap_collection.py",
+      "lines": "404-408",
+      "issue": "Exception writes failure but leaves status=running",
+      "recommendation": "Set status=failed before failure/final receipt"
+    },
+    {
+      "priority": 2,
+      "file": "full_cap_collection.py",
+      "lines": "399-408",
+      "issue": "Capture-phase exception or BaseException exits originalrun withoutclose; outerfinally onlywritesreceipt",
+      "recommendation": "Track per-setup closedstate and outerfinally close an instantiated not-yetclosedtask once; preserveprimaryerror ifcleanupfails"
+    }
+  ],
+  "nonblocking_record_improvement": "Include actualinitialdrive24 in reset signature because60ms interpolation beginsatdrive, notmeasuredq. This is provenance completion, notnewfinalsuccessgate.",
+  "current_readiness": "Notready: noactualfullworldinitialvalidation, nofullrobotworkflow/Agentphysicalreceipt orHDF5; staticclass/CPUchecksare notfinalready",
+  "new_physical_trials": 0,
+  "auditor_modified_other_sources": false
+}

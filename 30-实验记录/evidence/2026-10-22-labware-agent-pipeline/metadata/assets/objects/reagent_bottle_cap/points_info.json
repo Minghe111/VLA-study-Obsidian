@@ -1,0 +1,65 @@
+{
+  "contact_points": [
+    {
+      "id": 0,
+      "description": "Side grasp centre, candidate 0; contact-frame +Y points toward object-frame +X.",
+      "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+    },
+    {
+      "id": 1,
+      "description": "Side grasp centre, candidate 1; contact-frame +Y points toward object-frame +Y.",
+      "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+    },
+    {
+      "id": 2,
+      "description": "Side grasp centre, candidate 2; contact-frame +Y points toward object-frame -X.",
+      "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+    },
+    {
+      "id": 3,
+      "description": "Side grasp centre, candidate 3; contact-frame +Y points toward object-frame -Y.",
+      "usage": "Candidate grasp frame; pregrasp offset is along contact +Y and approach along -Y. Must pass this robot's actual grasp/clearance validation."
+    }
+  ],
+  "functional_points": [
+    {
+      "id": 0,
+      "description": "Underside cap opening centre; local -Z points out of the opening.",
+      "usage": "Align the cap opening to the separate bottle neck. Physical release requires the task's screw mechanism."
+    },
+    {
+      "id": 1,
+      "description": "Upper twist-axis marker.",
+      "usage": "Define the cap twist axis; this point alone does not actuate or unscrew the cap."
+    },
+    {
+      "id": 2,
+      "description": "External lower support-plane centre, with local -Z outward.",
+      "usage": "Use this functional point for upright support placement. Do not substitute the opening or inner floor."
+    }
+  ],
+  "target_points": [
+    {
+      "id": 0,
+      "description": "External lower support-plane centre.",
+      "usage": "Support alignment; not a side grasp."
+    },
+    {
+      "id": 1,
+      "description": "Cap underside opening alignment.",
+      "usage": "Opening alignment."
+    }
+  ],
+  "orientation_points": [
+    {
+      "id": 0,
+      "description": "Object Z-up frame, +Z along vessel/cap axis.",
+      "usage": "Upright orientation reference."
+    }
+  ],
+  "metadata_provenance": {
+    "date": "2026-10-22",
+    "source": "locally authored from frozen model_data0 transforms and geometric specification",
+    "not_official_original": true
+  }
+}
