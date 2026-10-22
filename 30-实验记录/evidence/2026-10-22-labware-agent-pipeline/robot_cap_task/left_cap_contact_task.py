@@ -10,7 +10,7 @@ class FirstContactStop(RuntimeError):
 class left_cap_contact_task(labware_cap_workflow):
     def setup_demo(self,**kwargs):
         self.left_probe_active=False;self.first_left_cap_contact=None
-        self.left_contact_guard_failure=None;self.left_cap_separation_trace=[]
+        self.left_contact_guard_failure=None;self.left_cap_separation_trace=[];self.stop_at_first_contact=True
         return super().setup_demo(**kwargs)
     def activate_left_probe(self):
         # The body-only guard is replaced by separate expected-left/right guards.
@@ -63,5 +63,5 @@ class left_cap_contact_task(labware_cap_workflow):
                 'phase':self.current_phase,'left_cap_force_N':lcap,'right_cap_force_N':rcap,
                 'forbidden_left_contact_N':forbidden}
             raise RuntimeError(reason)
-        if self.first_left_cap_contact is not None:
+        if self.first_left_cap_contact is not None and self.stop_at_first_contact:
             raise FirstContactStop('First actual left-cap normal impulse measured; diagnostic stop')
