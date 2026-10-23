@@ -353,3 +353,187 @@ actual archived start q/drive and both stage interfaces, passed before the next
 physical run. `left115_first_contact_v6_ordered_true_surface` is the isolated
 physical continuation; its final outcome must be taken from its actual receipt,
 not inferred from the CPU candidate or controller tests.
+
+The actual v6 continuation **did establish its first normal load** at active
+tick10981: LEFT thumb4→cap normal impulse1.88510419×10⁻⁴Ns, equivalent0.0471276N
+over the actual4ms step. The raw PhysX separation is+3.7574µm. Contact position
+is[0.1167485,−0.1450771,0.8776451]m. The oriented normal on the cap is almost
+radially inward (cap-frame radial dot−0.999662), establishing a side contact.
+Index load is zero and the pair is not yet opposing or grasping.
+
+The source684 prefix replays exactly, and the receipt contains732 complete
+60ms targets plus a separate **one-step4ms diagnostic partial**10980→10981.
+The remaining14 steps were not fabricated. No forbidden LEFT-body/table/right
+force occurred, and no cap turn/release/pour is claimed. A subsequent pressure
+probe will actually reexecute that pending target for a full new15-step window,
+checking the reproduced first step against the saved raw physical state.
+
+Installed PhysX/SAPIEN exposes a normal-times-scalar contact impulse report;
+its vector does not expose the actual tangential friction impulse. Accordingly
+near-zero reported tangential residual is **not** evidence of absent friction.
+`contact_wrench_observer.py` labels its fields `reported_*` and sets tangential
+observability false. Actual cap/body angular motion and loaded robot contact
+must establish any later physical turning result.
+
+`load_turn_probes/pair_load_small_turn_v1` then actually reexecuted all732
+complete v6 targets and a new full15-step window containing the old partial.
+At10981, all saved q36/qvel36/state24/drive, root/palm/body/cap matrices and
+12 tablet poses reproduced exactly. The new complete boundary is10995; the
+old one-tick diagnostic was not relabelled as a complete transition.
+
+At the next real60ms window (tick11010), index normal load was0.202153N,
+thumb0.144456N and their measured normal dot product−0.959225. This establishes
+one actual opposing loaded window, not sustained cap grasp or turning. The
+thumb remained at its real completed-window drive190.549518SDK; the independent
+index-only micro-preload candidate had been referenced at thumb191.675355SDK,
+and the small actual difference is disclosed in `pressure_interval.json`.
+
+The following controller proposal rejected a small observed solver excursion:
+thumb2 actual position−3.459237µrad and thumb4−3.801981µrad below nominal zero.
+The drive command remained legal. The run preserves734 complete targets,
+`partial_command=null`, unchanged source snapshots, and an explicit error.
+No turn was executed. A subsequent revision may separate finite raw observation
+tolerance from strict command limits; it must not clamp archived observations,
+modify physics, or reclassify this original failed receipt as success.
+
+`pair_load_small_turn_v2_observed_tolerance` preserved the same physical
+commands through736 complete targets, but the raw thumb2 subsequently reached
+−11.7204µrad and exceeded its explicit10µrad observation budget. Its original
+error remains. The next isolated v3 uses the controller API's finite100µrad
+observation budget; strict drive/SDK/mimic command limits and physical parameters
+remain unchanged, and no measured q is clamped.
+
+The actual v3 achieved three consecutive complete opposing loaded boundaries
+at11040–11070. It then executed nine robot palm orbit increments totalling a
+requested+0.045rad. The tenth same-goal IK call failed before an action was
+executed. Over the actual11070→12195 physical interval, world rotation vectors
+projected on the initial body axis were approximately+0.0505504rad for LEFT
+palm, +0.0188017rad for cap, +0.0391639rad for body, and+0.0006668rad for RIGHT
+palm. The resulting measured cap-relative angle changed−0.0203621rad: the
+body rolled farther than the cap within the right grasp. This is not evidence
+of positive unscrewing or of a cap rotating backwards in world coordinates.
+
+Before this turn, left index/thumb loads were0.108/0.185N while the right index
+pushed the cap skirt upwards with0.832N. At the terminal snapshot, left loads
+were0.110/0.528N and right cap load0.782N. These are reported normal loads;
+the installed binding does not expose friction impulses. No forbidden
+LEFT-body/table/right loaded contact, cap release, or tablet pour is claimed.
+Future correction must be chosen from actual body-palm slip and load evidence,
+and must still act only through robot joint-drive commands.
+
+The isolated v4 body-palm feedback attempt preserved the same real setup and
+loading prefix. It ended after its first complete turn-phase window at11085,
+before finishing an increment. Although the geometric body error was exactly
+zero, absolute IK q was incorrectly used as the right drive target: this
+removed the existing drive-minus-measured-q load bias (notably8.0906mrad at
+right joint6). Left thumb normal load rose to1.12169N and its primary thumb2
+readback reached−128.925µrad, exceeding the unchanged100µrad observation
+budget. All739 targets and this failed receipt remain preserved.
+
+The next mapping correction applies `q_IK - actual_q_start` to the current
+drive, preserving the holding bias. Exact zero body error keeps the drive
+unchanged. Strict limits are checked on the resulting command, and right
+drive velocity remains capped0.45rad/s. The body-origin geometric correction
+is at most0.5mm/3mrad per boundary; the palm also travels around the body
+origin and can translate farther than0.5mm. The probe does not invoke a
+frozen-right collision exemption: both arms move through actual drives and
+their observed4ms contacts remain guarded. No result of this unexecuted
+mapping revision is inferred from its arithmetic alone.
+
+The actual v5 incremental mapping preserved the zero-error drive exactly. It
+completed one increment, then four complete60ms windows of the second before
+the same100µrad observation budget rejected thumb2 at−103.391µrad. All749
+targets are complete; `partial=null` does not mean the second increment had
+no actions. RIGHT body yaw drift decreased versus the matching-time baseline,
+but cap world rotation became negative and right cap normal load increased.
+This did not establish positive unscrewing. Commanded right drive slew
+(peak0.036515rad/s) must not be confused with measured joint velocity: the
+independent raw audit found a transient right thumb3 qvel around8.35rad/s.
+
+`right_index_unload_probes/right115_index_close_v1` subsequently reproduced the
+same loaded reference exactly and ran a separate finite contact diagnostic.
+LEFT12 and RIGHT arm6 drives were fixed at that actual reference; original
+RIGHT middle/thumb body-contact feedback remained active. Each index override
+synchronized native latch/free-search state to actual drive before proposal
+and after a completed15-step window. No measured state or force was forged.
+
+Three zero-index-change windows measured right cap normal loads0.833/0.866/
+0.822N. Relative to the actual627.208819SDK baseline, −1SDK measured0.772/
+0.793/0.854N, −2SDK0.913/0.929/0.954N, and−4SDK1.329/1.181/1.235N. RIGHT
+index-body load increased to2.34–2.58N at−4SDK without reaching the explicit
+3N diagnostic stop. The static geometric direction did not yield physical
+unloading. This run exited normally as a completed diagnostic, with no turn,
+no unloading success claim, and no full-task success. It preserves raw q/qvel,
+contacts, capsules and a separate actual target/state chain; original failure
+records and the empty-bottle pipeline remain unchanged.
+
+`right_lower_grasp_probes/right115_lower10_initial_pick_v1` ran a separate
+private teacher with `hand_x=-.005` instead of `-.015`. The native Z-up grasp
+arithmetic lowers the palm by10mm with the same orientation. This consumes
+the finite airborne geometry hypothesis; the real native planner separately
+checked and executed the initial approach. The existing shared teacher,
+115mm assembly, hand waypoints, contact feedback and physics were unchanged.
+All setup q/qvel, drives, body/cap/tablet poses matched the prior initial
+snapshot exactly. Source SHA1008e5474f5a5b90a439548b0ea15bd6f7066b3ac09c92253ff833717bb7a66f
+is frozen in the run's source snapshot.
+
+The actual closed/opposed airborne body stage was reached at tick4050 after
+270complete targets. Ten further complete60ms windows held the actual arm
+drive fixed and retained the same stateful body-contact feedback. The run
+exited0 with280complete targets,4200ticks and no partial. This is diagnostic
+completion, not successful cap removal, pouring or a stable unloading result.
+
+RIGHT-cap boundary load was initially0 through tick4170, then0.1583N at4185
+and0.4898N at4200. Across the actual0.60s interval, the body moved world
+[-7.094,+2.768,-2.226]mm and rotated7.964deg, while the right palm moved only
+[+.038,-.037,+.132]mm and rotated0.0319deg. The bottom clearance reduction
+24.559→18.991mm therefore includes tilt and must not be described entirely
+as vertical translation. The bottle remained closed and the complete capsule
+boundary checks read12 inside at the declared0.4mm contact tolerance. Dense
+geometry and contact timing are independently audited from original logs.
+
+The native contact LP's mass/COM readback concerns the80g bottle body only;
+the actual closed assembly also carries a12g cap and12×0.35g capsules. A
+body-only LP feasible flag is not an equilibrium certificate for that96.2g
+assembly. The current adapted servo uses direct1.2/1.2/2.4N main-finger
+targets with the LP advisory. This limitation and the observed body/palm
+rotation are retained as evidence for the next bounded grasp revision.
+
+The independent dense audit subsequently confirmed all150static steps were
+closed/opposed, with no table or forbidden loads and all300pre/post complete
+capsule states inside the0.4mm tolerance. RIGHT-cap first positive load was
+tick4182 (+0.528s),0.020414N at right index2; the first131static steps
+(0.524s) had exactly zero cap normal load. The body/right-palm relation
+changed8.05071mm/7.97366deg. At the4170boundary the current20mm airgap
+condition was already false even though the historical stage-success flag
+remained true. This is not a static reference or a sustained unloading pass.
+
+Source-control-flow caveat: the frozen wrapper resets `force_targets` before
+and after `super().target(carry=False)`, but native `target` also invokes the
+LP when its profile has ended and contact is paired. A usable LP can therefore
+replace the targets inside that call before the SDK feedback result is
+returned. Resetting them afterwards does not undo the SDK command. Thus
+"LP advisory" in the report describes acceptance intent, not strict isolation
+of LP effects from every command. A future assembly-aware controller must
+explicitly route the intended allocation into feedback; merely changing the
+outer `direct_targets` is insufficient. The frozen sources and actual traces
+are retained rather than silently repaired.
+
+`right_lower_grasp_probes/right115_lower10_frozen_drive_v1` isolates the
+post-stage feedback effect. It physically reexecuted the original270targets
+and matched all4050dense pre/post assembly states and actual drives, plus
+all270boundary states/q36/qvel and the complete4050stage snapshot exactly.
+No teacher or contact-controller proposals were called in the comparison
+interval: every subsequent requested24D target was the same actual stage
+drive readback. Physical gains, materials, object state and guards were unchanged.
+
+Four complete static windows were followed by a real ten-step partial window
+ending at tick4120 (+0.280s). RIGHT-cap normal load10.923805N triggered the
+original5N guard. At that point body/right-palm displacement was6.5516mm and
+rotation6.6756deg; body-thumb load8.2021N and finger-body load0 meant current
+opposition was lost. The cap remained closed and all12centres were still
+inside, but this is not a hold success. The final incomplete action is kept
+as ten actual4ms steps and is never filled to15 or exported as a complete
+training transition. The source SHA730224c9b3ad5266378e832e3d8fe3651579f2cc20c8fa232fa8ad9dc67a6c63
+and all original traces are retained. Removing feedback did not cure the
+instability; it produced an earlier loss of opposition and cap impact.

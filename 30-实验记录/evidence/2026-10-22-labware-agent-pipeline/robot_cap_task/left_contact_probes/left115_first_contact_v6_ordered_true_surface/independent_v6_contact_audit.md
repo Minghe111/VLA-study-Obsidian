@@ -8,6 +8,9 @@ status: 一次thumb侧法向载荷已核验，未形成双指夹持或转盖证�
 
 # v6实际首载荷、触点方向与partial独立核查
 
+> [!warning] 接触字段语义更正（2026-10-22）
+> 已确认 PhysX/SAPIEN 的 point.impulse 由法向标量乘 normal 构造，不是完整接触冲量。本文原“切向 raw≈0”只能说明报告字段的投影，不能证明物理摩擦或摩擦扭矩为零。原始数值、法向首载荷与控制时序结论保留；解释以文末更正为准。
+
 v6 的实际左手—盖首载荷成立：active tick 10981、assembly step 16356，thumb4 对 cap 出现唯一正法向冲量点。该结论来自 world 日志与带 separation 的独立接触日志一致读回；本审计没有新建物理场景、调整阈值或修改运行源码。
 
 ## 执行与中断边界
@@ -31,3 +34,12 @@ v6 的实际左手—盖首载荷成立：active tick 10981、assembly step 1635
 cap 未 release，轴向间隙仍约 1.311094 mm，当前 closed=false；unscrew/pour/full task 均为 false。该结果是可靠首载荷证据，尚不包含双指持续加载、机器人诱发的实际扭转或数据集采集成功。下一有限实际探针可使用上述真实 normal/position 观察第二指载荷与切向冲量；此建议不增加新的人工成功标签或阻塞可逆仿真。
 
 [结构化结果与唯一正触点原值](independent_v6_contact_audit.json) · [复核脚本](independent_v6_contact_audit.py)
+
+
+## 接触字段语义更正（2026-10-22）
+
+已安装 PhysX 的 `PxContactPair::extractContacts` 在第 662–663 行将单标量转为 `normal * impulse`。SAPIEN callback 原样复制该向量，Python binding 原样暴露，因此取其切向投影接近零是接口构造的结果，不能用于排除未报告的真实摩擦冲量或扭矩。v6 的约 1.85e-11 Ns 与 v4 的零投影均保留为 **reported-normal-only 字段投影**，不当作完整切向测量。
+
+原有法向载荷点数/大小、触点与 normal、source SHA、控制链与 partial 读回不变；没有追加物理运行或更改旧物理日志。真实扭转的归因应结合实际运动、动量/角动量及重力、线程被动力、关节/约束反力等已知力源，不能单凭该 report 推出完整 wrench。旧版独审 JSON/Markdown 已按原 SHA 保存至 `contact_report_semantics_sources/prior_independent_audits/`。
+
+[完整源码链与实际反证](../../contact_report_semantics_audit.md)

@@ -11,6 +11,9 @@ status: 160个闭合窗口耗尽，存在零冲量接触manifold，未首触
 
 # v4实际末段接近与无载荷接触独立核查
 
+> [!warning] 接触字段语义更正（2026-10-22）
+> 已确认 PhysX/SAPIEN 的 point.impulse 由法向标量乘 normal 构造，不是完整接触冲量。本文原“切向 raw≈0”只能说明报告字段的投影，不能证明物理摩擦或摩擦扭矩为零。原始数值、法向首载荷与控制时序结论保留；解释以文末更正为准。
+
 v4 真正完成了末段连接和 160 个闭合窗口，随后因预算耗尽退出。**原始 PhysX 日志有 LEFT-cap 接触 manifold，但所有保存点的法向冲量都为 0；不能将“未触发首触事件”表述为“完全没有接触点”。** 本记录无新物理运行，没有修改任何现场源码或旧结果。
 
 ## 控制与来源
@@ -32,3 +35,12 @@ v4 真正完成了末段连接和 160 个闭合窗口，随后因预算耗尽退
 preclose tick 7860 至 terminal tick 10260 的 9.6 s 中，cap 中心仅改变 0.03950 mm，轴方向约改变 0.05306°；该量不支持用“大幅漂移”解释本轮无载荷。cap 全闭合阶段仍 attached，却始终不符合原 closed 判据，终轴移为 1.315743 mm。没有抓盖、旋盖、倒药或完整任务成功；历史 bodyhold 子阶段标志不改变这一结果。
 
 证据：[结构化独审](independent_v4_audit.json)、[逐点原始manifold子集](independent_v4_raw_left_cap_manifolds.json)、[计算源](independent_v4_audit.py)。
+
+
+## 接触字段语义更正（2026-10-22）
+
+已安装 PhysX 的 `PxContactPair::extractContacts` 在第 662–663 行将单标量转为 `normal * impulse`。SAPIEN callback 原样复制该向量，Python binding 原样暴露，因此取其切向投影接近零是接口构造的结果，不能用于排除未报告的真实摩擦冲量或扭矩。v6 的约 1.85e-11 Ns 与 v4 的零投影均保留为 **reported-normal-only 字段投影**，不当作完整切向测量。
+
+原有法向载荷点数/大小、触点与 normal、source SHA、控制链与 partial 读回不变；没有追加物理运行或更改旧物理日志。真实扭转的归因应结合实际运动、动量/角动量及重力、线程被动力、关节/约束反力等已知力源，不能单凭该 report 推出完整 wrench。旧版独审 JSON/Markdown 已按原 SHA 保存至 `contact_report_semantics_sources/prior_independent_audits/`。
+
+[完整源码链与实际反证](../../contact_report_semantics_audit.md)
